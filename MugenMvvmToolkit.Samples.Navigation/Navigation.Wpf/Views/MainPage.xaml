@@ -1,0 +1,24 @@
+﻿<Page x:Class="Navigation.Wpf.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Mugen MVVM Application" ShowsNavigationUI="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Button Margin="4" Content="First view model (Window)" Command="{Binding Path=ShowFirstWindowCommand}" />
+            <Button Margin="4" Content="First view model (Page)" Command="{Binding Path=ShowFirstPageCommand}" />
+            <Button Margin="4" Content="First view model (Tab)" Command="{Binding Path=ShowFirstTabCommand}" />
+
+            <Button Margin="4" Content="Second view model (Window)" Command="{Binding Path=ShowSecondWindowCommand}" />
+            <Button Margin="4" Content="Second view model (Page)" Command="{Binding Path=ShowSecondPageCommand}" />
+            <Button Margin="4" Content="Second view model (Tab)" Command="{Binding Path=ShowSecondTabCommand}" />
+        </StackPanel>
+
+        <TabControl ItemsSource="{Binding Path=ItemsSource}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"
+                    ItemTemplate="{StaticResource TabItemTemplate}" Grid.Row="1"
+                    ContentTemplate="{StaticResource TabContentTemplate}" />
+    </Grid>
+</Page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem Title="{'Edit ' + Name}" Click="{{Relative ListView}.DataContext.EditOrderCommand}" CommandParameter="{}"/>
+  <MenuItem Title="{'Delete ' + Name}" Click="{{Relative ListView}.DataContext.RemoveOrderCommand}" CommandParameter="{}"/>
+</Menu>

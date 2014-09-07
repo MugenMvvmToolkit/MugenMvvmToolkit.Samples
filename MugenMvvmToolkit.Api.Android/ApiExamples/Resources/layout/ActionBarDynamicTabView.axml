@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <OptionsMenu
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    pkg:MenuTemplate="@menu/addremovemenu" />  
+  <FrameLayout
+    android:id="@+id/tabContent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+
+  <ActionBar
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    pkg:ActionBarTemplate="@layout/_actionbardynamictab"
+    pkg:TabContentId="@id/tabContent" />
+</LinearLayout>

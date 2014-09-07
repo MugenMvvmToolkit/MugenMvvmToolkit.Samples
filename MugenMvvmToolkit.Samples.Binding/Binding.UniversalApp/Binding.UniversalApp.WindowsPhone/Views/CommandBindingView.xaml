@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Binding.UniversalApp.Views.CommandBindingView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
+    mc:Ignorable="d" markupExtensions:View.DesignDataContext="CommandBindingViewModel"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="{StaticResource AppName}" Style="{ThemeResource TitleTextBlockStyle}"
+                       Margin="0,12,0,0" />
+            <TextBlock Text="commands" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel>
+                <CheckBox Content="Can execute command"
+                          markupExtensions:View.Bind="IsChecked CanExecuteCommand, Mode=TwoWay"
+                          Margin="1 1 1 10" />
+
+                <TextBlock Text="Binding to command" Margin="1" Style="{StaticResource BaseTextBlockStyle}" />
+                <Button markupExtensions:View.Bind="Click Command" CommandParameter="1" Content="Click binding"
+                        Margin="1 1 1 10" HorizontalAlignment="Stretch" />
+
+                <TextBlock Text="Binding to command(ToggleEnabledState = false)" Margin="1"
+                           TextWrapping="Wrap" Style="{StaticResource BaseTextBlockStyle}" />
+                <Button markupExtensions:View.Bind="Click Command, ToggleEnabledState=False" CommandParameter="2"
+                        Content="Click binding"
+                        Margin="1 1 1 10" HorizontalAlignment="Stretch" />
+
+
+                <TextBox Header="Binding to method without parameters"
+                         markupExtensions:View.Bind="TextChanged EventMethod(null)" Margin="1 1 1 10" />
+
+                <TextBox Header="Binding to method with parameter"
+                         markupExtensions:View.Bind="TextChanged EventMethod($self.Text)"
+                         Margin="1 1 1 10" />
+
+                <TextBox Header="Binding to method with event args parameter"
+                         markupExtensions:View.Bind="TextChanged EventMethod($args)"
+                         Margin="1 1 1 10" />
+
+                <TextBox Header="Binding to method with several parameters"
+                         markupExtensions:View.Bind="TextChanged EventMethodMultiParams($self.Text, $args)"
+                         Margin="1 1 1 10" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu ItemsSource="{Items}">
+  <ItemTemplate Title="{Name}" ItemsSource="{Items}"
+                ShowAsAction="Never" Click="{$Rel(Activity).DataContext.ExecuteCommand}" CommandParameter="{}" />
+</Menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:pkg="http://schemas.android.com/apk/res-auto"            
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+  <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Name" />
+    <EditText android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              pkg:Bind="Text NameInVm, Mode=TwoWay, Validate=True" />
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_gravity="left|center"
+                android:text="Description" />
+
+      <CheckBox android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:layout_gravity="right"
+                android:text="Disable description validation"
+                pkg:Bind="Checked DisableDescriptionValidation, Mode=TwoWay" />
+    </LinearLayout>
+
+    <EditText android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="top|left"
+              android:lines="20"
+              android:minLines="5"
+              android:scrollHorizontally="false"
+              android:scrollbars="vertical"
+              android:singleLine="false"
+              android:inputType="textMultiLine"
+              pkg:Bind="Text Description, Mode=TwoWay, Validate=True" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Enter a custom error for the Description property" />
+    <EditText android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              pkg:Bind="Text CustomError, Mode=TwoWay" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#ff0000"
+              android:text="View model is not valid"
+              pkg:Bind="Visible !IsValid" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#FF008000"
+              android:text="View model is valid"
+              pkg:Bind="Visible IsValid" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#ff0000"
+              pkg:Bind="Text $string.Join($Environment.NewLine, $GetErrors())" />
+  </LinearLayout>
+</ScrollView>

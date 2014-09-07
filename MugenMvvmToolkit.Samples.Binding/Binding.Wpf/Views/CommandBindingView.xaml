@@ -1,0 +1,50 @@
+﻿<Window x:Class="Binding.Wpf.Views.CommandBindingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="700" Height="400"
+        WindowStyle="ToolWindow" View.DesignDataContext="CommandBindingViewModel">
+    <StackPanel Margin="4">
+        <CheckBox Content="Can execute command" IsChecked="{DataBinding Path=CanExecuteCommand, Mode=TwoWay}" Margin="1 1 1 10"/>
+
+        <TextBlock Text="Binding to command" Margin="1" />
+        <Button Click="{DataBinding Path=Command}" CommandParameter="1" Content="Click binding" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to command(ToggleEnabledState = false)" Margin="1" />
+        <Button Click="{DataBinding Path=Command, ToggleEnabledState=False}" CommandParameter="2" Content="Click binding" Margin="1 1 1 10" />
+
+
+        <TextBlock Text="Binding to method without parameters (EventMethod(null))" Margin="1" />
+        <TextBox TextChanged="{DataBinding 'EventMethod(null)'}" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with parameter (EventMethod($self.Text))" Margin="1" />
+        <TextBox TextChanged="{DataBinding 'EventMethod($self.Text)'}" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with event args parameter (EventMethod($args.UndoAction))" Margin="1" />
+        <TextBox TextChanged="{DataBinding 'EventMethod($args.UndoAction)'}" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with several parameters (EventMethodMultiParams($self.Text, $args.UndoAction))" Margin="1" />
+        <TextBox TextChanged="{DataBinding 'EventMethodMultiParams($self.Text, $args.UndoAction)'}" Margin="1 1 1 10" />
+
+
+        <!--        Equivalent syntax.-->
+        <!-- <TextBlock Text="Binding to command" Margin="1" />
+        <Button View.Bind="Click Command" CommandParameter="1" Content="Click binding" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to command(ToggleEnabledState = false)" Margin="1" />
+        <Button View.Bind="Click Command, ToggleEnabledState=False" CommandParameter="2" Content="Click binding"
+                Margin="1 1 1 10" />
+
+
+        <TextBlock Text="Binding to method without parameters (EventMethod(null))" Margin="1" />
+        <TextBox View.Bind="TextChanged EventMethod(null)" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with parameter (EventMethod($self.Text))" Margin="1" />
+        <TextBox View.Bind="TextChanged EventMethod($self.Text)" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with event args parameter (EventMethod($args.UndoAction))" Margin="1" />
+        <TextBox View.Bind="TextChanged EventMethod($args.UndoAction)" Margin="1 1 1 10" />
+
+        <TextBlock Text="Binding to method with several parameters (EventMethodMultiParams($self.Text, $args.UndoAction))" Margin="1" />
+        <TextBox View.Bind="TextChanged EventMethodMultiParams($self.Text, $args.UndoAction)" Margin="1 1 1 10" />-->
+    </StackPanel>
+</Window>

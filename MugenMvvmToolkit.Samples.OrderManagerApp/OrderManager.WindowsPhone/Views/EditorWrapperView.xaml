@@ -1,0 +1,36 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="OrderManager.WindowsPhone.Views.EditorWrapperView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:MugenMvvmToolkit.Controls;assembly=MugenMvvmToolkit.WinPhone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d" IsEnabled="{Binding Path=IsBusy, Converter={StaticResource InverseBooleanConverter}}"
+    shell:SystemTray.IsVisible="True">
+
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsIndeterminate="true" IsVisible="{Binding Path=IsBusy}"
+                                 Text="{Binding Path=BusyMessage}" />
+    </shell:SystemTray.ProgressIndicator>
+
+    <ContentPresenter Content="{Binding Path=ViewModel, Converter={StaticResource ViewModelToViewConverter}}"
+                      Margin="12,0,12,0" />
+
+    <controls:BindableApplicationBar.ApplicationBar>
+        <controls:BindableApplicationBar>
+            <controls:BindableApplicationBarIconButton
+                IconUri="/Icons/Dark/save.png" Text="Save"
+                Command="{Binding Path=ApplyCommand}" />
+            <controls:BindableApplicationBarIconButton
+                IconUri="/Icons/Dark/cancel.png" Text="Cancel"
+                Command="{Binding Path=CloseCommand}" />
+        </controls:BindableApplicationBar>
+    </controls:BindableApplicationBar.ApplicationBar>
+</phone:PhoneApplicationPage>

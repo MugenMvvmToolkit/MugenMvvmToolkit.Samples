@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <OptionsMenu
+   android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   pkg:MenuTemplate="@menu/mainmenu" />
+
+  <FrameLayout android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:id="@+id/tabContentId" />
+
+  <ActionBar android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             pkg:TabContentId="@id/tabContentId"
+             pkg:ActionBarTemplate="@layout/_actionbarmain" />
+</LinearLayout>
+
+<!--uncoment this if you want to use TabHost (also see MainActivityView) only for API17-->
+<!--<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:pkg="http://schemas.android.com/apk/res-auto"
+         android:id="@android:id/tabhost"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         pkg:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp">
+    <TabWidget
+      android:id="@android:id/tabs"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" />
+    <FrameLayout
+      android:id="@android:id/tabcontent"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:padding="5dp" />
+
+    <OptionsMenu
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      pkg:MenuTemplate="@menu/mainmenu" />
+  </LinearLayout>
+</TabHost>-->

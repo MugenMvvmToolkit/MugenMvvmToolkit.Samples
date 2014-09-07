@@ -1,0 +1,41 @@
+﻿<Window x:Class="Binding.Wpf.Views.BindingExpressionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="700" Height="400"
+        WindowStyle="ToolWindow" View.DesignDataContext="BindingExpressionViewModel">
+    <StackPanel Margin="4">
+        <TextBlock Text="Current text: " Margin="1" />
+        <TextBox Text="{DataBinding Path=Text, Mode=TwoWay}" Margin="1" />
+
+        <!--<TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1" />
+        <TextBlock Text="{DataBinding 'Text.Count(x => x == \\\'a\\\')'}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" Margin="1" />
+        <TextBlock Text="{DataBinding 'Text.ExtensionMethod(Text.Count())'}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" Margin="1" />
+        <TextBlock Text="{DataBinding 'Text.Skip(1).FirstOrDefault()'}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Condition expression ($string.IsNullOrEmpty(Text) ? \'String is empty\' : \'String is not empty\')" Margin="1" />
+        <TextBlock Text="{DataBinding '$string.IsNullOrEmpty(Text) ? \'String is empty\' : \'String is not empty\''}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" Margin="1" />
+        <TextBlock Text="{DataBinding 'Text.Count() + 100 + Text.GetHashCode()'}" Margin="1 1 1 10" Foreground="Green" />-->
+
+        <!--        Equivalent syntax.-->
+        <TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1" />
+        <TextBlock View.Bind="Text Text.Count(x => x == \'a\')" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" Margin="1" />
+        <TextBlock View.Bind="Text Text.ExtensionMethod(Text.Count())" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" Margin="1" />
+        <TextBlock View.Bind="Text Text.Skip(1).FirstOrDefault()" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')" Margin="1" />
+        <TextBlock View.Bind="Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" Margin="1" />
+        <TextBlock View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" Margin="1 1 1 10" Foreground="Green" />
+    </StackPanel>
+</Window>

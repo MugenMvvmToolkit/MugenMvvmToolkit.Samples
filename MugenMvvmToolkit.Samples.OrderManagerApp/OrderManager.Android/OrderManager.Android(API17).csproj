@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEB88521-2740-47BA-B083-44AA7A9FF71C}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrderManager.Android</RootNamespace>
+    <AssemblyName>OrderManager.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkSkip />
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <MonoDroidExtraArgs />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="MugenMvvmToolkit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMVVMToolkit.3.0.20\lib\monoandroid\MugenMvvmToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.API17.1.0.16\lib\monoandroid\MugenMvvmToolkit.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.0.10\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.API17.1.0.16\lib\monoandroid\MugenMvvmToolkit.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndroidModule.cs" />
+    <Compile Include="Infrastructure\FileRepository.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\EditorWrapperActivityView.cs" />
+    <Compile Include="Views\MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Orders\OrderEditorFragmentView.cs" />
+    <Compile Include="Views\Orders\OrderWorkspaceActivityView.cs" />
+    <Compile Include="Views\Products\ProductEditorFragmentView.cs" />
+    <Compile Include="Views\Products\ProductWorkspaceActivityView.cs" />
+    <Compile Include="Views\SplashScreenActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <AndroidResource Include="Resources\layout\EditorWrapperView.axml" />
+    <AndroidResource Include="Resources\layout\OrderEditorView.axml" />
+    <AndroidResource Include="Resources\layout\OrderTab1EditorView.axml" />
+    <AndroidResource Include="Resources\layout\OrderTab2EditorView.axml" />
+    <AndroidResource Include="Resources\layout\OrderWorkspaceView.axml" />
+    <AndroidResource Include="Resources\layout\ProductEditorView.axml" />
+    <AndroidResource Include="Resources\layout\ProductWorkspaceView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\MainView.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\overflow_selector.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_accept.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_cancel.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_overflow_pressed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_save.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_accept.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_cancel.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_overflow_pressed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_accept.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_cancel.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_overflow_pressed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_accept.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_cancel.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_overflow_pressed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_save.png" />
+    <AndroidResource Include="Resources\layout\_CheckableProductListTemplate.xml" />
+    <AndroidResource Include="Resources\layout\_ActionBarOrderEditor.xml" />
+    <AndroidResource Include="Resources\layout\_OrderListTemplate.xml" />
+    <AndroidResource Include="Resources\layout\_ProductListTemplate.xml" />
+    <AndroidResource Include="Resources\menu\editormenu.xml" />
+    <AndroidResource Include="Resources\menu\ordereditpopup.xml" />
+    <AndroidResource Include="Resources\menu\orderworkspacemenu.xml" />
+    <AndroidResource Include="Resources\menu\producteditpopup.xml" />
+    <AndroidResource Include="Resources\menu\productworkspacemenu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrderManager.Portable\OrderManager.Portable.csproj">
+      <Project>{068ec021-96c0-40cb-860b-a46043c2d803}</Project>
+      <Name>OrderManager.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

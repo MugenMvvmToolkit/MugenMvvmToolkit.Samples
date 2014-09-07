@@ -1,0 +1,28 @@
+﻿<Application x:Class="Navigation.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <InverseBooleanConverter x:Key="InverseBooleanConverter" />
+
+        <DataTemplate x:Key="TabItemTemplate">
+            <StackPanel Orientation="Horizontal" Margin="2,2,2,2">
+                <TextBlock FontSize="14" Text="{Binding Path=DisplayName}" />
+                <Button Margin="5 0 0 0" HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Command="{Binding Path=CloseCommand}">
+                    <TextBlock TextWrapping="Wrap" Text="r" FontFamily="Webdings" Foreground="Black" FontSize="11" />
+                </Button>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TabContentTemplate">
+            <Grid>
+                <ContentPresenter Content="{ViewModelToViewBinding}"
+                                  IsEnabled="{Binding Path=IsBusy, Converter={StaticResource InverseBooleanConverter}}" />
+                <StackPanel View.Visible="{Binding Path=IsBusy}" VerticalAlignment="Center" Margin="4" Width="200">
+                    <TextBlock Text="{Binding Path=BusyMessage}" HorizontalAlignment="Center" TextWrapping="Wrap" />
+                    <ProgressBar IsIndeterminate="True" HorizontalAlignment="Stretch" Height="10" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MugenMvvmToolkit.AutofacContainer</name>
+    </assembly>
+    <members>
+        <member name="T:MugenMvvmToolkit.AutofacContainer">
+            <summary>
+                Represents the Autofac ioc adapter.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.AutofacContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.#ctor(Autofac.ContainerBuilder)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.AutofacContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.#ctor(Autofac.ILifetimeScope,MugenMvvmToolkit.Interfaces.IIocContainer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.AutofacContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.ConvertParameters(System.Collections.Generic.IList{MugenMvvmToolkit.Interfaces.IIocParameter})">
+            <summary>
+                Converts parameters.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.ConvertParameter(MugenMvvmToolkit.Interfaces.IIocParameter)">
+            <summary>
+                Converts parameter.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.SetLifetimeScope(MugenMvvmToolkit.Models.IoC.DependencyLifecycle,Autofac.Builder.RegistrationData)">
+            <summary>
+                Sets the lifecycle.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.CreateChild">
+            <summary>
+                Creates a child ioc adapter.
+            </summary>
+            <returns>
+                An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.Get(System.Type,System.String,MugenMvvmToolkit.Interfaces.IIocParameter[])">
+            <summary>
+                Gets an instance of the specified service.
+            </summary>
+            <param name="service">The specified service type.</param>
+            <param name="name">The specified binding name.</param>
+            <param name="parameters">The specified parameters.</param>
+            <returns>An instance of the service.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.GetAll(System.Type,System.String,MugenMvvmToolkit.Interfaces.IIocParameter[])">
+            <summary>
+                Gets all instances of the specified service.
+            </summary>
+            <param name="service">Specified service type.</param>
+            <param name="name">The specified binding name.</param>
+            <param name="parameters">The specified parameters.</param>
+            <returns>An instance of the service.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.BindToConstant(System.Type,System.Object,System.String)">
+            <summary>
+                Indicates that the service should be bound to the specified constant value.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.BindToMethod(System.Type,System.Func{MugenMvvmToolkit.Interfaces.IIocContainer,System.Collections.Generic.IList{MugenMvvmToolkit.Interfaces.IIocParameter},System.Object},MugenMvvmToolkit.Models.IoC.DependencyLifecycle,System.String)">
+            <summary>
+                Indicates that the service should be bound to the specified method.
+            </summary>
+            <param name="service">The specified service type.</param>
+            <param name="methodBindingDelegate">The specified factory delegate.</param>
+            <param name="lifecycle">
+                The specified <see cref="T:MugenMvvmToolkit.Models.IoC.DependencyLifecycle"/>
+            </param>
+            <param name="name">The specified binding name.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.Bind(System.Type,System.Type,MugenMvvmToolkit.Models.IoC.DependencyLifecycle,System.String)">
+            <summary>
+                Indicates that the service should be bound to the specified type.
+            </summary>
+            <param name="service">The specified service type.</param>
+            <param name="typeTo">The specified to type</param>
+            <param name="name">The specified binding name.</param>
+            <param name="dependencyLifecycle">
+                The specified <see cref="T:MugenMvvmToolkit.Models.IoC.DependencyLifecycle"/>
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.Unbind(System.Type)">
+            <summary>
+                Unregisters all bindings with specified conditions for the specified service.
+            </summary>
+            <param name="service">The specified service type.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.CanResolve(System.Type,System.String)">
+            <summary>
+                Determines whether the specified request can be resolved.
+            </summary>
+            <param name="service">The specified service type.</param>
+            <param name="name">The specified binding name.</param>
+            <returns>
+                <c>True</c> if the specified service has been resolved; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.System#IServiceProvider#GetService(System.Type)">
+            <summary>
+                Gets the service object of the specified type.
+            </summary>
+            <returns>
+                A service object of type <paramref name="serviceType" />.
+                -or-
+                null if there is no service object of type <paramref name="serviceType" />.
+            </returns>
+            <param name="serviceType">
+                An object that specifies the type of service object to get.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.AutofacContainer.OnDispose(System.Boolean)">
+            <summary>
+                Releases resources held by the object.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.AutofacContainer.ThrowOnUnbind">
+            <summary>
+                true to throw an exception if the token is not valid;
+                Specifying false also suppresses some other exception conditions, but not all of them.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.AutofacContainer.Id">
+            <summary>
+                Gets the id of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.AutofacContainer.Parent">
+            <summary>
+                Gets the parent ioc adapter.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.AutofacContainer.Container">
+            <summary>
+                Gets the original ioc container.
+            </summary>
+        </member>
+    </members>
+</doc>

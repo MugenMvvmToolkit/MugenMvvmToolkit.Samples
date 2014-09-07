@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="OrderManager.WindowsPhone.Views.Products.ProductEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:products="clr-namespace:OrderManager.Portable.ViewModels.Products;assembly=OrderManager.Portable"
+             mc:Ignorable="d"
+             FontFamily="{StaticResource PhoneFontFamilyNormal}"
+             FontSize="{StaticResource PhoneFontSizeNormal}"
+             Foreground="{StaticResource PhoneForegroundBrush}"
+             d:DataContext="{d:DesignInstance products:ProductEditorViewModel, IsDesignTimeCreatable=True}"
+             d:DesignHeight="800" d:DesignWidth="480">
+
+    <StackPanel Margin="12,17,0,28">
+        <TextBlock Text="{StaticResource AppName}"
+                   Style="{StaticResource PhoneTextNormalStyle}" />
+        <TextBlock Text="{Binding Path=DisplayName}" Margin="9,-7,0,0"
+                   Style="{StaticResource PhoneTextTitle1Style}" />
+
+        <TextBlock Text="Name" Margin="4" />
+        <TextBox Style="{StaticResource PropertyChangedTextBoxStyle}"
+                 Text="{Binding Path=Name, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}" />
+
+        <TextBlock Text="Price" Margin="4" />
+        <TextBox Style="{StaticResource PropertyChangedTextBoxStyle}"
+                 Text="{Binding Path=Price, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True, TargetNullValue=''}" />
+
+
+        <TextBlock Text="Description" Margin="4" />
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" MinHeight="100"
+                 Style="{StaticResource PropertyChangedTextBoxStyle}"
+                 Text="{Binding Path=Description, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem Title="Add valid" Click="{AddCommand}" CommandParameter="{true}" ShowAsAction="always" />
+  <MenuItem Title="Add invalid" Click="{AddCommand}" CommandParameter="{false}" ShowAsAction="always" />
+</Menu>

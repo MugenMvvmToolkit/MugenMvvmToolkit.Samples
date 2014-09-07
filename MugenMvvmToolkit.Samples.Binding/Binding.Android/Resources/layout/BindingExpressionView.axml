@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pkg="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <ScrollView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Current text:" />
+      <EditText
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="15dp"
+          pkg:Bind="Text Text, Mode=TwoWay" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" />
+      <TextView
+          android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:layout_marginBottom="15dp"
+            android:textColor="#00ff00"
+            pkg:Bind="Text Text.Count(x => x == \\\'a\\\')" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:layout_marginBottom="15dp"
+          android:textColor="#00ff00"
+          pkg:Bind="Text Text.ExtensionMethod(Text.Count())" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:layout_marginBottom="15dp"
+          android:textColor="#00ff00"
+          pkg:Bind="Text Text.Skip(1).FirstOrDefault()" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:layout_marginBottom="15dp"
+          android:textColor="#00ff00"
+          pkg:Bind="Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" />
+      <TextView
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:layout_marginBottom="15dp"
+          android:textColor="#00ff00"
+          pkg:Bind="Text Text.Count() + 100 + Text.GetHashCode()" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8B1CEB7-3A87-4237-90AF-ACD54EB19B77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrderManager.WinForms</RootNamespace>
+    <AssemblyName>OrderManager.WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMVVMToolkit.3.0.20\lib\net45\MugenMvvmToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.0.10\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.Binding">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.0.16\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.WinForms">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.0.16\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\OrderManager.Wpf\Infrastructure\FileRepository.cs">
+      <Link>Infrastructure\FileRepository.cs</Link>
+    </Compile>
+    <Compile Include="Setup.cs" />
+    <Compile Include="Templates\ViewModelTabDataTemplate.cs" />
+    <Compile Include="Templates\WrapperContentManager.cs" />
+    <Compile Include="ViewBinder.cs" />
+    <Compile Include="Views\BusyIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BusyIndicator.Designer.cs">
+      <DependentUpon>BusyIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditorWrapperView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditorWrapperView.Designer.cs">
+      <DependentUpon>EditorWrapperView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Orders\OrderEditorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Orders\OrderEditorView.Designer.cs">
+      <DependentUpon>OrderEditorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Orders\OrderWorkspaceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Orders\OrderWorkspaceView.Designer.cs">
+      <DependentUpon>OrderWorkspaceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\ProductEditorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\ProductEditorView.Designer.cs">
+      <DependentUpon>ProductEditorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products\ProductWorkspaceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Products\ProductWorkspaceView.Designer.cs">
+      <DependentUpon>ProductWorkspaceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormsModule.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\BusyIndicator.resx">
+      <DependentUpon>BusyIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditorWrapperView.resx">
+      <DependentUpon>EditorWrapperView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders\OrderEditorView.resx">
+      <DependentUpon>OrderEditorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders\OrderWorkspaceView.resx">
+      <DependentUpon>OrderWorkspaceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Products\ProductEditorView.resx">
+      <DependentUpon>ProductEditorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Products\ProductWorkspaceView.resx">
+      <DependentUpon>ProductWorkspaceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrderManager.Portable\OrderManager.Portable.csproj">
+      <Project>{068ec021-96c0-40cb-860b-a46043c2d803}</Project>
+      <Name>OrderManager.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="OrderManager.Views.Orders.OrderEditorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
+    mc:Ignorable="d"
+    d:DesignHeight="800"
+    markupExtensions:View.DesignDataContext="OrderEditorViewModel"
+    d:DesignWidth="400">
+    <Pivot Title="{StaticResource AppName}">
+        <PivotItem Header="main info">
+            <StackPanel>
+                <TextBox Header="Name" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock markupExtensions:View.Bind="Text $GetErrors(Name).FirstOrDefault()"
+                           Style="{StaticResource BaseErrorTextBlockStyle}" />
+                <TextBox Header="Number" Text="{Binding Path=Number, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock markupExtensions:View.Bind="Text $GetErrors(Number).FirstOrDefault()"
+                           Style="{StaticResource BaseErrorTextBlockStyle}" />
+                <DatePicker Header="CreationDate"
+                            Date="{Binding Path=CreationDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource DateTimeToDateTimeOffsetConverter}}" />
+                <TextBlock markupExtensions:View.Bind="Text $GetErrors(CreationDate).FirstOrDefault()"
+                           Style="{StaticResource BaseErrorTextBlockStyle}" />
+            </StackPanel>
+        </PivotItem>
+        <PivotItem Header="products">
+            <ListView DataContext="{Binding Path=GridViewModel}"
+                      ItemsSource="{Binding Path=ItemsSource}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="38" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox VerticalAlignment="Center"
+                                      IsChecked="{Binding Path=IsSelected, Mode=TwoWay}" />
+
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Path=Model.Name}"
+                                           Style="{StaticResource ListViewItemTextBlockStyle}" />
+                                <TextBlock Text="{Binding Path=Model.Description}"
+                                           Style="{StaticResource ListViewItemSubheaderTextBlockStyle}" />
+                            </StackPanel>
+
+                            <TextBlock Text="{Binding Path=Model.Price}"
+                                       Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right"
+                                       Style="{StaticResource ListViewEmptyStaticTextBlockStyle}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </PivotItem>
+    </Pivot>
+</UserControl>

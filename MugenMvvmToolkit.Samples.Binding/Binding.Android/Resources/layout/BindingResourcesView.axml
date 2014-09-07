@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <ScrollView android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Object from resources($obj)" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $obj" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Method from resources($Method())" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $Method()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Type from resources($CustomType.StaticMethod())" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $CustomType.StaticMethod()" />      
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

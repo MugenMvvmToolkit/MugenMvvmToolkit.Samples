@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Binding.WindowsPhone.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
+    xmlns:viewModels="clr-namespace:Binding.Portable.ViewModels;assembly=Binding.Portable"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    d:DataContext="{d:DesignInstance viewModels:MainViewModel, IsDesignTimeCreatable=True}">
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{StaticResource AppName}" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" />
+            <TextBlock Text="main page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+            <ItemsControl markupExtensions:View.Bind="ItemsSource Items">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Margin="1" x:Name="Btn"
+                                markupExtensions:View.Bind="Content Item1; CommandParameter Item2; Click $Relative(PhoneApplicationPage).DataContext.ShowCommand" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+
+</phone:PhoneApplicationPage>

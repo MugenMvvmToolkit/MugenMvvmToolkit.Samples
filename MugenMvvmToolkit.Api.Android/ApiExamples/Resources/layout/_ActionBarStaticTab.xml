@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ActionBar NavigationMode="Tabs">
+  <Tab Text="Tab 1" Content="SimpleFragment1" />
+  <Tab Text="Tab 2" Content="ApiExamples.Views.SimpleFragment1" />
+  <Tab Text="Tab 3" Content="simplefragment2" />
+  <Tab Text="Tab 4" Content="apiexamples.views.simplefragment2" />
+  <Tab Text="Tab 5" Content="/@layout/simpleview1" />
+  <Tab Text="Tab 6" Content="/@layout/simpleview2" />
+</ActionBar>

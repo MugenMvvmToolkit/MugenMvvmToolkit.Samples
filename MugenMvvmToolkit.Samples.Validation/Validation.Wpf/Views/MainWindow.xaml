@@ -1,0 +1,10 @@
+﻿<Window x:Class="Validation.Wpf.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mugen MVVM Application" Height="350" Width="525">
+    <StackPanel>
+        <Button Command="{Binding Path=ShowAnnotationCommand}" Content="Validation using data annotations"
+                Margin="4" />
+        <Button Command="{Binding Path=ShowUserEditorCommand}" Content="Validation using validators" Margin="4" />
+    </StackPanel>
+</Window>

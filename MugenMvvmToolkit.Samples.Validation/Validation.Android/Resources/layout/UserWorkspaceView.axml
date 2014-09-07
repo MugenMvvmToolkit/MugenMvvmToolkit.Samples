@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:pkg="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:fillViewport="true"
+            android:gravity="top">
+  <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Name" />
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      pkg:Bind="Text UserEditorViewModel.Name, Mode=TwoWay, Validate=True" />
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_gravity="left|center"
+        android:text="Login" />
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_gravity="right|center"
+        android:textColor="#FF008000"
+        android:text="Validating..."
+        pkg:Bind="Visible UserEditorViewModel.IsLoginValidating" />
+    </LinearLayout>
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      pkg:Bind="Text UserEditorViewModel.Login, Mode=TwoWay, Validate=True, Delay=400" />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Email" />
+    <EditText
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      pkg:Bind="Text UserEditorViewModel.Email, Mode=TwoWay, Validate=True" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#ff0000"
+              android:text="View model is not valid"
+              pkg:Bind="Visible !UserEditorViewModel.IsValid" />
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="#FF008000"
+              android:text="View model is valid"
+              pkg:Bind="Visible UserEditorViewModel.IsValid" />
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+      <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="Add"
+        pkg:Bind="Click AddUserCommand" />
+      <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="Remove"
+        pkg:Bind="Click RemoveUserCommand" />
+    </LinearLayout>
+
+    <ListView
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      pkg:ItemTemplate="@layout/_userlisttemplate"
+      pkg:Bind="DataContext UserGridViewModel; ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay" />
+  </LinearLayout>
+</ScrollView>

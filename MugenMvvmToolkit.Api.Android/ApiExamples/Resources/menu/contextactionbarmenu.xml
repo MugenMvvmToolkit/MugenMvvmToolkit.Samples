@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem ActionView="SearchView" ActionViewBind="Text ContextText, Mode=TwoWay" ShowAsAction="always" />
+  <MenuItem Title="Context item" Click="{ExecuteCommand}" ShowAsAction="ifroom" />
+</Menu>

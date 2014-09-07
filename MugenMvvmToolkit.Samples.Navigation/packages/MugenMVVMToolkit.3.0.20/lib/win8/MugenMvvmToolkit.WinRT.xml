@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MugenMvvmToolkit.WinRT</name>
+    </assembly>
+    <members>
+        <member name="T:MugenMvvmToolkit.Infrastructure.AttachedValueProvider">
+            <summary>
+                Represents the attached value provider class, that allows to attach a value to an object using path.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.ClearInternal(System.Object)">
+            <summary>
+                Clears all attached properties in the specified item.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.GetOrAddAttachedDictionary(System.Object,System.Boolean)">
+            <summary>
+                Gets or adds the attached values container.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.AttachedValueDictionary.Equals(System.String,System.String)">
+            <summary>
+                Determines whether the specified objects are equal.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.AttachedValueDictionary.GetHashCode(System.String)">
+            <summary>
+                Returns a hash code for the specified object.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory">
+            <summary>
+                Rerpresets the factory that allows to create serializable callback operations.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateAwaiter(MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperation,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperationAwaiter"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateAwaiter``1(MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperation{``0},MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperationAwaiter`1"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateSerializableCallback(System.Delegate)">
+            <summary>
+                Tries to convert a delegate to an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.ISerializableCallback"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.SaveValueState">
+            <summary>
+            Gets or sets the delegate that allows to convert non serializable value to serializable.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.RestoreValueState">
+            <summary>
+            Gets or sets the delegate that allows to convert from serializable value to original.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.AwaiterSerializableCallback">
+            <summary>
+            Rerpresents the serializable callback that allows to restore async callback.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.DelegateSerializableCallback">
+            <summary>
+            Rerpresents the serializable callback that allows to restore delegate callback.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.DelegateSerializableCallback.Invoke(MugenMvvmToolkit.Interfaces.Callbacks.IOperationResult)">
+            <summary>
+                Invokes the callback using the specified operation result.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.ApplicationStateManager">
+            <summary>
+                Represents the application state manager.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager">
+            <summary>
+                Represents the application state manager.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnSaveState(Windows.UI.Xaml.FrameworkElement,System.Collections.Generic.IDictionary{System.String,System.Object},System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Occurs on save element state.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnLoadState(Windows.UI.Xaml.FrameworkElement,System.Collections.Generic.IDictionary{System.String,System.Object},System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Occurs on load element state.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.IApplicationStateManager.KnownTypes">
+            <summary>
+            Gets the collection of known types.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.#ctor(MugenMvvmToolkit.Interfaces.ISerializer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ApplicationStateManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnSaveState(Windows.UI.Xaml.FrameworkElement,System.Collections.Generic.IDictionary{System.String,System.Object},System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Occurs on save element state.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnLoadState(Windows.UI.Xaml.FrameworkElement,System.Collections.Generic.IDictionary{System.String,System.Object},System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Occurs on load element state.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.KnownTypes">
+            <summary>
+            Gets the collection of known types.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.LazySerializableContainer">
+            <summary>
+            Represents the seralizable container for <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.LazySerializableContainer.#ctor(MugenMvvmToolkit.Interfaces.ISerializer,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.LazySerializableContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.LazySerializableContainer.GetContext(MugenMvvmToolkit.Interfaces.ISerializer)">
+            <summary>
+             Deserializes data using stream.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService">
+            <summary>
+                A basic implementation of <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/> to adapt the <see cref="T:Windows.UI.Xaml.Controls.Frame"/>.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService">
+            <summary>
+                Implemented by services that provide <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/> based navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GetParameterFromArgs(System.EventArgs)">
+            <summary>
+            Gets a navigation parameter from event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigate(MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Navigates using cancel event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigate(MugenMvvmToolkit.Interfaces.Models.IViewMappingItem,System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays the content located at the specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/>.
+            </summary>
+            <param name="source">
+                The <c>IViewPageMappingItem</c> of the content to display.
+            </param>
+            <param name="parameter">
+                A <see cref="T:System.Object"/> that contains data to be used for processing during
+                navigation.
+            </param>
+            <param name="dataContext">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+            <returns>
+                <c>true</c> if the content was successfully displayed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.OnNavigated(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CurrentContent">
+            <summary>
+                The current content.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigating">
+            <summary>
+                Raised prior to navigation.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigated">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.#ctor(Windows.UI.Xaml.Controls.Frame)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.GetParameterFromArgs(System.EventArgs)">
+            <summary>
+                Gets a navigation parameter from event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.Navigate(MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Navigates using cancel event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.Navigate(MugenMvvmToolkit.Interfaces.Models.IViewMappingItem,System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays the content located at the specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/>.
+            </summary>
+            <param name="source">
+                The <c>IViewPageMappingItem</c> of the content to display.
+            </param>
+            <param name="parameter">
+                A <see cref="T:System.Object"/> that contains data to be used for processing during
+                navigation.
+            </param>
+            <param name="dataContext">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+            <returns>
+                <c>true</c> if the content was successfully displayed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.OnNavigated(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.CurrentContent">
+            <summary>
+                The current content.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.Navigating">
+            <summary>
+                Raised prior to navigation.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.FrameNavigationService.Navigated">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter">
+            <summary>
+                Represents the base implementation of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IMessagePresenter"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter.#ctor(MugenMvvmToolkit.Interfaces.IThreadManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter.ShowAsync(System.String,System.String,MugenMvvmToolkit.Models.MessageButton,MugenMvvmToolkit.Models.MessageImage,MugenMvvmToolkit.Models.MessageResult,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays a message box that has a message, title bar caption, button, and icon; and that accepts a default message
+                box result and returns a result.
+            </summary>
+            <param name="messageBoxText">A <see cref="T:System.String"/> that specifies the text to display.</param>
+            <param name="caption">A <see cref="T:System.String"/> that specifies the title bar caption to display.</param>
+            <param name="button">A <see cref="T:MugenMvvmToolkit.Models.MessageButton"/> value that specifies which button or buttons to display.</param>
+            <param name="icon">A <see cref="T:MugenMvvmToolkit.Models.MessageImage"/> value that specifies the icon to display.</param>
+            <param name="defaultResult">
+                A <see cref="T:MugenMvvmToolkit.Models.MessageResult"/> value that specifies the default result of the message
+                box.
+            </param>
+            <param name="context">The specified context.</param>
+            <returns>A <see cref="T:MugenMvvmToolkit.Models.MessageResult"/> value that specifies which message box button is clicked by the user.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.#ctor(Windows.UI.Core.CoreDispatcher)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ThreadManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeOnUiThreadAsync(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action on the UI thread using the UiDispatcher.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeOnUiThread(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action on the UI thread synchronous using the UiDispatcher.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeAsync(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action asynchronous.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.ThreadManager.Dispatcher">
+            <summary>
+                Gets the current dispatcher.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.ThreadManager.IsUiThread">
+            <summary>
+                Determines whether the calling thread is the UI thread.
+            </summary>
+            <returns><c>true</c> if the calling thread is the UI thread; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.BindingAssemblyName">
+            <summary>
+            Gets the name of binding assembly.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.#ctor(Windows.UI.Xaml.Controls.Frame)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.OnInitialize">
+            <summary>
+                Starts the current bootstraper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.GetAssemblies">
+            <summary>
+                Gets the application assemblies.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.Start(MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Starts the current bootstrapper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.CreateMainViewModel(System.Type,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates the main view model.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.GetMainViewModelType">
+            <summary>
+                Gets the type of main view model.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.WinRTBootstrapperBase.Platform">
+            <summary>
+                Gets the current platform.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.Cancel">
+            <summary>
+                Specifies whether a pending navigation should be canceled.
+            </summary>
+            <returns>
+                true to cancel the pending cancelable navigation; false to continue with navigation.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.NavigationMode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.IsCancelable">
+            <summary>
+                Gets a value that indicates whether you can cancel the navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper.#ctor(Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper.Args">
+            <summary>
+                Gets the original args.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper.Cancel">
+            <summary>
+                Specifies whether a pending navigation should be canceled.
+            </summary>
+            <returns>
+                true to cancel the pending cancelable navigation; false to continue with navigation.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper.NavigationMode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper.IsCancelable">
+            <summary>
+                Gets a value that indicates whether you can cancel the navigation.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase.Content">
+            <summary>
+                Gets the content of the target being navigated to.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase.Mode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsWrapper.#ctor(Windows.UI.Xaml.Navigation.NavigationEventArgs)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsWrapper"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsWrapper.Args">
+            <summary>
+                Gets the original args.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsWrapper.Content">
+            <summary>
+                Gets the content of the target being navigated to.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsWrapper.Mode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.PlatformExtensions">
+            <summary>
+            Represents the platform specific extensions.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.PlatformExtensions.ApplicationStateManager">
+            <summary>
+            Gets or sets the <see cref="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager"/>.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Converters.InverseBooleanConverter">
+            <summary>
+                This converter reverses a Boolean value (True == False, False == True).
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Converters.InverseBooleanConverter.Instance">
+            <summary>
+                Gets an instance of <see cref="T:MugenMvvmToolkit.Converters.InverseBooleanConverter"/>.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter">
+            <summary>
+                Represents the converter that allows to convert a view model to view.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Converters.ViewModelToViewConverter.Instance">
+            <summary>
+            Gets an instance of <see cref="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Converters.ViewModelToViewConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ThrowOnErrorDefault">
+            <summary>
+                true to throw an exception if the view cannot be found; false to return default view. 
+                Specifying false also suppresses some other exception conditions, but not all of them.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ThrowOnError">
+            <summary>
+                true to throw an exception if the view cannot be found; false to return default view. 
+                Specifying false also suppresses some other exception conditions, but not all of them.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.AlwaysCreateNewView">
+            <summary>
+            Gets or sets the default value that indicates that view converter should always create new view.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ViewName">
+            <summary>
+            Gets or sets the name of view.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Bootstrapper`1">
+            <summary>
+                Represents the base class that is used to start MVVM application.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.#ctor(Windows.UI.Xaml.Controls.Frame,MugenMvvmToolkit.Interfaces.IIocContainer,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},MugenMvvmToolkit.Interfaces.Models.IViewModelSettings,MugenMvvmToolkit.Interfaces.IModule[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Bootstrapper`1"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.CreateViewModelSettings">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewModelSettings"/>.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewModelSettings"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.GetModules">
+            <summary>
+                Gets the application modules.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.GetAssemblies">
+            <summary>
+                Gets the application assemblies.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.GetMainViewModelType">
+            <summary>
+                Gets the type of main view model.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Bootstrapper`1.CreateIocContainer">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.</returns>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase">
+            <summary>
+                Represents the base class for the design time manager.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.Initialize">
+            <summary>
+                Initializes the current design time manager.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.InitializeViewModel(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Initializes the view model in design mode.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.CreateIocContainer">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IIocContainer"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.GetContext">
+            <summary>
+                Gets the design context.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.OnInitialized">
+            <summary>
+                Occurs after the manager is fully loaded.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.InitializeViewModelInternal(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Initializes the view model in design mode.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.OnDispose(System.Boolean)">
+            <summary>
+                Releases resources held by the object.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.IsDesignMode">
+            <summary>
+                Gets the value indicating whether the control is in design mode (running under Blend or Visual Studio).
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.Priority">
+            <summary>
+                Gets the load-priority.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.Platform">
+            <summary>
+                Gets the current platform.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.IocContainer">
+            <summary>
+                Gets the design time <see cref="P:MugenMvvmToolkit.Interfaces.IDesignTimeManager.IocContainer"/>, if any.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DesignTimeManagerBase.Context">
+            <summary>
+                Gets the design context.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProviderEx">
+            <summary>
+                Represent the interface for navigation provider.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationProviderEx.NavigationService">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.#ctor(MugenMvvmToolkit.Interfaces.Navigation.INavigationService,MugenMvvmToolkit.Interfaces.IThreadManager,MugenMvvmToolkit.Interfaces.IViewMappingProvider,MugenMvvmToolkit.Interfaces.IViewManager,MugenMvvmToolkit.Interfaces.IViewModelProvider,MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager,MugenMvvmToolkit.Interfaces.Navigation.INavigationCachePolicy)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigate(MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallback,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Navigates using the specified data context.
+            </summary>
+            <param name="callback">The specified callback, if any.</param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationServiceOnNavigating(System.Object,MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Subscriber to the Navigating event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationServiceOnNavigated(System.Object,MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase)">
+            <summary>
+                Subscriber to the Navigated event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnNavigatingFrom(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.Navigation.INavigationContext)">
+            <summary>
+                Called just before a view-model is no longer the active view-model in a frame.
+            </summary>
+            <param name="viewModel">The specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/></param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnNavigatedTo(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.Navigation.INavigationContext)">
+            <summary>
+                Called when a view-model becomes the active view-model in a frame.
+            </summary>
+            <param name="viewModel">The specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/></param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.RaiseNavigated(MugenMvvmToolkit.Interfaces.Navigation.INavigationContext,MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Invokes the <see cref="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigated"/> event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnDispose(System.Boolean)">
+            <summary>
+                Releases resources held by the object.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewManager">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewMappingProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewMappingProvider"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ThreadManager">
+            <summary>
+                Gets the current <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewModelProvider">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewModelProvider"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CallbackManager">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationService">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CurrentViewModel">
+            <summary>
+                Gets the active view model.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CurrentContent">
+            <summary>
+                Gets the current content.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CachePolicy">
+            <summary>
+                Gets the cache policy, if any.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigated">
+            <summary>
+                Occurs after view model was navigated.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter">
+            <summary>
+                Provides functionality to present a timed message.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.#ctor(MugenMvvmToolkit.Interfaces.IThreadManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.ShowAsync(System.Object,System.Single,MugenMvvmToolkit.Models.ToastPosition,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Shows the specified message.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.ShowInternal(System.Object,System.Single,MugenMvvmToolkit.Models.ToastPosition,MugenMvvmToolkit.Interfaces.Models.IDataContext,System.Threading.Tasks.TaskCompletionSource{System.Object})">
+            <summary>
+                Shows the specified message.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.VisualStateManager">
+            <summary>
+                Manages states and the logic for transitioning between states for controls.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.VisualStateManager.#ctor(MugenMvvmToolkit.Interfaces.IThreadManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.VisualStateManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.VisualStateManager.GoToStateAsync(MugenMvvmToolkit.Interfaces.Views.IView,System.String,System.Boolean,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Transitions the control between two states.
+            </summary>
+            <returns>
+                true if the control successfully transitioned to the new state; otherwise, false.
+            </returns>
+            <param name="view">The view to transition between states. </param>
+            <param name="stateName">The state to transition to.</param>
+            <param name="useTransitions">true to use a VisualTransition to transition between states; otherwise, false.</param>
+            <param name="context">The specified context.</param>
+        </member>
+        <member name="T:MugenMvvmToolkit.InitializationModule">
+            <summary>
+                Represents the class that is used to initialize the IOC adapter.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.InitializationModule"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.#ctor(MugenMvvmToolkit.Models.LoadMode,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.InitializationModule"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.LoadInternal">
+            <summary>
+                Loads the current module.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetVisualStateManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IVisualStateManager"/> which will be used by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IVisualStateManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetMessagePresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IMessagePresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IMessagePresenter"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetAttachedValueProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IAttachedValueProvider"/> that will be used by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IAttachedValueProvider"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetOperationCallbackFactory">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackFactory"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackFactory"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetApplicationStateManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager"/> that will be used in all view models by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetViewModelPresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IViewModelPresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IViewModelPresenter"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetThreadManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/> which will be used in all view models by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetNavigationProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetToastPresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IToastPresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IToastPresenter"/>.</returns>
+        </member>
+    </members>
+</doc>

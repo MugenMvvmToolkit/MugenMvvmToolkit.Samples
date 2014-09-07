@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <ScrollView android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+      <CheckBox android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Can execute command"
+                android:layout_marginBottom="15dp"
+                pkg:Bind="Checked CanExecuteCommand, Mode=TwoWay" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to command" />
+      <Button android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="15dp"
+              android:text="Click binding"
+              pkg:Bind="Click Command; CommandParameter '1'" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to command(ToggleEnabledState = false)" />
+      <Button android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="15dp"
+              android:text="Click binding"
+              pkg:Bind="Click Command, ToggleEnabledState=False; CommandParameter '2'" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to method without parameters" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                pkg:Bind="TextChanged EventMethod(null)" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to method with parameter" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                pkg:Bind="TextChanged EventMethod($self.Text)" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to method with event args parameter" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                pkg:Bind="TextChanged EventMethod($args)" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to method with several parameters" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                pkg:Bind="TextChanged EventMethodMultiParams($self.Text, $args)" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

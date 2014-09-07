@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu IsEnabled="true | false | {binding}" IsVisible="true | false | {binding}" DataContext="{binding}"
+      ItemsSource="{binding}">
+
+  <!--if you specify the ItemsSource ItemTemplate is used.-->
+  <ItemTemplate DataContext="{binding}" AlphabeticShortcut="string | {binding}"
+                Icon="/@[package:]drawable/drawable_resource_name | {binding}"
+                IsCheckable="true | false | {binding}" IsChecked="true | false | {binding}"
+                IsEnabled="true | false | {binding}"
+                IsVisible="true | false | {binding}" NumericShortcut="string | {binding}"
+                Title="string | {binding}" TitleCondensed="string | {binding}"
+                Click="{binding}" CommandParameter="string | {binding}" ItemsSource="{binding}"
+                ShowAsAction="Always | CollapseActionView | IfRoom | Never | WithText"
+                IsActionViewExpanded="true | false | {binding}" ActionView="class name | {binding}"
+                ActionViewTemplateSelector="{binding}"
+                ActionViewBind="string" ActionProvider="class name | {binding}"
+                ActionProviderTemplateSelector="{binding}" ActionProviderBind="string"/>
+
+  <!--otherwise used the collection of tabs.-->
+  <MenuItem DataContext="{binding}" AlphabeticShortcut="string | {binding}"
+            Icon="/@[package:]drawable/drawable_resource_name | {binding}"
+            IsCheckable="true | false | {binding}" IsChecked="true | false | {binding}"
+            IsEnabled="true | false | {binding}"
+            IsVisible="true | false | {binding}" NumericShortcut="string | {binding}"
+            Title="string | {binding}" TitleCondensed="string | {binding}"
+            Click="{binding}" CommandParameter="{binding}" ItemsSource="{binding}"
+            ShowAsAction="Always | CollapseActionView | IfRoom | Never | WithText"
+            IsActionViewExpanded="true | false | {binding}" ActionView="class name | {binding}"
+            ActionViewTemplateSelector="{binding}"
+            ActionViewBind="string" ActionProvider="class name | {binding}"
+            ActionProviderTemplateSelector="{binding}" ActionProviderBind="string" />
+  <MenuItem />
+  <MenuItem />
+</Menu>

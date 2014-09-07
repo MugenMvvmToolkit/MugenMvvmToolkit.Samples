@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ActionBar DataContext="{binding}" BackgroundDrawable="/@[package:]drawable/drawable_resource_name | {binding}"
+           CustomView="@[package:]layout/layout_resource_name | class name | {binding}"
+           DisplayHomeAsUpEnabled="true | false | {binding}"
+           DisplayOptions="UseLogo | ShowHome | HomeAsUp | ShowTitle | ShowCustom | {binding}"
+           DisplayShowCustomEnabled="true | false | {binding}" DisplayShowHomeEnabled="true | false | {binding}"
+           DisplayShowTitleEnabled="true | false | {binding}" DisplayUseLogoEnabled="true | false | {binding}"
+           HomeButtonEnabled="true | false | {binding}" HomeButtonClick="{binding}"
+           Icon="/@[package:]drawable/drawable_resource_name | {binding}"
+           Logo="/@[package:]drawable/drawable_resource_name | {binding}" NavigationMode="Standard | List | Tabs"
+           SplitBackgroundDrawable="/@[package:]drawable/drawable_resource_name | {binding}"
+           StackedBackgroundDrawable="/@[package:]drawable/drawable_resource_name | {binding}"
+           IsShowing="true | false | {binding}" Subtitle="string | {binding}" Title="string | {binding}"
+           Visible="true | false | {binding}" SelectedItem="{binding}" ItemsSource="{binding}"
+           RestoreTabSelectedIndex="true | false" ContextActionBarVisible="true | false | {binding}"
+           ContextActionBarTemplate="@[package:]menu/menu_resource_name | {binding}">
+
+  <!--if you specify the ItemsSource TabTemplate is used.-->
+  <TabTemplate DataContext="{binding}" Content="@[package:]layout/layout_resource_name | {binding}"
+               ContentTemplate="@[package:]layout/layout_resource_name"
+               ContentTemplateSelector="{binding}" ContentDescription="string | {binding}"
+               CustomView="@[package:]layout/layout_resource_name | class name | {binding}"
+               Icon="/@[package:]drawable/drawable_resource_name | {binding}" Text="string | {binding}"
+               Tag="{binding}" />
+
+  <!--otherwise used the collection of tabs.-->
+  <Tab DataContext="{binding}" Content="@[package:]layout/layout_resource_name | {binding}"
+       ContentTemplate="@[package:]layout/layout_resource_name"
+       ContentTemplateSelector="{binding}" ContentDescription="string | {binding}"
+       CustomView="@[package:]layout/layout_resource_name | class name | {binding}"
+       Icon="/@[package:]drawable/drawable_resource_name | {binding}" Text="string | {binding}"
+       Tag="{binding}" />
+  <Tab />
+  <Tab />
+  <Tab />
+</ActionBar>

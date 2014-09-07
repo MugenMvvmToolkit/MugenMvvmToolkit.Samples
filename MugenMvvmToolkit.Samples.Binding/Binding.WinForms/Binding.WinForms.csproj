@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DB7F032-6C81-4981-8755-CFC6DBBFD2D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Binding.WinForms</RootNamespace>
+    <AssemblyName>Binding.WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit">
+      <HintPath>..\packages\MugenMVVMToolkit.3.0.20\lib\net45\MugenMvvmToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.0.10\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.Binding">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.0.16\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.WinForms">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.0.16\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Templates\ButtonItemTemplate.cs" />
+    <Compile Include="ViewBinder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\AttachedMemberView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AttachedMemberView.Designer.cs">
+      <DependentUpon>AttachedMemberView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BindingExpressionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BindingExpressionView.Designer.cs">
+      <DependentUpon>BindingExpressionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BindingModeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BindingModeView.Designer.cs">
+      <DependentUpon>BindingModeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BindingResourcesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BindingResourcesView.Designer.cs">
+      <DependentUpon>BindingResourcesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BindingValidationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BindingValidationView.Designer.cs">
+      <DependentUpon>BindingValidationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CommandBindingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CommandBindingView.Designer.cs">
+      <DependentUpon>CommandBindingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DynamicObjectView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DynamicObjectView.Designer.cs">
+      <DependentUpon>DynamicObjectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalizableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalizableView.Designer.cs">
+      <DependentUpon>LocalizableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\PerformanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PerformanceView.Designer.cs">
+      <DependentUpon>PerformanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RelativeBindingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RelativeBindingView.Designer.cs">
+      <DependentUpon>RelativeBindingView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AttachedMemberView.resx">
+      <DependentUpon>AttachedMemberView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BindingExpressionView.resx">
+      <DependentUpon>BindingExpressionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BindingModeView.resx">
+      <DependentUpon>BindingModeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BindingResourcesView.resx">
+      <DependentUpon>BindingResourcesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BindingValidationView.resx">
+      <DependentUpon>BindingValidationView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommandBindingView.resx">
+      <DependentUpon>CommandBindingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DynamicObjectView.resx">
+      <DependentUpon>DynamicObjectView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalizableView.resx">
+      <DependentUpon>LocalizableView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PerformanceView.resx">
+      <DependentUpon>PerformanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RelativeBindingView.resx">
+      <DependentUpon>RelativeBindingView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Binding.Portable\Binding.Portable.csproj">
+      <Project>{88134839-b2d4-44f0-b847-0735c9bc268d}</Project>
+      <Name>Binding.Portable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

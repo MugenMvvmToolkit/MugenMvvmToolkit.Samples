@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem Title="Apply changes" Click="{ApplyCommand}" Icon="/@drawable/ic_action_accept" ShowAsAction="ifroom" />
+  <MenuItem Title="Cancel changes" Click="{CloseCommand}" Icon="/@drawable/ic_action_cancel" ShowAsAction="ifroom" />
+</Menu>

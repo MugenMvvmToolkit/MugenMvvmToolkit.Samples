@@ -1,0 +1,50 @@
+﻿<Window x:Class="Binding.Wpf.Views.PerformanceView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="500" Height="300"
+        WindowStyle="ToolWindow">
+    <StackPanel Margin="4">
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Native binding:" Margin="1" />
+            <TextBlock Grid.Column="1" Margin="1" x:Name="NativeTb" />
+        </Grid>
+
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Mugen binding:" Margin="1" />
+            <TextBlock Grid.Column="1" Margin="1" x:Name="MugenTb" />
+        </Grid>
+
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Mugen binding ((Property ?? $string.Empty).Count() + Property):" Margin="1" />
+            <TextBlock Grid.Column="1" Margin="1" x:Name="MugenExpTb" />
+        </Grid>
+
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="No binding:" Margin="1" />
+            <TextBlock Grid.Column="1" Margin="1" x:Name="NoBindingTb" />
+        </Grid>
+
+        <TextBox Margin="2" x:Name="IterationsTb" />
+        <Button Content="Start" Margin="2" Click="Click" />
+    </StackPanel>
+</Window>

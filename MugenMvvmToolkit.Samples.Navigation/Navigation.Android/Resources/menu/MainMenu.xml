@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem Title="First view model (Window)" Click="{ShowFirstWindowCommand}" ShowAsAction="never" />
+  <MenuItem Title="First view model (Activity)" Click="{ShowFirstPageCommand}" ShowAsAction="never" />
+  <MenuItem Title="First view model (Tab)" Click="{ShowFirstTabCommand}" ShowAsAction="never" />
+  
+  <MenuItem Title="Second view model (Window)" Click="{ShowSecondWindowCommand}" ShowAsAction="never" />
+  <MenuItem Title="Second view model (Activity)" Click="{ShowSecondPageCommand}" ShowAsAction="never" />
+  <MenuItem Title="Second view model (Tab)" Click="{ShowSecondTabCommand}" ShowAsAction="never" />
+</Menu>

@@ -1,0 +1,2435 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MugenMvvmToolkit.Android</name>
+    </assembly>
+    <members>
+        <member name="T:MugenMvvmToolkit.Infrastructure.AttachedValueProvider">
+            <summary>
+                Represents the attached value provider class, that allows to attach a value to an object using path.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.ClearInternal(System.Object)">
+            <summary>
+                Clears all attached properties in the specified item.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.GetOrAddAttachedDictionary(System.Object,System.Boolean)">
+            <summary>
+                Gets or adds the attached values container.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.AttachedValueDictionary.Equals(System.String,System.String)">
+            <summary>
+                Determines whether the specified objects are equal.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AttachedValueProvider.AttachedValueDictionary.GetHashCode(System.String)">
+            <summary>
+                Returns a hash code for the specified object.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Attributes.BootstrapperAttribute.#ctor(System.Type,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Attributes.BootstrapperAttribute"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Attributes.BootstrapperAttribute.BootstrapperType">
+            <summary>
+                Gets the type of bootstrapper.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Attributes.BootstrapperAttribute.Priority">
+            <summary>
+                Gets the priority.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ItemsSourceGeneratorBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ItemsSourceGeneratorBase"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ActionBarTabItemsSourceGenerator.#ctor(Android.Support.V7.App.ActionBar,MugenMvvmToolkit.Models.ActionBarTabTemplate)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ActionBarTabItemsSourceGenerator"/> class.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase">
+            <summary>
+                Represents the base class that is used to start MVVM application.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.Initialize(System.Boolean)">
+            <summary>
+                Initializes the current bootstraper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.OnInitialize">
+            <summary>
+                Initializes the current bootstraper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.GetAssemblies">
+            <summary>
+                Gets the application assemblies.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.Start(MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Starts the current bootstrapper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.EnsureInitialized">
+            <summary>
+                Makes sure that the application is initialized.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.GetAndroidViewAssemblies">
+            <summary>
+                Gets the android view assemblies.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.CreateMainViewModel(System.Type,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates the main view model.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.GetMainViewModelType">
+            <summary>
+                Gets the type of main view model.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.ViewAssemblies">
+            <summary>
+            Gets the collection of view assemblies.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.AndroidBootstrapperBase.Platform">
+            <summary>
+                Gets the current platform.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnSaveInstanceStateActivity(Android.App.Activity,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnCreateActivity(Android.App.Activity,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnSaveInstanceStateFragment(Android.Support.V4.App.Fragment,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IApplicationStateManager.OnCreateFragment(Android.Support.V4.App.Fragment,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.#ctor(MugenMvvmToolkit.Interfaces.ISerializer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ApplicationStateManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnSaveInstanceStateActivity(Android.App.Activity,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnCreateActivity(Android.App.Activity,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnSaveInstanceStateFragment(Android.Support.V4.App.Fragment,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.OnCreateFragment(Android.Support.V4.App.Fragment,Android.OS.Bundle,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.ApplicationStateManager.Serializer">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.ISerializer"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IBindableMenuInflater.Inflate(System.Int32,Android.Views.IMenu,System.Object)">
+            <summary>
+                Inflate a menu hierarchy from the specified XML resource.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.BindableMenuInflater.Inflate(System.Int32,Android.Views.IMenu,System.Object)">
+            <summary>
+                Inflate a menu hierarchy from the specified XML resource.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.BindingErrorProvider">
+            <summary>
+                Represents the class that provides a user interface for indicating that a control on a form has an error associated
+                with it.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.BindingErrorProvider.SetErrors(System.Object,System.Collections.Generic.IList{System.Object},MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Sets errors for binding target.
+            </summary>
+            <param name="target">The binding target object.</param>
+            <param name="errors">The collection of errors</param>
+            <param name="context">The specified context, if any.</param>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory">
+            <summary>
+                Rerpresets the factory that allows to create serializable callback operations.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateAwaiter(MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperation,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperationAwaiter"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateAwaiter``1(MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperation{``0},MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IAsyncOperationAwaiter`1"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.CreateSerializableCallback(System.Delegate)">
+            <summary>
+                Tries to convert a delegate to an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.ISerializableCallback"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.SaveValueState">
+            <summary>
+            Gets or sets the delegate that allows to convert non serializable value to serializable.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.RestoreValueState">
+            <summary>
+            Gets or sets the delegate that allows to convert from serializable value to original.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.AwaiterSerializableCallback">
+            <summary>
+            Rerpresents the serializable callback that allows to restore async callback.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.DelegateSerializableCallback">
+            <summary>
+            Rerpresents the serializable callback that allows to restore delegate callback.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Callbacks.SerializableOperationCallbackFactory.DelegateSerializableCallback.Invoke(MugenMvvmToolkit.Interfaces.Callbacks.IOperationResult)">
+            <summary>
+                Invokes the callback using the specified operation result.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.DataTemplateSelectorBase`2">
+            <summary>
+                DataTemplateSelector allows the app writer to provide custom template selection logic.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.IDataTemplateSelector">
+            <summary>
+                DataTemplateSelector allows the app writer to provide custom template selection logic.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IDataTemplateSelector.SelectTemplate(System.Object,System.Object)">
+            <summary>
+                Override this method to return an app specific template.
+            </summary>
+            <param name="item">The data content</param>
+            <param name="container">The element to which the template will be applied</param>
+            <returns>An app-specific template to apply, or null.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DataTemplateSelectorBase`2.SelectTemplate(System.Object,System.Object)">
+            <summary>
+                Override this method to return an app specific template.
+            </summary>
+            <param name="item">The data content</param>
+            <param name="container">The element to which the template will be applied</param>
+            <returns>
+                An app-specific template to apply, or null.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DataTemplateSelectorBase`2.SelectTemplate(`0,System.Object)">
+            <summary>
+                Override this method to return an app specific template.
+            </summary>
+            <param name="item">The data content</param>
+            <param name="container">The element to which the template will be applied</param>
+            <returns>
+                An app-specific template to apply, or null.
+            </returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DataTemplateSelectorBase`2.Initialize(`1,MugenMvvmToolkit.Binding.Builders.BindingSet{`1,`0})">
+            <summary>
+                Initializes the specified template.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DataTemplateSelectorBase`2.SupportInitialize">
+            <summary>
+                Specifies that this template supports initialize method default is <c>true</c>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DebugTracer.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.DebugTracer"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DebugTracer.TraceViewModel(MugenMvvmToolkit.Models.AuditAction,MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Updates information about view-models.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DebugTracer.Trace(MugenMvvmToolkit.Models.TraceLevel,System.String)">
+            <summary>
+                Writes an informational message to the trace listeners.
+            </summary>
+            <param name="level">The specified trace level.</param>
+            <param name="message">The message to write.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.DebugTracer.Trace(MugenMvvmToolkit.Models.TraceLevel,System.String,System.Object[])">
+            <summary>
+                Writes an informational message to the trace listeners.
+            </summary>
+            <param name="level">The specified trace level.</param>
+            <param name="format">The message to write.</param>
+            <param name="args">The string format members.</param>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DebugTracer.EnableLog">
+            <summary>
+            Gets or sets the value that indicates that tracer should log events.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.DebugTracer.Tag">
+            <summary>
+            Gets or sets the tag of log.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ItemsSourceAdapter.#ctor(System.Object,Android.Content.Context,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ItemsSourceAdapter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.#ctor(`0)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.OnDestroy(System.Action)">
+            <summary>
+                Perform any final cleanup before an activity is destroyed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.OnSaveInstanceState(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to ask the view to save its current dynamic state, so it
+                can later be reconstructed in a new instance of its process is
+                restarted.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Called when the target is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.TryRestoreContext(System.Object)">
+            <summary>
+            Tries to restore instance context.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.OnDataContextChanged(System.Object,System.Object)">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.DataContext">
+            <summary>
+                Gets or sets the data context.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnBackPressed(System.Action)">
+            <summary>
+            Called when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnCreate(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called when the activity is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnCreateOptionsMenu(Android.Views.IMenu,System.Func{Android.Views.IMenu,System.Boolean})">
+            <summary>
+                Initialize the contents of the Activity's standard options menu.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnDestroy(System.Action)">
+            <summary>
+                Perform any final cleanup before an activity is destroyed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnPause(System.Action)">
+            <summary>
+                Called as part of the activity lifecycle when an activity is going into
+                the background, but has not (yet) been killed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnRestart(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnStop" />
+                </c>
+                when the current activity is being
+                re-displayed to the user (the user has navigated back to it).
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnResume(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                </c>
+                ,
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestart" />
+                </c>
+                , or
+                <c>
+                    <see cref="M:Android.App.Activity.OnPause" />
+                </c>
+                , for your activity to start interacting with the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnSaveInstanceState(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to retrieve per-instance state from an activity before being killed
+                so that the state can be restored in
+                <c>
+                    <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                </c>
+                or
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                </c>
+                (the
+                <c>
+                    <see cref="T:Android.OS.Bundle" />
+                </c>
+                populated by this method
+                will be passed to both).
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnStart(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                </c>
+                &amp;mdash; or after
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestart" />
+                </c>
+                when
+                the activity had been stopped, but is now again being displayed to the
+                user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.OnStop(System.Action)">
+            <summary>
+                Called when you are no longer visible to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.SetContentView(System.Int32)">
+            <summary>
+                Set the activity content from a layout resource.
+            </summary>
+            <param name="layoutResId">Resource ID to be inflated.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.GetMenuInflater(Android.Views.MenuInflater)">
+            <summary>
+                Returns a
+                <c>
+                    <see cref="T:Android.Views.MenuInflater" />
+                </c>
+                with this context.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Finish(System.Action)">
+            <summary>
+            Call this when your activity is done and should be closed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Activity">
+            <summary>
+                Gets the <see cref="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Activity"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.DataContext">
+            <summary>
+                Gets or sets the data context.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Resume">
+            <summary>
+                Occurred on resumed activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.#ctor(Android.App.Activity)">
+            <summary>
+                Initializes a new instance of the <see cref="T:System.Object" /> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnBackPressed(System.Action)">
+            <summary>
+                Called when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnCreate(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called when the activity is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnCreateOptionsMenu(Android.Views.IMenu,System.Func{Android.Views.IMenu,System.Boolean})">
+            <summary>
+                Initialize the contents of the Activity's standard options menu.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnSaveInstanceState(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to ask the view to save its current dynamic state, so it
+                can later be reconstructed in a new instance of its process is
+                restarted.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnDestroy(System.Action)">
+            <summary>
+                Perform any final cleanup before an activity is destroyed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnPause(System.Action)">
+            <summary>
+                Called as part of the activity lifecycle when an activity is going into
+                the background, but has not (yet) been killed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnRestart(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnStop" />
+                </c>
+                when the current activity is being
+                re-displayed to the user (the user has navigated back to it).
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnResume(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                </c>
+                ,
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestart" />
+                </c>
+                , or
+                <c>
+                    <see cref="M:Android.App.Activity.OnPause" />
+                </c>
+                , for your activity to start interacting with the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnStart(System.Action)">
+            <summary>
+                Called after
+                <c>
+                    <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                </c>
+                &amp;mdash; or after
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestart" />
+                </c>
+                when
+                the activity had been stopped, but is now again being displayed to the
+                user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.OnStop(System.Action)">
+            <summary>
+                Called when you are no longer visible to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.SetContentView(System.Int32)">
+            <summary>
+                Set the activity content from a layout resource.
+            </summary>
+            <param name="layoutResId">Resource ID to be inflated.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.GetMenuInflater(Android.Views.MenuInflater)">
+            <summary>
+                Returns a
+                <c>
+                    <see cref="T:Android.Views.MenuInflater" />
+                </c>
+                with this context.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Finish(System.Action)">
+            <summary>
+                Call this when your activity is done and should be closed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Activity">
+            <summary>
+                Gets the <see cref="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator.Activity"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmActivityMediator.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnAttach(Android.App.Activity,System.Action{Android.App.Activity})">
+            <summary>
+                Called when a fragment is first attached to its activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnCreate(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to do initial creation of a fragment.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnCreateOptionsMenu(Android.Views.IMenu,Android.Views.MenuInflater,System.Action{Android.Views.IMenu,Android.Views.MenuInflater})">
+            <summary>
+                Initialize the contents of the Activity's standard options menu.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnCreateView(System.Nullable{System.Int32},Android.Views.LayoutInflater,Android.Views.ViewGroup,Android.OS.Bundle,System.Func{Android.Views.LayoutInflater,Android.Views.ViewGroup,Android.OS.Bundle,Android.Views.View})">
+            <summary>
+            Called to have the fragment instantiate its user interface view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnViewCreated(Android.Views.View,Android.OS.Bundle,System.Action{Android.Views.View,Android.OS.Bundle})">
+            <summary>
+                Called immediately after
+                <c>
+                    <see
+                        cref="M:Android.App.Fragment.OnCreateView(Android.Views.LayoutInflater, Android.Views.ViewGroup, Android.Views.ViewGroup)" />
+                </c>
+                has returned, but before any saved state has been restored in to the view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnDestroy(System.Action)">
+            <summary>
+                Called when the fragment is no longer in use.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnDetach(System.Action)">
+            <summary>
+                Called when the fragment is no longer attached to its activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnInflate(Android.App.Activity,Android.Util.IAttributeSet,Android.OS.Bundle,System.Action{Android.App.Activity,Android.Util.IAttributeSet,Android.OS.Bundle})">
+            <summary>
+                Called when a fragment is being created as part of a view layout
+                inflation, typically from setting the content view of an activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnPause(System.Action)">
+            <summary>
+                Called when the Fragment is no longer resumed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnResume(System.Action)">
+            <summary>
+                Called when the fragment is visible to the user and actively running.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnSaveInstanceState(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to ask the fragment to save its current dynamic state, so it
+                can later be reconstructed in a new instance of its process is
+                restarted.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnStart(System.Action)">
+            <summary>
+                Called when the Fragment is visible to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnStop(System.Action)">
+            <summary>
+                Called when the Fragment is no longer started.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.OnCancel(Android.Content.IDialogInterface,System.Action{Android.Content.IDialogInterface})">
+            <summary>
+                This method will be invoked when the dialog is canceled.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Dismiss(System.Action)">
+            <summary>
+            Dismiss the fragment and its dialog.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Fragment">
+            <summary>
+                Gets the <see cref="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Fragment"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.DataContext">
+            <summary>
+                Gets or sets the data context.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Closing">
+            <summary>
+                Occurred on closing window.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Canceled">
+            <summary>
+                Occurred on closed window.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.FragmentViewMember">
+            <summary>
+            Gets the attached member for view.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.CurrentFragment">
+            <summary>
+            Gets the constant that returns current fragment.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.StateNotNeeded">
+            <summary>
+            Whether or not the fragment can be killed and successfully restarted without having saved its state.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.#ctor(Android.Support.V4.App.Fragment)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Mediators.MediatorBase`1"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnAttach(Android.App.Activity,System.Action{Android.App.Activity})">
+            <summary>
+                Called when a fragment is first attached to its activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnCreateOptionsMenu(Android.Views.IMenu,Android.Views.MenuInflater,System.Action{Android.Views.IMenu,Android.Views.MenuInflater})">
+            <summary>
+                Initialize the contents of the Activity's standard options menu.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnCreateView(System.Nullable{System.Int32},Android.Views.LayoutInflater,Android.Views.ViewGroup,Android.OS.Bundle,System.Func{Android.Views.LayoutInflater,Android.Views.ViewGroup,Android.OS.Bundle,Android.Views.View})">
+            <summary>
+                Called to have the fragment instantiate its user interface view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnCreate(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called when the target is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnSaveInstanceState(Android.OS.Bundle,System.Action{Android.OS.Bundle})">
+            <summary>
+                Called to ask the view to save its current dynamic state, so it
+                can later be reconstructed in a new instance of its process is
+                restarted.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnViewCreated(Android.Views.View,Android.OS.Bundle,System.Action{Android.Views.View,Android.OS.Bundle})">
+            <summary>
+                Called immediately after
+                <c>
+                    <see
+                        cref="M:Android.App.Fragment.OnCreateView(Android.Views.LayoutInflater, Android.Views.ViewGroup, Android.Views.ViewGroup)" />
+                </c>
+                has returned, but before any saved state has been restored in to the view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnDestroy(System.Action)">
+            <summary>
+                Called when the fragment is no longer in use.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnDetach(System.Action)">
+            <summary>
+                Called when the fragment is no longer attached to its activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnInflate(Android.App.Activity,Android.Util.IAttributeSet,Android.OS.Bundle,System.Action{Android.App.Activity,Android.Util.IAttributeSet,Android.OS.Bundle})">
+            <summary>
+                Called when a fragment is being created as part of a view layout
+                inflation, typically from setting the content view of an activity.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnPause(System.Action)">
+            <summary>
+                Called when the Fragment is no longer resumed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnResume(System.Action)">
+            <summary>
+                Called when the fragment is visible to the user and actively running.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnStart(System.Action)">
+            <summary>
+                Called when the Fragment is visible to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnStop(System.Action)">
+            <summary>
+                Called when the Fragment is no longer started.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnCancel(Android.Content.IDialogInterface,System.Action{Android.Content.IDialogInterface})">
+            <summary>
+                This method will be invoked when the dialog is canceled.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.Dismiss(System.Action)">
+            <summary>
+                Dismiss the fragment and its dialog.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.TryRestoreContext(System.Object)">
+            <summary>
+            Tries to restore instance context.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.OnDataContextChanged(System.Object,System.Object)">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.MugenMvvmToolkit#Interfaces#Mediators#IMvvmFragmentMediator#Fragment">
+            <summary>
+                Gets the <see cref="P:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator.Fragment"/>.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.Closing">
+            <summary>
+                Occurred on closing window.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Mediators.MvvmFragmentMediator.Canceled">
+            <summary>
+                Occurred on closed window.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator">
+            <summary>
+                Represents the mediator class for dialog view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator.#ctor(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.IThreadManager,MugenMvvmToolkit.Interfaces.IViewManager,MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediatorBase`1"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator.ShowView(MugenMvvmToolkit.Interfaces.Views.IWindowView,System.Boolean,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Shows the view in the specified mode.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator.CloseView(MugenMvvmToolkit.Interfaces.Views.IWindowView)">
+            <summary>
+                Closes the view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator.InitializeView(MugenMvvmToolkit.Interfaces.Views.IWindowView,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Initializes the specified view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Mediators.WindowViewMediator.CleanupView(MugenMvvmToolkit.Interfaces.Views.IWindowView)">
+            <summary>
+                Clears the event subscribtions from the specified view.
+            </summary>
+            <param name="windowView">The specified window-view to dispose.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.MenuItemsSourceGenerator.#ctor(Android.Views.IMenu,Android.Content.Context,MugenMvvmToolkit.Models.MenuItemTemplate)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.MenuItemsSourceGenerator"/> class.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Navigation.EmptyNavigationCachePolicy">
+            <summary>
+                Represents the empty navigation cache policy.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.EmptyNavigationCachePolicy.TryCacheViewModel(MugenMvvmToolkit.Interfaces.Navigation.INavigationContext,MugenMvvmToolkit.Interfaces.Views.IView,MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Tries to save a view model in the cache.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.EmptyNavigationCachePolicy.TryTakeViewModelFromCache(MugenMvvmToolkit.Interfaces.Navigation.INavigationContext,MugenMvvmToolkit.Interfaces.Views.IView)">
+            <summary>
+                Tries to get view model from cache, and delete it from the cache.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.EmptyNavigationCachePolicy.Invalidate(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Removes the view model from cache.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.EmptyNavigationCachePolicy.Invalidate">
+            <summary>
+                Clears the cache.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService">
+            <summary>
+                Implemented by services that provide <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/> based navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.OnPauseActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.OnStartActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.OnCreateActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.OnFinishActivity(Android.App.Activity,System.Boolean,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Call this when your activity is done and should be closed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.GetParameterFromArgs(System.EventArgs)">
+            <summary>
+            Gets a navigation parameter from event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigate(MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Navigates using cancel event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigate(MugenMvvmToolkit.Interfaces.Models.IViewMappingItem,System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays the content located at the specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/>.
+            </summary>
+            <param name="source">
+                The <c>IViewPageMappingItem</c> of the content to display.
+            </param>
+            <param name="parameter">
+                A <see cref="T:System.Object"/> that contains data to be used for processing during
+                navigation.
+            </param>
+            <param name="dataContext">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+            <returns>
+                <c>true</c> if the content was successfully displayed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.CurrentContent">
+            <summary>
+                The current content.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigating">
+            <summary>
+                Raised prior to navigation.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Navigation.INavigationService.Navigated">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.#ctor(MugenMvvmToolkit.Interfaces.ISerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.OnPauseActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Raised as part of the activity lifecycle when an activity is going into the background.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.OnStartActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity had been stopped, but is now again being displayed to the user.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.OnCreateActivity(Android.App.Activity,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Called when the activity is starting.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.OnFinishActivity(Android.App.Activity,System.Boolean,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Call this when your activity is done and should be closed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.GetParameterFromArgs(System.EventArgs)">
+            <summary>
+            Gets a navigation parameter from event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.Navigate(MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Navigates using cancel event args.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.Navigate(MugenMvvmToolkit.Interfaces.Models.IViewMappingItem,System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays the content located at the specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IViewMappingItem"/>.
+            </summary>
+            <param name="source">
+                The <c>IViewPageMappingItem</c> of the content to display.
+            </param>
+            <param name="parameter">
+                A <see cref="T:System.Object"/> that contains data to be used for processing during
+                navigation.
+            </param>
+            <param name="dataContext">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+            <returns>
+                <c>true</c> if the content was successfully displayed; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.CurrentContent">
+            <summary>
+                The current content.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.Navigating">
+            <summary>
+                Raised prior to navigation.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationService.Navigated">
+            <summary>
+                Raised after navigation.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter">
+            <summary>
+                Represent the base class for message box.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter.#ctor(MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider,MugenMvvmToolkit.Interfaces.IThreadManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.MessagePresenter.ShowAsync(System.String,System.String,MugenMvvmToolkit.Models.MessageButton,MugenMvvmToolkit.Models.MessageImage,MugenMvvmToolkit.Models.MessageResult,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Displays a message box that has a message, title bar caption, button, and icon; and that accepts a default message
+                box result and returns a result.
+            </summary>
+            <param name="messageBoxText">A <see cref="T:System.String"/> that specifies the text to display.</param>
+            <param name="caption">A <see cref="T:System.String"/> that specifies the title bar caption to display.</param>
+            <param name="button">A <see cref="T:MugenMvvmToolkit.Models.MessageButton"/> value that specifies which button or buttons to display.</param>
+            <param name="icon">A <see cref="T:MugenMvvmToolkit.Models.MessageImage"/> value that specifies the icon to display.</param>
+            <param name="defaultResult">
+                A <see cref="T:MugenMvvmToolkit.Models.MessageResult"/> value that specifies the default result of the message
+                box.
+            </param>
+            <param name="context">The specified context.</param>
+            <returns>A <see cref="T:MugenMvvmToolkit.Models.MessageResult"/> value that specifies which message box button is clicked by the user.</returns>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter">
+            <summary>
+                Provides functionality to present a timed message.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.#ctor(MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider,MugenMvvmToolkit.Interfaces.IThreadManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.ShowAsync(System.Object,System.Single,MugenMvvmToolkit.Models.ToastPosition,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Shows the specified message.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.ToastPresenter.ShowInternal(System.Object,System.Single,MugenMvvmToolkit.Models.ToastPosition,MugenMvvmToolkit.Interfaces.Models.IDataContext,System.Threading.Tasks.TaskCompletionSource{System.Object})">
+            <summary>
+                Shows the specified message.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.TabHostItemsSourceGenerator.#ctor(Android.Widget.TabHost)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ViewGroupItemsSourceGenerator"/> class.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.TypeCache`1.Instance">
+            <summary>
+                Gets the instance of cache.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.TypeCache`1.AddAssembly(System.Reflection.Assembly)">
+            <summary>
+                Adds the assembly to scan.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ValueTemplateManager.#ctor(System.Object,System.String,System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ValueTemplateManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IViewFactory.Create(System.String,Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Models.ViewResult"/> using the view name.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.IViewFactory.Create(System.Type,Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Models.ViewResult"/> using the view type.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewFactory.Create(System.String,Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Models.ViewResult"/> using the view name.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewFactory.Create(System.Type,Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+                Creates an instance of <see cref="T:MugenMvvmToolkit.Models.ViewResult"/> using the view type.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewGroupItemsSourceGenerator.#ctor(Android.Views.ViewGroup)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ViewGroupItemsSourceGenerator"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.XmlPropertySetter`2.#ctor(`1,Android.Content.Context)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.XmlPropertySetter`2"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Views.IActivityView.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IActivityView.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.Views.IWindowView">
+            <summary>
+                Represent the base interface for a window view.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Views.IWindowView.Show(Android.Support.V4.App.FragmentManager,System.String)">
+            <summary>
+                Shows the window.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Interfaces.Views.IWindowView.Dismiss">
+            <summary>
+                Dismiss the window
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Views.IWindowView.Cancelable">
+            <summary>
+                Gets or sets the cancelable value.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IWindowView.Closing">
+            <summary>
+                Occurred on closing window.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Interfaces.Views.IWindowView.Canceled">
+            <summary>
+                Occurred on closed window.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs">
+            <summary>
+                Provides event data for the OnNavigatingFrom callback that can be used to cancel a navigation request from
+                origination.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.Cancel">
+            <summary>
+                Specifies whether a pending navigation should be canceled.
+            </summary>
+            <returns>
+                true to cancel the pending cancelable navigation; false to continue with navigation.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.NavigationMode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase.IsCancelable">
+            <summary>
+                Gets a value that indicates whether you can cancel the navigation.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.#ctor(Android.Content.Intent,MugenMvvmToolkit.Models.NavigationMode,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs"/> class with the
+                <see cref="P:System.ComponentModel.CancelEventArgs.Cancel"/> property set to false.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.#ctor(MugenMvvmToolkit.Interfaces.Models.IViewMappingItem,MugenMvvmToolkit.Models.NavigationMode,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs"/> class with the
+                <see cref="P:System.ComponentModel.CancelEventArgs.Cancel"/> property set to false.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.Intent">
+            <summary>
+                Gets the intent to navigate.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.Mapping">
+            <summary>
+                Gets the mapping item to navigate.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.Parameter">
+            <summary>
+                Gets any Parameter object passed to the target page for the navigation.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.Cancel">
+            <summary>
+                Specifies whether a pending navigation should be canceled.
+            </summary>
+            <returns>
+                true to cancel the pending cancelable navigation; false to continue with navigation.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.NavigationMode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgs.IsCancelable">
+            <summary>
+                Gets a value that indicates whether you can cancel the navigation.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs">
+            <summary>
+                Provides data for navigation methods and event handlers that cannot cancel the navigation request.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase.Content">
+            <summary>
+                Gets the content of the target being navigated to.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase.Mode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs.#ctor(System.Object,System.Object,MugenMvvmToolkit.Models.NavigationMode)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs.Parameter">
+            <summary>
+                Gets any Parameter object passed to the target page for the navigation.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs.Content">
+            <summary>
+                Gets the content of the target being navigated to.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.EventArg.NavigationEventArgs.Mode">
+            <summary>
+                Gets a value that indicates the type of navigation that is occurring.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.JavaObjectWeakReference.#ctor(Java.Lang.Object,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.JavaObjectWeakReference"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.JavaObjectWeakReference.IsAlive">
+            <summary>
+                Gets an indication whether the object referenced by the current <see cref="T:System.WeakReference" /> object has
+                been garbage collected.
+            </summary>
+            <returns>
+                true if the object referenced by the current <see cref="T:System.WeakReference" /> object has not been garbage
+                collected and is still accessible; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.JavaObjectWeakReference.Target">
+            <summary>
+                Gets or sets the object (the target) referenced by the current <see cref="T:System.WeakReference" /> object.
+            </summary>
+            <returns>
+                null if the object referenced by the current <see cref="T:System.WeakReference" /> object has been garbage
+                collected; otherwise, a reference to the object referenced by the current <see cref="T:System.WeakReference" />
+                object.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+                The reference to the target object is invalid. This exception can
+                be thrown while setting this property if the value is a null reference or if the object has been finalized during
+                the set operation.
+            </exception>
+        </member>
+        <member name="T:MugenMvvmToolkit.Models.ParentObserver">
+            <summary>
+                Represents the weak parent observer.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.ParentObserver.GetOrAdd(Android.Views.View)">
+            <summary>
+                Gets or adds an instance of <see cref="T:MugenMvvmToolkit.Models.ParentObserver"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.ParentObserver.Raise(Android.Views.View)">
+            <summary>
+                Raises the parent changed event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.ParentObserver.Raise">
+            <summary>
+                Raises the parent changed event.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.ParentObserver.Source">
+            <summary>
+                Gets the source element.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.ParentObserver.Parent">
+            <summary>
+                Gets or sets the parent of current element.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Models.ViewResult.#ctor(Android.Views.View,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Models.ViewResult"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.ViewResult.View">
+            <summary>
+                Gets the <see cref="P:MugenMvvmToolkit.Models.ViewResult.View"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Models.ViewResult.DataContext">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.InitializationModule">
+            <summary>
+                Represents the class that is used to initialize the IOC adapter.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.InitializationModule"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.#ctor(MugenMvvmToolkit.Models.LoadMode,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.InitializationModule"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.LoadInternal">
+            <summary>
+                Loads the current module.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetSerializer">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.ISerializer"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.ISerializer"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetReflectionManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IReflectionManager"/> that will be used by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IReflectionManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetViewModelPresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IViewModelPresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IViewModelPresenter"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetMessagePresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IMessagePresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IMessagePresenter"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetViewManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetTracer">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.ITracer"/> that will be used by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.ITracer"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetThreadManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetNavigationProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProvider"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetNavigationCachePolicy">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationCachePolicy"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationCachePolicy"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetToastPresenter">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IToastPresenter"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Presenters.IToastPresenter"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetOperationCallbackFactory">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackFactory"/> that will be used in the current application by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackFactory"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetAttachedValueProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IAttachedValueProvider"/> that will be used by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IAttachedValueProvider"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetApplicationStateManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager"/> that will be used in all view models by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IApplicationStateManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetNavigationService">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/> that will be used in all view models by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.InitializationModule.GetViewFactory">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewFactory"/> that will be used in all view models by default.
+            </summary>
+            <returns>An instance of <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/>.</returns>
+        </member>
+        <member name="M:MugenMvvmToolkit.PlatformDataBindingModule.Load(MugenMvvmToolkit.Interfaces.Models.IModuleContext)">
+            <summary>
+                Loads the current module.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.PlatformDataBindingModule.GetBindingErrorProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Binding.Interfaces.IBindingErrorProvider"/> that will be used by default.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.PlatformExtensions.GetContentView(System.Object,Android.Content.Context,System.Object,System.Nullable{System.Int32},MugenMvvmToolkit.Interfaces.IDataTemplateSelector)">
+            <summary>
+            Gets the content view for the specified content.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.PlatformExtensions.SetContentView(Android.Views.ViewGroup,System.Object,System.Nullable{System.Int32},MugenMvvmToolkit.Interfaces.IDataTemplateSelector,Android.Support.V4.App.FragmentTransaction,System.Action{Android.Views.ViewGroup,Android.Support.V4.App.Fragment,Android.Support.V4.App.FragmentTransaction})">
+            <summary>
+                Sets the content.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.PlatformExtensions.Inflate(Android.Views.MenuInflater,System.Int32,Android.Views.IMenu,System.Object)">
+            <summary>
+                Inflate a menu hierarchy from the specified XML resource.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.PlatformExtensions.DefaultDataTemplateSelector">
+            <summary>
+            Gets or sets the default <see cref="T:MugenMvvmToolkit.Interfaces.IDataTemplateSelector"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.PlatformExtensions.HomeButtonFinder">
+            <summary>
+            Gets or sets the custom home button finder.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.PlatformExtensions.MvvmActivityMediatorFactory">
+            <summary>
+                Gets or sets the factory that creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Mediators.IMvvmActivityMediator"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.PlatformExtensions.MvvmFragmentMediatorFactory">
+            <summary>
+                Gets or sets the factory that creates an instance of <see cref="T:MugenMvvmToolkit.Interfaces.Mediators.IMvvmFragmentMediator"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmListActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmListActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmPreferenceActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmTabActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.SplashScreenActivityBase.Current">
+            <summary>
+            Gets the current splash screen activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Fragments.MvvmDialogFragment.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Fragments.MvvmDialogFragment.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Fragments.MvvmDialogFragment.Closing">
+            <summary>
+                Occurred on closing window.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Fragments.MvvmDialogFragment.Canceled">
+            <summary>
+                Occurred on closed window.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Fragments.MvvmFragment.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Fragments.MvvmFragment.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Fragments.MvvmListFragment.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Fragments.MvvmListFragment.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Views.ListItem.#ctor(System.Int32,Android.Views.LayoutInflater)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Views.ListItem"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.ListItem.TemplateId">
+            <summary>
+                Gets the id of template.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.ListItem.Bindings">
+            <summary>
+            Gets the bindings.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.ListItem.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.ListItem.FirstChild">
+            <summary>
+                Gets the first child.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.#ctor(System.Threading.SynchronizationContext)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ThreadManager"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeOnUiThread(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action on the UI thread synchronous using the UiDispatcher.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeOnUiThreadAsync(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action on the UI thread using the UiDispatcher.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ThreadManager.InvokeAsync(System.Action,MugenMvvmToolkit.Models.OperationPriority,System.Threading.CancellationToken)">
+            <summary>
+                Invokes an action asynchronous.
+            </summary>
+            <param name="action">
+                The specified <see cref="T:System.Action"/>.
+            </param>
+            <param name="priority">The specified <see cref="T:MugenMvvmToolkit.Models.OperationPriority"/> to invoke the action.</param>
+            <param name="cancellationToken">An object that indicates whether to cancel the operation.</param>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.ThreadManager.IsUiThread">
+            <summary>
+                Determines whether the calling thread is the UI thread.
+            </summary>
+            <returns><c>true</c> if the calling thread is the UI thread; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter">
+            <summary>
+                Represents the converter that allows to convert a view model to view.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Converters.ViewModelToViewConverter.Instance">
+            <summary>
+            Gets an instance of <see cref="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Converters.ViewModelToViewConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Converters.ViewModelToViewConverter"/> class.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ThrowOnErrorDefault">
+            <summary>
+                true to throw an exception if the view cannot be found; false to return default view. 
+                Specifying false also suppresses some other exception conditions, but not all of them.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ThrowOnError">
+            <summary>
+                true to throw an exception if the view cannot be found; false to return default view. 
+                Specifying false also suppresses some other exception conditions, but not all of them.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.AlwaysCreateNewView">
+            <summary>
+            Gets or sets the default value that indicates that view converter should always create new view.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Converters.ViewModelToViewConverter.ViewName">
+            <summary>
+            Gets or sets the name of view.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.ExpressionReflectionManagerEx">
+            <summary>
+                Represents the reflection access provider that uses the <see cref="T:System.Linq.Expressions.Expression"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ExpressionReflectionManagerEx.TryCreateDelegate(System.Type,System.Object,System.Reflection.MethodInfo)">
+            <summary>
+                Tries to creates a delegate of the specified type that represents the specified static or instance method, with the
+                specified first argument.
+            </summary>
+            <returns>
+                A delegate of the specified type that represents the specified static method of the specified class.
+            </returns>
+            <param name="delegateType">The <see cref="T:System.Type" /> of delegate to create. </param>
+            <param name="target">
+                The <see cref="T:System.Type" /> representing the class that implements <paramref name="method" />
+                .
+            </param>
+            <param name="method">The name of the static method that the delegate is to represent. </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ExpressionReflectionManagerEx.UnboxOrCast(System.Reflection.Emit.ILGenerator,System.Type)">
+            <summary>
+                Unbox or cast specified type.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ExpressionReflectionManagerEx.CreateDynamicMethod(System.Type,System.Type[],System.Type)">
+            <summary>
+                Creates dynamic method with skip visibility.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationProviderEx">
+            <summary>
+                Represent the interface for navigation provider.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Interfaces.Navigation.INavigationProviderEx.NavigationService">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/>.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.#ctor(MugenMvvmToolkit.Interfaces.Navigation.INavigationService,MugenMvvmToolkit.Interfaces.IThreadManager,MugenMvvmToolkit.Interfaces.IViewMappingProvider,MugenMvvmToolkit.Interfaces.IViewManager,MugenMvvmToolkit.Interfaces.IViewModelProvider,MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager,MugenMvvmToolkit.Interfaces.Navigation.INavigationCachePolicy)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.GoBack">
+            <summary>
+                Navigates back.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.GoForward">
+            <summary>
+                Navigates forward.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigate(MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallback,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Navigates using the specified data context.
+            </summary>
+            <param name="callback">The specified callback, if any.</param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Models.IDataContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationServiceOnNavigating(System.Object,MugenMvvmToolkit.Models.EventArg.NavigatingCancelEventArgsBase)">
+            <summary>
+                Subscriber to the Navigating event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationServiceOnNavigated(System.Object,MugenMvvmToolkit.Models.EventArg.NavigationEventArgsBase)">
+            <summary>
+                Subscriber to the Navigated event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnNavigatingFrom(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.Navigation.INavigationContext)">
+            <summary>
+                Called just before a view-model is no longer the active view-model in a frame.
+            </summary>
+            <param name="viewModel">The specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/></param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnNavigatedTo(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.Navigation.INavigationContext)">
+            <summary>
+                Called when a view-model becomes the active view-model in a frame.
+            </summary>
+            <param name="viewModel">The specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/></param>
+            <param name="context">
+                The specified <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationContext"/>.
+            </param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.RaiseNavigated(MugenMvvmToolkit.Interfaces.Navigation.INavigationContext,MugenMvvmToolkit.Interfaces.ViewModels.IViewModel)">
+            <summary>
+                Invokes the <see cref="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigated"/> event.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.OnDispose(System.Boolean)">
+            <summary>
+                Releases resources held by the object.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewManager">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewMappingProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewMappingProvider"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ThreadManager">
+            <summary>
+                Gets the current <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.ViewModelProvider">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewModelProvider"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CallbackManager">
+            <summary>
+            Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.NavigationService">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Navigation.INavigationService"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CurrentViewModel">
+            <summary>
+                Gets the active view model.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CurrentContent">
+            <summary>
+                Gets the current content.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CachePolicy">
+            <summary>
+                Gets the cache policy, if any.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CanGoBack">
+            <summary>
+                Indicates whether the navigator can navigate back.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.CanGoForward">
+            <summary>
+                Indicates whether the navigator can navigate forward.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Infrastructure.Navigation.NavigationProvider.Navigated">
+            <summary>
+                Occurs after view model was navigated.
+            </summary>
+        </member>
+        <member name="T:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter">
+            <summary>
+                Represents the service that allows to show a view model using <see cref="T:MugenMvvmToolkit.Interfaces.Mediators.IWindowViewMediator"/>.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.WindowViewMediatorConstant">
+            <summary>
+            Gets the window view mediator data constant.
+            </summary>
+        </member>
+        <member name="F:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.RestoreStateConstant">
+            <summary>
+            Gets the constant that is used to restore state.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.#ctor(MugenMvvmToolkit.Interfaces.IViewMappingProvider,MugenMvvmToolkit.Interfaces.IViewManager,MugenMvvmToolkit.Interfaces.IThreadManager,MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.TryShowAsync(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,MugenMvvmToolkit.Interfaces.Models.IDataContext,MugenMvvmToolkit.Interfaces.Presenters.IViewModelPresenter)">
+            <summary>
+                Tries to show the specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/>.
+            </summary>
+            <param name="viewModel">The specified <see cref="T:MugenMvvmToolkit.Interfaces.ViewModels.IViewModel"/> to show.</param>
+            <param name="context">The specified context.</param>
+            <param name="parentPresenter">The parent presenter, if any.</param>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.CreateWindowViewMediator(MugenMvvmToolkit.Interfaces.ViewModels.IViewModel,System.Type,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Creates an instnace of <see cref="T:MugenMvvmToolkit.Interfaces.Mediators.IWindowViewMediator"/> for the specified view model.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.ViewMappingProvider">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewMappingProvider"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.ViewManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IViewManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.ThreadManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.IThreadManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.CallbackManager">
+            <summary>
+                Gets the <see cref="T:MugenMvvmToolkit.Interfaces.Callbacks.IOperationCallbackManager"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Infrastructure.Presenters.DynamicViewModelWindowPresenter.Priority">
+            <summary>
+                Gets the presenter priority.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewManagerEx.#ctor(MugenMvvmToolkit.Interfaces.IThreadManager,MugenMvvmToolkit.Interfaces.IViewMappingProvider)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MugenMvvmToolkit.Infrastructure.ViewManagerEx"/> class.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewManagerEx.GetViewTypeInternal(System.Type,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Gets the type of view wrapper.
+            </summary>
+        </member>
+        <member name="M:MugenMvvmToolkit.Infrastructure.ViewManagerEx.WrapToViewInternal(System.Object,MugenMvvmToolkit.Interfaces.Models.IDataContext)">
+            <summary>
+                Wraps the specified view object to a <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmActionBarActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.DataContext">
+            <summary>
+                Gets or sets the data context of the current <see cref="T:MugenMvvmToolkit.Interfaces.Views.IView"/>.
+            </summary>
+        </member>
+        <member name="P:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Bundle">
+            <summary>
+            Gets the current bundle.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.DataContextChanged">
+            <summary>
+                Occurs when the DataContext property changed.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.BackPressing">
+            <summary>
+            Occurs when the activity has detected the user's press of the back key.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Created">
+            <summary>
+                Occurred on created activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Started">
+            <summary>
+                Occurred on started activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Paused">
+            <summary>
+                Occurred on paused activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.SaveInstanceState">
+            <summary>
+                Occurred on save activity state.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Stoped">
+            <summary>
+                Occurred on stoped activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Restarted">
+            <summary>
+                Occurred on restarted activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Resume">
+            <summary>
+                Occurred on resume activity.
+            </summary>
+        </member>
+        <member name="E:MugenMvvmToolkit.Views.Activities.MvvmFragmentActivity.Destroyed">
+            <summary>
+                Occurred on destroyed activity.
+            </summary>
+        </member>
+    </members>
+</doc>

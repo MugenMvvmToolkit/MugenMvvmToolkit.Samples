@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <!--    Method $GetErrors() or $GetErrors(Prop1, Prop2, ... PropN) returns the errors from a data context object-->
+  <!--    Validate=True is equivalent to ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True-->
+  
+  <ScrollView android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Validation summary:"
+                pkg:Bind="Visible $GetErrors().Any()"/>
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $string.Join($Environment.NewLine, $GetErrors()); Visible $GetErrors().Any()" />
+
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to 'Property' with 'ValidatesOnNotifyDataErrors=True'" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                pkg:Bind="Text Property, Mode=TwoWay, ValidatesOnNotifyDataErrors=True" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $GetErrors(Property).FirstOrDefault(); Visible $GetErrors(Property).Any()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False'" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="et1"
+                pkg:Bind="Text PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $El(et1).Errors.FirstOrDefault(); Visible $El(et1).Errors.Any()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True'" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="et2"
+                pkg:Bind="Text PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $El(et2).Errors.FirstOrDefault(); Visible $El(et2).Errors.Any()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Binding to 'PropertyWithException' with 'Validate=True'" />
+      <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                pkg:Bind="Text PropertyWithException, Mode=TwoWay, Validate=True" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $GetErrors(PropertyWithException).FirstOrDefault(); Visible $GetErrors(PropertyWithException).Any()" />
+
+      <Button android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Set error(PropertyWithException)"
+              pkg:Bind="Click AddErrorCommand" />
+
+      <Button android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Clear error(PropertyWithException)"
+              pkg:Bind="Click RemoveErrorCommand" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

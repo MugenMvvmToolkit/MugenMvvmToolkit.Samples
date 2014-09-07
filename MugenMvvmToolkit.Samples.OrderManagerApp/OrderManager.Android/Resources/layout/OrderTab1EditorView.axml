@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Name"
+    android:layout_margin="2px"
+    android:textSize="10pt" />
+  <EditText
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:inputType="text"
+    pkg:Bind="Text Name, Mode=TwoWay, Validate=True" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Number"
+    android:layout_margin="2px"
+    android:textSize="10pt" />
+  <EditText
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:inputType="number"
+    pkg:Bind="Text Number, Mode=TwoWay, Validate=True" />
+</LinearLayout>
