@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Portable", "Navigation.Portable\Navigation.Portable.csproj", "{F1F3017C-6CDA-48E2-8FF0-EC4276650AC8}"
 EndProject
@@ -22,6 +22,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.UniversalApp.WindowsPhone", "Navigation.UniversalApp\Navigation.UniversalApp.WindowsPhone\Navigation.UniversalApp.WindowsPhone.csproj", "{726D9D8C-B19A-4472-B0C5-505B5FB4E7BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.WindowsPhone(8.0)", "Navigation.WindowsPhone(8.0)\Navigation.WindowsPhone(8.0).csproj", "{0B60AA2A-D805-4341-9A42-C15847BE2886}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{71157775-43BC-47BF-BC02-3267D2F16B6B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

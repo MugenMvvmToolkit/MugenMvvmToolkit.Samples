@@ -23,6 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UniversalApp.Window
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding.UniversalApp.WindowsPhone", "Binding.UniversalApp\Binding.UniversalApp.WindowsPhone\Binding.UniversalApp.WindowsPhone.csproj", "{EE7C5C56-78B3-47AA-A488-CDF17DE1EE08}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{60E4943D-C785-4256-81CE-D1E1EFFE21EC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Binding.UniversalApp\Binding.UniversalApp.Shared\Binding.UniversalApp.Shared.projitems*{0a76bba1-8330-44d5-88ed-a88b7383ce1d}*SharedItemsImports = 4
