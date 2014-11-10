@@ -248,7 +248,7 @@ namespace OrderManager.Tests.ViewModels.Products
                 new ProductModel {Id = Guid.NewGuid()}
             };
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                             It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.No));
@@ -259,7 +259,7 @@ namespace OrderManager.Tests.ViewModels.Products
             viewModel.RemoveProductCommand.Execute(null);
             Assert.IsFalse(viewModel.HasChanges);
             Assert.IsTrue(viewModel.GridViewModel.OriginalItemsSource.SequenceEqual(items));
-            MessageBoxMock.Verify(
+            MessagePresenterMock.Verify(
                 model =>
                     model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                         It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
@@ -273,7 +273,7 @@ namespace OrderManager.Tests.ViewModels.Products
                 new ProductModel {Id = Guid.NewGuid()}
             };
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                             It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.Yes));
@@ -284,7 +284,7 @@ namespace OrderManager.Tests.ViewModels.Products
             viewModel.RemoveProductCommand.Execute(null);
             Assert.IsTrue(viewModel.HasChanges);
             Assert.AreEqual(viewModel.GridViewModel.OriginalItemsSource.Count, 0);
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(model => model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                         It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
         }
@@ -322,7 +322,7 @@ namespace OrderManager.Tests.ViewModels.Products
             RepositoryMock
                 .Setup(repository => repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.No));
@@ -334,7 +334,7 @@ namespace OrderManager.Tests.ViewModels.Products
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsTrue(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(model => model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
             RepositoryMock
@@ -347,7 +347,7 @@ namespace OrderManager.Tests.ViewModels.Products
             RepositoryMock
                 .Setup(repository => repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.Yes));
@@ -359,7 +359,7 @@ namespace OrderManager.Tests.ViewModels.Products
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsTrue(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(model => model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
             RepositoryMock
@@ -373,7 +373,7 @@ namespace OrderManager.Tests.ViewModels.Products
             RepositoryMock
                 .Setup(repository => repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.Cancel));
@@ -385,7 +385,7 @@ namespace OrderManager.Tests.ViewModels.Products
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsFalse(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(model => model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
                             MessageImage.Question, It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
             RepositoryMock
@@ -432,7 +432,7 @@ namespace OrderManager.Tests.ViewModels.Products
             Assert.IsTrue(viewModel.GridViewModel.OriginalItemsSource.SequenceEqual(productModels));
             RepositoryMock.Verify(repository => repository.GetProductsAsync(It.IsAny<CancellationToken>()), Times.Once);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                             It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.Yes));

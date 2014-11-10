@@ -42,7 +42,7 @@ namespace Binding.Wpf.Views
         private static string NativeBindingTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             var binding = new System.Windows.Data.Binding("Property")
             {
                 Source = model,
@@ -67,7 +67,7 @@ namespace Binding.Wpf.Views
         private static string MugenBindingTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay",
                 new object[] { model });
 
@@ -84,9 +84,9 @@ namespace Binding.Wpf.Views
         private static string MugenBindingExpTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Count() + Property", new object[] { model });
+                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
@@ -101,7 +101,7 @@ namespace Binding.Wpf.Views
         private static string NoBindingTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)

@@ -8,6 +8,17 @@ namespace Binding.Portable.Models
         #region Fields
 
         private string _property;
+        //to keep target alive.
+        private readonly object _target;
+
+        #endregion
+
+        #region Constructors
+
+        public BindingPerformanceModel(object target)
+        {
+            _target = target;
+        }
 
         #endregion
 

@@ -4,7 +4,7 @@
         Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="700" Height="400"
         WindowStyle="ToolWindow" View.DesignDataContext="BindingExpressionViewModel">
     <StackPanel Margin="4">
-        <TextBlock Text="Current text: " Margin="1" />
+        <TextBlock Text="Current text:" Margin="1" />
         <TextBox Text="{DataBinding Path=Text, Mode=TwoWay}" Margin="1" />
 
         <!--<TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1" />

@@ -6,8 +6,6 @@ namespace ApiExamples.ViewModels.Tabs
 {
     public class TabViewModel : MultiViewModel
     {
-        private ICommand _addCommand;
-
         #region Constructors
 
         public TabViewModel()
@@ -21,11 +19,7 @@ namespace ApiExamples.ViewModels.Tabs
 
         #region Commands
 
-        public ICommand AddCommand
-        {
-            get { return _addCommand; }
-            private set { _addCommand = value; }
-        }
+        public ICommand AddCommand { get; private set; }
 
         public ICommand InsertCommand { get; private set; }
 

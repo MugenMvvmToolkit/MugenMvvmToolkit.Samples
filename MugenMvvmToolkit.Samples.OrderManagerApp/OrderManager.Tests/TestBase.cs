@@ -19,11 +19,9 @@ namespace OrderManager.Tests
     {
         #region Properties
 
-        //TODO RENAME
-        protected Mock<IMessagePresenter> MessageBoxMock { get; private set; }
+        protected Mock<IMessagePresenter> MessagePresenterMock { get; private set; }
 
-        //TODO RENAME
-        protected Mock<IViewModelWrapperManager> WrapperProviderMock { get; private set; }
+        protected Mock<IViewModelWrapperManager> WrapperManagerMock { get; private set; }
 
         protected Mock<IRepository> RepositoryMock { get; private set; }
 
@@ -42,8 +40,8 @@ namespace OrderManager.Tests
         {
             var presenters = new List<IDynamicViewModelPresenter>();
             RepositoryMock = new Mock<IRepository>();
-            MessageBoxMock = new Mock<IMessagePresenter>();
-            WrapperProviderMock = new Mock<IViewModelWrapperManager>();
+            MessagePresenterMock = new Mock<IMessagePresenter>();
+            WrapperManagerMock = new Mock<IViewModelWrapperManager>();
             ViewModelPresenterMock = new Mock<IViewModelPresenter>();
             ToastPresenterMock = new Mock<IToastPresenter>();
             ViewModelPresenterMock.Setup(presenter => presenter.DynamicPresenters)
@@ -51,8 +49,8 @@ namespace OrderManager.Tests
             Serializer = new Serializer(AppDomain.CurrentDomain.GetAssemblies());
             var container = new AutofacContainer();
             container.BindToConstant(RepositoryMock.Object);
-            container.BindToConstant(MessageBoxMock.Object);
-            container.BindToConstant(WrapperProviderMock.Object);
+            container.BindToConstant(MessagePresenterMock.Object);
+            container.BindToConstant(WrapperManagerMock.Object);
             container.BindToConstant(ViewModelPresenterMock.Object);
             container.BindToConstant(ToastPresenterMock.Object);
             Initialize(container, new DefaultUnitTestModule(), new PortableModule());
@@ -68,7 +66,7 @@ namespace OrderManager.Tests
             Action<IViewModel> wrapCallback = null)
         {
             var wrapper = new Mock<IEditorWrapperViewModel>();
-            WrapperProviderMock
+            WrapperManagerMock
                 .Setup(provider => provider.Wrap(It.IsAny<IViewModel>(), typeof(IEditorWrapperViewModel), It.IsAny<IDataContext>()))
                 .Returns<IViewModel, Type, IDataContext>((vm, t, context) =>
                 {

@@ -35,13 +35,16 @@
                 <TextBlock Text="One way binding: " Margin="1" />
                 <TextBox markupExtensions:View.Bind="Text Text, Mode=OneWay" Margin="1 1 1 10" />
 
+                <TextBlock Text="One way binding with target delay 1000: " Margin="1" />
+                <TextBox markupExtensions:View.Bind="Text Text, Mode=OneWay, TargetDelay=1000" Margin="1 1 1 10" />
+
                 <TextBlock Text="One way to source binding: " Margin="1" />
                 <TextBox markupExtensions:View.Bind="Text Text, Mode=OneWayToSource" Margin="1 1 1 10" />
 
                 <TextBlock Text="Two way binding: " Margin="1" />
                 <TextBox markupExtensions:View.Bind="Text Text, Mode=TwoWay" Margin="1 1 1 10" />
 
-                <TextBlock Text="Two way binding with delay 1000: " Margin="1" />
+                <TextBlock Text="Two way binding with source delay 1000: " Margin="1" />
                 <TextBox markupExtensions:View.Bind="Text Text, Mode=TwoWay, Delay=1000" Margin="1 1 1 10" />
             </StackPanel>
         </ScrollViewer>

@@ -111,7 +111,14 @@ namespace OrderManager.Portable.ViewModels.Orders
 
         private async void SaveChanges(object obj)
         {
-            await SaveChanges(true);
+            try
+            {
+                await SaveChanges(true);
+            }
+            catch (Exception e)
+            {
+                _messagePresenter.ShowAsync(e.Flatten(false), DisplayName);
+            }
         }
 
         private bool CanSaveChanges(object obj)
@@ -136,8 +143,9 @@ namespace OrderManager.Portable.ViewModels.Orders
                 //NOTE: wait for load data, in case the view model has been restored.
                 await _initializedTask;
                 _trackingCollection.UpdateStates(editorVm.ApplyChanges());
+                orderModel = editorVm.Entity;
                 GridViewModel.OriginalItemsSource.Add(orderModel);
-                GridViewModel.SelectedItem = editorVm.Entity;
+                GridViewModel.SelectedItem = orderModel;
                 OnPropertyChanged(() => HasChanges);
             }
         }
@@ -157,23 +165,24 @@ namespace OrderManager.Portable.ViewModels.Orders
                 //NOTE: wait for load data, in case the view model has been restored.
                 await _initializedTask;
                 _trackingCollection.UpdateStates(editorVm.ApplyChanges());
+                orderModel = editorVm.Entity;
 
                 //NOTE: update item, in case the view model has been restored.
-                if (!GridViewModel.OriginalItemsSource.Contains(editorVm.Entity))
+                if (!GridViewModel.OriginalItemsSource.Contains(orderModel))
                 {
                     int index = 0;
                     OrderModel currentItem = GridViewModel
                         .OriginalItemsSource
-                        .FirstOrDefault(model => model.Id == editorVm.Entity.Id);
+                        .FirstOrDefault(model => model.Id == orderModel.Id);
                     if (currentItem != null)
                     {
                         index = GridViewModel.OriginalItemsSource.IndexOf(currentItem);
                         GridViewModel.OriginalItemsSource.RemoveAt(index);
                     }
-                    GridViewModel.OriginalItemsSource.Insert(index, editorVm.Entity);
+                    GridViewModel.OriginalItemsSource.Insert(index, orderModel);
                 }
 
-                GridViewModel.SelectedItem = editorVm.Entity;
+                GridViewModel.SelectedItem = orderModel;
                 OnPropertyChanged(() => HasChanges);
             }
         }

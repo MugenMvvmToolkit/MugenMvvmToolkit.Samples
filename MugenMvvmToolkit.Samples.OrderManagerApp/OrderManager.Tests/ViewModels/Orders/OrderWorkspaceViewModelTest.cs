@@ -278,7 +278,7 @@ namespace OrderManager.Tests.ViewModels.Orders
                 new OrderModel {Id = Guid.NewGuid()}
             };
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(
                     box =>
                         box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
@@ -291,7 +291,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             viewModel.RemoveOrderCommand.Execute(null);
             Assert.IsFalse(viewModel.HasChanges);
             Assert.IsTrue(viewModel.GridViewModel.OriginalItemsSource.SequenceEqual(items));
-            MessageBoxMock.Verify(
+            MessagePresenterMock.Verify(
                 model =>
                     model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                         It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
@@ -308,7 +308,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             RepositoryMock
                 .Setup(repository => repository.GetProductsByOrderAsync(items[0].Id, It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(links));
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(box => box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                             It.IsAny<MessageResult>(), It.IsAny<IDataContext>()))
                 .Returns(Task.FromResult(MessageResult.Yes));
@@ -319,7 +319,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             viewModel.RemoveOrderCommand.Execute(null);
             Assert.IsTrue(viewModel.HasChanges);
             Assert.AreEqual(viewModel.GridViewModel.OriginalItemsSource.Count, 0);
-            MessageBoxMock.Verify(
+            MessagePresenterMock.Verify(
                 model =>
                     model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,
                         It.IsAny<MessageResult>(), It.IsAny<IDataContext>()), Times.Once);
@@ -366,7 +366,7 @@ namespace OrderManager.Tests.ViewModels.Orders
                     repository =>
                         repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(
                     box =>
                         box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -380,7 +380,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsTrue(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(
                     model =>
                         model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -400,7 +400,7 @@ namespace OrderManager.Tests.ViewModels.Orders
                     repository =>
                         repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(
                     box =>
                         box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -414,7 +414,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsTrue(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(
                     model =>
                         model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -434,7 +434,7 @@ namespace OrderManager.Tests.ViewModels.Orders
                     repository =>
                         repository.SaveAsync(It.IsAny<IEnumerable<IEntityStateEntry>>(), It.IsAny<CancellationToken>()))
                 .Returns(() => Empty.TrueTask);
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(
                     box =>
                         box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -448,7 +448,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             Assert.IsTrue(viewModel.HasChanges);
             Assert.IsFalse(viewModel.CloseAsync(null).Result);
 
-            MessageBoxMock
+            MessagePresenterMock
                 .Verify(
                     model =>
                         model.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNoCancel,
@@ -495,7 +495,7 @@ namespace OrderManager.Tests.ViewModels.Orders
             RepositoryMock
                 .Setup(repository => repository.GetProductsByOrderAsync(models[0].Id, It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult<IList<OrderProductModel>>(Empty.Array<OrderProductModel>()));
-            MessageBoxMock
+            MessagePresenterMock
                 .Setup(
                     box =>
                         box.ShowAsync(It.IsAny<string>(), It.IsAny<string>(), MessageButton.YesNo, MessageImage.Question,

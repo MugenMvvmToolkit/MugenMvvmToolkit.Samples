@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;

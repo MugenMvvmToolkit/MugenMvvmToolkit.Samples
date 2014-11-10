@@ -30,7 +30,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="Mugen binding ((Property ?? $string.Empty).Count() + Property):" Margin="1" />
+            <TextBlock Text="Mugen binding ((Property ?? $string.Empty).Length + Property):" Margin="1" />
             <TextBlock Grid.Column="1" Margin="1" x:Name="MugenExpTb" />
         </Grid>
 

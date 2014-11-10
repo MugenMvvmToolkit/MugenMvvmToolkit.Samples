@@ -1,6 +1,7 @@
 ﻿using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Presenters;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -8,7 +9,7 @@ using Navigation.Portable.Interfaces;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class MainViewModel : MultiViewModel
+    public class MainViewModel : MultiViewModel, IHasState
     {
         #region Fields
 
@@ -56,7 +57,7 @@ namespace Navigation.Portable.ViewModels
             using (var wrapper = vm.Wrap<IWrapper>(Constants.WindowPreferably.ToValue(true)))
             {
                 await wrapper.ShowAsync();
-                await _toastPresenter.ShowAsync("The first view model is closed (Window).", ToastDuration.Long);
+                _toastPresenter.ShowAsync("The first view model is closed (Window).", ToastDuration.Short);
             }
         }
 
@@ -106,6 +107,20 @@ namespace Navigation.Portable.ViewModels
                 await vm.ShowAsync();
                 _toastPresenter.ShowAsync("The second view model is closed (Tab).", ToastDuration.Short);
             }
+        }
+
+        #endregion
+
+        #region Implementation of IHasState
+
+        public void LoadState(IDataContext state)
+        {
+            RestoreViewModels(state);
+        }
+
+        public void SaveState(IDataContext state)
+        {
+            PreserveViewModels(state);
         }
 
         #endregion

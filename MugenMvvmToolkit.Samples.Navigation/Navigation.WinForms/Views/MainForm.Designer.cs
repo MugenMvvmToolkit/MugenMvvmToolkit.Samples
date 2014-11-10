@@ -112,6 +112,7 @@
             this.Controls.Add(this.secondWindowBtn);
             this.Controls.Add(this.firstWindowBtn);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
             ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);

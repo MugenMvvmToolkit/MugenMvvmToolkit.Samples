@@ -55,7 +55,7 @@ namespace Binding.Android.Views
         private string MugenBindingTest(int count)
         {
             var target = new TestModel(this);
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay",
                 new object[] {model});
 
@@ -72,9 +72,9 @@ namespace Binding.Android.Views
         private string MugenBindingExpTest(int count)
         {
             var target = new TestModel(this);
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Count() + Property", new object[] { model });
+                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
@@ -89,7 +89,7 @@ namespace Binding.Android.Views
         private string NoBindingTest(int count)
         {
             var target = new TestModel(this);
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)

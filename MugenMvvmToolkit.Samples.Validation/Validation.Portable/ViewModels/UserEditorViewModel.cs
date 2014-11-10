@@ -74,7 +74,7 @@ namespace Validation.Portable.ViewModels
         /// <param name="message">Information about event.</param>
         protected override void OnHandleAsyncValidationMessage(object sender, AsyncValidationMessage message)
         {
-            if (ToolkitExtensions.GetPropertyName(Entity, model => model.Login) != message.PropertyName)
+            if (ToolkitExtensions.GetMemberName(Entity, model => model.Login) != message.PropertyName)
                 return;
             if (message.IsEndOperation)
                 Interlocked.Decrement(ref _validationLoginCount);

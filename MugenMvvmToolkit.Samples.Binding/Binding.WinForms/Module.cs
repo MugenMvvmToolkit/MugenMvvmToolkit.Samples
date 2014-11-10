@@ -43,9 +43,6 @@ namespace Binding.WinForms
 
             memberProvider.Register(AttachedBindingMember.CreateMember<Label, string>("FormattedText",
                 GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Control, bool>("IsBusy"));
-
             return true;
         }
 

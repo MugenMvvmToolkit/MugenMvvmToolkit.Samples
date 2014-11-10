@@ -39,6 +39,7 @@
                 <TextBox Header="One time binding" markupExtensions:View.Bind="Text Text, Mode=OneTime"
                          Margin="1 1 1 10" />
                 <TextBox Header="One way binding" markupExtensions:View.Bind="Text Text, Mode=OneWay" Margin="1 1 1 10" />
+                <TextBox Header="One way binding with target delay 1000" markupExtensions:View.Bind="Text Text, Mode=OneWay, TargetDelay=1000" Margin="1 1 1 10" />
                 <TextBox Header="One way to source binding" markupExtensions:View.Bind="Text Text, Mode=OneWayToSource"
                          Margin="1 1 1 10" />
                 <TextBox Header="Two way binding" markupExtensions:View.Bind="Text Text, Mode=TwoWay" Margin="1 1 1 10" />

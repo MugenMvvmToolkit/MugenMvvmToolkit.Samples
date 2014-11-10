@@ -20,8 +20,8 @@ namespace Binding.Portable.ViewModels
         {
             Should.NotBeNull(localizationManager, "localizationManager");
             _localizationManager = localizationManager;
-            Cultures = new[] {"en-US", "ru-RU"};
-            _selectedCulture = Cultures[0];
+            Cultures = new[] { "en-US", "ru-RU" };
+            SelectedCulture = Cultures[0];
         }
 
         #endregion

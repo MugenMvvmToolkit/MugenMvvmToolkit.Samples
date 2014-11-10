@@ -41,7 +41,7 @@ namespace Binding.WinForms.Views
         private string NativeBindingTest(int count)
         {
             var target = new TestModel { Visible = true };
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             target.DataBindings.Add("Text", model, "Property", false, DataSourceUpdateMode.OnPropertyChanged);
             Controls.Add(target);
 
@@ -60,7 +60,7 @@ namespace Binding.WinForms.Views
         private string MugenBindingTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay", new object[] { model });
             Controls.Add(target);
 
@@ -78,9 +78,9 @@ namespace Binding.WinForms.Views
         private string MugenBindingExpTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Count() + Property", new object[] { model });
+                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
@@ -97,7 +97,7 @@ namespace Binding.WinForms.Views
         private string NoBindingTest(int count)
         {
             var target = new TestModel();
-            var model = new BindingPerformanceModel();
+            var model = new BindingPerformanceModel(target);
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();

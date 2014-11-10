@@ -1,4 +1,5 @@
-﻿using MugenMvvmToolkit.Attributes;
+﻿using System.Collections.Generic;
+using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.ViewModels;
 using Validation.Portable.Models;
 

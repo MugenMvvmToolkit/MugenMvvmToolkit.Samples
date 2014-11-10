@@ -41,6 +41,8 @@
             this.twoWayDelayTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
+            this.oneWayDelayTb = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +86,7 @@
             // 
             this.oneWaySrcTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.oneWaySrcTb.Location = new System.Drawing.Point(15, 106);
+            this.oneWaySrcTb.Location = new System.Drawing.Point(12, 144);
             this.oneWaySrcTb.Name = "oneWaySrcTb";
             this.oneWaySrcTb.Size = new System.Drawing.Size(433, 20);
             this.oneWaySrcTb.TabIndex = 5;
@@ -92,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 90);
+            this.label3.Location = new System.Drawing.Point(12, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 13);
             this.label3.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             this.twoWayTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.twoWayTb.Location = new System.Drawing.Point(15, 146);
+            this.twoWayTb.Location = new System.Drawing.Point(15, 183);
             this.twoWayTb.Name = "twoWayTb";
             this.twoWayTb.Size = new System.Drawing.Size(433, 20);
             this.twoWayTb.TabIndex = 7;
@@ -110,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 130);
+            this.label4.Location = new System.Drawing.Point(12, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             this.twoWayDelayTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.twoWayDelayTb.Location = new System.Drawing.Point(15, 185);
+            this.twoWayDelayTb.Location = new System.Drawing.Point(15, 222);
             this.twoWayDelayTb.Name = "twoWayDelayTb";
             this.twoWayDelayTb.Size = new System.Drawing.Size(433, 20);
             this.twoWayDelayTb.TabIndex = 9;
@@ -128,11 +130,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 169);
+            this.label5.Location = new System.Drawing.Point(12, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 13);
+            this.label5.Size = new System.Drawing.Size(205, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Two way binding with delay 1000: ";
+            this.label5.Text = "Two way binding with source delay 1000: ";
             // 
             // viewBinder
             // 
@@ -141,11 +143,31 @@
             this.viewBinder.IgnoreControlException = true;
             this.viewBinder.RootTagName = "Bindings";
             // 
+            // oneWayDelayTb
+            // 
+            this.oneWayDelayTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.oneWayDelayTb.Location = new System.Drawing.Point(15, 105);
+            this.oneWayDelayTb.Name = "oneWayDelayTb";
+            this.oneWayDelayTb.Size = new System.Drawing.Size(433, 20);
+            this.oneWayDelayTb.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(199, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "One way binding with target delay 1000: ";
+            // 
             // BindingModeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 266);
+            this.Controls.Add(this.oneWayDelayTb);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.twoWayDelayTb);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.twoWayTb);
@@ -181,5 +203,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox oneWayTb;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox oneWayDelayTb;
+        private System.Windows.Forms.Label label6;
     }
 }

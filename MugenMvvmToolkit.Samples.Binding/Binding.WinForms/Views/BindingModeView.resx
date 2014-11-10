@@ -124,6 +124,7 @@
     <value>&lt;Bindings&gt;
   &lt;oneTimeTb Text="Text, Mode=OneTime" /&gt;
   &lt;oneWayTb Text="Text, Mode=OneWay" /&gt;
+  &lt;oneWayDelayTb Text="Text, Mode=OneWay, TargetDelay=1000" /&gt;
   &lt;oneWaySrcTb Text="Text, Mode=OneWayToSource" /&gt;
   &lt;twoWayTb Text="Text, Mode=TwoWay" /&gt;
   &lt;twoWayDelayTb Text="Text, Mode=TwoWay, Delay=1000" /&gt;

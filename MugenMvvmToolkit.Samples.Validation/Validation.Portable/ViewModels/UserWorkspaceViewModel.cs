@@ -94,6 +94,7 @@ namespace Validation.Portable.ViewModels
                 return;
             _userRepository.Remove(selectedItem);
             UserGridViewModel.ItemsSource.Remove(selectedItem);
+            UserGridViewModel.SelectedItem = null;
             // ReSharper disable once CSharpWarnings::CS4014
             UserEditorViewModel.ValidateAsync();
         }
