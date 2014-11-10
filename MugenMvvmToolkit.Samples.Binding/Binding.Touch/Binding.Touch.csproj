@@ -145,6 +145,12 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\error%402x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
