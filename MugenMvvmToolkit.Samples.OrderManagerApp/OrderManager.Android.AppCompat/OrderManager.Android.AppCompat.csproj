@@ -236,18 +236,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\OrderManager.Android\Resources\drawable-hdpi\Thumbs.db">
-      <Link>Resources\drawable-hdpi\Thumbs.db</Link>
-    </AndroidResource>
-    <AndroidResource Include="..\OrderManager.Android\Resources\drawable-mdpi\Thumbs.db">
-      <Link>Resources\drawable-mdpi\Thumbs.db</Link>
-    </AndroidResource>
-    <AndroidResource Include="..\OrderManager.Android\Resources\drawable-xhdpi\Thumbs.db">
-      <Link>Resources\drawable-xhdpi\Thumbs.db</Link>
-    </AndroidResource>
-    <AndroidResource Include="..\OrderManager.Android\Resources\drawable-xxhdpi\Thumbs.db">
-      <Link>Resources\drawable-xxhdpi\Thumbs.db</Link>
-    </AndroidResource>
     <AndroidResource Include="..\OrderManager.Android\Resources\layout\EditorWrapperView.axml">
       <Link>Resources\layout\EditorWrapperView.axml</Link>
     </AndroidResource>
