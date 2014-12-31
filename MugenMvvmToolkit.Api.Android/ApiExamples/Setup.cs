@@ -6,7 +6,7 @@ using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace ApiExamples
 {
@@ -21,7 +21,7 @@ namespace ApiExamples
 
         protected override Type GetMainViewModelType()
         {
-            return typeof (MainViewModel);
+            return typeof(MainViewModel);
         }
 
         #endregion

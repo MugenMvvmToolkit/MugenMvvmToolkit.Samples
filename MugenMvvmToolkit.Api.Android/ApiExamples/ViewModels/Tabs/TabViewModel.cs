@@ -28,7 +28,7 @@ namespace ApiExamples.ViewModels.Tabs
         private void Add(object o)
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
-            itemViewModel.Name = "Dynamic tab";
+            itemViewModel.Name = "Dynamic item";
             AddViewModel(itemViewModel);
             SelectedItem = itemViewModel;
         }
@@ -51,7 +51,7 @@ namespace ApiExamples.ViewModels.Tabs
         private void Insert(object o)
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
-            itemViewModel.Name = "Dynamic tab";
+            itemViewModel.Name = "Dynamic item";
             int selectedIndex = ItemsSource.IndexOf(SelectedItem);
             ItemsSource.Insert(selectedIndex, itemViewModel);
             SelectedItem = itemViewModel;

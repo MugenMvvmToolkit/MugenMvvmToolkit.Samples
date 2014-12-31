@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="OrderManager.Views.Orders.OrderWorkspaceView"
+             Title="{Binding DisplayName}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Save" Order="Primary" Command="{Binding SaveChangesCommand}" />
+        <ToolbarItem Name="Add" Order="Primary" Command="{Binding AddOrderCommand}" />
+
+        <ToolbarItem mugen:View.Bind="Name 'Edit ' + GridViewModel.SelectedItem.Name, Fallback=Edit"
+                     Order="Secondary" Command="{Binding EditOrderCommand}" />
+        <ToolbarItem mugen:View.Bind="Name 'Remove ' + GridViewModel.SelectedItem.Name, Fallback=Remove"
+                     Order="Secondary" Command="{Binding RemoveOrderCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Grid.RowSpan="2"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand" />
+
+        <SearchBar Text="{Binding FilterText, Mode=TwoWay}"
+                   Grid.Row="0" Grid.Column="0" />
+
+        <ListView BindingContext="{Binding GridViewModel}" Grid.Row="1" Grid.Column="0"
+                  RowHeight="60"
+                  ItemsSource="{Binding ItemsSource}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Number}" />
+                                </StackLayout>
+
+                                <Label mugen:View.Bind="Text $Format('{0:d}', CreationDate)"
+                                       Grid.Row="0" Grid.Column="1"
+                                       HorizontalOptions="EndAndExpand" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

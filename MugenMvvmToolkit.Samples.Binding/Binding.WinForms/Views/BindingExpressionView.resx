@@ -123,7 +123,7 @@
   <data name="viewBinder.Bindings" xml:space="preserve">
     <value>&lt;Bindings&gt;
   &lt;textTb Text="Text, Mode=TwoWay" /&gt;
-  &lt;linqCountLabel Text="Text.Count(x =&gt; x == \'a\')" /&gt;
+  &lt;linqCountLabel Text="Text.Count(x =&amp;amp;gt; x == 'a')" /&gt;
   &lt;extMethodLabel Text="Text.ExtensionMethod(Text.Count())" /&gt;
   &lt;linqSecondCharLabel Text="Text.Skip(1).FirstOrDefault()" /&gt;
   &lt;conditionLabel Text="$string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'" /&gt;

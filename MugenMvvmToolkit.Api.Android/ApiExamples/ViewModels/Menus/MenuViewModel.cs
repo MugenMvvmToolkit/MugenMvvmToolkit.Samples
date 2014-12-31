@@ -13,7 +13,7 @@ namespace ApiExamples.ViewModels.Menus
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
-        private IList<MenuItemModel> _items;
+        private readonly IList<MenuItemModel> _items;
 
         #endregion
 
@@ -70,7 +70,7 @@ namespace ApiExamples.ViewModels.Menus
                     }
                 }
             };
-            Items = new[]
+            _items = new[]
             {
                 root,
                 new MenuItemModel
@@ -105,7 +105,6 @@ namespace ApiExamples.ViewModels.Menus
         public IList<MenuItemModel> Items
         {
             get { return _items; }
-            private set { _items = value; }
         }
 
         #endregion

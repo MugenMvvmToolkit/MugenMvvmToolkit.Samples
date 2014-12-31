@@ -13,7 +13,9 @@ namespace Navigation.Portable.ViewModels
     {
         #region Fields
 
+        private readonly IDynamicViewModelPresenter _presenter;
         private readonly IToastPresenter _toastPresenter;
+        private readonly IViewModelPresenter _viewModelPresenter;
 
         #endregion
 
@@ -23,6 +25,7 @@ namespace Navigation.Portable.ViewModels
         {
             Should.NotBeNull(viewModelPresenter, "viewModelPresenter");
             Should.NotBeNull(toastPresenter, "toastPresenter");
+            _viewModelPresenter = viewModelPresenter;
             _toastPresenter = toastPresenter;
             ShowFirstWindowCommand = new RelayCommand(ShowFirstWindow);
             ShowSecondWindowCommand = new RelayCommand(ShowSecondWindow);
@@ -30,9 +33,11 @@ namespace Navigation.Portable.ViewModels
             ShowSecondTabCommand = new RelayCommand(ShowSecondTab);
             ShowFirstPageCommand = new RelayCommand(ShowFirstPage);
             ShowSecondPageCommand = new RelayCommand(ShowSecondPage);
+            ShowBackStackPageCommand = new RelayCommand(ShowBackStackPage);
 
             //NOTE The DynamicMultiViewModelPresenter allows to use the current view model as presenter.
-            viewModelPresenter.DynamicPresenters.Add(new DynamicMultiViewModelPresenter(this));
+            _presenter = new DynamicMultiViewModelPresenter(this);
+            viewModelPresenter.DynamicPresenters.Add(_presenter);
         }
 
         #endregion
@@ -50,6 +55,8 @@ namespace Navigation.Portable.ViewModels
         public ICommand ShowFirstPageCommand { get; private set; }
 
         public ICommand ShowSecondPageCommand { get; private set; }
+
+        public ICommand ShowBackStackPageCommand { get; private set; }
 
         private async void ShowFirstWindow(object o)
         {
@@ -109,6 +116,12 @@ namespace Navigation.Portable.ViewModels
             }
         }
 
+        private async void ShowBackStackPage(object obj)
+        {
+            using (var vm = GetViewModel<BackStackViewModel>())
+                await vm.ShowAsync();
+        }
+
         #endregion
 
         #region Implementation of IHasState
@@ -121,6 +134,20 @@ namespace Navigation.Portable.ViewModels
         public void SaveState(IDataContext state)
         {
             PreserveViewModels(state);
+        }
+
+        #endregion
+
+        #region Overrides of ViewModelBase
+
+        /// <summary>
+        ///     Occurs after the current view model is disposed, use for clear resource and event listeners.
+        /// </summary>
+        protected override void OnDispose(bool disposing)
+        {
+            if (disposing)
+                _viewModelPresenter.DynamicPresenters.Remove(_presenter);
+            base.OnDispose(disposing);
         }
 
         #endregion

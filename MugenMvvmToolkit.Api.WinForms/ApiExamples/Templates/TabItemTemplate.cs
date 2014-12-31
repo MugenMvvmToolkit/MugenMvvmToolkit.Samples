@@ -2,7 +2,7 @@
 using ApiExamples.ViewModels;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace ApiExamples.Templates
 {

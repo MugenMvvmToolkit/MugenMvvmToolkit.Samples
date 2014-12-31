@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace Binding.WinForms.Templates
 {

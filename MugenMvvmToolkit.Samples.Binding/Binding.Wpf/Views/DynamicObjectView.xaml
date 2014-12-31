@@ -8,13 +8,25 @@
         <TextBox Text="{DataBinding Path=DynamicProperty, Mode=TwoWay}" Margin="1 1 1 10" />
 
         <TextBlock Text="Dynamic value:" Margin="1" />
-        <TextBlock Text="{DataBinding Path=DynamicProperty}" Margin="1 1 1 10" Foreground="Green"/>
+        <TextBlock Text="{DataBinding Path=DynamicProperty}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Dynamic method call:" Margin="1" />
+        <TextBlock Text="{DataBinding '$context.DynamicMethod(DynamicProperty)'}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Dynamic index call:" Margin="1" />
+        <TextBlock Text="{DataBinding '$context[DynamicProperty]'}" Margin="1 1 1 10" Foreground="Green" />
 
         <!--        Equivalent syntax.-->
-        <!--<TextBlock Text="Binding to dynamic property: " Margin="1" />
+<!--        <TextBlock Text="Binding to dynamic property: " Margin="1" />
         <TextBox View.Bind="Text DynamicProperty, Mode=TwoWay" Margin="1 1 1 10" />
 
         <TextBlock Text="Dynamic value:" Margin="1" />
-        <TextBlock View.Bind="Text DynamicProperty" Margin="1 1 1 10" Foreground="Green"/>-->
+        <TextBlock View.Bind="Text DynamicProperty" Margin="1 1 1 10" Foreground="Green"/>
+
+        <TextBlock Text="Dynamic method call:" Margin="1" />
+        <TextBlock View.Bind="Text $context.DynamicMethod(DynamicProperty)" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Dynamic index call:" Margin="1" />
+        <TextBlock View.Bind="Text $context[DynamicProperty]" Margin="1 1 1 10" Foreground="Green" />-->
     </StackPanel>
 </Window>

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using ApiExamples.Models;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace ApiExamples.Templates
 {
@@ -27,7 +27,8 @@ namespace ApiExamples.Templates
         /// <summary>
         ///     Initializes the specified template.
         /// </summary>
-        protected override void Initialize(Button template, BindingSet<Button, Tuple<string, ViewModelCommandParameter>> bindingSet)
+        protected override void Initialize(Button template,
+            BindingSet<Button, Tuple<string, ViewModelCommandParameter>> bindingSet)
         {
             bindingSet.Bind(button => button.Text).To(tuple => tuple.Item1);
             bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2);

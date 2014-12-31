@@ -1,35 +1,34 @@
-using Android.Graphics;
-using Android.Views;
-using Android.Widget;
 using ApiExamples.Models;
-using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace ApiExamples.TemplateSelectors
 {
-    public class ListItemTemplateSelector : DataTemplateSelectorBase<ListItemModel, object>
+    public class ListItemTemplateSelector : ResourceDataTemplateSelectorBase<ListItemModel>
     {
-        #region Overrides of DataTemplateSelectorBase<ListItemModel,object>
+        #region Overrides of ResourceDataTemplateSelectorBase<ListItemModel>
 
-        protected override object SelectTemplate(ListItemModel item, object container)
+        /// <summary>
+        ///     Returns the number of types of templates that will be selected by SelectTemplateMethod.
+        /// </summary>
+        public override int TemplateTypeCount
         {
-            //Return a template id from resources.
+            get { return 2; }
+        }
+
+        /// <summary>
+        ///     Returns an app specific template.
+        /// </summary>
+        /// <param name="item">The data content</param>
+        /// <param name="container">The element to which the template will be applied</param>
+        /// <returns>
+        ///     An app-specific template to apply.
+        /// </returns>
+        protected override int SelectTemplate(ListItemModel item, object container)
+        {
             if (item.IsValid)
                 return Resource.Layout._ListItemTemplate;
 
-            //Manually create template
-            var view = (View) container;
-            var template = new TextView(view.Context);
-            template.SetTextColor(Color.Red);
-            return template;
-        }
-
-        protected override void Initialize(object template, BindingSet<object, ListItemModel> bindingSet)
-        {
-            var textView = template as TextView;
-            if (textView != null)
-                bindingSet.Bind(textView, view => view.Text).To(model => model.Value);
+            return Resource.Layout._ListItemTemplateInvalid;
         }
 
         #endregion

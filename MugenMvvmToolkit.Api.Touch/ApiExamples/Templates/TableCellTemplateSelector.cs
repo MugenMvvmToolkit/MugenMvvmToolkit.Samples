@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 using MugenMvvmToolkit.Views;
 
 namespace ApiExamples.Templates

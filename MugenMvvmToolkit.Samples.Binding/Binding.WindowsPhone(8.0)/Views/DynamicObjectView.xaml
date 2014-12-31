@@ -27,13 +27,19 @@
             <TextBlock Text="dynamic" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Margin="12,0,12,0">
+        <StackPanel Grid.Row="1" Margin="12,0,12,0" DataContext="{Binding Path=DynamicModel}">
             <TextBlock Text="Binding to dynamic property: " Margin="1" />
-            <TextBox markupExtensions:View.Bind="Text DynamicModel.DynamicProperty, Mode=TwoWay" Margin="1 1 1 10" />
+            <TextBox markupExtensions:View.Bind="Text DynamicProperty, Mode=TwoWay" Margin="1 1 1 10" />
 
             <TextBlock Text="Dynamic value:" Margin="1" />
-            <TextBlock markupExtensions:View.Bind="Text DynamicModel.DynamicProperty" Margin="1 1 1 10"
+            <TextBlock markupExtensions:View.Bind="Text DynamicProperty" Margin="1 1 1 10"
                        Foreground="Green" />
+
+            <TextBlock Text="Dynamic method call:" Margin="1" />
+            <TextBlock markupExtensions:View.Bind="Text $context.DynamicMethod(DynamicProperty)" Margin="1 1 1 10" Foreground="Green" />
+
+            <TextBlock Text="Dynamic index call:" Margin="1" />
+            <TextBlock markupExtensions:View.Bind="Text $context[DynamicProperty]" Margin="1 1 1 10" Foreground="Green" />
         </StackPanel>
     </Grid>
 

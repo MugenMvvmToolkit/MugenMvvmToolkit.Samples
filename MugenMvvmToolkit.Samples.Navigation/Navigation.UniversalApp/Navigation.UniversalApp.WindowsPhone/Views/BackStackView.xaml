@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Navigation.UniversalApp.Views.BackStackView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navigation.UniversalApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock x:Uid="Header" Text="{StaticResource AppName}" Style="{ThemeResource TitleTextBlockStyle}"
+                       Margin="0,12,0,0" />
+            <TextBlock Text="Back stack" Style="{ThemeResource HeaderTextBlockStyle}"
+                       Margin="0,-6.5,0,26.5"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Back stack depth" Margin="0 0 4 0" Style="{StaticResource BaseTextBlockStyle}" />
+                <TextBlock Text="{Binding Path=Depth}" Style="{StaticResource BaseTextBlockStyle}" />
+            </StackPanel>
+
+            <Button Content="Navigate to next view" Command="{Binding Path=NavigateCommand}" Margin="1"
+                    HorizontalAlignment="Stretch" />
+            <Button Content="Navigate to main view model (Clear)" HorizontalAlignment="Stretch"
+                    Command="{Binding Path=NavigateClearBackStackCommand}" Margin="1" />
+        </StackPanel>
+    </Grid>
+</Page>

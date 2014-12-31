@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Modules;
 using System.ComponentModel.DataAnnotations;
 using Validation.Portable.Attributes;
 

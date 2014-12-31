@@ -7,5 +7,6 @@
               android:layout_height="fill_parent">
   <TextView android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:textSize="12pt"
             pkg:Bind="Text $Format('Name: {0}, Id: {1}', Name, Id)" />
 </LinearLayout>

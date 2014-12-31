@@ -20,7 +20,7 @@ namespace Binding.Portable.ViewModels
                 if (Equals(_text, value))
                     return;
                 _text = value;
-                OnPropertyChanged();
+                OnPropertyChanged();                
             }
         }
 

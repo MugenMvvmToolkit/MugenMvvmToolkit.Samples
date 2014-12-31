@@ -13,14 +13,20 @@
         <TextBlock Text="Self binding(ActualWidth):" Margin="1" />
         <TextBlock Text="{DataBinding '$self.ActualWidth'}" Margin="1" Foreground="Green" />
 
+        <TextBlock Text="Root element:" Margin="1" />
+        <TextBlock Text="{DataBinding '$root'}" Margin="1" Foreground="Green" />
+
         <!--        Equivalent syntax.-->
-        <!--<Slider x:Name="NamedSlider" Minimum="0" Maximum="100" Value="10" Margin="1" />
+<!--        <Slider x:Name="NamedSlider" Minimum="0" Maximum="100" Value="10" Margin="1" />
         <TextBox View.Bind="Text $El(NamedSlider).Value, Mode=TwoWay" Margin="1 1 1 10" />
 
         <TextBlock Text="The current title:" Margin="1" />
         <TextBox View.Bind="Text $Relative(Window).Title, Mode=TwoWay" Margin="1" />
 
         <TextBlock Text="Self binding(ActualWidth):" Margin="1" />
-        <TextBlock View.Bind="Text $self.ActualWidth" Margin="1" Foreground="Green" />-->
+        <TextBlock View.Bind="Text $self.ActualWidth" Margin="1" Foreground="Green" />
+        
+        <TextBlock Text="Root element:" Margin="1" />
+        <TextBlock View.Bind="Text $root" Margin="1" Foreground="Green" />-->
     </StackPanel>
 </Window>

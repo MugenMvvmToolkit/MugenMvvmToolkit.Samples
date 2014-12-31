@@ -18,7 +18,7 @@
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
             <TextBlock x:Uid="Header" Text="{StaticResource AppName}" Style="{ThemeResource TitleTextBlockStyle}"
                        Margin="0,12,0,0" />
-            <TextBlock Text="annotation" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5"
+            <TextBlock Text="annotations" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 

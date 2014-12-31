@@ -26,7 +26,7 @@ namespace Binding.Portable.ViewModels
         #region Methods
 
         private object Method(IList<Type> types, object[] arg3, IDataContext dataContext)
-        {
+        {            
             return "Custom method result";
         }
 

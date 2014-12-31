@@ -95,7 +95,9 @@
     <Compile Include="..\Validation.UniversalApp\Validation.UniversalApp.Shared\ValidationModule.cs">
       <Link>ValidationModule.cs</Link>
     </Compile>
-    <Compile Include="Setup.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DataAnnotationView.xaml.cs">
       <DependentUpon>DataAnnotationView.xaml</DependentUpon>
     </Compile>
@@ -171,20 +173,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=3.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMVVMToolkit.3.1.3\lib\wp8\MugenMvvmToolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=1.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.1.4\lib\wp8\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\wp8\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinPhone, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMVVMToolkit.3.1.3\lib\wp8\MugenMvvmToolkit.WinPhone.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\wp8\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="MugenMvvmToolkit.WinPhone, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\wp8\MugenMvvmToolkit.WinPhone.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

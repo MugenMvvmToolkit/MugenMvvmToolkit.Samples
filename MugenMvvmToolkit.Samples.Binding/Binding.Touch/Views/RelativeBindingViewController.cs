@@ -72,6 +72,24 @@ namespace Binding.Touch.Views
                 };
                 set.BindFromExpression(label, "Text $self.Frame.Width");
                 View.AddSubview(label);
+
+
+                label = new UILabel(new RectangleF(20, 235, View.Frame.Width - 100, 25))
+                {
+                    Text = "Root element:",
+                    AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin,
+                    AdjustsFontSizeToFitWidth = true,
+                    Font = UIFont.SystemFontOfSize(12)
+                };
+                View.AddSubview(label);
+
+                label = new UILabel(new RectangleF(20, 260, 280, 30))
+                {
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    TextColor = UIColor.Green
+                };
+                set.BindFromExpression(label, "Text $root");
+                View.AddSubview(label);
             }
         }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Android.Text;
 using Android.Views;
@@ -9,6 +10,9 @@ namespace Binding.Android
     {
         private static void Include()
         {
+            var tuple = Tuple.Create<object, object>(null, null);
+            var item1 = tuple.Item1;
+            var item2 = tuple.Item2;
             var view = new View(null);
             view.Tag = view.Tag;
             "test".Count(c => c == 'a');

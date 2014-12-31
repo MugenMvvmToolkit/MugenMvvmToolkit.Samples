@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Binding.Views.MainView">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Label Grid.Row="0"
+           mugen:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
+
+    <ListView ItemsSource="{mugen:DataBinding Items}" Grid.Row="1">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <Button Command="{mugen:DataBinding $Relative(ListView).DataContext.ShowCommand}"
+                      Text="{mugen:DataBinding Item1}" CommandParameter="{mugen:DataBinding Item2}" />
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</ContentPage>

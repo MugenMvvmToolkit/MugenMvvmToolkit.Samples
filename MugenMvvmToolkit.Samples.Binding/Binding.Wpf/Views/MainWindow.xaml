@@ -3,18 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Mugen MVVM Application" Height="350" Width="525" WindowStartupLocation="CenterScreen"
         View.DesignDataContext="MainViewModel">
-    <ItemsControl Margin="4" ItemsSource="{DataBinding Path=Items}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <StackPanel />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ItemsControl Margin="4" ItemsSource="{DataBinding Path=Items}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
 
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <Button Content="{DataBinding Path=Item1}" CommandParameter="{DataBinding Path=Item2}"
-                        Command="{DataBinding '$Relative(Window).DataContext.ShowCommand'}" Margin="1" />
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{DataBinding Path=Item1}" CommandParameter="{DataBinding Path=Item2}"
+                            Command="{DataBinding '$Relative(Window).DataContext.ShowCommand'}" Margin="1" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <TextBlock Grid.Row="1"
+                   View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)"
+                   HorizontalAlignment="Right" />
+    </Grid>
 </Window>

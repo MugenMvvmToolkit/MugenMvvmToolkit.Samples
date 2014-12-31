@@ -2,7 +2,7 @@
     x:Class="OrderManager.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:converters="using:MugenMvvmToolkit.Converters"
+    xmlns:converters="using:MugenMvvmToolkit.Binding.Converters"
     xmlns:local="using:OrderManager.Converters">
     <Application.Resources>
         <x:String x:Key="AppName">MUGEN MVVM APPLICATION</x:String>

@@ -86,7 +86,7 @@
             // 
             this.oneWaySrcTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.oneWaySrcTb.Location = new System.Drawing.Point(12, 144);
+            this.oneWaySrcTb.Location = new System.Drawing.Point(15, 144);
             this.oneWaySrcTb.Name = "oneWaySrcTb";
             this.oneWaySrcTb.Size = new System.Drawing.Size(433, 20);
             this.oneWaySrcTb.TabIndex = 5;

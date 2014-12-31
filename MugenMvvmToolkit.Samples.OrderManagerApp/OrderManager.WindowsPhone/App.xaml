@@ -5,7 +5,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
-    xmlns:converters="clr-namespace:MugenMvvmToolkit.Converters;assembly=MugenMvvmToolkit.WinPhone">
+    xmlns:converters="clr-namespace:MugenMvvmToolkit.Binding.Converters;assembly=MugenMvvmToolkit.WinPhone">
 
     <!--Application Resources-->
     <Application.Resources>

@@ -21,7 +21,7 @@ namespace OrderManager.Tests
 
         protected Mock<IMessagePresenter> MessagePresenterMock { get; private set; }
 
-        protected Mock<IViewModelWrapperManager> WrapperManagerMock { get; private set; }
+        protected Mock<IWrapperManager> WrapperManagerMock { get; private set; }
 
         protected Mock<IRepository> RepositoryMock { get; private set; }
 
@@ -41,7 +41,7 @@ namespace OrderManager.Tests
             var presenters = new List<IDynamicViewModelPresenter>();
             RepositoryMock = new Mock<IRepository>();
             MessagePresenterMock = new Mock<IMessagePresenter>();
-            WrapperManagerMock = new Mock<IViewModelWrapperManager>();
+            WrapperManagerMock = new Mock<IWrapperManager>();
             ViewModelPresenterMock = new Mock<IViewModelPresenter>();
             ToastPresenterMock = new Mock<IToastPresenter>();
             ViewModelPresenterMock.Setup(presenter => presenter.DynamicPresenters)
@@ -75,7 +75,7 @@ namespace OrderManager.Tests
                     return wrapper.Object;
                 });
             var operation = new AsyncOperation<bool?>();
-            operation.SetResult(OperationResult.CreateResult<bool?>(OperationType.Navigation, wrapper, result));
+            operation.SetResult(OperationResult.CreateResult<bool?>(OperationType.PageNavigation, wrapper, result));
             ViewModelPresenterMock.Setup(presenter => presenter.ShowAsync(wrapper.Object, It.IsAny<IDataContext>()))
                                   .Returns(() => operation);
             return wrapper;

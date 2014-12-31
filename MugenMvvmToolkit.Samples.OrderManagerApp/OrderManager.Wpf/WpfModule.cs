@@ -1,6 +1,6 @@
 ﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Modules;
 using OrderManager.Portable.Interfaces;
 using OrderManager.Wpf.Infrastructure;
 

@@ -7,18 +7,22 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <StackPanel>
-            <Button Margin="4" Content="First view model (Window)" Command="{Binding Path=ShowFirstWindowCommand}" />
-            <Button Margin="4" Content="First view model (Page)" Command="{Binding Path=ShowFirstPageCommand}" />
-            <Button Margin="4" Content="First view model (Tab)" Command="{Binding Path=ShowFirstTabCommand}" />
+        <Menu>
+            <MenuItem Header="Navigation">
+                <MenuItem Header="First view model (Window)" Command="{Binding Path=ShowFirstWindowCommand}" />
+                <MenuItem Header="First view model (Page)" Command="{Binding Path=ShowFirstPageCommand}" />
+                <MenuItem Header="First view model (Tab)" Command="{Binding Path=ShowFirstTabCommand}" />
 
-            <Button Margin="4" Content="Second view model (Window)" Command="{Binding Path=ShowSecondWindowCommand}" />
-            <Button Margin="4" Content="Second view model (Page)" Command="{Binding Path=ShowSecondPageCommand}" />
-            <Button Margin="4" Content="Second view model (Tab)" Command="{Binding Path=ShowSecondTabCommand}" />
-        </StackPanel>
+                <MenuItem Header="Second view model (Window)" Command="{Binding Path=ShowSecondWindowCommand}" />
+                <MenuItem Header="Second view model (Page)" Command="{Binding Path=ShowSecondPageCommand}" />
+                <MenuItem Header="Second view model (Tab)" Command="{Binding Path=ShowSecondTabCommand}" />
+
+                <MenuItem Header="Navigation (Clear back stack)" Command="{Binding Path=ShowBackStackPageCommand}" />
+            </MenuItem>
+        </Menu>
 
         <TabControl ItemsSource="{Binding Path=ItemsSource}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}"
-                    ItemTemplate="{StaticResource TabItemTemplate}" Grid.Row="1"
+                    ItemTemplate="{StaticResource TabItemTemplate}" Grid.Row="1" Margin="2"
                     ContentTemplate="{StaticResource TabContentTemplate}" />
     </Grid>
 </Page>

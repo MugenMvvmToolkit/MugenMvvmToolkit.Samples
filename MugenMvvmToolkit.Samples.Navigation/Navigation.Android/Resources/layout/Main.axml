@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:pkg="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
@@ -21,7 +20,7 @@
              pkg:ActionBarTemplate="@layout/_actionbarmain" />
 </LinearLayout>
 
-<!--uncoment this if you want to use TabHost (also see MainActivityView) only for API17-->
+<!--uncomment this if you want to use TabHost instead of ActionBar-->
 <!--<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
          xmlns:pkg="http://schemas.android.com/apk/res-auto"
          android:id="@android:id/tabhost"

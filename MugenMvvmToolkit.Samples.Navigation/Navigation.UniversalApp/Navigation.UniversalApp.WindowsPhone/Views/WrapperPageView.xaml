@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
@@ -25,13 +26,9 @@
 
         <ContentPresenter Grid.Row="1" Margin="10"
                           Content="{Binding Path=ViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
+
+        <Button Grid.Row="2" HorizontalAlignment="Stretch"
+                Content="Close from wrapper" Margin="4"
+                Command="{Binding Path=CloseCommand}" />
     </Grid>
-    <Page.BottomAppBar>
-        <CommandBar>
-            <CommandBar.PrimaryCommands>
-                <AppBarButton Label="Close" Icon="Cancel"
-                              Command="{Binding Path=CloseCommand}" />
-            </CommandBar.PrimaryCommands>
-        </CommandBar>
-    </Page.BottomAppBar>
 </Page>

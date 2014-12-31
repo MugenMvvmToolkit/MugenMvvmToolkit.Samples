@@ -54,8 +54,11 @@ namespace ApiExamples.ViewModels
         protected override void OnInitialized()
         {
             GridViewModel = GetViewModel<GridViewModel<ListItemModel>>();
-            GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = true });
-            GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = false });
+            for (int i = 0; i < 20; i++)
+            {
+                GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = true });
+                GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = false });
+            }
         }
 
         #endregion

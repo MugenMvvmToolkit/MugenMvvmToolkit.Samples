@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:pkg="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+  <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:minHeight="?android:attr/actionBarSize"
+           android:background="?android:attr/colorPrimary"
+           android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+           android:popupTheme="@android:style/ThemeOverlay.Material.Light"           
+           pkg:MenuTemplate="@menu/dynamicmenutemplate"           
+           pkg:Bind="Title TopToolbarTitle"/>
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_below="@id/toolbar">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="Content here..."
+              android:textSize="10pt" />
+
+    <Toolbar android:id="@+id/toolbarBottom"
+             android:minHeight="?android:attr/actionBarSize"
+             android:background="?android:attr/colorAccent"
+             android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
+             android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             pkg:MenuTemplate="@menu/dynamicmenutemplate"
+             pkg:Bind="Title BottomToolbarTitle"/>
+  </RelativeLayout>
+</RelativeLayout>

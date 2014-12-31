@@ -25,6 +25,8 @@ namespace Validation.Portable.Validators
                 ValidateDescription(propertyName, dictionary);
             else if (PropertyNameEqual(propertyName, model => model.Name))
                 ValidateName(propertyName, dictionary);
+            else
+                return DoNothingResult;
             return FromResult(dictionary);
         }
 

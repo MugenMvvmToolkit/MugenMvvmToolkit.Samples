@@ -1,8 +1,8 @@
 using ApiExamples.TemplateSelectors;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Models;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Modules;
 
 namespace ApiExamples
 {

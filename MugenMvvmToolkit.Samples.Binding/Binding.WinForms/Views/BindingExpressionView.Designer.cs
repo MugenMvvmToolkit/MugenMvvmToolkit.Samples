@@ -136,10 +136,10 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(443, 13);
+            this.label9.Size = new System.Drawing.Size(423, 13);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Condition expression ($string.IsNullOrEmpty(Text) ? \\\'String is empty\\\' : \\\'Strin" +
-    "g is not empty\\\')";
+            this.label9.Text = "Condition expression ($string.IsNullOrEmpty(Text) ? \'String is empty\' : \'String i" +
+    "s not empty\')";
             // 
             // arithmeticLabel
             // 

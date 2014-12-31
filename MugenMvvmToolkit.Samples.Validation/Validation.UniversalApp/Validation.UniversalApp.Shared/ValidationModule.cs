@@ -1,7 +1,7 @@
 ﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces.Validation;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Modules;
 using Validation.Portable.Validators;
 
 namespace Validation.UniversalApp

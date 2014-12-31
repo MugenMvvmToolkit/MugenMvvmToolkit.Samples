@@ -120,4 +120,12 @@
   <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="viewBinder.Bindings" xml:space="preserve">
+    <value>&lt;Bindings&gt;
+  &lt;dynamicTb Text="DynamicModel.DynamicProperty, Mode=TwoWay" /&gt;
+  &lt;dynamicLabel Text="DynamicModel.DynamicProperty" /&gt;
+  &lt;methodLabel Text="DynamicModel.DynamicMethod(DynamicModel.DynamicProperty)" /&gt;
+  &lt;indexLabel Text="DynamicModel[DynamicModel.DynamicProperty]" /&gt;
+&lt;/Bindings&gt;</value>
+  </data>
 </root>

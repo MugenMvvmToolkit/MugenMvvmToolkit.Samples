@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples(API17+)", "ApiExamples\ApiExamples(API17+).csproj", "{5D5F6B58-E794-4FAE-82C4-0BC750E529C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples", "ApiExamples\ApiExamples.csproj", "{5D5F6B58-E794-4FAE-82C4-0BC750E529C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples(API8+support)", "ApiExamples(API8+support)\ApiExamples(API8+support).csproj", "{98827C13-57F6-41E8-B9E9-A3BC25A31225}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples.AppCompat", "ApiExamples.AppCompat\ApiExamples.AppCompat.csproj", "{98827C13-57F6-41E8-B9E9-A3BC25A31225}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{52DDB699-930C-42ED-83FD-E0A45AF14556}"
 	ProjectSection(SolutionItems) = preProject

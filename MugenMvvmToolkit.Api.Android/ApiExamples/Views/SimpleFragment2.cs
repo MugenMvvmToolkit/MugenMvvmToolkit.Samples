@@ -1,7 +1,7 @@
 using Android.App;
 using Android.OS;
 using Android.Views;
-#if API8
+#if APPCOMPAT
 using Fragment = Android.Support.V4.App.Fragment;    
 #endif
 

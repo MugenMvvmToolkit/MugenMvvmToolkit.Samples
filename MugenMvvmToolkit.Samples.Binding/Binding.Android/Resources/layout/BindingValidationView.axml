@@ -13,16 +13,7 @@
               android:layout_height="wrap_content">
     <LinearLayout android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
-                  android:orientation="vertical">
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Validation summary:"
-                pkg:Bind="Visible $GetErrors().Any()"/>
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#f00"
-                pkg:Bind="Text $string.Join($Environment.NewLine, $GetErrors()); Visible $GetErrors().Any()" />
-
+                  android:orientation="vertical">      
 
       <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -79,6 +70,15 @@
               android:layout_height="wrap_content"
               android:text="Clear error(PropertyWithException)"
               pkg:Bind="Click RemoveErrorCommand" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Validation summary:"
+                pkg:Bind="Visible $GetErrors().Any()"/>
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f00"
+                pkg:Bind="Text $string.Join($Environment.NewLine, $GetErrors()); Visible $GetErrors().Any()" />
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

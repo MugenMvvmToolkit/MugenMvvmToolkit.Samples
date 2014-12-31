@@ -30,6 +30,8 @@ namespace Navigation.Touch.Views
                     actionSheet.AddButtonWithBinding("Second view model page", "Click ShowSecondPageCommand");
                     actionSheet.AddButtonWithBinding("Second view model tab", "Click ShowSecondTabCommand");
 
+                    actionSheet.AddButtonWithBinding("Navigation (Clear back stack)", "Click ShowBackStackPageCommand");
+
                     actionSheet.CancelButtonIndex = actionSheet.AddButton("Cancel");
                     actionSheet.ShowEx(sender, (sheet, o) => sheet.ShowFrom((UIBarButtonItem)o, true));
                 });

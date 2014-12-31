@@ -37,7 +37,6 @@ namespace ApiExamples
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::ApiExamples.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::ApiExamples.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::ApiExamples.Resource.Attribute.TabContentId;
-			global::MugenMvvmToolkit.Resource.Id.ActionBarView = global::ApiExamples.Resource.Id.ActionBarView;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::ApiExamples.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::ApiExamples.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::ApiExamples.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -60,38 +59,71 @@ namespace ApiExamples
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010009
-			public const int ActionBarTemplate = 2130771977;
+			// aapt resource value: 0x7f010014
+			public const int ActionBarTemplate = 2130771988;
+			
+			// aapt resource value: 0x7f01000b
+			public const int Bind = 2130771979;
+			
+			// aapt resource value: 0x7f01000c
+			public const int Bindings = 2130771980;
+			
+			// aapt resource value: 0x7f01000f
+			public const int ContentTemplate = 2130771983;
+			
+			// aapt resource value: 0x7f01000e
+			public const int DropDownItemTemplate = 2130771982;
+			
+			// aapt resource value: 0x7f01000d
+			public const int ItemTemplate = 2130771981;
+			
+			// aapt resource value: 0x7f010010
+			public const int MenuTemplate = 2130771984;
+			
+			// aapt resource value: 0x7f010013
+			public const int PlacementTargetPath = 2130771987;
+			
+			// aapt resource value: 0x7f010012
+			public const int PopupMenuEvent = 2130771986;
+			
+			// aapt resource value: 0x7f010011
+			public const int PopupMenuTemplate = 2130771985;
+			
+			// aapt resource value: 0x7f010015
+			public const int TabContentId = 2130771989;
 			
 			// aapt resource value: 0x7f010000
-			public const int Bind = 2130771968;
+			public const int cardBackgroundColor = 2130771968;
 			
 			// aapt resource value: 0x7f010001
-			public const int Bindings = 2130771969;
-			
-			// aapt resource value: 0x7f010004
-			public const int ContentTemplate = 2130771972;
-			
-			// aapt resource value: 0x7f010003
-			public const int DropDownItemTemplate = 2130771971;
+			public const int cardCornerRadius = 2130771969;
 			
 			// aapt resource value: 0x7f010002
-			public const int ItemTemplate = 2130771970;
+			public const int cardElevation = 2130771970;
+			
+			// aapt resource value: 0x7f010003
+			public const int cardMaxElevation = 2130771971;
 			
 			// aapt resource value: 0x7f010005
-			public const int MenuTemplate = 2130771973;
+			public const int cardPreventCornerOverlap = 2130771973;
 			
-			// aapt resource value: 0x7f010008
-			public const int PlacementTargetPath = 2130771976;
-			
-			// aapt resource value: 0x7f010007
-			public const int PopupMenuEvent = 2130771975;
+			// aapt resource value: 0x7f010004
+			public const int cardUseCompatPadding = 2130771972;
 			
 			// aapt resource value: 0x7f010006
-			public const int PopupMenuTemplate = 2130771974;
+			public const int contentPadding = 2130771974;
 			
 			// aapt resource value: 0x7f01000a
-			public const int TabContentId = 2130771978;
+			public const int contentPaddingBottom = 2130771978;
+			
+			// aapt resource value: 0x7f010007
+			public const int contentPaddingLeft = 2130771975;
+			
+			// aapt resource value: 0x7f010008
+			public const int contentPaddingRight = 2130771976;
+			
+			// aapt resource value: 0x7f010009
+			public const int contentPaddingTop = 2130771977;
 			
 			static Attribute()
 			{
@@ -99,6 +131,53 @@ namespace ApiExamples
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int cardview_dark_background = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int cardview_light_background = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int cardview_shadow_end_color = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int cardview_shadow_start_color = 2130968579;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int cardview_compat_inset_shadow = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int cardview_default_elevation = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int cardview_default_radius = 2131034114;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
 			{
 			}
 		}
@@ -122,23 +201,29 @@ namespace ApiExamples
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ActionBarView = 2130968577;
+			// aapt resource value: 0x7f070000
+			public const int OptionsMenu = 2131165184;
 			
-			// aapt resource value: 0x7f040000
-			public const int OptionsMenu = 2130968576;
+			// aapt resource value: 0x7f070003
+			public const int content = 2131165187;
 			
-			// aapt resource value: 0x7f040004
-			public const int content = 2130968580;
+			// aapt resource value: 0x7f070004
+			public const int recyclerView = 2131165188;
 			
-			// aapt resource value: 0x7f040002
-			public const int tabContent = 2130968578;
+			// aapt resource value: 0x7f070001
+			public const int tabContent = 2131165185;
 			
-			// aapt resource value: 0x7f040003
-			public const int tabContentId = 2130968579;
+			// aapt resource value: 0x7f070002
+			public const int tabContentId = 2131165186;
 			
-			// aapt resource value: 0x7f040005
-			public const int textView = 2130968581;
+			// aapt resource value: 0x7f070005
+			public const int textView = 2131165189;
+			
+			// aapt resource value: 0x7f070006
+			public const int toolbar = 2131165190;
+			
+			// aapt resource value: 0x7f070007
+			public const int toolbarBottom = 2131165191;
 			
 			static Id()
 			{
@@ -166,49 +251,61 @@ namespace ApiExamples
 			public const int _ButtonTemplate = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int _ContextActionBar = 2130903044;
+			public const int _CardItemTemplate = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int _ItemListViewTemplate = 2130903045;
+			public const int _ContextActionBar = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int _ListItemTemplate = 2130903046;
+			public const int _ItemListViewTemplate = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ActionBarDynamicTabView = 2130903047;
+			public const int _ListItemTemplate = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int ActionBarMenuView = 2130903048;
+			public const int _ListItemTemplateInvalid = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int ActionBarStaticTabView = 2130903049;
+			public const int ActionBarDynamicTabView = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int BackStackFragmetView = 2130903050;
+			public const int ActionBarMenuView = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int ContextActionBarView = 2130903051;
+			public const int ActionBarStaticTabView = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int ItemView = 2130903052;
+			public const int BackStackFragmetView = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int ListDataTemplateView = 2130903053;
+			public const int CardRecyclerView = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int MainView = 2130903054;
+			public const int ContextActionBarView = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int PopupMenuView = 2130903055;
+			public const int ItemView = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int SimpleView1 = 2130903056;
+			public const int ListDataTemplateView = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int SimpleView2 = 2130903057;
+			public const int MainView = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int TabHostView = 2130903058;
+			public const int PopupMenuView = 2130903058;
+			
+			// aapt resource value: 0x7f030013
+			public const int SimpleView1 = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int SimpleView2 = 2130903060;
+			
+			// aapt resource value: 0x7f030015
+			public const int TabHostView = 2130903061;
+			
+			// aapt resource value: 0x7f030016
+			public const int ToolbarView = 2130903062;
 			
 			static Layout()
 			{
@@ -223,23 +320,23 @@ namespace ApiExamples
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int addlistitemmenu = 2131034112;
+			// aapt resource value: 0x7f080000
+			public const int addlistitemmenu = 2131230720;
 			
-			// aapt resource value: 0x7f050001
-			public const int addmenu = 2131034113;
+			// aapt resource value: 0x7f080001
+			public const int addmenu = 2131230721;
 			
-			// aapt resource value: 0x7f050002
-			public const int addremovemenu = 2131034114;
+			// aapt resource value: 0x7f080002
+			public const int addremovemenu = 2131230722;
 			
-			// aapt resource value: 0x7f050003
-			public const int contextactionbarmenu = 2131034115;
+			// aapt resource value: 0x7f080003
+			public const int contextactionbarmenu = 2131230723;
 			
-			// aapt resource value: 0x7f050004
-			public const int dynamicmenutemplate = 2131034116;
+			// aapt resource value: 0x7f080004
+			public const int dynamicmenutemplate = 2131230724;
 			
-			// aapt resource value: 0x7f050005
-			public const int popupmenutemplate = 2131034117;
+			// aapt resource value: 0x7f080005
+			public const int popupmenutemplate = 2131230725;
 			
 			static Menu()
 			{
@@ -251,12 +348,37 @@ namespace ApiExamples
 			}
 		}
 		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int CardView = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int CardView_Dark = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int CardView_Light = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int ToolbarTheme = 2131099651;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
+			{
+			}
+		}
+		
 		public partial class Styleable
 		{
 			
 			public static int[] ActionBar = new int[] {
-					2130771977,
-					2130771978};
+					2130771988,
+					2130771989};
 			
 			// aapt resource value: 0
 			public const int ActionBar_ActionBarTemplate = 0;
@@ -265,8 +387,8 @@ namespace ApiExamples
 			public const int ActionBar_TabContentId = 1;
 			
 			public static int[] Binding = new int[] {
-					2130771968,
-					2130771969};
+					2130771979,
+					2130771980};
 			
 			// aapt resource value: 0
 			public const int Binding_Bind = 0;
@@ -274,15 +396,61 @@ namespace ApiExamples
 			// aapt resource value: 1
 			public const int Binding_Bindings = 1;
 			
+			public static int[] CardView = new int[] {
+					2130771968,
+					2130771969,
+					2130771970,
+					2130771971,
+					2130771972,
+					2130771973,
+					2130771974,
+					2130771975,
+					2130771976,
+					2130771977,
+					2130771978};
+			
+			// aapt resource value: 0
+			public const int CardView_cardBackgroundColor = 0;
+			
+			// aapt resource value: 1
+			public const int CardView_cardCornerRadius = 1;
+			
+			// aapt resource value: 2
+			public const int CardView_cardElevation = 2;
+			
+			// aapt resource value: 3
+			public const int CardView_cardMaxElevation = 3;
+			
+			// aapt resource value: 5
+			public const int CardView_cardPreventCornerOverlap = 5;
+			
+			// aapt resource value: 4
+			public const int CardView_cardUseCompatPadding = 4;
+			
+			// aapt resource value: 6
+			public const int CardView_contentPadding = 6;
+			
+			// aapt resource value: 10
+			public const int CardView_contentPaddingBottom = 10;
+			
+			// aapt resource value: 7
+			public const int CardView_contentPaddingLeft = 7;
+			
+			// aapt resource value: 8
+			public const int CardView_contentPaddingRight = 8;
+			
+			// aapt resource value: 9
+			public const int CardView_contentPaddingTop = 9;
+			
 			public static int[] Control = new int[] {
-					2130771972};
+					2130771983};
 			
 			// aapt resource value: 0
 			public const int Control_ContentTemplate = 0;
 			
 			public static int[] ItemsControl = new int[] {
-					2130771970,
-					2130771971};
+					2130771981,
+					2130771982};
 			
 			// aapt resource value: 1
 			public const int ItemsControl_DropDownItemTemplate = 1;
@@ -291,10 +459,10 @@ namespace ApiExamples
 			public const int ItemsControl_ItemTemplate = 0;
 			
 			public static int[] Menu = new int[] {
-					2130771973,
-					2130771974,
-					2130771975,
-					2130771976};
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987};
 			
 			// aapt resource value: 0
 			public const int Menu_MenuTemplate = 0;

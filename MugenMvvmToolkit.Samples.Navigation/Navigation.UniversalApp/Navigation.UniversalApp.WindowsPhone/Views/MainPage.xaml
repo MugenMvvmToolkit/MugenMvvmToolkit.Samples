@@ -53,6 +53,8 @@
                               Command="{Binding Path=ShowSecondPageCommand}" />
                 <AppBarButton Label="Second view model (Tab)"
                               Command="{Binding Path=ShowSecondTabCommand}" />
+                <AppBarButton Label="Navigation (Clear back stack)" Icon="OpenLocal"
+                              Command="{Binding Path=ShowBackStackPageCommand}" />
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

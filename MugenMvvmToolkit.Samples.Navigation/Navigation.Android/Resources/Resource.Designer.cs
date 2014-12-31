@@ -37,7 +37,6 @@ namespace Navigation.Android
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::Navigation.Android.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::Navigation.Android.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::Navigation.Android.Resource.Attribute.TabContentId;
-			global::MugenMvvmToolkit.Resource.Id.ActionBarView = global::Navigation.Android.Resource.Id.ActionBarView;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Navigation.Android.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Navigation.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Navigation.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -122,20 +121,17 @@ namespace Navigation.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ActionBarView = 2130968577;
-			
 			// aapt resource value: 0x7f040000
 			public const int OptionsMenu = 2130968576;
 			
-			// aapt resource value: 0x7f040003
-			public const int placeholder = 2130968579;
-			
 			// aapt resource value: 0x7f040002
-			public const int tabContentId = 2130968578;
+			public const int placeholder = 2130968578;
 			
-			// aapt resource value: 0x7f040004
-			public const int viewmodelplaceholder = 2130968580;
+			// aapt resource value: 0x7f040001
+			public const int tabContentId = 2130968577;
+			
+			// aapt resource value: 0x7f040003
+			public const int viewmodelplaceholder = 2130968579;
 			
 			static Id()
 			{
@@ -154,19 +150,22 @@ namespace Navigation.Android
 			public const int _ActionBarMain = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int FirstView = 2130903041;
+			public const int BackStackView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int FirstView = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int SecondView = 2130903043;
+			public const int Main = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int TabTemplate = 2130903044;
+			public const int SecondView = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int WrapperView = 2130903045;
+			public const int TabTemplate = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int WrapperView = 2130903046;
 			
 			static Layout()
 			{

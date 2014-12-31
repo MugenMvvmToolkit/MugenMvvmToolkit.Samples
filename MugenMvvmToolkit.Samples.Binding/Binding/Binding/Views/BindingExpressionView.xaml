@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Binding.Views.BindingExpressionView">
+  <ScrollView Padding="4">
+    <StackLayout>
+      <Label Text="Current text:" />
+      <Entry Text="{mugen:DataBinding Path=Text, Mode=TwoWay}" />
+
+      <Label Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" />
+      <Label mugen:View.Bind="Text Text.Count(x => x == 'a')" TextColor="Green" />
+
+      <Label Text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" />
+      <Label mugen:View.Bind="Text Text.ExtensionMethod(Text.Count())" TextColor="Green" />
+
+      <Label Text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" />
+      <Label mugen:View.Bind="Text Text.Skip(1).FirstOrDefault()" TextColor="Green" />
+
+      <Label Text="Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')" />
+      <Label mugen:View.Bind="Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'"
+             TextColor="Green" />
+
+      <Label Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" />
+      <Label mugen:View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" TextColor="Green" />
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

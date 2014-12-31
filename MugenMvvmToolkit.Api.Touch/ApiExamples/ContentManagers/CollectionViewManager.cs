@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using MonoTouch.UIKit;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace ApiExamples.ContentManagers
 {

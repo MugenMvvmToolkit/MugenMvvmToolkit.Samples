@@ -23,15 +23,22 @@ namespace Binding.Touch.Views
 
         private static RootElement CreateRootElement()
         {
-            var root = new RootElement("Main view");
-            var section = new Section("Examples");
-            root.Add(section);
             using (var bindingSet = new BindingSet<MainViewModel>())
             {
+                var root = new RootElement("Main view");
+                var section = new Section();
+                var element = new MultilineElement(string.Empty);
+                bindingSet.BindFromExpression(element,
+                    "Caption $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)");
+                section.Add(element);
+                root.Add(section);
+
+                section = new Section("Samples");
+                root.Add(section);
                 bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(model => model.Items);
                 bindingSet.BindFromExpression(section, "ItemTemplate $buttonTemplate");
+                return root;
             }
-            return root;
         }
 
         #endregion

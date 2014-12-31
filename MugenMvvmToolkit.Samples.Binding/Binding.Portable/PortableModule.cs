@@ -2,9 +2,9 @@
 using Binding.Portable.Interfaces;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.Models.IoC;
+using MugenMvvmToolkit.Modules;
 
 namespace Binding.Portable
 {
@@ -47,6 +47,14 @@ namespace Binding.Portable
                         localizationManager.Initilaize();
                         return localizationManager;
                     }, DependencyLifecycle.SingleInstance);
+            }
+
+            if (IocContainer != null)
+            {
+                //Wrap binding manager
+                var monitor = new BindingManagerMonitor(BindingServiceProvider.BindingManager);
+                BindingServiceProvider.BindingManager = monitor;
+                IocContainer.BindToConstant<IBindingManagerMonitor>(monitor);
             }
             return true;
         }

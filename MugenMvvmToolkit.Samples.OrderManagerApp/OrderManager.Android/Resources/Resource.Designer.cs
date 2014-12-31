@@ -37,7 +37,6 @@ namespace OrderManager.Android
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::OrderManager.Android.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::OrderManager.Android.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::OrderManager.Android.Resource.Attribute.TabContentId;
-			global::MugenMvvmToolkit.Resource.Id.ActionBarView = global::OrderManager.Android.Resource.Id.ActionBarView;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::OrderManager.Android.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::OrderManager.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::OrderManager.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -143,17 +142,14 @@ namespace OrderManager.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ActionBarView = 2130968577;
-			
 			// aapt resource value: 0x7f040000
 			public const int OptionsMenu = 2130968576;
 			
-			// aapt resource value: 0x7f040002
-			public const int placeholder = 2130968578;
+			// aapt resource value: 0x7f040001
+			public const int placeholder = 2130968577;
 			
-			// aapt resource value: 0x7f040003
-			public const int tabContentId = 2130968579;
+			// aapt resource value: 0x7f040002
+			public const int tabContentId = 2130968578;
 			
 			static Id()
 			{

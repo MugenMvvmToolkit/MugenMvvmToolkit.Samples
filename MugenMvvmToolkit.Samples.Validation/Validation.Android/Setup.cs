@@ -1,9 +1,9 @@
 using System;
 using MugenMvvmToolkit;
-using Validation.Android;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
+using Validation.Android;
 using Validation.Portable.ViewModels;
 
 [assembly: Bootstrapper(typeof (Setup))]

@@ -1,16 +1,18 @@
+using MugenMvvmToolkit;
+using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Modules;
+using OrderManager.Portable.Interfaces;
+using OrderManager.Touch.Infrastructure;
+#if !XAMARINFORMS
 using System.Drawing;
 using MonoTouch.UIKit;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
-using MugenMvvmToolkit.Infrastructure;
-using MugenMvvmToolkit.Models;
-using OrderManager.Portable.Interfaces;
-using OrderManager.Touch.Infrastructure;
 using OrderManager.Touch.Views;
+#endif
 
 namespace OrderManager.Touch
 {
@@ -18,20 +20,17 @@ namespace OrderManager.Touch
     {
         #region Fields
 
+#if !XAMARINFORMS
         /// <summary>
         ///     Defines the attached property for busy indicator.
         /// </summary>
-        private static readonly IAttachedBindingMemberInfo<UIView, LoadingOverlay> BusyViewMember;
-
+        private static readonly IAttachedBindingMemberInfo<UIView, LoadingOverlay> BusyViewMember =
+            AttachedBindingMember.CreateAutoProperty<UIView, LoadingOverlay>("#busyView",
+                getDefaultValue: CreateLoadingOverlay);
+#endif
         #endregion
 
         #region Constructors
-
-        static TouchModule()
-        {
-            BusyViewMember = AttachedBindingMember.CreateAutoProperty<UIView, LoadingOverlay>("#busyView",
-                getDefaultValue: CreateLoadingOverlay);
-        }
 
         public TouchModule()
             : base(false, LoadMode.Runtime)
@@ -46,11 +45,11 @@ namespace OrderManager.Touch
         {
             IocContainer.BindToConstant<IRepository>(new FileRepository());
 
+#if !XAMARINFORMS
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
             memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UIView, bool>("IsBusy", IsBusyChanged));
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UIView, object>("BusyMessage",
-                BusyMessageChanged));
-
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UIView, object>("BusyMessage", BusyMessageChanged));
+#endif
             return true;
         }
 
@@ -62,6 +61,7 @@ namespace OrderManager.Touch
 
         #region Methods
 
+#if !XAMARINFORMS
         private static LoadingOverlay CreateLoadingOverlay(UIView uiView, IBindingMemberInfo bindingMemberInfo)
         {
             // Determine the correct size to start the overlay (depending on device orientation)
@@ -92,7 +92,7 @@ namespace OrderManager.Touch
             LoadingOverlay busyIndicator = BusyViewMember.GetValue(uiView, null);
             busyIndicator.BusyMessage = args.NewValue == null ? null : args.NewValue.ToString();
         }
-
+#endif
         #endregion
     }
 }

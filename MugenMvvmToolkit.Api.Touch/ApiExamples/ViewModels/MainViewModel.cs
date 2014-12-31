@@ -26,21 +26,15 @@ namespace ApiExamples.ViewModels
             Items = new[]
             {
                 Tuple.Create("Tab bar view", new ViewModelCommandParameter(typeof (TabViewModel))),
-                Tuple.Create("Tab bar view (DataTemplate)",
-                    new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabTemplateView)),
+                Tuple.Create("Tab bar view (DataTemplate)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabTemplateView)),
                 Tuple.Create("Table view", new ViewModelCommandParameter(typeof (TableViewModel))),
-                Tuple.Create("Table view (DataTemplate)",
-                    new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableTemplateView)),
-                Tuple.Create("Table view (Checkmark)",
-                    new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableViewCheckmark)),
-                Tuple.Create("Collection view",
-                    new ViewModelCommandParameter(typeof (TableViewModel), Constants.CollectionView)),
-                Tuple.Create("View ItemsSource binding",
-                    new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewCollectionView)),
+                Tuple.Create("Table view (DataTemplate)", new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableTemplateView)),
+                Tuple.Create("Table view (Checkmark)", new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableViewCheckmark)),
+                Tuple.Create("Collection view", new ViewModelCommandParameter(typeof (TableViewModel), Constants.CollectionView)),
+                Tuple.Create("View ItemsSource binding", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewCollectionView)),
                 Tuple.Create("View Content binding", new ViewModelCommandParameter(typeof (ContentViewModel))),
                 Tuple.Create("Modal view", new ViewModelCommandParameter(typeof (ModalViewModel))),
-                Tuple.Create("Modal view (navigation)",
-                    new ViewModelCommandParameter(typeof (ModalViewModel), Constants.ModalNavSupportView))
+                Tuple.Create("Modal view (navigation)", new ViewModelCommandParameter(typeof (ModalViewModel), Constants.ModalNavSupportView))
             };
             ShowCommand = new RelayCommand<ViewModelCommandParameter>(Show);
         }

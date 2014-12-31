@@ -34,7 +34,7 @@
 
                 <TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1"
                            TextWrapping="Wrap" />
-                <TextBlock markupExtensions:View.Bind="Text Text.Count(x => x == \'a\')" Margin="1 1 1 10"
+                <TextBlock markupExtensions:View.Bind="Text Text.Count(x => x == 'a')" Margin="1 1 1 10"
                            Foreground="Green" TextWrapping="Wrap" />
 
                 <TextBlock Text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" Margin="1"

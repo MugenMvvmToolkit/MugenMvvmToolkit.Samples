@@ -28,6 +28,24 @@
                 android:layout_marginBottom="15dp"
                 android:textColor="#00ff00"
                 pkg:Bind="Text DynamicProperty" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Dynamic method call:" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $context.DynamicMethod(DynamicProperty)" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Dynamic index call:" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $context[DynamicProperty]" />
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binding.Views.PerformanceView">
+    <StackLayout Padding="4">
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Native binding:" />
+            <Label Grid.Column="1" x:Name="NativeTb" Text="no results" />
+        </Grid>
+
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Mugen binding:" />
+            <Label Grid.Column="1" x:Name="MugenTb" Text="no results" />
+        </Grid>
+
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Mugen expression:" />
+            <Label Grid.Column="1" x:Name="MugenExpTb" Text="no results" />
+        </Grid>
+
+        <Grid Padding="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="No binding:" />
+            <Label Grid.Column="1" x:Name="NoBindingTb" Text="no results" />
+        </Grid>
+
+        <Entry x:Name="IterationsTb" />
+        <Button Text="Start" Clicked="Click" />
+    </StackLayout>
+</ContentPage>

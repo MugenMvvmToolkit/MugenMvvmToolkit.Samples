@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelativeBindingView));
             this.trackBar = new System.Windows.Forms.TrackBar();
             this.trackBarTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.selfLabel = new System.Windows.Forms.Label();
             this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
+            this.rootLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +50,7 @@
             this.trackBar.Location = new System.Drawing.Point(12, 12);
             this.trackBar.Maximum = 1000;
             this.trackBar.Name = "trackBar";
-            this.trackBar.Size = new System.Drawing.Size(441, 45);
+            this.trackBar.Size = new System.Drawing.Size(562, 45);
             this.trackBar.TabIndex = 0;
             // 
             // trackBarTb
@@ -56,7 +59,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarTb.Location = new System.Drawing.Point(12, 50);
             this.trackBarTb.Name = "trackBarTb";
-            this.trackBarTb.Size = new System.Drawing.Size(441, 20);
+            this.trackBarTb.Size = new System.Drawing.Size(562, 20);
             this.trackBarTb.TabIndex = 1;
             // 
             // label1
@@ -74,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titleTb.Location = new System.Drawing.Point(12, 101);
             this.titleTb.Name = "titleTb";
-            this.titleTb.Size = new System.Drawing.Size(441, 20);
+            this.titleTb.Size = new System.Drawing.Size(562, 20);
             this.titleTb.TabIndex = 3;
             // 
             // label2
@@ -100,18 +103,39 @@
             // 
             // viewBinder
             // 
-            this.viewBinder.Bindings = "<Bindings>\n  <trackBarTb Text=\"$Element(trackBar).Value, Mode=TwoWay\" />\n  <title" +
-    "Tb Text=\"$Relative(Form).Text, Mode=TwoWay\" />\n  <selfLabel Text=\"$self.Width\" /" +
-    ">\n</Bindings>";
+            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
             this.viewBinder.ContainerControl = this;
             this.viewBinder.IgnoreControlException = true;
             this.viewBinder.RootTagName = "Bindings";
+            // 
+            // rootLabel
+            // 
+            this.rootLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rootLabel.AutoSize = true;
+            this.rootLabel.ForeColor = System.Drawing.Color.Green;
+            this.rootLabel.Location = new System.Drawing.Point(120, 161);
+            this.rootLabel.Name = "rootLabel";
+            this.rootLabel.Size = new System.Drawing.Size(25, 13);
+            this.rootLabel.TabIndex = 7;
+            this.rootLabel.Text = "root";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Root element:";
             // 
             // RelativeBindingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 167);
+            this.ClientSize = new System.Drawing.Size(586, 193);
+            this.Controls.Add(this.rootLabel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.selfLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.titleTb);
@@ -140,5 +164,7 @@
         private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label selfLabel;
+        private System.Windows.Forms.Label rootLabel;
+        private System.Windows.Forms.Label label4;
     }
 }

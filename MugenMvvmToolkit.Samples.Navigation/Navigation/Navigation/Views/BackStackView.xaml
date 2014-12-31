@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="Navigation.Views.BackStackView">
+  <StackLayout Padding="4">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Back stack depth " />
+      <Label Text="{Binding Path=Depth}" />
+    </StackLayout>
+
+    <Button Text="Navigate to next view" Command="{Binding Path=NavigateCommand}"/>
+    <Button Text="Navigate to main view model (Clear back stack)" Command="{Binding Path=NavigateClearBackStackCommand}"/>
+  </StackLayout>
+</ContentPage>

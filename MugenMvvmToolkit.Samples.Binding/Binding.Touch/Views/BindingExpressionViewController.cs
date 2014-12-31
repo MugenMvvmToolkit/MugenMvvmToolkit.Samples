@@ -63,7 +63,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, @"Text Text.Count(x => x == \'a\')");
+                set.BindFromExpression(label, @"Text Text.Count(x => x == 'a')");
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new RectangleF(20, 105, View.Frame.Width - 40, 25))

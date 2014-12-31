@@ -1,4 +1,5 @@
 ﻿using System;
+using MugenMvvmToolkit.Modules;
 #if NETFX_CORE
 using Windows.UI.Xaml.Controls;
 using Binding.Portable.Interfaces;
@@ -13,7 +14,6 @@ using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
-using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
 
@@ -25,7 +25,7 @@ namespace Binding.Wpf
 
         public Module()
             : base(true, LoadMode.All)
-        {
+        {            
         }
 
         #endregion

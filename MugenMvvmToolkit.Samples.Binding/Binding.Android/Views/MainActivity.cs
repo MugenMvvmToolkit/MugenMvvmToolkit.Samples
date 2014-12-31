@@ -8,7 +8,7 @@ namespace Binding.Android.Views
     {
         public MainActivity()
             : base(Resource.Layout.Main)
-        {
+        {             
         }
     }
 }

@@ -3,7 +3,7 @@ using ApiExamples.Models;
 using MonoTouch.Dialog;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 
 namespace ApiExamples.Templates
 {

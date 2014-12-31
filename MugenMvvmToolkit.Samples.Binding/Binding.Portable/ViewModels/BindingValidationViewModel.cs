@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Input;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -22,7 +21,7 @@ namespace Binding.Portable.ViewModels
             _propertyWithException = string.Empty;
             Property = string.Empty;
             AddErrorCommand = new RelayCommand(AddError, CanAddError, this);
-            RemoveErrorCommand = new RelayCommand(RemoveError, CanRemoveError, this);            
+            RemoveErrorCommand = new RelayCommand(RemoveError, CanRemoveError, this);
         }
 
         #endregion

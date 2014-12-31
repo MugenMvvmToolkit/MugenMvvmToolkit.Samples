@@ -5,5 +5,9 @@ namespace ApiExamples
         public const string TabHostView = "TabHostView";
 
         public const string PopupMenuView = "PopupMenuView";
+
+        public const string ViewPagerView = "ViewPagerView";
+
+        public const string CardRecyclerView = "CardRecyclerView";
     }
 }

@@ -64,6 +64,40 @@ namespace Binding.Touch.Views
                 };
                 set.Bind(label, field => field.Text).To("DynamicModel.Text");
                 scrollView.AddSubview(label);
+
+                label = new UILabel(new RectangleF(20, 105, View.Frame.Width - 40, 25))
+                {
+                    Text = "Dynamic method call",
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    Font = font
+                };
+                scrollView.AddSubview(label);
+
+                label = new UILabel(new RectangleF(20, 130, View.Frame.Width - 40, 25))
+                {
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    TextColor = UIColor.Green,
+                    AdjustsFontSizeToFitWidth = true
+                };
+                set.BindFromExpression(label, "Text DynamicModel.DynamicMethod(DynamicModel.Text)");
+                scrollView.AddSubview(label);
+
+                label = new UILabel(new RectangleF(20, 155, View.Frame.Width - 40, 25))
+                {
+                    Text = "Dynamic index call",
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    Font = font
+                };
+                scrollView.AddSubview(label);
+
+                label = new UILabel(new RectangleF(20, 180, View.Frame.Width - 40, 25))
+                {
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    TextColor = UIColor.Green,
+                    AdjustsFontSizeToFitWidth = true
+                };
+                set.BindFromExpression(label, "Text DynamicModel[DynamicModel.Text]");
+                scrollView.AddSubview(label);
             }
         }
 

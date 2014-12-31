@@ -1,12 +1,12 @@
 using System;
 using MugenMvvmToolkit;
-using Navigation.Android;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
+using Navigation.Android;
 using Navigation.Portable.ViewModels;
 
-[assembly: Bootstrapper(typeof(Setup))]
+[assembly: Bootstrapper(typeof (Setup))]
 
 namespace Navigation.Android
 {
@@ -21,7 +21,7 @@ namespace Navigation.Android
 
         protected override Type GetMainViewModelType()
         {
-            return typeof(MainViewModel);
+            return typeof (MainViewModel);
         }
 
         #endregion

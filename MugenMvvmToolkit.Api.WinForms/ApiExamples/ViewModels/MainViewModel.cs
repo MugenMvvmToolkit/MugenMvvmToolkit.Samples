@@ -22,6 +22,7 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("View collection manager", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CollectionViewManager)),
                 Tuple.Create("Content binding", new ViewModelCommandParameter(typeof (ContentViewModel))), 
                 Tuple.Create("Content binding (View content manager)", new ViewModelCommandParameter(typeof (ContentViewModel), Constants.ContentFormContentManager)), 
+                Tuple.Create("Tree view binding", new ViewModelCommandParameter(typeof (TreeViewBindingViewModel), Constants.ContentFormContentManager))
             };
             ShowCommand = new RelayCommand<ViewModelCommandParameter>(Show);
         }

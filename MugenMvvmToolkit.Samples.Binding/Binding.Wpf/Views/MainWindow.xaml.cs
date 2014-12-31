@@ -6,7 +6,7 @@ namespace Binding.Wpf.Views
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }

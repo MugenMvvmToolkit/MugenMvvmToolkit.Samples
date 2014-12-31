@@ -1,10 +1,9 @@
 ﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
-using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Validation;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.Models.IoC;
+using MugenMvvmToolkit.Modules;
 using OrderManager.Portable.Infrastructure;
 using OrderManager.Portable.Interfaces;
 using OrderManager.Portable.Validators;
@@ -26,8 +25,6 @@ namespace OrderManager.Portable
 
         protected override bool LoadInternal()
         {
-            if (Mode != LoadMode.UnitTest)
-                IocContainer.Bind<IViewModelWrapperManager, ViewModelWrapperManager>(DependencyLifecycle.SingleInstance);
             if (Mode == LoadMode.Design)
                 IocContainer.Bind<IRepository, DesignRepository>(DependencyLifecycle.SingleInstance);
 

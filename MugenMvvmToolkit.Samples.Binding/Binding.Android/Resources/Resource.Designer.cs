@@ -37,7 +37,6 @@ namespace Binding.Android
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::Binding.Android.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::Binding.Android.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::Binding.Android.Resource.Attribute.TabContentId;
-			global::MugenMvvmToolkit.Resource.Id.ActionBarView = global::Binding.Android.Resource.Id.ActionBarView;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Binding.Android.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Binding.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Binding.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -122,26 +121,26 @@ namespace Binding.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ActionBarView = 2130968577;
-			
-			// aapt resource value: 0x7f040005
-			public const int IterationsText = 2130968581;
-			
-			// aapt resource value: 0x7f040003
-			public const int MugenExpTextView = 2130968579;
+			// aapt resource value: 0x7f040004
+			public const int IterationsText = 2130968580;
 			
 			// aapt resource value: 0x7f040002
-			public const int MugenTextView = 2130968578;
+			public const int MugenExpTextView = 2130968578;
 			
-			// aapt resource value: 0x7f040004
-			public const int NoBindingTextView = 2130968580;
+			// aapt resource value: 0x7f040001
+			public const int MugenTextView = 2130968577;
+			
+			// aapt resource value: 0x7f040003
+			public const int NoBindingTextView = 2130968579;
 			
 			// aapt resource value: 0x7f040000
 			public const int OptionsMenu = 2130968576;
 			
+			// aapt resource value: 0x7f040005
+			public const int StartButton = 2130968581;
+			
 			// aapt resource value: 0x7f040006
-			public const int StartButton = 2130968582;
+			public const int seekBar = 2130968582;
 			
 			static Id()
 			{

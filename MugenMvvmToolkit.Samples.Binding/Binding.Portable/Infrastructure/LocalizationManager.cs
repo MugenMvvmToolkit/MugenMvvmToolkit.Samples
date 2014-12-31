@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Binding.Portable.Interfaces;
 using Binding.Portable.Resources;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Models;
 
 namespace Binding.Portable.Infrastructure
@@ -35,6 +37,14 @@ namespace Binding.Portable.Infrastructure
         #region Implementation of IDynamicObject
 
         /// <summary>
+        ///     Attempts to track the value change.
+        /// </summary>
+        public IDisposable TryObserve(string member, IEventListener listener)
+        {
+            return null;
+        }
+
+        /// <summary>
         ///     Provides the implementation of getting a member.
         /// </summary>
         /// <returns>
@@ -50,6 +60,31 @@ namespace Binding.Portable.Infrastructure
         /// </summary>
         public void SetMember(string member, IList<object> args)
         {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        ///     Provides the implementation of calling a member.
+        /// </summary>
+        public object InvokeMember(string member, IList<object> args, IList<Type> typeArgs, IDataContext context)
+        {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        ///     Provides the implementation of performing a get index operation.
+        /// </summary>
+        public object GetIndex(IList<object> indexes, IDataContext context)
+        {
+            throw new NotSupportedException();
+        }
+
+        /// <summary>
+        ///     Provides the implementation of performing a set index operation.
+        /// </summary>
+        public void SetIndex(IList<object> indexes, IDataContext context)
+        {
+            throw new NotSupportedException();
         }
 
         #endregion

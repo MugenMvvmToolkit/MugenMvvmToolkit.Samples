@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Binding.Views.BindingResourcesView">
+    <StackLayout Padding="4">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <system:String x:Key="ResourceValue">Value from xaml</system:String>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Label Text="Object from resources($obj)" />
+        <Label Text="{mugen:DataBinding $obj}" TextColor="Green" />
+
+        <Label Text="Method from resources($Method())" />
+        <Label Text="{mugen:DataBinding $Method()}" TextColor="Green" />
+
+        <Label Text="Type from resources($CustomType.StaticMethod())" />
+        <Label Text="{mugen:DataBinding $CustomType.StaticMethod()}" TextColor="Green" />
+
+        <Label Text="Xaml resource:" />
+        <Label Text="{mugen:DataBinding $ResourceValue}" TextColor="Green" />
+    </StackLayout>
+</ContentPage>

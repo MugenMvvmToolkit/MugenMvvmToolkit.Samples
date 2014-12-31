@@ -28,7 +28,7 @@ namespace Binding.Touch.Views
 
             using (var set = new BindingSet<BindingModeViewModel>())
             {
-                var font = UIFont.SystemFontOfSize(12);
+                UIFont font = UIFont.SystemFontOfSize(12);
 
                 var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
                 {
@@ -81,9 +81,9 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField, field => field.Text)
-                   .To(model => model.Text)
-                   .OneWay()
-                   .WithDelay(1000, true);
+                    .To(model => model.Text)
+                    .OneWay()
+                    .WithDelay(1000, true);
                 scrollView.AddSubview(textField);
 
                 label = new UILabel(new RectangleF(20, 165, View.Frame.Width - 40, 25))

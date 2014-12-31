@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             Title="Relative binding"
+             x:Class="Binding.Views.RelativeBindingView">
+    <StackLayout Padding="4">
+        <Slider x:Name="NamedSlider" Minimum="0" Maximum="100" Value="10" />
+        <Entry Text="{mugen:DataBinding $El(NamedSlider).Value, Mode=TwoWay}" />
+
+        <Label Text="The current title:" />
+        <Entry Text="{mugen:DataBinding $Rel(ContentPage).Title, Mode=TwoWay}" />
+
+        <Label Text="Self binding(Width):" />
+        <Label Text="{mugen:DataBinding $self.Width}" TextColor="Green" />
+
+        <Label Text="Root element:" />
+        <Label Text="{mugen:DataBinding $root}" TextColor="Green" />
+    </StackLayout>
+</ContentPage>

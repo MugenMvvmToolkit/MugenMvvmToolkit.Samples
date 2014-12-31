@@ -40,7 +40,7 @@ namespace Binding.Portable.ViewModels
                 _selectedCulture = value;
                 if (_selectedCulture != null)
                     _localizationManager.ChangeCulture(_selectedCulture);
-                OnPropertyChanged();
+                OnPropertyChanged();                
             }
         }
 

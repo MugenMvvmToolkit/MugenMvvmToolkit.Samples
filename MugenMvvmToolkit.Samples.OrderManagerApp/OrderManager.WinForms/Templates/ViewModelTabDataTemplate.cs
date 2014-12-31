@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 
 namespace OrderManager.WinForms.Templates

@@ -57,6 +57,9 @@
                 <controls:BindableApplicationBarMenuItem
                     Text="Second view model (Tab)"
                     Command="{Binding Path=ShowSecondTabCommand}" />
+                <controls:BindableApplicationBarMenuItem
+                    Text="Navigation (Clear back stack)"
+                    Command="{Binding Path=ShowBackStackPageCommand}" />
             </controls:BindableApplicationBar.MenuItems>
         </controls:BindableApplicationBar>
     </controls:BindableApplicationBar.ApplicationBar>

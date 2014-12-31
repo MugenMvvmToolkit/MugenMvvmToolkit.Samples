@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Binding.Views.CommandBindingView">
+    <ScrollView Padding="4">
+      <StackLayout>
+        <Label Text="Can execute command" />
+        <Switch mugen:View.Bind="IsToggled CanExecuteCommand, Mode=TwoWay" />
+
+        <Label Text="Binding to command" />
+        <Button mugen:View.Bind="Clicked Command" CommandParameter="1" Text="Click binding" />
+
+        <Label Text="Binding to command(ToggleEnabledState = false)" />
+        <Button mugen:View.Bind="Clicked Command, ToggleEnabledState=False" CommandParameter="2"
+                Text="Click binding" />
+
+        <Label Text="Binding to method without parameters" />
+        <Entry mugen:View.Bind="TextChanged EventMethod(null)" />
+
+        <Label Text="Binding to method with parameter" />
+        <Entry mugen:View.Bind="TextChanged EventMethod($self.Text)" />
+
+        <Label Text="Binding to method with event args parameter" />
+        <Entry mugen:View.Bind="TextChanged EventMethod($args)" />
+
+        <Label Text="Binding to method with several parameters" />
+        <Entry mugen:View.Bind="TextChanged EventMethodMultiParams($self.Text, $args)" />
+      </StackLayout>
+    </ScrollView>
+</ContentPage>

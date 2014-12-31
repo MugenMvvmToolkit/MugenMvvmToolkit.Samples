@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Validation.Views.UserWorkspaceView"
+             Title="Validators">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+      
+        <Grid BindingContext="{mugen:DataBinding UserEditorViewModel}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Name" />
+            <Entry Grid.Row="1" Text="{mugen:DataBinding Name, Mode=TwoWay, Validate=True}" />
+
+            <Label Text="Login" Grid.Row="2" />
+            <Label Text="Validating..." TextColor="Green"
+                   IsVisible="{mugen:DataBinding IsLoginValidating}"
+                   Grid.Row="2" HorizontalOptions="EndAndExpand" />
+            <Entry Grid.Row="3" Text="{mugen:DataBinding Login, Mode=TwoWay, Validate=True, Delay=400}" />
+
+            <Label Text="Email" Grid.Row="4" />
+            <Entry Grid.Row="5" Text="{mugen:DataBinding Email, Mode=TwoWay, Validate=True}" />
+
+            <Label Text="View model is valid" Grid.Row="6" TextColor="Green"
+                   IsVisible="{mugen:DataBinding IsValid}" />
+            <Label Text="View model is not valid" Grid.Row="6" TextColor="Red"
+                   IsVisible="{mugen:DataBinding !IsValid}" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Command="{mugen:DataBinding AddUserCommand}" Text="Add" />
+
+            <Button Grid.Column="1" Grid.Row="0"
+                    Command="{mugen:DataBinding RemoveUserCommand}" Text="Remove" />
+
+            <ListView Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0"
+                      BindingContext="{mugen:DataBinding UserGridViewModel}"
+                      ItemsSource="{mugen:DataBinding ItemsSource}"
+                      SelectedItem="{mugen:DataBinding SelectedItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Name: " />
+                                    <Label Text="{mugen:DataBinding Name}" />
+
+                                    <Label Text=" Login: " />
+                                    <Label Text="{mugen:DataBinding Login}" />
+
+                                    <Label Text=" Email: " />
+                                    <Label Text="{mugen:DataBinding Email}" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</ContentPage>

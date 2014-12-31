@@ -30,7 +30,7 @@
             android:editable="false"
             android:layout_marginBottom="15dp"
             android:textColor="#00ff00"
-            pkg:Bind="Text Text.Count(x => x == \\\'a\\\')" />
+            pkg:Bind="Text Text.Count(x => x == 'a')" />
       <TextView
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"

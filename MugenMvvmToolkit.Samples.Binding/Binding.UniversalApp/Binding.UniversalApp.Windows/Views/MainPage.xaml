@@ -4,9 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
-    xmlns:viewModels="using:Binding.Portable.ViewModels"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:MainViewModel, IsDesignTimeCreatable=True}">
+    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"    
+    mc:Ignorable="d" markupExtensions:View.DesignDataContext="MainViewModel">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
@@ -16,6 +15,7 @@
         </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="140" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -33,8 +33,10 @@
                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" />
         </Grid>
 
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center"
+                   markupExtensions:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
 
-        <ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+        <ScrollViewer Grid.Row="2" Margin="12,0,12,0">
             <ItemsControl markupExtensions:View.Bind="ItemsSource Items">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

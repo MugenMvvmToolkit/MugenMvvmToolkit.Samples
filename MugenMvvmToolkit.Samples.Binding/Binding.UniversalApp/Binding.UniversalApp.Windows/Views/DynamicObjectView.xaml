@@ -35,12 +35,20 @@
         </Grid>
 
 
-        <StackPanel Grid.Row="1" Margin="12,0,12,0">
+        <StackPanel Grid.Row="1" Margin="12,0,12,0" DataContext="{Binding Path=DynamicModel}">
             <TextBox Header="Binding to dynamic property"
-                     markupExtensions:View.Bind="Text DynamicModel.DynamicProperty, Mode=TwoWay" Margin="1 1 1 10" />
+                     markupExtensions:View.Bind="Text DynamicProperty, Mode=TwoWay" Margin="1 1 1 10" />
 
             <TextBlock Text="Dynamic value" Style="{StaticResource BaseTextBlockStyle}" Margin="1" />
-            <TextBlock markupExtensions:View.Bind="Text DynamicModel.DynamicProperty" Margin="1 1 1 10"
+            <TextBlock markupExtensions:View.Bind="Text DynamicProperty" Margin="1 1 1 10"
+                       Style="{StaticResource BaseTextBlockStyle}" Foreground="Green" />
+
+            <TextBlock Text="Dynamic method call:" Style="{StaticResource BaseTextBlockStyle}" Margin="1" />
+            <TextBlock markupExtensions:View.Bind="Text $context.DynamicMethod(DynamicProperty)" Margin="1 1 1 10"
+                       Style="{StaticResource BaseTextBlockStyle}" Foreground="Green" />
+
+            <TextBlock Text="Dynamic index call:" Style="{StaticResource BaseTextBlockStyle}" Margin="1" />
+            <TextBlock markupExtensions:View.Bind="Text $context[DynamicProperty]" Margin="1 1 1 10"
                        Style="{StaticResource BaseTextBlockStyle}" Foreground="Green" />
         </StackPanel>
     </Grid>

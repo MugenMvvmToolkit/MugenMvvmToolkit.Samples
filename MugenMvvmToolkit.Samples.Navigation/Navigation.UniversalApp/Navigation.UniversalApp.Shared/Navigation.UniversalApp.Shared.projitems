@@ -9,13 +9,15 @@
     <Import_RootNamespace>Navigation.UniversalApp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SuspensionManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Setup.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SuspensionManager.cs" />
   </ItemGroup>
 </Project>

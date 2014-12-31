@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Binding.Infrastructure;
 using OrderManager.WinForms.Views;
 
 namespace OrderManager.WinForms.Templates

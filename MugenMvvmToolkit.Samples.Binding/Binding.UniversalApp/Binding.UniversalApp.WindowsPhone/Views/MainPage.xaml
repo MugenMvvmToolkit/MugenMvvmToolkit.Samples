@@ -5,12 +5,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
-    xmlns:viewModels="using:Binding.Portable.ViewModels"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:MainViewModel, IsDesignTimeCreatable=True}"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    markupExtensions:View.DesignDataContext="MainViewModel">
 
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
@@ -22,7 +23,11 @@
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
-        <ScrollViewer Grid.Row="1" Margin="12,0,12,0">
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center"
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   markupExtensions:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
+
+        <ScrollViewer Grid.Row="2" Margin="12,0,12,0">
             <ItemsControl markupExtensions:View.Bind="ItemsSource Items">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

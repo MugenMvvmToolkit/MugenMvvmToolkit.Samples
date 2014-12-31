@@ -30,6 +30,9 @@
 
             <TextBlock Text="The current Width of stack panel:" Margin="1" />
             <TextBox markupExtensions:View.Bind="Text $Relative(StackPanel).Width, Mode=TwoWay" Margin="1" />
+
+            <TextBlock Text="Root element:" Margin="1" />
+            <TextBlock markupExtensions:View.Bind="Text $root" Margin="1" Foreground="Green" />
         </StackPanel>
     </Grid>
 

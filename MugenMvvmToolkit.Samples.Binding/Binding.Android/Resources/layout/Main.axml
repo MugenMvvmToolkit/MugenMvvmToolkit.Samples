@@ -5,12 +5,15 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
+  <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            pkg:Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
   <ScrollView android:layout_width="fill_parent"
               android:layout_height="wrap_content">
     <LinearLayout android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical"
                   pkg:Bind="ItemsSource Items"
-                  pkg:ItemTemplate="@layout/_buttontemplate"/>    
+                  pkg:ItemTemplate="@layout/_buttontemplate" />
   </ScrollView>
 </LinearLayout>
