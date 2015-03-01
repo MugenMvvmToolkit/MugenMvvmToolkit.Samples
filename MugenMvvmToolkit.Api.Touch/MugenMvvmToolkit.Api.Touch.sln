@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiExamples", "ApiExamples\ApiExamples.csproj", "{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}"
 EndProject
@@ -36,8 +36,8 @@ Global
 		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Debug|iPhone.Build.0 = Debug|iPhone
 		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhone.ActiveCfg = Release|iPhone
-		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhone.Build.0 = Release|iPhone
+		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhone.ActiveCfg = Release|iPhoneSimulator
+		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhone.Build.0 = Release|iPhoneSimulator
 		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{2BFEB5C2-FA63-4F0D-A91B-D3B001EB518E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection

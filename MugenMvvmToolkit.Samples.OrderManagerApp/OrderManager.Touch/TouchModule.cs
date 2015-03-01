@@ -4,8 +4,8 @@ using MugenMvvmToolkit.Modules;
 using OrderManager.Portable.Interfaces;
 using OrderManager.Touch.Infrastructure;
 #if !XAMARINFORMS
-using System.Drawing;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
@@ -65,11 +65,11 @@ namespace OrderManager.Touch
         private static LoadingOverlay CreateLoadingOverlay(UIView uiView, IBindingMemberInfo bindingMemberInfo)
         {
             // Determine the correct size to start the overlay (depending on device orientation)
-            RectangleF bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+            var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
             if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft ||
                 UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight)
             {
-                bounds.Size = new SizeF(bounds.Size.Height, bounds.Size.Width);
+                bounds.Size = new CGSize(bounds.Size.Height, bounds.Size.Width);
             }
             return new LoadingOverlay(bounds);
         }

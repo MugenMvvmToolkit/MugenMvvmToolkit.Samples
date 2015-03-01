@@ -1,12 +1,12 @@
 using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Threading;
 using Binding.Portable.Models;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace Binding.Touch.Views
 {
@@ -34,10 +34,10 @@ namespace Binding.Touch.Views
     {
         #region Fields
 
-        private UILabel _mugenLabel;
-        private UILabel _mugenExpLabel;
-        private UILabel _noBindingLabel;
         private UITextField _iterationsTf;
+        private UILabel _mugenExpLabel;
+        private UILabel _mugenLabel;
+        private UILabel _noBindingLabel;
 
         #endregion
 
@@ -48,17 +48,17 @@ namespace Binding.Touch.Views
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
 
             UIFont font = UIFont.SystemFontOfSize(10);
 
-            var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+            var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
             {
                 Text = "Mugen binding",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -66,7 +66,7 @@ namespace Binding.Touch.Views
             };
             scrollView.AddSubview(label);
 
-            label = new UILabel(new RectangleF(20, 25, View.Frame.Width - 40, 25))
+            label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
             {
                 Text = "no results",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -77,7 +77,7 @@ namespace Binding.Touch.Views
             _mugenLabel = label;
 
 
-            label = new UILabel(new RectangleF(20, 50, View.Frame.Width - 40, 25))
+            label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
             {
                 Text = "Mugen binding ((Property ?? $string.Empty).Length + Property):",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -85,7 +85,7 @@ namespace Binding.Touch.Views
             };
             scrollView.AddSubview(label);
 
-            label = new UILabel(new RectangleF(20, 75, View.Frame.Width - 40, 25))
+            label = new UILabel(new CGRect(20, 75, View.Frame.Width - 40, 25))
             {
                 Text = "no results",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -95,7 +95,7 @@ namespace Binding.Touch.Views
             scrollView.AddSubview(label);
             _mugenExpLabel = label;
 
-            label = new UILabel(new RectangleF(20, 100, View.Frame.Width - 40, 25))
+            label = new UILabel(new CGRect(20, 100, View.Frame.Width - 40, 25))
             {
                 Text = "No binding:",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -103,7 +103,7 @@ namespace Binding.Touch.Views
             };
             scrollView.AddSubview(label);
 
-            label = new UILabel(new RectangleF(20, 125, View.Frame.Width - 40, 25))
+            label = new UILabel(new CGRect(20, 125, View.Frame.Width - 40, 25))
             {
                 Text = "no results",
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -113,8 +113,7 @@ namespace Binding.Touch.Views
             scrollView.AddSubview(label);
             _noBindingLabel = label;
 
-
-            _iterationsTf = new UITextField(new RectangleF(20, 150, View.Frame.Width - 40, 30))
+            _iterationsTf = new UITextField(new CGRect(20, 150, View.Frame.Width - 40, 30))
             {
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                 BorderStyle = UITextBorderStyle.RoundedRect,
@@ -125,7 +124,7 @@ namespace Binding.Touch.Views
 
             UIButton button = UIButton.FromType(UIButtonType.System);
             button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-            button.Frame = new RectangleF(20, 180, View.Frame.Width - 40, 30);
+            button.Frame = new CGRect(20, 180, View.Frame.Width - 40, 30);
             button.SetTitle("Start", UIControlState.Normal);
             button.TouchUpInside += Button_Click;
             scrollView.AddSubview(button);

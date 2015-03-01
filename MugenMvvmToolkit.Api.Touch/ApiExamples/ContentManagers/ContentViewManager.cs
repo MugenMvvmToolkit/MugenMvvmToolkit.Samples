@@ -1,7 +1,7 @@
-﻿using System.Drawing;
-using MonoTouch.UIKit;
+﻿using CoreGraphics;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using UIKit;
 
 namespace ApiExamples.ContentManagers
 {
@@ -15,7 +15,7 @@ namespace ApiExamples.ContentManagers
                 view.ClearSubViews();
             else
             {
-                content.Frame = new RectangleF(0, view.Frame.Height / 2, view.Frame.Width, 30);
+                content.Frame = new CGRect(0, view.Frame.Height/2, view.Frame.Width, 30);
                 view.AddSubviewEx(content);
             }
         }

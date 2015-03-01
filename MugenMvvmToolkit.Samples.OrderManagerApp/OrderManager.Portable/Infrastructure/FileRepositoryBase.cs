@@ -220,16 +220,6 @@ namespace OrderManager.Portable.Infrastructure
             }
         }
 
-        private static void CheckConstraints(ItemContainer container)
-        {
-            foreach (var orderProductModel in container.OrderToProducts)
-            {
-                if (!container.Products.ContainsKey(orderProductModel.Value.IdProduct) ||
-                    !container.Orders.ContainsKey(orderProductModel.Value.IdOrder))
-                    throw new InvalidOperationException("The constraint from order to products is broken.");
-            }
-        }
-
         #endregion
 
         #region Implementation of IRepository
@@ -259,8 +249,16 @@ namespace OrderManager.Portable.Infrastructure
                 throw new NotSupportedException(string.Format("The repository doesn't support the {0} type",
                     entityStateEntry.Entity.GetType()));
             }
+            var toRemove = new List<ComplexKey>();
+            foreach (var orderProductModel in container.OrderToProducts)
+            {
+                if (!container.Products.ContainsKey(orderProductModel.Value.IdProduct) ||
+                    !container.Orders.ContainsKey(orderProductModel.Value.IdOrder))
+                    toRemove.Add(orderProductModel.Key);
+            }
+            foreach (var key in toRemove)
+                container.OrderToProducts.Remove(key);
             token.ThrowIfCancellationRequested();
-            CheckConstraints(container);
             await SaveDataAsync(container);
         }
 

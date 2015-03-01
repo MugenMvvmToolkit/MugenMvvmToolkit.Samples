@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -40,7 +39,8 @@
             // 
             // viewBinder
             // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
+            this.viewBinder.Bindings = "<Bindings>\n  <tableLayoutPanel1 ItemsSource=\"Items\" ItemTemplate=\"$buttonTemplate" +
+    "\" />\n  <toolStripStatusLabel Text=\"ResourceUsageInfo\"/>\n</Bindings>";
             this.viewBinder.ContainerControl = this;
             this.viewBinder.IgnoreControlException = true;
             this.viewBinder.RootTagName = "Bindings";
@@ -57,17 +57,17 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 356F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(453, 335);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 335F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(468, 390);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 341);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 396);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(459, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(474, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 363);
+            this.ClientSize = new System.Drawing.Size(474, 418);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";

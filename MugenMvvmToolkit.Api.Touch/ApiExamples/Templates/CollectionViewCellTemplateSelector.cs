@@ -1,15 +1,16 @@
-using System.Drawing;
 using ApiExamples.Models;
 using ApiExamples.Views;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using UIKit;
 
 namespace ApiExamples.Templates
 {
-    public class CollectionViewCellTemplateSelector : CollectionCellTemplateSelectorBase<TableItemModel, CollectionViewCell>
+    public class CollectionViewCellTemplateSelector :
+        CollectionCellTemplateSelectorBase<TableItemModel, CollectionViewCell>
     {
         #region Fields
 
@@ -23,8 +24,8 @@ namespace ApiExamples.Templates
         {
             var layout = container.CollectionViewLayout as UICollectionViewFlowLayout;
             if (layout != null)
-                layout.ItemSize = new SizeF(container.Frame.Width - 20, 30);
-            container.RegisterClassForCell(typeof(CollectionViewCell), CellIdentifier);
+                layout.ItemSize = new CGSize(container.Frame.Width - 20, 30);
+            container.RegisterClassForCell(typeof (CollectionViewCell), CellIdentifier);
         }
 
         protected override NSString GetIdentifier(TableItemModel item, UICollectionView container)

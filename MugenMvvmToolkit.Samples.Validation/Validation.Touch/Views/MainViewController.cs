@@ -1,6 +1,6 @@
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
@@ -22,14 +22,14 @@ namespace Validation.Touch.Views
             {
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(20, 70, View.Frame.Width - 20, 30);
+                button.Frame = new CGRect(20, 70, View.Frame.Width - 20, 30);
                 button.SetTitle("Validation using data annotations", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.ShowAnnotationCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(20, 100, View.Frame.Width - 20, 30);
+                button.Frame = new CGRect(20, 100, View.Frame.Width - 20, 30);
                 button.SetTitle("Validation using validators", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.ShowUserEditorCommand);
                 View.AddSubview(button);

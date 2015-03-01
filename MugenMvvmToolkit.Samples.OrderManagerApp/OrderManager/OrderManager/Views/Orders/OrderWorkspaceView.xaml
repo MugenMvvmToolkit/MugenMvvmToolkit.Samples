@@ -8,11 +8,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="Save" Order="Primary" Command="{Binding SaveChangesCommand}" />
         <ToolbarItem Name="Add" Order="Primary" Command="{Binding AddOrderCommand}" />
-
-        <ToolbarItem mugen:View.Bind="Name 'Edit ' + GridViewModel.SelectedItem.Name, Fallback=Edit"
-                     Order="Secondary" Command="{Binding EditOrderCommand}" />
-        <ToolbarItem mugen:View.Bind="Name 'Remove ' + GridViewModel.SelectedItem.Name, Fallback=Remove"
-                     Order="Secondary" Command="{Binding RemoveOrderCommand}" />
+        <ToolbarItem Name="Edit" Order="Secondary" Command="{Binding EditOrderCommand}" />
+        <ToolbarItem Name="Remove" Order="Secondary" Command="{Binding RemoveOrderCommand}" />
     </ContentPage.ToolbarItems>
 
     <Grid Padding="4">

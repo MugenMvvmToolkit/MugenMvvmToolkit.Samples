@@ -1,4 +1,4 @@
-using MonoTouch.UIKit;
+using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -7,7 +7,7 @@ using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch.Views
 {
-    public partial class MainViewController : MvvmTabBarController
+    public class MainViewController : MvvmTabBarController
     {
         #region Overrides of UIViewController
 

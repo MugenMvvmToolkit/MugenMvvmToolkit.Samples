@@ -37,6 +37,8 @@ namespace Binding.Android
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::Binding.Android.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::Binding.Android.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::Binding.Android.Resource.Attribute.TabContentId;
+			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::Binding.Android.Resource.Id.AttachedProperties;
+			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::Binding.Android.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Binding.Android.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Binding.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Binding.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -121,26 +123,32 @@ namespace Binding.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040004
-			public const int IterationsText = 2130968580;
-			
 			// aapt resource value: 0x7f040002
-			public const int MugenExpTextView = 2130968578;
+			public const int AttachedProperties = 2130968578;
+			
+			// aapt resource value: 0x7f040006
+			public const int IterationsText = 2130968582;
 			
 			// aapt resource value: 0x7f040001
-			public const int MugenTextView = 2130968577;
+			public const int ListenParentChange = 2130968577;
+			
+			// aapt resource value: 0x7f040004
+			public const int MugenExpTextView = 2130968580;
 			
 			// aapt resource value: 0x7f040003
-			public const int NoBindingTextView = 2130968579;
+			public const int MugenTextView = 2130968579;
+			
+			// aapt resource value: 0x7f040005
+			public const int NoBindingTextView = 2130968581;
 			
 			// aapt resource value: 0x7f040000
 			public const int OptionsMenu = 2130968576;
 			
-			// aapt resource value: 0x7f040005
-			public const int StartButton = 2130968581;
+			// aapt resource value: 0x7f040007
+			public const int StartButton = 2130968583;
 			
-			// aapt resource value: 0x7f040006
-			public const int seekBar = 2130968582;
+			// aapt resource value: 0x7f040008
+			public const int seekBar = 2130968584;
 			
 			static Id()
 			{
@@ -159,37 +167,43 @@ namespace Binding.Android
 			public const int _ButtonTemplate = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int AttachedMemberView = 2130903041;
+			public const int _ListViewTemplate = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int BindingExpressionView = 2130903042;
+			public const int AttachedMemberView = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int BindingModeView = 2130903043;
+			public const int BindingExpressionView = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int BindingResourcesView = 2130903044;
+			public const int BindingModeView = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int BindingValidationView = 2130903045;
+			public const int BindingResourcesView = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int CommandBindingView = 2130903046;
+			public const int BindingValidationView = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int DynamicObjectView = 2130903047;
+			public const int CollectionBindingView = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int LocalizableView = 2130903048;
+			public const int CommandBindingView = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Main = 2130903049;
+			public const int DynamicObjectView = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int PerformanceView = 2130903050;
+			public const int LocalizableView = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int RelativeBindingView = 2130903051;
+			public const int Main = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int PerformanceView = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int RelativeBindingView = 2130903053;
 			
 			static Layout()
 			{
@@ -197,6 +211,22 @@ namespace Binding.Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int addlistitemmenu = 2131034112;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

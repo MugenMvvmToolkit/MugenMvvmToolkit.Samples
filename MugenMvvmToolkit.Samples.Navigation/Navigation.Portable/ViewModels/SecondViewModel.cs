@@ -31,29 +31,29 @@ namespace Navigation.Portable.ViewModels
 
         #region Implementation of INavigableViewModel
 
-        public void OnNavigatedTo(INavigationContext context)
+        void INavigableViewModel.OnNavigatedTo(INavigationContext context)
         {
+            this.TraceNavigation();
         }
 
-        public Task<bool> OnNavigatingFrom(INavigationContext context)
+        Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
         {
+            this.TraceNavigation();
             return _messagePresenter
                 .ShowAsync("Close SecondViewModel?", string.Empty, MessageButton.YesNo,
                     MessageImage.Question)
                 .TryExecuteSynchronously(task => task.Result == MessageResult.Yes);
         }
 
-        public void OnNavigatedFrom(INavigationContext context)
+        void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
         {
+            this.TraceNavigation();
         }
 
         #endregion
 
         #region Implementation of IHasDisplayName
 
-        /// <summary>
-        ///     Gets or sets the display name for the current model.
-        /// </summary>
         public string DisplayName
         {
             get { return _displayName; }

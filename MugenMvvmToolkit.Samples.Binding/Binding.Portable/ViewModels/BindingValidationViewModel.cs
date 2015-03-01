@@ -11,6 +11,7 @@ namespace Binding.Portable.ViewModels
 
         private string _property;
         private string _propertyWithException;
+        private bool _throw;
 
         #endregion
 
@@ -81,7 +82,9 @@ namespace Binding.Portable.ViewModels
                     return;
                 _propertyWithException = value;
                 OnPropertyChanged();
-                throw new Exception("Property exception");
+                _throw = !_throw;
+                if (_throw)
+                    throw new Exception("Property exception");
             }
         }
 

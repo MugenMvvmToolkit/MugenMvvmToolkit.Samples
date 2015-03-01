@@ -50,8 +50,8 @@ namespace ApiExamples.ViewModels
 
         private async void Remove(object o)
         {
-            var item = SelectedItem;
-            if (await _messagePresenter.ShowAsync("Delete view model?", "Delete", MessageButton.YesNo) == MessageResult.Yes)
+            var item = (ItemViewModel)SelectedItem;
+            if (await _messagePresenter.ShowAsync(string.Format("Are you sure, you want to delete the view model {0}?", item.DisplayName), "Delete", MessageButton.YesNo) == MessageResult.Yes)
                 RemoveViewModelAsync(item);
         }
 

@@ -50,12 +50,7 @@ namespace Binding.Portable
             }
 
             if (IocContainer != null)
-            {
-                //Wrap binding manager
-                var monitor = new BindingManagerMonitor(BindingServiceProvider.BindingManager);
-                BindingServiceProvider.BindingManager = monitor;
-                IocContainer.BindToConstant<IBindingManagerMonitor>(monitor);
-            }
+                IocContainer.Bind<IResourceMonitor, ResourceMonitor>(DependencyLifecycle.SingleInstance);
             return true;
         }
 

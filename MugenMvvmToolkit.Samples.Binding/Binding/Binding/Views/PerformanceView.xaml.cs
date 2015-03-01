@@ -18,6 +18,7 @@ namespace Binding.Views
         }
 
         #endregion
+
         #region Overrides of Page
 
         protected override bool OnBackButtonPressed()

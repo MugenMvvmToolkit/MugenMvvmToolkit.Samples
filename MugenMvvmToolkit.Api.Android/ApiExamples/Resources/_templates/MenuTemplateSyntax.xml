@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Menu IsEnabled="true | false | {binding}" IsVisible="true | false | {binding}" DataContext="{binding}"
-      ItemsSource="{binding}">
+      ItemsSource="{binding}" Bind="string">
 
-  <!--if you specify the ItemsSource ItemTemplate is used.-->
+  <!--if you specify the ItemsSource ItemTemplate will be used.-->
   <ItemTemplate DataContext="{binding}" AlphabeticShortcut="string | {binding}"
                 Icon="/@[package:]drawable/drawable_resource_name | {binding}"
                 IsCheckable="true | false | {binding}" IsChecked="true | false | {binding}"
@@ -15,9 +15,9 @@
                 IsActionViewExpanded="true | false | {binding}" ActionView="class name | {binding}"
                 ActionViewTemplateSelector="{binding}"
                 ActionViewBind="string" ActionProvider="class name | {binding}"
-                ActionProviderTemplateSelector="{binding}" ActionProviderBind="string"/>
+                ActionProviderTemplateSelector="{binding}" ActionProviderBind="string" Bind="string"/>
 
-  <!--otherwise used the collection of tabs.-->
+  <!--otherwise use the collection of menu.-->
   <MenuItem DataContext="{binding}" AlphabeticShortcut="string | {binding}"
             Icon="/@[package:]drawable/drawable_resource_name | {binding}"
             IsCheckable="true | false | {binding}" IsChecked="true | false | {binding}"
@@ -29,7 +29,7 @@
             IsActionViewExpanded="true | false | {binding}" ActionView="class name | {binding}"
             ActionViewTemplateSelector="{binding}"
             ActionViewBind="string" ActionProvider="class name | {binding}"
-            ActionProviderTemplateSelector="{binding}" ActionProviderBind="string" />
+            ActionProviderTemplateSelector="{binding}" ActionProviderBind="string" Bind="string" />
   <MenuItem />
   <MenuItem />
 </Menu>

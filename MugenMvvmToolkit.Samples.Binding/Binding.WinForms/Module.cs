@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Binding.WinForms.CollectionManagers;
 using Binding.WinForms.Templates;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
@@ -7,6 +8,7 @@ using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.Modules;
@@ -31,13 +33,17 @@ namespace Binding.WinForms
         /// </summary>
         protected override bool LoadInternal()
         {
-            var template = new ButtonItemTemplate();
-            BindingServiceProvider
-                .ResourceResolver
-                .AddObject("buttonTemplate", new BindingResourceObject(template), true);
+            var resolver = BindingServiceProvider.ResourceResolver;
+            resolver.AddObject("buttonTemplate", new ButtonItemTemplate());
+            resolver.AddObject("listViewItemTemplate", new ListViewItemTemplate());
+            resolver.AddObject("listViewCollectionManager", new ListViewCollectionManager());
 
             //Registering attached property
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
+            memberProvider.Register(
+                AttachedBindingMember.CreateMember<ListView, object>(AttachedMemberConstants.SelectedItem,
+                    GetListViewSelectedItem, SetListViewSelectedItem, "ItemSelectionChanged"));
+
             memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Label, string>("TextExt",
                 TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
 
@@ -56,6 +62,35 @@ namespace Binding.WinForms
         #endregion
 
         #region Methods
+
+        private static void SetListViewSelectedItem(IBindingMemberInfo bindingMemberInfo, ListView listView, object value)
+        {
+            //Clear selection
+            foreach (ListViewItem item in listView.SelectedItems)
+            {
+                item.Focused = false;
+                item.Selected = false;                
+            }
+            if (value == null)
+                return;
+            foreach (ListViewItem item in listView.Items)
+            {
+                if (Equals(ViewManager.GetDataContext(item), value))
+                {
+                    item.Focused = true;
+                    item.Selected = true;                    
+                    break;
+                }
+            }
+        }
+
+        private static object GetListViewSelectedItem(IBindingMemberInfo bindingMemberInfo, ListView listView)
+        {
+            var items = listView.SelectedItems;
+            if (items.Count == 0)
+                return null;
+            return ViewManager.GetDataContext(items[0]);
+        }
 
         /// <summary>
         ///     Called once for each element in the time of accession to obtain default values.

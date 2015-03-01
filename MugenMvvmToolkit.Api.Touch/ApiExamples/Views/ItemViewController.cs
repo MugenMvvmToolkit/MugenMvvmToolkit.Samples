@@ -1,10 +1,10 @@
-using System.Drawing;
 using ApiExamples.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace ApiExamples.Views
 {
@@ -21,7 +21,7 @@ namespace ApiExamples.Views
             using (var set = new BindingSet<ItemViewModel>())
             {
                 set.BindFromExpression(this, "Title Name + Id");
-                var label = new UILabel(new RectangleF(0, 70, View.Frame.Width, 30))
+                var label = new UILabel(new CGRect(0, 70, View.Frame.Width, 30))
                 {
                     TextAlignment = UITextAlignment.Center
                 };
@@ -29,7 +29,7 @@ namespace ApiExamples.Views
                 View.AddSubview(label);
 
                 UIButton button = UIButton.FromType(UIButtonType.RoundedRect);
-                button.Frame = new RectangleF(0, 100, View.Bounds.Width, 30);
+                button.Frame = new CGRect(0, 100, View.Bounds.Width, 30);
                 button.SetTitle("Close view", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.CloseCommand);
                 View.AddSubview(button);

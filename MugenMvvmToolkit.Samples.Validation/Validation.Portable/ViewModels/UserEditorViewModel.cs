@@ -22,7 +22,7 @@ namespace Validation.Portable.ViewModels
             set
             {
                 Entity.Name = value;
-                //NOTE: you can use local validator to add an error on the fly.
+                //NOTE: you can use inline validator to add an error on the fly.
                 if (!string.IsNullOrEmpty(value))
                 {
                     if (char.IsUpper(value[0]))
@@ -67,14 +67,9 @@ namespace Validation.Portable.ViewModels
 
         #region Overrides of ValidatableViewModel
 
-        /// <summary>
-        ///     Occurs when processing an asynchronous validation message.
-        /// </summary>
-        /// <param name="sender">The object that raised the event.</param>
-        /// <param name="message">Information about event.</param>
         protected override void OnHandleAsyncValidationMessage(object sender, AsyncValidationMessage message)
         {
-            if (ToolkitExtensions.GetMemberName(Entity, model => model.Login) != message.PropertyName)
+            if (!string.IsNullOrEmpty(message.PropertyName) && ToolkitExtensions.GetMemberName(Entity, model => model.Login) != message.PropertyName)
                 return;
             if (message.IsEndOperation)
                 Interlocked.Decrement(ref _validationLoginCount);

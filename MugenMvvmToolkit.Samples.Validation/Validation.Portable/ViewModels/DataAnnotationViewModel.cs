@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using MugenMvvmToolkit.Attributes;
+﻿using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.ViewModels;
 using Validation.Portable.Models;
 
@@ -35,11 +34,12 @@ namespace Validation.Portable.ViewModels
             {
                 if (value == _customError) return;
                 _customError = value;
-                Settings.Metadata.Remove(ValidationDataConstants.CustomError);
-                if (!string.IsNullOrWhiteSpace(_customError))
-                    Settings.Metadata.Add(ValidationDataConstants.CustomError, value);
+                if (string.IsNullOrWhiteSpace(_customError))
+                    Settings.Metadata.Remove(ValidationDataConstants.CustomError);
+                else
+                    Settings.Metadata.AddOrUpdate(ValidationDataConstants.CustomError, value);
                 OnPropertyChanged();
-                ValidateAsync("Description");
+                ValidateAsync(() => Description);
             }
         }
 

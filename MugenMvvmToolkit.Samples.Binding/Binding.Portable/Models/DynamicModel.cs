@@ -52,7 +52,7 @@ namespace Binding.Portable.Models
         public void SetMember(string member, IList<object> args)
         {
             _dynamicData[member] = args[0];
-            OnPropertyChanged(member);            
+            OnPropertyChanged(member);
         }
 
         /// <summary>

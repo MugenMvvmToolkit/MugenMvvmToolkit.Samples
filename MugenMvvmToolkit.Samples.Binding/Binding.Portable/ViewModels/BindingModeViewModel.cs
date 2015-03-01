@@ -1,5 +1,4 @@
-﻿using MugenMvvmToolkit.Binding.Infrastructure;
-using MugenMvvmToolkit.ViewModels;
+﻿using MugenMvvmToolkit.ViewModels;
 
 namespace Binding.Portable.ViewModels
 {
@@ -21,7 +20,7 @@ namespace Binding.Portable.ViewModels
                 if (Equals(_text, value))
                     return;
                 _text = value;
-                OnPropertyChanged();                
+                OnPropertyChanged();
             }
         }
 

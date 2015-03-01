@@ -1,6 +1,6 @@
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -22,7 +22,7 @@ namespace Validation.Touch.Views
 
             using (var set = new BindingSet<UserWorkspaceViewModel>())
             {
-                var textField = new UITextField(new RectangleF(20, 70, View.Frame.Width - 40, 30))
+                var textField = new UITextField(new CGRect(20, 70, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Placeholder = "Name",
@@ -35,7 +35,7 @@ namespace Validation.Touch.Views
                     .ValidatesOnNotifyDataErrors();
                 View.AddSubview(textField);
 
-                var label = new UILabel(new RectangleF(6, 0, 60, 20))
+                var label = new UILabel(new CGRect(6, 0, 60, 20))
                 {
                     Text = "Validating...",
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin,
@@ -43,7 +43,7 @@ namespace Validation.Touch.Views
                     TextColor = UIColor.Green
                 };
 
-                textField = new UITextField(new RectangleF(20, 110, View.Frame.Width - 40, 30))
+                textField = new UITextField(new CGRect(20, 110, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Placeholder = "Login",
@@ -59,7 +59,7 @@ namespace Validation.Touch.Views
                 textField.LeftView = label;
                 View.AddSubview(textField);
 
-                textField = new UITextField(new RectangleF(20, 150, View.Frame.Width - 40, 30))
+                textField = new UITextField(new CGRect(20, 150, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Placeholder = "Email",
@@ -74,20 +74,20 @@ namespace Validation.Touch.Views
 
                 var button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(20, 190, View.Frame.Width / 2 - 20, 30);
+                button.Frame = new CGRect(20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Add", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.AddUserCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(View.Frame.Width / 2 - 20, 190, View.Frame.Width / 2 - 20, 30);
+                button.Frame = new CGRect(View.Frame.Width / 2 - 20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Remove", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.RemoveUserCommand);
                 View.AddSubview(button);
 
 
-                var tableView = new UITableView(new RectangleF(20, 230, View.Frame.Width - 40, View.Frame.Height - 230))
+                var tableView = new UITableView(new CGRect(20, 230, View.Frame.Width - 40, View.Frame.Height - 230))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleDimensions,
                 };

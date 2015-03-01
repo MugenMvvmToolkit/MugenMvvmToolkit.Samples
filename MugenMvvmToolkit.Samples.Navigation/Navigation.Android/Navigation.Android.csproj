@@ -23,7 +23,7 @@
     <MandroidI18n />
     <JavaMaximumHeapSize />
     <JavaOptions />
-    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -64,23 +64,28 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.ActionBar">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.ActionBar.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.ActionBar.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.ActionBar, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.ActionBar.3.3.0\lib\MonoAndroid40\MugenMvvmToolkit.Android.ActionBar.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.Fragment">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.Fragment.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.Fragment.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.Fragment.3.3.0\lib\MonoAndroid42\MugenMvvmToolkit.Android.Fragment.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

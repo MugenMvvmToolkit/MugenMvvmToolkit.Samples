@@ -1,13 +1,15 @@
 ﻿using System.Threading.Tasks;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.Navigation;
 using MugenMvvmToolkit.Interfaces.Presenters;
+using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class FirstViewModel : CloseableViewModel, IHasDisplayName
+    public class FirstViewModel : CloseableViewModel, IHasDisplayName, INavigableViewModel
     {
         #region Fields
 
@@ -50,6 +52,26 @@ namespace Navigation.Portable.ViewModels
                 _displayName = value;
                 OnPropertyChanged();
             }
+        }
+
+        #endregion
+
+        #region Implementation of INavigableViewModel
+
+        void INavigableViewModel.OnNavigatedTo(INavigationContext context)
+        {
+            this.TraceNavigation();
+        }
+
+        Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
+            return Empty.TrueTask;
+        }
+
+        void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
         }
 
         #endregion

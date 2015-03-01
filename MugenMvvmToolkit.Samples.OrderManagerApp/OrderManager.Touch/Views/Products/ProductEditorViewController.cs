@@ -1,6 +1,6 @@
-﻿using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using CoreGraphics;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
@@ -18,10 +18,10 @@ namespace OrderManager.Touch.Views.Products
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
@@ -30,7 +30,7 @@ namespace OrderManager.Touch.Views.Products
             {
                 UIFont font = UIFont.SystemFontOfSize(12);
 
-                var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+                var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
                 {
                     Text = "Name",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -38,7 +38,7 @@ namespace OrderManager.Touch.Views.Products
                 };
                 scrollView.AddSubview(label);
 
-                var textField = new UITextField(new RectangleF(20, 25, View.Frame.Width - 40, 30))
+                var textField = new UITextField(new CGRect(20, 25, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
@@ -50,7 +50,7 @@ namespace OrderManager.Touch.Views.Products
                 scrollView.AddSubview(textField);
 
 
-                label = new UILabel(new RectangleF(20, 55, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 55, View.Frame.Width - 40, 25))
                 {
                     Text = "Price",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -58,7 +58,7 @@ namespace OrderManager.Touch.Views.Products
                 };
                 scrollView.AddSubview(label);
 
-                textField = new UITextField(new RectangleF(20, 80, View.Frame.Width - 40, 30))
+                textField = new UITextField(new CGRect(20, 80, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
@@ -69,7 +69,7 @@ namespace OrderManager.Touch.Views.Products
                     .Validate();
                 scrollView.AddSubview(textField);
 
-                label = new UILabel(new RectangleF(20, 110, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 110, View.Frame.Width - 40, 25))
                 {
                     Text = "Description",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -77,7 +77,7 @@ namespace OrderManager.Touch.Views.Products
                 };
                 scrollView.AddSubview(label);
 
-                textField = new UITextField(new RectangleF(20, 135, View.Frame.Width - 40, 30))
+                textField = new UITextField(new CGRect(20, 135, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect

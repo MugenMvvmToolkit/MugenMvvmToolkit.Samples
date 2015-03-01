@@ -1,5 +1,5 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure;
 using Navigation.Portable.ViewModels;

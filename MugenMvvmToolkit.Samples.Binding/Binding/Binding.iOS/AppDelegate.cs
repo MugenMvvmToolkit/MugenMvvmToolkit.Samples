@@ -1,5 +1,5 @@
-﻿using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using Foundation;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 

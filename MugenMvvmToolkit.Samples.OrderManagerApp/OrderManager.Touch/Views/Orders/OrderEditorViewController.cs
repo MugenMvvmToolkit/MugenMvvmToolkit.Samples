@@ -1,5 +1,5 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit.Views;
 
 namespace OrderManager.Touch.Views.Orders

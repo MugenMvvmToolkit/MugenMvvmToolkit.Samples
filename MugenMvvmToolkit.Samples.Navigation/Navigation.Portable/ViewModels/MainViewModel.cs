@@ -1,15 +1,18 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Presenters;
 using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.Navigation;
 using MugenMvvmToolkit.Interfaces.Presenters;
+using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
 using Navigation.Portable.Interfaces;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class MainViewModel : MultiViewModel, IHasState
+    public class MainViewModel : MultiViewModel, IHasState, INavigableViewModel
     {
         #region Fields
 
@@ -140,14 +143,31 @@ namespace Navigation.Portable.ViewModels
 
         #region Overrides of ViewModelBase
 
-        /// <summary>
-        ///     Occurs after the current view model is disposed, use for clear resource and event listeners.
-        /// </summary>
         protected override void OnDispose(bool disposing)
         {
             if (disposing)
                 _viewModelPresenter.DynamicPresenters.Remove(_presenter);
             base.OnDispose(disposing);
+        }
+
+        #endregion
+
+        #region Implementation of INavigableViewModel
+
+        void INavigableViewModel.OnNavigatedTo(INavigationContext context)
+        {
+            this.TraceNavigation();
+        }
+
+        Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
+            return Empty.TrueTask;
+        }
+
+        void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
         }
 
         #endregion

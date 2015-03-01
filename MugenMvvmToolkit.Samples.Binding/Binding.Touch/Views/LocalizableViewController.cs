@@ -1,11 +1,11 @@
-﻿using System.Drawing;
-using Binding.Portable.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using Binding.Portable.ViewModels;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace Binding.Touch.Views
 {
@@ -20,10 +20,10 @@ namespace Binding.Touch.Views
 
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
@@ -32,7 +32,7 @@ namespace Binding.Touch.Views
             {
                 UIFont font = UIFont.SystemFontOfSize(10);
 
-                var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+                var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -41,7 +41,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, "Text $i18n.AddText");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 25, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -50,7 +50,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, "Text $i18n.EditText");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 50, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -59,7 +59,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, "Text $i18n.DeleteText");
                 scrollView.AddSubview(label);
 
-                var textField = new UITextField(new RectangleF(20, 75, View.Frame.Width - 40, 30))
+                var textField = new UITextField(new CGRect(20, 75, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
@@ -68,18 +68,18 @@ namespace Binding.Touch.Views
                 set.Bind(textField, field => field.Text).To(model => model.SelectedCulture);
                 scrollView.AddSubview(textField);
 
-                var pickerView = new UIPickerView { ShowSelectionIndicator = true };
+                var pickerView = new UIPickerView {ShowSelectionIndicator = true};
                 set.Bind(pickerView, AttachedMemberConstants.ItemsSource)
                     .To(model => model.Cultures);
                 set.Bind(pickerView, AttachedMemberConstants.SelectedItem)
                     .To(model => model.SelectedCulture)
                     .TwoWay();
 
-                var toolbar = new UIToolbar { BarStyle = UIBarStyle.Black, Translucent = true };
+                var toolbar = new UIToolbar {BarStyle = UIBarStyle.Black, Translucent = true};
                 toolbar.SizeToFit();
                 var doneButton = new UIBarButtonItem("Done", UIBarButtonItemStyle.Done,
                     (s, e) => textField.ResignFirstResponder());
-                toolbar.SetItems(new[] { doneButton }, true);
+                toolbar.SetItems(new[] {doneButton}, true);
                 textField.SetInputViewEx(pickerView);
                 textField.InputAccessoryView = toolbar;
             }

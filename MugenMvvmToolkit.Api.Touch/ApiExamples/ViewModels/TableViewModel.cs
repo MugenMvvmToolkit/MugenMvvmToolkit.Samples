@@ -44,6 +44,46 @@ namespace ApiExamples.ViewModels
 
         public ICommand InvertSelectionCommand { get; private set; }
 
+        private void Add(object o)
+        {
+            int id = GridViewModel.ItemsSource.Max(model => model.Id) + 1;
+            var newItem = new TableItemModel { Id = id, Name = "Added item " + id };
+            GridViewModel.ItemsSource.Add(newItem);
+            GridViewModel.SelectedItem = newItem;
+        }
+
+        private void ItemClick(TableItemModel obj)
+        {
+            _messagePresenter.ShowAsync(obj.Name, "Clicked");
+        }
+
+        private async void Remove(TableItemModel item)
+        {
+            if (item == null)
+                item = GridViewModel.SelectedItem;
+            if (await _messagePresenter.ShowAsync("Are you sure, you want to delete the '" + item.Name + "' ?", "Delete", MessageButton.YesNo) !=
+                MessageResult.Yes)
+                return;
+            GridViewModel.ItemsSource.Remove(item);
+        }
+
+        private bool CanRemove(TableItemModel item)
+        {
+            return item != null || GridViewModel.SelectedItem != null;
+        }
+
+        private void InvertSelection(object o)
+        {
+            foreach (TableItemModel model in GridViewModel.OriginalItemsSource)
+            {
+                model.IsSelected = !model.IsSelected;
+            }
+        }
+
+        #endregion
+
+        #region Properties
+
         public string FilterText
         {
             get { return _filterText; }
@@ -57,49 +97,6 @@ namespace ApiExamples.ViewModels
                     GridViewModel.UpdateFilter();
             }
         }
-
-        private void Add(object o)
-        {
-            int id = GridViewModel.ItemsSource.Max(model => model.Id) + 1;
-            var newItem = new TableItemModel { Id = id, Name = "Inserted item " + id };
-            if (GridViewModel.SelectedItem == null)
-                GridViewModel.ItemsSource.Add(newItem);
-            else
-                GridViewModel.ItemsSource.Insert(GridViewModel.ItemsSource.IndexOf(GridViewModel.SelectedItem), newItem);
-            GridViewModel.SelectedItem = newItem;
-        }
-
-        private void ItemClick(TableItemModel obj)
-        {
-            _messagePresenter.ShowAsync(obj.Name, "Clicked");
-        }
-
-        private async void Remove(TableItemModel item)
-        {
-            if (item == null)
-                item = GridViewModel.SelectedItem;
-            if (await _messagePresenter.ShowAsync("Delete item " + item.Name + " ?", "Delete", MessageButton.YesNo) !=
-                MessageResult.Yes)
-                return;
-            GridViewModel.ItemsSource.Remove(item);
-        }
-
-        private bool CanRemove(TableItemModel item)
-        {
-            return item != null || GridViewModel.SelectedItem != null;
-        }
-
-        private void InvertSelection(object o)
-        {
-            foreach (var model in GridViewModel.OriginalItemsSource)
-            {
-                model.IsSelected = !model.IsSelected;
-            }
-        }
-
-        #endregion
-
-        #region Properties
 
         public GridViewModel<TableItemModel> GridViewModel
         {

@@ -6,6 +6,7 @@ namespace ApiExamples
         public const string TableViewCheckmark = "TableViewCheckmark";
         public const string TabTemplateView = "TabTemplateView";
         public const string CollectionView = "CollectionView";
+        public const string MultipleSelectionCollectionView = "MultipleSelectionCollectionView";
         public const string ModalNavSupportView = "ModalNavSupportViewController";
         public const string ViewCollectionView = "ViewCollectionViewController";
     }

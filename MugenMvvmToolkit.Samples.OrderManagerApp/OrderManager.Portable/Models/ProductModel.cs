@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using MugenMvvmToolkit.Models;
 
@@ -7,6 +8,34 @@ namespace OrderManager.Portable.Models
     [DataContract]
     public class ProductModel : NotifyPropertyChangedBase
     {
+        #region Nested types
+
+        private static readonly IEqualityComparer<ProductModel> KeyComparerInstance = new KeyEqualityComparer();
+
+        public static IEqualityComparer<ProductModel> KeyComparer
+        {
+            get { return KeyComparerInstance; }
+        }
+
+        private sealed class KeyEqualityComparer : IEqualityComparer<ProductModel>
+        {
+            public bool Equals(ProductModel x, ProductModel y)
+            {
+                if (ReferenceEquals(x, y)) return true;
+                if (ReferenceEquals(x, null)) return false;
+                if (ReferenceEquals(y, null)) return false;
+                if (x.GetType() != y.GetType()) return false;
+                return x._id.Equals(y._id);
+            }
+
+            public int GetHashCode(ProductModel obj)
+            {
+                return obj._id.GetHashCode();
+            }
+        }
+
+        #endregion
+
         #region Fields
 
         private string _description;

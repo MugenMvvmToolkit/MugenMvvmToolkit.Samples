@@ -1,6 +1,6 @@
 using ApiExamples.ViewModels;
+using Foundation;
 using MonoTouch.Dialog;
-using MonoTouch.Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;

@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
@@ -95,7 +96,6 @@ namespace Validation.Portable.ViewModels
             _userRepository.Remove(selectedItem);
             UserGridViewModel.ItemsSource.Remove(selectedItem);
             UserGridViewModel.SelectedItem = null;
-            // ReSharper disable once CSharpWarnings::CS4014
             UserEditorViewModel.ValidateAsync();
         }
 

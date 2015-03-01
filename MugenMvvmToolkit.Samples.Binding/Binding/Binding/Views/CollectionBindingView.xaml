@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             x:Class="Binding.Views.CollectionBindingView">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+
+    <Button Text="Add" Command="{mugen:DataBinding AddCommand}" />
+    <Button Grid.Column="1" Text="Remove" Command="{mugen:DataBinding RemoveCommand}" />
+
+    <SearchBar Grid.Row="1" Grid.ColumnSpan="2" Text="{mugen:DataBinding FilterText, Mode=TwoWay}" />
+    <ListView Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{mugen:DataBinding GridViewModel.ItemsSource}"
+              SelectedItem="{mugen:DataBinding GridViewModel.SelectedItem, Mode=TwoWay}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <Label mugen:View.Bind="Text Name + ' ' + Id" />
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</ContentPage>

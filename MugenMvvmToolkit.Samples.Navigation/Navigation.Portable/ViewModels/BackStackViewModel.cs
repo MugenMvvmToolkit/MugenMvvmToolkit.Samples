@@ -1,13 +1,16 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.DataConstants;
 using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.Navigation;
+using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class BackStackViewModel : CloseableViewModel, IHasState
+    public class BackStackViewModel : CloseableViewModel, IHasState, INavigableViewModel
     {
         #region Fields
 
@@ -67,9 +70,6 @@ namespace Navigation.Portable.ViewModels
 
         #region Implementation of IHasState
 
-        /// <summary>
-        ///     Loads state.
-        /// </summary>
         public void LoadState(IDataContext state)
         {
             int data;
@@ -77,12 +77,29 @@ namespace Navigation.Portable.ViewModels
                 Depth = data;
         }
 
-        /// <summary>
-        ///     Saves state.
-        /// </summary>
         public void SaveState(IDataContext state)
         {
             state.AddOrUpdate("Depth", Depth);
+        }
+
+        #endregion
+
+        #region Implementation of INavigableViewModel
+
+        void INavigableViewModel.OnNavigatedTo(INavigationContext context)
+        {
+            this.TraceNavigation();
+        }
+
+        Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
+            return Empty.TrueTask;
+        }
+
+        void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
+        {
+            this.TraceNavigation();
         }
 
         #endregion

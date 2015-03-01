@@ -31,6 +31,7 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Table view (DataTemplate)", new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableTemplateView)),
                 Tuple.Create("Table view (Checkmark)", new ViewModelCommandParameter(typeof (TableViewModel), Constants.TableViewCheckmark)),
                 Tuple.Create("Collection view", new ViewModelCommandParameter(typeof (TableViewModel), Constants.CollectionView)),
+                Tuple.Create("Collection view (Multiple selection)", new ViewModelCommandParameter(typeof (TableViewModel), Constants.MultipleSelectionCollectionView)),
                 Tuple.Create("View ItemsSource binding", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewCollectionView)),
                 Tuple.Create("View Content binding", new ViewModelCommandParameter(typeof (ContentViewModel))),
                 Tuple.Create("Modal view", new ViewModelCommandParameter(typeof (ModalViewModel))),

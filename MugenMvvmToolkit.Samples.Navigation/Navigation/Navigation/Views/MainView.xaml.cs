@@ -41,7 +41,8 @@ namespace Navigation.Views
                 "First view model (Tab)",
                 "Second view model (Modal)",
                 "Second view model (Page)",
-                "Second view model (Tab)"
+                "Second view model (Tab)",
+                "Navigation (Clear back stack)"
             };
             var result = await DisplayActionSheet("Navigate", "Cancel", null, buttons);
             var index = buttons.IndexOf(result);
@@ -64,6 +65,9 @@ namespace Navigation.Views
                     break;
                 case 5:
                     ViewModel.ShowSecondTabCommand.Execute(null);
+                    break;
+                case 6:
+                    ViewModel.ShowBackStackPageCommand.Execute(null);
                     break;
             }
         }

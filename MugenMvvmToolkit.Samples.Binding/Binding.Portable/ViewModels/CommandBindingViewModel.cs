@@ -42,7 +42,7 @@ namespace Binding.Portable.ViewModels
                 if (_canExecuteCommand == value)
                     return;
                 _canExecuteCommand = value;
-                OnPropertyChanged();                
+                OnPropertyChanged();
             }
         }
 

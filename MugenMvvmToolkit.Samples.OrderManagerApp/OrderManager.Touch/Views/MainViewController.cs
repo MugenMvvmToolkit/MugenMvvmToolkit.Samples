@@ -1,6 +1,6 @@
-﻿using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using CoreGraphics;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
@@ -23,7 +23,7 @@ namespace OrderManager.Touch.Views
             {
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(20, 65, View.Frame.Width - 40, 30);
+                button.Frame = new CGRect(20, 65, View.Frame.Width - 40, 30);
                 button.SetTitle("Products", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.OpenProductsCommand);
                 View.AddSubview(button);
@@ -31,7 +31,7 @@ namespace OrderManager.Touch.Views
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
-                button.Frame = new RectangleF(20, 95, View.Frame.Width - 40, 30);
+                button.Frame = new CGRect(20, 95, View.Frame.Width - 40, 30);
                 button.SetTitle("Orders", UIControlState.Normal);
                 set.Bind(button, "Click").To(model => model.OpenOrdersCommand);
                 View.AddSubview(button);

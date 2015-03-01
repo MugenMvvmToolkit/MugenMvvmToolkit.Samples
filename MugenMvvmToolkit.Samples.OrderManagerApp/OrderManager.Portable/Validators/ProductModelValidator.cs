@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using MugenMvvmToolkit.Infrastructure.Validation;
 using OrderManager.Portable.Models;
@@ -10,7 +11,7 @@ namespace OrderManager.Portable.Validators
     {
         #region Overrides of ValidatorBase
 
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName)
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
             if (PropertyNameEqual(propertyName, model => model.Name))
@@ -22,7 +23,7 @@ namespace OrderManager.Portable.Validators
             return FromResult(dictionary);
         }
 
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync()
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
             ValidateDescription(GetPropertyName(model => model.Description), dictionary);

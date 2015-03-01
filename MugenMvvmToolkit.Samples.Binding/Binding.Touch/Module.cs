@@ -1,6 +1,6 @@
 ﻿using System;
 using Binding.Touch.Templates;
-using MonoTouch.UIKit;
+using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces;
@@ -31,8 +31,7 @@ namespace Binding.Touch
         /// </summary>
         protected override bool LoadInternal()
         {
-            BindingServiceProvider.ResourceResolver.AddObject("buttonTemplate",
-                new BindingResourceObject(new ButtonItemTemplate()));
+            BindingServiceProvider.ResourceResolver.AddObject("buttonTemplate", new ButtonItemTemplate());
 
             //Registering attached property
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;

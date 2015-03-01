@@ -10,16 +10,14 @@
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
 
-    <Label Grid.Row="0"
-           mugen:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
-
+    <Label Grid.Row="0" Text="{mugen:DataBinding ResourceUsageInfo}" />
     <ListView ItemsSource="{mugen:DataBinding Items}" Grid.Row="1">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <ViewCell.View>
               <Button Command="{mugen:DataBinding $Relative(ListView).DataContext.ShowCommand}"
-                      Text="{mugen:DataBinding Item1}" CommandParameter="{mugen:DataBinding Item2}" />
+                      Text="{mugen:DataBinding Item1, Mode=OneTime}" CommandParameter="{mugen:DataBinding Item2, Mode=OneTime}" />
             </ViewCell.View>
           </ViewCell>
         </DataTemplate>

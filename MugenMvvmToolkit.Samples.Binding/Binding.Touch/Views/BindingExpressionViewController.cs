@@ -1,10 +1,10 @@
-using System.Drawing;
 using Binding.Portable.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace Binding.Touch.Views
 {
@@ -18,19 +18,19 @@ namespace Binding.Touch.Views
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
 
             using (var set = new BindingSet<BindingModeViewModel>())
             {
-                var font = UIFont.SystemFontOfSize(10);
+                UIFont font = UIFont.SystemFontOfSize(10);
 
-                var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+                var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
                 {
                     Text = "Current text",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -38,7 +38,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                var textField = new UITextField(new RectangleF(20, 25, View.Frame.Width - 40, 30))
+                var textField = new UITextField(new CGRect(20, 25, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
@@ -49,7 +49,7 @@ namespace Binding.Touch.Views
                 scrollView.AddSubview(textField);
 
 
-                label = new UILabel(new RectangleF(20, 55, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 55, View.Frame.Width - 40, 25))
                 {
                     Text = "LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -57,7 +57,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 80, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 80, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -66,7 +66,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, @"Text Text.Count(x => x == 'a')");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 105, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 105, View.Frame.Width - 40, 25))
                 {
                     Text = "Custom extension method with args (Text.ExtensionMethod(Text.Count()))",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -74,7 +74,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 130, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 130, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -84,7 +84,7 @@ namespace Binding.Touch.Views
                 scrollView.AddSubview(label);
 
 
-                label = new UILabel(new RectangleF(20, 155, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 155, View.Frame.Width - 40, 25))
                 {
                     Text = "LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -92,7 +92,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 175, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 175, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -102,25 +102,27 @@ namespace Binding.Touch.Views
                 scrollView.AddSubview(label);
 
 
-                label = new UILabel(new RectangleF(20, 200, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 200, View.Frame.Width - 40, 25))
                 {
-                    Text = "Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')",
+                    Text =
+                        "Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Font = font
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 225, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 225, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'");
+                set.BindFromExpression(label,
+                    "Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'");
                 scrollView.AddSubview(label);
 
 
-                label = new UILabel(new RectangleF(20, 250, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 250, View.Frame.Width - 40, 25))
                 {
                     Text = "Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -128,7 +130,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 275, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 275, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,

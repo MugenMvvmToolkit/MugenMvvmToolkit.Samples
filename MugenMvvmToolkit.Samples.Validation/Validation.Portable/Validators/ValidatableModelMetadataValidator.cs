@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using MugenMvvmToolkit.Infrastructure.Validation;
 using Validation.Portable.Models;
@@ -11,14 +12,7 @@ namespace Validation.Portable.Validators
     {
         #region Overrides of ValidatorBase
 
-        /// <summary>
-        ///     Updates information about errors in the specified property.
-        /// </summary>
-        /// <param name="propertyName">The specified property name.</param>
-        /// <returns>
-        ///     The result of validation.
-        /// </returns>
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName)
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
             if (PropertyNameEqual(propertyName, model => model.Description))
@@ -30,13 +24,7 @@ namespace Validation.Portable.Validators
             return FromResult(dictionary);
         }
 
-        /// <summary>
-        ///     Updates information about all errors.
-        /// </summary>
-        /// <returns>
-        ///     The result of validation.
-        /// </returns>
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync()
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
             ValidateName(GetPropertyName(model => model.Name), dictionary);

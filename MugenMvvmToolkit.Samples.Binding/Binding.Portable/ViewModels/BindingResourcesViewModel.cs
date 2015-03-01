@@ -16,9 +16,9 @@ namespace Binding.Portable.ViewModels
         {
             IBindingResourceResolver resourceResolver = BindingServiceProvider.ResourceResolver;
 
-            resourceResolver.AddObject("obj", new BindingResourceObject("String value"));
+            resourceResolver.AddObject("obj", "String value");
             resourceResolver.AddMethod("Method", new BindingResourceMethod(Method, typeof (object)));
-            resourceResolver.AddType("CustomType", typeof (BindingResourcesViewModel));
+            resourceResolver.AddType("CustomType", typeof (BindingResourcesViewModel));            
         }
 
         #endregion
@@ -26,13 +26,24 @@ namespace Binding.Portable.ViewModels
         #region Methods
 
         private object Method(IList<Type> types, object[] arg3, IDataContext dataContext)
-        {            
+        {
             return "Custom method result";
         }
 
         public static string StaticMethod()
         {
             return "Result from StaticMethod";
+        }
+
+        #endregion
+
+        #region Overrides of ViewModelBase
+
+        protected override void OnDispose(bool disposing)
+        {
+            if (disposing)
+                BindingServiceProvider.ResourceResolver.RemoveMethod("Method");
+            base.OnDispose(disposing);
         }
 
         #endregion

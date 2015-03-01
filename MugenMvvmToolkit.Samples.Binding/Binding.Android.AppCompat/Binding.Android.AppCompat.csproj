@@ -21,13 +21,14 @@
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <DevInstrumentationEnabled>False</DevInstrumentationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;APPCOMPAT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
@@ -37,7 +38,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;APPCOMPAT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
@@ -60,25 +61,21 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.AppCompat">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -117,6 +114,9 @@
     </Compile>
     <Compile Include="..\Binding.Android\Views\BindingValidationActivityView.cs">
       <Link>Views\BindingValidationActivityView.cs</Link>
+    </Compile>
+    <Compile Include="..\Binding.Android\Views\CollectionBindingActivityView.cs">
+      <Link>Views\CollectionBindingActivityView.cs</Link>
     </Compile>
     <Compile Include="..\Binding.Android\Views\CommandBindingActivityView.cs">
       <Link>Views\CommandBindingActivityView.cs</Link>
@@ -182,6 +182,12 @@
     <AndroidResource Include="..\Binding.Android\Resources\layout\_ButtonTemplate.xml">
       <Link>Resources\layout\_ButtonTemplate.xml</Link>
     </AndroidResource>
+    <AndroidResource Include="..\Binding.Android\Resources\menu\addlistitemmenu.xml">
+      <Link>Resources\menu\addlistitemmenu.xml</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\Binding.Android\Resources\layout\_ListViewTemplate.xml">
+      <Link>Resources\layout\_ListViewTemplate.xml</Link>
+    </AndroidResource>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +197,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="..\Binding.Android\Resources\layout\CollectionBindingView.axml">
+      <Link>Resources\layout\CollectionBindingView.axml</Link>
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

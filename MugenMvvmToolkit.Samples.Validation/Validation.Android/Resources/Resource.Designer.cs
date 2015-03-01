@@ -37,6 +37,8 @@ namespace Validation.Android
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::Validation.Android.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::Validation.Android.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::Validation.Android.Resource.Attribute.TabContentId;
+			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::Validation.Android.Resource.Id.AttachedProperties;
+			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::Validation.Android.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Validation.Android.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Validation.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Validation.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -120,6 +122,12 @@ namespace Validation.Android
 		
 		public partial class Id
 		{
+			
+			// aapt resource value: 0x7f040002
+			public const int AttachedProperties = 2130968578;
+			
+			// aapt resource value: 0x7f040001
+			public const int ListenParentChange = 2130968577;
 			
 			// aapt resource value: 0x7f040000
 			public const int OptionsMenu = 2130968576;

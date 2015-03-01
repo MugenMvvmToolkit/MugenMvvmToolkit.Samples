@@ -15,7 +15,7 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <NuGetPackageImportStamp>9361a796</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>9595a337</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -38,11 +38,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CustomExtensionMethods.cs" />
-    <Compile Include="Infrastructure\BindingManagerMonitor.cs" />
+    <Compile Include="Infrastructure\ResourceMonitor.cs" />
     <Compile Include="Infrastructure\LocalizationManager.cs" />
-    <Compile Include="Interfaces\IBindingManagerMonitor.cs" />
+    <Compile Include="Interfaces\IResourceMonitor.cs" />
     <Compile Include="Interfaces\ILocalizationManager.cs" />
     <Compile Include="Models\BindingPerformanceModel.cs" />
+    <Compile Include="Models\CollectionItemModel.cs" />
     <Compile Include="Models\DynamicModel.cs" />
     <Compile Include="PortableModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="ViewModels\BindingModeViewModel.cs" />
     <Compile Include="ViewModels\BindingResourcesViewModel.cs" />
     <Compile Include="ViewModels\BindingValidationViewModel.cs" />
+    <Compile Include="ViewModels\CollectionBindingViewModel.cs" />
     <Compile Include="ViewModels\CommandBindingViewModel.cs" />
     <Compile Include="ViewModels\DynamicObjectViewModel.cs" />
     <Compile Include="ViewModels\LocalizableViewModel.cs" />
@@ -72,6 +74,7 @@
     <EmbeddedResource Include="Resources\LocalizableResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LocalizableResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -89,10 +92,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\packages\MugenMvvmToolkit.Binding.1.2.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Binding.3.3.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -101,10 +104,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-    <Error Condition="!Exists('..\packages\Fody.1.26.4\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.1.26.4\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Fody.1.27.1\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.1.27.1\build\Fody.targets'))" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Import Project="..\packages\Fody.1.26.4\build\Fody.targets" Condition="Exists('..\packages\Fody.1.26.4\build\Fody.targets')" />
+  <Import Project="..\packages\Fody.1.27.1\build\Fody.targets" Condition="Exists('..\packages\Fody.1.27.1\build\Fody.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <OptionsMenu
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    pkg:MenuTemplate="@menu/addlistitemmenu" />
+
+  <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            pkg:Bind="Text FilterText, Mode=TwoWay" />
+
+  <ListView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            pkg:ItemTemplate="@layout/_listviewtemplate"
+            pkg:Bind="DataContext GridViewModel; ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay" />
+</LinearLayout>

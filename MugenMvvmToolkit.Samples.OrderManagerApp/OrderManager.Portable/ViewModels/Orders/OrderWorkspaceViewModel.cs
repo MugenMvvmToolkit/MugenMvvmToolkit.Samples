@@ -6,8 +6,10 @@ using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Annotations;
 using MugenMvvmToolkit.Collections;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces.Collections;
 using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.Navigation;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -50,7 +52,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             _repository = repository;
             _messagePresenter = messagePresenter;
             _toastPresenter = toastPresenter;
-            _trackingCollection = new TrackingCollection();
+            _trackingCollection = new TrackingCollection(new CompositeEqualityComparer().AddComparer(OrderModel.KeyComparer).AddComparer(OrderProductModel.KeyComparer));
 
             SaveChangesCommand = new RelayCommand(SaveChanges, CanSaveChanges, this);
             AddOrderCommand = new RelayCommand(AddOrder);
@@ -227,9 +229,7 @@ namespace OrderManager.Portable.ViewModels.Orders
                 _trackingCollection.UpdateStates(items, EntityState.Unchanged);
                 return items;
             }
-            return
-                _trackingCollection.Find<OrderProductModel>(
-                    item => !item.State.IsDeleted() && item.Entity.IdOrder == order.Id);
+            return _trackingCollection.Find<OrderProductModel>(item => !item.State.IsDeleted() && item.Entity.IdOrder == order.Id);
         }
 
         private bool Filter(OrderModel item)

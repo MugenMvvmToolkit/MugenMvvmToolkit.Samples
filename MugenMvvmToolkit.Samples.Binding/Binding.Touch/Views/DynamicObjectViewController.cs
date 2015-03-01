@@ -1,10 +1,10 @@
-using System.Drawing;
 using Binding.Portable.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace Binding.Touch.Views
 {
@@ -18,10 +18,10 @@ namespace Binding.Touch.Views
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
@@ -30,7 +30,7 @@ namespace Binding.Touch.Views
             {
                 UIFont font = UIFont.SystemFontOfSize(12);
 
-                var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+                var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
                 {
                     Text = "Binding to dynamic property",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -38,7 +38,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                var textField = new UITextField(new RectangleF(20, 25, View.Frame.Width - 40, 30))
+                var textField = new UITextField(new CGRect(20, 25, View.Frame.Width - 40, 30))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
@@ -49,7 +49,7 @@ namespace Binding.Touch.Views
                 scrollView.AddSubview(textField);
 
 
-                label = new UILabel(new RectangleF(20, 55, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 55, View.Frame.Width - 40, 25))
                 {
                     Text = "Dynamic value",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -57,7 +57,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 80, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 80, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green
@@ -65,7 +65,7 @@ namespace Binding.Touch.Views
                 set.Bind(label, field => field.Text).To("DynamicModel.Text");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 105, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 105, View.Frame.Width - 40, 25))
                 {
                     Text = "Dynamic method call",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -73,7 +73,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 130, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 130, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -82,7 +82,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, "Text DynamicModel.DynamicMethod(DynamicModel.Text)");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 155, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 155, View.Frame.Width - 40, 25))
                 {
                     Text = "Dynamic index call",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -90,7 +90,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 180, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 180, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,

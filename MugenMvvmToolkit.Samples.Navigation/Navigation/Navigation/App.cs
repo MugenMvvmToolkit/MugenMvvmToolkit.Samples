@@ -9,7 +9,8 @@ namespace Navigation
     {
         public App()
         {
-            var bootstrapper = new Bootstrapper<MainViewModel>(new AutofacContainer());
+            XamarinFormsBootstrapperBase bootstrapper = XamarinFormsBootstrapperBase.Current ??
+                                                        new Bootstrapper<MainViewModel>(new AutofacContainer());
             MainPage = bootstrapper.Start();
         }
     }

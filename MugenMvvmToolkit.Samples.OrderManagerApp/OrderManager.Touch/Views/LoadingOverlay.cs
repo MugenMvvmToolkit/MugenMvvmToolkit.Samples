@@ -1,5 +1,6 @@
-﻿using System.Drawing;
-using MonoTouch.UIKit;
+﻿using System;
+using CoreGraphics;
+using UIKit;
 
 namespace OrderManager.Touch.Views
 {
@@ -12,7 +13,7 @@ namespace OrderManager.Touch.Views
         private UIActivityIndicatorView activitySpinner;
         private UILabel loadingLabel;
 
-        public LoadingOverlay(RectangleF frame)
+        public LoadingOverlay(CGRect frame)
             : base(frame)
         {
             // configurable bits
@@ -20,16 +21,16 @@ namespace OrderManager.Touch.Views
             Alpha = 0;
             AutoresizingMask = UIViewAutoresizing.FlexibleDimensions;
 
-            float labelHeight = 22;
-            float labelWidth = Frame.Width - 20;
+            nfloat labelHeight = 22;
+            var labelWidth = Frame.Width - 20;
 
             // derive the center x and y
-            float centerX = Frame.Width / 2;
-            float centerY = Frame.Height / 2;
+            var centerX = Frame.Width / 2;
+            var centerY = Frame.Height / 2;
 
             // create the activity spinner, center it horizontall and put it 5 points above center x
             activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
-            activitySpinner.Frame = new RectangleF(
+            activitySpinner.Frame = new CGRect(
                 centerX - (activitySpinner.Frame.Width / 2),
                 centerY - activitySpinner.Frame.Height - 20,
                 activitySpinner.Frame.Width,
@@ -39,7 +40,7 @@ namespace OrderManager.Touch.Views
             activitySpinner.StartAnimating();
 
             // create and configure the "Loading Data" label
-            loadingLabel = new UILabel(new RectangleF(
+            loadingLabel = new UILabel(new CGRect(
                 centerX - (labelWidth / 2),
                 centerY + 20,
                 labelWidth,

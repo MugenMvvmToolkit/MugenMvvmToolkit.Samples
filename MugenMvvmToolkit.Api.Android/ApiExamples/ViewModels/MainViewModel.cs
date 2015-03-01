@@ -28,7 +28,7 @@ namespace ApiExamples.ViewModels
             Should.NotBeNull(toastPresenter, "toastPresenter");
             _toastPresenter = toastPresenter;
             Items = new[]
-            {
+            {                
                 Tuple.Create("Action bar (Dynamic tabs)", new ViewModelCommandParameter(typeof (TabViewModel))),
                 Tuple.Create("Action bar (Static tabs)", new ViewModelCommandParameter(typeof (StaticTabViewModel))),                
                 Tuple.Create("Context action bar", new ViewModelCommandParameter(typeof (ContextActionBarViewModel))),

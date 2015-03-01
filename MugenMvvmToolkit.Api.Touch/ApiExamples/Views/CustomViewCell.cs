@@ -1,6 +1,6 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace ApiExamples.Views
 {

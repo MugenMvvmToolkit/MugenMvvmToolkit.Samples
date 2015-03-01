@@ -1,7 +1,7 @@
 using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace ApiExamples.Views
 {
@@ -13,8 +13,8 @@ namespace ApiExamples.Views
         public CollectionViewCell(RectangleF frame)
             : base(frame)
         {
-            BackgroundView = new UIView { BackgroundColor = UIColor.Yellow };
-            SelectedBackgroundView = new UIView { BackgroundColor = UIColor.Green };
+            BackgroundView = new UIView {BackgroundColor = UIColor.Yellow};
+            SelectedBackgroundView = new UIView {BackgroundColor = UIColor.Green};
             Label = new UILabel(new RectangleF(0, 0, frame.Width, frame.Height))
             {
                 AdjustsFontSizeToFitWidth = true

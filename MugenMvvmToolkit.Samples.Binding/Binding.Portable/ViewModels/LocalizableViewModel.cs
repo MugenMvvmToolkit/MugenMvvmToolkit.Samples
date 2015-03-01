@@ -36,7 +36,7 @@ namespace Binding.Portable.ViewModels
             set
             {
                 if (Equals(value, _selectedCulture))
-                    return;
+                    return; 
                 _selectedCulture = value;
                 if (_selectedCulture != null)
                     _localizationManager.ChangeCulture(_selectedCulture);

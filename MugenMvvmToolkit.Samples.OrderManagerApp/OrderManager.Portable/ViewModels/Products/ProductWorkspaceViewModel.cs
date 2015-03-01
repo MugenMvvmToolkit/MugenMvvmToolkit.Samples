@@ -6,6 +6,7 @@ using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Annotations;
 using MugenMvvmToolkit.Collections;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces.Collections;
 using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
@@ -49,7 +50,7 @@ namespace OrderManager.Portable.ViewModels.Products
             _repository = repository;
             _messagePresenter = messagePresenter;
             _toastPresenter = toastPresenter;
-            _trackingCollection = new TrackingCollection();
+            _trackingCollection = new TrackingCollection(new CompositeEqualityComparer().AddComparer(ProductModel.KeyComparer));
 
             SaveChangesCommand = new RelayCommand(SaveChanges, CanSaveChanges, this);
             AddProductCommand = new RelayCommand(AddProduct);

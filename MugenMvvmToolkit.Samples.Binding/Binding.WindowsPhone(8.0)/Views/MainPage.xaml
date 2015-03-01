@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"    
+    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -28,8 +28,8 @@
             <TextBlock Text="main page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center"
-                   markupExtensions:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" markupExtensions:View.Bind="Text ResourceUsageInfo" 
+                   TextWrapping="Wrap"/>
 
         <ScrollViewer Grid.Row="2" Margin="12,0,12,0">
             <ItemsControl markupExtensions:View.Bind="ItemsSource Items">
@@ -42,7 +42,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button Margin="1" x:Name="Btn"
-                                markupExtensions:View.Bind="Content Item1; CommandParameter Item2; Click $Relative(PhoneApplicationPage).DataContext.ShowCommand" />
+                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Click $Relative(PhoneApplicationPage).DataContext.ShowCommand" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

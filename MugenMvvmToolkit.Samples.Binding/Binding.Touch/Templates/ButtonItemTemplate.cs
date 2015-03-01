@@ -18,8 +18,8 @@ namespace Binding.Touch.Templates
         protected override void Initialize(StringElement template,
             BindingSet<StringElement, Tuple<string, Type>> bindingSet)
         {
-            bindingSet.Bind(element => element.Caption).To(tuple => tuple.Item1);
-            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2);
+            bindingSet.Bind(element => element.Caption).To(tuple => tuple.Item1).OneTime();
+            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2).OneTime();
             bindingSet.BindFromExpression("Tapped $Relative(UIViewController).DataContext.ShowCommand");
         }
 

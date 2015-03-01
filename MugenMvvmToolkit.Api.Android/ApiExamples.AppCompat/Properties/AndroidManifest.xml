@@ -2,4 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ApiExamples.AppCompat" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21" />
 	<application android:label="ApiExamples.AppCompat" android:theme="@style/Theme.AppCompat"></application>
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

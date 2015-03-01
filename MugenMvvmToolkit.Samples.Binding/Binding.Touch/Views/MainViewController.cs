@@ -1,6 +1,6 @@
 ﻿using Binding.Portable.ViewModels;
+using Foundation;
 using MonoTouch.Dialog;
-using MonoTouch.Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
@@ -28,8 +28,8 @@ namespace Binding.Touch.Views
                 var root = new RootElement("Main view");
                 var section = new Section();
                 var element = new MultilineElement(string.Empty);
-                bindingSet.BindFromExpression(element,
-                    "Caption $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)");
+                bindingSet.Bind(element, multilineElement => multilineElement.Caption)
+                    .To(model => model.ResourceUsageInfo);
                 section.Add(element);
                 root.Add(section);
 

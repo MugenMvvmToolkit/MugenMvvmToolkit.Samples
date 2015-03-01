@@ -1,7 +1,7 @@
 ﻿using ApiExamples.ViewModels;
-using MonoTouch.UIKit;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using UIKit;
 
 namespace ApiExamples.Templates
 {

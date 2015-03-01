@@ -17,8 +17,8 @@ namespace Binding.WinForms.Templates
 
         protected override void Initialize(Button template, BindingSet<Button, Tuple<string, Type>> bindingSet)
         {
-            bindingSet.Bind(button => button.Text).To(tuple => tuple.Item1);
-            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2);
+            bindingSet.Bind(button => button.Text).To(tuple => tuple.Item1).OneTime();
+            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2).OneTime();
             bindingSet.BindFromExpression("Click $Relative(Form).DataContext.ShowCommand");
         }
 

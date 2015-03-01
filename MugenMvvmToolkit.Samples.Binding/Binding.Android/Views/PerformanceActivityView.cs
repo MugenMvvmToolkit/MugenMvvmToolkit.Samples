@@ -8,7 +8,11 @@ using Android.Views;
 using Android.Widget;
 using Binding.Portable.Models;
 using MugenMvvmToolkit.Binding;
+#if APPCOMPAT
+using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;
+#else
 using MugenMvvmToolkit.Views.Activities;
+#endif
 
 namespace Binding.Android.Views
 {

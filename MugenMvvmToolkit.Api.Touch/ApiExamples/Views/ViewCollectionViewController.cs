@@ -1,11 +1,11 @@
 ﻿using ApiExamples.ViewModels;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace ApiExamples.Views
 {

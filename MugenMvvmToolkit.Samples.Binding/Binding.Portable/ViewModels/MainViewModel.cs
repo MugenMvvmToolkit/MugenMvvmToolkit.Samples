@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Input;
 using Binding.Portable.Interfaces;
 using MugenMvvmToolkit;
@@ -14,18 +13,19 @@ namespace Binding.Portable.ViewModels
     {
         #region Fields
 
-        private readonly IBindingManagerMonitor _bindingManagerMonitor;
+        private readonly IResourceMonitor _resourceMonitor;
 
         #endregion
 
         #region Constructors
 
-        public MainViewModel(IBindingManagerMonitor bindingManagerMonitor)
+        public MainViewModel(IResourceMonitor resourceMonitor)
         {
-            Should.NotBeNull(bindingManagerMonitor, "bindingManagerMonitor");
-            _bindingManagerMonitor = bindingManagerMonitor;
+            Should.NotBeNull(resourceMonitor, "ResourceMonitor");
+            _resourceMonitor = resourceMonitor;
             Items = new[]
             {
+                Tuple.Create("GC.Collect", typeof (object)),
                 Tuple.Create("Binding mode", typeof (BindingModeViewModel)),
                 Tuple.Create("Relative binding", typeof (RelativeBindingViewModel)),
                 Tuple.Create("Command binding", typeof (CommandBindingViewModel)),
@@ -35,22 +35,37 @@ namespace Binding.Portable.ViewModels
                 Tuple.Create("Binding resources", typeof (BindingResourcesViewModel)),
                 Tuple.Create("Attached members", typeof (AttachedMemberViewModel)),
                 Tuple.Create("Localizable binding", typeof (LocalizableViewModel)),
-                Tuple.Create("Performance", typeof (PerformanceViewModel)),
-                Tuple.Create("GC.Collect", typeof (object))
+                Tuple.Create("Collection binding", typeof (CollectionBindingViewModel)),
+                Tuple.Create("Performance", typeof (PerformanceViewModel))
             };
             ShowCommand = new RelayCommand<Type>(Show);
+            resourceMonitor.PropertyChanged += ReflectionExtensions.MakeWeakPropertyChangedHandler(this,
+                (model, o, arg3) => model.OnPropertyChanged("ResourceUsageInfo"));
         }
 
         #endregion
 
         #region Properties
 
-        public IBindingManagerMonitor BindingMonitor
+        public IResourceMonitor BindingMonitor
         {
-            get { return _bindingManagerMonitor; }
+            get { return _resourceMonitor; }
         }
 
         public IList<Tuple<string, Type>> Items { get; private set; }
+
+        public string ResourceUsageInfo
+        {
+            get
+            {
+                return string.Format(
+                    "Bindings/ViewModels/Views: total - {0}/{1}/{2}, live - {3}/{4}/{5}, collected - {6}/{7}/{8}.",
+                    BindingMonitor.BindingCount, BindingMonitor.ViewModelCount, BindingMonitor.ViewCount,
+                    BindingMonitor.LiveBindingCount, BindingMonitor.LiveViewModelCount, BindingMonitor.LiveViewCount,
+                    BindingMonitor.CollectedBindingCount, BindingMonitor.CollectedViewModelCount,
+                    BindingMonitor.CollectedViewCount);
+            }
+        }
 
         #endregion
 
@@ -60,7 +75,7 @@ namespace Binding.Portable.ViewModels
 
         private async void Show(Type type)
         {
-            if (type == typeof(object))
+            if (type == typeof (object))
             {
                 GC.Collect();
                 GC.WaitForPendingFinalizers();

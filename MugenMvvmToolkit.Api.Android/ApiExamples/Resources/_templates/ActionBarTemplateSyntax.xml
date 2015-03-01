@@ -14,23 +14,23 @@
            IsShowing="true | false | {binding}" Subtitle="string | {binding}" Title="string | {binding}"
            Visible="true | false | {binding}" SelectedItem="{binding}" ItemsSource="{binding}"
            RestoreTabSelectedIndex="true | false" ContextActionBarVisible="true | false | {binding}"
-           ContextActionBarTemplate="@[package:]menu/menu_resource_name | {binding}">
+           ContextActionBarTemplate="@[package:]menu/menu_resource_name | {binding}" Bind="string">
 
-  <!--if you specify the ItemsSource TabTemplate is used.-->
+  <!--if you specify the ItemsSource TabTemplate will be used.-->
   <TabTemplate DataContext="{binding}" Content="@[package:]layout/layout_resource_name | {binding}"
                ContentTemplate="@[package:]layout/layout_resource_name"
                ContentTemplateSelector="{binding}" ContentDescription="string | {binding}"
                CustomView="@[package:]layout/layout_resource_name | class name | {binding}"
                Icon="/@[package:]drawable/drawable_resource_name | {binding}" Text="string | {binding}"
-               Tag="{binding}" />
+               Tag="{binding}" Bind="string" />
 
-  <!--otherwise used the collection of tabs.-->
+  <!--otherwise used the collection of tab.-->
   <Tab DataContext="{binding}" Content="@[package:]layout/layout_resource_name | {binding}"
        ContentTemplate="@[package:]layout/layout_resource_name"
        ContentTemplateSelector="{binding}" ContentDescription="string | {binding}"
        CustomView="@[package:]layout/layout_resource_name | class name | {binding}"
        Icon="/@[package:]drawable/drawable_resource_name | {binding}" Text="string | {binding}"
-       Tag="{binding}" />
+       Tag="{binding}" Bind="string" />
   <Tab />
   <Tab />
   <Tab />

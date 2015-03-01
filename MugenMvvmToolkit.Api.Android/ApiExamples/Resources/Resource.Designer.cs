@@ -37,6 +37,8 @@ namespace ApiExamples
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuEvent = global::ApiExamples.Resource.Attribute.PopupMenuEvent;
 			global::MugenMvvmToolkit.Resource.Attribute.PopupMenuTemplate = global::ApiExamples.Resource.Attribute.PopupMenuTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.TabContentId = global::ApiExamples.Resource.Attribute.TabContentId;
+			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::ApiExamples.Resource.Id.AttachedProperties;
+			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::ApiExamples.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::ApiExamples.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::ApiExamples.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::ApiExamples.Resource.Styleable.ActionBar_ActionBarTemplate;
@@ -201,29 +203,35 @@ namespace ApiExamples
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070002
+			public const int AttachedProperties = 2131165186;
+			
+			// aapt resource value: 0x7f070001
+			public const int ListenParentChange = 2131165185;
+			
 			// aapt resource value: 0x7f070000
 			public const int OptionsMenu = 2131165184;
 			
-			// aapt resource value: 0x7f070003
-			public const int content = 2131165187;
-			
-			// aapt resource value: 0x7f070004
-			public const int recyclerView = 2131165188;
-			
-			// aapt resource value: 0x7f070001
-			public const int tabContent = 2131165185;
-			
-			// aapt resource value: 0x7f070002
-			public const int tabContentId = 2131165186;
-			
 			// aapt resource value: 0x7f070005
-			public const int textView = 2131165189;
+			public const int content = 2131165189;
 			
 			// aapt resource value: 0x7f070006
-			public const int toolbar = 2131165190;
+			public const int recyclerView = 2131165190;
+			
+			// aapt resource value: 0x7f070003
+			public const int tabContent = 2131165187;
+			
+			// aapt resource value: 0x7f070004
+			public const int tabContentId = 2131165188;
 			
 			// aapt resource value: 0x7f070007
-			public const int toolbarBottom = 2131165191;
+			public const int textView = 2131165191;
+			
+			// aapt resource value: 0x7f070008
+			public const int toolbar = 2131165192;
+			
+			// aapt resource value: 0x7f070009
+			public const int toolbarBottom = 2131165193;
 			
 			static Id()
 			{

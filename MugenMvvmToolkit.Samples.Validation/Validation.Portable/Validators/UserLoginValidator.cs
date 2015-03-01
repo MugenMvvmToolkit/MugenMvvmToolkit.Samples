@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Validation;
@@ -21,26 +22,12 @@ namespace Validation.Portable.Validators
 
         #region Overrides of ValidatorBase
 
-        /// <summary>
-        ///     Initializes the current validator using the specified
-        ///     <see cref="T:MugenMvvmToolkit.Interfaces.Validation.IValidatorContext" />.
-        /// </summary>
-        /// <param name="context">
-        ///     The specified <see cref="T:MugenMvvmToolkit.Interfaces.Validation.IValidatorContext" />.
-        /// </param>
         protected override void OnInitialized(IValidatorContext context)
         {
             _userRepository = context.ServiceProvider.GetService<IUserRepository>();
         }
 
-        /// <summary>
-        ///     Updates information about errors in the specified property.
-        /// </summary>
-        /// <param name="propertyName">The specified property name.</param>
-        /// <returns>
-        ///     The result of validation.
-        /// </returns>
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName)
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
             if (!PropertyNameEqual(propertyName, model => model.Login))
                 return EmptyResult;
@@ -48,6 +35,8 @@ namespace Validation.Portable.Validators
             return Task<IDictionary<string, IEnumerable>>.Factory.StartNew(() =>
             {
                 ToolkitExtensions.Sleep(500);
+                if (token.IsCancellationRequested)
+                    return null;
                 if (_userRepository.GetUsers().Any(model => model != Instance && model.Login == Instance.Login))
                     return new Dictionary<string, IEnumerable>
                     {
@@ -57,18 +46,12 @@ namespace Validation.Portable.Validators
                         }
                     };
                 return null;
-            });
+            }, token);
         }
 
-        /// <summary>
-        ///     Updates information about all errors.
-        /// </summary>
-        /// <returns>
-        ///     The result of validation.
-        /// </returns>
-        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync()
+        protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
-            return ValidateInternalAsync(GetPropertyName(model => model.Login));
+            return ValidateInternalAsync(GetPropertyName(model => model.Login), token);
         }
 
         #endregion

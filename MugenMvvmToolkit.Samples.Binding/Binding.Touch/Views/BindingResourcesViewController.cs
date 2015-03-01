@@ -1,8 +1,8 @@
-using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Views;
+using UIKit;
 
 namespace Binding.Touch.Views
 {
@@ -16,10 +16,10 @@ namespace Binding.Touch.Views
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
 
-            var scrollView = new UIScrollView(new RectangleF(0, 0, View.Frame.Width, View.Frame.Height))
+            var scrollView = new UIScrollView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height))
             {
                 ScrollEnabled = true,
-                ContentSize = new SizeF(View.Bounds.Size.Width, View.Bounds.Size.Height),
+                ContentSize = new CGSize(View.Bounds.Size.Width, View.Bounds.Size.Height),
                 AutoresizingMask = UIViewAutoresizing.FlexibleDimensions
             };
             View.AddSubview(scrollView);
@@ -28,7 +28,7 @@ namespace Binding.Touch.Views
             {
                 UIFont font = UIFont.SystemFontOfSize(10);
 
-                var label = new UILabel(new RectangleF(20, 0, View.Frame.Width - 40, 25))
+                var label = new UILabel(new CGRect(20, 0, View.Frame.Width - 40, 25))
                 {
                     Text = "Object from resources($obj)",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -36,7 +36,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 25, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -46,7 +46,7 @@ namespace Binding.Touch.Views
                 scrollView.AddSubview(label);
 
 
-                label = new UILabel(new RectangleF(20, 50, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
                 {
                     Text = "Method from resources($Method())",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -54,7 +54,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 75, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 75, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,
@@ -63,7 +63,7 @@ namespace Binding.Touch.Views
                 set.BindFromExpression(label, "Text $Method()");
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 100, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 100, View.Frame.Width - 40, 25))
                 {
                     Text = "Type from resources($CustomType.StaticMethod())",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
@@ -71,7 +71,7 @@ namespace Binding.Touch.Views
                 };
                 scrollView.AddSubview(label);
 
-                label = new UILabel(new RectangleF(20, 125, View.Frame.Width - 40, 25))
+                label = new UILabel(new CGRect(20, 125, View.Frame.Width - 40, 25))
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green,

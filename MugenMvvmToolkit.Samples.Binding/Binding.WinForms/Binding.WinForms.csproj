@@ -38,31 +38,35 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.Binding, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.2.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.3.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinForms, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.WinForms, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.1.2.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.3.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionManagers\ListViewCollectionManager.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Templates\ButtonItemTemplate.cs" />
+    <Compile Include="Templates\ListViewItemTemplate.cs" />
     <Compile Include="ViewBinder.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -95,6 +99,12 @@
     </Compile>
     <Compile Include="Views\BindingValidationView.Designer.cs">
       <DependentUpon>BindingValidationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CollectionBindingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CollectionBindingView.Designer.cs">
+      <DependentUpon>CollectionBindingView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CommandBindingView.cs">
       <SubType>Form</SubType>
@@ -157,6 +167,9 @@
     <EmbeddedResource Include="Views\BindingValidationView.resx">
       <DependentUpon>BindingValidationView.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CollectionBindingView.resx">
+      <DependentUpon>CollectionBindingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CommandBindingView.resx">
       <DependentUpon>CommandBindingView.cs</DependentUpon>

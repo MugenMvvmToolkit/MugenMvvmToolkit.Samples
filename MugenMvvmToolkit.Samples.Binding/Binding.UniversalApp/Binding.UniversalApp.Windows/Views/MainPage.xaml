@@ -33,8 +33,8 @@
                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" />
         </Grid>
 
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center"
-                   markupExtensions:View.Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}"
+                   markupExtensions:View.Bind="Text ResourceUsageInfo" />
 
         <ScrollViewer Grid.Row="2" Margin="12,0,12,0">
             <ItemsControl markupExtensions:View.Bind="ItemsSource Items">
@@ -47,7 +47,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button Margin="1" x:Name="Btn" HorizontalAlignment="Stretch"
-                                markupExtensions:View.Bind="Content Item1; CommandParameter Item2; Click $Relative(Page).DataContext.ShowCommand" />
+                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Click $Relative(Page).DataContext.ShowCommand" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

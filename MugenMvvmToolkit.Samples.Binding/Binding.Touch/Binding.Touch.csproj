@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ABDA7C2F-FC8C-43CC-8C04-26090177BEEB}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>Binding.Touch</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -46,16 +46,16 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <MtouchSdkVersion>7.1</MtouchSdkVersion>
+    <MtouchSdkVersion>8.1</MtouchSdkVersion>
     <MtouchDebug>False</MtouchDebug>
     <MtouchProfiling>False</MtouchProfiling>
     <MtouchExtraArgs />
     <MtouchFastDev>False</MtouchFastDev>
     <MtouchEnableGenericValueTypeSharing>False</MtouchEnableGenericValueTypeSharing>
-    <MtouchArch>Default, ARMv7</MtouchArch>
+    <MtouchArch>Default, i386</MtouchArch>
     <MtouchUseLlvm>False</MtouchUseLlvm>
     <MtouchUseThumb>False</MtouchUseThumb>
-    <MtouchUseSGen>True</MtouchUseSGen>
+    <MtouchUseSGen>False</MtouchUseSGen>
     <MtouchUseRefCounting>False</MtouchUseRefCounting>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n />
@@ -108,6 +108,7 @@
     <Compile Include="Views\BindingResourcesViewController.cs" />
     <Compile Include="Views\AttachedMemberViewController.cs" />
     <Compile Include="Views\BindingExpressionViewController.cs" />
+    <Compile Include="Views\CollectionBindingViewController.cs" />
     <Compile Include="Views\DynamicObjectViewController.cs" />
     <Compile Include="Views\BindingValidationViewController.cs" />
     <Compile Include="Views\CommandBindingViewController.cs" />
@@ -132,29 +133,26 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\Xamarin.iOS10\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
-    <Reference Include="MugenMvvmToolkit, Version=3.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monotouch\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\Xamarin.iOS10\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\Xamarin.iOS10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monotouch\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\Xamarin.iOS10\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Touch, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monotouch\MugenMvvmToolkit.Touch.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.iOS">
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\Xamarin.iOS10\MugenMvvmToolkit.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\error%402x.png" />
@@ -162,7 +160,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\error.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

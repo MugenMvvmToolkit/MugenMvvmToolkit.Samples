@@ -1,6 +1,6 @@
-﻿using System.Drawing;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+﻿using CoreGraphics;
+using Foundation;
+using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -38,7 +38,7 @@ namespace OrderManager.Touch.Views.Orders
 
             using (var set = new BindingSet<OrderEditorViewModel>())
             {
-                var searchBar = new UISearchBar(new RectangleF(0, 0, 320, 44)) { Placeholder = "Filter..." };
+                var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
                 set.Bind(searchBar, bar => bar.Text).To(model => model.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 

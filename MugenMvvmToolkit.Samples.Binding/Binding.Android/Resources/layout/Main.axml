@@ -7,7 +7,7 @@
               android:layout_height="fill_parent">
   <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            pkg:Bind="Text $Format('Bindings: total - {0}, live - {1}, collected - {2}.', BindingMonitor.BindingCount, BindingMonitor.LiveBindingCount, BindingMonitor.CollectedBindingCount)" />
+            pkg:Bind="Text ResourceUsageInfo" />
   <ScrollView android:layout_width="fill_parent"
               android:layout_height="wrap_content">
     <LinearLayout android:layout_width="fill_parent"

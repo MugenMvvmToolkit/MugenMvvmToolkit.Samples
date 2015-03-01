@@ -60,25 +60,32 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Android.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.ActionBar">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.ActionBar.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.ActionBar.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.ActionBar, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.ActionBar.3.3.0\lib\MonoAndroid40\MugenMvvmToolkit.Android.ActionBar.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.Fragment">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.Fragment.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.Fragment.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.Fragment.3.3.0\lib\MonoAndroid42\MugenMvvmToolkit.Android.Fragment.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.RecyclerView">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.1.0.0\lib\monoandroid\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.AutofacContainer">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.1.2.0\lib\portable-net45+sl50+win+wp80+MonoAndroid10+MonoTouch10+xamarinios10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\packages\MugenMvvmToolkit.3.2.0\lib\monoandroid\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -136,7 +143,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ItemView.axml">
-      <SubType>AndroidResource</SubType>
+      <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
