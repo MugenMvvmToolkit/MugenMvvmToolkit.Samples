@@ -1,0 +1,10 @@
+﻿<Window x:Class="Messaging.Wpf.Views.ViewMessageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStyle="ToolWindow"
+        Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="500" SizeToContent="Height"
+        FontSize="14">
+    <StackPanel>
+        <Button Content="Send message from view to view model" Click="SendMessage" Margin="2" />
+        <Button Content="Send message from view model to view" Command="{Binding Path=SendMessageCommand}" Margin="2" />
+    </StackPanel>
+</Window>
