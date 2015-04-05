@@ -25,7 +25,7 @@ namespace ApiExamples.ViewModels.Tabs
 
         public ICommand RemoveCommand { get; private set; }
 
-        private void Add(object o)
+        private void Add()
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
             itemViewModel.Name = "Dynamic item";
@@ -33,22 +33,22 @@ namespace ApiExamples.ViewModels.Tabs
             SelectedItem = itemViewModel;
         }
 
-        private bool CanRemove(object o)
+        private bool CanRemove()
         {
             return SelectedItem != null;
         }
 
-        private void Remove(object o)
+        private void Remove()
         {
             RemoveViewModelAsync(SelectedItem);
         }
 
-        private bool CanInsert(object obj)
+        private bool CanInsert()
         {
             return SelectedItem != null;
         }
 
-        private void Insert(object o)
+        private void Insert()
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
             itemViewModel.Name = "Dynamic item";

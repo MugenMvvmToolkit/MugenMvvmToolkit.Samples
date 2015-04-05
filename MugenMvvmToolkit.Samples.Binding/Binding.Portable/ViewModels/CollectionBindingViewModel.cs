@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Binding.Portable.Models;
 using MugenMvvmToolkit;
@@ -25,7 +26,7 @@ namespace Binding.Portable.ViewModels
             Should.NotBeNull(messagePresenter, "messagePresenter");
             _messagePresenter = messagePresenter;
             AddCommand = new RelayCommand(Add);
-            RemoveCommand = new RelayCommand<CollectionItemModel>(Remove, CanRemove, this);
+            RemoveCommand = RelayCommandBase.FromAsyncHandler<CollectionItemModel>(Remove, CanRemove, this);
         }
 
         #endregion
@@ -44,7 +45,7 @@ namespace Binding.Portable.ViewModels
             GridViewModel.SelectedItem = newItem;
         }
 
-        private async void Remove(CollectionItemModel item)
+        private async Task Remove(CollectionItemModel item)
         {
             if (item == null)
                 item = GridViewModel.SelectedItem;

@@ -61,22 +61,22 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android">
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.AppCompat">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.RecyclerView">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.AutofacContainer">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

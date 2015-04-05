@@ -46,7 +46,7 @@ namespace ApiExamples.ViewModels
 
         private void Add(object o)
         {
-            int id = GridViewModel.ItemsSource.Max(model => model.Id) + 1;
+            int id = GridViewModel.OriginalItemsSource.Max(model => model.Id) + 1;
             var newItem = new TableItemModel { Id = id, Name = "Added item " + id };
             GridViewModel.ItemsSource.Add(newItem);
             GridViewModel.SelectedItem = newItem;

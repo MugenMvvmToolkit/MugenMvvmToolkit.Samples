@@ -24,6 +24,9 @@
 
       <Label Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" />
       <Label mugen:View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" TextColor="Green" />
+
+      <Label Text="Null conditional expression (Text?.Trim()?.Length ?? -1)" />
+      <Label mugen:View.Bind="Text NullableText?.Trim()?.Length ?? -1" TextColor="Green" />
     </StackLayout>
   </ScrollView>
 </ContentPage>

@@ -30,7 +30,7 @@ namespace ApiExamples.ViewModels
 
         public ICommand ExecuteCommand { get; private set; }
 
-        private void Execute(object obj)
+        private void Execute()
         {
             _toastPresenter.ShowAsync("Command was invoked", ToastDuration.Short);
         }

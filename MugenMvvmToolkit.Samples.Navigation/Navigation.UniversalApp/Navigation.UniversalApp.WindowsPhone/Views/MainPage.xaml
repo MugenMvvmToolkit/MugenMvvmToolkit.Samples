@@ -38,17 +38,15 @@
     <Page.BottomAppBar>
         <CommandBar>
             <CommandBar.SecondaryCommands>
-                <!--WP does not show two windows at once, uncomment to see how it works.-->
-                <!--<AppBarButton Label="First view model (Window)"
+                <AppBarButton Label="First view model (Window)"
                               Command="{Binding Path=ShowFirstWindowCommand}" />
-                <AppBarButton Label="Second view model (Window)"
-                              Command="{Binding Path=ShowSecondWindowCommand}" />-->
-
                 <AppBarButton Label="First view model (Page)"
                               Command="{Binding Path=ShowFirstPageCommand}" />
                 <AppBarButton Label="First view model (Tab)"
                               Command="{Binding Path=ShowFirstTabCommand}" />
 
+                <AppBarButton Label="Second view model (Window)"
+                              Command="{Binding Path=ShowSecondWindowCommand}" />
                 <AppBarButton Label="Second view model (Page)"
                               Command="{Binding Path=ShowSecondPageCommand}" />
                 <AppBarButton Label="Second view model (Tab)"

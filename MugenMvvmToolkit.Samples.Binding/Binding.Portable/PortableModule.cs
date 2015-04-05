@@ -34,19 +34,13 @@ namespace Binding.Portable
             if (Mode == LoadMode.Design)
             {
                 var localizationManager = new LocalizationManager();
-                localizationManager.Initilaize();
                 if (IocContainer != null)
                     IocContainer.BindToConstant<ILocalizationManager>(localizationManager);
             }
             else
             {
                 if (!IocContainer.CanResolve<ILocalizationManager>())
-                    IocContainer.BindToMethod<ILocalizationManager>((container, list) =>
-                    {
-                        var localizationManager = new LocalizationManager();
-                        localizationManager.Initilaize();
-                        return localizationManager;
-                    }, DependencyLifecycle.SingleInstance);
+                    IocContainer.Bind<ILocalizationManager, LocalizationManager>(DependencyLifecycle.SingleInstance);
             }
 
             if (IocContainer != null)

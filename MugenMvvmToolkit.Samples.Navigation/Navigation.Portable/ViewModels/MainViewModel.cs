@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Presenters;
@@ -30,13 +32,13 @@ namespace Navigation.Portable.ViewModels
             Should.NotBeNull(toastPresenter, "toastPresenter");
             _viewModelPresenter = viewModelPresenter;
             _toastPresenter = toastPresenter;
-            ShowFirstWindowCommand = new RelayCommand(ShowFirstWindow);
-            ShowSecondWindowCommand = new RelayCommand(ShowSecondWindow);
-            ShowFirstTabCommand = new RelayCommand(ShowFirstTab);
-            ShowSecondTabCommand = new RelayCommand(ShowSecondTab);
-            ShowFirstPageCommand = new RelayCommand(ShowFirstPage);
-            ShowSecondPageCommand = new RelayCommand(ShowSecondPage);
-            ShowBackStackPageCommand = new RelayCommand(ShowBackStackPage);
+            ShowFirstWindowCommand = RelayCommandBase.FromAsyncHandler(ShowFirstWindow);
+            ShowSecondWindowCommand = RelayCommandBase.FromAsyncHandler(ShowSecondWindow);
+            ShowFirstTabCommand = RelayCommandBase.FromAsyncHandler(ShowFirstTab);
+            ShowSecondTabCommand = RelayCommandBase.FromAsyncHandler(ShowSecondTab);
+            ShowFirstPageCommand = RelayCommandBase.FromAsyncHandler(ShowFirstPage);
+            ShowSecondPageCommand = RelayCommandBase.FromAsyncHandler(ShowSecondPage);
+            ShowBackStackPageCommand = RelayCommandBase.FromAsyncHandler(ShowBackStackPage);
 
             //NOTE The DynamicMultiViewModelPresenter allows to use the current view model as presenter.
             _presenter = new DynamicMultiViewModelPresenter(this);
@@ -61,68 +63,124 @@ namespace Navigation.Portable.ViewModels
 
         public ICommand ShowBackStackPageCommand { get; private set; }
 
-        private async void ShowFirstWindow(object o)
+        private async Task ShowFirstWindow()
         {
             using (var vm = GetViewModel<FirstViewModel>())
             using (var wrapper = vm.Wrap<IWrapper>(Constants.WindowPreferably.ToValue(true)))
             {
-                await wrapper.ShowAsync();
-                _toastPresenter.ShowAsync("The first view model is closed (Window).", ToastDuration.Short);
+                var operation = wrapper.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Window");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Window");
             }
         }
 
-        private async void ShowSecondWindow(object o)
+        private async Task ShowSecondWindow()
         {
             using (var vm = GetViewModel<SecondViewModel>())
             using (var wrapper = vm.Wrap<IWrapper>(Constants.WindowPreferably.ToValue(true)))
             {
-                await wrapper.ShowAsync();
-                _toastPresenter.ShowAsync("The second view model is closed (Window).", ToastDuration.Short);
+                var operation = wrapper.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Window");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Window");
             }
         }
 
-        private async void ShowFirstPage(object o)
+        private async Task ShowFirstPage()
         {
             using (var vm = GetViewModel<FirstViewModel>())
             using (var wrapper = vm.Wrap<IWrapper>(Constants.PagePreferably.ToValue(true)))
             {
-                await wrapper.ShowAsync();
-                _toastPresenter.ShowAsync("The first view model is closed (Page).", ToastDuration.Short);
+                var operation = wrapper.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Page");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Page");
             }
         }
 
-        private async void ShowSecondPage(object o)
+        private async Task ShowSecondPage()
         {
             using (var vm = GetViewModel<SecondViewModel>())
             using (var wrapper = vm.Wrap<IWrapper>(Constants.PagePreferably.ToValue(true)))
             {
-                await wrapper.ShowAsync();
-                _toastPresenter.ShowAsync("The second view model is closed (Page).", ToastDuration.Short);
+                var operation = wrapper.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Page");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Page");
             }
         }
 
-        private async void ShowFirstTab(object o)
+        private async Task ShowFirstTab()
         {
             using (var vm = GetViewModel<FirstViewModel>())
             {
-                await vm.ShowAsync();
-                _toastPresenter.ShowAsync("The first view model is closed (Tab).", ToastDuration.Short);
+                var operation = vm.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Tab");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Tab");
             }
         }
 
-        private async void ShowSecondTab(object o)
+        private async Task ShowSecondTab()
         {
             using (var vm = GetViewModel<SecondViewModel>())
             {
-                await vm.ShowAsync();
-                _toastPresenter.ShowAsync("The second view model is closed (Tab).", ToastDuration.Short);
+                var operation = vm.ShowAsync();
+
+                //wait until the view model is displayed.
+                await operation.NavigationCompletedTask;
+                ShowOpenNotification(vm, "Tab");
+
+                //wait until the view model is closed.
+                await operation;
+                ShowCloseNotification(vm, "Tab");
             }
         }
 
-        private async void ShowBackStackPage(object obj)
+        private async Task ShowBackStackPage()
         {
             using (var vm = GetViewModel<BackStackViewModel>())
                 await vm.ShowAsync();
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void ShowOpenNotification(IViewModel viewModel, string type)
+        {
+            _toastPresenter.ShowAsync(string.Format("The '{0}' is opened ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
+        }
+
+        private void ShowCloseNotification(IViewModel viewModel, string type)
+        {
+            _toastPresenter.ShowAsync(string.Format("The '{0}' is closed ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
         }
 
         #endregion

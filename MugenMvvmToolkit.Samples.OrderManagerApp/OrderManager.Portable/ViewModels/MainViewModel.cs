@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Presenters;
 using MugenMvvmToolkit.Interfaces.Presenters;
@@ -18,8 +19,8 @@ namespace OrderManager.Portable.ViewModels
             Should.NotBeNull(viewModelPresenter, "viewModelPresenter");
             viewModelPresenter.DynamicPresenters.Add(new DynamicMultiViewModelPresenter(this));
 
-            OpenProductsCommand = new RelayCommand(OpenProducts);
-            OpenOrdersCommand = new RelayCommand(OpenOrders);
+            OpenProductsCommand = RelayCommandBase.FromAsyncHandler(OpenProducts);
+            OpenOrdersCommand = RelayCommandBase.FromAsyncHandler(OpenOrders);
         }
 
         #endregion
@@ -30,13 +31,13 @@ namespace OrderManager.Portable.ViewModels
 
         public ICommand OpenOrdersCommand { get; private set; }
 
-        private async void OpenOrders(object obj)
+        private async Task OpenOrders()
         {
             using (var orderWorkspaceViewModel = GetViewModel<OrderWorkspaceViewModel>())
                 await orderWorkspaceViewModel.ShowAsync();
         }
 
-        private async void OpenProducts(object obj)
+        private async Task OpenProducts()
         {
             using (var productWorkspaceViewModel = GetViewModel<ProductWorkspaceViewModel>())
                 await productWorkspaceViewModel.ShowAsync();

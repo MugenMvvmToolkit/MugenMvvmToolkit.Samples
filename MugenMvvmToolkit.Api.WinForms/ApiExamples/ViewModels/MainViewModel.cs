@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using ApiExamples.Models;
 using MugenMvvmToolkit;
@@ -24,7 +25,7 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Content binding (View content manager)", new ViewModelCommandParameter(typeof (ContentViewModel), Constants.ContentFormContentManager)), 
                 Tuple.Create("Tree view binding", new ViewModelCommandParameter(typeof (TreeViewBindingViewModel), Constants.ContentFormContentManager))
             };
-            ShowCommand = new RelayCommand<ViewModelCommandParameter>(Show);
+            ShowCommand = RelayCommandBase.FromAsyncHandler<ViewModelCommandParameter>(Show);
         }
 
         #endregion
@@ -39,7 +40,7 @@ namespace ApiExamples.ViewModels
 
         public ICommand ShowCommand { get; private set; }
 
-        private async void Show(ViewModelCommandParameter parameter)
+        private async Task Show(ViewModelCommandParameter parameter)
         {
             using (IViewModel viewModel = GetViewModel(parameter.ViewModelType))
                 await viewModel.ShowAsync(parameter.Context);

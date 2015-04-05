@@ -71,10 +71,12 @@ namespace Validation.Portable.ViewModels
         {
             if (!string.IsNullOrEmpty(message.PropertyName) && ToolkitExtensions.GetMemberName(Entity, model => model.Login) != message.PropertyName)
                 return;
-            if (message.IsEndOperation)
+            Interlocked.Increment(ref _validationLoginCount);
+            message.Task.TryExecuteSynchronously(task =>
+            {
                 Interlocked.Decrement(ref _validationLoginCount);
-            else
-                Interlocked.Increment(ref _validationLoginCount);
+                OnPropertyChanged(() => IsLoginValidating);
+            });
             OnPropertyChanged(() => IsLoginValidating);
         }
 

@@ -52,10 +52,10 @@ namespace OrderManager.Portable.ViewModels.Products
             _toastPresenter = toastPresenter;
             _trackingCollection = new TrackingCollection(new CompositeEqualityComparer().AddComparer(ProductModel.KeyComparer));
 
-            SaveChangesCommand = new RelayCommand(SaveChanges, CanSaveChanges, this);
-            AddProductCommand = new RelayCommand(AddProduct);
-            EditProductCommand = new RelayCommand<ProductModel>(EditProduct, CanEditProduct, this);
-            RemoveProductCommand = new RelayCommand<ProductModel>(RemoveProduct, CanRemoveProduct, this);
+            SaveChangesCommand = RelayCommandBase.FromAsyncHandler(SaveChanges, CanSaveChanges, this);
+            AddProductCommand = RelayCommandBase.FromAsyncHandler(AddProduct);
+            EditProductCommand = RelayCommandBase.FromAsyncHandler<ProductModel>(EditProduct, CanEditProduct, this);
+            RemoveProductCommand = RelayCommandBase.FromAsyncHandler<ProductModel>(RemoveProduct, CanRemoveProduct, this);
             DisplayName = UiResources.ProductWorkspaceName;
         }
 
@@ -71,7 +71,7 @@ namespace OrderManager.Portable.ViewModels.Products
 
         public ICommand RemoveProductCommand { get; private set; }
 
-        private async void SaveChanges(object obj)
+        private async Task SaveChanges()
         {
             try
             {
@@ -83,12 +83,12 @@ namespace OrderManager.Portable.ViewModels.Products
             }
         }
 
-        private bool CanSaveChanges(object obj)
+        private bool CanSaveChanges()
         {
             return HasChanges;
         }
 
-        private async void AddProduct(object obj)
+        private async Task AddProduct()
         {
             using (var editorVm = GetViewModel<ProductEditorViewModel>())
             using (var editorWrapperViewModel = editorVm.Wrap<IEditorWrapperViewModel>())
@@ -109,7 +109,7 @@ namespace OrderManager.Portable.ViewModels.Products
             }
         }
 
-        private async void EditProduct(ProductModel obj)
+        private async Task EditProduct(ProductModel obj)
         {
             using (var editorVm = GetViewModel<ProductEditorViewModel>())
             using (var editorDialogVm = editorVm.Wrap<IEditorWrapperViewModel>())
@@ -149,7 +149,7 @@ namespace OrderManager.Portable.ViewModels.Products
             return obj != null || (GridViewModel != null && GridViewModel.SelectedItem != null);
         }
 
-        private async void RemoveProduct(ProductModel obj)
+        private async Task RemoveProduct(ProductModel obj)
         {
             ProductModel item = obj ?? GridViewModel.SelectedItem;
             string message = string.Format(UiResources.DeleteProductQuestionFormat, item.Name);

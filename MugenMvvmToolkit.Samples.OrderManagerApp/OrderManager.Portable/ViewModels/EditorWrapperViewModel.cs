@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -19,7 +20,7 @@ namespace OrderManager.Portable.ViewModels
 
         public EditorWrapperViewModel()
         {
-            ApplyCommand = new RelayCommand(Apply, CanApply, this);
+            ApplyCommand = RelayCommandBase.FromAsyncHandler<object>(Apply, CanApply, false, this);
         }
 
         #endregion
@@ -41,10 +42,10 @@ namespace OrderManager.Portable.ViewModels
 
         #region Command's methosd
 
-        private void Apply(object obj)
+        private Task Apply(object obj)
         {
             OperationResult = true;
-            CloseAsync(obj).WithBusyIndicator(this);
+            return CloseAsync(obj).WithBusyIndicator(this);
         }
 
         private bool CanApply(object obj)

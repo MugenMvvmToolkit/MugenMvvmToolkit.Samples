@@ -29,7 +29,7 @@ namespace ApiExamples.ViewModels.Fragments
 
         public ICommand RemoveCommand { get; private set; }
 
-        private void Add(object obj)
+        private void Add()
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
             itemViewModel.Name = "Content view model";

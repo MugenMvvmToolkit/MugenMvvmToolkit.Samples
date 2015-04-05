@@ -2,9 +2,6 @@
 using MugenMvvmToolkit.Modules;
 #if NETFX_CORE
 using Windows.UI.Xaml.Controls;
-using Binding.Portable.Interfaces;
-using Binding.UniversalApp.UniversalApp.Infrastructure;
-using MugenMvvmToolkit.Models.IoC;
 #else
 using System.Windows.Controls;
 #endif
@@ -34,15 +31,6 @@ namespace Binding.Wpf
 
         protected override bool LoadInternal()
         {
-#if NETFX_CORE
-            IocContainer.BindToMethod<ILocalizationManager>((container, list) =>
-                        {
-                            var manager = new LocalizationManagerExt();
-                            manager.Initilaize();
-                            return manager;
-                        }, DependencyLifecycle.SingleInstance);
-#endif
-
             //Registering attached property
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
             memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextBlock, string>("TextExt",

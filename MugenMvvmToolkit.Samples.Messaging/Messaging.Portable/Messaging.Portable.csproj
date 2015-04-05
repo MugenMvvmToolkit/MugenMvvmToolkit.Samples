@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\packages\MugenMVVMToolkit.3.3.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

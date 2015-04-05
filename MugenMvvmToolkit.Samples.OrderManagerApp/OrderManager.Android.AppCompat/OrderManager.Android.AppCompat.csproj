@@ -61,25 +61,20 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit">
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android">
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.AppCompat">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=3.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding">
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -109,14 +104,14 @@
     <Compile Include="..\OrderManager.Android\Views\MainActivity.cs">
       <Link>Views\MainActivity.cs</Link>
     </Compile>
-    <Compile Include="..\OrderManager.Android\Views\Orders\OrderEditorFragmentView.cs">
-      <Link>Views\Orders\OrderEditorFragmentView.cs</Link>
+    <Compile Include="..\OrderManager.Android\Views\Orders\OrderEditorView.cs">
+      <Link>Views\Orders\OrderEditorView.cs</Link>
     </Compile>
     <Compile Include="..\OrderManager.Android\Views\Orders\OrderWorkspaceActivityView.cs">
       <Link>Views\Orders\OrderWorkspaceActivityView.cs</Link>
     </Compile>
-    <Compile Include="..\OrderManager.Android\Views\Products\ProductEditorFragmentView.cs">
-      <Link>Views\Products\ProductEditorFragmentView.cs</Link>
+    <Compile Include="..\OrderManager.Android\Views\Products\ProductEditorView.cs">
+      <Link>Views\Products\ProductEditorView.cs</Link>
     </Compile>
     <Compile Include="..\OrderManager.Android\Views\Products\ProductWorkspaceActivityView.cs">
       <Link>Views\Products\ProductWorkspaceActivityView.cs</Link>

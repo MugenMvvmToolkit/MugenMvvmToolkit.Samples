@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using ApiExamples.Models;
 using ApiExamples.ViewModels.Fragments;
@@ -44,7 +45,7 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel)))
 #endif
             };
-            ShowCommand = new RelayCommand<ViewModelCommandParameter>(Show);
+            ShowCommand = RelayCommandBase.FromAsyncHandler<ViewModelCommandParameter>(Show);
         }
 
         #endregion
@@ -59,7 +60,7 @@ namespace ApiExamples.ViewModels
 
         public ICommand ShowCommand { get; private set; }
 
-        private async void Show(ViewModelCommandParameter parameter)
+        private async Task Show(ViewModelCommandParameter parameter)
         {
             using (IViewModel viewModel = GetViewModel(parameter.ViewModelType))
             {

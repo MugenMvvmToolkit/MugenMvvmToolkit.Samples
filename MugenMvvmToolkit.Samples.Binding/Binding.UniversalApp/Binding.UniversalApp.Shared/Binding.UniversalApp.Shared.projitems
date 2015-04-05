@@ -12,7 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\LocalizationManagerExt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SuspensionManager.cs" />
   </ItemGroup>

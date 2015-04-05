@@ -43,6 +43,8 @@
             this.arithmeticLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
+            this.nullConditionalLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,11 +169,32 @@
             this.viewBinder.IgnoreControlException = true;
             this.viewBinder.RootTagName = "Bindings";
             // 
+            // nullConditionalLabel
+            // 
+            this.nullConditionalLabel.AutoSize = true;
+            this.nullConditionalLabel.ForeColor = System.Drawing.Color.Green;
+            this.nullConditionalLabel.Location = new System.Drawing.Point(12, 348);
+            this.nullConditionalLabel.Name = "nullConditionalLabel";
+            this.nullConditionalLabel.Size = new System.Drawing.Size(41, 13);
+            this.nullConditionalLabel.TabIndex = 17;
+            this.nullConditionalLabel.Text = "label10";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 326);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(308, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Null conditional operator expression (Text?.Trim()?.Length ?? -1)";
+            // 
             // BindingExpressionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 360);
+            this.ClientSize = new System.Drawing.Size(456, 393);
+            this.Controls.Add(this.nullConditionalLabel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.arithmeticLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.conditionLabel);
@@ -211,5 +234,7 @@
         private System.Windows.Forms.Label arithmeticLabel;
         private System.Windows.Forms.Label label11;
         private Binding.WinForms.ViewBinder viewBinder;
+        private System.Windows.Forms.Label nullConditionalLabel;
+        private System.Windows.Forms.Label label4;
     }
 }

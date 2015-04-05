@@ -74,8 +74,8 @@ namespace OrderManager.Tests
                         wrapCallback(vm);
                     return wrapper.Object;
                 });
-            var operation = new AsyncOperation<bool?>();
-            operation.SetResult(OperationResult.CreateResult<bool?>(OperationType.PageNavigation, wrapper, result));
+            var operation = new NavigationOperation();
+            operation.SetResult(OperationResult.CreateResult(OperationType.PageNavigation, wrapper, result));
             ViewModelPresenterMock.Setup(presenter => presenter.ShowAsync(wrapper.Object, It.IsAny<IDataContext>()))
                                   .Returns(() => operation);
             return wrapper;

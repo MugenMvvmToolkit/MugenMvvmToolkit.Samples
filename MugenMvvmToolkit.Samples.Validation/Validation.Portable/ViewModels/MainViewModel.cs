@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -12,8 +13,8 @@ namespace Validation.Portable.ViewModels
 
         public MainViewModel()
         {
-            ShowAnnotationCommand = new RelayCommand(ShowAnnotation);
-            ShowUserEditorCommand = new RelayCommand(ShowUserEditor);
+            ShowAnnotationCommand = RelayCommandBase.FromAsyncHandler(ShowAnnotation);
+            ShowUserEditorCommand = RelayCommandBase.FromAsyncHandler(ShowUserEditor);
         }
 
         #endregion
@@ -28,7 +29,7 @@ namespace Validation.Portable.ViewModels
 
         #region Methods
 
-        private async void ShowAnnotation(object obj)
+        private async Task ShowAnnotation()
         {
             var model = new ValidatableModel();
             using (var viewModel = GetViewModel<DataAnnotationViewModel>())
@@ -39,7 +40,7 @@ namespace Validation.Portable.ViewModels
             }
         }
 
-        private async void ShowUserEditor(object obj)
+        private async Task ShowUserEditor()
         {
             using (var viewModel = GetViewModel<UserWorkspaceViewModel>())
                 await viewModel.ShowAsync();

@@ -58,6 +58,10 @@
                            TextWrapping="Wrap" />
                 <TextBlock markupExtensions:View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" Margin="1 1 1 10"
                            Foreground="Green" TextWrapping="Wrap" />
+
+                <TextBlock Text="Null conditional expression (Text?.Trim()?.Length ?? -1)" Margin="1" 
+                           TextWrapping="Wrap"/>
+                <TextBlock markupExtensions:View.Bind="Text NullableText?.Trim()?.Length ?? -1" Margin="1 1 1 10" Foreground="Green" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

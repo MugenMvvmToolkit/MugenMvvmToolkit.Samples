@@ -11,7 +11,7 @@ namespace Binding.Portable.ViewModels
         #endregion
 
         #region Properties
-
+        //TODO FIX
         public string Text
         {
             get { return _text; }
@@ -20,8 +20,14 @@ namespace Binding.Portable.ViewModels
                 if (Equals(_text, value))
                     return;
                 _text = value;
-                OnPropertyChanged();                
+                OnPropertyChanged();
+                OnPropertyChanged(() => NullableText);
             }
+        }
+
+        public string NullableText
+        {
+            get { return string.IsNullOrEmpty(Text) ? null : Text; }
         }
 
         #endregion

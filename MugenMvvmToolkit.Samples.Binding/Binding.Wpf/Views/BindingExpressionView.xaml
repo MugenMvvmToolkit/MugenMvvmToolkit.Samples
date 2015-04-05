@@ -20,10 +20,13 @@
         <TextBlock Text="{DataBinding '$string.IsNullOrEmpty(Text) ? \'String is empty\' : \'String is not empty\''}" Margin="1 1 1 10" Foreground="Green" />
 
         <TextBlock Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" Margin="1" />
-        <TextBlock Text="{DataBinding 'Text.Count() + 100 + Text.GetHashCode()'}" Margin="1 1 1 10" Foreground="Green" />-->
+        <TextBlock Text="{DataBinding 'Text.Count() + 100 + Text.GetHashCode()'}" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Null conditional operator expression (Text?.Trim()?.Length ?? -1)" Margin="1" />
+        <TextBlock Text="{DataBinding 'NullableText?.Trim()?.Length ?? -1'}" Margin="1 1 1 10" Foreground="Green" />-->
 
         <!--        Equivalent syntax.-->
-        <TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1" />
+         <TextBlock Text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" Margin="1" />
         <TextBlock View.Bind="Text Text.Count(x => x == 'a')" Margin="1 1 1 10" Foreground="Green" />
 
         <TextBlock Text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" Margin="1" />
@@ -37,5 +40,8 @@
 
         <TextBlock Text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" Margin="1" />
         <TextBlock View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" Margin="1 1 1 10" Foreground="Green" />
+
+        <TextBlock Text="Null conditional operator expression (Text?.Trim()?.Length ?? -1)" Margin="1" />
+        <TextBlock View.Bind="Text NullableText?.Trim()?.Length ?? -1" Margin="1 1 1 10" Foreground="Green" />
     </StackPanel>
 </Window>

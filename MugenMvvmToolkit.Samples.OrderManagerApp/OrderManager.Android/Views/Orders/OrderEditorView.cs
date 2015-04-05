@@ -1,3 +1,4 @@
+using MugenMvvmToolkit.Views;
 #if APPCOMPAT
 using MugenMvvmToolkit.AppCompat.Views.Fragments;
 #else
@@ -6,9 +7,9 @@ using MugenMvvmToolkit.FragmentSupport.Views.Fragments;
 
 namespace OrderManager.Android.Views.Orders
 {
-    public class OrderEditorFragmentView : MvvmFragment
+    public class OrderEditorView : UserControl //you can use MvvmFragment instead of UserControl, but UserControl is lighter than the Fragment.
     {
-        public OrderEditorFragmentView()
+        public OrderEditorView()
             : base(Resource.Layout.OrderEditorView)
         {
         }

@@ -138,6 +138,23 @@ namespace Binding.Touch.Views
                 };
                 set.BindFromExpression(label, "Text Text.Count() + 100 + Text.GetHashCode()");
                 scrollView.AddSubview(label);
+
+                label = new UILabel(new CGRect(20, 300, View.Frame.Width - 40, 25))
+                {
+                    Text = "Null conditional expression (Text?.Trim()?.Length ?? -1)",
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    Font = font
+                };
+                scrollView.AddSubview(label);
+
+                label = new UILabel(new CGRect(20, 325, View.Frame.Width - 40, 25))
+                {
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    TextColor = UIColor.Green,
+                    Font = font
+                };
+                set.BindFromExpression(label, "Text NullableText?.Trim()?.Length ?? -1");
+                scrollView.AddSubview(label);
             }
         }
 

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Presenters;
@@ -31,7 +31,7 @@ namespace Validation.Portable.ViewModels
             _messagePresenter = messagePresenter;
 
             AddUserCommand = new RelayCommand(AddUser, CanAddUser, this);
-            RemoveUserCommand = new RelayCommand(RemoveUser, CanRemoveUser, this);
+            RemoveUserCommand = RelayCommandBase.FromAsyncHandler(RemoveUser, CanRemoveUser, this);
         }
 
         #endregion
@@ -72,7 +72,7 @@ namespace Validation.Portable.ViewModels
 
         #region Methods
 
-        private void AddUser(object obj)
+        private void AddUser()
         {
             UserEditorViewModel.ApplyChanges();
             UserModel entity = UserEditorViewModel.Entity;
@@ -82,12 +82,12 @@ namespace Validation.Portable.ViewModels
             InitializeNewUser();
         }
 
-        private bool CanAddUser(object obj)
+        private bool CanAddUser()
         {
             return UserEditorViewModel.IsValid;
         }
 
-        private async void RemoveUser(object obj)
+        private async Task RemoveUser()
         {
             UserModel selectedItem = UserGridViewModel.SelectedItem;
             if (await _messagePresenter.ShowAsync("Are you sure you want to remove the selected user?", string.Empty,
@@ -99,7 +99,7 @@ namespace Validation.Portable.ViewModels
             UserEditorViewModel.ValidateAsync();
         }
 
-        private bool CanRemoveUser(object obj)
+        private bool CanRemoveUser()
         {
             return UserGridViewModel.SelectedItem != null;
         }

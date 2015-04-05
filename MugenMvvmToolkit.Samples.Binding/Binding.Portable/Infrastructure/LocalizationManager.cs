@@ -13,23 +13,22 @@ namespace Binding.Portable.Infrastructure
 {
     public class LocalizationManager : NotifyPropertyChangedBase, ILocalizationManager, IDynamicObject
     {
-        #region Implementation of ILocalizationManager
+        #region Constructors
 
-        public virtual void Initilaize()
+        public LocalizationManager()
         {
             //Register the current object as resource object with alias 'i18n' to use it in bindings '$i18n.MyResource'.
             BindingServiceProvider.ResourceResolver.AddObject("i18n", new BindingResourceObject(this));
         }
 
+        #endregion
+
+        #region Implementation of ILocalizationManager
+
         public virtual void ChangeCulture(string culture)
         {
-            var cultureInfo = new CultureInfo(culture);
-            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
-            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
-
-            LocalizableResources.Culture = cultureInfo;
-            //Updating all properties.
-            OnPropertyChanged(string.Empty);
+            LocalizableResources.Culture = new CultureInfo(culture);
+            InvalidateProperties();
         }
 
         #endregion
@@ -52,7 +51,7 @@ namespace Binding.Portable.Infrastructure
         /// </returns>
         public virtual object GetMember(string member, IList<object> args)
         {
-            return LocalizableResources.ResourceManager.GetString(member);
+            return LocalizableResources.ResourceManager.GetString(member, LocalizableResources.Culture);
         }
 
         /// <summary>

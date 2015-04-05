@@ -54,10 +54,10 @@ namespace OrderManager.Portable.ViewModels.Orders
             _toastPresenter = toastPresenter;
             _trackingCollection = new TrackingCollection(new CompositeEqualityComparer().AddComparer(OrderModel.KeyComparer).AddComparer(OrderProductModel.KeyComparer));
 
-            SaveChangesCommand = new RelayCommand(SaveChanges, CanSaveChanges, this);
-            AddOrderCommand = new RelayCommand(AddOrder);
-            EditOrderCommand = new RelayCommand<OrderModel>(EditOrder, CanEditOrder, this);
-            RemoveOrderCommand = new RelayCommand<OrderModel>(RemoveOrder, CanRemoveOrder, this);
+            SaveChangesCommand = RelayCommandBase.FromAsyncHandler(SaveChanges, CanSaveChanges, this);
+            AddOrderCommand = RelayCommandBase.FromAsyncHandler(AddOrder);
+            EditOrderCommand = RelayCommandBase.FromAsyncHandler<OrderModel>(EditOrder, CanEditOrder, this);
+            RemoveOrderCommand = RelayCommandBase.FromAsyncHandler<OrderModel>(RemoveOrder, CanRemoveOrder, this);
             DisplayName = UiResources.OrderWorkspaceName;
         }
 
@@ -111,7 +111,7 @@ namespace OrderManager.Portable.ViewModels.Orders
 
         #region Command's methods
 
-        private async void SaveChanges(object obj)
+        private async Task SaveChanges()
         {
             try
             {
@@ -123,12 +123,12 @@ namespace OrderManager.Portable.ViewModels.Orders
             }
         }
 
-        private bool CanSaveChanges(object obj)
+        private bool CanSaveChanges()
         {
             return HasChanges;
         }
 
-        private async void AddOrder(object obj)
+        private async Task AddOrder()
         {
             using (var editorVm = GetViewModel<OrderEditorViewModel>())
             using (var editorDialogVm = editorVm.Wrap<IEditorWrapperViewModel>())
@@ -152,7 +152,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             }
         }
 
-        private async void EditOrder(OrderModel obj)
+        private async Task EditOrder(OrderModel obj)
         {
             using (var editorVm = GetViewModel<OrderEditorViewModel>())
             using (var editorDialogVm = editorVm.Wrap<IEditorWrapperViewModel>())
@@ -194,7 +194,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             return obj != null || (GridViewModel != null && GridViewModel.SelectedItem != null);
         }
 
-        private async void RemoveOrder(OrderModel obj)
+        private async Task RemoveOrder(OrderModel obj)
         {
             OrderModel item = obj ?? GridViewModel.SelectedItem;
             string message = string.Format(UiResources.DeleteOrderQuestionFormat, item.Name);

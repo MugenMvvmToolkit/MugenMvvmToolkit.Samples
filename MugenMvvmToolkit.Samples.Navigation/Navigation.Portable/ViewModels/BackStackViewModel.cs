@@ -23,8 +23,8 @@ namespace Navigation.Portable.ViewModels
         public BackStackViewModel()
         {
             Depth = 1;
-            NavigateCommand = new RelayCommand(Navigate);
-            NavigateClearBackStackCommand = new RelayCommand(NavigateClearBackStack);
+            NavigateCommand = RelayCommandBase.FromAsyncHandler(Navigate);
+            NavigateClearBackStackCommand = RelayCommandBase.FromAsyncHandler(NavigateClearBackStack);
         }
 
         #endregion
@@ -35,13 +35,13 @@ namespace Navigation.Portable.ViewModels
 
         public ICommand NavigateClearBackStackCommand { get; private set; }
 
-        private async void NavigateClearBackStack(object o)
+        private async Task NavigateClearBackStack()
         {
             using (var vm = GetViewModel<MainViewModel>())
                 await vm.ShowAsync(NavigationConstants.ClearBackStack.ToValue(true));
         }
 
-        private async void Navigate(object o)
+        private async Task Navigate()
         {
             using (var vm = GetViewModel<BackStackViewModel>())
             {
