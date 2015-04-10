@@ -40,6 +40,7 @@ namespace Navigation.Android
 			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::Navigation.Android.Resource.Id.AttachedProperties;
 			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::Navigation.Android.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Navigation.Android.Resource.Id.OptionsMenu;
+			global::MugenMvvmToolkit.Resource.String.Empty = global::Navigation.Android.Resource.String.Empty;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Navigation.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Navigation.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_TabContentId = global::Navigation.Android.Resource.Styleable.ActionBar_TabContentId;
@@ -123,23 +124,23 @@ namespace Navigation.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int AttachedProperties = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int AttachedProperties = 2131034114;
 			
-			// aapt resource value: 0x7f040001
-			public const int ListenParentChange = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ListenParentChange = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int OptionsMenu = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int OptionsMenu = 2131034112;
 			
-			// aapt resource value: 0x7f040004
-			public const int placeholder = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int placeholder = 2131034116;
 			
-			// aapt resource value: 0x7f040003
-			public const int tabContentId = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int tabContentId = 2131034115;
 			
-			// aapt resource value: 0x7f040005
-			public const int viewmodelplaceholder = 2130968581;
+			// aapt resource value: 0x7f050005
+			public const int viewmodelplaceholder = 2131034117;
 			
 			static Id()
 			{
@@ -188,8 +189,8 @@ namespace Navigation.Android
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MainMenu = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int MainMenu = 2131099648;
 			
 			static Menu()
 			{
@@ -197,6 +198,22 @@ namespace Navigation.Android
 			}
 			
 			private Menu()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int Empty = 2130968576;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}

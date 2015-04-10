@@ -40,6 +40,7 @@ namespace Validation.Android
 			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::Validation.Android.Resource.Id.AttachedProperties;
 			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::Validation.Android.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::Validation.Android.Resource.Id.OptionsMenu;
+			global::MugenMvvmToolkit.Resource.String.Empty = global::Validation.Android.Resource.String.Empty;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::Validation.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::Validation.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_TabContentId = global::Validation.Android.Resource.Styleable.ActionBar_TabContentId;
@@ -123,14 +124,14 @@ namespace Validation.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int AttachedProperties = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int AttachedProperties = 2131034114;
 			
-			// aapt resource value: 0x7f040001
-			public const int ListenParentChange = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ListenParentChange = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int OptionsMenu = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int OptionsMenu = 2131034112;
 			
 			static Id()
 			{
@@ -163,6 +164,22 @@ namespace Validation.Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int Empty = 2130968576;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}

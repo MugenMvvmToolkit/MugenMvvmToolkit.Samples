@@ -90,17 +90,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\Xamarin.iOS10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\Xamarin.iOS10\MugenMvvmToolkit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\Xamarin.iOS10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\Xamarin.iOS10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\Xamarin.iOS10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\Xamarin.iOS10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.iOS">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\Xamarin.iOS10\MugenMvvmToolkit.Xamarin.Forms.iOS.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.iOS, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\Xamarin.iOS10\MugenMvvmToolkit.Xamarin.Forms.iOS.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

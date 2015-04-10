@@ -38,20 +38,20 @@
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.3.4.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.3.4.1\lib\net45\MugenMvvmToolkit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.4.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.3.4.1\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.4.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.4.1\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.WinForms, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.4.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.3.4.1\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

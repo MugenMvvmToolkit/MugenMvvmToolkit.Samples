@@ -26,973 +26,6 @@ namespace OrderManager.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_fade_in = global::OrderManager.Android.Resource.Animation.abc_fade_in;
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_fade_out = global::OrderManager.Android.Resource.Animation.abc_fade_out;
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_slide_in_bottom = global::OrderManager.Android.Resource.Animation.abc_slide_in_bottom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_slide_in_top = global::OrderManager.Android.Resource.Animation.abc_slide_in_top;
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_slide_out_bottom = global::OrderManager.Android.Resource.Animation.abc_slide_out_bottom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Animation.abc_slide_out_top = global::OrderManager.Android.Resource.Animation.abc_slide_out_top;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.ActionBarTemplate = global::OrderManager.Android.Resource.Attribute.ActionBarTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.Bind = global::OrderManager.Android.Resource.Attribute.Bind;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.Bindings = global::OrderManager.Android.Resource.Attribute.Bindings;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.ContentTemplate = global::OrderManager.Android.Resource.Attribute.ContentTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.DropDownItemTemplate = global::OrderManager.Android.Resource.Attribute.DropDownItemTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.ItemTemplate = global::OrderManager.Android.Resource.Attribute.ItemTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.MenuTemplate = global::OrderManager.Android.Resource.Attribute.MenuTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.PlacementTargetPath = global::OrderManager.Android.Resource.Attribute.PlacementTargetPath;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.PopupMenuEvent = global::OrderManager.Android.Resource.Attribute.PopupMenuEvent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.PopupMenuTemplate = global::OrderManager.Android.Resource.Attribute.PopupMenuTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.TabContentId = global::OrderManager.Android.Resource.Attribute.TabContentId;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarDivider = global::OrderManager.Android.Resource.Attribute.actionBarDivider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarItemBackground = global::OrderManager.Android.Resource.Attribute.actionBarItemBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarPopupTheme = global::OrderManager.Android.Resource.Attribute.actionBarPopupTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarSize = global::OrderManager.Android.Resource.Attribute.actionBarSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarSplitStyle = global::OrderManager.Android.Resource.Attribute.actionBarSplitStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarStyle = global::OrderManager.Android.Resource.Attribute.actionBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarTabBarStyle = global::OrderManager.Android.Resource.Attribute.actionBarTabBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarTabStyle = global::OrderManager.Android.Resource.Attribute.actionBarTabStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarTabTextStyle = global::OrderManager.Android.Resource.Attribute.actionBarTabTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarTheme = global::OrderManager.Android.Resource.Attribute.actionBarTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionBarWidgetTheme = global::OrderManager.Android.Resource.Attribute.actionBarWidgetTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionButtonStyle = global::OrderManager.Android.Resource.Attribute.actionButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionDropDownStyle = global::OrderManager.Android.Resource.Attribute.actionDropDownStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionLayout = global::OrderManager.Android.Resource.Attribute.actionLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionMenuTextAppearance = global::OrderManager.Android.Resource.Attribute.actionMenuTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionMenuTextColor = global::OrderManager.Android.Resource.Attribute.actionMenuTextColor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeBackground = global::OrderManager.Android.Resource.Attribute.actionModeBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeCloseButtonStyle = global::OrderManager.Android.Resource.Attribute.actionModeCloseButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeCloseDrawable = global::OrderManager.Android.Resource.Attribute.actionModeCloseDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeCopyDrawable = global::OrderManager.Android.Resource.Attribute.actionModeCopyDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeCutDrawable = global::OrderManager.Android.Resource.Attribute.actionModeCutDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeFindDrawable = global::OrderManager.Android.Resource.Attribute.actionModeFindDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModePasteDrawable = global::OrderManager.Android.Resource.Attribute.actionModePasteDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModePopupWindowStyle = global::OrderManager.Android.Resource.Attribute.actionModePopupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeSelectAllDrawable = global::OrderManager.Android.Resource.Attribute.actionModeSelectAllDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeShareDrawable = global::OrderManager.Android.Resource.Attribute.actionModeShareDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeSplitBackground = global::OrderManager.Android.Resource.Attribute.actionModeSplitBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeStyle = global::OrderManager.Android.Resource.Attribute.actionModeStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionModeWebSearchDrawable = global::OrderManager.Android.Resource.Attribute.actionModeWebSearchDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionOverflowButtonStyle = global::OrderManager.Android.Resource.Attribute.actionOverflowButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionOverflowMenuStyle = global::OrderManager.Android.Resource.Attribute.actionOverflowMenuStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionProviderClass = global::OrderManager.Android.Resource.Attribute.actionProviderClass;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.actionViewClass = global::OrderManager.Android.Resource.Attribute.actionViewClass;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.activityChooserViewStyle = global::OrderManager.Android.Resource.Attribute.activityChooserViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.background = global::OrderManager.Android.Resource.Attribute.background;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.backgroundSplit = global::OrderManager.Android.Resource.Attribute.backgroundSplit;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.backgroundStacked = global::OrderManager.Android.Resource.Attribute.backgroundStacked;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.barSize = global::OrderManager.Android.Resource.Attribute.barSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.buttonBarButtonStyle = global::OrderManager.Android.Resource.Attribute.buttonBarButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.buttonBarStyle = global::OrderManager.Android.Resource.Attribute.buttonBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.closeIcon = global::OrderManager.Android.Resource.Attribute.closeIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.closeItemLayout = global::OrderManager.Android.Resource.Attribute.closeItemLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.collapseContentDescription = global::OrderManager.Android.Resource.Attribute.collapseContentDescription;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.collapseIcon = global::OrderManager.Android.Resource.Attribute.collapseIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.color = global::OrderManager.Android.Resource.Attribute.color;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorAccent = global::OrderManager.Android.Resource.Attribute.colorAccent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorButtonNormal = global::OrderManager.Android.Resource.Attribute.colorButtonNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorControlActivated = global::OrderManager.Android.Resource.Attribute.colorControlActivated;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorControlHighlight = global::OrderManager.Android.Resource.Attribute.colorControlHighlight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorControlNormal = global::OrderManager.Android.Resource.Attribute.colorControlNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorPrimary = global::OrderManager.Android.Resource.Attribute.colorPrimary;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorPrimaryDark = global::OrderManager.Android.Resource.Attribute.colorPrimaryDark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.colorSwitchThumbNormal = global::OrderManager.Android.Resource.Attribute.colorSwitchThumbNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.commitIcon = global::OrderManager.Android.Resource.Attribute.commitIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.contentInsetEnd = global::OrderManager.Android.Resource.Attribute.contentInsetEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.contentInsetLeft = global::OrderManager.Android.Resource.Attribute.contentInsetLeft;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.contentInsetRight = global::OrderManager.Android.Resource.Attribute.contentInsetRight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.contentInsetStart = global::OrderManager.Android.Resource.Attribute.contentInsetStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.customNavigationLayout = global::OrderManager.Android.Resource.Attribute.customNavigationLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.disableChildrenWhenDisabled = global::OrderManager.Android.Resource.Attribute.disableChildrenWhenDisabled;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.displayOptions = global::OrderManager.Android.Resource.Attribute.displayOptions;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.divider = global::OrderManager.Android.Resource.Attribute.divider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.dividerHorizontal = global::OrderManager.Android.Resource.Attribute.dividerHorizontal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.dividerPadding = global::OrderManager.Android.Resource.Attribute.dividerPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.dividerVertical = global::OrderManager.Android.Resource.Attribute.dividerVertical;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.drawableSize = global::OrderManager.Android.Resource.Attribute.drawableSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.drawerArrowStyle = global::OrderManager.Android.Resource.Attribute.drawerArrowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.dropDownListViewStyle = global::OrderManager.Android.Resource.Attribute.dropDownListViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.dropdownListPreferredItemHeight = global::OrderManager.Android.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.editTextBackground = global::OrderManager.Android.Resource.Attribute.editTextBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.editTextColor = global::OrderManager.Android.Resource.Attribute.editTextColor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.elevation = global::OrderManager.Android.Resource.Attribute.elevation;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.expandActivityOverflowButtonDrawable = global::OrderManager.Android.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.gapBetweenBars = global::OrderManager.Android.Resource.Attribute.gapBetweenBars;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.goIcon = global::OrderManager.Android.Resource.Attribute.goIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.height = global::OrderManager.Android.Resource.Attribute.height;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.hideOnContentScroll = global::OrderManager.Android.Resource.Attribute.hideOnContentScroll;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.homeAsUpIndicator = global::OrderManager.Android.Resource.Attribute.homeAsUpIndicator;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.homeLayout = global::OrderManager.Android.Resource.Attribute.homeLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.icon = global::OrderManager.Android.Resource.Attribute.icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.iconifiedByDefault = global::OrderManager.Android.Resource.Attribute.iconifiedByDefault;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.indeterminateProgressStyle = global::OrderManager.Android.Resource.Attribute.indeterminateProgressStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.initialActivityCount = global::OrderManager.Android.Resource.Attribute.initialActivityCount;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.isLightTheme = global::OrderManager.Android.Resource.Attribute.isLightTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.itemPadding = global::OrderManager.Android.Resource.Attribute.itemPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.layout = global::OrderManager.Android.Resource.Attribute.layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listChoiceBackgroundIndicator = global::OrderManager.Android.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPopupWindowStyle = global::OrderManager.Android.Resource.Attribute.listPopupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPreferredItemHeight = global::OrderManager.Android.Resource.Attribute.listPreferredItemHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPreferredItemHeightLarge = global::OrderManager.Android.Resource.Attribute.listPreferredItemHeightLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPreferredItemHeightSmall = global::OrderManager.Android.Resource.Attribute.listPreferredItemHeightSmall;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPreferredItemPaddingLeft = global::OrderManager.Android.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.listPreferredItemPaddingRight = global::OrderManager.Android.Resource.Attribute.listPreferredItemPaddingRight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.logo = global::OrderManager.Android.Resource.Attribute.logo;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.maxButtonHeight = global::OrderManager.Android.Resource.Attribute.maxButtonHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.measureWithLargestChild = global::OrderManager.Android.Resource.Attribute.measureWithLargestChild;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.middleBarArrowSize = global::OrderManager.Android.Resource.Attribute.middleBarArrowSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.navigationContentDescription = global::OrderManager.Android.Resource.Attribute.navigationContentDescription;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.navigationIcon = global::OrderManager.Android.Resource.Attribute.navigationIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.navigationMode = global::OrderManager.Android.Resource.Attribute.navigationMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.overlapAnchor = global::OrderManager.Android.Resource.Attribute.overlapAnchor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.paddingEnd = global::OrderManager.Android.Resource.Attribute.paddingEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.paddingStart = global::OrderManager.Android.Resource.Attribute.paddingStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.panelBackground = global::OrderManager.Android.Resource.Attribute.panelBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.panelMenuListTheme = global::OrderManager.Android.Resource.Attribute.panelMenuListTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.panelMenuListWidth = global::OrderManager.Android.Resource.Attribute.panelMenuListWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.popupMenuStyle = global::OrderManager.Android.Resource.Attribute.popupMenuStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.popupPromptView = global::OrderManager.Android.Resource.Attribute.popupPromptView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.popupTheme = global::OrderManager.Android.Resource.Attribute.popupTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.popupWindowStyle = global::OrderManager.Android.Resource.Attribute.popupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.preserveIconSpacing = global::OrderManager.Android.Resource.Attribute.preserveIconSpacing;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.progressBarPadding = global::OrderManager.Android.Resource.Attribute.progressBarPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.progressBarStyle = global::OrderManager.Android.Resource.Attribute.progressBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.prompt = global::OrderManager.Android.Resource.Attribute.prompt;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.queryBackground = global::OrderManager.Android.Resource.Attribute.queryBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.queryHint = global::OrderManager.Android.Resource.Attribute.queryHint;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.searchIcon = global::OrderManager.Android.Resource.Attribute.searchIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.searchViewStyle = global::OrderManager.Android.Resource.Attribute.searchViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.selectableItemBackground = global::OrderManager.Android.Resource.Attribute.selectableItemBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.selectableItemBackgroundBorderless = global::OrderManager.Android.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.showAsAction = global::OrderManager.Android.Resource.Attribute.showAsAction;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.showDividers = global::OrderManager.Android.Resource.Attribute.showDividers;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.showText = global::OrderManager.Android.Resource.Attribute.showText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.spinBars = global::OrderManager.Android.Resource.Attribute.spinBars;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.spinnerDropDownItemStyle = global::OrderManager.Android.Resource.Attribute.spinnerDropDownItemStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.spinnerMode = global::OrderManager.Android.Resource.Attribute.spinnerMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.spinnerStyle = global::OrderManager.Android.Resource.Attribute.spinnerStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.splitTrack = global::OrderManager.Android.Resource.Attribute.splitTrack;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.state_above_anchor = global::OrderManager.Android.Resource.Attribute.state_above_anchor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.submitBackground = global::OrderManager.Android.Resource.Attribute.submitBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.subtitle = global::OrderManager.Android.Resource.Attribute.subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.subtitleTextAppearance = global::OrderManager.Android.Resource.Attribute.subtitleTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.subtitleTextStyle = global::OrderManager.Android.Resource.Attribute.subtitleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.suggestionRowLayout = global::OrderManager.Android.Resource.Attribute.suggestionRowLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.switchMinWidth = global::OrderManager.Android.Resource.Attribute.switchMinWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.switchPadding = global::OrderManager.Android.Resource.Attribute.switchPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.switchStyle = global::OrderManager.Android.Resource.Attribute.switchStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.switchTextAppearance = global::OrderManager.Android.Resource.Attribute.switchTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAllCaps = global::OrderManager.Android.Resource.Attribute.textAllCaps;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceLargePopupMenu = global::OrderManager.Android.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceListItem = global::OrderManager.Android.Resource.Attribute.textAppearanceListItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceListItemSmall = global::OrderManager.Android.Resource.Attribute.textAppearanceListItemSmall;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceSearchResultSubtitle = global::OrderManager.Android.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceSearchResultTitle = global::OrderManager.Android.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textAppearanceSmallPopupMenu = global::OrderManager.Android.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.textColorSearchUrl = global::OrderManager.Android.Resource.Attribute.textColorSearchUrl;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.theme = global::OrderManager.Android.Resource.Attribute.theme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.thickness = global::OrderManager.Android.Resource.Attribute.thickness;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.thumbTextPadding = global::OrderManager.Android.Resource.Attribute.thumbTextPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.title = global::OrderManager.Android.Resource.Attribute.title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleMarginBottom = global::OrderManager.Android.Resource.Attribute.titleMarginBottom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleMarginEnd = global::OrderManager.Android.Resource.Attribute.titleMarginEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleMarginStart = global::OrderManager.Android.Resource.Attribute.titleMarginStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleMarginTop = global::OrderManager.Android.Resource.Attribute.titleMarginTop;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleMargins = global::OrderManager.Android.Resource.Attribute.titleMargins;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleTextAppearance = global::OrderManager.Android.Resource.Attribute.titleTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.titleTextStyle = global::OrderManager.Android.Resource.Attribute.titleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.toolbarNavigationButtonStyle = global::OrderManager.Android.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.toolbarStyle = global::OrderManager.Android.Resource.Attribute.toolbarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.topBottomBarArrowSize = global::OrderManager.Android.Resource.Attribute.topBottomBarArrowSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.track = global::OrderManager.Android.Resource.Attribute.track;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.voiceIcon = global::OrderManager.Android.Resource.Attribute.voiceIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowActionBar = global::OrderManager.Android.Resource.Attribute.windowActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowActionBarOverlay = global::OrderManager.Android.Resource.Attribute.windowActionBarOverlay;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowActionModeOverlay = global::OrderManager.Android.Resource.Attribute.windowActionModeOverlay;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowFixedHeightMajor = global::OrderManager.Android.Resource.Attribute.windowFixedHeightMajor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowFixedHeightMinor = global::OrderManager.Android.Resource.Attribute.windowFixedHeightMinor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowFixedWidthMajor = global::OrderManager.Android.Resource.Attribute.windowFixedWidthMajor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Attribute.windowFixedWidthMinor = global::OrderManager.Android.Resource.Attribute.windowFixedWidthMinor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_action_bar_embed_tabs = global::OrderManager.Android.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb = global::OrderManager.Android.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive = global::OrderManager.Android.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::OrderManager.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon = global::OrderManager.Android.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::OrderManager.Android.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_background_cache_hint_selector_material_dark = global::OrderManager.Android.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_background_cache_hint_selector_material_light = global::OrderManager.Android.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_input_method_navigation_guard = global::OrderManager.Android.Resource.Color.abc_input_method_navigation_guard;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_primary_text_disable_only_material_dark = global::OrderManager.Android.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_primary_text_disable_only_material_light = global::OrderManager.Android.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_primary_text_material_dark = global::OrderManager.Android.Resource.Color.abc_primary_text_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_primary_text_material_light = global::OrderManager.Android.Resource.Color.abc_primary_text_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_search_url_text = global::OrderManager.Android.Resource.Color.abc_search_url_text;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_search_url_text_normal = global::OrderManager.Android.Resource.Color.abc_search_url_text_normal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_search_url_text_pressed = global::OrderManager.Android.Resource.Color.abc_search_url_text_pressed;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_search_url_text_selected = global::OrderManager.Android.Resource.Color.abc_search_url_text_selected;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_secondary_text_material_dark = global::OrderManager.Android.Resource.Color.abc_secondary_text_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.abc_secondary_text_material_light = global::OrderManager.Android.Resource.Color.abc_secondary_text_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.accent_material_dark = global::OrderManager.Android.Resource.Color.accent_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.accent_material_light = global::OrderManager.Android.Resource.Color.accent_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.background_floating_material_dark = global::OrderManager.Android.Resource.Color.background_floating_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.background_floating_material_light = global::OrderManager.Android.Resource.Color.background_floating_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.background_material_dark = global::OrderManager.Android.Resource.Color.background_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.background_material_light = global::OrderManager.Android.Resource.Color.background_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_disabled_material_dark = global::OrderManager.Android.Resource.Color.bright_foreground_disabled_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_disabled_material_light = global::OrderManager.Android.Resource.Color.bright_foreground_disabled_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_inverse_material_dark = global::OrderManager.Android.Resource.Color.bright_foreground_inverse_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_inverse_material_light = global::OrderManager.Android.Resource.Color.bright_foreground_inverse_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_material_dark = global::OrderManager.Android.Resource.Color.bright_foreground_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.bright_foreground_material_light = global::OrderManager.Android.Resource.Color.bright_foreground_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.button_material_dark = global::OrderManager.Android.Resource.Color.button_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.button_material_light = global::OrderManager.Android.Resource.Color.button_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.dim_foreground_disabled_material_dark = global::OrderManager.Android.Resource.Color.dim_foreground_disabled_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.dim_foreground_disabled_material_light = global::OrderManager.Android.Resource.Color.dim_foreground_disabled_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.dim_foreground_material_dark = global::OrderManager.Android.Resource.Color.dim_foreground_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.dim_foreground_material_light = global::OrderManager.Android.Resource.Color.dim_foreground_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.highlighted_text_material_dark = global::OrderManager.Android.Resource.Color.highlighted_text_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.highlighted_text_material_light = global::OrderManager.Android.Resource.Color.highlighted_text_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.hint_foreground_material_dark = global::OrderManager.Android.Resource.Color.hint_foreground_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.hint_foreground_material_light = global::OrderManager.Android.Resource.Color.hint_foreground_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.link_text_material_dark = global::OrderManager.Android.Resource.Color.link_text_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.link_text_material_light = global::OrderManager.Android.Resource.Color.link_text_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.material_blue_grey_800 = global::OrderManager.Android.Resource.Color.material_blue_grey_800;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.material_blue_grey_900 = global::OrderManager.Android.Resource.Color.material_blue_grey_900;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.material_blue_grey_950 = global::OrderManager.Android.Resource.Color.material_blue_grey_950;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.material_deep_teal_200 = global::OrderManager.Android.Resource.Color.material_deep_teal_200;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.material_deep_teal_500 = global::OrderManager.Android.Resource.Color.material_deep_teal_500;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_dark_material_dark = global::OrderManager.Android.Resource.Color.primary_dark_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_dark_material_light = global::OrderManager.Android.Resource.Color.primary_dark_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_material_dark = global::OrderManager.Android.Resource.Color.primary_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_material_light = global::OrderManager.Android.Resource.Color.primary_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_text_default_material_dark = global::OrderManager.Android.Resource.Color.primary_text_default_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_text_default_material_light = global::OrderManager.Android.Resource.Color.primary_text_default_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_text_disabled_material_dark = global::OrderManager.Android.Resource.Color.primary_text_disabled_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.primary_text_disabled_material_light = global::OrderManager.Android.Resource.Color.primary_text_disabled_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.ripple_material_dark = global::OrderManager.Android.Resource.Color.ripple_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.ripple_material_light = global::OrderManager.Android.Resource.Color.ripple_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.secondary_text_default_material_dark = global::OrderManager.Android.Resource.Color.secondary_text_default_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.secondary_text_default_material_light = global::OrderManager.Android.Resource.Color.secondary_text_default_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.secondary_text_disabled_material_dark = global::OrderManager.Android.Resource.Color.secondary_text_disabled_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.secondary_text_disabled_material_light = global::OrderManager.Android.Resource.Color.secondary_text_disabled_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.switch_thumb_normal_material_dark = global::OrderManager.Android.Resource.Color.switch_thumb_normal_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Color.switch_thumb_normal_material_light = global::OrderManager.Android.Resource.Color.switch_thumb_normal_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_default_height_material = global::OrderManager.Android.Resource.Dimension.abc_action_bar_default_height_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_default_padding_material = global::OrderManager.Android.Resource.Dimension.abc_action_bar_default_padding_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::OrderManager.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_progress_bar_size = global::OrderManager.Android.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_stacked_max_height = global::OrderManager.Android.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::OrderManager.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::OrderManager.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::OrderManager.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_button_min_height_material = global::OrderManager.Android.Resource.Dimension.abc_action_button_min_height_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_button_min_width_material = global::OrderManager.Android.Resource.Dimension.abc_action_button_min_width_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_action_button_min_width_overflow_material = global::OrderManager.Android.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_config_prefDialogWidth = global::OrderManager.Android.Resource.Dimension.abc_config_prefDialogWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_control_inset_material = global::OrderManager.Android.Resource.Dimension.abc_control_inset_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_control_padding_material = global::OrderManager.Android.Resource.Dimension.abc_control_padding_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_dropdownitem_icon_width = global::OrderManager.Android.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_dropdownitem_text_padding_left = global::OrderManager.Android.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_dropdownitem_text_padding_right = global::OrderManager.Android.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_panel_menu_list_width = global::OrderManager.Android.Resource.Dimension.abc_panel_menu_list_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_search_view_preferred_width = global::OrderManager.Android.Resource.Dimension.abc_search_view_preferred_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_search_view_text_min_width = global::OrderManager.Android.Resource.Dimension.abc_search_view_text_min_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_body_1_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_body_1_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_body_2_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_body_2_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_button_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_button_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_caption_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_caption_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_display_1_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_display_1_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_display_2_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_display_2_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_display_3_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_display_3_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_display_4_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_display_4_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_headline_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_headline_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_large_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_large_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_medium_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_medium_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_menu_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_menu_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_small_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_small_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_subhead_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_subhead_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::OrderManager.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_title_material = global::OrderManager.Android.Resource.Dimension.abc_text_size_title_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.abc_text_size_title_material_toolbar = global::OrderManager.Android.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.dialog_fixed_height_major = global::OrderManager.Android.Resource.Dimension.dialog_fixed_height_major;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.dialog_fixed_height_minor = global::OrderManager.Android.Resource.Dimension.dialog_fixed_height_minor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.dialog_fixed_width_major = global::OrderManager.Android.Resource.Dimension.dialog_fixed_width_major;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.dialog_fixed_width_minor = global::OrderManager.Android.Resource.Dimension.dialog_fixed_width_minor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.disabled_alpha_material_dark = global::OrderManager.Android.Resource.Dimension.disabled_alpha_material_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Dimension.disabled_alpha_material_light = global::OrderManager.Android.Resource.Dimension.disabled_alpha_material_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ab_share_pack_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_ab_share_pack_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ab_share_pack_holo_light = global::OrderManager.Android.Resource.Drawable.abc_ab_share_pack_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_check_material = global::OrderManager.Android.Resource.Drawable.abc_btn_check_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::OrderManager.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::OrderManager.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_radio_material = global::OrderManager.Android.Resource.Drawable.abc_btn_radio_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::OrderManager.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::OrderManager.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::OrderManager.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::OrderManager.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_cab_background_internal_bg = global::OrderManager.Android.Resource.Drawable.abc_cab_background_internal_bg;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_cab_background_top_material = global::OrderManager.Android.Resource.Drawable.abc_cab_background_top_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_edit_text_material = global::OrderManager.Android.Resource.Drawable.abc_edit_text_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_clear_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_clear_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_search_api_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_search_api_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_item_background_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_item_background_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_item_background_holo_light = global::OrderManager.Android.Resource.Drawable.abc_item_background_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_divider_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_focused_holo = global::OrderManager.Android.Resource.Drawable.abc_list_focused_holo;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_longpressed_holo = global::OrderManager.Android.Resource.Drawable.abc_list_longpressed_holo;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_pressed_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_pressed_holo_light = global::OrderManager.Android.Resource.Drawable.abc_list_pressed_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::OrderManager.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_disabled_holo_light = global::OrderManager.Android.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_holo_dark = global::OrderManager.Android.Resource.Drawable.abc_list_selector_holo_dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_list_selector_holo_light = global::OrderManager.Android.Resource.Drawable.abc_list_selector_holo_light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::OrderManager.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_popup_background_mtrl_mult = global::OrderManager.Android.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::OrderManager.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_switch_thumb_material = global::OrderManager.Android.Resource.Drawable.abc_switch_thumb_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_switch_track_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_tab_indicator_material = global::OrderManager.Android.Resource.Drawable.abc_tab_indicator_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::OrderManager.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Drawable.abc_textfield_search_material = global::OrderManager.Android.Resource.Drawable.abc_textfield_search_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.AttachedProperties = global::OrderManager.Android.Resource.Id.AttachedProperties;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.ListenParentChange = global::OrderManager.Android.Resource.Id.ListenParentChange;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.OptionsMenu = global::OrderManager.Android.Resource.Id.OptionsMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar = global::OrderManager.Android.Resource.Id.action_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_activity_content = global::OrderManager.Android.Resource.Id.action_bar_activity_content;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_container = global::OrderManager.Android.Resource.Id.action_bar_container;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_root = global::OrderManager.Android.Resource.Id.action_bar_root;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_spinner = global::OrderManager.Android.Resource.Id.action_bar_spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_subtitle = global::OrderManager.Android.Resource.Id.action_bar_subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_bar_title = global::OrderManager.Android.Resource.Id.action_bar_title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_context_bar = global::OrderManager.Android.Resource.Id.action_context_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_menu_divider = global::OrderManager.Android.Resource.Id.action_menu_divider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_menu_presenter = global::OrderManager.Android.Resource.Id.action_menu_presenter;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_mode_bar = global::OrderManager.Android.Resource.Id.action_mode_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_mode_bar_stub = global::OrderManager.Android.Resource.Id.action_mode_bar_stub;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.action_mode_close_button = global::OrderManager.Android.Resource.Id.action_mode_close_button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.activity_chooser_view_content = global::OrderManager.Android.Resource.Id.activity_chooser_view_content;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.always = global::OrderManager.Android.Resource.Id.always;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.beginning = global::OrderManager.Android.Resource.Id.beginning;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.checkbox = global::OrderManager.Android.Resource.Id.checkbox;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.collapseActionView = global::OrderManager.Android.Resource.Id.collapseActionView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.decor_content_parent = global::OrderManager.Android.Resource.Id.decor_content_parent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.default_activity_button = global::OrderManager.Android.Resource.Id.default_activity_button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.dialog = global::OrderManager.Android.Resource.Id.dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.disableHome = global::OrderManager.Android.Resource.Id.disableHome;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.dropdown = global::OrderManager.Android.Resource.Id.dropdown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.edit_query = global::OrderManager.Android.Resource.Id.edit_query;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.end = global::OrderManager.Android.Resource.Id.end;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.expand_activities_button = global::OrderManager.Android.Resource.Id.expand_activities_button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.expanded_menu = global::OrderManager.Android.Resource.Id.expanded_menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.home = global::OrderManager.Android.Resource.Id.home;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.homeAsUp = global::OrderManager.Android.Resource.Id.homeAsUp;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.icon = global::OrderManager.Android.Resource.Id.icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.ifRoom = global::OrderManager.Android.Resource.Id.ifRoom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.image = global::OrderManager.Android.Resource.Id.image;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.listMode = global::OrderManager.Android.Resource.Id.listMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.list_item = global::OrderManager.Android.Resource.Id.list_item;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.middle = global::OrderManager.Android.Resource.Id.middle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.never = global::OrderManager.Android.Resource.Id.never;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.none = global::OrderManager.Android.Resource.Id.none;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.normal = global::OrderManager.Android.Resource.Id.normal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.progress_circular = global::OrderManager.Android.Resource.Id.progress_circular;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.progress_horizontal = global::OrderManager.Android.Resource.Id.progress_horizontal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.radio = global::OrderManager.Android.Resource.Id.radio;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_badge = global::OrderManager.Android.Resource.Id.search_badge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_bar = global::OrderManager.Android.Resource.Id.search_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_button = global::OrderManager.Android.Resource.Id.search_button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_close_btn = global::OrderManager.Android.Resource.Id.search_close_btn;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_edit_frame = global::OrderManager.Android.Resource.Id.search_edit_frame;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_go_btn = global::OrderManager.Android.Resource.Id.search_go_btn;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_mag_icon = global::OrderManager.Android.Resource.Id.search_mag_icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_plate = global::OrderManager.Android.Resource.Id.search_plate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_src_text = global::OrderManager.Android.Resource.Id.search_src_text;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.search_voice_btn = global::OrderManager.Android.Resource.Id.search_voice_btn;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.shortcut = global::OrderManager.Android.Resource.Id.shortcut;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.showCustom = global::OrderManager.Android.Resource.Id.showCustom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.showHome = global::OrderManager.Android.Resource.Id.showHome;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.showTitle = global::OrderManager.Android.Resource.Id.showTitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.split_action_bar = global::OrderManager.Android.Resource.Id.split_action_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.submit_area = global::OrderManager.Android.Resource.Id.submit_area;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.tabMode = global::OrderManager.Android.Resource.Id.tabMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.title = global::OrderManager.Android.Resource.Id.title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.up = global::OrderManager.Android.Resource.Id.up;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.useLogo = global::OrderManager.Android.Resource.Id.useLogo;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.withText = global::OrderManager.Android.Resource.Id.withText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Id.wrap_content = global::OrderManager.Android.Resource.Id.wrap_content;
-			global::MugenMvvmToolkit.AppCompat.Resource.Integer.abc_max_action_buttons = global::OrderManager.Android.Resource.Integer.abc_max_action_buttons;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_bar_title_item = global::OrderManager.Android.Resource.Layout.abc_action_bar_title_item;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_bar_up_container = global::OrderManager.Android.Resource.Layout.abc_action_bar_up_container;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_bar_view_list_nav_layout = global::OrderManager.Android.Resource.Layout.abc_action_bar_view_list_nav_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_menu_item_layout = global::OrderManager.Android.Resource.Layout.abc_action_menu_item_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_menu_layout = global::OrderManager.Android.Resource.Layout.abc_action_menu_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_mode_bar = global::OrderManager.Android.Resource.Layout.abc_action_mode_bar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_action_mode_close_item_material = global::OrderManager.Android.Resource.Layout.abc_action_mode_close_item_material;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_activity_chooser_view = global::OrderManager.Android.Resource.Layout.abc_activity_chooser_view;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_activity_chooser_view_include = global::OrderManager.Android.Resource.Layout.abc_activity_chooser_view_include;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_activity_chooser_view_list_item = global::OrderManager.Android.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_expanded_menu_layout = global::OrderManager.Android.Resource.Layout.abc_expanded_menu_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_list_menu_item_checkbox = global::OrderManager.Android.Resource.Layout.abc_list_menu_item_checkbox;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_list_menu_item_icon = global::OrderManager.Android.Resource.Layout.abc_list_menu_item_icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_list_menu_item_layout = global::OrderManager.Android.Resource.Layout.abc_list_menu_item_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_list_menu_item_radio = global::OrderManager.Android.Resource.Layout.abc_list_menu_item_radio;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_popup_menu_item_layout = global::OrderManager.Android.Resource.Layout.abc_popup_menu_item_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_screen_content_include = global::OrderManager.Android.Resource.Layout.abc_screen_content_include;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_screen_simple = global::OrderManager.Android.Resource.Layout.abc_screen_simple;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_screen_simple_overlay_action_mode = global::OrderManager.Android.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_screen_toolbar = global::OrderManager.Android.Resource.Layout.abc_screen_toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_search_dropdown_item_icons_2line = global::OrderManager.Android.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_search_view = global::OrderManager.Android.Resource.Layout.abc_search_view;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.abc_simple_dropdown_hint = global::OrderManager.Android.Resource.Layout.abc_simple_dropdown_hint;
-			global::MugenMvvmToolkit.AppCompat.Resource.Layout.support_simple_spinner_dropdown_item = global::OrderManager.Android.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.Empty = global::OrderManager.Android.Resource.String.Empty;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_bar_home_description = global::OrderManager.Android.Resource.String.abc_action_bar_home_description;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_bar_home_description_format = global::OrderManager.Android.Resource.String.abc_action_bar_home_description_format;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_bar_home_subtitle_description_format = global::OrderManager.Android.Resource.String.abc_action_bar_home_subtitle_description_format;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_bar_up_description = global::OrderManager.Android.Resource.String.abc_action_bar_up_description;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_menu_overflow_description = global::OrderManager.Android.Resource.String.abc_action_menu_overflow_description;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_action_mode_done = global::OrderManager.Android.Resource.String.abc_action_mode_done;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_activity_chooser_view_see_all = global::OrderManager.Android.Resource.String.abc_activity_chooser_view_see_all;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_activitychooserview_choose_application = global::OrderManager.Android.Resource.String.abc_activitychooserview_choose_application;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_searchview_description_clear = global::OrderManager.Android.Resource.String.abc_searchview_description_clear;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_searchview_description_query = global::OrderManager.Android.Resource.String.abc_searchview_description_query;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_searchview_description_search = global::OrderManager.Android.Resource.String.abc_searchview_description_search;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_searchview_description_submit = global::OrderManager.Android.Resource.String.abc_searchview_description_submit;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_searchview_description_voice = global::OrderManager.Android.Resource.String.abc_searchview_description_voice;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_shareactionprovider_share_with = global::OrderManager.Android.Resource.String.abc_shareactionprovider_share_with;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_shareactionprovider_share_with_application = global::OrderManager.Android.Resource.String.abc_shareactionprovider_share_with_application;
-			global::MugenMvvmToolkit.AppCompat.Resource.String.abc_toolbar_collapse_description = global::OrderManager.Android.Resource.String.abc_toolbar_collapse_description;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Button = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Large = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Small = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Title = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::OrderManager.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::OrderManager.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::OrderManager.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::OrderManager.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::OrderManager.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_ThemeOverlay_AppCompat = global::OrderManager.Android.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::OrderManager.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::OrderManager.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::OrderManager.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V11_Theme_AppCompat = global::OrderManager.Android.Resource.Style.Base_V11_Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V11_Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_V11_Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V14_Theme_AppCompat = global::OrderManager.Android.Resource.Style.Base_V14_Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V14_Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Base_V14_Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V14_Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_V14_Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V14_Theme_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Base_V14_Theme_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V21_Theme_AppCompat = global::OrderManager.Android.Resource.Style.Base_V21_Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V21_Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V7_Theme_AppCompat = global::OrderManager.Android.Resource.Style.Base_V7_Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_V7_Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionButton = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActionMode = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_EditText = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_ActivityChooserView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_ActivityChooserView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_AutoCompleteTextView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_AutoCompleteTextView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_SearchView = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Spinner = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Spinner_DropDown_ActionBar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Toolbar = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::OrderManager.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Platform_AppCompat = global::OrderManager.Android.Resource.Style.Platform_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Platform_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Platform_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Platform_AppCompat_Light = global::OrderManager.Android.Resource.Style.Platform_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Platform_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Platform_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_CloseMode = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_CloseMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::OrderManager.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Body1 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Body2 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Button = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Button;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Caption = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Display1 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Display2 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Display3 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Display4 = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Headline = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Large = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Medium = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Menu = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Small = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Subhead = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Title = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::OrderManager.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::OrderManager.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::OrderManager.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::OrderManager.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat = global::OrderManager.Android.Resource.Style.Theme_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_CompactMenu = global::OrderManager.Android.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Dialog = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::OrderManager.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Light = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Light_Dialog = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::OrderManager.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Theme_AppCompat_NoActionBar = global::OrderManager.Android.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.ThemeOverlay_AppCompat = global::OrderManager.Android.Resource.Style.ThemeOverlay_AppCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::OrderManager.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.ThemeOverlay_AppCompat_Dark = global::OrderManager.Android.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::OrderManager.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.ThemeOverlay_AppCompat_Light = global::OrderManager.Android.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionButton = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionButton;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActionMode = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActionMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ActivityChooserView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::OrderManager.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::OrderManager.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::OrderManager.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_EditText = global::OrderManager.Android.Resource.Style.Widget_AppCompat_EditText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionButton = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_SearchView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ListPopupWindow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ListView_DropDown = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ListView_Menu = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_PopupMenu = global::OrderManager.Android.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_PopupWindow = global::OrderManager.Android.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ProgressBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::OrderManager.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_SearchView = global::OrderManager.Android.Resource.Style.Widget_AppCompat_SearchView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Spinner = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Toolbar = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::OrderManager.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar = global::OrderManager.Android.Resource.Styleable.ActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_ActionBarTemplate = global::OrderManager.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_TabContentId = global::OrderManager.Android.Resource.Styleable.ActionBar_TabContentId;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_background = global::OrderManager.Android.Resource.Styleable.ActionBar_background;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_backgroundSplit = global::OrderManager.Android.Resource.Styleable.ActionBar_backgroundSplit;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_backgroundStacked = global::OrderManager.Android.Resource.Styleable.ActionBar_backgroundStacked;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_contentInsetEnd = global::OrderManager.Android.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_contentInsetLeft = global::OrderManager.Android.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_contentInsetRight = global::OrderManager.Android.Resource.Styleable.ActionBar_contentInsetRight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_contentInsetStart = global::OrderManager.Android.Resource.Styleable.ActionBar_contentInsetStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_customNavigationLayout = global::OrderManager.Android.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_displayOptions = global::OrderManager.Android.Resource.Styleable.ActionBar_displayOptions;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_divider = global::OrderManager.Android.Resource.Styleable.ActionBar_divider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_elevation = global::OrderManager.Android.Resource.Styleable.ActionBar_elevation;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_height = global::OrderManager.Android.Resource.Styleable.ActionBar_height;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_hideOnContentScroll = global::OrderManager.Android.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_homeAsUpIndicator = global::OrderManager.Android.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_homeLayout = global::OrderManager.Android.Resource.Styleable.ActionBar_homeLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_icon = global::OrderManager.Android.Resource.Styleable.ActionBar_icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::OrderManager.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_itemPadding = global::OrderManager.Android.Resource.Styleable.ActionBar_itemPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_logo = global::OrderManager.Android.Resource.Styleable.ActionBar_logo;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_navigationMode = global::OrderManager.Android.Resource.Styleable.ActionBar_navigationMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_popupTheme = global::OrderManager.Android.Resource.Styleable.ActionBar_popupTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_progressBarPadding = global::OrderManager.Android.Resource.Styleable.ActionBar_progressBarPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_progressBarStyle = global::OrderManager.Android.Resource.Styleable.ActionBar_progressBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_subtitle = global::OrderManager.Android.Resource.Styleable.ActionBar_subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_subtitleTextStyle = global::OrderManager.Android.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_title = global::OrderManager.Android.Resource.Styleable.ActionBar_title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBar_titleTextStyle = global::OrderManager.Android.Resource.Styleable.ActionBar_titleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBarLayout = global::OrderManager.Android.Resource.Styleable.ActionBarLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::OrderManager.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMenuItemView = global::OrderManager.Android.Resource.Styleable.ActionMenuItemView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMenuItemView_android_minWidth = global::OrderManager.Android.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMenuView = global::OrderManager.Android.Resource.Styleable.ActionMenuView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode = global::OrderManager.Android.Resource.Styleable.ActionMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_background = global::OrderManager.Android.Resource.Styleable.ActionMode_background;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_backgroundSplit = global::OrderManager.Android.Resource.Styleable.ActionMode_backgroundSplit;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_closeItemLayout = global::OrderManager.Android.Resource.Styleable.ActionMode_closeItemLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_height = global::OrderManager.Android.Resource.Styleable.ActionMode_height;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_subtitleTextStyle = global::OrderManager.Android.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActionMode_titleTextStyle = global::OrderManager.Android.Resource.Styleable.ActionMode_titleTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActivityChooserView = global::OrderManager.Android.Resource.Styleable.ActivityChooserView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::OrderManager.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ActivityChooserView_initialActivityCount = global::OrderManager.Android.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Binding = global::OrderManager.Android.Resource.Styleable.Binding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Binding_Bind = global::OrderManager.Android.Resource.Styleable.Binding_Bind;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Binding_Bindings = global::OrderManager.Android.Resource.Styleable.Binding_Bindings;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.CompatTextView = global::OrderManager.Android.Resource.Styleable.CompatTextView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.CompatTextView_textAllCaps = global::OrderManager.Android.Resource.Styleable.CompatTextView_textAllCaps;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Control = global::OrderManager.Android.Resource.Styleable.Control;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Control_ContentTemplate = global::OrderManager.Android.Resource.Styleable.Control_ContentTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_barSize = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_barSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_color = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_color;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_drawableSize = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_middleBarArrowSize = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_middleBarArrowSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_spinBars = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_thickness = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.DrawerArrowToggle_topBottomBarArrowSize = global::OrderManager.Android.Resource.Styleable.DrawerArrowToggle_topBottomBarArrowSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ItemsControl = global::OrderManager.Android.Resource.Styleable.ItemsControl;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ItemsControl_DropDownItemTemplate = global::OrderManager.Android.Resource.Styleable.ItemsControl_DropDownItemTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ItemsControl_ItemTemplate = global::OrderManager.Android.Resource.Styleable.ItemsControl_ItemTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_android_gravity = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_android_orientation = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_divider = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_divider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_showDividers = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_Layout = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::OrderManager.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ListPopupWindow = global::OrderManager.Android.Resource.Styleable.ListPopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::OrderManager.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::OrderManager.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Menu = global::OrderManager.Android.Resource.Styleable.Menu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Menu_MenuTemplate = global::OrderManager.Android.Resource.Styleable.Menu_MenuTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Menu_PlacementTargetPath = global::OrderManager.Android.Resource.Styleable.Menu_PlacementTargetPath;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Menu_PopupMenuEvent = global::OrderManager.Android.Resource.Styleable.Menu_PopupMenuEvent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Menu_PopupMenuTemplate = global::OrderManager.Android.Resource.Styleable.Menu_PopupMenuTemplate;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup = global::OrderManager.Android.Resource.Styleable.MenuGroup;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_checkableBehavior = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_enabled = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_enabled;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_id = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_id;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_menuCategory = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_orderInCategory = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuGroup_android_visible = global::OrderManager.Android.Resource.Styleable.MenuGroup_android_visible;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem = global::OrderManager.Android.Resource.Styleable.MenuItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_actionLayout = global::OrderManager.Android.Resource.Styleable.MenuItem_actionLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_actionProviderClass = global::OrderManager.Android.Resource.Styleable.MenuItem_actionProviderClass;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_actionViewClass = global::OrderManager.Android.Resource.Styleable.MenuItem_actionViewClass;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::OrderManager.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_checkable = global::OrderManager.Android.Resource.Styleable.MenuItem_android_checkable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_checked = global::OrderManager.Android.Resource.Styleable.MenuItem_android_checked;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_enabled = global::OrderManager.Android.Resource.Styleable.MenuItem_android_enabled;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_icon = global::OrderManager.Android.Resource.Styleable.MenuItem_android_icon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_id = global::OrderManager.Android.Resource.Styleable.MenuItem_android_id;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_menuCategory = global::OrderManager.Android.Resource.Styleable.MenuItem_android_menuCategory;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_numericShortcut = global::OrderManager.Android.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_onClick = global::OrderManager.Android.Resource.Styleable.MenuItem_android_onClick;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_orderInCategory = global::OrderManager.Android.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_title = global::OrderManager.Android.Resource.Styleable.MenuItem_android_title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_titleCondensed = global::OrderManager.Android.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_android_visible = global::OrderManager.Android.Resource.Styleable.MenuItem_android_visible;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuItem_showAsAction = global::OrderManager.Android.Resource.Styleable.MenuItem_showAsAction;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView = global::OrderManager.Android.Resource.Styleable.MenuView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_headerBackground = global::OrderManager.Android.Resource.Styleable.MenuView_android_headerBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_horizontalDivider = global::OrderManager.Android.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_itemBackground = global::OrderManager.Android.Resource.Styleable.MenuView_android_itemBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::OrderManager.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_itemTextAppearance = global::OrderManager.Android.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_verticalDivider = global::OrderManager.Android.Resource.Styleable.MenuView_android_verticalDivider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_android_windowAnimationStyle = global::OrderManager.Android.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.MenuView_preserveIconSpacing = global::OrderManager.Android.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.PopupWindow = global::OrderManager.Android.Resource.Styleable.PopupWindow;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.PopupWindow_android_popupBackground = global::OrderManager.Android.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.PopupWindow_overlapAnchor = global::OrderManager.Android.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.PopupWindowBackgroundState = global::OrderManager.Android.Resource.Styleable.PopupWindowBackgroundState;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::OrderManager.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView = global::OrderManager.Android.Resource.Styleable.SearchView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_android_focusable = global::OrderManager.Android.Resource.Styleable.SearchView_android_focusable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_android_imeOptions = global::OrderManager.Android.Resource.Styleable.SearchView_android_imeOptions;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_android_inputType = global::OrderManager.Android.Resource.Styleable.SearchView_android_inputType;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_android_maxWidth = global::OrderManager.Android.Resource.Styleable.SearchView_android_maxWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_closeIcon = global::OrderManager.Android.Resource.Styleable.SearchView_closeIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_commitIcon = global::OrderManager.Android.Resource.Styleable.SearchView_commitIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_goIcon = global::OrderManager.Android.Resource.Styleable.SearchView_goIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_iconifiedByDefault = global::OrderManager.Android.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_layout = global::OrderManager.Android.Resource.Styleable.SearchView_layout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_queryBackground = global::OrderManager.Android.Resource.Styleable.SearchView_queryBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_queryHint = global::OrderManager.Android.Resource.Styleable.SearchView_queryHint;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_searchIcon = global::OrderManager.Android.Resource.Styleable.SearchView_searchIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_submitBackground = global::OrderManager.Android.Resource.Styleable.SearchView_submitBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_suggestionRowLayout = global::OrderManager.Android.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SearchView_voiceIcon = global::OrderManager.Android.Resource.Styleable.SearchView_voiceIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner = global::OrderManager.Android.Resource.Styleable.Spinner;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_background = global::OrderManager.Android.Resource.Styleable.Spinner_android_background;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_dropDownHorizontalOffset = global::OrderManager.Android.Resource.Styleable.Spinner_android_dropDownHorizontalOffset;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_dropDownSelector = global::OrderManager.Android.Resource.Styleable.Spinner_android_dropDownSelector;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_dropDownVerticalOffset = global::OrderManager.Android.Resource.Styleable.Spinner_android_dropDownVerticalOffset;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_dropDownWidth = global::OrderManager.Android.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_gravity = global::OrderManager.Android.Resource.Styleable.Spinner_android_gravity;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_android_popupBackground = global::OrderManager.Android.Resource.Styleable.Spinner_android_popupBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_disableChildrenWhenDisabled = global::OrderManager.Android.Resource.Styleable.Spinner_disableChildrenWhenDisabled;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_popupPromptView = global::OrderManager.Android.Resource.Styleable.Spinner_popupPromptView;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_prompt = global::OrderManager.Android.Resource.Styleable.Spinner_prompt;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Spinner_spinnerMode = global::OrderManager.Android.Resource.Styleable.Spinner_spinnerMode;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat = global::OrderManager.Android.Resource.Styleable.SwitchCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_android_textOff = global::OrderManager.Android.Resource.Styleable.SwitchCompat_android_textOff;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_android_textOn = global::OrderManager.Android.Resource.Styleable.SwitchCompat_android_textOn;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_android_thumb = global::OrderManager.Android.Resource.Styleable.SwitchCompat_android_thumb;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_showText = global::OrderManager.Android.Resource.Styleable.SwitchCompat_showText;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_splitTrack = global::OrderManager.Android.Resource.Styleable.SwitchCompat_splitTrack;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_switchMinWidth = global::OrderManager.Android.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_switchPadding = global::OrderManager.Android.Resource.Styleable.SwitchCompat_switchPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_switchTextAppearance = global::OrderManager.Android.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_thumbTextPadding = global::OrderManager.Android.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.SwitchCompat_track = global::OrderManager.Android.Resource.Styleable.SwitchCompat_track;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme = global::OrderManager.Android.Resource.Styleable.Theme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarDivider = global::OrderManager.Android.Resource.Styleable.Theme_actionBarDivider;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarItemBackground = global::OrderManager.Android.Resource.Styleable.Theme_actionBarItemBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarPopupTheme = global::OrderManager.Android.Resource.Styleable.Theme_actionBarPopupTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarSize = global::OrderManager.Android.Resource.Styleable.Theme_actionBarSize;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarSplitStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionBarSplitStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarTabBarStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionBarTabBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarTabStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionBarTabStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarTabTextStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionBarTabTextStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarTheme = global::OrderManager.Android.Resource.Styleable.Theme_actionBarTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionBarWidgetTheme = global::OrderManager.Android.Resource.Styleable.Theme_actionBarWidgetTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionButtonStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionDropDownStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionDropDownStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionMenuTextAppearance = global::OrderManager.Android.Resource.Styleable.Theme_actionMenuTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionMenuTextColor = global::OrderManager.Android.Resource.Styleable.Theme_actionMenuTextColor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeBackground = global::OrderManager.Android.Resource.Styleable.Theme_actionModeBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeCloseButtonStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionModeCloseButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeCloseDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeCloseDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeCopyDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeCopyDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeCutDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeCutDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeFindDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeFindDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModePasteDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModePasteDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModePopupWindowStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionModePopupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeSelectAllDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeSelectAllDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeShareDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeShareDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeSplitBackground = global::OrderManager.Android.Resource.Styleable.Theme_actionModeSplitBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionModeStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionModeWebSearchDrawable = global::OrderManager.Android.Resource.Styleable.Theme_actionModeWebSearchDrawable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionOverflowButtonStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionOverflowButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_actionOverflowMenuStyle = global::OrderManager.Android.Resource.Styleable.Theme_actionOverflowMenuStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_activityChooserViewStyle = global::OrderManager.Android.Resource.Styleable.Theme_activityChooserViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_android_windowIsFloating = global::OrderManager.Android.Resource.Styleable.Theme_android_windowIsFloating;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_buttonBarButtonStyle = global::OrderManager.Android.Resource.Styleable.Theme_buttonBarButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_buttonBarStyle = global::OrderManager.Android.Resource.Styleable.Theme_buttonBarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorAccent = global::OrderManager.Android.Resource.Styleable.Theme_colorAccent;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorButtonNormal = global::OrderManager.Android.Resource.Styleable.Theme_colorButtonNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorControlActivated = global::OrderManager.Android.Resource.Styleable.Theme_colorControlActivated;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorControlHighlight = global::OrderManager.Android.Resource.Styleable.Theme_colorControlHighlight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorControlNormal = global::OrderManager.Android.Resource.Styleable.Theme_colorControlNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorPrimary = global::OrderManager.Android.Resource.Styleable.Theme_colorPrimary;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorPrimaryDark = global::OrderManager.Android.Resource.Styleable.Theme_colorPrimaryDark;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_colorSwitchThumbNormal = global::OrderManager.Android.Resource.Styleable.Theme_colorSwitchThumbNormal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_dividerHorizontal = global::OrderManager.Android.Resource.Styleable.Theme_dividerHorizontal;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_dividerVertical = global::OrderManager.Android.Resource.Styleable.Theme_dividerVertical;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_dropDownListViewStyle = global::OrderManager.Android.Resource.Styleable.Theme_dropDownListViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_dropdownListPreferredItemHeight = global::OrderManager.Android.Resource.Styleable.Theme_dropdownListPreferredItemHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_editTextBackground = global::OrderManager.Android.Resource.Styleable.Theme_editTextBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_editTextColor = global::OrderManager.Android.Resource.Styleable.Theme_editTextColor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_homeAsUpIndicator = global::OrderManager.Android.Resource.Styleable.Theme_homeAsUpIndicator;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listChoiceBackgroundIndicator = global::OrderManager.Android.Resource.Styleable.Theme_listChoiceBackgroundIndicator;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPopupWindowStyle = global::OrderManager.Android.Resource.Styleable.Theme_listPopupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPreferredItemHeight = global::OrderManager.Android.Resource.Styleable.Theme_listPreferredItemHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPreferredItemHeightLarge = global::OrderManager.Android.Resource.Styleable.Theme_listPreferredItemHeightLarge;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPreferredItemHeightSmall = global::OrderManager.Android.Resource.Styleable.Theme_listPreferredItemHeightSmall;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPreferredItemPaddingLeft = global::OrderManager.Android.Resource.Styleable.Theme_listPreferredItemPaddingLeft;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_listPreferredItemPaddingRight = global::OrderManager.Android.Resource.Styleable.Theme_listPreferredItemPaddingRight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_panelBackground = global::OrderManager.Android.Resource.Styleable.Theme_panelBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_panelMenuListTheme = global::OrderManager.Android.Resource.Styleable.Theme_panelMenuListTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_panelMenuListWidth = global::OrderManager.Android.Resource.Styleable.Theme_panelMenuListWidth;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_popupMenuStyle = global::OrderManager.Android.Resource.Styleable.Theme_popupMenuStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_popupWindowStyle = global::OrderManager.Android.Resource.Styleable.Theme_popupWindowStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_searchViewStyle = global::OrderManager.Android.Resource.Styleable.Theme_searchViewStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_selectableItemBackground = global::OrderManager.Android.Resource.Styleable.Theme_selectableItemBackground;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_selectableItemBackgroundBorderless = global::OrderManager.Android.Resource.Styleable.Theme_selectableItemBackgroundBorderless;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_spinnerDropDownItemStyle = global::OrderManager.Android.Resource.Styleable.Theme_spinnerDropDownItemStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_spinnerStyle = global::OrderManager.Android.Resource.Styleable.Theme_spinnerStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_switchStyle = global::OrderManager.Android.Resource.Styleable.Theme_switchStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceLargePopupMenu = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceLargePopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceListItem = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceListItem;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceListItemSmall = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceListItemSmall;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceSearchResultSubtitle = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceSearchResultSubtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceSearchResultTitle = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceSearchResultTitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textAppearanceSmallPopupMenu = global::OrderManager.Android.Resource.Styleable.Theme_textAppearanceSmallPopupMenu;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_textColorSearchUrl = global::OrderManager.Android.Resource.Styleable.Theme_textColorSearchUrl;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_toolbarNavigationButtonStyle = global::OrderManager.Android.Resource.Styleable.Theme_toolbarNavigationButtonStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_toolbarStyle = global::OrderManager.Android.Resource.Styleable.Theme_toolbarStyle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowActionBar = global::OrderManager.Android.Resource.Styleable.Theme_windowActionBar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowActionBarOverlay = global::OrderManager.Android.Resource.Styleable.Theme_windowActionBarOverlay;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowActionModeOverlay = global::OrderManager.Android.Resource.Styleable.Theme_windowActionModeOverlay;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowFixedHeightMajor = global::OrderManager.Android.Resource.Styleable.Theme_windowFixedHeightMajor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowFixedHeightMinor = global::OrderManager.Android.Resource.Styleable.Theme_windowFixedHeightMinor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowFixedWidthMajor = global::OrderManager.Android.Resource.Styleable.Theme_windowFixedWidthMajor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Theme_windowFixedWidthMinor = global::OrderManager.Android.Resource.Styleable.Theme_windowFixedWidthMinor;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar = global::OrderManager.Android.Resource.Styleable.Toolbar;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_android_gravity = global::OrderManager.Android.Resource.Styleable.Toolbar_android_gravity;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_android_minHeight = global::OrderManager.Android.Resource.Styleable.Toolbar_android_minHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_collapseContentDescription = global::OrderManager.Android.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_collapseIcon = global::OrderManager.Android.Resource.Styleable.Toolbar_collapseIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_contentInsetEnd = global::OrderManager.Android.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_contentInsetLeft = global::OrderManager.Android.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_contentInsetRight = global::OrderManager.Android.Resource.Styleable.Toolbar_contentInsetRight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_contentInsetStart = global::OrderManager.Android.Resource.Styleable.Toolbar_contentInsetStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_maxButtonHeight = global::OrderManager.Android.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_navigationContentDescription = global::OrderManager.Android.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_navigationIcon = global::OrderManager.Android.Resource.Styleable.Toolbar_navigationIcon;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_popupTheme = global::OrderManager.Android.Resource.Styleable.Toolbar_popupTheme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_subtitle = global::OrderManager.Android.Resource.Styleable.Toolbar_subtitle;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_subtitleTextAppearance = global::OrderManager.Android.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_theme = global::OrderManager.Android.Resource.Styleable.Toolbar_theme;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_title = global::OrderManager.Android.Resource.Styleable.Toolbar_title;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleMarginBottom = global::OrderManager.Android.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleMarginEnd = global::OrderManager.Android.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleMarginStart = global::OrderManager.Android.Resource.Styleable.Toolbar_titleMarginStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleMarginTop = global::OrderManager.Android.Resource.Styleable.Toolbar_titleMarginTop;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleMargins = global::OrderManager.Android.Resource.Styleable.Toolbar_titleMargins;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.Toolbar_titleTextAppearance = global::OrderManager.Android.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.View = global::OrderManager.Android.Resource.Styleable.View;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.View_android_focusable = global::OrderManager.Android.Resource.Styleable.View_android_focusable;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.View_paddingEnd = global::OrderManager.Android.Resource.Styleable.View_paddingEnd;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.View_paddingStart = global::OrderManager.Android.Resource.Styleable.View_paddingStart;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ViewStubCompat = global::OrderManager.Android.Resource.Styleable.ViewStubCompat;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ViewStubCompat_android_id = global::OrderManager.Android.Resource.Styleable.ViewStubCompat_android_id;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ViewStubCompat_android_inflatedId = global::OrderManager.Android.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::MugenMvvmToolkit.AppCompat.Resource.Styleable.ViewStubCompat_android_layout = global::OrderManager.Android.Resource.Styleable.ViewStubCompat_android_layout;
 			global::MugenMvvmToolkit.Resource.Attribute.ActionBarTemplate = global::OrderManager.Android.Resource.Attribute.ActionBarTemplate;
 			global::MugenMvvmToolkit.Resource.Attribute.Bind = global::OrderManager.Android.Resource.Attribute.Bind;
 			global::MugenMvvmToolkit.Resource.Attribute.Bindings = global::OrderManager.Android.Resource.Attribute.Bindings;
@@ -1007,6 +40,7 @@ namespace OrderManager.Android
 			global::MugenMvvmToolkit.Resource.Id.AttachedProperties = global::OrderManager.Android.Resource.Id.AttachedProperties;
 			global::MugenMvvmToolkit.Resource.Id.ListenParentChange = global::OrderManager.Android.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Resource.Id.OptionsMenu = global::OrderManager.Android.Resource.Id.OptionsMenu;
+			global::MugenMvvmToolkit.Resource.String.Empty = global::OrderManager.Android.Resource.String.Empty;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar = global::OrderManager.Android.Resource.Styleable.ActionBar;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_ActionBarTemplate = global::OrderManager.Android.Resource.Styleable.ActionBar_ActionBarTemplate;
 			global::MugenMvvmToolkit.Resource.Styleable.ActionBar_TabContentId = global::OrderManager.Android.Resource.Styleable.ActionBar_TabContentId;
@@ -1035,16 +69,22 @@ namespace OrderManager.Android
 			public const int abc_fade_out = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int abc_slide_in_bottom = 2130968578;
+			public const int abc_grow_fade_in_from_bottom = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int abc_slide_in_top = 2130968579;
+			public const int abc_shrink_fade_out_from_bottom = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int abc_slide_out_bottom = 2130968580;
+			public const int abc_slide_in_bottom = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int abc_slide_out_top = 2130968581;
+			public const int abc_slide_in_top = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int abc_slide_out_bottom = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int abc_slide_out_top = 2130968583;
 			
 			static Animation()
 			{
@@ -1864,100 +904,115 @@ namespace OrderManager.Android
 			public const int abc_action_button_min_width_overflow_material = 2131165194;
 			
 			// aapt resource value: 0x7f07000b
-			public const int abc_config_prefDialogWidth = 2131165195;
+			public const int abc_button_inset_horizontal_material = 2131165195;
 			
 			// aapt resource value: 0x7f07000c
-			public const int abc_control_inset_material = 2131165196;
+			public const int abc_button_inset_vertical_material = 2131165196;
 			
 			// aapt resource value: 0x7f07000d
-			public const int abc_control_padding_material = 2131165197;
+			public const int abc_button_padding_horizontal_material = 2131165197;
 			
 			// aapt resource value: 0x7f07000e
-			public const int abc_dropdownitem_icon_width = 2131165198;
+			public const int abc_button_padding_vertical_material = 2131165198;
 			
 			// aapt resource value: 0x7f07000f
-			public const int abc_dropdownitem_text_padding_left = 2131165199;
+			public const int abc_config_prefDialogWidth = 2131165199;
 			
 			// aapt resource value: 0x7f070010
-			public const int abc_dropdownitem_text_padding_right = 2131165200;
+			public const int abc_control_corner_material = 2131165200;
 			
 			// aapt resource value: 0x7f070011
-			public const int abc_panel_menu_list_width = 2131165201;
+			public const int abc_control_inset_material = 2131165201;
 			
 			// aapt resource value: 0x7f070012
-			public const int abc_search_view_preferred_width = 2131165202;
+			public const int abc_control_padding_material = 2131165202;
 			
 			// aapt resource value: 0x7f070013
-			public const int abc_search_view_text_min_width = 2131165203;
+			public const int abc_dropdownitem_icon_width = 2131165203;
 			
 			// aapt resource value: 0x7f070014
-			public const int abc_text_size_body_1_material = 2131165204;
+			public const int abc_dropdownitem_text_padding_left = 2131165204;
 			
 			// aapt resource value: 0x7f070015
-			public const int abc_text_size_body_2_material = 2131165205;
+			public const int abc_dropdownitem_text_padding_right = 2131165205;
 			
 			// aapt resource value: 0x7f070016
-			public const int abc_text_size_button_material = 2131165206;
+			public const int abc_panel_menu_list_width = 2131165206;
 			
 			// aapt resource value: 0x7f070017
-			public const int abc_text_size_caption_material = 2131165207;
+			public const int abc_search_view_preferred_width = 2131165207;
 			
 			// aapt resource value: 0x7f070018
-			public const int abc_text_size_display_1_material = 2131165208;
+			public const int abc_search_view_text_min_width = 2131165208;
 			
 			// aapt resource value: 0x7f070019
-			public const int abc_text_size_display_2_material = 2131165209;
+			public const int abc_text_size_body_1_material = 2131165209;
 			
 			// aapt resource value: 0x7f07001a
-			public const int abc_text_size_display_3_material = 2131165210;
+			public const int abc_text_size_body_2_material = 2131165210;
 			
 			// aapt resource value: 0x7f07001b
-			public const int abc_text_size_display_4_material = 2131165211;
+			public const int abc_text_size_button_material = 2131165211;
 			
 			// aapt resource value: 0x7f07001c
-			public const int abc_text_size_headline_material = 2131165212;
+			public const int abc_text_size_caption_material = 2131165212;
 			
 			// aapt resource value: 0x7f07001d
-			public const int abc_text_size_large_material = 2131165213;
+			public const int abc_text_size_display_1_material = 2131165213;
 			
 			// aapt resource value: 0x7f07001e
-			public const int abc_text_size_medium_material = 2131165214;
+			public const int abc_text_size_display_2_material = 2131165214;
 			
 			// aapt resource value: 0x7f07001f
-			public const int abc_text_size_menu_material = 2131165215;
+			public const int abc_text_size_display_3_material = 2131165215;
 			
 			// aapt resource value: 0x7f070020
-			public const int abc_text_size_small_material = 2131165216;
+			public const int abc_text_size_display_4_material = 2131165216;
 			
 			// aapt resource value: 0x7f070021
-			public const int abc_text_size_subhead_material = 2131165217;
+			public const int abc_text_size_headline_material = 2131165217;
 			
 			// aapt resource value: 0x7f070022
-			public const int abc_text_size_subtitle_material_toolbar = 2131165218;
+			public const int abc_text_size_large_material = 2131165218;
 			
 			// aapt resource value: 0x7f070023
-			public const int abc_text_size_title_material = 2131165219;
+			public const int abc_text_size_medium_material = 2131165219;
 			
 			// aapt resource value: 0x7f070024
-			public const int abc_text_size_title_material_toolbar = 2131165220;
+			public const int abc_text_size_menu_material = 2131165220;
 			
 			// aapt resource value: 0x7f070025
-			public const int dialog_fixed_height_major = 2131165221;
+			public const int abc_text_size_small_material = 2131165221;
 			
 			// aapt resource value: 0x7f070026
-			public const int dialog_fixed_height_minor = 2131165222;
+			public const int abc_text_size_subhead_material = 2131165222;
 			
 			// aapt resource value: 0x7f070027
-			public const int dialog_fixed_width_major = 2131165223;
+			public const int abc_text_size_subtitle_material_toolbar = 2131165223;
 			
 			// aapt resource value: 0x7f070028
-			public const int dialog_fixed_width_minor = 2131165224;
+			public const int abc_text_size_title_material = 2131165224;
 			
 			// aapt resource value: 0x7f070029
-			public const int disabled_alpha_material_dark = 2131165225;
+			public const int abc_text_size_title_material_toolbar = 2131165225;
 			
 			// aapt resource value: 0x7f07002a
-			public const int disabled_alpha_material_light = 2131165226;
+			public const int dialog_fixed_height_major = 2131165226;
+			
+			// aapt resource value: 0x7f07002b
+			public const int dialog_fixed_height_minor = 2131165227;
+			
+			// aapt resource value: 0x7f07002c
+			public const int dialog_fixed_width_major = 2131165228;
+			
+			// aapt resource value: 0x7f07002d
+			public const int dialog_fixed_width_minor = 2131165229;
+			
+			// aapt resource value: 0x7f07002e
+			public const int disabled_alpha_material_dark = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int disabled_alpha_material_light = 2131165231;
 			
 			static Dimension()
 			{
@@ -1973,19 +1028,19 @@ namespace OrderManager.Android
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int abc_ab_share_pack_holo_dark = 2130837504;
+			public const int abc_ab_share_pack_mtrl_alpha = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int abc_ab_share_pack_holo_light = 2130837505;
+			public const int abc_btn_check_material = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int abc_btn_check_material = 2130837506;
+			public const int abc_btn_check_to_on_mtrl_000 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int abc_btn_check_to_on_mtrl_000 = 2130837507;
+			public const int abc_btn_check_to_on_mtrl_015 = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int abc_btn_check_to_on_mtrl_015 = 2130837508;
+			public const int abc_btn_default_mtrl_shape = 2130837508;
 			
 			// aapt resource value: 0x7f020005
 			public const int abc_btn_radio_material = 2130837509;
@@ -1997,157 +1052,169 @@ namespace OrderManager.Android
 			public const int abc_btn_radio_to_on_mtrl_015 = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int abc_btn_switch_to_on_mtrl_00001 = 2130837512;
+			public const int abc_btn_rating_star_off_mtrl_alpha = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int abc_btn_switch_to_on_mtrl_00012 = 2130837513;
+			public const int abc_btn_rating_star_on_mtrl_alpha = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int abc_cab_background_internal_bg = 2130837514;
+			public const int abc_btn_switch_to_on_mtrl_00001 = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int abc_cab_background_top_material = 2130837515;
+			public const int abc_btn_switch_to_on_mtrl_00012 = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int abc_cab_background_top_mtrl_alpha = 2130837516;
+			public const int abc_cab_background_internal_bg = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int abc_edit_text_material = 2130837517;
+			public const int abc_cab_background_top_material = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int abc_ic_ab_back_mtrl_am_alpha = 2130837518;
+			public const int abc_cab_background_top_mtrl_alpha = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int abc_ic_clear_mtrl_alpha = 2130837519;
+			public const int abc_edit_text_material = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int abc_ic_commit_search_api_mtrl_alpha = 2130837520;
+			public const int abc_ic_ab_back_mtrl_am_alpha = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int abc_ic_go_search_api_mtrl_alpha = 2130837521;
+			public const int abc_ic_clear_mtrl_alpha = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int abc_ic_menu_copy_mtrl_am_alpha = 2130837522;
+			public const int abc_ic_commit_search_api_mtrl_alpha = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int abc_ic_menu_cut_mtrl_alpha = 2130837523;
+			public const int abc_ic_go_search_api_mtrl_alpha = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int abc_ic_menu_moreoverflow_mtrl_alpha = 2130837524;
+			public const int abc_ic_menu_copy_mtrl_am_alpha = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int abc_ic_menu_paste_mtrl_am_alpha = 2130837525;
+			public const int abc_ic_menu_cut_mtrl_alpha = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int abc_ic_menu_selectall_mtrl_alpha = 2130837526;
+			public const int abc_ic_menu_moreoverflow_mtrl_alpha = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int abc_ic_menu_share_mtrl_alpha = 2130837527;
+			public const int abc_ic_menu_paste_mtrl_am_alpha = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int abc_ic_search_api_mtrl_alpha = 2130837528;
+			public const int abc_ic_menu_selectall_mtrl_alpha = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int abc_ic_voice_search_api_mtrl_alpha = 2130837529;
+			public const int abc_ic_menu_share_mtrl_alpha = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int abc_item_background_holo_dark = 2130837530;
+			public const int abc_ic_search_api_mtrl_alpha = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int abc_item_background_holo_light = 2130837531;
+			public const int abc_ic_voice_search_api_mtrl_alpha = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int abc_list_divider_mtrl_alpha = 2130837532;
+			public const int abc_item_background_holo_dark = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int abc_list_focused_holo = 2130837533;
+			public const int abc_item_background_holo_light = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int abc_list_longpressed_holo = 2130837534;
+			public const int abc_list_divider_mtrl_alpha = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int abc_list_pressed_holo_dark = 2130837535;
+			public const int abc_list_focused_holo = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int abc_list_pressed_holo_light = 2130837536;
+			public const int abc_list_longpressed_holo = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int abc_list_selector_background_transition_holo_dark = 2130837537;
+			public const int abc_list_pressed_holo_dark = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int abc_list_selector_background_transition_holo_light = 2130837538;
+			public const int abc_list_pressed_holo_light = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int abc_list_selector_disabled_holo_dark = 2130837539;
+			public const int abc_list_selector_background_transition_holo_dark = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int abc_list_selector_disabled_holo_light = 2130837540;
+			public const int abc_list_selector_background_transition_holo_light = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int abc_list_selector_holo_dark = 2130837541;
+			public const int abc_list_selector_disabled_holo_dark = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int abc_list_selector_holo_light = 2130837542;
+			public const int abc_list_selector_disabled_holo_light = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int abc_menu_hardkey_panel_mtrl_mult = 2130837543;
+			public const int abc_list_selector_holo_dark = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int abc_popup_background_mtrl_mult = 2130837544;
+			public const int abc_list_selector_holo_light = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int abc_spinner_mtrl_am_alpha = 2130837545;
+			public const int abc_menu_hardkey_panel_mtrl_mult = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int abc_switch_thumb_material = 2130837546;
+			public const int abc_popup_background_mtrl_mult = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int abc_switch_track_mtrl_alpha = 2130837547;
+			public const int abc_ratingbar_full_material = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int abc_tab_indicator_material = 2130837548;
+			public const int abc_spinner_mtrl_am_alpha = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int abc_tab_indicator_mtrl_alpha = 2130837549;
+			public const int abc_spinner_textfield_background_material = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int abc_textfield_activated_mtrl_alpha = 2130837550;
+			public const int abc_switch_thumb_material = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int abc_textfield_default_mtrl_alpha = 2130837551;
+			public const int abc_switch_track_mtrl_alpha = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int abc_textfield_search_activated_mtrl_alpha = 2130837552;
+			public const int abc_tab_indicator_material = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int abc_textfield_search_default_mtrl_alpha = 2130837553;
+			public const int abc_tab_indicator_mtrl_alpha = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int abc_textfield_search_material = 2130837554;
+			public const int abc_textfield_activated_mtrl_alpha = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int ic_action_accept = 2130837555;
+			public const int abc_textfield_default_mtrl_alpha = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int ic_action_cancel = 2130837556;
+			public const int abc_textfield_search_activated_mtrl_alpha = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int ic_action_new = 2130837557;
+			public const int abc_textfield_search_default_mtrl_alpha = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int ic_action_overflow = 2130837558;
+			public const int abc_textfield_search_material = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int ic_action_overflow_pressed = 2130837559;
+			public const int ic_action_accept = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int ic_action_save = 2130837560;
+			public const int ic_action_cancel = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int Icon = 2130837561;
+			public const int ic_action_new = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int overflow_selector = 2130837562;
+			public const int ic_action_overflow = 2130837562;
+			
+			// aapt resource value: 0x7f02003b
+			public const int ic_action_overflow_pressed = 2130837563;
+			
+			// aapt resource value: 0x7f02003c
+			public const int ic_action_save = 2130837564;
+			
+			// aapt resource value: 0x7f02003d
+			public const int Icon = 2130837565;
+			
+			// aapt resource value: 0x7f02003e
+			public const int overflow_selector = 2130837566;
 			
 			static Drawable()
 			{
@@ -2380,7 +1447,13 @@ namespace OrderManager.Android
 		{
 			
 			// aapt resource value: 0x7f090000
-			public const int abc_max_action_buttons = 2131296256;
+			public const int abc_config_activityDefaultDur = 2131296256;
+			
+			// aapt resource value: 0x7f090001
+			public const int abc_config_activityShortDur = 2131296257;
+			
+			// aapt resource value: 0x7f090002
+			public const int abc_max_action_buttons = 2131296258;
 			
 			static Integer()
 			{
@@ -2432,76 +1505,73 @@ namespace OrderManager.Android
 			public const int abc_activity_chooser_view = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int abc_activity_chooser_view_include = 2130903052;
+			public const int abc_activity_chooser_view_list_item = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int abc_activity_chooser_view_list_item = 2130903053;
+			public const int abc_expanded_menu_layout = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int abc_expanded_menu_layout = 2130903054;
+			public const int abc_list_menu_item_checkbox = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int abc_list_menu_item_checkbox = 2130903055;
+			public const int abc_list_menu_item_icon = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int abc_list_menu_item_icon = 2130903056;
+			public const int abc_list_menu_item_layout = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int abc_list_menu_item_layout = 2130903057;
+			public const int abc_list_menu_item_radio = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int abc_list_menu_item_radio = 2130903058;
+			public const int abc_popup_menu_item_layout = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int abc_popup_menu_item_layout = 2130903059;
+			public const int abc_screen_content_include = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int abc_screen_content_include = 2130903060;
+			public const int abc_screen_simple = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int abc_screen_simple = 2130903061;
+			public const int abc_screen_simple_overlay_action_mode = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int abc_screen_simple_overlay_action_mode = 2130903062;
+			public const int abc_screen_toolbar = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int abc_screen_toolbar = 2130903063;
+			public const int abc_search_dropdown_item_icons_2line = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int abc_search_dropdown_item_icons_2line = 2130903064;
+			public const int abc_search_view = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int abc_search_view = 2130903065;
+			public const int abc_simple_dropdown_hint = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int abc_simple_dropdown_hint = 2130903066;
+			public const int EditorWrapperView = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int EditorWrapperView = 2130903067;
+			public const int MainView = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int MainView = 2130903068;
+			public const int OrderEditorView = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int OrderEditorView = 2130903069;
+			public const int OrderTab1EditorView = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int OrderTab1EditorView = 2130903070;
+			public const int OrderTab2EditorView = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int OrderTab2EditorView = 2130903071;
+			public const int OrderWorkspaceView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int OrderWorkspaceView = 2130903072;
+			public const int ProductEditorView = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int ProductEditorView = 2130903073;
+			public const int ProductWorkspaceView = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int ProductWorkspaceView = 2130903074;
-			
-			// aapt resource value: 0x7f030023
-			public const int support_simple_spinner_dropdown_item = 2130903075;
+			public const int support_simple_spinner_dropdown_item = 2130903074;
 			
 			static Layout()
 			{
@@ -2543,9 +1613,6 @@ namespace OrderManager.Android
 		
 		public partial class String
 		{
-			
-			// aapt resource value: 0x7f0a0010
-			public const int Empty = 2131361808;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_action_bar_home_description = 2131361792;
@@ -2609,709 +1676,748 @@ namespace OrderManager.Android
 		{
 			
 			// aapt resource value: 0x7f0b0000
-			public const int Base_TextAppearance_AppCompat = 2131427328;
+			public const int Animation_AppCompat_DropDownUp = 2131427328;
 			
 			// aapt resource value: 0x7f0b0001
-			public const int Base_TextAppearance_AppCompat_Body1 = 2131427329;
+			public const int Base_Animation_AppCompat_DropDownUp = 2131427329;
 			
 			// aapt resource value: 0x7f0b0002
-			public const int Base_TextAppearance_AppCompat_Body2 = 2131427330;
+			public const int Base_TextAppearance_AppCompat = 2131427330;
 			
 			// aapt resource value: 0x7f0b0003
-			public const int Base_TextAppearance_AppCompat_Button = 2131427331;
+			public const int Base_TextAppearance_AppCompat_Body1 = 2131427331;
 			
 			// aapt resource value: 0x7f0b0004
-			public const int Base_TextAppearance_AppCompat_Caption = 2131427332;
+			public const int Base_TextAppearance_AppCompat_Body2 = 2131427332;
 			
 			// aapt resource value: 0x7f0b0005
-			public const int Base_TextAppearance_AppCompat_Display1 = 2131427333;
+			public const int Base_TextAppearance_AppCompat_Button = 2131427333;
 			
 			// aapt resource value: 0x7f0b0006
-			public const int Base_TextAppearance_AppCompat_Display2 = 2131427334;
+			public const int Base_TextAppearance_AppCompat_Caption = 2131427334;
 			
 			// aapt resource value: 0x7f0b0007
-			public const int Base_TextAppearance_AppCompat_Display3 = 2131427335;
+			public const int Base_TextAppearance_AppCompat_Display1 = 2131427335;
 			
 			// aapt resource value: 0x7f0b0008
-			public const int Base_TextAppearance_AppCompat_Display4 = 2131427336;
+			public const int Base_TextAppearance_AppCompat_Display2 = 2131427336;
 			
 			// aapt resource value: 0x7f0b0009
-			public const int Base_TextAppearance_AppCompat_Headline = 2131427337;
+			public const int Base_TextAppearance_AppCompat_Display3 = 2131427337;
 			
 			// aapt resource value: 0x7f0b000a
-			public const int Base_TextAppearance_AppCompat_Inverse = 2131427338;
+			public const int Base_TextAppearance_AppCompat_Display4 = 2131427338;
 			
 			// aapt resource value: 0x7f0b000b
-			public const int Base_TextAppearance_AppCompat_Large = 2131427339;
+			public const int Base_TextAppearance_AppCompat_Headline = 2131427339;
 			
 			// aapt resource value: 0x7f0b000c
-			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131427340;
+			public const int Base_TextAppearance_AppCompat_Inverse = 2131427340;
 			
 			// aapt resource value: 0x7f0b000d
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427341;
+			public const int Base_TextAppearance_AppCompat_Large = 2131427341;
 			
 			// aapt resource value: 0x7f0b000e
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427342;
+			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131427342;
 			
 			// aapt resource value: 0x7f0b000f
-			public const int Base_TextAppearance_AppCompat_Medium = 2131427343;
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427343;
 			
 			// aapt resource value: 0x7f0b0010
-			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131427344;
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427344;
 			
 			// aapt resource value: 0x7f0b0011
-			public const int Base_TextAppearance_AppCompat_Menu = 2131427345;
+			public const int Base_TextAppearance_AppCompat_Medium = 2131427345;
 			
 			// aapt resource value: 0x7f0b0012
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427346;
+			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131427346;
 			
 			// aapt resource value: 0x7f0b0013
-			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131427347;
+			public const int Base_TextAppearance_AppCompat_Menu = 2131427347;
 			
 			// aapt resource value: 0x7f0b0014
-			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131427348;
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427348;
 			
 			// aapt resource value: 0x7f0b0015
-			public const int Base_TextAppearance_AppCompat_Small = 2131427349;
+			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131427349;
 			
 			// aapt resource value: 0x7f0b0016
-			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131427350;
+			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131427350;
 			
 			// aapt resource value: 0x7f0b0017
-			public const int Base_TextAppearance_AppCompat_Subhead = 2131427351;
+			public const int Base_TextAppearance_AppCompat_Small = 2131427351;
 			
 			// aapt resource value: 0x7f0b0018
-			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131427352;
+			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131427352;
 			
 			// aapt resource value: 0x7f0b0019
-			public const int Base_TextAppearance_AppCompat_Title = 2131427353;
+			public const int Base_TextAppearance_AppCompat_Subhead = 2131427353;
 			
 			// aapt resource value: 0x7f0b001a
-			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131427354;
+			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131427354;
 			
 			// aapt resource value: 0x7f0b001b
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427355;
+			public const int Base_TextAppearance_AppCompat_Title = 2131427355;
 			
 			// aapt resource value: 0x7f0b001c
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427356;
+			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131427356;
 			
 			// aapt resource value: 0x7f0b001d
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427357;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427357;
 			
 			// aapt resource value: 0x7f0b001e
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427358;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427358;
 			
 			// aapt resource value: 0x7f0b001f
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427359;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427359;
 			
 			// aapt resource value: 0x7f0b0020
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427360;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427360;
 			
 			// aapt resource value: 0x7f0b0021
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427361;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427361;
 			
 			// aapt resource value: 0x7f0b0022
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427362;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427362;
 			
 			// aapt resource value: 0x7f0b0023
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427363;
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427363;
 			
 			// aapt resource value: 0x7f0b0024
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427364;
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427364;
 			
 			// aapt resource value: 0x7f0b0025
-			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131427365;
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427365;
 			
 			// aapt resource value: 0x7f0b0026
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427366;
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427366;
 			
 			// aapt resource value: 0x7f0b0027
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427367;
+			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131427367;
 			
 			// aapt resource value: 0x7f0b0028
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427368;
+			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427368;
 			
 			// aapt resource value: 0x7f0b0029
-			public const int Base_Theme_AppCompat = 2131427369;
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427369;
 			
 			// aapt resource value: 0x7f0b002a
-			public const int Base_Theme_AppCompat_CompactMenu = 2131427370;
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427370;
 			
 			// aapt resource value: 0x7f0b002b
-			public const int Base_Theme_AppCompat_Dialog = 2131427371;
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427371;
 			
 			// aapt resource value: 0x7f0b002c
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427372;
+			public const int Base_Theme_AppCompat = 2131427372;
 			
 			// aapt resource value: 0x7f0b002d
-			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131427373;
+			public const int Base_Theme_AppCompat_CompactMenu = 2131427373;
 			
 			// aapt resource value: 0x7f0b002e
-			public const int Base_Theme_AppCompat_Light = 2131427374;
+			public const int Base_Theme_AppCompat_Dialog = 2131427374;
 			
 			// aapt resource value: 0x7f0b002f
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427375;
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427375;
 			
 			// aapt resource value: 0x7f0b0030
-			public const int Base_Theme_AppCompat_Light_Dialog = 2131427376;
+			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131427376;
 			
 			// aapt resource value: 0x7f0b0031
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427377;
+			public const int Base_Theme_AppCompat_Light = 2131427377;
 			
 			// aapt resource value: 0x7f0b0032
-			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131427378;
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427378;
 			
 			// aapt resource value: 0x7f0b0033
-			public const int Base_ThemeOverlay_AppCompat = 2131427379;
+			public const int Base_Theme_AppCompat_Light_Dialog = 2131427379;
 			
 			// aapt resource value: 0x7f0b0034
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427380;
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427380;
 			
 			// aapt resource value: 0x7f0b0035
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427381;
+			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131427381;
 			
 			// aapt resource value: 0x7f0b0036
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427382;
+			public const int Base_ThemeOverlay_AppCompat = 2131427382;
 			
 			// aapt resource value: 0x7f0b0037
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131427383;
-			
-			// aapt resource value: 0x7f0b00df
-			public const int Base_V11_Theme_AppCompat = 2131427551;
-			
-			// aapt resource value: 0x7f0b00e0
-			public const int Base_V11_Theme_AppCompat_Dialog = 2131427552;
-			
-			// aapt resource value: 0x7f0b00e1
-			public const int Base_V11_Theme_AppCompat_Light = 2131427553;
-			
-			// aapt resource value: 0x7f0b00e2
-			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131427554;
-			
-			// aapt resource value: 0x7f0b00e3
-			public const int Base_V14_Theme_AppCompat = 2131427555;
-			
-			// aapt resource value: 0x7f0b00e4
-			public const int Base_V14_Theme_AppCompat_Dialog = 2131427556;
-			
-			// aapt resource value: 0x7f0b00e5
-			public const int Base_V14_Theme_AppCompat_Light = 2131427557;
-			
-			// aapt resource value: 0x7f0b00e6
-			public const int Base_V14_Theme_AppCompat_Light_Dialog = 2131427558;
-			
-			// aapt resource value: 0x7f0b00e7
-			public const int Base_V21_Theme_AppCompat = 2131427559;
-			
-			// aapt resource value: 0x7f0b00e8
-			public const int Base_V21_Theme_AppCompat_Dialog = 2131427560;
-			
-			// aapt resource value: 0x7f0b00e9
-			public const int Base_V21_Theme_AppCompat_Light = 2131427561;
-			
-			// aapt resource value: 0x7f0b00ea
-			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131427562;
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427383;
 			
 			// aapt resource value: 0x7f0b0038
-			public const int Base_V7_Theme_AppCompat = 2131427384;
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427384;
 			
 			// aapt resource value: 0x7f0b0039
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131427385;
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427385;
 			
 			// aapt resource value: 0x7f0b003a
-			public const int Base_V7_Theme_AppCompat_Light = 2131427386;
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131427386;
+			
+			// aapt resource value: 0x7f0b00ec
+			public const int Base_V11_Theme_AppCompat = 2131427564;
+			
+			// aapt resource value: 0x7f0b00ed
+			public const int Base_V11_Theme_AppCompat_Dialog = 2131427565;
+			
+			// aapt resource value: 0x7f0b00ee
+			public const int Base_V11_Theme_AppCompat_Light = 2131427566;
+			
+			// aapt resource value: 0x7f0b00ef
+			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131427567;
+			
+			// aapt resource value: 0x7f0b00f0
+			public const int Base_V14_Theme_AppCompat = 2131427568;
+			
+			// aapt resource value: 0x7f0b00f1
+			public const int Base_V14_Theme_AppCompat_Dialog = 2131427569;
+			
+			// aapt resource value: 0x7f0b00f2
+			public const int Base_V14_Theme_AppCompat_Light = 2131427570;
+			
+			// aapt resource value: 0x7f0b00f3
+			public const int Base_V14_Theme_AppCompat_Light_Dialog = 2131427571;
+			
+			// aapt resource value: 0x7f0b00f4
+			public const int Base_V21_Theme_AppCompat = 2131427572;
+			
+			// aapt resource value: 0x7f0b00f5
+			public const int Base_V21_Theme_AppCompat_Dialog = 2131427573;
+			
+			// aapt resource value: 0x7f0b00f6
+			public const int Base_V21_Theme_AppCompat_Light = 2131427574;
+			
+			// aapt resource value: 0x7f0b00f7
+			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131427575;
 			
 			// aapt resource value: 0x7f0b003b
-			public const int Base_Widget_AppCompat_ActionBar = 2131427387;
+			public const int Base_V7_Theme_AppCompat = 2131427387;
 			
 			// aapt resource value: 0x7f0b003c
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427388;
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131427388;
 			
 			// aapt resource value: 0x7f0b003d
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427389;
+			public const int Base_V7_Theme_AppCompat_Light = 2131427389;
 			
 			// aapt resource value: 0x7f0b003e
-			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131427390;
+			public const int Base_Widget_AppCompat_ActionBar = 2131427390;
 			
 			// aapt resource value: 0x7f0b003f
-			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131427391;
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427391;
 			
 			// aapt resource value: 0x7f0b0040
-			public const int Base_Widget_AppCompat_ActionButton = 2131427392;
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427392;
 			
 			// aapt resource value: 0x7f0b0041
-			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131427393;
+			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131427393;
 			
 			// aapt resource value: 0x7f0b0042
-			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131427394;
+			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131427394;
 			
 			// aapt resource value: 0x7f0b0043
-			public const int Base_Widget_AppCompat_ActionMode = 2131427395;
+			public const int Base_Widget_AppCompat_ActionButton = 2131427395;
 			
 			// aapt resource value: 0x7f0b0044
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427396;
+			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131427396;
 			
 			// aapt resource value: 0x7f0b0045
-			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131427397;
+			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131427397;
 			
 			// aapt resource value: 0x7f0b0046
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427398;
+			public const int Base_Widget_AppCompat_ActionMode = 2131427398;
 			
 			// aapt resource value: 0x7f0b0047
-			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131427399;
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427399;
 			
 			// aapt resource value: 0x7f0b0048
-			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131427400;
+			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131427400;
 			
 			// aapt resource value: 0x7f0b0049
-			public const int Base_Widget_AppCompat_EditText = 2131427401;
+			public const int Base_Widget_AppCompat_Button = 2131427401;
 			
 			// aapt resource value: 0x7f0b004a
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427402;
+			public const int Base_Widget_AppCompat_Button_Small = 2131427402;
 			
 			// aapt resource value: 0x7f0b004b
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427403;
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427403;
 			
 			// aapt resource value: 0x7f0b004c
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427404;
+			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131427404;
 			
 			// aapt resource value: 0x7f0b004d
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131427405;
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427405;
 			
 			// aapt resource value: 0x7f0b004e
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427406;
+			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131427406;
 			
 			// aapt resource value: 0x7f0b004f
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131427407;
+			public const int Base_Widget_AppCompat_EditText = 2131427407;
 			
 			// aapt resource value: 0x7f0b0050
-			public const int Base_Widget_AppCompat_Light_ActivityChooserView = 2131427408;
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427408;
 			
 			// aapt resource value: 0x7f0b0051
-			public const int Base_Widget_AppCompat_Light_AutoCompleteTextView = 2131427409;
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427409;
 			
 			// aapt resource value: 0x7f0b0052
-			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131427410;
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427410;
 			
 			// aapt resource value: 0x7f0b0053
-			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131427411;
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131427411;
 			
 			// aapt resource value: 0x7f0b0054
-			public const int Base_Widget_AppCompat_ListPopupWindow = 2131427412;
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427412;
 			
 			// aapt resource value: 0x7f0b0055
-			public const int Base_Widget_AppCompat_ListView_DropDown = 2131427413;
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131427413;
 			
 			// aapt resource value: 0x7f0b0056
-			public const int Base_Widget_AppCompat_ListView_Menu = 2131427414;
+			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131427414;
 			
 			// aapt resource value: 0x7f0b0057
-			public const int Base_Widget_AppCompat_PopupMenu = 2131427415;
+			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131427415;
 			
 			// aapt resource value: 0x7f0b0058
-			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131427416;
+			public const int Base_Widget_AppCompat_ListPopupWindow = 2131427416;
 			
 			// aapt resource value: 0x7f0b0059
-			public const int Base_Widget_AppCompat_PopupWindow = 2131427417;
+			public const int Base_Widget_AppCompat_ListView_DropDown = 2131427417;
 			
 			// aapt resource value: 0x7f0b005a
-			public const int Base_Widget_AppCompat_ProgressBar = 2131427418;
+			public const int Base_Widget_AppCompat_ListView_Menu = 2131427418;
 			
 			// aapt resource value: 0x7f0b005b
-			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131427419;
+			public const int Base_Widget_AppCompat_PopupMenu = 2131427419;
 			
 			// aapt resource value: 0x7f0b005c
-			public const int Base_Widget_AppCompat_SearchView = 2131427420;
+			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131427420;
 			
 			// aapt resource value: 0x7f0b005d
-			public const int Base_Widget_AppCompat_Spinner = 2131427421;
+			public const int Base_Widget_AppCompat_PopupWindow = 2131427421;
 			
 			// aapt resource value: 0x7f0b005e
-			public const int Base_Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427422;
+			public const int Base_Widget_AppCompat_ProgressBar = 2131427422;
 			
 			// aapt resource value: 0x7f0b005f
-			public const int Base_Widget_AppCompat_Toolbar = 2131427423;
+			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131427423;
 			
 			// aapt resource value: 0x7f0b0060
-			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427424;
+			public const int Base_Widget_AppCompat_RatingBar = 2131427424;
 			
 			// aapt resource value: 0x7f0b0061
-			public const int Platform_AppCompat = 2131427425;
+			public const int Base_Widget_AppCompat_SearchView = 2131427425;
 			
 			// aapt resource value: 0x7f0b0062
-			public const int Platform_AppCompat_Dialog = 2131427426;
+			public const int Base_Widget_AppCompat_Spinner = 2131427426;
 			
 			// aapt resource value: 0x7f0b0063
-			public const int Platform_AppCompat_Light = 2131427427;
+			public const int Base_Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427427;
 			
 			// aapt resource value: 0x7f0b0064
-			public const int Platform_AppCompat_Light_Dialog = 2131427428;
+			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131427428;
 			
 			// aapt resource value: 0x7f0b0065
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131427429;
+			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131427429;
 			
 			// aapt resource value: 0x7f0b0066
-			public const int RtlOverlay_Widget_AppCompat_ActionButton_CloseMode = 2131427430;
+			public const int Base_Widget_AppCompat_Toolbar = 2131427430;
 			
 			// aapt resource value: 0x7f0b0067
-			public const int RtlOverlay_Widget_AppCompat_ActionButton_Overflow = 2131427431;
+			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427431;
 			
 			// aapt resource value: 0x7f0b0068
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131427432;
+			public const int Platform_AppCompat = 2131427432;
 			
 			// aapt resource value: 0x7f0b0069
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131427433;
+			public const int Platform_AppCompat_Dialog = 2131427433;
 			
 			// aapt resource value: 0x7f0b006a
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131427434;
+			public const int Platform_AppCompat_Light = 2131427434;
 			
 			// aapt resource value: 0x7f0b006b
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131427435;
+			public const int Platform_AppCompat_Light_Dialog = 2131427435;
 			
 			// aapt resource value: 0x7f0b006c
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131427436;
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131427436;
 			
 			// aapt resource value: 0x7f0b006d
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131427437;
+			public const int RtlOverlay_Widget_AppCompat_ActionButton_CloseMode = 2131427437;
 			
 			// aapt resource value: 0x7f0b006e
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131427438;
+			public const int RtlOverlay_Widget_AppCompat_ActionButton_Overflow = 2131427438;
 			
 			// aapt resource value: 0x7f0b006f
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131427439;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131427439;
 			
 			// aapt resource value: 0x7f0b0070
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131427440;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131427440;
 			
 			// aapt resource value: 0x7f0b0071
-			public const int TextAppearance_AppCompat = 2131427441;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131427441;
 			
 			// aapt resource value: 0x7f0b0072
-			public const int TextAppearance_AppCompat_Body1 = 2131427442;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131427442;
 			
 			// aapt resource value: 0x7f0b0073
-			public const int TextAppearance_AppCompat_Body2 = 2131427443;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131427443;
 			
 			// aapt resource value: 0x7f0b0074
-			public const int TextAppearance_AppCompat_Button = 2131427444;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131427444;
 			
 			// aapt resource value: 0x7f0b0075
-			public const int TextAppearance_AppCompat_Caption = 2131427445;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131427445;
 			
 			// aapt resource value: 0x7f0b0076
-			public const int TextAppearance_AppCompat_Display1 = 2131427446;
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131427446;
 			
 			// aapt resource value: 0x7f0b0077
-			public const int TextAppearance_AppCompat_Display2 = 2131427447;
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131427447;
 			
 			// aapt resource value: 0x7f0b0078
-			public const int TextAppearance_AppCompat_Display3 = 2131427448;
+			public const int TextAppearance_AppCompat = 2131427448;
 			
 			// aapt resource value: 0x7f0b0079
-			public const int TextAppearance_AppCompat_Display4 = 2131427449;
+			public const int TextAppearance_AppCompat_Body1 = 2131427449;
 			
 			// aapt resource value: 0x7f0b007a
-			public const int TextAppearance_AppCompat_Headline = 2131427450;
+			public const int TextAppearance_AppCompat_Body2 = 2131427450;
 			
 			// aapt resource value: 0x7f0b007b
-			public const int TextAppearance_AppCompat_Inverse = 2131427451;
+			public const int TextAppearance_AppCompat_Button = 2131427451;
 			
 			// aapt resource value: 0x7f0b007c
-			public const int TextAppearance_AppCompat_Large = 2131427452;
+			public const int TextAppearance_AppCompat_Caption = 2131427452;
 			
 			// aapt resource value: 0x7f0b007d
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131427453;
+			public const int TextAppearance_AppCompat_Display1 = 2131427453;
 			
 			// aapt resource value: 0x7f0b007e
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427454;
+			public const int TextAppearance_AppCompat_Display2 = 2131427454;
 			
 			// aapt resource value: 0x7f0b007f
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427455;
+			public const int TextAppearance_AppCompat_Display3 = 2131427455;
 			
 			// aapt resource value: 0x7f0b0080
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427456;
+			public const int TextAppearance_AppCompat_Display4 = 2131427456;
 			
 			// aapt resource value: 0x7f0b0081
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427457;
+			public const int TextAppearance_AppCompat_Headline = 2131427457;
 			
 			// aapt resource value: 0x7f0b0082
-			public const int TextAppearance_AppCompat_Medium = 2131427458;
+			public const int TextAppearance_AppCompat_Inverse = 2131427458;
 			
 			// aapt resource value: 0x7f0b0083
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427459;
+			public const int TextAppearance_AppCompat_Large = 2131427459;
 			
 			// aapt resource value: 0x7f0b0084
-			public const int TextAppearance_AppCompat_Menu = 2131427460;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131427460;
 			
 			// aapt resource value: 0x7f0b0085
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427461;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427461;
 			
 			// aapt resource value: 0x7f0b0086
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427462;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427462;
 			
 			// aapt resource value: 0x7f0b0087
-			public const int TextAppearance_AppCompat_Small = 2131427463;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427463;
 			
 			// aapt resource value: 0x7f0b0088
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131427464;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427464;
 			
 			// aapt resource value: 0x7f0b0089
-			public const int TextAppearance_AppCompat_Subhead = 2131427465;
+			public const int TextAppearance_AppCompat_Medium = 2131427465;
 			
 			// aapt resource value: 0x7f0b008a
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427466;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427466;
 			
 			// aapt resource value: 0x7f0b008b
-			public const int TextAppearance_AppCompat_Title = 2131427467;
+			public const int TextAppearance_AppCompat_Menu = 2131427467;
 			
 			// aapt resource value: 0x7f0b008c
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131427468;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427468;
 			
 			// aapt resource value: 0x7f0b008d
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427469;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427469;
 			
 			// aapt resource value: 0x7f0b008e
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427470;
+			public const int TextAppearance_AppCompat_Small = 2131427470;
 			
 			// aapt resource value: 0x7f0b008f
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427471;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131427471;
 			
 			// aapt resource value: 0x7f0b0090
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427472;
+			public const int TextAppearance_AppCompat_Subhead = 2131427472;
 			
 			// aapt resource value: 0x7f0b0091
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427473;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427473;
 			
 			// aapt resource value: 0x7f0b0092
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427474;
+			public const int TextAppearance_AppCompat_Title = 2131427474;
 			
 			// aapt resource value: 0x7f0b0093
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427475;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131427475;
 			
 			// aapt resource value: 0x7f0b0094
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427476;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427476;
 			
 			// aapt resource value: 0x7f0b0095
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427477;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427477;
 			
 			// aapt resource value: 0x7f0b0096
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427478;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427478;
 			
 			// aapt resource value: 0x7f0b0097
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427479;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427479;
 			
 			// aapt resource value: 0x7f0b0098
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427480;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427480;
 			
 			// aapt resource value: 0x7f0b0099
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131427481;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427481;
 			
 			// aapt resource value: 0x7f0b009a
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427482;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427482;
 			
 			// aapt resource value: 0x7f0b009b
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427483;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427483;
 			
 			// aapt resource value: 0x7f0b009c
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427484;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427484;
 			
 			// aapt resource value: 0x7f0b009d
-			public const int Theme_AppCompat = 2131427485;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427485;
 			
 			// aapt resource value: 0x7f0b009e
-			public const int Theme_AppCompat_CompactMenu = 2131427486;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427486;
 			
 			// aapt resource value: 0x7f0b009f
-			public const int Theme_AppCompat_Dialog = 2131427487;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427487;
 			
 			// aapt resource value: 0x7f0b00a0
-			public const int Theme_AppCompat_DialogWhenLarge = 2131427488;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131427488;
 			
 			// aapt resource value: 0x7f0b00a1
-			public const int Theme_AppCompat_Light = 2131427489;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427489;
 			
 			// aapt resource value: 0x7f0b00a2
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131427490;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427490;
 			
 			// aapt resource value: 0x7f0b00a3
-			public const int Theme_AppCompat_Light_Dialog = 2131427491;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427491;
 			
 			// aapt resource value: 0x7f0b00a4
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427492;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427492;
 			
 			// aapt resource value: 0x7f0b00a5
-			public const int Theme_AppCompat_Light_NoActionBar = 2131427493;
+			public const int Theme_AppCompat = 2131427493;
 			
 			// aapt resource value: 0x7f0b00a6
-			public const int Theme_AppCompat_NoActionBar = 2131427494;
+			public const int Theme_AppCompat_CompactMenu = 2131427494;
 			
 			// aapt resource value: 0x7f0b00a7
-			public const int ThemeOverlay_AppCompat = 2131427495;
+			public const int Theme_AppCompat_Dialog = 2131427495;
 			
 			// aapt resource value: 0x7f0b00a8
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131427496;
+			public const int Theme_AppCompat_DialogWhenLarge = 2131427496;
 			
 			// aapt resource value: 0x7f0b00a9
-			public const int ThemeOverlay_AppCompat_Dark = 2131427497;
+			public const int Theme_AppCompat_Light = 2131427497;
 			
 			// aapt resource value: 0x7f0b00aa
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427498;
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131427498;
 			
 			// aapt resource value: 0x7f0b00ab
-			public const int ThemeOverlay_AppCompat_Light = 2131427499;
+			public const int Theme_AppCompat_Light_Dialog = 2131427499;
 			
 			// aapt resource value: 0x7f0b00ac
-			public const int Widget_AppCompat_ActionBar = 2131427500;
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427500;
 			
 			// aapt resource value: 0x7f0b00ad
-			public const int Widget_AppCompat_ActionBar_Solid = 2131427501;
+			public const int Theme_AppCompat_Light_NoActionBar = 2131427501;
 			
 			// aapt resource value: 0x7f0b00ae
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131427502;
+			public const int Theme_AppCompat_NoActionBar = 2131427502;
 			
 			// aapt resource value: 0x7f0b00af
-			public const int Widget_AppCompat_ActionBar_TabText = 2131427503;
+			public const int ThemeOverlay_AppCompat = 2131427503;
 			
 			// aapt resource value: 0x7f0b00b0
-			public const int Widget_AppCompat_ActionBar_TabView = 2131427504;
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131427504;
 			
 			// aapt resource value: 0x7f0b00b1
-			public const int Widget_AppCompat_ActionButton = 2131427505;
+			public const int ThemeOverlay_AppCompat_Dark = 2131427505;
 			
 			// aapt resource value: 0x7f0b00b2
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427506;
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427506;
 			
 			// aapt resource value: 0x7f0b00b3
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131427507;
+			public const int ThemeOverlay_AppCompat_Light = 2131427507;
 			
 			// aapt resource value: 0x7f0b00b4
-			public const int Widget_AppCompat_ActionMode = 2131427508;
+			public const int Widget_AppCompat_ActionBar = 2131427508;
 			
 			// aapt resource value: 0x7f0b00b5
-			public const int Widget_AppCompat_ActivityChooserView = 2131427509;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131427509;
 			
 			// aapt resource value: 0x7f0b00b6
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131427510;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131427510;
 			
 			// aapt resource value: 0x7f0b00b7
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131427511;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131427511;
 			
 			// aapt resource value: 0x7f0b00b8
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131427512;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131427512;
 			
 			// aapt resource value: 0x7f0b00b9
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427513;
+			public const int Widget_AppCompat_ActionButton = 2131427513;
 			
 			// aapt resource value: 0x7f0b00ba
-			public const int Widget_AppCompat_EditText = 2131427514;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427514;
 			
 			// aapt resource value: 0x7f0b00bb
-			public const int Widget_AppCompat_Light_ActionBar = 2131427515;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131427515;
 			
 			// aapt resource value: 0x7f0b00bc
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427516;
+			public const int Widget_AppCompat_ActionMode = 2131427516;
 			
 			// aapt resource value: 0x7f0b00bd
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427517;
+			public const int Widget_AppCompat_ActivityChooserView = 2131427517;
 			
 			// aapt resource value: 0x7f0b00be
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427518;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131427518;
 			
 			// aapt resource value: 0x7f0b00bf
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427519;
+			public const int Widget_AppCompat_Button = 2131427519;
 			
 			// aapt resource value: 0x7f0b00c0
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427520;
+			public const int Widget_AppCompat_Button_Small = 2131427520;
 			
 			// aapt resource value: 0x7f0b00c1
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427521;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131427521;
 			
 			// aapt resource value: 0x7f0b00c2
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427522;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131427522;
 			
 			// aapt resource value: 0x7f0b00c3
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427523;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427523;
 			
 			// aapt resource value: 0x7f0b00c4
-			public const int Widget_AppCompat_Light_ActionButton = 2131427524;
+			public const int Widget_AppCompat_EditText = 2131427524;
 			
 			// aapt resource value: 0x7f0b00c5
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427525;
+			public const int Widget_AppCompat_Light_ActionBar = 2131427525;
 			
 			// aapt resource value: 0x7f0b00c6
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427526;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427526;
 			
 			// aapt resource value: 0x7f0b00c7
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427527;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427527;
 			
 			// aapt resource value: 0x7f0b00c8
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427528;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427528;
 			
 			// aapt resource value: 0x7f0b00c9
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427529;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427529;
 			
 			// aapt resource value: 0x7f0b00ca
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427530;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427530;
 			
 			// aapt resource value: 0x7f0b00cb
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427531;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427531;
 			
 			// aapt resource value: 0x7f0b00cc
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427532;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427532;
 			
 			// aapt resource value: 0x7f0b00cd
-			public const int Widget_AppCompat_Light_PopupMenu = 2131427533;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427533;
 			
 			// aapt resource value: 0x7f0b00ce
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427534;
+			public const int Widget_AppCompat_Light_ActionButton = 2131427534;
 			
 			// aapt resource value: 0x7f0b00cf
-			public const int Widget_AppCompat_Light_SearchView = 2131427535;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427535;
 			
 			// aapt resource value: 0x7f0b00d0
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427536;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427536;
 			
 			// aapt resource value: 0x7f0b00d1
-			public const int Widget_AppCompat_ListPopupWindow = 2131427537;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427537;
 			
 			// aapt resource value: 0x7f0b00d2
-			public const int Widget_AppCompat_ListView_DropDown = 2131427538;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427538;
 			
 			// aapt resource value: 0x7f0b00d3
-			public const int Widget_AppCompat_ListView_Menu = 2131427539;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427539;
 			
 			// aapt resource value: 0x7f0b00d4
-			public const int Widget_AppCompat_PopupMenu = 2131427540;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427540;
 			
 			// aapt resource value: 0x7f0b00d5
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427541;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427541;
 			
 			// aapt resource value: 0x7f0b00d6
-			public const int Widget_AppCompat_PopupWindow = 2131427542;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427542;
 			
 			// aapt resource value: 0x7f0b00d7
-			public const int Widget_AppCompat_ProgressBar = 2131427543;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131427543;
 			
 			// aapt resource value: 0x7f0b00d8
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427544;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427544;
 			
 			// aapt resource value: 0x7f0b00d9
-			public const int Widget_AppCompat_SearchView = 2131427545;
+			public const int Widget_AppCompat_Light_SearchView = 2131427545;
 			
 			// aapt resource value: 0x7f0b00da
-			public const int Widget_AppCompat_Spinner = 2131427546;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427546;
 			
 			// aapt resource value: 0x7f0b00db
-			public const int Widget_AppCompat_Spinner_DropDown = 2131427547;
+			public const int Widget_AppCompat_ListPopupWindow = 2131427547;
 			
 			// aapt resource value: 0x7f0b00dc
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427548;
+			public const int Widget_AppCompat_ListView_DropDown = 2131427548;
 			
 			// aapt resource value: 0x7f0b00dd
-			public const int Widget_AppCompat_Toolbar = 2131427549;
+			public const int Widget_AppCompat_ListView_Menu = 2131427549;
 			
 			// aapt resource value: 0x7f0b00de
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427550;
+			public const int Widget_AppCompat_PopupMenu = 2131427550;
+			
+			// aapt resource value: 0x7f0b00df
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427551;
+			
+			// aapt resource value: 0x7f0b00e0
+			public const int Widget_AppCompat_PopupWindow = 2131427552;
+			
+			// aapt resource value: 0x7f0b00e1
+			public const int Widget_AppCompat_ProgressBar = 2131427553;
+			
+			// aapt resource value: 0x7f0b00e2
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427554;
+			
+			// aapt resource value: 0x7f0b00e3
+			public const int Widget_AppCompat_RatingBar = 2131427555;
+			
+			// aapt resource value: 0x7f0b00e4
+			public const int Widget_AppCompat_SearchView = 2131427556;
+			
+			// aapt resource value: 0x7f0b00e5
+			public const int Widget_AppCompat_Spinner = 2131427557;
+			
+			// aapt resource value: 0x7f0b00e6
+			public const int Widget_AppCompat_Spinner_DropDown = 2131427558;
+			
+			// aapt resource value: 0x7f0b00e7
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427559;
+			
+			// aapt resource value: 0x7f0b00e8
+			public const int Widget_AppCompat_Spinner_Underlined = 2131427560;
+			
+			// aapt resource value: 0x7f0b00e9
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427561;
+			
+			// aapt resource value: 0x7f0b00ea
+			public const int Widget_AppCompat_Toolbar = 2131427562;
+			
+			// aapt resource value: 0x7f0b00eb
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427563;
 			
 			static Style()
 			{
@@ -3940,8 +3046,23 @@ namespace OrderManager.Android
 			// aapt resource value: 3
 			public const int SwitchCompat_track = 3;
 			
+			public static int[] SwitchCompatTextAppearance = new int[] {
+					16842901,
+					16842904,
+					2130771999};
+			
+			// aapt resource value: 1
+			public const int SwitchCompatTextAppearance_android_textColor = 1;
+			
+			// aapt resource value: 0
+			public const int SwitchCompatTextAppearance_android_textSize = 0;
+			
+			// aapt resource value: 2
+			public const int SwitchCompatTextAppearance_textAllCaps = 2;
+			
 			public static int[] Theme = new int[] {
 					16842839,
+					16842926,
 					2130772040,
 					2130772041,
 					2130772042,
@@ -4025,254 +3146,257 @@ namespace OrderManager.Android
 					2130772120,
 					2130772121};
 			
-			// aapt resource value: 19
-			public const int Theme_actionBarDivider = 19;
-			
 			// aapt resource value: 20
-			public const int Theme_actionBarItemBackground = 20;
-			
-			// aapt resource value: 13
-			public const int Theme_actionBarPopupTheme = 13;
-			
-			// aapt resource value: 18
-			public const int Theme_actionBarSize = 18;
-			
-			// aapt resource value: 15
-			public const int Theme_actionBarSplitStyle = 15;
-			
-			// aapt resource value: 14
-			public const int Theme_actionBarStyle = 14;
-			
-			// aapt resource value: 9
-			public const int Theme_actionBarTabBarStyle = 9;
-			
-			// aapt resource value: 8
-			public const int Theme_actionBarTabStyle = 8;
-			
-			// aapt resource value: 10
-			public const int Theme_actionBarTabTextStyle = 10;
-			
-			// aapt resource value: 16
-			public const int Theme_actionBarTheme = 16;
-			
-			// aapt resource value: 17
-			public const int Theme_actionBarWidgetTheme = 17;
-			
-			// aapt resource value: 43
-			public const int Theme_actionButtonStyle = 43;
-			
-			// aapt resource value: 38
-			public const int Theme_actionDropDownStyle = 38;
+			public const int Theme_actionBarDivider = 20;
 			
 			// aapt resource value: 21
-			public const int Theme_actionMenuTextAppearance = 21;
+			public const int Theme_actionBarItemBackground = 21;
 			
-			// aapt resource value: 22
-			public const int Theme_actionMenuTextColor = 22;
+			// aapt resource value: 14
+			public const int Theme_actionBarPopupTheme = 14;
 			
-			// aapt resource value: 25
-			public const int Theme_actionModeBackground = 25;
+			// aapt resource value: 19
+			public const int Theme_actionBarSize = 19;
 			
-			// aapt resource value: 24
-			public const int Theme_actionModeCloseButtonStyle = 24;
+			// aapt resource value: 16
+			public const int Theme_actionBarSplitStyle = 16;
 			
-			// aapt resource value: 27
-			public const int Theme_actionModeCloseDrawable = 27;
+			// aapt resource value: 15
+			public const int Theme_actionBarStyle = 15;
 			
-			// aapt resource value: 29
-			public const int Theme_actionModeCopyDrawable = 29;
+			// aapt resource value: 10
+			public const int Theme_actionBarTabBarStyle = 10;
 			
-			// aapt resource value: 28
-			public const int Theme_actionModeCutDrawable = 28;
-			
-			// aapt resource value: 33
-			public const int Theme_actionModeFindDrawable = 33;
-			
-			// aapt resource value: 30
-			public const int Theme_actionModePasteDrawable = 30;
-			
-			// aapt resource value: 35
-			public const int Theme_actionModePopupWindowStyle = 35;
-			
-			// aapt resource value: 31
-			public const int Theme_actionModeSelectAllDrawable = 31;
-			
-			// aapt resource value: 32
-			public const int Theme_actionModeShareDrawable = 32;
-			
-			// aapt resource value: 26
-			public const int Theme_actionModeSplitBackground = 26;
-			
-			// aapt resource value: 23
-			public const int Theme_actionModeStyle = 23;
-			
-			// aapt resource value: 34
-			public const int Theme_actionModeWebSearchDrawable = 34;
+			// aapt resource value: 9
+			public const int Theme_actionBarTabStyle = 9;
 			
 			// aapt resource value: 11
-			public const int Theme_actionOverflowButtonStyle = 11;
+			public const int Theme_actionBarTabTextStyle = 11;
+			
+			// aapt resource value: 17
+			public const int Theme_actionBarTheme = 17;
+			
+			// aapt resource value: 18
+			public const int Theme_actionBarWidgetTheme = 18;
+			
+			// aapt resource value: 44
+			public const int Theme_actionButtonStyle = 44;
+			
+			// aapt resource value: 39
+			public const int Theme_actionDropDownStyle = 39;
+			
+			// aapt resource value: 22
+			public const int Theme_actionMenuTextAppearance = 22;
+			
+			// aapt resource value: 23
+			public const int Theme_actionMenuTextColor = 23;
+			
+			// aapt resource value: 26
+			public const int Theme_actionModeBackground = 26;
+			
+			// aapt resource value: 25
+			public const int Theme_actionModeCloseButtonStyle = 25;
+			
+			// aapt resource value: 28
+			public const int Theme_actionModeCloseDrawable = 28;
+			
+			// aapt resource value: 30
+			public const int Theme_actionModeCopyDrawable = 30;
+			
+			// aapt resource value: 29
+			public const int Theme_actionModeCutDrawable = 29;
+			
+			// aapt resource value: 34
+			public const int Theme_actionModeFindDrawable = 34;
+			
+			// aapt resource value: 31
+			public const int Theme_actionModePasteDrawable = 31;
+			
+			// aapt resource value: 36
+			public const int Theme_actionModePopupWindowStyle = 36;
+			
+			// aapt resource value: 32
+			public const int Theme_actionModeSelectAllDrawable = 32;
+			
+			// aapt resource value: 33
+			public const int Theme_actionModeShareDrawable = 33;
+			
+			// aapt resource value: 27
+			public const int Theme_actionModeSplitBackground = 27;
+			
+			// aapt resource value: 24
+			public const int Theme_actionModeStyle = 24;
+			
+			// aapt resource value: 35
+			public const int Theme_actionModeWebSearchDrawable = 35;
 			
 			// aapt resource value: 12
-			public const int Theme_actionOverflowMenuStyle = 12;
+			public const int Theme_actionOverflowButtonStyle = 12;
 			
-			// aapt resource value: 50
-			public const int Theme_activityChooserViewStyle = 50;
+			// aapt resource value: 13
+			public const int Theme_actionOverflowMenuStyle = 13;
+			
+			// aapt resource value: 51
+			public const int Theme_activityChooserViewStyle = 51;
+			
+			// aapt resource value: 1
+			public const int Theme_android_windowAnimationStyle = 1;
 			
 			// aapt resource value: 0
 			public const int Theme_android_windowIsFloating = 0;
 			
+			// aapt resource value: 46
+			public const int Theme_buttonBarButtonStyle = 46;
+			
 			// aapt resource value: 45
-			public const int Theme_buttonBarButtonStyle = 45;
-			
-			// aapt resource value: 44
-			public const int Theme_buttonBarStyle = 44;
-			
-			// aapt resource value: 77
-			public const int Theme_colorAccent = 77;
-			
-			// aapt resource value: 81
-			public const int Theme_colorButtonNormal = 81;
-			
-			// aapt resource value: 79
-			public const int Theme_colorControlActivated = 79;
-			
-			// aapt resource value: 80
-			public const int Theme_colorControlHighlight = 80;
+			public const int Theme_buttonBarStyle = 45;
 			
 			// aapt resource value: 78
-			public const int Theme_colorControlNormal = 78;
-			
-			// aapt resource value: 75
-			public const int Theme_colorPrimary = 75;
-			
-			// aapt resource value: 76
-			public const int Theme_colorPrimaryDark = 76;
+			public const int Theme_colorAccent = 78;
 			
 			// aapt resource value: 82
-			public const int Theme_colorSwitchThumbNormal = 82;
+			public const int Theme_colorButtonNormal = 82;
+			
+			// aapt resource value: 80
+			public const int Theme_colorControlActivated = 80;
+			
+			// aapt resource value: 81
+			public const int Theme_colorControlHighlight = 81;
+			
+			// aapt resource value: 79
+			public const int Theme_colorControlNormal = 79;
+			
+			// aapt resource value: 76
+			public const int Theme_colorPrimary = 76;
+			
+			// aapt resource value: 77
+			public const int Theme_colorPrimaryDark = 77;
+			
+			// aapt resource value: 83
+			public const int Theme_colorSwitchThumbNormal = 83;
+			
+			// aapt resource value: 50
+			public const int Theme_dividerHorizontal = 50;
 			
 			// aapt resource value: 49
-			public const int Theme_dividerHorizontal = 49;
-			
-			// aapt resource value: 48
-			public const int Theme_dividerVertical = 48;
-			
-			// aapt resource value: 67
-			public const int Theme_dropDownListViewStyle = 67;
-			
-			// aapt resource value: 39
-			public const int Theme_dropdownListPreferredItemHeight = 39;
-			
-			// aapt resource value: 56
-			public const int Theme_editTextBackground = 56;
-			
-			// aapt resource value: 55
-			public const int Theme_editTextColor = 55;
-			
-			// aapt resource value: 42
-			public const int Theme_homeAsUpIndicator = 42;
-			
-			// aapt resource value: 74
-			public const int Theme_listChoiceBackgroundIndicator = 74;
+			public const int Theme_dividerVertical = 49;
 			
 			// aapt resource value: 68
-			public const int Theme_listPopupWindowStyle = 68;
-			
-			// aapt resource value: 62
-			public const int Theme_listPreferredItemHeight = 62;
-			
-			// aapt resource value: 64
-			public const int Theme_listPreferredItemHeightLarge = 64;
-			
-			// aapt resource value: 63
-			public const int Theme_listPreferredItemHeightSmall = 63;
-			
-			// aapt resource value: 65
-			public const int Theme_listPreferredItemPaddingLeft = 65;
-			
-			// aapt resource value: 66
-			public const int Theme_listPreferredItemPaddingRight = 66;
-			
-			// aapt resource value: 71
-			public const int Theme_panelBackground = 71;
-			
-			// aapt resource value: 73
-			public const int Theme_panelMenuListTheme = 73;
-			
-			// aapt resource value: 72
-			public const int Theme_panelMenuListWidth = 72;
-			
-			// aapt resource value: 53
-			public const int Theme_popupMenuStyle = 53;
-			
-			// aapt resource value: 54
-			public const int Theme_popupWindowStyle = 54;
-			
-			// aapt resource value: 61
-			public const int Theme_searchViewStyle = 61;
-			
-			// aapt resource value: 46
-			public const int Theme_selectableItemBackground = 46;
-			
-			// aapt resource value: 47
-			public const int Theme_selectableItemBackgroundBorderless = 47;
-			
-			// aapt resource value: 41
-			public const int Theme_spinnerDropDownItemStyle = 41;
+			public const int Theme_dropDownListViewStyle = 68;
 			
 			// aapt resource value: 40
-			public const int Theme_spinnerStyle = 40;
+			public const int Theme_dropdownListPreferredItemHeight = 40;
 			
 			// aapt resource value: 57
-			public const int Theme_switchStyle = 57;
+			public const int Theme_editTextBackground = 57;
 			
-			// aapt resource value: 36
-			public const int Theme_textAppearanceLargePopupMenu = 36;
+			// aapt resource value: 56
+			public const int Theme_editTextColor = 56;
+			
+			// aapt resource value: 43
+			public const int Theme_homeAsUpIndicator = 43;
+			
+			// aapt resource value: 75
+			public const int Theme_listChoiceBackgroundIndicator = 75;
 			
 			// aapt resource value: 69
-			public const int Theme_textAppearanceListItem = 69;
+			public const int Theme_listPopupWindowStyle = 69;
 			
-			// aapt resource value: 70
-			public const int Theme_textAppearanceListItemSmall = 70;
+			// aapt resource value: 63
+			public const int Theme_listPreferredItemHeight = 63;
 			
-			// aapt resource value: 59
-			public const int Theme_textAppearanceSearchResultSubtitle = 59;
+			// aapt resource value: 65
+			public const int Theme_listPreferredItemHeightLarge = 65;
+			
+			// aapt resource value: 64
+			public const int Theme_listPreferredItemHeightSmall = 64;
+			
+			// aapt resource value: 66
+			public const int Theme_listPreferredItemPaddingLeft = 66;
+			
+			// aapt resource value: 67
+			public const int Theme_listPreferredItemPaddingRight = 67;
+			
+			// aapt resource value: 72
+			public const int Theme_panelBackground = 72;
+			
+			// aapt resource value: 74
+			public const int Theme_panelMenuListTheme = 74;
+			
+			// aapt resource value: 73
+			public const int Theme_panelMenuListWidth = 73;
+			
+			// aapt resource value: 54
+			public const int Theme_popupMenuStyle = 54;
+			
+			// aapt resource value: 55
+			public const int Theme_popupWindowStyle = 55;
+			
+			// aapt resource value: 62
+			public const int Theme_searchViewStyle = 62;
+			
+			// aapt resource value: 47
+			public const int Theme_selectableItemBackground = 47;
+			
+			// aapt resource value: 48
+			public const int Theme_selectableItemBackgroundBorderless = 48;
+			
+			// aapt resource value: 42
+			public const int Theme_spinnerDropDownItemStyle = 42;
+			
+			// aapt resource value: 41
+			public const int Theme_spinnerStyle = 41;
 			
 			// aapt resource value: 58
-			public const int Theme_textAppearanceSearchResultTitle = 58;
+			public const int Theme_switchStyle = 58;
 			
 			// aapt resource value: 37
-			public const int Theme_textAppearanceSmallPopupMenu = 37;
+			public const int Theme_textAppearanceLargePopupMenu = 37;
+			
+			// aapt resource value: 70
+			public const int Theme_textAppearanceListItem = 70;
+			
+			// aapt resource value: 71
+			public const int Theme_textAppearanceListItemSmall = 71;
 			
 			// aapt resource value: 60
-			public const int Theme_textColorSearchUrl = 60;
+			public const int Theme_textAppearanceSearchResultSubtitle = 60;
+			
+			// aapt resource value: 59
+			public const int Theme_textAppearanceSearchResultTitle = 59;
+			
+			// aapt resource value: 38
+			public const int Theme_textAppearanceSmallPopupMenu = 38;
+			
+			// aapt resource value: 61
+			public const int Theme_textColorSearchUrl = 61;
+			
+			// aapt resource value: 53
+			public const int Theme_toolbarNavigationButtonStyle = 53;
 			
 			// aapt resource value: 52
-			public const int Theme_toolbarNavigationButtonStyle = 52;
-			
-			// aapt resource value: 51
-			public const int Theme_toolbarStyle = 51;
-			
-			// aapt resource value: 1
-			public const int Theme_windowActionBar = 1;
+			public const int Theme_toolbarStyle = 52;
 			
 			// aapt resource value: 2
-			public const int Theme_windowActionBarOverlay = 2;
+			public const int Theme_windowActionBar = 2;
 			
 			// aapt resource value: 3
-			public const int Theme_windowActionModeOverlay = 3;
-			
-			// aapt resource value: 7
-			public const int Theme_windowFixedHeightMajor = 7;
-			
-			// aapt resource value: 5
-			public const int Theme_windowFixedHeightMinor = 5;
+			public const int Theme_windowActionBarOverlay = 3;
 			
 			// aapt resource value: 4
-			public const int Theme_windowFixedWidthMajor = 4;
+			public const int Theme_windowActionModeOverlay = 4;
+			
+			// aapt resource value: 8
+			public const int Theme_windowFixedHeightMajor = 8;
 			
 			// aapt resource value: 6
-			public const int Theme_windowFixedWidthMinor = 6;
+			public const int Theme_windowFixedHeightMinor = 6;
+			
+			// aapt resource value: 5
+			public const int Theme_windowFixedWidthMajor = 5;
+			
+			// aapt resource value: 7
+			public const int Theme_windowFixedWidthMinor = 7;
 			
 			public static int[] Toolbar = new int[] {
 					16842927,

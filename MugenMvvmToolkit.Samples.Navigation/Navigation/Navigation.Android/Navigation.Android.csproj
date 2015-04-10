@@ -56,24 +56,29 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=3.4.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.Android">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.Android, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.3.4.1\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.Android.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\..\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.22.0.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.1.6349\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
