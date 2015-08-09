@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollectionViewManagerForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.addToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.removeToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.viewBinder = new ApiExamples.ViewBinder(this.components);
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -83,13 +80,6 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(498, 324);
             this.tableLayoutPanel.TabIndex = 2;
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // CollectionViewManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,7 +92,6 @@
             this.Text = "TabForm";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +102,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton addToolStripButton;
         private System.Windows.Forms.ToolStripButton removeToolStripButton;
-        private ViewBinder viewBinder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     }
 }

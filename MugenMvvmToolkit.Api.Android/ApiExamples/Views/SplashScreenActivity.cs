@@ -1,14 +1,14 @@
 using Android.App;
-using MugenMvvmToolkit.Infrastructure;
-using MugenMvvmToolkit.Views.Activities;
+using MugenMvvmToolkit.Android.Infrastructure;
+using MugenMvvmToolkit.Android.Views.Activities;
 
 namespace ApiExamples.Views
 {
 #if APPCOMPAT
-    [Activity(Label = "ApiExamples.AppCompat", Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true,
+    [Activity(Label = "ApiExamples.AppCompat", Theme = "@style/Theme.AppCompat.NoActionBar.FullScreen", MainLauncher = true,
         Icon = "@drawable/icon", NoHistory = true)]
 #else
-    [Activity(Label = "ApiExamples", Theme = "@android:style/Theme.NoTitleBar", MainLauncher = true,
+    [Activity(Label = "ApiExamples", Theme = "@style/Theme.AppCompat.NoActionBar.FullScreen", MainLauncher = true,
         Icon = "@drawable/icon", NoHistory = true)]
 #endif
     public class SplashScreenActivity : SplashScreenActivityBase

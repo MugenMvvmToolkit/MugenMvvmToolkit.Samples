@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BindingModeView));
             this.label1 = new System.Windows.Forms.Label();
             this.oneTimeTb = new System.Windows.Forms.TextBox();
             this.oneWayTb = new System.Windows.Forms.TextBox();
@@ -40,10 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.twoWayDelayTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.oneWayDelayTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,13 +132,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Two way binding with source delay 1000: ";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // oneWayDelayTb
             // 
             this.oneWayDelayTb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -184,7 +173,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +182,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox oneTimeTb;
-        private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.TextBox twoWayDelayTb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox twoWayTb;

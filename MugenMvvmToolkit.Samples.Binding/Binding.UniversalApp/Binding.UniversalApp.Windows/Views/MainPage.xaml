@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"    
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"    
     mc:Ignorable="d" markupExtensions:View.DesignDataContext="MainViewModel">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -47,7 +47,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button Margin="1" x:Name="Btn" HorizontalAlignment="Stretch"
-                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Click $Relative(Page).DataContext.ShowCommand" />
+                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Command $Relative(Page).DataContext.ShowCommand, Mode=OneTime" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

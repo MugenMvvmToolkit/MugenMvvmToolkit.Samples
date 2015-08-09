@@ -7,17 +7,13 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Binding.Portable.Models;
+using MugenMvvmToolkit.Android.AppCompat.Views.Activities;
 using MugenMvvmToolkit.Binding;
-#if APPCOMPAT
-using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;
-#else
-using MugenMvvmToolkit.Views.Activities;
-#endif
 
 namespace Binding.Android.Views
 {
     [Activity(Label = "Binding.Android")]
-    public class PerformanceActivityView : MvvmActivity
+    public class PerformanceActivityView : MvvmAppCompatActivity
     {
         #region Constructors
 
@@ -60,12 +56,14 @@ namespace Binding.Android.Views
         {
             var target = new TestModel(this);
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay",
-                new object[] {model});
+            target.Bind(() => t => t.Value)
+                .To(model, () => m => m.Property)
+                .TwoWay()
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
-                target.Value = i%2 == 0 ? "0" : "1";
+                target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
             if (model.SetCount != count)
@@ -77,12 +75,13 @@ namespace Binding.Android.Views
         {
             var target = new TestModel(this);
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
+            target.Bind(() => m => m.Value)
+                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
-                model.Property = i%2 == 0 ? "0" : "1";
+                model.Property = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
             if (model.SetCount != count)
@@ -98,7 +97,7 @@ namespace Binding.Android.Views
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
             {
-                string text = i%2 == 0 ? "0" : "1";
+                string text = i % 2 == 0 ? "0" : "1";
                 target.Value = text;
                 model.Property = text;
             }

@@ -2,7 +2,7 @@ using System;
 using System.Windows.Forms;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinForms.Infrastructure;
 
 namespace Binding.WinForms
 {

@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.viewBinder = new ViewBinder(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <tableLayoutPanel1 ItemsSource=\"Items\" ItemTemplate=\"$buttonTemplate" +
-    "\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -67,14 +56,12 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ViewBinder viewBinder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

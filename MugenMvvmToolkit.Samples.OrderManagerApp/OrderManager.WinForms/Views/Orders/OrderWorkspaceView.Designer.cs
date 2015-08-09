@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderWorkspaceView));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +39,8 @@
             this.deleteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.closeToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.viewBinder = new OrderManager.WinForms.ViewBinder(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -158,13 +154,6 @@
             this.closeToolStripButton.Text = "toolStripButton1";
             this.closeToolStripButton.ToolTipText = "Close form";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // OrderWorkspaceView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,7 +165,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +183,5 @@
         private System.Windows.Forms.ToolStripButton deleteToolStripButton;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton closeToolStripButton;
-        private ViewBinder viewBinder;
     }
 }

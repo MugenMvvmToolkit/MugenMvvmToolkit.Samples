@@ -1,10 +1,11 @@
+using ApiExamples.Templates;
 using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
@@ -35,19 +36,20 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
                 };
 
-                set.BindFromExpression(CollectionView, "ItemTemplate $collectionViewCellTemplate");
+                CollectionView.SetBindingMemberValue(AttachedMembers.UICollectionView.ItemTemplateSelector,
+                    CollectionViewCellTemplateSelector.Instance);
                 set.Bind(CollectionView, AttachedMemberConstants.ItemsSource)
-                    .To(model => model.GridViewModel.ItemsSource);
+                    .To(() => model => model.GridViewModel.ItemsSource);
                 set.Bind(CollectionView, AttachedMemberConstants.SelectedItem)
-                    .To(model => model.GridViewModel.SelectedItem)
+                    .To(() => model => model.GridViewModel.SelectedItem)
                     .TwoWay();
-                set.Bind(this, controller => controller.Title)
-                    .To(model => model.GridViewModel.SelectedItem.Name)
+                set.Bind(this, () => controller => controller.Title)
+                    .To(() => model => model.GridViewModel.SelectedItem.Name)
                     .WithFallback("Nothing selected");
             }
         }

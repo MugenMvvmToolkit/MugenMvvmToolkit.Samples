@@ -6,7 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
+    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.WinPhone.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -42,7 +42,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button Margin="1" x:Name="Btn"
-                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Click $Relative(PhoneApplicationPage).DataContext.ShowCommand" />
+                                markupExtensions:View.Bind="Content Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Command $Relative(PhoneApplicationPage).DataContext.ShowCommand, Mode=OneTime" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

@@ -46,20 +46,9 @@ namespace OrderManager.WinForms
         {
             if (Mode != LoadMode.Design)
                 IocContainer.BindToConstant<IRepository>(new FileRepository());
-            IBindingResourceResolver resourceResolver = BindingServiceProvider.ResourceResolver;
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-
-            //Registering tab template resource.
-            resourceResolver.AddObject("tabTemplate",
-                new BindingResourceObject(new ViewModelTabDataTemplate()));
-
-            //Registering content manager to set content value in code-behind.
-            resourceResolver.AddObject("editorContentManager",
-                new BindingResourceObject(new WrapperContentManager()));
-
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Control, bool>("IsBusy", IsBusyChanged));
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Control, object>("BusyMessage",
-                BusyMessageChanged));
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty(AttachedMembersEx.Control.IsBusy, IsBusyChanged));
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty(AttachedMembersEx.Control.BusyMessage, BusyMessageChanged));
             return true;
         }
 
@@ -79,8 +68,8 @@ namespace OrderManager.WinForms
                 for (int index = 0; index < control.Controls.Count; index++)
                     control.Controls[index].Enabled = false;
                 control.Controls.Add(busyIndicator);
-                busyIndicator.Left = (control.ClientSize.Width - busyIndicator.Width)/2;
-                busyIndicator.Top = (control.ClientSize.Height - busyIndicator.Height)/2;
+                busyIndicator.Left = (control.ClientSize.Width - busyIndicator.Width) / 2;
+                busyIndicator.Top = (control.ClientSize.Height - busyIndicator.Height) / 2;
                 busyIndicator.BringToFront();
             }
             else

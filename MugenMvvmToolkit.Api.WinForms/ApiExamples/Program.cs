@@ -2,7 +2,7 @@ using System;
 using System.Windows.Forms;
 using ApiExamples.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinForms.Infrastructure;
 
 namespace ApiExamples
 {

@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;oneTimeTb Text="Text, Mode=OneTime" /&gt;
-  &lt;oneWayTb Text="Text, Mode=OneWay" /&gt;
-  &lt;oneWayDelayTb Text="Text, Mode=OneWay, TargetDelay=1000" /&gt;
-  &lt;oneWaySrcTb Text="Text, Mode=OneWayToSource" /&gt;
-  &lt;twoWayTb Text="Text, Mode=TwoWay" /&gt;
-  &lt;twoWayDelayTb Text="Text, Mode=TwoWay, Delay=1000" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

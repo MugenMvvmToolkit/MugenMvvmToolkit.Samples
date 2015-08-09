@@ -1,8 +1,9 @@
 using Binding.Portable.ViewModels;
 using Foundation;
-using UIKit;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using UIKit;
+using MugenMvvmToolkit.iOS;
+using MugenMvvmToolkit.iOS.Infrastructure;
 
 namespace Binding.Touch
 {

@@ -1,8 +1,11 @@
-﻿using ApiExamples.ViewModels;
+﻿using ApiExamples.ContentManagers;
+using ApiExamples.Templates;
+using ApiExamples.ViewModels;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
@@ -19,9 +22,9 @@ namespace ApiExamples.Views
 
             using (var set = new BindingSet<ContentViewModel>())
             {
-                set.Bind(View, AttachedMemberConstants.Content).To(model => model.ViewModel);
-                set.BindFromExpression(View, "ContentTemplate $labelItemTemplate");
-                set.BindFromExpression(View, "ContentViewManager $contentViewManager");
+                set.Bind(View, AttachedMemberConstants.Content).To(() => model => model.ViewModel);
+                View.SetBindingMemberValue(AttachedMembers.UIView.ContentTemplateSelector, LabelItemTemplateSelector.Instance);
+                View.SetBindingMemberValue(AttachedMembers.UIView.ContentViewManager, ContentViewManager.Instance);
             }
         }
 

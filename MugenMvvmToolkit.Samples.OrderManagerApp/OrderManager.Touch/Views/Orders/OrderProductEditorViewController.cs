@@ -1,10 +1,12 @@
 ﻿using CoreGraphics;
 using Foundation;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Binding.Converters;
 using UIKit;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.Models;
 using OrderManager.Portable.ViewModels.Orders;
 
@@ -39,10 +41,10 @@ namespace OrderManager.Touch.Views.Orders
             using (var set = new BindingSet<OrderEditorViewModel>())
             {
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar, bar => bar.Text).To(model => model.FilterText).TwoWay();
+                set.Bind(searchBar, () => bar => bar.Text).To(() => model => model.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
-                set.Bind(TableView, AttachedMemberConstants.ItemsSource).To(model => model.GridViewModel.ItemsSource);
+                set.Bind(TableView, AttachedMembers.UIView.ItemsSource).To(() => model => model.GridViewModel.ItemsSource);
             }
 
             TableView.AllowsMultipleSelection = true;
@@ -53,14 +55,16 @@ namespace OrderManager.Touch.Views.Orders
                 cell.Accessory = UITableViewCellAccessory.None;
                 using (var set = new BindingSet<SelectableWrapper<ProductModel>>())
                 {
-                    set.Bind(cell, viewCell => viewCell.Selected)
-                       .To(wrapper => wrapper.IsSelected)
+                    set.Bind(cell, () => viewCell => viewCell.Selected)
+                       .To(() => wrapper => wrapper.IsSelected)
                        .TwoWay();
-                    set.Bind(cell.TextLabel, label => label.Text)
-                       .To(model => model.Model.Name);
-                    set.Bind(cell.DetailTextLabel, label => label.Text)
-                       .To(model => model.Model.Description);
-                    set.BindFromExpression(cell, "Accessory $BoolToCheckmark($self.Selected)");
+                    set.Bind(cell.TextLabel, () => label => label.Text)
+                       .To(() => model => model.Model.Name);
+                    set.Bind(cell.DetailTextLabel, () => label => label.Text)
+                       .To(() => model => model.Model.Description);
+                    set.Bind(cell, () => v => v.Accessory)
+                        .ToSelf(() => m => m.Selected)
+                        .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
                 }
             });
         }

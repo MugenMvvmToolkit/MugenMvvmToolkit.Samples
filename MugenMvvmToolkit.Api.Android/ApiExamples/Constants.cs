@@ -4,6 +4,8 @@ namespace ApiExamples
     {
         public const string TabHostView = "TabHostView";
 
+        public const string TabLayoutView = "TabLayoutView";
+
         public const string PopupMenuView = "PopupMenuView";
 
         public const string ViewPagerView = "ViewPagerView";

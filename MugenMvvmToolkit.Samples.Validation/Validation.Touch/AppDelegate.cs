@@ -1,7 +1,8 @@
 using Foundation;
 using UIKit;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.iOS;
+using MugenMvvmToolkit.iOS.Infrastructure;
 using Validation.Portable.ViewModels;
 
 namespace Validation.Touch
@@ -39,7 +40,7 @@ namespace Validation.Touch
 
         public override void DidDecodeRestorableState(UIApplication application, NSCoder coder)
         {
-            var controller = (UIViewController) coder.DecodeObject(RootViewControllerKey);
+            var controller = (UIViewController)coder.DecodeObject(RootViewControllerKey);
             if (controller != null)
                 _window.RootViewController = controller;
         }

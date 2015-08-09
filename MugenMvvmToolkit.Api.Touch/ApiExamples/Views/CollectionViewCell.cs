@@ -1,6 +1,6 @@
 using System.Drawing;
 using Foundation;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views

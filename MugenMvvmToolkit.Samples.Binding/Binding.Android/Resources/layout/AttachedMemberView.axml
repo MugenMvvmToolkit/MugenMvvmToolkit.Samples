@@ -11,13 +11,15 @@
     <LinearLayout android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical">
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="The current text:" />
-      <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                pkg:Bind="Text Text, Mode=TwoWay" />
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="The current text"
+                           pkg:Bind="Text Text, Mode=TwoWay" />
+      </TextInputLayout>
 
       <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:textColor="#00ff00"
-                pkg:Bind="FormattedText Text" />      
+                pkg:Bind="FormattedText Text" />
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

@@ -1,5 +1,8 @@
 ﻿using System.Windows.Forms;
 using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.WinForms.Binding;
+using OrderManager.Portable.ViewModels.Orders;
 
 namespace OrderManager.WinForms.Views.Orders
 {
@@ -8,6 +11,30 @@ namespace OrderManager.WinForms.Views.Orders
         public OrderEditorView()
         {
             InitializeComponent();
+            using (var set = new BindingSet<OrderEditorView, OrderEditorViewModel>(this))
+            {
+                set.Bind(dataGridView1, AttachedMembers.Object.ItemsSource)
+                   .To(() => m => m.GridViewModel.ItemsSource);
+                set.Bind(dataGridView1, AttachedMembers.DataGridView.SelectedItem)
+                   .To(() => m => m.GridViewModel.SelectedItem)
+                   .TwoWay();
+                set.Bind(filterTextBox, () => t => t.Text)
+                   .To(() => m => m.FilterText)
+                   .TwoWay();
+
+                set.Bind(nameTextBox, () => t => t.Text)
+                   .To(() => m => m.Name)
+                   .TwoWay()
+                   .Validate();
+                set.Bind(numberTextBox, () => t => t.Text)
+                   .To(() => m => m.Number)
+                   .TwoWay()
+                   .Validate();
+                set.Bind(dateTimePicker1, () => t => t.Value)
+                   .To(() => m => m.CreationDate)
+                   .TwoWay()
+                   .Validate();
+            }
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.CellFormatting += DataGridView1OnCellFormatting;
         }

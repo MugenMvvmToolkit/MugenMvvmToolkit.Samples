@@ -15,9 +15,9 @@ namespace Validation.Portable.Validators
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
-            if (PropertyNameEqual(propertyName, model => model.Login))
+            if (MemberNameEqual(propertyName, () => model => model.Login))
                 ValidateLogin(propertyName, dictionary);
-            else if (PropertyNameEqual(propertyName, model => model.Name))
+            else if (MemberNameEqual(propertyName, () => model => model.Name))
                 ValidateName(propertyName, dictionary);
             return FromResult(dictionary);
         }
@@ -25,8 +25,8 @@ namespace Validation.Portable.Validators
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
-            ValidateLogin(GetPropertyName(model => model.Login), dictionary);
-            ValidateName(GetPropertyName(model => model.Name), dictionary);
+            ValidateLogin(GetMemberName(() => model => model.Login), dictionary);
+            ValidateName(GetMemberName(() => model => model.Name), dictionary);
             return FromResult(dictionary);
         }
 

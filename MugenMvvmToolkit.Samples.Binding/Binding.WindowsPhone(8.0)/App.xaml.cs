@@ -8,7 +8,7 @@ using Binding.Portable.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinPhone.Infrastructure;
 using Binding.WindowsPhone.Resources;
 
 namespace Binding.WindowsPhone

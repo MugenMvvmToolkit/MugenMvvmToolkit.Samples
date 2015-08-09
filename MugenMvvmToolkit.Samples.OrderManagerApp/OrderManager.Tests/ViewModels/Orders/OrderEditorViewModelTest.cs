@@ -79,7 +79,7 @@ namespace OrderManager.Tests.ViewModels.Orders
 
             Assert.IsFalse(viewModel.IsValid);
             viewModel.Name = "test";
-            viewModel.ValidateAsync(editorViewModel => editorViewModel.Name);
+            viewModel.ValidateAsync(() => editorViewModel => editorViewModel.Name);
             Assert.IsTrue(viewModel.IsValid);
         }
 
@@ -98,7 +98,7 @@ namespace OrderManager.Tests.ViewModels.Orders
 
             Assert.IsFalse(viewModel.IsValid);
             viewModel.Number = "test";
-            viewModel.ValidateAsync(editorViewModel => editorViewModel.Number);
+            viewModel.ValidateAsync(() => editorViewModel => editorViewModel.Number);
             Assert.IsTrue(viewModel.IsValid);
         }
 

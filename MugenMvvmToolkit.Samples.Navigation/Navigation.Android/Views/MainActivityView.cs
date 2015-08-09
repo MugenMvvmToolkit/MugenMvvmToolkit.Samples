@@ -1,14 +1,10 @@
 ﻿using Android.App;
-#if APPCOMPAT
-using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;
-#else
-using MugenMvvmToolkit.Views.Activities;
-#endif
+using MugenMvvmToolkit.Android.AppCompat.Views.Activities;
 
 namespace Navigation.Android.Views
 {
     [Activity(Label = "Navigation.Android")]
-    public class MainActivity : MvvmActivity
+    public class MainActivity : MvvmAppCompatActivity
     {
         public MainActivity()
             : base(Resource.Layout.Main)

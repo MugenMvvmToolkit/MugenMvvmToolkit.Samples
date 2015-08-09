@@ -8,4 +8,11 @@
     <item name="android:colorPrimaryDark">#1976D2</item>
     <item name="android:colorAccent">#FF4081</item>
   </style>
+
+  <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="@android:style/Theme.Material">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
 </resources>

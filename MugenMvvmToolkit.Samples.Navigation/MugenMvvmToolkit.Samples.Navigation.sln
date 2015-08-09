@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Wpf", "Navigatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Android", "Navigation.Android\Navigation.Android.csproj", "{10789FFA-4137-40C5-A5AF-792827D98F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Android.AppCompat", "Navigation.Android.AppCompat\Navigation.Android.AppCompat.csproj", "{713FCCD3-0C72-4229-9703-C34A085A02E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.WinForms", "Navigation.WinForms\Navigation.WinForms.csproj", "{338593DB-923C-44AE-8ADF-74276E67DE52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation.UniversalApp", "Navigation.UniversalApp", "{C66F20EC-6FA9-45DC-9D23-179449F5B366}"
@@ -99,22 +97,6 @@ Global
 		{10789FFA-4137-40C5-A5AF-792827D98F20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10789FFA-4137-40C5-A5AF-792827D98F20}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{10789FFA-4137-40C5-A5AF-792827D98F20}.Release|ARM.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{713FCCD3-0C72-4229-9703-C34A085A02E1}.Release|ARM.ActiveCfg = Release|Any CPU
 		{338593DB-923C-44AE-8ADF-74276E67DE52}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{338593DB-923C-44AE-8ADF-74276E67DE52}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{338593DB-923C-44AE-8ADF-74276E67DE52}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU

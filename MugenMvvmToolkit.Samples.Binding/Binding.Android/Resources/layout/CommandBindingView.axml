@@ -35,37 +35,45 @@
               android:text="Click binding"
               pkg:Bind="Click Command, ToggleEnabledState=False; CommandParameter '2'" />
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Binding to method without parameters" />
-      <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                pkg:Bind="TextChanged EventMethod(null)" />
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="15dp">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Binding to method without parameters"
+                           pkg:Bind="TextChanged EventMethod(null)" />
+      </TextInputLayout>
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Binding to method with parameter" />
-      <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                pkg:Bind="TextChanged EventMethod($self.Text)" />
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="15dp">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Binding to method with parameter"
+                           pkg:Bind="TextChanged EventMethod($self.Text)" />
+      </TextInputLayout>
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Binding to method with event args parameter" />
-      <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                pkg:Bind="TextChanged EventMethod($args)" />
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="15dp">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Binding to method with event args parameter"
+                           pkg:Bind="TextChanged EventMethod($args)" />
+      </TextInputLayout>
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Binding to method with several parameters" />
-      <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                pkg:Bind="TextChanged EventMethodMultiParams($self.Text, $args)" />
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="15dp">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Binding to method with several parameters"
+                           pkg:Bind="TextChanged EventMethodMultiParams($self.Text, $args)" />
+      </TextInputLayout>
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

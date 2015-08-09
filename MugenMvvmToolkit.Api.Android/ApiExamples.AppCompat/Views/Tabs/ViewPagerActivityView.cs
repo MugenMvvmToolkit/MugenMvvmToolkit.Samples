@@ -1,14 +1,14 @@
 using Android.App;
 using Android.OS;
 using ApiExamples.ViewModels.Tabs;
-using MugenMvvmToolkit.AppCompat.Views.Activities;
+using MugenMvvmToolkit.Android.AppCompat.Views.Activities;
 using MugenMvvmToolkit.Attributes;
 
 namespace ApiExamples.Views.Tabs
 {
     [Activity(Label = "ViewPagerActivityView")]
     [ViewModel(typeof(TabViewModel), Constants.ViewPagerView)]
-    public class ViewPagerActivityView : MvvmActionBarActivity
+    public class ViewPagerActivityView : MvvmAppCompatActivity
     {
         #region Constructors
 
@@ -30,6 +30,5 @@ namespace ApiExamples.Views.Tabs
         }
 
         #endregion
-
     }
 }

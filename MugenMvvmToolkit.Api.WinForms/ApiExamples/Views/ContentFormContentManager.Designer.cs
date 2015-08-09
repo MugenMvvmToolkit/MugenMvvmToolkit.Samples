@@ -28,18 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.viewBinder = new ApiExamples.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <ContentFormContentManager Content=\"ViewModel\"  ContentViewManager=\"" +
-    "$contentViewManager\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // ContentFormContentManager
             // 
@@ -49,13 +38,11 @@
             this.Name = "ContentFormContentManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContentForm";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ViewBinder viewBinder;
     }
 }

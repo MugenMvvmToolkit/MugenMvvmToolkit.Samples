@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
@@ -60,6 +61,21 @@ namespace ApiExamples.ViewModels.Fragments
                 _viewModel = value;
                 OnPropertyChanged();
             }
+        }
+
+        #endregion
+
+        #region Overrides of CloseableViewModel
+
+        /// <summary>
+        /// Occurs when view model is closing.
+        /// </summary>
+        /// <returns>
+        /// If <c>true</c> - close, otherwise <c>false</c>.
+        /// </returns>
+        protected override Task<bool> OnClosing(object parameter)
+        {
+            return base.OnClosing(parameter);
         }
 
         #endregion

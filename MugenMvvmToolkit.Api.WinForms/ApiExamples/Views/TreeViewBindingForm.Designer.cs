@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TreeViewBindingForm));
             this.treeView = new System.Windows.Forms.TreeView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -37,9 +36,7 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.validCheckBox = new System.Windows.Forms.CheckBox();
-            this.viewBinder = new ApiExamples.ViewBinder(this.components);
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView
@@ -104,13 +101,6 @@
             this.validCheckBox.Text = "Valid state";
             this.validCheckBox.UseVisualStyleBackColor = true;
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // TreeViewBindingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,7 +116,6 @@
             this.Text = "TreeViewBindingForm";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +130,5 @@
         private System.Windows.Forms.CheckBox validCheckBox;
         private System.Windows.Forms.ToolStripButton addToolStripButton;
         private System.Windows.Forms.ToolStripButton removeToolStripButton;
-        private ViewBinder viewBinder;
     }
 }

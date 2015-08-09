@@ -1,10 +1,24 @@
 ﻿using System.Windows.Forms;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.WinForms.Binding.Infrastructure;
 
 namespace ApiExamples.ContentManagers
 {
     public class TableLayoutCollectionViewManager : CollectionViewManagerBase<TableLayoutPanel, Control>
     {
+        #region Fields
+
+        public static readonly TableLayoutCollectionViewManager Instance = new TableLayoutCollectionViewManager();
+
+        #endregion
+
+        #region Constructors
+
+        private TableLayoutCollectionViewManager()
+        {
+        }
+
+        #endregion
+
         #region Overrides of CollectionViewManagerBase<TableLayoutPanel,Control>
 
         /// <summary>

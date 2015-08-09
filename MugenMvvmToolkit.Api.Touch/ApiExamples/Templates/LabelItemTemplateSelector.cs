@@ -1,4 +1,5 @@
 ﻿using ApiExamples.ViewModels;
+using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Infrastructure;
 using UIKit;
@@ -7,6 +8,20 @@ namespace ApiExamples.Templates
 {
     public class LabelItemTemplateSelector : DataTemplateSelectorBase<ItemViewModel, UILabel>
     {
+        #region Fields
+
+        public static readonly LabelItemTemplateSelector Instance = new LabelItemTemplateSelector();
+
+        #endregion
+
+        #region Constructors
+
+        private LabelItemTemplateSelector()
+        {
+        }
+
+        #endregion
+
         #region Overrides of DataTemplateSelectorBase<ItemViewModel,UITextField>
 
         protected override UILabel SelectTemplate(ItemViewModel item, object container)
@@ -18,7 +33,7 @@ namespace ApiExamples.Templates
 
         protected override void Initialize(UILabel template, BindingSet<UILabel, ItemViewModel> bindingSet)
         {
-            bindingSet.BindFromExpression("Text 'Item' + Id");
+            bindingSet.Bind(() => l => l.Text).To(() => m => "Item " + m.Id);
         }
 
         #endregion

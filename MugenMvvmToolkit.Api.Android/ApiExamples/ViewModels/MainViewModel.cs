@@ -19,6 +19,7 @@ namespace ApiExamples.ViewModels
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
+        private IList<Tuple<string, ViewModelCommandParameter>> _items;
 
         #endregion
 
@@ -41,8 +42,10 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("ItemsSource with DataTemplateSelector", new ViewModelCommandParameter(typeof (ListDataTemplateViewModel))),
                 Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CardRecyclerView)),
 #if APPCOMPAT
-                Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),                
-                Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel)))
+                Tuple.Create("Tab layout (Design)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabLayoutView)),
+                Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),
+                Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel))),
+                Tuple.Create("Navigation view (Design)", new ViewModelCommandParameter(typeof (NavigationViewModel)))
 #endif
             };
             ShowCommand = RelayCommandBase.FromAsyncHandler<ViewModelCommandParameter>(Show);
@@ -52,7 +55,11 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; private set; }
+        public IList<Tuple<string, ViewModelCommandParameter>> Items
+        {
+            get { return _items; }
+            private set { _items = value; }
+        }
 
         #endregion
 

@@ -7,7 +7,7 @@ using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.WinRT;
 using MugenMvvmToolkit.Models;
 using NavigationMode = Windows.UI.Xaml.Navigation.NavigationMode;
 
@@ -235,7 +235,7 @@ namespace OrderManager
             if ((e.EventType == CoreAcceleratorKeyEventType.SystemKeyDown ||
                  e.EventType == CoreAcceleratorKeyEventType.KeyDown) &&
                 (virtualKey == VirtualKey.Left || virtualKey == VirtualKey.Right ||
-                 (int) virtualKey == 166 || (int) virtualKey == 167))
+                 (int)virtualKey == 166 || (int)virtualKey == 167))
             {
                 CoreWindow coreWindow = Window.Current.CoreWindow;
                 var downState = CoreVirtualKeyStates.Down;
@@ -245,14 +245,14 @@ namespace OrderManager
                 bool noModifiers = !menuKey && !controlKey && !shiftKey;
                 bool onlyAlt = menuKey && !controlKey && !shiftKey;
 
-                if (((int) virtualKey == 166 && noModifiers) ||
+                if (((int)virtualKey == 166 && noModifiers) ||
                     (virtualKey == VirtualKey.Left && onlyAlt))
                 {
                     // When the previous key or Alt+Left are pressed navigate back
                     e.Handled = true;
                     GoBackCommand.Execute(null);
                 }
-                else if (((int) virtualKey == 167 && noModifiers) ||
+                else if (((int)virtualKey == 167 && noModifiers) ||
                          (virtualKey == VirtualKey.Right && onlyAlt))
                 {
                     // When the next key or Alt+Right are pressed navigate forward
@@ -345,7 +345,7 @@ namespace OrderManager
             }
             else
             {
-                var state = (Dictionary<String, Object>) frameState[_pageKey];
+                var state = (Dictionary<String, Object>)frameState[_pageKey];
                 //NOTE loading state of view model.
                 PlatformExtensions.ApplicationStateManager.OnLoadState(Page, state, e);
                 // Pass the navigation parameter and preserved page state to the page, using

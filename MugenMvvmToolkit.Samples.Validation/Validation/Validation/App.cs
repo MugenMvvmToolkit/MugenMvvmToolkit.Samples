@@ -1,5 +1,5 @@
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
 using Validation.Portable.ViewModels;
 using Xamarin.Forms;
 

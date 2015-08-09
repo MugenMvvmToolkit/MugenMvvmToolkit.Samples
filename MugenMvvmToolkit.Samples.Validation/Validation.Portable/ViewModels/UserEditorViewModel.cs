@@ -69,7 +69,7 @@ namespace Validation.Portable.ViewModels
 
         protected override void OnHandleAsyncValidationMessage(object sender, AsyncValidationMessage message)
         {
-            if (!string.IsNullOrEmpty(message.PropertyName) && ToolkitExtensions.GetMemberName(Entity, model => model.Login) != message.PropertyName)
+            if (!string.IsNullOrEmpty(message.PropertyName) && ToolkitExtensions.GetMemberName(Entity, () => model => model.Login) != message.PropertyName)
                 return;
             Interlocked.Increment(ref _validationLoginCount);
             message.Task.TryExecuteSynchronously(task =>

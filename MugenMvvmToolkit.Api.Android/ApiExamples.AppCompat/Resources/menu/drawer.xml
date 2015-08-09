@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <MenuItem Title="Group 1">
+    <MenuItem Title="Group 1.1" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+    <MenuItem Title="Group 1.2" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+  </MenuItem>
+
+  <MenuItem Title="Group 2">
+    <MenuItem Title="Group 2.1" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+    <MenuItem Title="Group 2.2" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+  </MenuItem>
+
+  <MenuItem Title="Group 3">
+    <MenuItem Title="Group 3.1" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+    <MenuItem Title="Group 3.2" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+  </MenuItem>
+
+  <MenuItem Title="Group 4.1" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+  <MenuItem Title="Group 4.2" Click="{ExecuteCommand}" CommandParameter="{$self.Title}" />
+</Menu>

@@ -1,14 +1,10 @@
 ﻿using Android.App;
-#if APPCOMPAT
-using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;
-#else
-using MugenMvvmToolkit.Views.Activities;
-#endif
+using MugenMvvmToolkit.Android.AppCompat.Views.Activities;
 
 namespace OrderManager.Android.Views
 {
     [Activity(Label = "OrderManager.Android", Icon = "@drawable/icon")]
-    public class MainActivity : MvvmActivity
+    public class MainActivity : MvvmAppCompatActivity
     {
         public MainActivity()
             : base(Resource.Layout.MainView)

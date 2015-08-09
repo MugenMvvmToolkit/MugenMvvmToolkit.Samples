@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinRT.Infrastructure;
 
 namespace Binding.UniversalApp
 {

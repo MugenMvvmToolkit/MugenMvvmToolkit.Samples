@@ -1,9 +1,11 @@
+using System.Linq;
+using Binding.Portable;
 using Binding.Portable.ViewModels;
 using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -43,8 +45,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 
@@ -63,12 +65,13 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, @"Text Text.Count(x => x == 'a')");
+                set.Bind(label, () => l => l.Text)
+                    .To(() => model => model.Text.OfType<char>().Count(x => x == 'a'));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 105, View.Frame.Width - 40, 25))
                 {
-                    Text = "Custom extension method with args (Text.ExtensionMethod(Text.Count()))",
+                    Text = "Custom extension method with args (Text.ExtensionMethod(Text.Length))",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Font = font
                 };
@@ -80,7 +83,8 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text Text.ExtensionMethod(Text.Count())");
+                set.Bind(label, () => l => l.Text)
+                   .To(() => model => model.Text.ExtensionMethod(model.Text.Length));
                 scrollView.AddSubview(label);
 
 
@@ -98,7 +102,8 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text Text.Skip(1).FirstOrDefault()");
+                set.Bind(label, () => l => l.Text)
+                    .To(() => model => model.Text.OfType<char>().Skip(1).FirstOrDefault());
                 scrollView.AddSubview(label);
 
 
@@ -117,14 +122,14 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label,
-                    "Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'");
+                set.Bind(label, () => l => l.Text)
+                    .To(() => model => string.IsNullOrEmpty(model.Text) ? "String is empty" : "String is not empty");
                 scrollView.AddSubview(label);
 
 
                 label = new UILabel(new CGRect(20, 250, View.Frame.Width - 40, 25))
                 {
-                    Text = "Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())",
+                    Text = "Arithmetic expression (Text.Length + 100 + Text.GetHashCode())",
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     Font = font
                 };
@@ -136,7 +141,8 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text Text.Count() + 100 + Text.GetHashCode()");
+                set.Bind(label, () => l => l.Text)
+                   .To(() => model => model.Text.Length + 100 + model.Text.GetHashCode());
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 300, View.Frame.Width - 40, 25))

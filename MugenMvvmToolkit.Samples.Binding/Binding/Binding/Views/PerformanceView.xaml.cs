@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using Binding.Portable.Models;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.Xamarin.Forms;
+using MugenMvvmToolkit.Binding;
 using Xamarin.Forms;
 
 namespace Binding.Views
@@ -68,7 +69,10 @@ namespace Binding.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            target.SetBindings("Value Property, Mode=TwoWay", new object[] { model });
+            target.Bind(() => t => t.Value)
+                .To(model, () => m => m.Property)
+                .TwoWay()
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
@@ -84,7 +88,9 @@ namespace Binding.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            target.SetBindings("Value (Property ?? $string.Empty).Length + Property", new object[] { model });
+            target.Bind(() => m => m.Value)
+                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)

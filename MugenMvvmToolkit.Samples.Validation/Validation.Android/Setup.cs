@@ -1,12 +1,12 @@
 using System;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Attributes;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Android.Attributes;
+using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using Validation.Android;
 using Validation.Portable.ViewModels;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace Validation.Android
 {
@@ -21,7 +21,7 @@ namespace Validation.Android
 
         protected override Type GetMainViewModelType()
         {
-            return typeof (MainViewModel);
+            return typeof(MainViewModel);
         }
 
         #endregion

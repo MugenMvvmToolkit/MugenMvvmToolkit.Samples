@@ -39,7 +39,7 @@ namespace Validation.Portable.ViewModels
                 else
                     Settings.Metadata.AddOrUpdate(ValidationDataConstants.CustomError, value);
                 OnPropertyChanged();
-                ValidateAsync(() => Description);
+                this.ValidateAsync(() => vm => vm.Description);
             }
         }
 
@@ -52,9 +52,9 @@ namespace Validation.Portable.ViewModels
                     return;
                 _disableDescriptionValidation = value;
                 if (value)
-                    this.DisableValidationAsync(model => model.Description);
+                    this.DisableValidationAsync(() => model => model.Description);
                 else
-                    this.EnableValidationAsync(model => model.Description);
+                    this.EnableValidationAsync(() => model => model.Description);
                 OnPropertyChanged();
             }
         }

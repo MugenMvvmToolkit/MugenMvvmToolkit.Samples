@@ -8,6 +8,20 @@ namespace ApiExamples.Templates
 {
     public class TabItemTemplate : DataTemplateSelectorBase<ItemViewModel, TabPage>
     {
+        #region Fields
+
+        public static readonly TabItemTemplate Instance = new TabItemTemplate();
+
+        #endregion
+
+        #region Constructors
+
+        private TabItemTemplate()
+        {
+        }
+
+        #endregion
+
         #region Overrides of DataTemplateSelectorBase<ItemViewModel,Label>
 
         /// <summary>
@@ -28,10 +42,10 @@ namespace ApiExamples.Templates
         /// </summary>
         protected override void Initialize(TabPage template, BindingSet<TabPage, ItemViewModel> bindingSet)
         {
-            bindingSet.Bind(page => page.Text).To(model => model.Name);
+            bindingSet.Bind(() => page => page.Text).To(() => model => model.Name);
 
             var label = new Label();
-            bindingSet.Bind(label, l => l.Text).To(model => model.Id);
+            bindingSet.Bind(label, () => l => l.Text).To(() => model => model.Id);
             template.Controls.Add(label);
         }
 

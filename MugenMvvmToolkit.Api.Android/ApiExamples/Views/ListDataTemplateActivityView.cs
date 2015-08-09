@@ -1,9 +1,8 @@
 using Android.App;
 #if APPCOMPAT
-using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;    
+using MvvmActivity = MugenMvvmToolkit.Android.AppCompat.Views.Activities.MvvmAppCompatActivity;
 #else
-using MugenMvvmToolkit.Views.Activities;
-
+using MugenMvvmToolkit.Android.Views.Activities;
 #endif
 
 namespace ApiExamples.Views

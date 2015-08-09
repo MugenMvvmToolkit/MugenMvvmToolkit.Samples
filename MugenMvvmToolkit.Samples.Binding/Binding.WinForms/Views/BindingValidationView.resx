@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;!-- Method $GetErrors() or $GetErrors(Prop1, Prop2, ... PropN) returns the errors from a data context object --&gt;
-  &lt;!-- Validate=True is equivalent to ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True
---&gt;
-  &lt;propertyTb Text="Property, Mode=TwoWay, ValidatesOnNotifyDataErrors=True" /&gt;
-  &lt;propertyLabel Text="$GetErrors(Property).FirstOrDefault()" /&gt;
-  &lt;propertyEx1Tb Text="PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=True" /&gt;
-  &lt;propertyExt1Label Text="$El(propertyEx1Tb).Errors.FirstOrDefault()" /&gt;
-  &lt;propertyEx2Tb Text="PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True" /&gt;
-  &lt;propertyExt2Label Text="$El(propertyEx2Tb).Errors.FirstOrDefault()" /&gt;
-  &lt;propertyEx3Tb Text="PropertyWithException, Mode=TwoWay, Validate=True" /&gt;
-  &lt;propertyExt3Label Text="$GetErrors(PropertyWithException).FirstOrDefault()" /&gt;
-  &lt;addErrorButton Click="AddErrorCommand" /&gt;
-  &lt;clearErrorButton Click="RemoveErrorCommand" /&gt;
-  &lt;validationSumHeaderLabel Visible="$GetErrors().Any()" /&gt;
-  &lt;validationSumLabel Text="$string.Join($Environment.NewLine, $GetErrors())" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

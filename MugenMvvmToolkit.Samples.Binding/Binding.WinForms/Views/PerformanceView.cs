@@ -42,12 +42,12 @@ namespace Binding.WinForms.Views
         {
             var target = new TestModel { Visible = true };
             var model = new BindingPerformanceModel(target);
-            target.DataBindings.Add("Text", model, "Property", false, DataSourceUpdateMode.OnPropertyChanged);
+            target.DataBindings.Add("Value", model, "Property", false, DataSourceUpdateMode.OnPropertyChanged);
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
-                target.Text = i % 2 == 0 ? "0" : "1";
+                target.Value = i % 2 == 0 ? "0" : "1";
 
             startNew.Stop();
             Controls.Remove(target);
@@ -61,7 +61,10 @@ namespace Binding.WinForms.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay", new object[] { model });
+            target.Bind(() => t => t.Value)
+                .To(model, () => m => m.Property)
+                .TwoWay()
+                .Build();
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
@@ -79,8 +82,9 @@ namespace Binding.WinForms.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
+            target.Bind(() => m => m.Value)
+                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .Build();
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();

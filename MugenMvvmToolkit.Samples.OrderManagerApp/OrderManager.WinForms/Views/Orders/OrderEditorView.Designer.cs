@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderEditorView));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Col4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +41,7 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.viewBinder = new OrderManager.WinForms.ViewBinder();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -177,13 +174,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(306, 20);
             this.dateTimePicker1.TabIndex = 35;
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // OrderEditorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +190,6 @@
             this.Name = "OrderEditorView";
             this.Size = new System.Drawing.Size(673, 329);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +210,5 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private ViewBinder viewBinder;
     }
 }

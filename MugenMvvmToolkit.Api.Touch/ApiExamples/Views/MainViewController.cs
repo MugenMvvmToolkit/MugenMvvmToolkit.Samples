@@ -1,9 +1,11 @@
+using ApiExamples.Templates;
 using ApiExamples.ViewModels;
 using Foundation;
 using MonoTouch.Dialog;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Views;
 
 namespace ApiExamples.Views
 {
@@ -28,8 +30,9 @@ namespace ApiExamples.Views
                 var root = new RootElement("Main view");
                 var section = new Section("Examples");
                 root.Add(section);
-                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(model => model.Items);
-                bindingSet.BindFromExpression(section, "ItemTemplate $buttonTemplate");
+                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => model => model.Items);
+                section.SetBindingMemberValue(AttachedMembers.Element.ItemTemplateSelector,
+                    ButtonItemTemplateSelector.Instance);
                 return root;
             }
         }

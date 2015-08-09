@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BindingExpressionView));
             this.textTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linqCountLabel = new System.Windows.Forms.Label();
@@ -42,10 +40,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.arithmeticLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.nullConditionalLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // textTb
@@ -162,13 +158,6 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // nullConditionalLabel
             // 
             this.nullConditionalLabel.AutoSize = true;
@@ -213,7 +202,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +221,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label arithmeticLabel;
         private System.Windows.Forms.Label label11;
-        private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Label nullConditionalLabel;
         private System.Windows.Forms.Label label4;
     }

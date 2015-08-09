@@ -1,7 +1,8 @@
+using MugenMvvmToolkit;
 #if APPCOMPAT
-using MugenMvvmToolkit.AppCompat.Views.Fragments;
+using MugenMvvmToolkit.Android.AppCompat.Views.Fragments;
 #else
-using MugenMvvmToolkit.FragmentSupport.Views.Fragments;
+using MugenMvvmToolkit.Android.Views.Fragments;
 #endif
 
 namespace ApiExamples.Views

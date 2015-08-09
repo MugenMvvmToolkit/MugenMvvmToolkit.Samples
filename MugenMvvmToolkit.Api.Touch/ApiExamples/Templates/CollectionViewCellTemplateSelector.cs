@@ -4,7 +4,7 @@ using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using UIKit;
 
 namespace ApiExamples.Templates
@@ -14,7 +14,16 @@ namespace ApiExamples.Templates
     {
         #region Fields
 
+        public static readonly CollectionViewCellTemplateSelector Instance = new CollectionViewCellTemplateSelector();
         private static readonly NSString CellIdentifier = new NSString("CollectionCellId");
+
+        #endregion
+
+        #region Constructors
+
+        private CollectionViewCellTemplateSelector()
+        {
+        }
 
         #endregion
 
@@ -25,7 +34,7 @@ namespace ApiExamples.Templates
             var layout = container.CollectionViewLayout as UICollectionViewFlowLayout;
             if (layout != null)
                 layout.ItemSize = new CGSize(container.Frame.Width - 20, 30);
-            container.RegisterClassForCell(typeof (CollectionViewCell), CellIdentifier);
+            container.RegisterClassForCell(typeof(CollectionViewCell), CellIdentifier);
         }
 
         protected override NSString GetIdentifier(TableItemModel item, UICollectionView container)
@@ -36,10 +45,10 @@ namespace ApiExamples.Templates
         protected override void InitializeTemplate(UICollectionView container, CollectionViewCell cell,
             BindingSet<CollectionViewCell, TableItemModel> bindingSet)
         {
-            bindingSet.BindFromExpression(cell.Label,
-                "Text $Format('Name {0}, Selected: {1}, Highlighted: {2}', Name, IsSelected, IsHighlighted)");
-            bindingSet.Bind(viewCell => viewCell.Selected).To(model => model.IsSelected).TwoWay();
-            bindingSet.Bind(viewCell => viewCell.Highlighted).To(model => model.IsHighlighted).TwoWay();
+            bindingSet.Bind(cell.Label, () => l => l.Text)
+                .To(() => m => string.Format("Name {0}, Selected: {1}, Highlighted: {2}", m.Name, m.IsSelected, m.IsHighlighted));
+            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
+            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).TwoWay();
         }
 
         #endregion

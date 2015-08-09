@@ -120,17 +120,4 @@
   <metadata name="Col4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;dataGridView1 DataContext="GridViewModel" ItemsSource="ItemsSource" SelectedItem="SelectedItem, Mode=TwoWay" /&gt;
-  &lt;nameTextBox Text="Name, Mode=TwoWay, Validate=True" /&gt;
-  &lt;numberTextBox Text="Number, Mode=TwoWay, Validate=True" /&gt;
-  &lt;dateTimePicker1 Value="CreationDate, Mode=TwoWay, Validate=True" /&gt;
-  &lt;filterTextBox Text="FilterText, Mode=TwoWay" /&gt;
-&lt;/Bindings&gt;
-</value>
-  </data>
 </root>

@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <tableLayoutPanel1 ItemsSource=\"Items\" ItemTemplate=\"$buttonTemplate" +
-    "\" />\n  <toolStripStatusLabel Text=\"ResourceUsageInfo\"/>\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // tableLayoutPanel1
             // 
@@ -57,7 +46,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 335F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 390F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(468, 390);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -87,7 +76,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -97,7 +85,6 @@
 
         #endregion
 
-        private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;

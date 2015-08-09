@@ -1,5 +1,5 @@
 ﻿using Android.App;
-using MugenMvvmToolkit.Views.Activities;
+using MugenMvvmToolkit.Android.Views.Activities;
 
 namespace Validation.Android.Views
 {

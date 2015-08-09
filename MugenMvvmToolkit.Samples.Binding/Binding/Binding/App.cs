@@ -1,6 +1,6 @@
 ﻿using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
 using Xamarin.Forms;
 
 namespace Binding

@@ -4,9 +4,9 @@ using Android.Support.V7.Widget;
 using ApiExamples.ViewModels.Tabs;
 using MugenMvvmToolkit.Attributes;
 #if APPCOMPAT
-using MvvmActivity = MugenMvvmToolkit.AppCompat.Views.Activities.MvvmActionBarActivity;    
+using MvvmActivity = MugenMvvmToolkit.Android.AppCompat.Views.Activities.MvvmAppCompatActivity;
 #else
-using MugenMvvmToolkit.Views.Activities;
+using MugenMvvmToolkit.Android.Views.Activities;
 #endif
 
 namespace ApiExamples.Views

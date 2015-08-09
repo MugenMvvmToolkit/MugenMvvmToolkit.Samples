@@ -42,8 +42,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.Android", "Ord
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.WinPhone", "OrderManager\OrderManager.WinPhone\OrderManager.WinPhone.csproj", "{1C97D25B-C1B1-422E-BA66-81E920F5EF14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.Android.AppCompat", "OrderManager.Android.AppCompat\OrderManager.Android.AppCompat.csproj", "{F285B481-F5E6-4926-A846-4892E6B2977A}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		UniversalApp\OrderManager.Shared\OrderManager.Shared.projitems*{c43a16a2-c01a-4de4-952d-999a9883271b}*SharedItemsImports = 4
@@ -333,26 +331,6 @@ Global
 		{1C97D25B-C1B1-422E-BA66-81E920F5EF14}.Release|ARM.Build.0 = Release|ARM
 		{1C97D25B-C1B1-422E-BA66-81E920F5EF14}.Release|ARM.Deploy.0 = Release|ARM
 		{1C97D25B-C1B1-422E-BA66-81E920F5EF14}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Release|ARM.ActiveCfg = Release|Any CPU
-		{F285B481-F5E6-4926-A846-4892E6B2977A}.Release|iPhone.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

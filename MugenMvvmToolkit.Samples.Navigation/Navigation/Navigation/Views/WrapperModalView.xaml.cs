@@ -1,5 +1,5 @@
-﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Interfaces.Views;
+﻿using MugenMvvmToolkit.Xamarin.Forms;
+using MugenMvvmToolkit.Xamarin.Forms.Interfaces.Views;
 using Xamarin.Forms;
 
 namespace Navigation.Views

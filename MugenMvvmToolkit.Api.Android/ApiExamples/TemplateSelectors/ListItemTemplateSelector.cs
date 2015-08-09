@@ -1,5 +1,5 @@
 using ApiExamples.Models;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.Android.Binding.Infrastructure;
 
 namespace ApiExamples.TemplateSelectors
 {

@@ -1,4 +1,5 @@
-﻿using MugenMvvmToolkit.ViewModels;
+﻿using MugenMvvmToolkit;
+using MugenMvvmToolkit.ViewModels;
 
 namespace Binding.Portable.ViewModels
 {
@@ -11,7 +12,7 @@ namespace Binding.Portable.ViewModels
         #endregion
 
         #region Properties
-        //TODO FIX
+
         public string Text
         {
             get { return _text; }
@@ -21,7 +22,7 @@ namespace Binding.Portable.ViewModels
                     return;
                 _text = value;
                 OnPropertyChanged();
-                OnPropertyChanged(() => NullableText);
+                this.OnPropertyChanged(() => vm => vm.NullableText);
             }
         }
 

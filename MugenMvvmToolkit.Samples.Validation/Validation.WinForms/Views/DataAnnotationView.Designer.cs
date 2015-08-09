@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataAnnotationView));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +40,6 @@
             this.nameErrorLabel = new System.Windows.Forms.Label();
             this.descErrorLabel = new System.Windows.Forms.Label();
             this.summaryLabel = new System.Windows.Forms.Label();
-            this.viewBinder = new Validation.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -162,13 +158,6 @@
             this.summaryLabel.TabIndex = 12;
             this.summaryLabel.Text = "label4";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // DataAnnotationView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +178,6 @@
             this.Name = "DataAnnotationView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,7 +193,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox customErrorTextBox;
         private System.Windows.Forms.Label validLabel;
-        private Validation.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Label notValidLabel;
         private System.Windows.Forms.Label descErrorLabel;
         private System.Windows.Forms.Label nameErrorLabel;

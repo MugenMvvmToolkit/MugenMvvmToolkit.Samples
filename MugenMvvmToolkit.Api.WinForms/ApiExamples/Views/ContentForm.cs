@@ -1,4 +1,7 @@
 ﻿using System.Windows.Forms;
+using ApiExamples.ViewModels;
+using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Binding.Builders;
 
 namespace ApiExamples.Views
 {
@@ -7,6 +10,10 @@ namespace ApiExamples.Views
         public ContentForm()
         {
             InitializeComponent();
+            using (var set = new BindingSet<ContentViewModel>())
+            {
+                set.Bind(this, AttachedMemberConstants.Content).To(() => vm => vm.ViewModel);
+            }
         }
     }
 }

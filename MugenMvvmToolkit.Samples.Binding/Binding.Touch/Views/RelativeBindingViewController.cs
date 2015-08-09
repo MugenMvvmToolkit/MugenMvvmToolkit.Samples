@@ -1,7 +1,9 @@
 using CoreGraphics;
 using Foundation;
+using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -35,7 +37,9 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
 
-                set.BindFromExpression(textField, "Text $El(slider).Value, Mode=TwoWay, ValidatesOnExceptions=true");
+                set.Bind(textField, () => t => t.Text)
+                    .To<object>(() => o => BindingSyntaxEx.Element<UISlider>("slider").Value)
+                    .TwoWay();
                 View.AddSubview(textField);
 
                 var label = new UILabel(new CGRect(20, 125, View.Frame.Width - 100, 25))
@@ -52,7 +56,9 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.BindFromExpression(textField, "Text $Rel(UIViewController).Title, Mode=TwoWay");
+                set.Bind(textField, () => t => t.Text)
+                    .To<object>(() => o => BindingSyntaxEx.Relative<UIViewController>().Title)
+                    .TwoWay();
                 View.AddSubview(textField);
 
 
@@ -70,7 +76,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green
                 };
-                set.BindFromExpression(label, "Text $self.Frame.Width");
+                set.Bind(label, () => l => l.Text)
+                    .ToSelf(() => l => l.Frame.Width);
                 View.AddSubview(label);
 
 
@@ -88,7 +95,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green
                 };
-                set.BindFromExpression(label, "Text $root");
+                set.Bind(label, () => l => l.Text)
+                    .To<object>(() => o => BindingSyntaxEx.Root<object>());
                 View.AddSubview(label);
             }
         }

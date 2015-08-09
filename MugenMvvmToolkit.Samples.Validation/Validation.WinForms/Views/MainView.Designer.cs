@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataAnnotButton = new System.Windows.Forms.Button();
-            this.viewBinder = new Validation.WinForms.ViewBinder(this.components);
             this.validatorButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // dataAnnotButton
@@ -45,14 +42,6 @@
             this.dataAnnotButton.TabIndex = 0;
             this.dataAnnotButton.Text = "Validation using data annotations";
             this.dataAnnotButton.UseVisualStyleBackColor = true;
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <dataAnnotButton Click=\"ShowAnnotationCommand\" />\n  <validatorButton" +
-    " Click=\"ShowUserEditorCommand\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // validatorButton
             // 
@@ -75,7 +64,6 @@
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,7 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Button dataAnnotButton;
-        private Validation.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Button validatorButton;
     }
 }

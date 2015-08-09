@@ -14,7 +14,7 @@ namespace Validation.Portable.Validators
 
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
-            if (!PropertyNameEqual(propertyName, model => model.Email) || string.IsNullOrEmpty(Instance.Email) ||
+            if (!MemberNameEqual(propertyName, () => model => model.Email) || string.IsNullOrEmpty(Instance.Email) ||
                 Instance.Email.StartsWith("e"))
                 return EmptyResult;
             return FromResult(new Dictionary<string, IEnumerable>
@@ -25,7 +25,7 @@ namespace Validation.Portable.Validators
 
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
-            return ValidateInternalAsync(GetPropertyName(model => model.Email), token);
+            return ValidateInternalAsync(GetMemberName(() => model => model.Email), token);
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿using MugenMvvmToolkit;
+﻿using MugenMvvmToolkit.Xamarin.Forms;
 using MugenMvvmToolkit.Attributes;
 using OrderManager.Infrastructure;
 using OrderManager.Portable.ViewModels;

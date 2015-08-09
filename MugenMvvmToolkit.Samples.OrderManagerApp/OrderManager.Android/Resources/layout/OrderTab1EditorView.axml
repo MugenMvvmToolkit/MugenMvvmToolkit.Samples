@@ -5,27 +5,23 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Name"
-    android:layout_margin="2px"
-    android:textSize="10pt" />
-  <EditText
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:inputType="text"
-    pkg:Bind="Text Name, Mode=TwoWay, Validate=True" />
+  <TextInputLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="2px">
+    <AppCompatEditText android:layout_height="wrap_content"
+                       android:layout_width="fill_parent"
+                       android:inputType="text"
+                       android:hint="Name"
+                       pkg:Bind="Text Name, Mode=TwoWay, Validate=True" />
+  </TextInputLayout>
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Number"
-    android:layout_margin="2px"
-    android:textSize="10pt" />
-  <EditText
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:inputType="number"
-    pkg:Bind="Text Number, Mode=TwoWay, Validate=True" />
+  <TextInputLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="2px">
+    <AppCompatEditText android:layout_height="wrap_content"
+                       android:layout_width="fill_parent"
+                       android:inputType="number"
+                       android:hint="Number"
+                       pkg:Bind="Text Number, Mode=TwoWay, Validate=True" />
+  </TextInputLayout>
 </LinearLayout>

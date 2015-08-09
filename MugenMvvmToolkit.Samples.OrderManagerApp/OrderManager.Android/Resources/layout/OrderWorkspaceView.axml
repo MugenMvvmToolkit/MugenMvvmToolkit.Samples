@@ -3,37 +3,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:pkg="http://schemas.android.com/apk/res-auto"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-  <ActionBar
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    pkg:Bind="Title DisplayName" />
-  <OptionsMenu
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    pkg:MenuTemplate="@menu/orderworkspacemenu"
-    pkg:Bind="Visible !IsBusy" />
+                android:layout_height="fill_parent"
+                pkg:Bind="IsBusy IsBusy; BusyMessage BusyMessage">
+  <ActionBar android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             pkg:Bind="Title DisplayName" />
+  <OptionsMenu android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               pkg:MenuTemplate="@menu/orderworkspacemenu" />
 
-  <LinearLayout
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:layout_centerInParent="true"
-    android:orientation="vertical"
-    pkg:Bind="Visible IsBusy">
-    <TextView
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      pkg:Bind="Text BusyMessage" />
-    <ProgressBar
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      android:indeterminateOnly="true"
-      android:keepScreenOn="true" />
-  </LinearLayout>
-
-  <ListView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    pkg:ItemTemplate="@layout/_orderlisttemplate"
-    pkg:Bind="ItemsSource GridViewModel.ItemsSource; SelectedItem GridViewModel.SelectedItem; ScrollToSelectedItem true" />
+  <ListView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            pkg:ItemTemplate="@layout/_orderlisttemplate"
+            pkg:Bind="ItemsSource GridViewModel.ItemsSource; SelectedItem GridViewModel.SelectedItem; ScrollToSelectedItem true" />
 </RelativeLayout>

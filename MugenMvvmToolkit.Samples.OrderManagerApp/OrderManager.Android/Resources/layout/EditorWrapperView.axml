@@ -3,32 +3,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:pkg="http://schemas.android.com/apk/res-auto"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                pkg:Bind="IsBusy IsBusy; BusyMessage BusyMessage">
 
   <ActionBar android:layout_height="wrap_content"
-                 android:layout_width="wrap_content"
-                 pkg:Bind="Title DisplayName" />
-  <OptionsMenu
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    pkg:MenuTemplate="@menu/editormenu"
-    pkg:Bind="Visible !IsBusy" />
-
-  <LinearLayout android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:orientation="vertical"
-                android:layout_centerInParent="true"
-                pkg:Bind="Visible IsBusy">
-    <TextView android:layout_height="wrap_content"
-              android:layout_width="wrap_content"
-              pkg:Bind="Text BusyMessage" />
-    <ProgressBar
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      android:indeterminateOnly="true"
-      android:keepScreenOn="true" />
-  </LinearLayout>
-
+             android:layout_width="wrap_content"
+             pkg:Bind="Title DisplayName" />
+  <OptionsMenu android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               pkg:MenuTemplate="@menu/editormenu" />
   <FrameLayout android:layout_width="fill_parent"
                android:layout_height="fill_parent"
                android:id="@+id/placeholder"

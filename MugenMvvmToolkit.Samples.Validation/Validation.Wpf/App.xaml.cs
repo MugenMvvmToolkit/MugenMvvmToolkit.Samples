@@ -1,6 +1,6 @@
 using System.Windows;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WPF.Infrastructure;
 using Validation.Portable.ViewModels;
 
 namespace Validation.Wpf
@@ -9,7 +9,7 @@ namespace Validation.Wpf
     {
         public App()
         {
-			new Bootstrapper<MainViewModel>(this, new AutofacContainer());
+            new Bootstrapper<MainViewModel>(this, new AutofacContainer());
         }
     }
 }

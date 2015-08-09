@@ -1,9 +1,8 @@
 using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
@@ -23,16 +22,16 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
                 };
 
-                set.Bind(this, AttachedMemberConstants.ItemsSource).To(model => model.ItemsSource);
-                set.Bind(this, AttachedMemberConstants.SelectedItem).To(model => model.SelectedItem).TwoWay();
-                set.Bind(this, controller => controller.Title).To("SelectedItem.Id");
+                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
+                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
+                set.Bind(this, () => controller => controller.Title).To(() => vm => ((ItemViewModel)vm.SelectedItem).Id);
             }
         }
 

@@ -131,7 +131,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _bindingCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveBindingCount");
+                this.OnPropertyChanged(() => vm => vm.LiveBindingCount);
             }
         }
 
@@ -144,7 +144,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _collectedBindingCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveBindingCount");
+                this.OnPropertyChanged(() => vm => vm.LiveBindingCount);
             }
         }
 
@@ -162,7 +162,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _viewCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveViewCount");
+                this.OnPropertyChanged(() => vm => vm.LiveViewCount);
             }
         }
 
@@ -175,7 +175,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _collectedViewCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveViewCount");
+                this.OnPropertyChanged(() => vm => vm.LiveViewCount);
             }
         }
 
@@ -193,7 +193,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _viewModelCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveViewModelCount");
+                this.OnPropertyChanged(() => vm => vm.LiveViewModelCount);
             }
         }
 
@@ -206,7 +206,7 @@ namespace Binding.Portable.Infrastructure
                     return;
                 _collectedViewModelCount = value;
                 OnPropertyChanged();
-                OnPropertyChanged("LiveViewModelCount");
+                this.OnPropertyChanged(() => vm => vm.LiveViewModelCount);
             }
         }
 

@@ -1,7 +1,8 @@
 using Foundation;
 using UIKit;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.iOS;
+using MugenMvvmToolkit.iOS.Infrastructure;
 using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch

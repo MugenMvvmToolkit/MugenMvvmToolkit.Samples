@@ -29,7 +29,7 @@ namespace Validation.Portable.Validators
 
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
-            if (!PropertyNameEqual(propertyName, model => model.Login))
+            if (!MemberNameEqual(propertyName, () => model => model.Login))
                 return EmptyResult;
             // To simulate the long-term operation.
             return Task<IDictionary<string, IEnumerable>>.Factory.StartNew(() =>
@@ -51,7 +51,7 @@ namespace Validation.Portable.Validators
 
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
-            return ValidateInternalAsync(GetPropertyName(model => model.Login), token);
+            return ValidateInternalAsync(GetMemberName(() => model => model.Login), token);
         }
 
         #endregion

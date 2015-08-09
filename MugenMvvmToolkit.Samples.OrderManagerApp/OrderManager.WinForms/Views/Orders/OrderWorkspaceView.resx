@@ -120,19 +120,4 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;dataGridView1 DataContext="GridViewModel" ItemsSource="ItemsSource" SelectedItem="SelectedItem, Mode=TwoWay" /&gt;
-  &lt;toolStripTextBox1 Text="FilterText, Mode=TwoWay" /&gt;
-  &lt;saveToolStripButton Click="SaveChangesCommand" /&gt;
-  &lt;addToolStripButton Click="AddOrderCommand" /&gt;
-  &lt;editToolStripButton Click="EditOrderCommand" /&gt;
-  &lt;deleteToolStripButton Click="RemoveOrderCommand" /&gt;
-  &lt;closeToolStripButton Click="CloseCommand" /&gt;
-&lt;/Bindings&gt;
-</value>
-  </data>
 </root>

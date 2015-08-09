@@ -28,19 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelativeBindingView));
             this.trackBar = new System.Windows.Forms.TrackBar();
             this.trackBarTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.titleTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.selfLabel = new System.Windows.Forms.Label();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.rootLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // trackBar
@@ -101,13 +97,6 @@
             this.selfLabel.TabIndex = 5;
             this.selfLabel.Text = "self";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // rootLabel
             // 
             this.rootLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -149,7 +138,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +149,6 @@
         private System.Windows.Forms.TextBox trackBarTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox titleTb;
-        private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label selfLabel;
         private System.Windows.Forms.Label rootLabel;

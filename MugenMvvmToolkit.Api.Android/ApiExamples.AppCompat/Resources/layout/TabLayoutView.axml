@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <TabLayout android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             pkg:tabMode="scrollable"
+             pkg:tabGravity="fill"
+             pkg:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay" />
+  <FrameLayout android:id="@android:id/tabcontent"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:padding="5dp"
+               pkg:Bind="Content SelectedItem" />
+
+  <OptionsMenu android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               pkg:MenuTemplate="@menu/addremovemenu" />
+</LinearLayout>

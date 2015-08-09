@@ -1,10 +1,10 @@
 ﻿using Binding.Portable.ViewModels;
 using CoreGraphics;
 using Foundation;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -65,14 +65,14 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                     ShouldChangeCharacters = (field, range, replacementString) => false
                 };
-                set.Bind(textField, field => field.Text).To(model => model.SelectedCulture);
+                set.Bind(textField, () => field => field.Text).To(() => model => model.SelectedCulture);
                 scrollView.AddSubview(textField);
 
                 var pickerView = new UIPickerView {ShowSelectionIndicator = true};
                 set.Bind(pickerView, AttachedMemberConstants.ItemsSource)
-                    .To(model => model.Cultures);
+                    .To(() => model => model.Cultures);
                 set.Bind(pickerView, AttachedMemberConstants.SelectedItem)
-                    .To(model => model.SelectedCulture)
+                    .To(() => model => model.SelectedCulture)
                     .TwoWay();
 
                 var toolbar = new UIToolbar {BarStyle = UIBarStyle.Black, Translucent = true};

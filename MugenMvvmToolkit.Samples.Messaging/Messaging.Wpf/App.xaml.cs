@@ -3,7 +3,7 @@ using Messaging.Portable;
 using Messaging.Portable.Messages;
 using Messaging.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WPF.Infrastructure;
 
 namespace Messaging.Wpf
 {

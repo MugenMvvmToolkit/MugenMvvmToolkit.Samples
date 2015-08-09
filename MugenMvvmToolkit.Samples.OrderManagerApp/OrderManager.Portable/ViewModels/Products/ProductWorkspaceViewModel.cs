@@ -105,7 +105,7 @@ namespace OrderManager.Portable.ViewModels.Products
                 productModel = editorVm.Entity;
                 GridViewModel.OriginalItemsSource.Add(productModel);
                 GridViewModel.SelectedItem = productModel;
-                OnPropertyChanged(() => HasChanges);
+                this.OnPropertyChanged(() => v => v.HasChanges);
             }
         }
 
@@ -140,7 +140,7 @@ namespace OrderManager.Portable.ViewModels.Products
                 }
 
                 GridViewModel.SelectedItem = productModel;
-                OnPropertyChanged(() => HasChanges);
+                this.OnPropertyChanged(() => v => v.HasChanges);
             }
         }
 
@@ -158,7 +158,7 @@ namespace OrderManager.Portable.ViewModels.Products
                 return;
             _trackingCollection.UpdateState(item, EntityState.Deleted);
             GridViewModel.OriginalItemsSource.Remove(item);
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
         }
 
         private bool CanRemoveProduct(object obj)
@@ -223,7 +223,7 @@ namespace OrderManager.Portable.ViewModels.Products
                 .WithBusyIndicator(this, UiResources.SaveBusyMessage);
             _trackingCollection.SetStateForAll(entity => entity.State.IsDeleted(), EntityState.Detached);
             _trackingCollection.SetStateForAll(entity => !entity.State.IsDeleted(), EntityState.Unchanged);
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
             if (showToast)
                 _toastPresenter.ShowAsync(UiResources.SaveToastMessage, ToastDuration.Long);
         }
@@ -289,7 +289,7 @@ namespace OrderManager.Portable.ViewModels.Products
                         break;
                 }
             }
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
         }
 
         public void SaveState(IDataContext state)

@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.viewBinder = new Navigation.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n<WrapperWindowView Content=\"ViewModel\"/>\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // WrapperWindowView
             // 
@@ -48,13 +38,11 @@
             this.Name = "WrapperWindowView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wrapper window";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Navigation.WinForms.ViewBinder viewBinder;
     }
 }

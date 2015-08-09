@@ -13,12 +13,18 @@ namespace Binding.Portable.Infrastructure
 {
     public class LocalizationManager : NotifyPropertyChangedBase, ILocalizationManager, IDynamicObject
     {
+        #region Fields
+
+        public const string ResourceName = "i18n";
+
+        #endregion
+
         #region Constructors
 
         public LocalizationManager()
         {
             //Register the current object as resource object with alias 'i18n' to use it in bindings '$i18n.MyResource'.
-            BindingServiceProvider.ResourceResolver.AddObject("i18n", new BindingResourceObject(this));
+            BindingServiceProvider.ResourceResolver.AddObject(ResourceName, new BindingResourceObject(this, true));
         }
 
         #endregion

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Binding.WinForms.CollectionManagers;
-using Binding.WinForms.Templates;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces;
@@ -33,11 +31,6 @@ namespace Binding.WinForms
         /// </summary>
         protected override bool LoadInternal()
         {
-            var resolver = BindingServiceProvider.ResourceResolver;
-            resolver.AddObject("buttonTemplate", new ButtonItemTemplate());
-            resolver.AddObject("listViewItemTemplate", new ListViewItemTemplate());
-            resolver.AddObject("listViewCollectionManager", new ListViewCollectionManager());
-
             //Registering attached property
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
             memberProvider.Register(
@@ -69,7 +62,7 @@ namespace Binding.WinForms
             foreach (ListViewItem item in listView.SelectedItems)
             {
                 item.Focused = false;
-                item.Selected = false;                
+                item.Selected = false;
             }
             if (value == null)
                 return;
@@ -78,7 +71,7 @@ namespace Binding.WinForms
                 if (Equals(ViewManager.GetDataContext(item), value))
                 {
                     item.Focused = true;
-                    item.Selected = true;                    
+                    item.Selected = true;
                     break;
                 }
             }

@@ -1,8 +1,8 @@
 using UIKit;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch.Views
@@ -40,8 +40,8 @@ namespace Navigation.Touch.Views
             using (var bindingSet = new BindingSet<MainViewModel>())
             {
                 //TabBar
-                bindingSet.Bind(this, AttachedMemberConstants.ItemsSource).To(model => model.ItemsSource);
-                bindingSet.Bind(this, AttachedMemberConstants.SelectedItem).To(model => model.SelectedItem).TwoWay();
+                bindingSet.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
+                bindingSet.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
             }
         }
 

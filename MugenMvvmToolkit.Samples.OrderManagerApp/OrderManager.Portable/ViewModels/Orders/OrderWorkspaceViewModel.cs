@@ -148,7 +148,7 @@ namespace OrderManager.Portable.ViewModels.Orders
                 orderModel = editorVm.Entity;
                 GridViewModel.OriginalItemsSource.Add(orderModel);
                 GridViewModel.SelectedItem = orderModel;
-                OnPropertyChanged(() => HasChanges);
+                this.OnPropertyChanged(() => v => v.HasChanges);
             }
         }
 
@@ -185,7 +185,7 @@ namespace OrderManager.Portable.ViewModels.Orders
                 }
 
                 GridViewModel.SelectedItem = orderModel;
-                OnPropertyChanged(() => HasChanges);
+                this.OnPropertyChanged(() => v => v.HasChanges);
             }
         }
 
@@ -206,7 +206,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             _trackingCollection.UpdateState(item, EntityState.Deleted);
             _trackingCollection.UpdateStates(productModels, EntityState.Deleted);
             GridViewModel.OriginalItemsSource.Remove(item);
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
         }
 
         private bool CanRemoveOrder(OrderModel obj)
@@ -250,7 +250,7 @@ namespace OrderManager.Portable.ViewModels.Orders
                 .WithBusyIndicator(this, UiResources.SaveBusyMessage);
             _trackingCollection.SetStateForAll(entity => entity.State.IsDeleted(), EntityState.Detached);
             _trackingCollection.SetStateForAll(entity => !entity.State.IsDeleted(), EntityState.Unchanged);
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
             if (showToast)
                 _toastPresenter.ShowAsync(UiResources.SaveToastMessage, ToastDuration.Long);
         }
@@ -321,7 +321,7 @@ namespace OrderManager.Portable.ViewModels.Orders
                     }
                 }
             }
-            OnPropertyChanged(() => HasChanges);
+            this.OnPropertyChanged(() => v => v.HasChanges);
         }
 
         public void SaveState(IDataContext state)

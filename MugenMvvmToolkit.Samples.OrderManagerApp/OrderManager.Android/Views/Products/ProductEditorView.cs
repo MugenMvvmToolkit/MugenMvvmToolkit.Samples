@@ -1,9 +1,5 @@
-using MugenMvvmToolkit.Views;
-#if APPCOMPAT
-using MugenMvvmToolkit.AppCompat.Views.Fragments;
-#else
-using MugenMvvmToolkit.FragmentSupport.Views.Fragments;
-#endif
+using MugenMvvmToolkit.Android.Views;
+using MugenMvvmToolkit.Android.AppCompat.Views.Fragments;
 
 namespace OrderManager.Android.Views.Products
 {

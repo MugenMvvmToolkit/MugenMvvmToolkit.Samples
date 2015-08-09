@@ -3,7 +3,7 @@ using Foundation;
 using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.ViewModels.Products;
 
 namespace OrderManager.Touch.Views.Products
@@ -43,8 +43,8 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Name)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Name)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -63,8 +63,8 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Price)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Price)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -82,8 +82,8 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Description)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Description)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);

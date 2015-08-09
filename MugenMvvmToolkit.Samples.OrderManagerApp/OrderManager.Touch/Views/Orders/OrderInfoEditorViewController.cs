@@ -3,7 +3,7 @@ using Foundation;
 using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.ViewModels.Orders;
 
 namespace OrderManager.Touch.Views.Orders
@@ -44,8 +44,8 @@ namespace OrderManager.Touch.Views.Orders
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Name)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Name)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -64,8 +64,8 @@ namespace OrderManager.Touch.Views.Orders
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Number)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Number)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);

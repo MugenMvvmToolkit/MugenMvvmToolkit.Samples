@@ -1,11 +1,10 @@
 using CoreGraphics;
 using Foundation;
 using UIKit;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Interfaces.Views;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Interfaces.Views;
+using MugenMvvmToolkit.iOS.Views;
 using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch.Views
@@ -35,7 +34,7 @@ namespace Navigation.Touch.Views
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 70, View.Frame.Width, 30);
                 button.SetTitle("Close from view model (First view)", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.CloseCommand);
+                set.Bind(button, "Click").To(() => model => model.CloseCommand);
                 View.AddSubview(button);
             }
         }

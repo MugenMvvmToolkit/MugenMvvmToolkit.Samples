@@ -1,10 +1,10 @@
 using Android.App;
-using MugenMvvmToolkit.AppCompat.Views.Activities;
+using MugenMvvmToolkit.Android.AppCompat.Views.Activities;
 
 namespace ApiExamples.Views
 {
     [Activity(Label = "ApiExamples")]
-    public class DrawerActivityView : MvvmActionBarActivity
+    public class DrawerActivityView : MvvmAppCompatActivity
     {
         #region Constructors
 

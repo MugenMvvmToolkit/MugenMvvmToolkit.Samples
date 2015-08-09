@@ -4,7 +4,11 @@ namespace Binding.Portable.Models
 {
     public class CollectionItemModel : NotifyPropertyChangedBase
     {
+        #region Fields
+
         private string _name;
+
+        #endregion
 
         #region Properties
 
@@ -16,7 +20,7 @@ namespace Binding.Portable.Models
                 if (_name == value)
                     return;
                 _name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged();
             }
         }
 

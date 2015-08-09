@@ -7,8 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
-using MugenMvvmToolkit.Infrastructure.Navigation;
+using MugenMvvmToolkit.WinPhone.Infrastructure;
 using Navigation.Portable.ViewModels;
 using Navigation.WindowsPhone.Resources;
 

@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalizableView));
             this.addLabel = new System.Windows.Forms.Label();
             this.editLabel = new System.Windows.Forms.Label();
             this.delLabel = new System.Windows.Forms.Label();
             this.cultureComboBox = new System.Windows.Forms.ComboBox();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // addLabel
@@ -74,13 +70,6 @@
             this.cultureComboBox.Size = new System.Drawing.Size(305, 21);
             this.cultureComboBox.TabIndex = 3;
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // LocalizableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,7 +85,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +96,5 @@
         private System.Windows.Forms.Label editLabel;
         private System.Windows.Forms.Label delLabel;
         private System.Windows.Forms.ComboBox cultureComboBox;
-        private Binding.WinForms.ViewBinder viewBinder;
     }
 }

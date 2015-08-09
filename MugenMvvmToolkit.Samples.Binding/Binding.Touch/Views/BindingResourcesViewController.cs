@@ -1,7 +1,10 @@
+using Binding.Portable.ViewModels;
 using CoreGraphics;
 using Foundation;
+using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -24,7 +27,7 @@ namespace Binding.Touch.Views
             };
             View.AddSubview(scrollView);
 
-            using (var set = new BindingSet())
+            using (var set = new BindingSet<BindingResourcesViewModel>())
             {
                 UIFont font = UIFont.SystemFontOfSize(10);
 
@@ -42,7 +45,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text $obj");
+                set.Bind(label, () => l => l.Text).To(() => vm => BindingSyntaxEx.Resource<object>("obj"));
                 scrollView.AddSubview(label);
 
 

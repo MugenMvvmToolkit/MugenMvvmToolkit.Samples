@@ -1,3 +1,4 @@
+using MugenMvvmToolkit.Android.AppCompat.Infrastructure;
 using MugenMvvmToolkit.ViewModels;
 
 namespace ApiExamples.ViewModels

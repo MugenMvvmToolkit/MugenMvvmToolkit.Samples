@@ -3,7 +3,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
-using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.WinRT.Binding;
 
 namespace OrderManager.Views.Orders
 {

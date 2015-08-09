@@ -1,4 +1,6 @@
 ﻿using System.Windows.Forms;
+using MugenMvvmToolkit.Binding;
+using Navigation.Portable.ViewModels;
 
 namespace Navigation.WinForms.Views
 {
@@ -7,6 +9,7 @@ namespace Navigation.WinForms.Views
         public FirstView()
         {
             InitializeComponent();
+            button1.Bind("Click").To<FirstViewModel>(() => m => m.CloseCommand).Build();
         }
     }
 }

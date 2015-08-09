@@ -5,7 +5,7 @@
     xmlns:local="using:Binding.UniversalApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     xmlns:viewModels="using:Binding.Portable.ViewModels"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:DynamicObjectViewModel, IsDesignTimeCreatable=True}">
 

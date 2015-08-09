@@ -14,11 +14,11 @@ namespace OrderManager.Portable.Validators
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(string propertyName, CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
-            if (PropertyNameEqual(propertyName, model => model.Name))
+            if (MemberNameEqual(propertyName, () => model => model.Name))
                 ValidateName(propertyName, dictionary);
-            else if (PropertyNameEqual(propertyName, model => model.Price))
+            else if (MemberNameEqual(propertyName, () => model => model.Price))
                 ValidatePrice(propertyName, dictionary);
-            else if (PropertyNameEqual(propertyName, model => model.Description))
+            else if (MemberNameEqual(propertyName, () => model => model.Description))
                 ValidateDescription(propertyName, dictionary);
             return FromResult(dictionary);
         }
@@ -26,9 +26,9 @@ namespace OrderManager.Portable.Validators
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)
         {
             var dictionary = new Dictionary<string, IEnumerable>();
-            ValidateDescription(GetPropertyName(model => model.Description), dictionary);
-            ValidateName(GetPropertyName(model => model.Name), dictionary);
-            ValidatePrice(GetPropertyName(model => model.Price), dictionary);
+            ValidateDescription(GetMemberName(() => model => model.Description), dictionary);
+            ValidateName(GetMemberName(() => model => model.Name), dictionary);
+            ValidatePrice(GetMemberName(() => model => model.Price), dictionary);
             return FromResult(dictionary);
         }
 

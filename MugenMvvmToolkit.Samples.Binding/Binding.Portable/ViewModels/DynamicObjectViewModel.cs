@@ -11,7 +11,7 @@ namespace Binding.Portable.ViewModels
         {
             DynamicModel = new DynamicModel();
             if (IsDesignMode)
-                DynamicModel.SetMember("DynamicProperty", new object[] { "Design text" });
+                DynamicModel.SetMember("DynamicProperty", new object[] {"Design text"});
         }
 
         #endregion

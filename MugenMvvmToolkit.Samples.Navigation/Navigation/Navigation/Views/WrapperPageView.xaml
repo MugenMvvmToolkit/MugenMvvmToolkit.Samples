@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
              Title="{Binding DisplayName}"
              x:Class="Navigation.Views.WrapperPageView">
     <Grid VerticalOptions="FillAndExpand">
@@ -11,8 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ContentView Content="{mugen:DataBinding $ViewModelToView(ViewModel)}" Padding="4"
-                     HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand" />
+                     HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <Button Grid.Row="1" HorizontalOptions="FillAndExpand" Text="Close from wrapper"
                 Command="{Binding Path=CloseCommand}" />
     </Grid>

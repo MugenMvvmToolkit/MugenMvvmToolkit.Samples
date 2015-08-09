@@ -3,7 +3,7 @@ using Foundation;
 using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.ViewModels;
 
 namespace OrderManager.Touch.Views
@@ -25,7 +25,7 @@ namespace OrderManager.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 65, View.Frame.Width - 40, 30);
                 button.SetTitle("Products", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.OpenProductsCommand);
+                set.Bind(button, "Click").To(() => model => model.OpenProductsCommand);
                 View.AddSubview(button);
 
 
@@ -33,7 +33,7 @@ namespace OrderManager.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 95, View.Frame.Width - 40, 30);
                 button.SetTitle("Orders", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.OpenOrdersCommand);
+                set.Bind(button, "Click").To(() => model => model.OpenOrdersCommand);
                 View.AddSubview(button);
             }
         }

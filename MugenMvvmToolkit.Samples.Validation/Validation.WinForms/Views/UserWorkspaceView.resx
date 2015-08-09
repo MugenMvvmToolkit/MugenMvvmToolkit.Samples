@@ -126,20 +126,4 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;validatingLabel Visible="UserEditorViewModel.IsLoginValidating" /&gt;
-  &lt;nameTextBox Text="UserEditorViewModel.Name, Mode=TwoWay, Validate=True" /&gt;
-  &lt;loginTextBox Text="UserEditorViewModel.Login, Mode=TwoWay, Validate=True, Delay=400" /&gt;
-  &lt;emailTextBox Text="UserEditorViewModel.Email, Mode=TwoWay, Validate=True" /&gt;
-  &lt;notValidLabel Visible="!UserEditorViewModel.IsValid" /&gt;
-  &lt;validLabel Visible="UserEditorViewModel.IsValid" /&gt;
-  &lt;addButton Click="AddUserCommand" /&gt;
-  &lt;removeButton Click="RemoveUserCommand" /&gt;
-  &lt;userDataGridView DataContext="UserGridViewModel" ItemsSource="ItemsSource" SelectedItem="SelectedItem, Mode=TwoWay" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

@@ -1,10 +1,10 @@
 using CoreGraphics;
 using Foundation;
 using UIKit;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using Validation.Portable.ViewModels;
 
 namespace Validation.Touch.Views

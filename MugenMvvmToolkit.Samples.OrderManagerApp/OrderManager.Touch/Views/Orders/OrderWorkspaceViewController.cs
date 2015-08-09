@@ -1,10 +1,12 @@
 ﻿using CoreGraphics;
 using Foundation;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS.Binding;
 using UIKit;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.Models;
 using OrderManager.Portable.ViewModels.Orders;
 
@@ -22,25 +24,25 @@ namespace OrderManager.Touch.Views.Orders
 
             using (var set = new BindingSet<OrderWorkspaceViewModel>())
             {
-                set.Bind(this, controller => controller.Title).To(model => model.DisplayName);
+                set.Bind(this, () => controller => controller.Title).To(() => model => model.DisplayName);
 
                 var addItem = new UIBarButtonItem("Add", UIBarButtonItemStyle.Plain, null);
-                set.Bind(addItem, "Clicked").To(model => model.AddOrderCommand);
+                set.Bind(addItem, "Clicked").To(() => model => model.AddOrderCommand);
 
                 var saveItem = new UIBarButtonItem("Save", UIBarButtonItemStyle.Done, null);
-                set.Bind(saveItem, "Clicked").To(model => model.SaveChangesCommand);
+                set.Bind(saveItem, "Clicked").To(() => model => model.SaveChangesCommand);
                 NavigationItem.RightBarButtonItems = new[] { addItem, saveItem };
 
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar, bar => bar.Text).To(model => model.FilterText).TwoWay();
+                set.Bind(searchBar, () => bar => bar.Text).To(() => model => model.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
-                set.Bind(View, "IsBusy").To(model => model.IsBusy);
-                set.Bind(View, "BusyMessage").To(model => model.BusyMessage);
+                set.Bind(View, "IsBusy").To(() => model => model.IsBusy);
+                set.Bind(View, "BusyMessage").To(() => model => model.BusyMessage);
 
-                set.Bind(TableView, AttachedMemberConstants.ItemsSource).To(model => model.GridViewModel.ItemsSource);
-                set.Bind(TableView, AttachedMemberConstants.SelectedItem)
-                    .To(model => model.GridViewModel.SelectedItem)
+                set.Bind(TableView, AttachedMembers.UIView.ItemsSource).To(() => model => model.GridViewModel.ItemsSource);
+                set.Bind(TableView, AttachedMembers.UITableView.SelectedItem)
+                    .To(() => model => model.GridViewModel.SelectedItem)
                     .TwoWay();
             }
 
@@ -51,11 +53,18 @@ namespace OrderManager.Touch.Views.Orders
                 cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
                 using (var set = new BindingSet<OrderModel>())
                 {
-                    set.BindFromExpression(cell, "AccessoryButtonTapped $Rel(UIViewController).DataContext.EditOrderCommand, CommandParameter=$self.DataContext, ToggleEnabledState=false");
-                    set.BindFromExpression(cell, "DeleteClick $Rel(UIViewController).DataContext.RemoveOrderCommand, CommandParameter=$self.DataContext, ToggleEnabledState=false");
-
-                    set.BindFromExpression(cell.TextLabel, "Text $Format('{0} (№ {1})', Name, Number)");
-                    set.BindFromExpression(cell, "TitleForDeleteConfirmation $Format('Delete {0}', Name)");
+                    set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
+                        .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().EditOrderCommand)
+                        .WithCommandParameter(() => model => BindingSyntaxEx.Self<object>().DataContext())
+                        .ToggleEnabledState(false);
+                    set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
+                        .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().RemoveOrderCommand)
+                        .WithCommandParameter(() => model => BindingSyntaxEx.Self<object>().DataContext())
+                        .ToggleEnabledState(false);
+                    set.Bind(cell.TextLabel, () => l => l.Text)
+                        .To(() => m => string.Format("{0} (№ {1})", m.Name, m.Number));
+                    set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
+                        .To(() => m => string.Format("Delete {0}", m.Name));
                 }
             });
         }

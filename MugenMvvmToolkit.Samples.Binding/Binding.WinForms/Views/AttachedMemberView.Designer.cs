@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.customPropLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.autoPropLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // customPropLabel
@@ -95,14 +92,6 @@
             this.textBox.Size = new System.Drawing.Size(439, 20);
             this.textBox.TabIndex = 24;
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <textBox Text=\"Text, Mode=TwoWay\" />\n  <autoPropLabel TextExt=\"Text\"" +
-    " />\n  <customPropLabel FormattedText=\"Text\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // AttachedMemberView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +109,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,7 +121,6 @@
         private System.Windows.Forms.Label autoPropLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private ViewBinder viewBinder;
         private System.Windows.Forms.TextBox textBox;
     }
 }

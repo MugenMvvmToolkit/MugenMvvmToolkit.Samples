@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinForms.Infrastructure;
 using OrderManager.Portable.ViewModels;
 
 namespace OrderManager.WinForms

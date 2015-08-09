@@ -117,15 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;trackBarTb Text="$Element(trackBar).Value, Mode=TwoWay" /&gt;
-  &lt;titleTb Text="$Relative(Form).Text, Mode=TwoWay" /&gt;
-  &lt;selfLabel Text="$self.Width" /&gt;
-  &lt;rootLabel Text="$root" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

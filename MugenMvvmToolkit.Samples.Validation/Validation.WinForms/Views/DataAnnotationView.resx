@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;nameTextBox Text="NameInVm, Mode=TwoWay, Validate=True"  /&gt;
-  &lt;nameErrorLabel Text="$GetErrors(NameInVm).FirstOrDefault()" /&gt;
-  &lt;descriptionTextBox Text="Description, Mode=TwoWay, Validate=True" /&gt;
-  &lt;descErrorLabel Text="$GetErrors(Description).FirstOrDefault()" /&gt;
-  &lt;customErrorTextBox Text="CustomError, Mode=TwoWay" /&gt;
-  &lt;checkBox1 Checked="DisableDescriptionValidation, Mode=TwoWay" /&gt;
-  &lt;notValidLabel Visible="!IsValid" /&gt;
-  &lt;validLabel Visible="IsValid" /&gt;
-  &lt;summaryLabel Text="$string.Join($Environment.NewLine, $GetErrors())" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

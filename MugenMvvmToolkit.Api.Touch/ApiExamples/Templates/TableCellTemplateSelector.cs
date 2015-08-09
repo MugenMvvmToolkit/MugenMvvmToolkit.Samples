@@ -1,11 +1,14 @@
 using ApiExamples.Models;
+using ApiExamples.ViewModels;
 using ApiExamples.Views;
 using Foundation;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Binding.Infrastructure;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Templates
@@ -14,8 +17,18 @@ namespace ApiExamples.Templates
     {
         #region Fields
 
+        public static readonly TableCellTemplateSelector Instance = new TableCellTemplateSelector();
+
         private static readonly NSString EvenIdCellIdentifier = new NSString("even");
         private static readonly NSString OddIdCellIdentifier = new NSString("odd");
+
+        #endregion
+
+        #region Constructors
+
+        private TableCellTemplateSelector()
+        {
+        }
 
         #endregion
 
@@ -40,17 +53,23 @@ namespace ApiExamples.Templates
             template.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
             template.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
 
-            bindingSet.BindFromExpression(template, "AccessoryButtonTapped $Rel(UIViewController).DataContext.ItemClickCommand, CommandParameter=$self.DataContext, ToggleEnabledState=false");
-            bindingSet.BindFromExpression(template, "DeleteClick $Rel(UIViewController).DataContext.RemoveCommand, CommandParameter=$self.DataContext, ToggleEnabledState=false");
+            bindingSet.Bind(AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
+                .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
+                .WithCommandParameter(() => model => model)
+                .ToggleEnabledState(false);
+            bindingSet.Bind(AttachedMembers.UITableViewCell.DeleteClickEvent)
+                .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
+                .WithCommandParameter(() => model => model)
+                .ToggleEnabledState(false);
 
-            bindingSet.Bind(viewCell => viewCell.Selected).To(model => model.IsSelected).TwoWay();
-            bindingSet.Bind(viewCell => viewCell.Highlighted).To(model => model.IsHighlighted).OneWayToSource();
-            bindingSet.Bind(viewCell => viewCell.Editing).To(model => model.Editing).OneWayToSource();
-            bindingSet.BindFromExpression("TitleForDeleteConfirmation $Format('Delete {0}', Name)");
-
-            bindingSet.Bind(label => label.TextLabel.Text).To(model => model.Name);
-            bindingSet.BindFromExpression(template.DetailTextLabel,
-                        "Text $Format('Selected: {0}, Highlighted: {1}, Editing: {2}', IsSelected, IsHighlighted, Editing)");
+            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
+            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).OneWayToSource();
+            bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
+            bindingSet.Bind(AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
+                      .To(() => m => "Delete " + m.Name);
+            bindingSet.Bind(() => label => label.TextLabel.Text).To(() => model => model.Name);
+            bindingSet.Bind(template.DetailTextLabel, () => l => l.Text)
+                .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
         }
 
         #endregion

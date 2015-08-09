@@ -12,60 +12,66 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical">
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="One time binding:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=OneTime" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="One way binding:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=OneWay" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="One way binding with target delay 1000:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=OneWay, TargetDelay=1000" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="One way to source binding:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=OneWayToSource" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Two way binding:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=TwoWay" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Two way binding with source delay 1000:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        pkg:Bind="Text Text, Mode=TwoWay, Delay=1000" />
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="One time binding"
+                           pkg:Bind="Text Text, Mode=OneTime" />
+      </TextInputLayout>
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="One way binding"
+                           pkg:Bind="Text Text, Mode=OneWay" />
+      </TextInputLayout>
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="One way binding with target delay 1000"
+                           pkg:Bind="Text Text, Mode=OneWay, TargetDelay=1000" />
+      </TextInputLayout>
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="One way to source binding"
+                           pkg:Bind="Text Text, Mode=OneWayToSource" />
+      </TextInputLayout>
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Two way binding"
+                           pkg:Bind="Text Text, Mode=TwoWay" />
+      </TextInputLayout>
+
+      <TextInputLayout android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Two way binding with source delay 1000"
+                           pkg:Bind="Text Text, Mode=TwoWay, Delay=1000" />
+      </TextInputLayout>
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

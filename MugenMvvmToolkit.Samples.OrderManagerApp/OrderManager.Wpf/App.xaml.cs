@@ -1,6 +1,6 @@
 using System.Windows;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WPF.Infrastructure;
 using OrderManager.Portable.ViewModels;
 
 namespace OrderManager.Wpf

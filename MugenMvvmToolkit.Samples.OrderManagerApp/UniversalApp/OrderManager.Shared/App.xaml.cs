@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinRT.Infrastructure;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using OrderManager.Portable.ViewModels;
 

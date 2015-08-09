@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.typeLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.methodLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.objLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // typeLabel
@@ -96,14 +93,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Object from resources($obj)";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <objLabel Text=\"$obj\" />\n  <methodLabel Text=\"$Method()\" />\n  <typeL" +
-    "abel Text=\"$CustomType.StaticMethod()\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // BindingResourcesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,7 +110,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +123,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label objLabel;
         private System.Windows.Forms.Label label2;
-        private Binding.WinForms.ViewBinder viewBinder;
     }
 }

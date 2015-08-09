@@ -3,7 +3,8 @@ using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -39,8 +40,8 @@ namespace Binding.Touch.Views
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
                 };
-                set.Bind(uiSwitch, @switch => @switch.On)
-                    .To(model => model.CanExecuteCommand)
+                set.Bind(uiSwitch, () => @switch => @switch.On)
+                    .To(() => model => model.CanExecuteCommand)
                     .TwoWay();
                 scrollView.AddSubview(uiSwitch);
 
@@ -57,7 +58,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 55, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.Command).WithCommandParameter("1");
+                set.Bind(button, "Click").To(() => model => model.Command).WithCommandParameter("1");
                 scrollView.AddSubview(button);
 
 
@@ -73,7 +74,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 110, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.Command).ToggleEnabledState(false).WithCommandParameter("2");
+                set.Bind(button, "Click").To(() => model => model.Command).ToggleEnabledState(false).WithCommandParameter("2");
                 scrollView.AddSubview(button);
 
                 label = new UILabel(new CGRect(20, 140, View.Frame.Width - 40, 25))
@@ -89,7 +90,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.BindFromExpression(textField, "TextChanged EventMethod(null)");
+                set.Bind(textField, "TextChanged")
+                    .ToAction(() => vm => vm.EventMethod(null));
                 scrollView.AddSubview(textField);
 
 
@@ -106,7 +108,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.BindFromExpression(textField, "TextChanged EventMethod($self.Text)");
+                set.Bind(textField, "TextChanged")
+                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.Self<UITextField>().Text));
                 scrollView.AddSubview(textField);
 
                 label = new UILabel(new CGRect(20, 250, View.Frame.Width - 40, 25))
@@ -122,7 +125,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.BindFromExpression(textField, "TextChanged EventMethod($args)");
+                set.Bind(textField, "TextChanged")
+                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.EventArgs<object>()));
                 scrollView.AddSubview(textField);
 
 
@@ -139,7 +143,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.BindFromExpression(textField, "TextChanged EventMethodMultiParams($self.Text, $args)");
+                set.Bind(textField, "TextChanged")
+                    .ToAction(() => vm => vm.EventMethodMultiParams(BindingSyntaxEx.Self<UITextField>().Text, BindingSyntaxEx.EventArgs<object>()));
                 scrollView.AddSubview(textField);
             }
         }

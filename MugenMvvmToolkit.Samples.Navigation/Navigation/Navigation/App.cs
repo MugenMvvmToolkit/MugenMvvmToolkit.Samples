@@ -1,5 +1,5 @@
 ﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
 using Navigation.Portable.ViewModels;
 using Xamarin.Forms;
 

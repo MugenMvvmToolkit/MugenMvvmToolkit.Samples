@@ -2,8 +2,8 @@ using System;
 using Binding.Android;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Attributes;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Android.Attributes;
+using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
 [assembly: Bootstrapper(typeof (Setup))]

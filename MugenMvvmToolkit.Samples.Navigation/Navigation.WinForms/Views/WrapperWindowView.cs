@@ -1,4 +1,7 @@
 ﻿using System.Windows.Forms;
+using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Interfaces.ViewModels;
+using MugenMvvmToolkit.WinForms.Binding;
 
 namespace Navigation.WinForms.Views
 {
@@ -7,6 +10,7 @@ namespace Navigation.WinForms.Views
         public WrapperWindowView()
         {
             InitializeComponent();
+            this.Bind(AttachedMembers.Control.Content).To<IWrapperViewModel>(() => m => m.ViewModel).Build();
         }
     }
 }

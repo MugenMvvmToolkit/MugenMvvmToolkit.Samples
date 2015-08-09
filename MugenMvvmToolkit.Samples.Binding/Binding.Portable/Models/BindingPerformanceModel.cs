@@ -24,7 +24,7 @@ namespace Binding.Portable.Models
 
         #region Properties
 
-        public int SetCount { get; set; }
+        public int SetCount { get; private set; }
 
         public string Property
         {

@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:OrderManager.Controls"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     markupExtensions:View.DesignDataContext="OrderWorkspaceViewModel"
     mc:Ignorable="d">
 

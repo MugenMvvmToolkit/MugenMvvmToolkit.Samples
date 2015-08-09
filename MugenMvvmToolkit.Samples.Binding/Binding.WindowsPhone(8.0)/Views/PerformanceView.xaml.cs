@@ -68,8 +68,10 @@ namespace Binding.WindowsPhone.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target, "Value Property, Mode=TwoWay",
-                new object[] { model });
+            target.Bind(() => t => t.Value)
+                .To(model, () => m => m.Property)
+                .TwoWay()
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
@@ -85,8 +87,9 @@ namespace Binding.WindowsPhone.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
-            BindingServiceProvider.BindingProvider.CreateBindingsFromString(target,
-                "Value (Property ?? $string.Empty).Length + Property", new object[] { model });
+            target.Bind(() => m => m.Value)
+                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)

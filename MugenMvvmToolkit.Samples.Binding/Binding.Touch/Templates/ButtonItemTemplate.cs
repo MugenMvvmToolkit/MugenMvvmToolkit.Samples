@@ -1,13 +1,30 @@
 ﻿using System;
+using Binding.Portable.ViewModels;
 using MonoTouch.Dialog;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using UIKit;
 
 namespace Binding.Touch.Templates
 {
     public class ButtonItemTemplate : DataTemplateSelectorBase<Tuple<string, Type>, StringElement>
     {
+        #region Fields
+
+        public static readonly ButtonItemTemplate Instance = new ButtonItemTemplate();
+
+        #endregion
+
+        #region Constructors
+
+        private ButtonItemTemplate()
+        {
+        }
+
+        #endregion
+
         #region Overrides of DataTemplateSelectorBase<Tuple<string,ViewModelCommandParameter>,UIButton>
 
         protected override StringElement SelectTemplate(Tuple<string, Type> item, object container)
@@ -18,9 +35,10 @@ namespace Binding.Touch.Templates
         protected override void Initialize(StringElement template,
             BindingSet<StringElement, Tuple<string, Type>> bindingSet)
         {
-            bindingSet.Bind(element => element.Caption).To(tuple => tuple.Item1).OneTime();
-            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(tuple => tuple.Item2).OneTime();
-            bindingSet.BindFromExpression("Tapped $Relative(UIViewController).DataContext.ShowCommand");
+            bindingSet.Bind(() => e => e.Caption).To(() => t => t.Item1).OneTime();
+            bindingSet.Bind("Tapped")
+                .To(() => vm => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
+                .WithCommandParameter(() => tuple => tuple.Item2);
         }
 
         #endregion

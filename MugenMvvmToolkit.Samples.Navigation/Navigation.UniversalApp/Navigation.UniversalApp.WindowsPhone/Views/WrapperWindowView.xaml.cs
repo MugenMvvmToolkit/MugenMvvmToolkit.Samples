@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls.Primitives;
-using MugenMvvmToolkit.Interfaces.Views;
-using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.WinRT.Interfaces.Views;
+using MugenMvvmToolkit.WinRT.Models;
 
 namespace Navigation.UniversalApp.Views
 {

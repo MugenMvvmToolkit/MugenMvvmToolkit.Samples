@@ -1,10 +1,11 @@
+using ApiExamples.Templates;
 using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
@@ -25,17 +26,19 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
                 };
 
-                set.Bind(this, AttachedMemberConstants.ItemsSource).To(model => model.ItemsSource);
-                set.Bind(this, AttachedMemberConstants.SelectedItem).To(model => model.SelectedItem).TwoWay();
-                set.BindFromExpression(this, "ItemTemplate $tabDataTemplate");
-                set.BindFromExpression(this, "Title SelectedItem.Name + SelectedItem.Id, Fallback='Nothing selected'");
+                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
+                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
+                set.Bind(this, () => c => c.Title)
+                    .To(() => m => ((ItemViewModel)m.SelectedItem).Name + " " + ((ItemViewModel)m.SelectedItem).Id)
+                    .WithFallback("Nothing selected");
+                this.SetBindingMemberValue(AttachedMembers.UITabBarController.ItemTemplateSelector, TabTemplateSelector.Instance);
             }
         }
 

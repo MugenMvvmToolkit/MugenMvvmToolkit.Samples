@@ -1,10 +1,24 @@
 ﻿using System.Windows.Forms;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.WinForms.Binding.Infrastructure;
 
 namespace Binding.WinForms.CollectionManagers
 {
     public sealed class ListViewCollectionManager : CollectionViewManagerBase<ListView, ListViewItem>
     {
+        #region Fields
+
+        public static readonly ListViewCollectionManager Instance = new ListViewCollectionManager();
+
+        #endregion
+
+        #region Constructors
+
+        private ListViewCollectionManager()
+        {
+        }
+
+        #endregion
+
         #region Overrides of CollectionViewManagerBase<ListView,ListViewItem>
 
         protected override void Insert(ListView view, int index, ListViewItem viewItem)

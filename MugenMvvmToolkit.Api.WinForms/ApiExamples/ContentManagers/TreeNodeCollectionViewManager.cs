@@ -1,17 +1,31 @@
 ﻿using System.Windows.Forms;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.WinForms.Binding.Infrastructure;
 
 namespace ApiExamples.ContentManagers
 {
     public class TreeNodeCollectionViewManager : CollectionViewManagerBase<object, TreeNode>
     {
+        #region Fields
+
+        public static readonly TreeNodeCollectionViewManager Instance = new TreeNodeCollectionViewManager();
+
+        #endregion
+
+        #region Constructors
+
+        private TreeNodeCollectionViewManager()
+        {
+        }
+
+        #endregion
+
         #region Overrides of CollectionViewManagerBase<object,TreeNode>
 
         protected override void Insert(object view, int index, TreeNode item)
         {
             var treeNode = view as TreeNode;
             if (treeNode == null)
-                ((TreeView) view).Nodes.Insert(index, item);
+                ((TreeView)view).Nodes.Insert(index, item);
             else
                 treeNode.Nodes.Insert(index, item);
         }
@@ -20,7 +34,7 @@ namespace ApiExamples.ContentManagers
         {
             var treeNode = view as TreeNode;
             if (treeNode == null)
-                ((TreeView) view).Nodes.RemoveAt(index);
+                ((TreeView)view).Nodes.RemoveAt(index);
             else
                 treeNode.Nodes.RemoveAt(index);
         }
@@ -29,7 +43,7 @@ namespace ApiExamples.ContentManagers
         {
             var treeNode = view as TreeNode;
             if (treeNode == null)
-                ((TreeView) view).Nodes.Clear();
+                ((TreeView)view).Nodes.Clear();
             else
                 treeNode.Nodes.Clear();
         }

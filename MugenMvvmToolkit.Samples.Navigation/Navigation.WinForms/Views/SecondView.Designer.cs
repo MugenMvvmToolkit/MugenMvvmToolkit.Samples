@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.viewBinder = new Navigation.WinForms.ViewBinder(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -57,13 +54,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Second view";
             // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = "<Bindings>\n  <button1 Click=\"CloseCommand\" />\n</Bindings>";
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
-            // 
             // SecondView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -72,7 +62,6 @@
             this.Controls.Add(this.button1);
             this.Name = "SecondView";
             this.Size = new System.Drawing.Size(451, 192);
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,6 +71,5 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private Navigation.WinForms.ViewBinder viewBinder;
     }
 }

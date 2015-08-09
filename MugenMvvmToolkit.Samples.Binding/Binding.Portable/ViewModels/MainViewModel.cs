@@ -40,7 +40,7 @@ namespace Binding.Portable.ViewModels
             };
             ShowCommand = new RelayCommand<Type>(Show);
             resourceMonitor.PropertyChanged += ReflectionExtensions.MakeWeakPropertyChangedHandler(this,
-                (model, o, arg3) => model.OnPropertyChanged("ResourceUsageInfo"));
+                (model, o, arg3) => model.OnPropertyChanged(() => vm => vm.ResourceUsageInfo));
         }
 
         #endregion
@@ -75,7 +75,7 @@ namespace Binding.Portable.ViewModels
 
         private async void Show(Type type)
         {
-            if (type == typeof (object))
+            if (type == typeof(object))
             {
                 GC.Collect();
                 GC.WaitForPendingFinalizers();

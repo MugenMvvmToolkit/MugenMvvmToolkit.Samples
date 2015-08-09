@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DynamicObjectView));
             this.label2 = new System.Windows.Forms.Label();
             this.dynamicTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dynamicLabel = new System.Windows.Forms.Label();
-            this.viewBinder = new Binding.WinForms.ViewBinder(this.components);
             this.methodLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.indexLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -78,13 +74,6 @@
             this.dynamicLabel.Size = new System.Drawing.Size(35, 13);
             this.dynamicLabel.TabIndex = 7;
             this.dynamicLabel.Text = "label3";
-            // 
-            // viewBinder
-            // 
-            this.viewBinder.Bindings = resources.GetString("viewBinder.Bindings");
-            this.viewBinder.ContainerControl = this;
-            this.viewBinder.IgnoreControlException = true;
-            this.viewBinder.RootTagName = "Bindings";
             // 
             // methodLabel
             // 
@@ -143,7 +132,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            ((System.ComponentModel.ISupportInitialize)(this.viewBinder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +143,6 @@
         private System.Windows.Forms.TextBox dynamicTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dynamicLabel;
-        private Binding.WinForms.ViewBinder viewBinder;
         private System.Windows.Forms.Label indexLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label methodLabel;

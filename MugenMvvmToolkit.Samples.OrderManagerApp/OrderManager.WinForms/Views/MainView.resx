@@ -120,15 +120,4 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="viewBinder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <data name="viewBinder.Bindings" xml:space="preserve">
-    <value>&lt;Bindings&gt;
-  &lt;tabControl1 SelectedItem="SelectedItem, Mode=TwoWay" ItemsSource="ItemsSource" ItemTemplate="$tabTemplate"/&gt;
-  &lt;ordersToolStripMenuItem Click="OpenOrdersCommand" /&gt;
-  &lt;productsToolStripMenuItem Click="OpenProductsCommand" /&gt;
-  &lt;exitToolStripMenuItem Click="CloseCommand" /&gt;
-&lt;/Bindings&gt;</value>
-  </data>
 </root>

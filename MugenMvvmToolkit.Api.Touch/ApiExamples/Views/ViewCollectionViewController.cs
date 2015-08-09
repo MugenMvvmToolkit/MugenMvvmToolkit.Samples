@@ -1,10 +1,12 @@
-﻿using ApiExamples.ViewModels;
+﻿using ApiExamples.ContentManagers;
+using ApiExamples.Templates;
+using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
@@ -25,14 +27,14 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
                 };
 
-                set.Bind(View, AttachedMemberConstants.ItemsSource).To(model => model.ItemsSource);
-                set.BindFromExpression(View, "ItemTemplate $labelItemTemplate");
-                set.BindFromExpression(View, "CollectionViewManager $collectionViewManager");
+                set.Bind(View, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
+                View.SetBindingMemberValue(AttachedMembers.UIView.ItemTemplateSelector, LabelItemTemplateSelector.Instance);
+                View.SetBindingMemberValue(AttachedMembers.UIView.CollectionViewManager, CollectionViewManager.Instance);
             }
         }
 

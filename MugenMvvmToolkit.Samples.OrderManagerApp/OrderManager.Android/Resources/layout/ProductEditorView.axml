@@ -6,37 +6,33 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Name"
-    android:textSize="10pt" />
-  <EditText
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:inputType="text"
-    pkg:Bind="Text Name, Mode=TwoWay, Validate=True" />
+  <TextInputLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="2px">
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:inputType="text"
+              android:hint="Name"
+              pkg:Bind="Text Name, Mode=TwoWay, Validate=True" />
+  </TextInputLayout>
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Price"
-    android:textSize="10pt" />
-  <EditText
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:inputType="numberDecimal"
-    pkg:Bind="Text Price, Mode=TwoWay, Validate=True" />
+  <TextInputLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="2px">
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:inputType="numberDecimal"
+              android:hint="Price"
+              pkg:Bind="Text Price, Mode=TwoWay, Validate=True" />
+  </TextInputLayout>
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Description"
-    android:textSize="10pt" />
-  <EditText
-    android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:inputType="textMultiLine"
-    pkg:Bind="Text Description, Mode=TwoWay, Validate=True" />
-
+  <TextInputLayout android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="2px">
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:inputType="textMultiLine"
+              android:hint="Description"
+              pkg:Bind="Text Description, Mode=TwoWay, Validate=True" />
+  </TextInputLayout>
 </LinearLayout>

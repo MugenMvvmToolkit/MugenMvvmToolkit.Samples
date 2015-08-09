@@ -1,4 +1,7 @@
 ﻿using System.Windows.Forms;
+using ApiExamples.ViewModels;
+using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Binding.Builders;
 
 namespace ApiExamples.Views
 {
@@ -8,6 +11,10 @@ namespace ApiExamples.Views
         {
             InitializeComponent();
             AutoSize = true;
+            using (var set = new BindingSet<ItemViewModel>())
+            {
+                set.Bind(label, () => l => l.Text).To(() => vm => vm.Name + " " + vm.Id);
+            }
         }
     }
 }

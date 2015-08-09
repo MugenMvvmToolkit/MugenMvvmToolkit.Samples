@@ -7,7 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WinPhone.Infrastructure;
 using OrderManager.Portable.ViewModels;
 using OrderManager.WindowsPhone.Resources;
 
@@ -57,7 +57,7 @@ namespace OrderManager.WindowsPhone
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-			var bootstrapper = new Bootstrapper<MainViewModel>(RootFrame, new AutofacContainer());
+            var bootstrapper = new Bootstrapper<MainViewModel>(RootFrame, new AutofacContainer());
             bootstrapper.Initialize();
         }
 

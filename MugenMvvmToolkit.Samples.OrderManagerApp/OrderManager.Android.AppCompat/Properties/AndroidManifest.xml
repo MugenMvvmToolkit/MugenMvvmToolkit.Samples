@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="OrderManager.Android.AppCompat" android:versionCode="1" android:versionName="1.0">
-	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21" />
-	<application android:label="OrderManager.Android.AppCompat" android:icon="@drawable/Icon" android:theme="@style/Theme.AppCompat"></application>
-</manifest>

@@ -31,8 +31,6 @@ namespace Binding.Touch
         /// </summary>
         protected override bool LoadInternal()
         {
-            BindingServiceProvider.ResourceResolver.AddObject("buttonTemplate", new ButtonItemTemplate());
-
             //Registering attached property
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
             memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UILabel, string>("TextExt",

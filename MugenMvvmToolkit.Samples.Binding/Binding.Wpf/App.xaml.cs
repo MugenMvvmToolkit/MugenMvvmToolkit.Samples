@@ -1,7 +1,7 @@
 using System.Windows;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.WPF.Infrastructure;
 
 namespace Binding.Wpf
 {

@@ -7,8 +7,8 @@ using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.WinRT;
 using NavigationMode = Windows.UI.Xaml.Navigation.NavigationMode;
 
 namespace Binding.UniversalApp
@@ -204,11 +204,11 @@ namespace Binding.UniversalApp
         }
 
 #if WINDOWS_PHONE_APP
-    /// <summary>
-    /// Invoked when the hardware back button is pressed. For Windows Phone only.
-    /// </summary>
-    /// <param name="sender">Instance that triggered the event.</param>
-    /// <param name="e">Event data describing the conditions that led to the event.</param>
+        /// <summary>
+        /// Invoked when the hardware back button is pressed. For Windows Phone only.
+        /// </summary>
+        /// <param name="sender">Instance that triggered the event.</param>
+        /// <param name="e">Event data describing the conditions that led to the event.</param>
         private void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
         {
             if (this.GoBackCommand.CanExecute(null))
@@ -345,7 +345,7 @@ namespace Binding.UniversalApp
             }
             else
             {
-                var state = (Dictionary<String, Object>) frameState[_pageKey];
+                var state = (Dictionary<String, Object>)frameState[_pageKey];
                 //NOTE loading state of view model.
                 PlatformExtensions.ApplicationStateManager.OnLoadState(Page, state, e);
                 // Pass the navigation parameter and preserved page state to the page, using

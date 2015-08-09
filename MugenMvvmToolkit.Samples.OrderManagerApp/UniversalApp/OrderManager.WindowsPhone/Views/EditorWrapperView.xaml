@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:OrderManager.Behaviors"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.MarkupExtensions"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     mc:Ignorable="d" markupExtensions:View.Bind="IsEnabled !IsBusy"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -14,7 +14,7 @@
         <behaviors:ProgressBehavior IsVisible="{Binding Path=IsBusy}"
                                     Text="{Binding Path=BusyMessage}" />
     </interactivity:Interaction.Behaviors>
-    
+
     <ContentPresenter Content="{Binding Path=ViewModel, Converter={StaticResource ViewModelToViewConverter}}"
                       Margin="12,0,12,0" />
 

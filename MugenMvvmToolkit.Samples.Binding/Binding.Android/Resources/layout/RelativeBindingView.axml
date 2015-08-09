@@ -12,32 +12,44 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical">
+      
       <SeekBar android:id="@+id/seekBar"
                android:layout_width="fill_parent"
                android:layout_height="wrap_content"
                android:tag="SeekBarView"
                android:max="1000" />
 
-      <!--using tag-->
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        pkg:Bind="Text $Element(SeekBarView).Progress, Mode=TwoWay" />
+      <TextInputLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Element value by tag name (SeekBarView)"
+                           pkg:Bind="Text $Element(SeekBarView).Progress, Mode=TwoWay" />
+      </TextInputLayout>
 
-      <!--using id-->
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        pkg:Bind="Text $Element(seekBar).Progress, Mode=TwoWay" />
+      <TextInputLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="Element value by id (seekBar)"
+                           pkg:Bind="Text $Element(seekBar).Progress, Mode=TwoWay" />
+      </TextInputLayout>
 
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="The current title:" />
-      <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        pkg:Bind="Text $Relative(Activity).Title, Mode=TwoWay" />
+
+      <TextInputLayout android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="2px">
+        <AppCompatEditText android:layout_height="wrap_content"
+                           android:layout_width="fill_parent"
+                           android:inputType="number"
+                           android:hint="The current title"
+                           pkg:Bind="Text $Relative(Activity).Title, Mode=TwoWay" />
+      </TextInputLayout>
+
       <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

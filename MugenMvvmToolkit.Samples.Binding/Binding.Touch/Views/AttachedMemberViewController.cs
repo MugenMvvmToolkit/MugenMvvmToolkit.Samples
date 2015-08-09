@@ -3,7 +3,7 @@ using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -43,8 +43,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 

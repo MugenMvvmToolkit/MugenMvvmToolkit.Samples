@@ -3,7 +3,7 @@ using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Views;
+using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace Binding.Touch.Views
@@ -43,8 +43,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .OneTime();
 
                 scrollView.AddSubview(textField);
@@ -63,8 +63,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .OneWay();
                 scrollView.AddSubview(textField);
 
@@ -81,8 +81,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .OneWay()
                     .WithDelay(1000, true);
                 scrollView.AddSubview(textField);
@@ -100,8 +100,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .OneWayToSource();
                 scrollView.AddSubview(textField);
 
@@ -119,8 +119,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 
@@ -138,8 +138,8 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Text)
+                set.Bind(textField, () => field => field.Text)
+                    .To(() => model => model.Text)
                     .TwoWay()
                     .WithDelay(1000);
                 scrollView.AddSubview(textField);

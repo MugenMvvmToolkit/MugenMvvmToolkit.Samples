@@ -47,7 +47,7 @@ namespace OrderManager.Tests.ViewModels.Products
 
             Assert.IsFalse(viewModel.IsValid);
             viewModel.Name = "test";
-            viewModel.ValidateAsync(editorViewModel => editorViewModel.Name);
+            viewModel.ValidateAsync(() => editorViewModel => editorViewModel.Name);
             Assert.IsTrue(viewModel.IsValid);
         }
 
@@ -65,7 +65,7 @@ namespace OrderManager.Tests.ViewModels.Products
 
             Assert.IsFalse(viewModel.IsValid);
             viewModel.Description = "test";
-            viewModel.ValidateAsync(editorViewModel => editorViewModel.Description);
+            viewModel.ValidateAsync(() => editorViewModel => editorViewModel.Description);
             Assert.IsTrue(viewModel.IsValid);
         }
 
@@ -84,7 +84,7 @@ namespace OrderManager.Tests.ViewModels.Products
 
             Assert.IsFalse(viewModel.IsValid);
             viewModel.Price = 1;
-            viewModel.ValidateAsync(editorViewModel => editorViewModel.Price);
+            viewModel.ValidateAsync(() => editorViewModel => editorViewModel.Price);
             Assert.IsTrue(viewModel.IsValid);
         }
 

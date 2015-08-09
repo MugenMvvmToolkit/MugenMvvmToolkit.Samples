@@ -103,5 +103,19 @@ namespace Navigation.Portable.ViewModels
         }
 
         #endregion
+
+        #region Overrides of ViewModelBase
+
+        /// <summary>
+        /// Occurs after the current view model is disposed, use for clear resource and event listeners.
+        /// </summary>
+        protected override void OnDispose(bool disposing)
+        {
+            if (disposing)
+                Tracer.Warn("Disposed " + _depth);
+            base.OnDispose(disposing);
+        }
+
+        #endregion
     }
 }
