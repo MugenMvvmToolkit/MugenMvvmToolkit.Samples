@@ -17,41 +17,41 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<BindingValidationViewModel>())
             {
-                set.Bind(propertyTb, () => box => box.Text)
+                set.Bind(propertyTb)
                     .To(() => vm => vm.Property)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
-                set.Bind(propertyLabel, () => label => label.Text)
+                set.Bind(propertyLabel)
                     .To(() => vm => BindingSyntaxEx.GetErrors(vm.Property).FirstOrDefault());
 
-                set.Bind(propertyEx1Tb, () => box => box.Text)
+                set.Bind(propertyEx1Tb)
                     .To(() => vm => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
-                set.Bind(propertyExt1Label, () => label => label.Text)
+                set.Bind(propertyExt1Label)
                     .To(() => vm => BindingSyntaxEx.Element<TextBox>("propertyEx1Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
 
-                set.Bind(propertyEx2Tb, () => box => box.Text)
+                set.Bind(propertyEx2Tb)
                     .To(() => vm => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnExceptions();
-                set.Bind(propertyExt2Label, () => label => label.Text)
+                set.Bind(propertyExt2Label)
                     .To(() => vm => BindingSyntaxEx.Element<TextBox>("propertyEx2Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
 
 
-                set.Bind(propertyEx3Tb, () => box => box.Text)
+                set.Bind(propertyEx3Tb)
                     .To(() => vm => vm.PropertyWithException)
                     .TwoWay()
                     .Validate(); //Validate is equivalent to ValidatesOnNotifyDataErrors and ValidatesOnExceptions
-                set.Bind(propertyExt3Label, () => label => label.Text)
+                set.Bind(propertyExt3Label)
                     .To(() => vm => BindingSyntaxEx.GetErrors(vm.PropertyWithException).FirstOrDefault());
 
-                set.Bind(addErrorButton, "Click").To(() => vm => vm.AddErrorCommand);
-                set.Bind(clearErrorButton, "Click").To(() => vm => vm.RemoveErrorCommand);
+                set.Bind(addErrorButton).To(() => vm => vm.AddErrorCommand);
+                set.Bind(clearErrorButton).To(() => vm => vm.RemoveErrorCommand);
 
                 set.Bind(validationSumHeaderLabel, () => l => l.Visible)
                     .To(() => vm => BindingSyntaxEx.GetErrors().Any());
-                set.Bind(validationSumLabel, () => l => l.Text)
+                set.Bind(validationSumLabel)
                     .To(() => vm => string.Join(Environment.NewLine, BindingSyntaxEx.GetErrors()));
             }
         }

@@ -59,7 +59,7 @@ namespace OrderManager.Portable.ViewModels
 
         protected override void OnClosed(object parameter)
         {
-            if (!OperationResult.GetValueOrDefault() && ViewModel.IsEntityInitialized)
+            if (!OperationResult.GetValueOrDefault() && ViewModel != null && ViewModel.IsEntityInitialized)
                 ViewModel.CancelChanges();
         }
 

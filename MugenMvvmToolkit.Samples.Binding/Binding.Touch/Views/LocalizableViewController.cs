@@ -1,9 +1,12 @@
-﻿using Binding.Portable.ViewModels;
+﻿using Binding.Portable.Infrastructure;
+using Binding.Portable.Resources;
+using Binding.Portable.ViewModels;
 using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
 using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
@@ -38,7 +41,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text $i18n.AddText");
+                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
@@ -47,7 +50,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text $i18n.EditText");
+                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
@@ -56,7 +59,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.BindFromExpression(label, "Text $i18n.DeleteText");
+                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
                 scrollView.AddSubview(label);
 
                 var textField = new UITextField(new CGRect(20, 75, View.Frame.Width - 40, 30))
@@ -65,21 +68,21 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                     ShouldChangeCharacters = (field, range, replacementString) => false
                 };
-                set.Bind(textField, () => field => field.Text).To(() => model => model.SelectedCulture);
+                set.Bind(textField).To(() => model => model.SelectedCulture);
                 scrollView.AddSubview(textField);
 
-                var pickerView = new UIPickerView {ShowSelectionIndicator = true};
+                var pickerView = new UIPickerView { ShowSelectionIndicator = true };
                 set.Bind(pickerView, AttachedMemberConstants.ItemsSource)
                     .To(() => model => model.Cultures);
                 set.Bind(pickerView, AttachedMemberConstants.SelectedItem)
                     .To(() => model => model.SelectedCulture)
                     .TwoWay();
 
-                var toolbar = new UIToolbar {BarStyle = UIBarStyle.Black, Translucent = true};
+                var toolbar = new UIToolbar { BarStyle = UIBarStyle.Black, Translucent = true };
                 toolbar.SizeToFit();
                 var doneButton = new UIBarButtonItem("Done", UIBarButtonItemStyle.Done,
                     (s, e) => textField.ResignFirstResponder());
-                toolbar.SetItems(new[] {doneButton}, true);
+                toolbar.SetItems(new[] { doneButton }, true);
                 textField.SetInputViewEx(pickerView);
                 textField.InputAccessoryView = toolbar;
             }

@@ -13,7 +13,7 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<AttachedMemberViewModel>())
             {
-                set.Bind(textBox, () => box => box.Text).To(() => model => model.Text).TwoWay();
+                set.Bind(textBox).To(() => model => model.Text).TwoWay();
                 set.Bind(autoPropLabel, "TextExt").To(() => vm => vm.Text);
                 set.Bind(customPropLabel, "FormattedText").To(() => vm => vm.Text);
             }

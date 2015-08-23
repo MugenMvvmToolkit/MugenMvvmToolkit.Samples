@@ -17,19 +17,19 @@ namespace OrderManager.WinForms.Views.Products
                    .To(() => m => m.GridViewModel.ItemsSource);
                 set.Bind(dataGridView1, AttachedMembers.DataGridView.SelectedItem)
                    .To(() => m => m.GridViewModel.SelectedItem);
-                set.Bind(toolStripTextBox1, () => box => box.Text)
+                set.Bind(toolStripTextBox1)
                    .To(() => m => m.FilterText)
                    .TwoWay();
 
-                set.Bind(saveToolStripButton, "Click")
+                set.Bind(saveToolStripButton)
                    .To(() => m => m.SaveChangesCommand);
-                set.Bind(addToolStripButton, "Click")
+                set.Bind(addToolStripButton)
                    .To(() => m => m.AddProductCommand);
-                set.Bind(editToolStripButton, "Click")
+                set.Bind(editToolStripButton)
                    .To(() => m => m.EditProductCommand);
-                set.Bind(deleteToolStripButton, "Click")
+                set.Bind(deleteToolStripButton)
                    .To(() => m => m.RemoveProductCommand);
-                set.Bind(closeToolStripButton, "Click")
+                set.Bind(closeToolStripButton)
                    .To(() => m => m.CloseCommand);
             }
             dataGridView1.AutoGenerateColumns = false;

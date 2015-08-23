@@ -45,7 +45,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text).To(() => vm => BindingSyntaxEx.Resource<object>("obj"));
+                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource<object>("obj"));
                 scrollView.AddSubview(label);
 
 

@@ -6,6 +6,7 @@ using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Extensions.Syntax;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.iOS.Binding;
 using UIKit;
 
 namespace ApiExamples.Templates
@@ -37,8 +38,9 @@ namespace ApiExamples.Templates
             BindingSet<StringElement, Tuple<string, ViewModelCommandParameter>> bindingSet)
         {
             bindingSet.Bind(() => element => element.Caption).To(() => tuple => tuple.Item1);
-            bindingSet.Bind(AttachedMemberConstants.CommandParameter).To(() => tuple => tuple.Item2);
-            bindingSet.Bind("Tapped").To(() => model => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand);
+            bindingSet.Bind(AttachedMembers.StringElement.TappedEvent)
+                .To(() => model => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
+                .WithCommandParameter(() => tuple => tuple.Item2);
         }
 
         #endregion

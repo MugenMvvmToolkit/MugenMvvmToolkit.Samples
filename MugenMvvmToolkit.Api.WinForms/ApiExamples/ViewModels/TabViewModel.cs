@@ -28,7 +28,7 @@ namespace ApiExamples.ViewModels
         private void Add(object o)
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
-            itemViewModel.Name = "Dynamic tab";
+            itemViewModel.Name = "Dynamic item";
             AddViewModel(itemViewModel);
             SelectedItem = itemViewModel;
         }

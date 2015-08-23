@@ -14,10 +14,10 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<DynamicObjectViewModel>())
             {
-                set.Bind(dynamicTb, () => t => t.Text)
+                set.Bind(dynamicTb)
                     .To(() => vm => vm.DynamicModel.Member<object>("DynamicProperty"))
                     .TwoWay();
-                set.Bind(dynamicLabel, () => l => l.Text)
+                set.Bind(dynamicLabel)
                     .To(() => vm => vm.DynamicModel.Member<object>("DynamicProperty"));
                 set.BindFromExpression(methodLabel, "Text DynamicModel.DynamicMethod(DynamicModel.DynamicProperty)");
                 set.BindFromExpression(indexLabel, "Text DynamicModel[DynamicModel.DynamicProperty]");

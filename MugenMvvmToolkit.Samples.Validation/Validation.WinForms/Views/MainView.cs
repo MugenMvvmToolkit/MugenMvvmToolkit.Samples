@@ -12,9 +12,9 @@ namespace Validation.WinForms.Views
             InitializeComponent();
             using (var set = new BindingSet<MainViewModel>())
             {
-                set.Bind(dataAnnotButton, "Click")
+                set.Bind(dataAnnotButton)
                    .To(() => m => m.ShowAnnotationCommand);
-                set.Bind(validatorButton, "Click")
+                set.Bind(validatorButton)
                    .To(() => m => m.ShowUserEditorCommand);
             }
         }

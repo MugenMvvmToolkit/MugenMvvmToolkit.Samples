@@ -34,9 +34,9 @@ namespace Binding.WinForms.Templates
         protected override void Initialize(Button template, BindingSet<Button, Tuple<string, Type>> bindingSet)
         {
             bindingSet.Bind(() => button => button.Text).To(() => tuple => tuple.Item1).OneTime();
-            bindingSet.Bind("Click")
-                .To(() => t => BindingSyntaxEx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)                
-                .WithCommandParameter(() => tuple => tuple.Item2);
+            bindingSet.Bind()
+                      .To(() => t => BindingSyntaxEx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)
+                      .WithCommandParameter(() => tuple => tuple.Item2);
         }
 
         #endregion

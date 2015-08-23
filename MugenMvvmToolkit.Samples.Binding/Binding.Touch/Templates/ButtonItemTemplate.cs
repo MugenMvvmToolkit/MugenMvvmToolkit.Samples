@@ -5,6 +5,7 @@ using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Extensions.Syntax;
 using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.iOS.Binding;
 using UIKit;
 
 namespace Binding.Touch.Templates
@@ -36,7 +37,7 @@ namespace Binding.Touch.Templates
             BindingSet<StringElement, Tuple<string, Type>> bindingSet)
         {
             bindingSet.Bind(() => e => e.Caption).To(() => t => t.Item1).OneTime();
-            bindingSet.Bind("Tapped")
+            bindingSet.Bind(AttachedMembers.StringElement.TappedEvent)
                 .To(() => vm => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
                 .WithCommandParameter(() => tuple => tuple.Item2);
         }

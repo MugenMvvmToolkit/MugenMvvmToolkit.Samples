@@ -13,23 +13,23 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<BindingModeViewModel>())
             {
-                set.Bind(oneTimeTb, () => box => box.Text)
+                set.Bind(oneTimeTb)
                     .To(() => vm => vm.Text)
                     .OneTime();
-                set.Bind(oneWayTb, () => box => box.Text)
+                set.Bind(oneWayTb)
                     .To(() => vm => vm.Text)
                     .OneWay();
-                set.Bind(oneWayDelayTb, () => box => box.Text)
+                set.Bind(oneWayDelayTb)
                     .To(() => vm => vm.Text)
                     .OneWay()
                     .WithDelay(1000, true);
-                set.Bind(oneWaySrcTb, () => box => box.Text)
+                set.Bind(oneWaySrcTb)
                     .To(() => vm => vm.Text)
                     .OneWayToSource();
-                set.Bind(twoWayTb, () => box => box.Text)
+                set.Bind(twoWayTb)
                     .To(() => vm => vm.Text)
                     .TwoWay();
-                set.Bind(twoWayDelayTb, () => box => box.Text)
+                set.Bind(twoWayDelayTb)
                     .To(() => vm => vm.Text)
                     .TwoWay()
                     .WithDelay(1000);

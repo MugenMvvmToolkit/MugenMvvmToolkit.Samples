@@ -16,7 +16,6 @@ namespace OrderManager.WinForms.Templates
 
         private WrapperContentManager()
         {
-
         }
 
         #endregion

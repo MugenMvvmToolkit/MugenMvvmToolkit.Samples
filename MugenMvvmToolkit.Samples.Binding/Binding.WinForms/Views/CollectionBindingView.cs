@@ -24,12 +24,12 @@ namespace Binding.WinForms.Views
                     .To(() => vm => vm.GridViewModel.SelectedItem)
                     .TwoWay();
 
-                set.Bind(filterTb, () => tb => tb.Text)
+                set.Bind(filterTb)
                     .To(() => vm => vm.FilterText)
                     .TwoWay();
 
-                set.Bind(addButton, "Click").To(() => vm => vm.AddCommand);
-                set.Bind(removeButton, "Click").To(() => vm => vm.RemoveCommand);
+                set.Bind(addButton).To(() => vm => vm.AddCommand);
+                set.Bind(removeButton).To(() => vm => vm.RemoveCommand);
             }
         }
     }

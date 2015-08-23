@@ -25,9 +25,9 @@ namespace OrderManager.WinForms.Views
                 set.Bind(AttachedMembers.Control.Content)
                    .To(() => m => m.ViewModel);
 
-                set.Bind(saveButton, "Click")
+                set.Bind(saveButton)
                    .To(() => m => m.ApplyCommand);
-                set.Bind(closeButton, "Click")
+                set.Bind(closeButton)
                    .To(() => m => m.CloseCommand);
             }
         }

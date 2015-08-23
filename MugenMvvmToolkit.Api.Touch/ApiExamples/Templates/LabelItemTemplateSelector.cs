@@ -33,7 +33,7 @@ namespace ApiExamples.Templates
 
         protected override void Initialize(UILabel template, BindingSet<UILabel, ItemViewModel> bindingSet)
         {
-            bindingSet.Bind(() => l => l.Text).To(() => m => "Item " + m.Id);
+            bindingSet.Bind().To(() => m => "Item " + m.Id);
         }
 
         #endregion

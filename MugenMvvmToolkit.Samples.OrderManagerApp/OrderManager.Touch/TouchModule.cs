@@ -47,8 +47,8 @@ namespace OrderManager.Touch
 
 #if !XAMARINFORMS
             IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UIView, bool>("IsBusy", IsBusyChanged));
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UIView, object>("BusyMessage", BusyMessageChanged));
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty(AttachedMembersEx.UIView.IsBusy, IsBusyChanged));
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty(AttachedMembersEx.UIView.BusyMessage, BusyMessageChanged));
 #endif
             return true;
         }

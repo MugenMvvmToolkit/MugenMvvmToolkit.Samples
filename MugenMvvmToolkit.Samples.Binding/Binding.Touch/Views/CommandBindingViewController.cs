@@ -40,7 +40,7 @@ namespace Binding.Touch.Views
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
                 };
-                set.Bind(uiSwitch, () => @switch => @switch.On)
+                set.Bind(uiSwitch)
                     .To(() => model => model.CanExecuteCommand)
                     .TwoWay();
                 scrollView.AddSubview(uiSwitch);
@@ -58,7 +58,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 55, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.Command).WithCommandParameter("1");
+                set.Bind(button).To(() => model => model.Command).WithCommandParameter("1");
                 scrollView.AddSubview(button);
 
 
@@ -74,7 +74,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 110, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.Command).ToggleEnabledState(false).WithCommandParameter("2");
+                set.Bind(button).To(() => model => model.Command).ToggleEnabledState(false).WithCommandParameter("2");
                 scrollView.AddSubview(button);
 
                 label = new UILabel(new CGRect(20, 140, View.Frame.Width - 40, 25))

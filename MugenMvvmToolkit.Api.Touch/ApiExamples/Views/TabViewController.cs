@@ -22,11 +22,11 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.RemoveCommand))
                 };
 
                 set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);

@@ -11,7 +11,7 @@ using UIKit;
 namespace ApiExamples.Views
 {
     [Register("TabTemplateViewController")]
-    [ViewModel(typeof(TabViewModel), Constants.TabTemplateView)]
+    [ViewModel(typeof (TabViewModel), Constants.TabTemplateView)]
     public class TabTemplateViewController : MvvmTabBarController
     {
         #region Overrides of MvvmTabBarController
@@ -26,19 +26,20 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item, "Clicked").To(() => model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.RemoveCommand))
                 };
 
+                this.SetBindingMemberValue(AttachedMembers.UITabBarController.ItemTemplateSelector,
+                    TabTemplateSelector.Instance);
                 set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
                 set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
                 set.Bind(this, () => c => c.Title)
-                    .To(() => m => ((ItemViewModel)m.SelectedItem).Name + " " + ((ItemViewModel)m.SelectedItem).Id)
+                    .To(() => m => ((ItemViewModel) m.SelectedItem).Name + " " + ((ItemViewModel) m.SelectedItem).Id)
                     .WithFallback("Nothing selected");
-                this.SetBindingMemberValue(AttachedMembers.UITabBarController.ItemTemplateSelector, TabTemplateSelector.Instance);
             }
         }
 

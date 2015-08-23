@@ -45,7 +45,7 @@ namespace ApiExamples.Templates
         protected override void InitializeTemplate(UICollectionView container, CollectionViewCell cell,
             BindingSet<CollectionViewCell, TableItemModel> bindingSet)
         {
-            bindingSet.Bind(cell.Label, () => l => l.Text)
+            bindingSet.Bind(cell.Label)
                 .To(() => m => string.Format("Name {0}, Selected: {1}, Highlighted: {2}", m.Name, m.IsSelected, m.IsHighlighted));
             bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
             bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).TwoWay();

@@ -67,8 +67,8 @@ namespace ApiExamples.Templates
             bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
             bindingSet.Bind(AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
                       .To(() => m => "Delete " + m.Name);
-            bindingSet.Bind(() => label => label.TextLabel.Text).To(() => model => model.Name);
-            bindingSet.Bind(template.DetailTextLabel, () => l => l.Text)
+            bindingSet.Bind(template.TextLabel).To(() => model => model.Name);
+            bindingSet.Bind(template.DetailTextLabel)
                 .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
         }
 

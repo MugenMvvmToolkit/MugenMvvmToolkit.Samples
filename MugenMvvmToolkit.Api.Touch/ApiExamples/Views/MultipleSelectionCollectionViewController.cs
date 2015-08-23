@@ -35,7 +35,7 @@ namespace ApiExamples.Views
             using (var set = new BindingSet<TableViewModel>())
             {
                 NavigationItem.RightBarButtonItem = new UIBarButtonItem("Invert selection", UIBarButtonItemStyle.Plain, null);
-                set.Bind(NavigationItem.RightBarButtonItem, "Clicked").To(() => model => model.InvertSelectionCommand);
+                set.Bind(NavigationItem.RightBarButtonItem).To(() => model => model.InvertSelectionCommand);
                 set.Bind(CollectionView, AttachedMemberConstants.ItemsSource)
                     .To(() => model => model.GridViewModel.ItemsSource);
                 CollectionView.SetBindingMemberValue(AttachedMembers.UICollectionView.ItemTemplateSelector, CollectionViewCellTemplateSelector.Instance);

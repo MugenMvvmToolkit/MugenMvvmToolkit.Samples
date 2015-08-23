@@ -15,16 +15,16 @@ namespace Validation.WinForms.Views
             {
                 set.Bind(validatingLabel, () => l => l.Visible)
                    .To(() => m => m.UserEditorViewModel.IsLoginValidating);
-                set.Bind(nameTextBox, () => t => t.Text)
+                set.Bind(nameTextBox)
                    .To(() => m => m.UserEditorViewModel.Name)
                    .TwoWay()
                    .Validate();
-                set.Bind(loginTextBox, () => t => t.Text)
+                set.Bind(loginTextBox)
                    .To(() => m => m.UserEditorViewModel.Login)
                    .TwoWay()
                    .Validate()
                    .WithDelay(400);
-                set.Bind(emailTextBox, () => t => t.Text)
+                set.Bind(emailTextBox)
                    .To(() => m => m.UserEditorViewModel.Email)
                    .TwoWay()
                    .Validate();
@@ -34,9 +34,9 @@ namespace Validation.WinForms.Views
                 set.Bind(validLabel, () => t => t.Visible)
                    .To(() => m => m.UserEditorViewModel.IsValid);
 
-                set.Bind(addButton, "Click")
+                set.Bind(addButton)
                    .To(() => m => m.AddUserCommand);
-                set.Bind(removeButton, "Click")
+                set.Bind(removeButton)
                    .To(() => m => m.RemoveUserCommand);
 
                 set.Bind(userDataGridView, AttachedMembers.Object.ItemsSource)

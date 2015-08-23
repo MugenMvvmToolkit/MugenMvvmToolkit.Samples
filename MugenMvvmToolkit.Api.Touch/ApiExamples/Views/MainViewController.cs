@@ -31,8 +31,7 @@ namespace ApiExamples.Views
                 var section = new Section("Examples");
                 root.Add(section);
                 bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => model => model.Items);
-                section.SetBindingMemberValue(AttachedMembers.Element.ItemTemplateSelector,
-                    ButtonItemTemplateSelector.Instance);
+                section.SetBindingMemberValue(AttachedMembers.Element.ItemTemplateSelector, ButtonItemTemplateSelector.Instance);
                 return root;
             }
         }

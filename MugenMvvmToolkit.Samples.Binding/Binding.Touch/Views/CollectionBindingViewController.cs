@@ -6,6 +6,7 @@ using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS.Binding;
 using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
@@ -33,11 +34,11 @@ namespace Binding.Touch.Views
                     NavigationItem.RightBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
                 };
                 var addItem = new UIBarButtonItem { Title = "Add" };
-                set.Bind(addItem, "Clicked").To(() => model => model.AddCommand);
+                set.Bind(addItem).To(() => model => model.AddCommand);
                 NavigationItem.RightBarButtonItems = new[] { editItem, addItem };
 
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar, () => bar => bar.Text).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
@@ -58,14 +59,14 @@ namespace Binding.Touch.Views
 
                 using (var set = new BindingSet<CollectionItemModel>())
                 {
-                    set.Bind(cell, "DeleteClick")
+                    set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
                         .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<CollectionBindingViewModel>().RemoveCommand)
                         .WithCommandParameter(() => model => BindingSyntaxEx.Self<object>().DataContext<object>())
                         .ToggleEnabledState(false);
-                    set.Bind(cell, "TitleForDeleteConfirmation")
+                    set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
                         .To(() => model => string.Format("Delete {0} {1}", model.Name, model.Id));
-                    set.Bind(cell.TextLabel, () => label => label.Text).To(() => model => model.Name);
-                    set.Bind(cell.DetailTextLabel, () => label => label.Text)
+                    set.Bind(cell.TextLabel).To(() => model => model.Name);
+                    set.Bind(cell.DetailTextLabel)
                         .To(() => model => "Id " + model.Id);
                 }
             });

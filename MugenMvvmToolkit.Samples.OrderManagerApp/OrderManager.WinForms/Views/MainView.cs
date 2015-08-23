@@ -22,11 +22,11 @@ namespace OrderManager.WinForms.Views
                    .To(() => m => m.SelectedItem)
                    .TwoWay();
 
-                set.Bind(ordersToolStripMenuItem, "Click")
+                set.Bind(ordersToolStripMenuItem)
                    .To(() => m => m.OpenOrdersCommand);
-                set.Bind(productsToolStripMenuItem, "Click")
+                set.Bind(productsToolStripMenuItem)
                    .To(() => m => m.OpenProductsCommand);
-                set.Bind(exitToolStripMenuItem, "Click")
+                set.Bind(exitToolStripMenuItem)
                    .To(() => m => m.CloseCommand);
             }
         }

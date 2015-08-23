@@ -13,7 +13,7 @@ namespace ApiExamples.Views
             AutoSize = true;
             using (var set = new BindingSet<ItemViewModel>())
             {
-                set.Bind(label, () => l => l.Text).To(() => vm => vm.Name + " " + vm.Id);
+                set.Bind(label).To(() => vm => vm.Name + " " + vm.Id);
             }
         }
     }

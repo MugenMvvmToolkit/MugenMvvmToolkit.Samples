@@ -75,7 +75,7 @@ namespace Binding.Portable.ViewModels
 
         private async void Show(Type type)
         {
-            if (type == typeof(object))
+            if (type == typeof (object))
             {
                 GC.Collect();
                 GC.WaitForPendingFinalizers();

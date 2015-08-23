@@ -18,19 +18,19 @@ namespace OrderManager.WinForms.Views.Orders
                 set.Bind(dataGridView1, AttachedMembers.DataGridView.SelectedItem)
                    .To(() => m => m.GridViewModel.SelectedItem)
                    .TwoWay();
-                set.Bind(filterTextBox, () => t => t.Text)
+                set.Bind(filterTextBox)
                    .To(() => m => m.FilterText)
                    .TwoWay();
 
-                set.Bind(nameTextBox, () => t => t.Text)
+                set.Bind(nameTextBox)
                    .To(() => m => m.Name)
                    .TwoWay()
                    .Validate();
-                set.Bind(numberTextBox, () => t => t.Text)
+                set.Bind(numberTextBox)
                    .To(() => m => m.Number)
                    .TwoWay()
                    .Validate();
-                set.Bind(dateTimePicker1, () => t => t.Value)
+                set.Bind(dateTimePicker1)
                    .To(() => m => m.CreationDate)
                    .TwoWay()
                    .Validate();

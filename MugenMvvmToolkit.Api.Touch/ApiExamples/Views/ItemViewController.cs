@@ -26,14 +26,14 @@ namespace ApiExamples.Views
                 {
                     TextAlignment = UITextAlignment.Center
                 };
-                set.Bind(label, () => c => c.Text)
+                set.Bind(label)
                    .To(() => vm => vm.Name + " " + vm.Id);
                 View.AddSubview(label);
 
                 UIButton button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.Frame = new CGRect(0, 100, View.Bounds.Width, 30);
                 button.SetTitle("Close view", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.CloseCommand);
+                set.Bind(button).To(() => model => model.CloseCommand);
                 View.AddSubview(button);
             }
         }

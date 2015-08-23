@@ -5,6 +5,7 @@ using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.iOS.Views;
+using Validation.Portable.Models;
 using Validation.Portable.ViewModels;
 
 namespace Validation.Touch.Views
@@ -28,8 +29,8 @@ namespace Validation.Touch.Views
                     Placeholder = "Name",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.UserEditorViewModel.Name)
+                set.Bind(textField)
+                    .To(() => model => model.UserEditorViewModel.Name)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -49,13 +50,14 @@ namespace Validation.Touch.Views
                     Placeholder = "Login",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.UserEditorViewModel.Login)
+                set.Bind(textField)
+                    .To(() => model => model.UserEditorViewModel.Login)
                     .TwoWay()
                     .WithDelay(400)
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
-                set.BindFromExpression(textField, "LeftViewMode UserEditorViewModel.IsLoginValidating ? $UITextFieldViewMode.Always : $UITextFieldViewMode.Never");
+                set.Bind(textField, () => v => v.LeftViewMode)
+                    .To(() => vm => vm.UserEditorViewModel.IsLoginValidating ? UITextFieldViewMode.Always : UITextFieldViewMode.Never);
                 textField.LeftView = label;
                 View.AddSubview(textField);
 
@@ -65,8 +67,8 @@ namespace Validation.Touch.Views
                     Placeholder = "Email",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.UserEditorViewModel.Email)
+                set.Bind(textField)
+                    .To(() => model => model.UserEditorViewModel.Email)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -76,14 +78,14 @@ namespace Validation.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Add", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.AddUserCommand);
+                set.Bind(button).To(() => model => model.AddUserCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(View.Frame.Width / 2 - 20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Remove", UIControlState.Normal);
-                set.Bind(button, "Click").To(model => model.RemoveUserCommand);
+                set.Bind(button).To(() => model => model.RemoveUserCommand);
                 View.AddSubview(button);
 
 
@@ -95,12 +97,14 @@ namespace Validation.Touch.Views
                 tableView.SetCellBind(cell =>
                 {
                     cell.TextLabel.AdjustsFontSizeToFitWidth = true;
-                    cell.TextLabel.SetBindings("Text $Format('Name: {0} Login: {1} Email: {2}', Name, Login, Email)");
+                    cell.TextLabel.Bind()
+                        .To<UserModel>(() => m => string.Format("Name: {0} Login: {1} Email: {2}", m.Name, m.Login, m.Email))
+                        .Build();
                 });
                 set.Bind(tableView, AttachedMemberConstants.ItemsSource)
-                    .To(model => model.UserGridViewModel.ItemsSource);
+                    .To(() => model => model.UserGridViewModel.ItemsSource);
                 set.Bind(tableView, AttachedMemberConstants.SelectedItem)
-                    .To(model => model.UserGridViewModel.SelectedItem)
+                    .To(() => model => model.UserGridViewModel.SelectedItem)
                     .TwoWay();
                 View.AddSubview(tableView);
             }

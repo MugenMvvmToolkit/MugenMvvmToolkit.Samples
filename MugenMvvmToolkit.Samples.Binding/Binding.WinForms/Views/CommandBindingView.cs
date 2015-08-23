@@ -14,13 +14,13 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<CommandBindingViewModel>())
             {
-                set.Bind(canExecuteCheckBox, () => box => box.Checked)
+                set.Bind(canExecuteCheckBox)
                     .To(() => vm => vm.CanExecuteCommand)
                     .TwoWay();
-                set.Bind(button1, "Click")
+                set.Bind(button1)
                     .To(() => vm => vm.Command)
                     .WithCommandParameter("1");
-                set.Bind(button2, "Click")
+                set.Bind(button2)
                     .To(() => vm => vm.Command)
                     .ToggleEnabledState(false)
                     .WithCommandParameter("2");

@@ -20,12 +20,12 @@ namespace OrderManager.Touch.Views
 
             using (var set = new BindingSet<EditorWrapperViewModel<IEditableViewModel>>())
             {
-                set.Bind(View, "IsBusy").To(() => model => model.IsBusy);
-                set.Bind(View, "BusyMessage").To(() => model => model.BusyMessage);
+                set.Bind(View, AttachedMembersEx.UIView.IsBusy).To(() => model => model.IsBusy);
+                set.Bind(View, AttachedMembersEx.UIView.BusyMessage).To(() => model => model.BusyMessage);
                 set.Bind(this, () => controller => controller.Title).To(() => model => model.DisplayName);
 
                 var item = new UIBarButtonItem("Save", UIBarButtonItemStyle.Done, null);
-                set.Bind(item, "Clicked").To(() => model => model.ApplyCommand);
+                set.Bind(item).To(() => model => model.ApplyCommand);
                 NavigationItem.RightBarButtonItem = item;
 
                 set.Bind(this, () => controller => controller.Title).To(() => model => model.DisplayName);

@@ -27,13 +27,13 @@ namespace ApiExamples.Views
                 UIButton button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.Frame = new CGRect(0, 70, View.Bounds.Width, 30);
                 button.SetTitle("Navigate", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.NavigateCommand);
+                set.Bind(button).To(() => model => model.NavigateCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.Frame = new CGRect(0, View.Bounds.Height - 50, View.Bounds.Width, 30);
                 button.SetTitle("Close modal dialog", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.CloseCommand);
+                set.Bind(button).To(() => model => model.CloseCommand);
                 View.AddSubview(button);
             }
         }

@@ -34,7 +34,7 @@ namespace Navigation.Touch.Views
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 70, View.Frame.Width, 30);
                 button.SetTitle("Close from view model (First view)", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.CloseCommand);
+                set.Bind(button).To(() => model => model.CloseCommand);
                 View.AddSubview(button);
             }
         }

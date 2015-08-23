@@ -43,7 +43,7 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To("DynamicModel.Text")
                     .TwoWay();
                 scrollView.AddSubview(textField);
@@ -62,7 +62,7 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     TextColor = UIColor.Green
                 };
-                set.Bind(label, () => field => field.Text).To("DynamicModel.Text");
+                set.Bind(label).To("DynamicModel.Text");
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 105, View.Frame.Width - 40, 25))

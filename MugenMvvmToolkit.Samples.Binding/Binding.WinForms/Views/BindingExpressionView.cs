@@ -16,16 +16,16 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<BindingExpressionViewModel>())
             {
-                set.Bind(textTb, () => box => box.Text).To(() => model => model.Text).TwoWay();
-                set.Bind(linqCountLabel, () => label => label.Text)
+                set.Bind(textTb).To(() => model => model.Text).TwoWay();
+                set.Bind(linqCountLabel)
                    .To(() => model => model.Text.OfType<char>().Count(x => x == 'a'));
-                set.Bind(extMethodLabel, () => label => label.Text)
+                set.Bind(extMethodLabel)
                    .To(() => model => model.Text.ExtensionMethod(model.Text.Count()));
-                set.Bind(linqSecondCharLabel, () => label => label.Text)
+                set.Bind(linqSecondCharLabel)
                    .To(() => model => model.Text.OfType<char>().Skip(1).FirstOrDefault());
-                set.Bind(conditionLabel, () => label => label.Text)
+                set.Bind(conditionLabel)
                    .To(() => model => string.IsNullOrEmpty(model.Text) ? "String is empty" : "String is not empty");
-                set.Bind(arithmeticLabel, () => label => label.Text)
+                set.Bind(arithmeticLabel)
                    .To(() => model => model.Text.Count() + 100 + model.Text.GetHashCode());
                 set.BindFromExpression(nullConditionalLabel, "Text NullableText?.Trim()?.Length ?? -1");
             }

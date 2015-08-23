@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using Binding.Portable.Infrastructure;
+using Binding.Portable.Resources;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -20,12 +21,12 @@ namespace Binding.WinForms.Views
                 set.Bind(cultureComboBox, AttachedMemberConstants.SelectedItem)
                    .To(() => vm => vm.SelectedCulture)
                    .TwoWay();
-                set.Bind(addLabel, () => label => label.Text)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName).Member<string>("AddText"));
-                set.Bind(editLabel, () => label => label.Text)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName).Member<string>("EditText"));
-                set.Bind(delLabel, () => label => label.Text)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName).Member<string>("DeleteText"));
+                set.Bind(addLabel)
+                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
+                set.Bind(editLabel)
+                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
+                set.Bind(delLabel)
+                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
             }
         }
     }

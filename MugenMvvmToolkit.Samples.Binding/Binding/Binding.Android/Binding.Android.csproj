@@ -56,20 +56,20 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.0.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.1.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.1.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.1.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.Android, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.Android, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.1.0\lib\MonoAndroid10\MugenMvvmToolkit.Xamarin.Forms.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

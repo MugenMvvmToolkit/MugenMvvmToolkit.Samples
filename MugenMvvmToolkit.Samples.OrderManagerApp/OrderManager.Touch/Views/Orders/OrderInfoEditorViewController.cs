@@ -44,7 +44,7 @@ namespace OrderManager.Touch.Views.Orders
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Name)
                     .TwoWay()
                     .Validate();
@@ -64,7 +64,7 @@ namespace OrderManager.Touch.Views.Orders
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Number)
                     .TwoWay()
                     .Validate();

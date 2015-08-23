@@ -26,8 +26,8 @@ namespace Validation.Touch.Views
                     Placeholder = "Name",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.NameInVm)
+                set.Bind(textField)
+                    .To(() => model => model.NameInVm)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -44,8 +44,8 @@ namespace Validation.Touch.Views
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
                 };
-                set.Bind(uiSwitch, @switch => @switch.On)
-                    .To(model => model.DisableDescriptionValidation)
+                set.Bind(uiSwitch)
+                    .To(() => model => model.DisableDescriptionValidation)
                     .TwoWay();
                 View.AddSubview(uiSwitch);
 
@@ -56,8 +56,8 @@ namespace Validation.Touch.Views
                     Placeholder = "Description",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.Description)
+                set.Bind(textField)
+                    .To(() => model => model.Description)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -69,8 +69,8 @@ namespace Validation.Touch.Views
                     Placeholder = "Custom Description error",
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, field => field.Text)
-                    .To(model => model.CustomError)
+                set.Bind(textField)
+                    .To(() => model => model.CustomError)
                     .TwoWay();
                 View.AddSubview(textField);
 

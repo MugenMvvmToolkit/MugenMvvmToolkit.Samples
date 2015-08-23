@@ -43,7 +43,7 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Name)
                     .TwoWay()
                     .Validate();
@@ -63,7 +63,7 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Price)
                     .TwoWay()
                     .Validate();
@@ -82,7 +82,7 @@ namespace OrderManager.Touch.Views.Products
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Description)
                     .TwoWay()
                     .Validate();

@@ -156,23 +156,23 @@
       <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="MugenMvvmToolkit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.4.0.0\lib\win81\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\..\packages\MugenMvvmToolkit.4.1.0\lib\win81\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.AutofacContainer.4.0.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.AutofacContainer.4.1.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.4.0.0\lib\win81\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.4.1.0\lib\win81\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.WinRT, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.4.0.0\lib\win81\MugenMvvmToolkit.WinRT.dll</HintPath>
+      <HintPath>..\..\packages\MugenMvvmToolkit.4.1.0\lib\win81\MugenMvvmToolkit.WinRT.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.WinRT.Binding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.4.0.0\lib\win81\MugenMvvmToolkit.WinRT.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.4.1.0\lib\win81\MugenMvvmToolkit.WinRT.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

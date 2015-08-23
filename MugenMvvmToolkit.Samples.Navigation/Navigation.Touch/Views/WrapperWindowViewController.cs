@@ -30,7 +30,7 @@ namespace Navigation.Touch.Views
                 button.Frame = new CGRect(0, View.Frame.Height - 40, View.Bounds.Width, 30);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleDimensions;
                 button.SetTitle("Close from wrapper", UIControlState.Normal);
-                set.Bind(button, "Click").To(() => model => model.CloseCommand);
+                set.Bind(button).To(() => model => model.CloseCommand);
                 Add(button);
             }
         }

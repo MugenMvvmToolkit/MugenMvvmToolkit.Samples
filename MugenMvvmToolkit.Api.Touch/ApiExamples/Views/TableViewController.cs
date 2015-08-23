@@ -34,11 +34,11 @@ namespace ApiExamples.Views
                     NavigationItem.RightBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
                 };
                 var addItem = new UIBarButtonItem { Title = "Add" };
-                set.Bind(addItem, "Clicked").To(() => model => model.AddCommand);
+                set.Bind(addItem).To(() => model => model.AddCommand);
                 NavigationItem.RightBarButtonItems = new[] { editItem, addItem };
 
                 var searchBar = new UISearchBar(new RectangleF(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar, () => bar => bar.Text).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
@@ -74,8 +74,8 @@ namespace ApiExamples.Views
                     set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).OneWayToSource();
                     set.Bind(cell, () => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
 
-                    set.Bind(cell.TextLabel, () => label => label.Text).To(() => model => model.Name);
-                    set.Bind(cell.DetailTextLabel, () => l => l.Text)
+                    set.Bind(cell.TextLabel).To(() => model => model.Name);
+                    set.Bind(cell.DetailTextLabel)
                         .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
                 }
             });

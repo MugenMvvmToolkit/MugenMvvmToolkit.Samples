@@ -12,15 +12,15 @@ namespace OrderManager.WinForms.Views.Products
             InitializeComponent();
             using (var set = new BindingSet<ProductEditorView, ProductEditorViewModel>(this))
             {
-                set.Bind(nameTextBox, () => t => t.Text)
+                set.Bind(nameTextBox)
                    .To(() => m => m.Name)
                    .TwoWay()
                    .Validate();
-                set.Bind(priceTextBox, () => t => t.Text)
+                set.Bind(priceTextBox)
                    .To(() => m => m.Price)
                    .TwoWay()
                    .Validate();
-                set.Bind(descTextBox, () => t => t.Text)
+                set.Bind(descTextBox)
                    .To(() => m => m.Description)
                    .TwoWay()
                    .Validate();

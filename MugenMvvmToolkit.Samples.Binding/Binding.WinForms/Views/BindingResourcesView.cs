@@ -14,9 +14,9 @@ namespace Binding.WinForms.Views
 
             using (var set = new BindingSet<BindingResourcesViewModel>())
             {
-                set.Bind(objLabel, () => label => label.Text)
+                set.Bind(objLabel)
                     .To(() => model => BindingSyntaxEx.Resource<object>("obj"));
-                set.Bind(methodLabel, () => label => label.Text)
+                set.Bind(methodLabel)
                     .To(() => model => BindingSyntaxEx.ResourceMethod<object>("Method"));
                 set.BindFromExpression(typeLabel, "Text $CustomType.StaticMethod()");
             }

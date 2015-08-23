@@ -43,7 +43,7 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);

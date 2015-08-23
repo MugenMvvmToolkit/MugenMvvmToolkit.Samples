@@ -45,7 +45,7 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
-                set.Bind(textField, () => field => field.Text)
+                set.Bind(textField)
                     .To(() => model => model.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
@@ -65,7 +65,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text)
+                set.Bind(label)
                     .To(() => model => model.Text.OfType<char>().Count(x => x == 'a'));
                 scrollView.AddSubview(label);
 
@@ -83,7 +83,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text)
+                set.Bind(label)
                    .To(() => model => model.Text.ExtensionMethod(model.Text.Length));
                 scrollView.AddSubview(label);
 
@@ -102,7 +102,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text)
+                set.Bind(label)
                     .To(() => model => model.Text.OfType<char>().Skip(1).FirstOrDefault());
                 scrollView.AddSubview(label);
 
@@ -122,7 +122,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text)
+                set.Bind(label)
                     .To(() => model => string.IsNullOrEmpty(model.Text) ? "String is empty" : "String is not empty");
                 scrollView.AddSubview(label);
 
@@ -141,7 +141,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label, () => l => l.Text)
+                set.Bind(label)
                    .To(() => model => model.Text.Length + 100 + model.Text.GetHashCode());
                 scrollView.AddSubview(label);
 

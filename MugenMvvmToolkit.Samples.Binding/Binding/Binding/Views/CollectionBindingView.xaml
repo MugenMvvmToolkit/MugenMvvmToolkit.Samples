@@ -24,11 +24,7 @@
               SelectedItem="{mugen:DataBinding GridViewModel.SelectedItem, Mode=TwoWay}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ViewCell>
-            <ViewCell.View>
-              <Label mugen:View.Bind="Text Name + ' ' + Id" />
-            </ViewCell.View>
-          </ViewCell>
+          <TextCell mugen:View.Bind="Text Name + ' ' + Id" />
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
