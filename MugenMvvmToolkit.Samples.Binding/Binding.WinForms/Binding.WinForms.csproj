@@ -38,20 +38,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.1.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.4.2.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.1.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.2.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.4.1.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.4.2.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinForms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.4.1.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WinForms, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.4.2.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -67,9 +67,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Templates\ButtonItemTemplate.cs" />
     <Compile Include="Templates\ListViewItemTemplate.cs" />
-    <Compile Include="ViewBinder.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="ViewBinder.cs" />
     <Compile Include="Views\AttachedMemberView.cs">
       <SubType>Form</SubType>
     </Compile>

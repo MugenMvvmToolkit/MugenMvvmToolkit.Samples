@@ -9,9 +9,10 @@ namespace OrderManager.Portable.ViewModels.Products
     {
         #region Fields
 
+        private string _displayName;
+
         private static readonly DataConstant<ProductModel> EntityConstant;
         private static readonly DataConstant<bool> IsNewRecordConstant;
-        private string _displayName;
 
         #endregion
 
@@ -63,6 +64,39 @@ namespace OrderManager.Portable.ViewModels.Products
             }
         }
 
+        public string DisplayName
+        {
+            get { return _displayName; }
+            set
+            {
+                if (value == _displayName) return;
+                _displayName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public void LoadState(IDataContext state)
+        {
+            var data = state.GetData(EntityConstant);
+            if (data == null)
+                return;
+            var isNew = state.GetData(IsNewRecordConstant);
+            InitializeEntity(data, isNew);
+            HasChanges = true;
+        }
+
+        public void SaveState(IDataContext state)
+        {
+            if (!IsEntityInitialized)
+                return;
+            state.AddOrUpdate(EntityConstant, Entity);
+            state.AddOrUpdate(IsNewRecordConstant, IsNewRecord);
+        }
+
         #endregion
 
         #region Overrides of EditableViewModel<ProductModel>
@@ -76,39 +110,6 @@ namespace OrderManager.Portable.ViewModels.Products
         {
             if (IsDesignMode)
                 InitializeEntity(new ProductModel(), true);
-        }
-
-        #endregion
-
-        #region Implementation of interfaces
-
-        public string DisplayName
-        {
-            get { return _displayName; }
-            set
-            {
-                if (value == _displayName) return;
-                _displayName = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public void LoadState(IDataContext state)
-        {
-            ProductModel data = state.GetData(EntityConstant);
-            if (data == null)
-                return;
-            bool isNew = state.GetData(IsNewRecordConstant);
-            InitializeEntity(data, isNew);
-            HasChanges = true;
-        }
-
-        public void SaveState(IDataContext state)
-        {
-            if (!IsEntityInitialized)
-                return;
-            state.AddOrUpdate(EntityConstant, Entity);
-            state.AddOrUpdate(IsNewRecordConstant, IsNewRecord);
         }
 
         #endregion

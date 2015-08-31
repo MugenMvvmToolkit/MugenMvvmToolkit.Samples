@@ -1,0 +1,42 @@
+﻿<UserControl
+    x:Class="OrderManager.WinRT.Views.Products.ProductEditorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:products="using:OrderManager.Portable.ViewModels.Products"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance products:ProductEditorViewModel, IsDesignTimeCreatable=True}"
+    d:DesignHeight="800"
+    d:DesignWidth="700">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding Path=DisplayName}" Margin="19,0,0,0"
+                   Style="{ThemeResource HeaderTextBlockStyle}" />
+
+        <StackPanel Grid.Row="1" Margin="19,9.5,19,0">
+            <TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Header="Name" />
+            <TextBlock Text="{Binding Path=[Name][0]}" Style="{StaticResource BaseErrorTextBlockStyle}" />
+            
+            <TextBox Header="Price" Text="{Binding Path=Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="{Binding Path=[Price][0]}"
+                       Style="{StaticResource BaseErrorTextBlockStyle}" />
+
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True" MinHeight="100"
+                     Text="{Binding Path=Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Header="Description" />
+            <TextBlock Text="{Binding Path=[Description][0]}"
+                       Style="{StaticResource BaseErrorTextBlockStyle}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

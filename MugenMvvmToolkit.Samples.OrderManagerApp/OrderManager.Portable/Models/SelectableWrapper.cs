@@ -1,9 +1,10 @@
-﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Models;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using MugenMvvmToolkit;
 
 namespace OrderManager.Portable.Models
 {
-    public class SelectableWrapper<T> : NotifyPropertyChangedBase where T : class
+    public class SelectableWrapper<T> : INotifyPropertyChanged where T : class
     {
         #region Fields
 
@@ -47,6 +48,21 @@ namespace OrderManager.Portable.Models
                 OnPropertyChanged();
             }
         }
+
+        #endregion
+
+        #region Methods
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }

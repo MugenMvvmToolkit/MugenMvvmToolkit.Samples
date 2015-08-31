@@ -9,7 +9,7 @@ using MugenMvvmToolkit.ViewModels;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class FirstViewModel : CloseableViewModel, IHasDisplayName, INavigableViewModel
+    public class FirstViewModel : CloseableViewModel, IHasDisplayName, INavigableViewModel, IHasState
     {
         #region Fields
 
@@ -75,5 +75,15 @@ namespace Navigation.Portable.ViewModels
         }
 
         #endregion
+
+        public void LoadState(IDataContext state)
+        {
+            
+        }
+
+        public void SaveState(IDataContext state)
+        {
+
+        }
     }
 }

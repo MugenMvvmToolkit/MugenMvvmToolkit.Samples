@@ -64,13 +64,8 @@ namespace Navigation.UniversalApp
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-                bootstrapper = new Bootstrapper<MainViewModel>(rootFrame,
-                    new AutofacContainer(), new[]
-                    {
-                        GetType().GetTypeInfo().Assembly,
-                        typeof (MainViewModel).GetTypeInfo().Assembly
-                    });
-                bootstrapper.Initialize();
+                bootstrapper = new Bootstrapper<MainViewModel>(rootFrame, new AutofacContainer());
+                await bootstrapper.InitializeAsync();
 
                 //Associate the frame with a SuspensionManager key                                
                 SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
