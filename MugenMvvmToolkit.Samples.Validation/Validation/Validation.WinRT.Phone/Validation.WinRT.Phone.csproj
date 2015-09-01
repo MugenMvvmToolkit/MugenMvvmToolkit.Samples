@@ -118,7 +118,7 @@
       <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.0\lib\portable-win81+wpa81\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.1.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+    <Reference Include="MugenMvvmToolkit.Binding, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.0\lib\portable-win81+wpa81\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
