@@ -89,11 +89,10 @@
             // 
             this.selfLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.selfLabel.AutoSize = true;
             this.selfLabel.ForeColor = System.Drawing.Color.Green;
             this.selfLabel.Location = new System.Drawing.Point(120, 133);
             this.selfLabel.Name = "selfLabel";
-            this.selfLabel.Size = new System.Drawing.Size(23, 13);
+            this.selfLabel.Size = new System.Drawing.Size(454, 13);
             this.selfLabel.TabIndex = 5;
             this.selfLabel.Text = "self";
             // 

@@ -11,7 +11,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -19,9 +19,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -30,10 +30,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -240,7 +240,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -1606,7 +1606,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -1614,9 +1614,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -1625,10 +1625,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -1878,7 +1878,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -3291,7 +3291,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -3299,9 +3299,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -3310,10 +3310,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -3549,7 +3549,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -4948,7 +4948,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -4956,9 +4956,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -4967,10 +4967,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -5225,7 +5225,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -6638,7 +6638,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -6646,9 +6646,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -6657,10 +6657,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -6896,7 +6896,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -8295,7 +8295,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -8303,9 +8303,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -8314,10 +8314,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -8572,7 +8572,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -9985,7 +9985,7 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -9993,9 +9993,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.0, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -10004,10 +10004,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -10243,7 +10243,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.0": {
+      "MugenMvvmToolkit/4.2.1": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -11649,8 +11649,8 @@
         "[Content_Types].xml"
       ]
     },
-    "Microsoft.ApplicationInsights/1.0.0": {
-      "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
+    "Microsoft.ApplicationInsights/1.2.0": {
+      "sha512": "1WyfkRQc7aa2KObTCxfmS3ygUNRRvpjMWbn0xmQFzhZBbGzwzPZxldtARK5gbSzs7ohAhhcnnuJc8YQiHlZ/oA==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -11663,28 +11663,30 @@
         "lib/wp8/Microsoft.ApplicationInsights.XML",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.XML",
-        "package/services/metadata/core-properties/b9e7bc7ab2454491af07046165ff01d0.psmdcp",
+        "package/services/metadata/core-properties/da5f06b2e3b04210bf9a363361c5d800.psmdcp",
         "[Content_Types].xml"
       ]
     },
-    "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
-      "sha512": "0qQXC+CtbyF2RPuld5pF74fxsnP6ml0LUnzQ6GL9AXXY64LPsLDsPUAymoUffo7LZvPDppZboTYX59TfVxKA7A==",
+    "Microsoft.ApplicationInsights.PersistenceChannel/1.2.0": {
+      "sha512": "pTv9pUubCwzK1BCkB6d364EFFo6rMtL3+vCTcq20bfVwz1/5lqQwrx0Wdib9dAM8veySnnN4rjSNwIS9Kp5Zsg==",
       "type": "Package",
       "files": [
         "_rels/.rels",
         "Microsoft.ApplicationInsights.PersistenceChannel.nuspec",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll",
-        "lib/portable-win8+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "package/services/metadata/core-properties/dc9ebba80e7343fdbd0a39a3cdeb672c.psmdcp",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "package/services/metadata/core-properties/42ce22c3a6204867bb9fd1c714f1a6cf.psmdcp",
         "[Content_Types].xml"
       ]
     },
-    "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
-      "sha512": "NvBQnFeiFd0O1QdBz06UGApD7zn7ztVi7qO18IsM3EjiXRNgfrEBXB+azNm8XqLY8xGFAqh3HAuSd/wHZMe0XA==",
+    "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
+      "sha512": "H6nhyM+ZVOhLmF8cqQj70fc5HZOS6dxh18nNwEM7+HD8NzArdSLK0gwGJkEOUYPtjner/0/3aOxgGZbFi9OVdA==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -11695,7 +11697,7 @@
         "lib/wp8/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
-        "package/services/metadata/core-properties/4f6f732debe548beaa1183418e8d65cc.psmdcp",
+        "package/services/metadata/core-properties/441e5d0bc7164e089277ae041b2043cc.psmdcp",
         "[Content_Types].xml"
       ]
     },
@@ -12352,8 +12354,8 @@
         "[Content_Types].xml"
       ]
     },
-    "MugenMvvmToolkit/4.2.0": {
-      "sha512": "+W2saIsYHGxJIcM7/psfcIvE1sjbHM1IRAzJao9+6md5spcns1PwZpynBwqdGUpf644jQs3FWsfLwIdyWjadWw==",
+    "MugenMvvmToolkit/4.2.1": {
+      "sha512": "cj8eupTk6XRvnzM5NsvMoov6/zH17g4OaP25oxs1VlxqWkC/+W+EkQYaQBg6a32Big5Gg2nfxXg8GselT52yPQ==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -12419,12 +12421,12 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.xml",
         "content/Xamarin.iOS10/Resources/error.png",
-        "package/services/metadata/core-properties/f06d880465414ee88f4e270ad7fe2adf.psmdcp",
+        "package/services/metadata/core-properties/c257e97766bb416080c89a1744f9e86d.psmdcp",
         "[Content_Types].xml"
       ]
     },
     "MugenMvvmToolkit.AutofacContainer/4.2.0": {
-      "sha512": "Bbx3hGxbi5TIHNcKu4CZxBNevTMo0+d8/frK0o3V7V7cvkHq4nXyII3O4yPpRSuBjcxicJHaLByCzNSfthNLTQ==",
+      "sha512": "Y7E/UV4vU6VPdEvMxrwDYJTZn3I3CyykN461qK/CPUnkTwB384Vqc4ErMezd2xE6nUnloDOzHoqWdU2BnqtKiA==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -12455,7 +12457,7 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.pdb",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.xml",
-        "package/services/metadata/core-properties/2cddcd91ec3b4fbea8f30ff98e4aab44.psmdcp",
+        "package/services/metadata/core-properties/d342405c7c1b4ac48a7c272bf2eaced3.psmdcp",
         "[Content_Types].xml"
       ]
     },
@@ -15157,11 +15159,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.ApplicationInsights >= 1.0.0",
-      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
-      "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
+      "Microsoft.ApplicationInsights >= 1.2.0",
+      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.0",
+      "Microsoft.ApplicationInsights.WindowsApps >= 1.1.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "MugenMvvmToolkit >= 4.2.0",
+      "MugenMvvmToolkit >= 4.2.1",
       "MugenMvvmToolkit.AutofacContainer >= 4.2.0"
     ],
     "UAP,Version=v10.0": []

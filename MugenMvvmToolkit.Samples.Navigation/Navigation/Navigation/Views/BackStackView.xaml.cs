@@ -18,7 +18,7 @@ namespace Navigation.Views
 
         protected override bool OnBackButtonPressed()
         {
-            return this.HandleBackButtonPressed();
+            return this.HandleBackButtonPressed(base.OnBackButtonPressed);
         }
 
         #endregion
