@@ -36,7 +36,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:textColor="#00ff00"
-                pkg:Bind="Text $CustomType.StaticMethod()" />      
+                pkg:Bind="Text $CustomType.StaticMethod()" />
+
+      <Button android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Update resource"
+              pkg:Bind="Click UpdateResourceCommand" />
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

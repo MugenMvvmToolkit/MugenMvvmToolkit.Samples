@@ -1,5 +1,4 @@
 using System.Windows;
-using Binding.Portable.ViewModels;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WPF.Infrastructure;
 
@@ -7,9 +6,13 @@ namespace Binding.Wpf
 {
     public partial class App : Application
     {
+        #region Constructors
+
         public App()
         {
-            new Bootstrapper<MainViewModel>(this, new AutofacContainer());
+            new Bootstrapper<Portable.App>(this, new AutofacContainer());
         }
+
+        #endregion
     }
 }

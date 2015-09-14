@@ -1,12 +1,11 @@
-using System;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using Navigation.Android;
-using Navigation.Portable.ViewModels;
+using Navigation.Portable;
 
-[assembly: Bootstrapper(typeof(Setup))]
+[assembly: Bootstrapper(typeof (Setup))]
 
 namespace Navigation.Android
 {
@@ -14,14 +13,14 @@ namespace Navigation.Android
     {
         #region Overrides of AndroidBootstrapperBase
 
+        protected override IMvvmApplication CreateApplication()
+        {
+            return new App();
+        }
+
         protected override IIocContainer CreateIocContainer()
         {
             return new AutofacContainer();
-        }
-
-        protected override Type GetMainViewModelType()
-        {
-            return typeof(MainViewModel);
         }
 
         #endregion

@@ -57,7 +57,7 @@ namespace Navigation.WindowsPhone
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }            
-            var bootstrapper = new Bootstrapper<MainViewModel>(RootFrame, new AutofacContainer());
+            var bootstrapper = new Bootstrapper<Portable.App>(RootFrame, new AutofacContainer());
             bootstrapper.Initialize();
         }
 

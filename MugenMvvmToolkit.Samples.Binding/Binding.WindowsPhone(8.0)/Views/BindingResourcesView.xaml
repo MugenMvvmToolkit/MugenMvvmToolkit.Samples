@@ -48,6 +48,8 @@
 
                 <TextBlock Text="Xaml resource:" Margin="1" />
                 <TextBlock markupExtensions:View.Bind="Text $ResourceValue" Margin="1" Foreground="Green" />
+
+                <Button Command="{Binding Path=UpdateResourceCommand}" Content="Update resource" Margin="2" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

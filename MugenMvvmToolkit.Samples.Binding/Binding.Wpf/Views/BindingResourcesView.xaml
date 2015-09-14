@@ -9,14 +9,14 @@
             <system:String x:Key="ResourceValue">Value from xaml</system:String>
         </StackPanel.Resources>
 
-        <TextBlock Text="Object from resources($obj)" Margin="1"/>
-        <TextBlock Text="{DataBinding '$obj'}" Margin="1 1 1 10" Foreground="Green"/>
+        <TextBlock Text="Object from resources($obj)" Margin="1" />
+        <TextBlock Text="{DataBinding '$obj'}" Margin="1 1 1 10" Foreground="Green" />
 
-        <TextBlock Text="Method from resources($Method())" Margin="1"/>
-        <TextBlock Text="{DataBinding '$Method()'}" Margin="1 1 1 10" Foreground="Green"/>
+        <TextBlock Text="Method from resources($Method())" Margin="1" />
+        <TextBlock Text="{DataBinding '$Method()'}" Margin="1 1 1 10" Foreground="Green" />
 
-        <TextBlock Text="Type from resources($CustomType.StaticMethod())" Margin="1"/>
-        <TextBlock Text="{DataBinding '$CustomType.StaticMethod()'}" Margin="1 1 1 10" Foreground="Green"/>
+        <TextBlock Text="Type from resources($CustomType.StaticMethod())" Margin="1" />
+        <TextBlock Text="{DataBinding '$CustomType.StaticMethod()'}" Margin="1 1 1 10" Foreground="Green" />
 
         <TextBlock Text="Xaml resource:" Margin="1" />
         <TextBlock Text="{DataBinding '$ResourceValue'}" Margin="1" Foreground="Green" />
@@ -34,5 +34,7 @@
         <TextBlock Text="Xaml resource:" Margin="1" />
         <TextBlock View.Bind="Text $ResourceValue" Margin="1" Foreground="Green" />
         -->
+
+        <Button Command="{DataBinding Path=UpdateResourceCommand}" Content="Update resource" Margin="2" />
     </StackPanel>
 </Window>

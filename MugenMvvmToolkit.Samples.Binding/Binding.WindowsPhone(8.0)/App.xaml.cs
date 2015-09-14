@@ -1,10 +1,8 @@
 using System;
 using System.Diagnostics;
-using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
-using Binding.Portable.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MugenMvvmToolkit;
@@ -57,7 +55,7 @@ namespace Binding.WindowsPhone
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-            var bootstrapper = new Bootstrapper<MainViewModel>(RootFrame, new AutofacContainer());
+            var bootstrapper = new Bootstrapper<App>(RootFrame, new AutofacContainer());
             bootstrapper.Initialize();
         }
 

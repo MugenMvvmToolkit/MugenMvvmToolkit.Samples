@@ -1,6 +1,7 @@
+using System;
 using ApiExamples.TemplateSelectors;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Models;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.Modules;
 
@@ -26,8 +27,16 @@ namespace ApiExamples
         {
             BindingServiceProvider
                 .ResourceResolver
-                .AddObject("listItemTemplateSelector", new BindingResourceObject(new ListItemTemplateSelector()));
+                .AddObject("listItemTemplateSelector", new ListItemTemplateSelector());
+            BindingServiceProvider
+                .ResourceResolver
+                .AddObject("preferenceSelector", new PreferenceTemplateSelector());
             return true;
+        }
+
+        private object Method(object o, IDataContext dataContext)
+        {
+            return o;
         }
 
         /// <summary>

@@ -7,7 +7,6 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WinRT.Infrastructure;
-using Navigation.Portable.ViewModels;
 
 namespace Navigation.WinRT
 {
@@ -54,7 +53,7 @@ namespace Navigation.WinRT
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
                 //c.Bind<IResourceMonitor, Binding.Portable.Infrastructure.ResourceMonitor>(DependencyLifecycle.SingleInstance); 
-                bootstrapper = new Bootstrapper<MainViewModel>(rootFrame, new AutofacContainer());
+                bootstrapper = new Bootstrapper<Portable.App>(rootFrame, new AutofacContainer());
                 await bootstrapper.InitializeAsync();
 
                 //Associate the frame with a SuspensionManager key                                

@@ -1,12 +1,11 @@
-using System;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using OrderManager.Android;
-using OrderManager.Portable.ViewModels;
+using OrderManager.Portable;
 
-[assembly: Bootstrapper(typeof(Setup))]
+[assembly: Bootstrapper(typeof (Setup))]
 
 namespace OrderManager.Android
 {
@@ -14,14 +13,14 @@ namespace OrderManager.Android
     {
         #region Overrides of AndroidBootstrapperBase
 
+        protected override IMvvmApplication CreateApplication()
+        {
+            return new App();
+        }
+
         protected override IIocContainer CreateIocContainer()
         {
             return new AutofacContainer();
-        }
-
-        protected override Type GetMainViewModelType()
-        {
-            return typeof(MainViewModel);
         }
 
         #endregion

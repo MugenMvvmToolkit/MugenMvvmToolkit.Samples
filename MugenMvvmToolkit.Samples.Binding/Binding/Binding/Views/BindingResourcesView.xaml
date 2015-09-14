@@ -23,5 +23,8 @@
 
         <Label Text="Xaml resource:" />
         <Label Text="{mugen:DataBinding $ResourceValue}" TextColor="Green" />
+
+        <Button Text="Update resource"
+                Command="{mugen:DataBinding Path=UpdateResourceCommand}" />
     </StackLayout>
 </ContentPage>

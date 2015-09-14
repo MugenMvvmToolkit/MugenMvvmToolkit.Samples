@@ -240,7 +240,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -250,7 +250,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -1878,7 +1878,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -1888,7 +1888,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -3549,7 +3549,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -3559,7 +3559,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -5225,7 +5225,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -5235,7 +5235,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -6896,7 +6896,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -6906,7 +6906,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -8572,7 +8572,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -8582,7 +8582,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -10243,7 +10243,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/4.2.1": {
+      "MugenMvvmToolkit/4.3.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -10253,7 +10253,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/4.2.0": {
+      "MugenMvvmToolkit.AutofacContainer/4.3.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -12354,8 +12354,8 @@
         "[Content_Types].xml"
       ]
     },
-    "MugenMvvmToolkit/4.2.1": {
-      "sha512": "hnUO+em2OG5IE+sD7Qme6r/9MUkADF/vGTrcfMZN8lgYIV4zBjHceZg8PS5gOG6X5AafxI/SvH8+0msgMc20dw==",
+    "MugenMvvmToolkit/4.3.0": {
+      "sha512": "7o8Qc781u/R78rmbFEcaIvK1yOfd1/moBJGWbtk0RmTaC9vU1BtJnQaZ8+l/SWAIvU+D2fu2SrwJ7DKTY5QWqA==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -12421,12 +12421,12 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.xml",
         "content/Xamarin.iOS10/Resources/error.png",
-        "package/services/metadata/core-properties/bcb6e49bf482455baf5dd1b3a1d479c9.psmdcp",
+        "package/services/metadata/core-properties/437e9e17f7324896b0075c580178271a.psmdcp",
         "[Content_Types].xml"
       ]
     },
-    "MugenMvvmToolkit.AutofacContainer/4.2.0": {
-      "sha512": "gKpoIQ3Iobn18JW4pQNX/diIoLtTnRWsejCKARDVqtD8H43dj7Vo0ct+PmMd7iMhXEkrbZoWm1RBIq98fns4jw==",
+    "MugenMvvmToolkit.AutofacContainer/4.3.0": {
+      "sha512": "18Kfl4vkdLp3xTieCKhF/9GQoJ1kBdJXwu1lyxMpadNqwG76Nx+V2oNh8flrShgz9kaz9TYxe7fvfFreTuw83A==",
       "type": "Package",
       "files": [
         "_rels/.rels",
@@ -12457,7 +12457,7 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.pdb",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.xml",
-        "package/services/metadata/core-properties/1ba60e5830874efc923664b2b4b5bac6.psmdcp",
+        "package/services/metadata/core-properties/74978516270847b2bfead65a5a621576.psmdcp",
         "[Content_Types].xml"
       ]
     },
@@ -15163,8 +15163,8 @@
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.1.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "MugenMvvmToolkit >= 4.2.1",
-      "MugenMvvmToolkit.AutofacContainer >= 4.2.0"
+      "MugenMvvmToolkit >= 4.3.0",
+      "MugenMvvmToolkit.AutofacContainer >= 4.3.0"
     ],
     "UAP,Version=v10.0": []
   }

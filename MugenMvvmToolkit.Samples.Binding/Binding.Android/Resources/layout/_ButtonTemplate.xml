@@ -4,4 +4,4 @@
         xmlns:pkg="http://schemas.android.com/apk/res-auto"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        pkg:Bind="Text Item1, Mode=OneTime; CommandParameter Item2, Mode=OneTime; Click $Relative(LinearLayout).DataContext.ShowCommand" />
+        pkg:Bind="Text Item1, Mode=OneTime; Click $Relative(LinearLayout).DataContext.ShowCommand, Mode=OneTime, CommandParameter=Item2" />

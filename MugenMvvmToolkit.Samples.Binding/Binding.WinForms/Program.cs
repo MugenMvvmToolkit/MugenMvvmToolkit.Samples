@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using Binding.Portable.ViewModels;
+using Binding.Portable;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WinForms.Infrastructure;
 
@@ -13,7 +13,7 @@ namespace Binding.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var bootstrapper = new Bootstrapper<MainViewModel>(new AutofacContainer());
+            var bootstrapper = new Bootstrapper<App>(new AutofacContainer());
             bootstrapper.Start();
         }
     }

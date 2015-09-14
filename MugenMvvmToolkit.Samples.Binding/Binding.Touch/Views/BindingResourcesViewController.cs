@@ -82,6 +82,14 @@ namespace Binding.Touch.Views
                 };
                 set.BindFromExpression(label, "Text $CustomType.StaticMethod()");
                 scrollView.AddSubview(label);
+
+
+                var btn = UIButton.FromType(UIButtonType.System);
+                btn.Frame = new CGRect(20, 150, View.Frame.Width - 40, 25);
+                btn.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                btn.SetTitle("Update resource", UIControlState.Normal);
+                set.Bind(btn).To(() => m => m.UpdateResourceCommand);
+                scrollView.AddSubview(btn);
             }
         }
 

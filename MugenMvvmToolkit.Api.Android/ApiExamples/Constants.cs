@@ -11,5 +11,7 @@ namespace ApiExamples
         public const string ViewPagerView = "ViewPagerView";
 
         public const string CardRecyclerView = "CardRecyclerView";
+
+        public const string PreferenceHeaderView = "PreferenceHeaderView";
     }
 }

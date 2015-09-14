@@ -1,6 +1,5 @@
 ﻿using MugenMvvmToolkit;
 using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
-using Navigation.Portable.ViewModels;
 using Xamarin.Forms;
 
 namespace Navigation
@@ -10,7 +9,7 @@ namespace Navigation
         public App()
         {
             XamarinFormsBootstrapperBase bootstrapper = XamarinFormsBootstrapperBase.Current ??
-                                                        new Bootstrapper<MainViewModel>(new AutofacContainer());
+                                                        new Bootstrapper<Portable.App>(new AutofacContainer());
             MainPage = bootstrapper.Start();
         }
     }

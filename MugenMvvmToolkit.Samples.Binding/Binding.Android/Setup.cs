@@ -1,12 +1,11 @@
-using System;
 using Binding.Android;
-using Binding.Portable.ViewModels;
+using Binding.Portable;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace Binding.Android
 {
@@ -14,14 +13,14 @@ namespace Binding.Android
     {
         #region Overrides of AndroidBootstrapperBase
 
+        protected override IMvvmApplication CreateApplication()
+        {
+            return new App();
+        }
+
         protected override IIocContainer CreateIocContainer()
         {
             return new AutofacContainer();
-        }
-
-        protected override Type GetMainViewModelType()
-        {
-            return typeof (MainViewModel);
         }
 
         #endregion

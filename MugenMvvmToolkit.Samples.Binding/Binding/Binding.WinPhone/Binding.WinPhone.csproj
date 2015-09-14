@@ -167,20 +167,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.1\lib\wp8\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.3.0\lib\wp8\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.1\lib\wp8\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.3.0\lib\wp8\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.1\lib\wp8\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.3.0\lib\wp8\MugenMvvmToolkit.Xamarin.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.WinPhone, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.2.1\lib\wp8\MugenMvvmToolkit.Xamarin.Forms.WinPhone.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Xamarin.Forms.WinPhone, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Xamarin.Forms.4.3.0\lib\wp8\MugenMvvmToolkit.Xamarin.Forms.WinPhone.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">

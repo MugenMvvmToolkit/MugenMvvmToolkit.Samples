@@ -2,19 +2,23 @@ using System;
 using System.Windows.Forms;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WinForms.Infrastructure;
-using Validation.Portable.ViewModels;
+using Validation.Portable;
 
 namespace Validation.WinForms
 {
     internal static class Program
     {
+        #region Methods
+
         [STAThread]
         private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var bootstrapper = new Bootstrapper<MainViewModel>(new AutofacContainer());
+            var bootstrapper = new Bootstrapper<App>(new AutofacContainer());
             bootstrapper.Start();
         }
+
+        #endregion
     }
 }

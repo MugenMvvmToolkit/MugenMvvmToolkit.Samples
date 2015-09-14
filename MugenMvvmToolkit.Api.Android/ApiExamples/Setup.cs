@@ -1,4 +1,3 @@
-using System;
 using ApiExamples;
 using ApiExamples.ViewModels;
 using MugenMvvmToolkit;
@@ -6,7 +5,7 @@ using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace ApiExamples
 {
@@ -14,14 +13,14 @@ namespace ApiExamples
     {
         #region Overrides of AndroidBootstrapperBase
 
+        protected override IMvvmApplication CreateApplication()
+        {
+            return new DefaultApp(typeof(MainViewModel));
+        }
+
         protected override IIocContainer CreateIocContainer()
         {
             return new AutofacContainer();
-        }
-
-        protected override Type GetMainViewModelType()
-        {
-            return typeof (MainViewModel);
         }
 
         #endregion

@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
     <Compile Include="Infrastructure\DesignRepository.cs" />
     <Compile Include="Infrastructure\FileRepositoryBase.cs" />
     <Compile Include="Interfaces\IEditorWrapperViewModel.cs" />
@@ -75,8 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MugenMvvmToolkit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.2.1\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\portable-net45+win+wpa81+wp80\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

@@ -34,6 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.objLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.updateResBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // typeLabel
@@ -93,11 +94,23 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Object from resources($obj)";
             // 
+            // updateResBtn
+            // 
+            this.updateResBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateResBtn.Location = new System.Drawing.Point(12, 171);
+            this.updateResBtn.Name = "updateResBtn";
+            this.updateResBtn.Size = new System.Drawing.Size(453, 23);
+            this.updateResBtn.TabIndex = 18;
+            this.updateResBtn.Text = "Update resource";
+            this.updateResBtn.UseVisualStyleBackColor = true;
+            // 
             // BindingResourcesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 206);
+            this.Controls.Add(this.updateResBtn);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.methodLabel);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label objLabel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button updateResBtn;
     }
 }

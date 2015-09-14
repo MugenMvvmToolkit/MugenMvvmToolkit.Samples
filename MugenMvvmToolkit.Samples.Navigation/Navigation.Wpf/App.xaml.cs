@@ -1,15 +1,18 @@
 using System.Windows;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WPF.Infrastructure;
-using Navigation.Portable.ViewModels;
 
 namespace Navigation.Wpf
 {
     public partial class App : Application
     {
+        #region Constructors
+
         public App()
         {
-            new Bootstrapper<MainViewModel>(this, new AutofacContainer());
+            new Bootstrapper<Portable.App>(this, new AutofacContainer());
         }
+
+        #endregion
     }
 }

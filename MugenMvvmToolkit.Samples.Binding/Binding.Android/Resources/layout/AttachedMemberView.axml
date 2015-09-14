@@ -16,7 +16,6 @@
                        android:layout_margin="2px">
         <AppCompatEditText android:layout_height="wrap_content"
                            android:layout_width="fill_parent"
-                           android:inputType="number"
                            android:hint="The current text"
                            pkg:Bind="Text Text, Mode=TwoWay" />
       </TextInputLayout>

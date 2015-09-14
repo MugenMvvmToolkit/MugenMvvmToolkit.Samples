@@ -28,15 +28,16 @@ namespace Binding.WinForms.Templates
 
         protected override Button SelectTemplate(Tuple<string, Type> item, object container)
         {
-            return new Button { Height = 24, Dock = DockStyle.Top };
+            return new Button {Height = 24, Dock = DockStyle.Top};
         }
 
         protected override void Initialize(Button template, BindingSet<Button, Tuple<string, Type>> bindingSet)
         {
             bindingSet.Bind(() => button => button.Text).To(() => tuple => tuple.Item1).OneTime();
             bindingSet.Bind()
-                      .To(() => t => BindingSyntaxEx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)
-                      .WithCommandParameter(() => tuple => tuple.Item2);
+                .To(() => t => BindingSyntaxEx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)
+                .OneTime()
+                .WithCommandParameter(() => tuple => tuple.Item2);
         }
 
         #endregion

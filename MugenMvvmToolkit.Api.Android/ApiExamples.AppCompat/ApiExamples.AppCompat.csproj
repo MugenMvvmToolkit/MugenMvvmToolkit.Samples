@@ -70,37 +70,42 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.Design, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.Design.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.Android.Design.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.Design, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.Design.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.Design.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.RecyclerView, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.RecyclerView, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.RecyclerView.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.RecyclerView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.2.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.2.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.2.1\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -137,6 +142,9 @@
     <Compile Include="..\ApiExamples\Models\MenuItemModel.cs">
       <Link>Models\MenuItemModel.cs</Link>
     </Compile>
+    <Compile Include="..\ApiExamples\Models\PreferenceModel.cs">
+      <Link>Models\PreferenceModel.cs</Link>
+    </Compile>
     <Compile Include="..\ApiExamples\Models\ViewModelCommandParameter.cs">
       <Link>Models\ViewModelCommandParameter.cs</Link>
     </Compile>
@@ -148,6 +156,9 @@
     </Compile>
     <Compile Include="..\ApiExamples\TemplateSelectors\ListItemTemplateSelector.cs">
       <Link>TemplateSelectors\ListItemTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\ApiExamples\TemplateSelectors\PreferenceTemplateSelector.cs">
+      <Link>TemplateSelectors\PreferenceTemplateSelector.cs</Link>
     </Compile>
     <Compile Include="..\ApiExamples\ViewModels\ContextActionBarViewModel.cs">
       <Link>ViewModels\ContextActionBarViewModel.cs</Link>
@@ -170,6 +181,9 @@
     <Compile Include="..\ApiExamples\ViewModels\Menus\ToolbarViewModel.cs">
       <Link>ViewModels\Menus\ToolbarViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\ApiExamples\ViewModels\PreferenceViewModel.cs">
+      <Link>ViewModels\PreferenceViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\ApiExamples\ViewModels\Tabs\StaticTabViewModel.cs">
       <Link>ViewModels\Tabs\StaticTabViewModel.cs</Link>
     </Compile>
@@ -185,8 +199,17 @@
     <Compile Include="..\ApiExamples\Views\Fragments\BackStackFragmetActivityView.cs">
       <Link>Views\Fragments\BackStackFragmetActivityView.cs</Link>
     </Compile>
-    <Compile Include="..\ApiExamples\Views\ItemFragmentView.cs">
-      <Link>Views\ItemFragmentView.cs</Link>
+    <Compile Include="..\ApiExamples\Views\Fragments\ItemFragmentView.cs">
+      <Link>Views\Fragments\ItemFragmentView.cs</Link>
+    </Compile>
+    <Compile Include="..\ApiExamples\Views\Fragments\PreferenceFragmentView.cs">
+      <Link>Views\Fragments\PreferenceFragmentView.cs</Link>
+    </Compile>
+    <Compile Include="..\ApiExamples\Views\Fragments\SimpleFragment1.cs">
+      <Link>Views\Fragments\SimpleFragment1.cs</Link>
+    </Compile>
+    <Compile Include="..\ApiExamples\Views\Fragments\SimpleFragment2.cs">
+      <Link>Views\Fragments\SimpleFragment2.cs</Link>
     </Compile>
     <Compile Include="..\ApiExamples\Views\ListDataTemplateActivityView.cs">
       <Link>Views\ListDataTemplateActivityView.cs</Link>
@@ -203,11 +226,11 @@
     <Compile Include="..\ApiExamples\Views\Menus\ToolbarActivityView.cs">
       <Link>Views\Menus\ToolbarActivityView.cs</Link>
     </Compile>
-    <Compile Include="..\ApiExamples\Views\SimpleFragment1.cs">
-      <Link>Views\SimpleFragment1.cs</Link>
+    <Compile Include="..\ApiExamples\Views\PreferenceHeaderView.cs">
+      <Link>Views\PreferenceHeaderView.cs</Link>
     </Compile>
-    <Compile Include="..\ApiExamples\Views\SimpleFragment2.cs">
-      <Link>Views\SimpleFragment2.cs</Link>
+    <Compile Include="..\ApiExamples\Views\PreferenceView.cs">
+      <Link>Views\PreferenceView.cs</Link>
     </Compile>
     <Compile Include="..\ApiExamples\Views\SplashScreenActivity.cs">
       <Link>Views\SplashScreenActivity.cs</Link>
@@ -286,6 +309,12 @@
       <Link>Resources\layout\_CardItemTemplate.xml</Link>
     </AndroidResource>
     <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="..\ApiExamples\Resources\xml\pref.xml">
+      <Link>Resources\xml\pref.xml</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\ApiExamples\Resources\xml\prefheaders.xml">
+      <Link>Resources\xml\prefheaders.xml</Link>
+    </AndroidResource>
     <Content Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </Content>

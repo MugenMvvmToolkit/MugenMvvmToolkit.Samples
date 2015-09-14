@@ -40,6 +40,7 @@ namespace ApiExamples.Templates
             bindingSet.Bind(() => element => element.Caption).To(() => tuple => tuple.Item1);
             bindingSet.Bind(AttachedMembers.StringElement.TappedEvent)
                 .To(() => model => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
+                .OneTime()
                 .WithCommandParameter(() => tuple => tuple.Item2);
         }
 

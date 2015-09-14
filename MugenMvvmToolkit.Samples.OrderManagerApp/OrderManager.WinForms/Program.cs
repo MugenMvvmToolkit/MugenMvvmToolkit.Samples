@@ -2,7 +2,6 @@ using System;
 using System.Windows.Forms;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WinForms.Infrastructure;
-using OrderManager.Portable.ViewModels;
 
 namespace OrderManager.WinForms
 {
@@ -13,7 +12,7 @@ namespace OrderManager.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var bootstrapper = new Bootstrapper<MainViewModel>(new AutofacContainer());
+            var bootstrapper = new Bootstrapper<Portable.App>(new AutofacContainer());
             bootstrapper.Start();
         }
     }

@@ -1,5 +1,4 @@
-﻿using Binding.Portable.ViewModels;
-using MugenMvvmToolkit;
+﻿using MugenMvvmToolkit;
 using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
 using Xamarin.Forms;
 
@@ -10,7 +9,7 @@ namespace Binding
         public App()
         {
             XamarinFormsBootstrapperBase bootstrapper = XamarinFormsBootstrapperBase.Current ??
-                                                        new Bootstrapper<MainViewModel>(new AutofacContainer());
+                                                        new Bootstrapper<Portable.App>(new AutofacContainer());
             MainPage = bootstrapper.Start();
         }
     }

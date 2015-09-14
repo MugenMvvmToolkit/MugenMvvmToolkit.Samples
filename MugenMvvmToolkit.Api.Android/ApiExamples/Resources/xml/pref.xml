@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="Default items">
+    <CheckBoxPreference android:key="k1"
+                        android:title="CheckBoxPreference"
+                        bind="Checked Checked, Mode=TwoWay" />
+    <EditTextPreference android:key="k2"
+                        android:title="EditTextPreference"
+                        bind="Text Text, Mode=TwoWay" />
+    <ListPreference android:key="k3"
+                    android:title="ListPreference"
+                    bind="Value ListValue, Mode=TwoWay; EntryValues Values; Entries Values" />
+    <Preference android:key="k4"
+                android:title="Button command binding"
+                bind="PreferenceClick Command" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="k5"
+                      android:title="Dynamic items"
+                      bind="ItemsSource Preferences; ItemTemplate $preferenceSelector" />
+</PreferenceScreen>

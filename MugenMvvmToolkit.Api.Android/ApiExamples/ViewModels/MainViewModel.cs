@@ -30,9 +30,9 @@ namespace ApiExamples.ViewModels
             Should.NotBeNull(toastPresenter, "toastPresenter");
             _toastPresenter = toastPresenter;
             Items = new[]
-            {                
+            {
                 Tuple.Create("Action bar (Dynamic tabs)", new ViewModelCommandParameter(typeof (TabViewModel))),
-                Tuple.Create("Action bar (Static tabs)", new ViewModelCommandParameter(typeof (StaticTabViewModel))),                
+                Tuple.Create("Action bar (Static tabs)", new ViewModelCommandParameter(typeof (StaticTabViewModel))),
                 Tuple.Create("Context action bar", new ViewModelCommandParameter(typeof (ContextActionBarViewModel))),
                 Tuple.Create("Tab host (Dynamic tabs)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabHostView)),
                 Tuple.Create("Action bar (Dynamic menu)", new ViewModelCommandParameter(typeof (MenuViewModel))),
@@ -41,6 +41,8 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Back stack fragment", new ViewModelCommandParameter(typeof (BackStackFragmetViewModel), Constants.PopupMenuView)),
                 Tuple.Create("ItemsSource with DataTemplateSelector", new ViewModelCommandParameter(typeof (ListDataTemplateViewModel))),
                 Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CardRecyclerView)),
+                Tuple.Create("Preference", new ViewModelCommandParameter(typeof (PreferenceViewModel))),
+                Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof (PreferenceViewModel), Constants.PreferenceHeaderView)),
 #if APPCOMPAT
                 Tuple.Create("Tab layout (Design)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabLayoutView)),
                 Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),

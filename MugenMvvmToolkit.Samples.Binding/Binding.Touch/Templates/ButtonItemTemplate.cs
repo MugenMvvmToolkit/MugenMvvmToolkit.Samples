@@ -39,6 +39,7 @@ namespace Binding.Touch.Templates
             bindingSet.Bind(() => e => e.Caption).To(() => t => t.Item1).OneTime();
             bindingSet.Bind(AttachedMembers.StringElement.TappedEvent)
                 .To(() => vm => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
+                .OneTime()
                 .WithCommandParameter(() => tuple => tuple.Item2);
         }
 

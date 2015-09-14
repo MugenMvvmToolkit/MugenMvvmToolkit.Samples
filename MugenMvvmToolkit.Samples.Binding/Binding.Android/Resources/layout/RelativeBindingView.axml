@@ -24,7 +24,6 @@
                  android:layout_margin="2px">
         <AppCompatEditText android:layout_height="wrap_content"
                            android:layout_width="fill_parent"
-                           android:inputType="number"
                            android:hint="Element value by tag name (SeekBarView)"
                            pkg:Bind="Text $Element(SeekBarView).Progress, Mode=TwoWay" />
       </TextInputLayout>
@@ -34,7 +33,6 @@
                  android:layout_margin="2px">
         <AppCompatEditText android:layout_height="wrap_content"
                            android:layout_width="fill_parent"
-                           android:inputType="number"
                            android:hint="Element value by id (seekBar)"
                            pkg:Bind="Text $Element(seekBar).Progress, Mode=TwoWay" />
       </TextInputLayout>
@@ -45,7 +43,6 @@
            android:layout_margin="2px">
         <AppCompatEditText android:layout_height="wrap_content"
                            android:layout_width="fill_parent"
-                           android:inputType="number"
                            android:hint="The current title"
                            pkg:Bind="Text $Relative(Activity).Title, Mode=TwoWay" />
       </TextInputLayout>

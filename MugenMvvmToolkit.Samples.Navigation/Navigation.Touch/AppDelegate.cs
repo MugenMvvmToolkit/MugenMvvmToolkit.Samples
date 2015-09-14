@@ -3,7 +3,6 @@ using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Infrastructure;
-using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch
 {
@@ -33,7 +32,7 @@ namespace Navigation.Touch
         {
             // create a new window instance based on the screen size
             _window = new UIWindow(UIScreen.MainScreen.Bounds);
-            _bootstrapper = new Bootstrapper<MainViewModel>(_window, new AutofacContainer());
+            _bootstrapper = new Bootstrapper<Portable.App>(_window, new AutofacContainer());
             _bootstrapper.Initialize();
             return true;
         }

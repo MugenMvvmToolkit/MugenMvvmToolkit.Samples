@@ -61,10 +61,12 @@ namespace ApiExamples.Views
                 {
                     set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
                         .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
+                        .OneTime()
                         .WithCommandParameter(() => model => model)
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
                         .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
+                        .OneTime()
                         .WithCommandParameter(() => model => model)
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)

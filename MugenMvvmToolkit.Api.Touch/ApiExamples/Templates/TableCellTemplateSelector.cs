@@ -55,10 +55,12 @@ namespace ApiExamples.Templates
 
             bindingSet.Bind(AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
                 .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
+                .OneTime()
                 .WithCommandParameter(() => model => model)
                 .ToggleEnabledState(false);
             bindingSet.Bind(AttachedMembers.UITableViewCell.DeleteClickEvent)
                 .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
+                .OneTime()
                 .WithCommandParameter(() => model => model)
                 .ToggleEnabledState(false);
 

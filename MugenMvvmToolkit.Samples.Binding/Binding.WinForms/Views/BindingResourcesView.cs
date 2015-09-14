@@ -19,6 +19,8 @@ namespace Binding.WinForms.Views
                 set.Bind(methodLabel)
                     .To(() => model => BindingSyntaxEx.ResourceMethod<object>("Method"));
                 set.BindFromExpression(typeLabel, "Text $CustomType.StaticMethod()");
+                set.Bind(updateResBtn)
+                    .To(() => vm => vm.UpdateResourceCommand);
             }
         }
     }

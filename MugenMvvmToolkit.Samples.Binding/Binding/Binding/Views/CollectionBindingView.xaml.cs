@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MugenMvvmToolkit.Xamarin.Forms;
+using Xamarin.Forms;
 
 namespace Binding.Views
 {
