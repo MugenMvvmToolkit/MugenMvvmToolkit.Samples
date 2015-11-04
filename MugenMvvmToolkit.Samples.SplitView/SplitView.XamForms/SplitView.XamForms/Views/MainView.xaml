@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+                  x:Class="SplitView.XamForms.Views.MainView">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Master page">
+      <ListView ItemsSource="{markupExtensions:DataBinding Items}"
+                SelectedItem="{markupExtensions:DataBinding SelectedItem}"
+                markupExtensions:View.Bind="ItemTapped OpenItemCommand, CommandParameter=$args.Item;"
+                ItemTapped="ListView_OnItemTapped">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <Label Text="{markupExtensions:DataBinding Name}" />
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <ContentPage Content="{markupExtensions:DataBinding '$GetView(SelectedItem)'}" />
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
