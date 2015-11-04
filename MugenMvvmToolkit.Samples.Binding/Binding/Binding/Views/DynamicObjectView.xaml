@@ -12,9 +12,9 @@
     <Label Text="{mugen:DataBinding DynamicProperty}" TextColor="Green" />
 
     <Label Text="Dynamic method call:" />
-    <Label Text="{mugen:DataBinding $context.DynamicMethod(DynamicProperty)}" TextColor="Green" />
+    <Label Text="{mugen:DataBinding '$context.DynamicMethod(DynamicProperty)'}" TextColor="Green" />
 
     <Label Text="Dynamic index call:" />
-    <Label Text="{mugen:DataBinding $context[DynamicProperty]}" TextColor="Green" />
+    <Label Text="{mugen:DataBinding '$context[DynamicProperty]'}" TextColor="Green" />
   </StackLayout>
 </ContentPage>

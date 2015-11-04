@@ -1,5 +1,6 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
 using Microsoft.Phone.Controls;
+using MugenMvvmToolkit.WinPhone;
 
 namespace OrderManager.WindowsPhone.Views
 {
@@ -16,9 +17,9 @@ namespace OrderManager.WindowsPhone.Views
 
         #region Methods
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        protected override void OnBackKeyPress(CancelEventArgs e)
         {
-            Application.Current.Terminate();
+            PlatformExtensions.HandleMainPageOnBackKeyPress(base.OnBackKeyPress, e);
         }
 
         #endregion

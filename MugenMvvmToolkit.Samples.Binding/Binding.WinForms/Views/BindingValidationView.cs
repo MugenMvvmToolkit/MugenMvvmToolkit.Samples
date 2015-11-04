@@ -18,41 +18,41 @@ namespace Binding.WinForms.Views
             using (var set = new BindingSet<BindingValidationViewModel>())
             {
                 set.Bind(propertyTb)
-                    .To(() => vm => vm.Property)
+                    .To(() => (vm, ctx) => vm.Property)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
                 set.Bind(propertyLabel)
-                    .To(() => vm => BindingSyntaxEx.GetErrors(vm.Property).FirstOrDefault());
+                    .To(() => (vm, ctx) => ctx.GetErrors(vm.Property).FirstOrDefault());
 
                 set.Bind(propertyEx1Tb)
-                    .To(() => vm => vm.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
                 set.Bind(propertyExt1Label)
-                    .To(() => vm => BindingSyntaxEx.Element<TextBox>("propertyEx1Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
+                    .To(() => (vm, ctx) => ctx.Element<TextBox>("propertyEx1Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
 
                 set.Bind(propertyEx2Tb)
-                    .To(() => vm => vm.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnExceptions();
                 set.Bind(propertyExt2Label)
-                    .To(() => vm => BindingSyntaxEx.Element<TextBox>("propertyEx2Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
+                    .To(() => (vm, ctx) => ctx.Element<TextBox>("propertyEx2Tb").Member<IEnumerable<object>>("Errors").FirstOrDefault());
 
 
                 set.Bind(propertyEx3Tb)
-                    .To(() => vm => vm.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .Validate(); //Validate is equivalent to ValidatesOnNotifyDataErrors and ValidatesOnExceptions
                 set.Bind(propertyExt3Label)
-                    .To(() => vm => BindingSyntaxEx.GetErrors(vm.PropertyWithException).FirstOrDefault());
+                    .To(() => (vm, ctx) => ctx.GetErrors(vm.PropertyWithException).FirstOrDefault());
 
-                set.Bind(addErrorButton).To(() => vm => vm.AddErrorCommand);
-                set.Bind(clearErrorButton).To(() => vm => vm.RemoveErrorCommand);
+                set.Bind(addErrorButton).To(() => (vm, ctx) => vm.AddErrorCommand);
+                set.Bind(clearErrorButton).To(() => (vm, ctx) => vm.RemoveErrorCommand);
 
                 set.Bind(validationSumHeaderLabel, () => l => l.Visible)
-                    .To(() => vm => BindingSyntaxEx.GetErrors().Any());
+                    .To(() => (vm, ctx) => ctx.GetErrors().Any());
                 set.Bind(validationSumLabel)
-                    .To(() => vm => string.Join(Environment.NewLine, BindingSyntaxEx.GetErrors()));
+                    .To(() => (vm, ctx) => string.Join(Environment.NewLine, ctx.GetErrors()));
             }
         }
     }

@@ -37,7 +37,7 @@
             <Label Text="View model is valid" Grid.Row="6" TextColor="Green"
                    IsVisible="{mugen:DataBinding IsValid}" />
             <Label Text="View model is not valid" Grid.Row="6" TextColor="Red"
-                   IsVisible="{mugen:DataBinding !IsValid}" />
+                   IsVisible="{mugen:DataBinding '!IsValid'}" />
         </Grid>
 
         <Grid Grid.Row="1">

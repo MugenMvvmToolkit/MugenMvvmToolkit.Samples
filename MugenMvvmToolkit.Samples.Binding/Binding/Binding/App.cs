@@ -6,11 +6,15 @@ namespace Binding
 {
     public class App : Application
     {
+        #region Constructors
+
         public App()
         {
-            XamarinFormsBootstrapperBase bootstrapper = XamarinFormsBootstrapperBase.Current ??
-                                                        new Bootstrapper<Portable.App>(new AutofacContainer());
+            var bootstrapper = XamarinFormsBootstrapperBase.Current ??
+                               new Bootstrapper<Portable.App>(new AutofacContainer());
             MainPage = bootstrapper.Start();
         }
+
+        #endregion
     }
 }

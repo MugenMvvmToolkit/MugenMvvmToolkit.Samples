@@ -24,14 +24,14 @@ namespace Validation.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 70, View.Frame.Width - 20, 30);
                 button.SetTitle("Validation using data annotations", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.ShowAnnotationCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowAnnotationCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 100, View.Frame.Width - 20, 30);
                 button.SetTitle("Validation using validators", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.ShowUserEditorCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowUserEditorCommand);
                 View.AddSubview(button);
             }
         }

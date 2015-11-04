@@ -30,7 +30,7 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.UserEditorViewModel.Name)
+                    .To(() => (vm, ctx) => vm.UserEditorViewModel.Name)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -51,13 +51,13 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.UserEditorViewModel.Login)
+                    .To(() => (vm, ctx) => vm.UserEditorViewModel.Login)
                     .TwoWay()
                     .WithDelay(400)
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
                 set.Bind(textField, () => v => v.LeftViewMode)
-                    .To(() => vm => vm.UserEditorViewModel.IsLoginValidating ? UITextFieldViewMode.Always : UITextFieldViewMode.Never);
+                    .To(() => (vm, ctx) => vm.UserEditorViewModel.IsLoginValidating ? UITextFieldViewMode.Always : UITextFieldViewMode.Never);
                 textField.LeftView = label;
                 View.AddSubview(textField);
 
@@ -68,7 +68,7 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.UserEditorViewModel.Email)
+                    .To(() => (vm, ctx) => vm.UserEditorViewModel.Email)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -78,14 +78,14 @@ namespace Validation.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Add", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.AddUserCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.AddUserCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.RoundedRect);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(View.Frame.Width / 2 - 20, 190, View.Frame.Width / 2 - 20, 30);
                 button.SetTitle("Remove", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.RemoveUserCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.RemoveUserCommand);
                 View.AddSubview(button);
 
 
@@ -98,13 +98,13 @@ namespace Validation.Touch.Views
                 {
                     cell.TextLabel.AdjustsFontSizeToFitWidth = true;
                     cell.TextLabel.Bind()
-                        .To<UserModel>(() => m => string.Format("Name: {0} Login: {1} Email: {2}", m.Name, m.Login, m.Email))
+                        .To<UserModel>(() => (m, ctx) => string.Format("Name: {0} Login: {1} Email: {2}", m.Name, m.Login, m.Email))
                         .Build();
                 });
                 set.Bind(tableView, AttachedMemberConstants.ItemsSource)
-                    .To(() => model => model.UserGridViewModel.ItemsSource);
+                    .To(() => (vm, ctx) => vm.UserGridViewModel.ItemsSource);
                 set.Bind(tableView, AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.UserGridViewModel.SelectedItem)
+                    .To(() => (vm, ctx) => vm.UserGridViewModel.SelectedItem)
                     .TwoWay();
                 View.AddSubview(tableView);
             }

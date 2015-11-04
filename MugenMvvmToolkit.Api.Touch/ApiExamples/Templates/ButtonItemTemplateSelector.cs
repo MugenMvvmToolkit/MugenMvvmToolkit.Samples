@@ -37,11 +37,11 @@ namespace ApiExamples.Templates
         protected override void Initialize(StringElement template,
             BindingSet<StringElement, Tuple<string, ViewModelCommandParameter>> bindingSet)
         {
-            bindingSet.Bind(() => element => element.Caption).To(() => tuple => tuple.Item1);
+            bindingSet.Bind(() => element => element.Caption).To(() => (tuple, ctx) => tuple.Item1);
             bindingSet.Bind(AttachedMembers.StringElement.TappedEvent)
-                .To(() => model => BindingSyntaxEx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
+                .To(() => (tuple, ctx) => ctx.Relative<UIViewController>().DataContext<MainViewModel>().ShowCommand)
                 .OneTime()
-                .WithCommandParameter(() => tuple => tuple.Item2);
+                .WithCommandParameter(() => (tuple, ctx) => tuple.Item2);
         }
 
         #endregion

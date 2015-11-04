@@ -48,7 +48,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Property)
+                    .To(() => (vm, ctx) => vm.Property)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
                 scrollView.AddSubview(textField);
@@ -69,7 +69,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnNotifyDataErrors();
                 scrollView.AddSubview(textField);
@@ -89,7 +89,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .ValidatesOnExceptions();
                 scrollView.AddSubview(textField);
@@ -109,7 +109,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.PropertyWithException)
+                    .To(() => (vm, ctx) => vm.PropertyWithException)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -119,14 +119,14 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 220, View.Frame.Width - 40, 30);
                 button.SetTitle("Set error(PropertyWithException)", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.AddErrorCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.AddErrorCommand);
                 scrollView.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 250, View.Frame.Width - 40, 30);
                 button.SetTitle("Clear error(PropertyWithException)", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.RemoveErrorCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.RemoveErrorCommand);
                 scrollView.AddSubview(button);
 
                 label = new UILabel(new CGRect(20, 280, View.Frame.Width - 40, 25))
@@ -136,7 +136,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label, "Visible")
-                    .To(() => vm => BindingSyntaxEx.GetErrors().Any());
+                    .To(() => (vm, ctx) => ctx.GetErrors().Any());
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 305, View.Frame.Width - 40, 25))
@@ -147,7 +147,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Red,
                     AdjustsFontSizeToFitWidth = true
                 };
-                set.Bind(label, AttachedMembers.UILabel.TextSizeToFit).To(() => vm => string.Join(Environment.NewLine, BindingSyntaxEx.GetErrors()));
+                set.Bind(label, AttachedMembers.UILabel.TextSizeToFit).To(() => (vm, ctx) => string.Join(Environment.NewLine, ctx.GetErrors()));
                 scrollView.AddSubview(label);
             }
         }

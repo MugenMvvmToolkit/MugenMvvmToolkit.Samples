@@ -45,7 +45,7 @@ namespace OrderManager.Touch.Views.Orders
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Name)
+                    .To(() => (vm, ctx) => vm.Name)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -65,7 +65,7 @@ namespace OrderManager.Touch.Views.Orders
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Number)
+                    .To(() => (vm, ctx) => vm.Number)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);

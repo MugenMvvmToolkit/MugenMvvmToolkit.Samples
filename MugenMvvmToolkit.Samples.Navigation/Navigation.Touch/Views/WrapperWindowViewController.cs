@@ -19,18 +19,18 @@ namespace Navigation.Touch.Views
 
             using (var set = new BindingSet<WrapperWindowViewModel>())
             {
-                set.Bind(this, () => controller => controller.Title).To(() => model => model.DisplayName);
+                set.Bind(this, () => controller => controller.Title).To(() => (vm, ctx) => vm.DisplayName);
 
                 //Content
                 var contentPlaceholder = new UIView(new CGRect(0, 0, View.Frame.Width, View.Frame.Height - 50));
-                set.Bind(contentPlaceholder, AttachedMemberConstants.Content).To(() => model => model.ViewModel);
+                set.Bind(contentPlaceholder, AttachedMemberConstants.Content).To(() => (vm, ctx) => vm.ViewModel);
                 View.AddSubview(contentPlaceholder);
 
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, View.Frame.Height - 40, View.Bounds.Width, 30);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleDimensions;
                 button.SetTitle("Close from wrapper", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.CloseCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.CloseCommand);
                 Add(button);
             }
         }

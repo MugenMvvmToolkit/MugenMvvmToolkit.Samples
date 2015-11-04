@@ -62,7 +62,7 @@ namespace Binding.WinForms.Views
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
             target.Bind(() => t => t.Value)
-                .To(model, () => m => m.Property)
+                .To(model, () => (vm, ctx) => vm.Property)
                 .TwoWay()
                 .Build();
             Controls.Add(target);
@@ -83,7 +83,7 @@ namespace Binding.WinForms.Views
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
             target.Bind(() => m => m.Value)
-                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .To(model, () => (vm, ctx) => (vm.Property ?? string.Empty).Length + vm.Property)
                 .Build();
             Controls.Add(target);
 

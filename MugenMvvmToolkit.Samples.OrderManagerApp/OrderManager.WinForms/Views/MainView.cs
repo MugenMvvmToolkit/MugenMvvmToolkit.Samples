@@ -17,17 +17,17 @@ namespace OrderManager.WinForms.Views
                 tabControl1.SetBindingMemberValue(AttachedMembers.Object.ItemTemplateSelector,
                     ViewModelTabDataTemplate.Instance);
                 set.Bind(tabControl1, AttachedMembers.Object.ItemsSource)
-                   .To(() => m => m.ItemsSource);
+                   .To(() => (vm, ctx) => vm.ItemsSource);
                 set.Bind(tabControl1, AttachedMembers.TabControl.SelectedItem)
-                   .To(() => m => m.SelectedItem)
+                   .To(() => (vm, ctx) => vm.SelectedItem)
                    .TwoWay();
 
                 set.Bind(ordersToolStripMenuItem)
-                   .To(() => m => m.OpenOrdersCommand);
+                   .To(() => (vm, ctx) => vm.OpenOrdersCommand);
                 set.Bind(productsToolStripMenuItem)
-                   .To(() => m => m.OpenProductsCommand);
+                   .To(() => (vm, ctx) => vm.OpenProductsCommand);
                 set.Bind(exitToolStripMenuItem)
-                   .To(() => m => m.CloseCommand);
+                   .To(() => (vm, ctx) => vm.CloseCommand);
             }
         }
     }

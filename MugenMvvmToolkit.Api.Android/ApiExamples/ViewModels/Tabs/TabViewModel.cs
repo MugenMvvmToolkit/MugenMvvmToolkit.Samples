@@ -1,6 +1,4 @@
-using System.Linq;
 using System.Windows.Input;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
 
@@ -16,6 +14,25 @@ namespace ApiExamples.ViewModels.Tabs
             InsertCommand = new RelayCommand(Insert, CanInsert, this);
             RemoveCommand = new RelayCommand(Remove, CanRemove, this);
         }
+
+        #endregion
+
+        #region Methods
+
+        #region Overrides of ViewModelBase
+
+        protected override void OnInitialized()
+        {
+            for (var i = 0; i < 4; i++)
+            {
+                var itemViewModel = GetViewModel<ItemViewModel>();
+                itemViewModel.Name = "Default item";
+                ItemsSource.Add(itemViewModel);
+            }
+            SelectedItem = ItemsSource[0];
+        }
+
+        #endregion
 
         #endregion
 
@@ -54,24 +71,9 @@ namespace ApiExamples.ViewModels.Tabs
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
             itemViewModel.Name = "Dynamic item";
-            int selectedIndex = ItemsSource.IndexOf(SelectedItem);
+            var selectedIndex = ItemsSource.IndexOf(SelectedItem);
             ItemsSource.Insert(selectedIndex, itemViewModel);
             SelectedItem = itemViewModel;
-        }
-
-        #endregion
-
-        #region Overrides of ViewModelBase
-
-        protected override void OnInitialized()
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                var itemViewModel = GetViewModel<ItemViewModel>();
-                itemViewModel.Name = "Default item";
-                ItemsSource.Add(itemViewModel);
-            }
-            SelectedItem = ItemsSource[0];
         }
 
         #endregion

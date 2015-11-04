@@ -22,16 +22,16 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (vm, ctx) => vm.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (vm, ctx) => vm.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (vm, ctx) => vm.RemoveCommand))
                 };
 
-                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
-                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
-                set.Bind(this, () => controller => controller.Title).To(() => vm => ((ItemViewModel)vm.SelectedItem).Id);
+                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
+                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
+                set.Bind(this, () => controller => controller.Title).To(() => (vm, ctx) => ((ItemViewModel)vm.SelectedItem).Id);
             }
         }
 

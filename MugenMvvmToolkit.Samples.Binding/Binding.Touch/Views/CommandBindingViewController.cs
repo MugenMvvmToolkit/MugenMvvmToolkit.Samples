@@ -41,7 +41,7 @@ namespace Binding.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
                 };
                 set.Bind(uiSwitch)
-                    .To(() => model => model.CanExecuteCommand)
+                    .To(() => (vm, ctx) => vm.CanExecuteCommand)
                     .TwoWay();
                 scrollView.AddSubview(uiSwitch);
 
@@ -58,7 +58,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 55, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.Command).WithCommandParameter("1");
+                set.Bind(button).To(() => (vm, ctx) => vm.Command).WithCommandParameter("1");
                 scrollView.AddSubview(button);
 
 
@@ -74,7 +74,7 @@ namespace Binding.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 110, View.Frame.Width - 40, 30);
                 button.SetTitle("Click", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.Command).ToggleEnabledState(false).WithCommandParameter("2");
+                set.Bind(button).To(() => (vm, ctx) => vm.Command).ToggleEnabledState(false).WithCommandParameter("2");
                 scrollView.AddSubview(button);
 
                 label = new UILabel(new CGRect(20, 140, View.Frame.Width - 40, 25))
@@ -91,7 +91,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(null));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(null));
                 scrollView.AddSubview(textField);
 
 
@@ -109,7 +109,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.Self<UITextField>().Text));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(ctx.Self().Text));
                 scrollView.AddSubview(textField);
 
                 label = new UILabel(new CGRect(20, 250, View.Frame.Width - 40, 25))
@@ -126,7 +126,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.EventArgs<object>()));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(ctx.EventArgs<object>()));
                 scrollView.AddSubview(textField);
 
 
@@ -144,7 +144,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethodMultiParams(BindingSyntaxEx.Self<UITextField>().Text, BindingSyntaxEx.EventArgs<object>()));
+                    .ToAction(() => (vm, ctx) => vm.EventMethodMultiParams(ctx.Self<UITextField>().Text, ctx.EventArgs<object>()));
                 scrollView.AddSubview(textField);
             }
         }

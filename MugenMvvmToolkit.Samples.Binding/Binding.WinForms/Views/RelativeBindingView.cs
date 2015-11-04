@@ -15,15 +15,15 @@ namespace Binding.WinForms.Views
             using (var set = new BindingSet<RelativeBindingViewModel>())
             {
                 set.Bind(trackBarTb)
-                   .To<object>(() => vm => BindingSyntaxEx.Element<TrackBar>("trackBar").Value)
+                   .To<object>(() => (vm, ctx) => ctx.Element<TrackBar>("trackBar").Value)
                    .TwoWay();
                 set.Bind(titleTb)
-                   .To(() => vm => BindingSyntaxEx.Relative<Form>().Text)
+                   .To(() => (vm, ctx) => ctx.Relative<Form>().Text)
                    .TwoWay();
                 set.Bind(selfLabel)
-                   .ToSelf(() => label => label.Width);
+                   .ToSelf(() => (label, ctx) => label.Width);
                 set.Bind(rootLabel)
-                   .To(() => vm => BindingSyntaxEx.Root<object>());
+                   .To(() => (vm, ctx) => ctx.Root<object>());
             }
         }
     }

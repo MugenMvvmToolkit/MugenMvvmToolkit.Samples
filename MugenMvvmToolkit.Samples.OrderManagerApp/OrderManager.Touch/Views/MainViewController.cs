@@ -25,14 +25,14 @@ namespace OrderManager.Touch.Views
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 65, View.Frame.Width - 40, 30);
                 button.SetTitle("Products", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.OpenProductsCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.OpenProductsCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 button.Frame = new CGRect(20, 95, View.Frame.Width - 40, 30);
                 button.SetTitle("Orders", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.OpenOrdersCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.OpenOrdersCommand);
                 View.AddSubview(button);
             }
         }

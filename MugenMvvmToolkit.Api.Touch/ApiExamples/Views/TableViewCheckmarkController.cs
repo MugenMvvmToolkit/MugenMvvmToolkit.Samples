@@ -29,14 +29,14 @@ namespace ApiExamples.Views
             using (var set = new BindingSet<UITableView, TableViewModel>(TableView))
             {
                 NavigationItem.RightBarButtonItem = new UIBarButtonItem("Invert selection", UIBarButtonItemStyle.Plain, null);
-                set.Bind(NavigationItem.RightBarButtonItem).To(() => model => model.InvertSelectionCommand);
+                set.Bind(NavigationItem.RightBarButtonItem).To(() => (vm, ctx) => vm.InvertSelectionCommand);
 
                 var searchBar = new UISearchBar(new RectangleF(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => (vm, ctx) => vm.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
-                   .To(() => model => model.GridViewModel.ItemsSource);
+                   .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
             }
 
             TableView.SetCellBind(cell =>
@@ -48,16 +48,16 @@ namespace ApiExamples.Views
                 using (var set = new BindingSet<TableItemModel>())
                 {
                     set.Bind(cell, () => c => c.Accessory)
-                       .ToSelf(() => c => c.Selected)
+                       .ToSelf(() => (c, ctx) => c.Selected)
                        .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
 
-                    set.Bind(cell, () => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
-                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).OneWayToSource();
-                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
+                    set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (model, ctx) => model.IsSelected).TwoWay();
+                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (model, ctx) => model.IsHighlighted).OneWayToSource();
+                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => (model, ctx) => model.Editing).OneWayToSource();
 
-                    set.Bind(cell.TextLabel).To(() => model => model.Name);
+                    set.Bind(cell.TextLabel).To(() => (model, ctx) => model.Name);
                     set.Bind(cell.DetailTextLabel)
-                        .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
+                        .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
                 }
             });
         }

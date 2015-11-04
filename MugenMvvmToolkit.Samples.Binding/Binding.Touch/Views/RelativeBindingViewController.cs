@@ -38,7 +38,7 @@ namespace Binding.Touch.Views
                 };
 
                 set.Bind(textField)
-                    .To<object>(() => o => BindingSyntaxEx.Element<UISlider>("slider").Value)
+                    .To<object>(() => (vm, ctx) => ctx.Element<UISlider>("slider").Value)
                     .TwoWay();
                 View.AddSubview(textField);
 
@@ -57,7 +57,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To<object>(() => o => BindingSyntaxEx.Relative<UIViewController>().Title)
+                    .To<object>(() => (vm, ctx) => ctx.Relative<UIViewController>().Title)
                     .TwoWay();
                 View.AddSubview(textField);
 
@@ -77,7 +77,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green
                 };
                 set.Bind(label)
-                    .ToSelf(() => l => l.Frame.Width);
+                    .ToSelf(() => (l, ctx) => l.Frame.Width);
                 View.AddSubview(label);
 
 
@@ -96,7 +96,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green
                 };
                 set.Bind(label)
-                    .To<object>(() => o => BindingSyntaxEx.Root<object>());
+                    .To<object>(() => (vm, ctx) => ctx.Root<object>());
                 View.AddSubview(label);
             }
         }

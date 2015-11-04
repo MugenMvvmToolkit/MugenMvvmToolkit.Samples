@@ -8,6 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.WinPhone.Infrastructure;
+using MugenMvvmToolkit.WinPhone.Infrastructure.Navigation;
 using Navigation.Portable.ViewModels;
 using Navigation.WindowsPhone.Resources;
 
@@ -56,7 +57,7 @@ namespace Navigation.WindowsPhone
                 // Caution:- Use this under debug mode only. Application that disables user idle detection will continue to run
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
-            }            
+            }
             var bootstrapper = new Bootstrapper<Portable.App>(RootFrame, new AutofacContainer());
             bootstrapper.Initialize();
         }

@@ -34,20 +34,20 @@ namespace ApiExamples.Views
                     NavigationItem.RightBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
                 };
                 var addItem = new UIBarButtonItem { Title = "Add" };
-                set.Bind(addItem).To(() => model => model.AddCommand);
+                set.Bind(addItem).To(() => (vm, ctx) => vm.AddCommand);
                 NavigationItem.RightBarButtonItems = new[] { editItem, addItem };
 
                 var searchBar = new UISearchBar(new RectangleF(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => (vm, ctx) => vm.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
-                    .To(() => model => model.GridViewModel.ItemsSource);
+                    .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.GridViewModel.SelectedItem)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
                 set.Bind(this, () => controller => controller.Title)
-                    .To(() => model => model.GridViewModel.SelectedItem.Name)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem.Name)
                     .WithFallback("Nothing selected");
                 TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, TableCellTemplateSelector.Instance);
             }

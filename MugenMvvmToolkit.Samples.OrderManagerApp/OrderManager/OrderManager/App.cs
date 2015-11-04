@@ -2,7 +2,7 @@
 using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;
 using Xamarin.Forms;
 
-namespace OrderManager
+namespace OrderManager.XamForms
 {
     public class App : Application
     {

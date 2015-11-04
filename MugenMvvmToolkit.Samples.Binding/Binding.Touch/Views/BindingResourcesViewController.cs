@@ -45,7 +45,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource<object>("obj"));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource<object>("obj"));
                 scrollView.AddSubview(label);
 
 
@@ -88,7 +88,7 @@ namespace Binding.Touch.Views
                 btn.Frame = new CGRect(20, 150, View.Frame.Width - 40, 25);
                 btn.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
                 btn.SetTitle("Update resource", UIControlState.Normal);
-                set.Bind(btn).To(() => m => m.UpdateResourceCommand);
+                set.Bind(btn).To(() => (vm, ctx) => vm.UpdateResourceCommand);
                 scrollView.AddSubview(btn);
             }
         }

@@ -232,12 +232,12 @@ namespace Binding.Portable.Infrastructure
             return _bindingManager.IsRegistered(binding);
         }
 
-        public IEnumerable<IDataBinding> GetBindings(object target, IDataContext context = null)
+        public ICollection<IDataBinding> GetBindings(object target, IDataContext context = null)
         {
             return _bindingManager.GetBindings(target, context);
         }
 
-        public IEnumerable<IDataBinding> GetBindings(object target, string path, IDataContext context = null)
+        public ICollection<IDataBinding> GetBindings(object target, string path, IDataContext context = null)
         {
             return _bindingManager.GetBindings(target, path, context);
         }

@@ -177,16 +177,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\wp8\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.5.0.0\lib\wp8\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.3.0\lib\wp8\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.5.0.0\lib\wp8\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinPhone, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\wp8\MugenMvvmToolkit.WinPhone.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WinPhone, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.5.0.0\lib\wp8\MugenMvvmToolkit.WinPhone.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

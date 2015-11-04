@@ -31,10 +31,10 @@ namespace ApiExamples.Templates
 
         protected override void Initialize(TabPage template, BindingSet<TabPage, ItemViewModel> bindingSet)
         {
-            bindingSet.Bind(() => page => page.Text).To(() => model => model.Name);
+            bindingSet.Bind(() => page => page.Text).To(() => (model, ctx) => model.Name);
 
             var label = new Label();
-            bindingSet.Bind(label).To(() => model => model.Id);
+            bindingSet.Bind(label).To(() => (model, ctx) => model.Id);
             template.Controls.Add(label);
         }
 

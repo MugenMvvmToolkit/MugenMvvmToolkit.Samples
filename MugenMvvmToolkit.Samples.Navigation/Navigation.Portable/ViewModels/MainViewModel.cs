@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Infrastructure.Presenters;
@@ -18,6 +16,8 @@ namespace Navigation.Portable.ViewModels
     {
         #region Fields
 
+        private readonly IMessagePresenter _messagePresenter;
+
         private readonly IDynamicViewModelPresenter _presenter;
         private readonly IToastPresenter _toastPresenter;
         private readonly IViewModelPresenter _viewModelPresenter;
@@ -26,12 +26,14 @@ namespace Navigation.Portable.ViewModels
 
         #region Constructors
 
-        public MainViewModel(IViewModelPresenter viewModelPresenter, IToastPresenter toastPresenter)
+        public MainViewModel(IViewModelPresenter viewModelPresenter, IToastPresenter toastPresenter, IMessagePresenter messagePresenter)
         {
             Should.NotBeNull(viewModelPresenter, "viewModelPresenter");
             Should.NotBeNull(toastPresenter, "toastPresenter");
+            Should.NotBeNull(messagePresenter, "messagePresenter");
             _viewModelPresenter = viewModelPresenter;
             _toastPresenter = toastPresenter;
+            _messagePresenter = messagePresenter;
             ShowFirstWindowCommand = RelayCommandBase.FromAsyncHandler(ShowFirstWindow);
             ShowSecondWindowCommand = RelayCommandBase.FromAsyncHandler(ShowSecondWindow);
             ShowFirstTabCommand = RelayCommandBase.FromAsyncHandler(ShowFirstTab);
@@ -44,6 +46,38 @@ namespace Navigation.Portable.ViewModels
             _presenter = new DynamicMultiViewModelPresenter(this);
             viewModelPresenter.DynamicPresenters.Add(_presenter);
         }
+
+        #endregion
+
+        #region Methods
+
+        private void ShowOpenNotification(IViewModel viewModel, string type)
+        {
+            _toastPresenter.ShowAsync(string.Format("The '{0}' is opened ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
+        }
+
+        private void ShowCloseNotification(IViewModel viewModel, string type)
+        {
+            _toastPresenter.ShowAsync(string.Format("The '{0}' is closed ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
+        }
+
+        #region Overrides of ViewModelBase
+
+        public override async Task<bool> CloseAsync(object parameter = null)
+        {
+            if (ItemsSource.Count == 0)
+                return await _messagePresenter.ShowAsync("Are you sure you want to exit?", "Exit", MessageButton.YesNo) == MessageResult.Yes;
+            return await base.CloseAsync(parameter);
+        }
+
+        protected override void OnDispose(bool disposing)
+        {
+            if (disposing)
+                _viewModelPresenter.DynamicPresenters.Remove(_presenter);
+            base.OnDispose(disposing);
+        }
+
+        #endregion
 
         #endregion
 
@@ -171,21 +205,7 @@ namespace Navigation.Portable.ViewModels
 
         #endregion
 
-        #region Methods
-
-        private void ShowOpenNotification(IViewModel viewModel, string type)
-        {
-            _toastPresenter.ShowAsync(string.Format("The '{0}' is opened ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
-        }
-
-        private void ShowCloseNotification(IViewModel viewModel, string type)
-        {
-            _toastPresenter.ShowAsync(string.Format("The '{0}' is closed ({1}).", viewModel.GetType().Name, type), ToastDuration.Short);
-        }
-
-        #endregion
-
-        #region Implementation of IHasState
+        #region Implementation of interfaces
 
         public void LoadState(IDataContext state)
         {
@@ -197,35 +217,20 @@ namespace Navigation.Portable.ViewModels
             PreserveViewModels(state);
         }
 
-        #endregion
-
-        #region Overrides of ViewModelBase
-
-        protected override void OnDispose(bool disposing)
-        {
-            if (disposing)
-                _viewModelPresenter.DynamicPresenters.Remove(_presenter);
-            base.OnDispose(disposing);
-        }
-
-        #endregion
-
-        #region Implementation of INavigableViewModel
-
         void INavigableViewModel.OnNavigatedTo(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
             return Empty.TrueTask;
         }
 
         void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         #endregion

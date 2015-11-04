@@ -36,20 +36,20 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.AddCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.RemoveCommand))
                 };
 
                 CollectionView.SetBindingMemberValue(AttachedMembers.UICollectionView.ItemTemplateSelector,
                     CollectionViewCellTemplateSelector.Instance);
                 set.Bind(CollectionView, AttachedMemberConstants.ItemsSource)
-                    .To(() => model => model.GridViewModel.ItemsSource);
+                    .To(() => (m, ctx) => m.GridViewModel.ItemsSource);
                 set.Bind(CollectionView, AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.GridViewModel.SelectedItem)
+                    .To(() => (m, ctx) => m.GridViewModel.SelectedItem)
                     .TwoWay();
                 set.Bind(this, () => controller => controller.Title)
-                    .To(() => model => model.GridViewModel.SelectedItem.Name)
+                    .To(() => (m, ctx) => m.GridViewModel.SelectedItem.Name)
                     .WithFallback("Nothing selected");
             }
         }

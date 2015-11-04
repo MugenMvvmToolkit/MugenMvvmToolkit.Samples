@@ -8,7 +8,6 @@ using ApiExamples.ViewModels.Menus;
 using ApiExamples.ViewModels.Tabs;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Presenters;
-using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
 
@@ -19,7 +18,6 @@ namespace ApiExamples.ViewModels
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
-        private IList<Tuple<string, ViewModelCommandParameter>> _items;
 
         #endregion
 
@@ -43,10 +41,11 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CardRecyclerView)),
                 Tuple.Create("Preference", new ViewModelCommandParameter(typeof (PreferenceViewModel))),
                 Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof (PreferenceViewModel), Constants.PreferenceHeaderView)),
-#if APPCOMPAT
-                Tuple.Create("Tab layout (Design)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabLayoutView)),
+#if APPCOMPAT                
                 Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),
                 Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel))),
+                Tuple.Create("Snackbar (Design)", new ViewModelCommandParameter(typeof (SnackbarViewModel))),
+                Tuple.Create("Tab layout (Design)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabLayoutView)),
                 Tuple.Create("Navigation view (Design)", new ViewModelCommandParameter(typeof (NavigationViewModel)))
 #endif
             };
@@ -57,11 +56,7 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public IList<Tuple<string, ViewModelCommandParameter>> Items
-        {
-            get { return _items; }
-            private set { _items = value; }
-        }
+        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; private set; }
 
         #endregion
 
@@ -71,7 +66,7 @@ namespace ApiExamples.ViewModels
 
         private async Task Show(ViewModelCommandParameter parameter)
         {
-            using (IViewModel viewModel = GetViewModel(parameter.ViewModelType))
+            using (var viewModel = GetViewModel(parameter.ViewModelType))
             {
                 await viewModel.ShowAsync(parameter.Context);
                 _toastPresenter.ShowAsync(viewModel.GetType().Name + " is closed", ToastDuration.Long);

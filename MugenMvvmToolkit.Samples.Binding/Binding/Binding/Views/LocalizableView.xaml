@@ -5,9 +5,9 @@
              xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
              x:Class="Binding.Views.LocalizableView">
     <StackLayout Padding="4">
-        <Label Text="{mugen:DataBinding $i18n.AddText}" />
-        <Label Text="{mugen:DataBinding $i18n.EditText}" />
-        <Label Text="{mugen:DataBinding $i18n.DeleteText}" />
+        <Label Text="{mugen:DataBinding '$i18n.AddText'}" />
+        <Label Text="{mugen:DataBinding '$i18n.EditText'}" />
+        <Label Text="{mugen:DataBinding '$i18n.DeleteText'}" />
 
         <ListView ItemsSource="{mugen:DataBinding Cultures}"
                   SelectedItem="{mugen:DataBinding SelectedCulture, Mode=TwoWay}" />

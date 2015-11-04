@@ -41,7 +41,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
@@ -50,7 +50,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
@@ -59,7 +59,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => vm => BindingSyntaxEx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
                 scrollView.AddSubview(label);
 
                 var textField = new UITextField(new CGRect(20, 75, View.Frame.Width - 40, 30))
@@ -68,14 +68,14 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                     ShouldChangeCharacters = (field, range, replacementString) => false
                 };
-                set.Bind(textField).To(() => model => model.SelectedCulture);
+                set.Bind(textField).To(() => (vm, ctx) => vm.SelectedCulture);
                 scrollView.AddSubview(textField);
 
                 var pickerView = new UIPickerView { ShowSelectionIndicator = true };
                 set.Bind(pickerView, AttachedMemberConstants.ItemsSource)
-                    .To(() => model => model.Cultures);
+                    .To(() => (vm, ctx) => vm.Cultures);
                 set.Bind(pickerView, AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.SelectedCulture)
+                    .To(() => (vm, ctx) => vm.SelectedCulture)
                     .TwoWay();
 
                 var toolbar = new UIToolbar { BarStyle = UIBarStyle.Black, Translucent = true };

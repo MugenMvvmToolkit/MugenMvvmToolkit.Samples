@@ -15,16 +15,16 @@ namespace ApiExamples.Views
             InitializeComponent();
             using (var set = new BindingSet<TreeViewBindingViewModel>())
             {
-                set.Bind(addToolStripButton).To(() => vm => vm.AddNodeCommand);
-                set.Bind(removeToolStripButton).To(() => vm => vm.RemoveNodeCommand);
+                set.Bind(addToolStripButton).To(() => (vm, ctx) => vm.AddNodeCommand);
+                set.Bind(removeToolStripButton).To(() => (vm, ctx) => vm.RemoveNodeCommand);
                 set.Bind(nameTextBox)
-                   .To(() => vm => vm.SelectedNode.Name)
+                   .To(() => (vm, ctx) => vm.SelectedNode.Name)
                    .TwoWay()
                    .WithFallback("Nothing selected");
-                set.Bind(validCheckBox).To(() => vm => vm.SelectedNode.IsValid).TwoWay();
-                set.Bind(treeView, AttachedMemberConstants.ItemsSource).To(() => vm => vm.Nodes);
-                set.Bind(treeView, () => view => view.SelectedNode.DataContext<object>())
-                   .To(() => model => model.SelectedNode)
+                set.Bind(validCheckBox).To(() => (vm, ctx) => vm.SelectedNode.IsValid).TwoWay();
+                set.Bind(treeView, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.Nodes);
+                set.Bind(treeView, () => view => view.SelectedNode.DataContext())
+                   .To(() => (vm, ctx) => vm.SelectedNode)
                    .OneWayToSource();
                 treeView.SetBindingMemberValue(AttachedMembers.Object.CollectionViewManager,
                     TreeNodeCollectionViewManager.Instance);

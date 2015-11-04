@@ -21,19 +21,19 @@ namespace Navigation.Touch.Views
             using (var set = new BindingSet<BackStackViewModel>())
             {
                 var label = new UILabel(new CGRect(0, 70, View.Frame.Width, 30));
-                set.Bind(label).To(() => vm => "Back stack depth " + vm.Depth);
+                set.Bind(label).To(() => (vm, ctx) => "Back stack depth " + vm.Depth);
                 View.AddSubview(label);
 
                 UIButton button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 100, View.Frame.Width, 30);
                 button.SetTitle("Navigate to next view", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.NavigateCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.NavigateCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 130, View.Frame.Width, 30);
                 button.SetTitle("Navigate to main view model (Clear back stack)", UIControlState.Normal);
-                set.Bind(button).To(() => model => model.NavigateClearBackStackCommand);
+                set.Bind(button).To(() => (vm, ctx) => vm.NavigateClearBackStackCommand);
                 View.AddSubview(button);
             }
         }

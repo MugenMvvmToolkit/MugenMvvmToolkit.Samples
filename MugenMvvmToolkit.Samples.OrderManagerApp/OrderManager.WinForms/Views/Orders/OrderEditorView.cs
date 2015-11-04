@@ -14,24 +14,24 @@ namespace OrderManager.WinForms.Views.Orders
             using (var set = new BindingSet<OrderEditorView, OrderEditorViewModel>(this))
             {
                 set.Bind(dataGridView1, AttachedMembers.Object.ItemsSource)
-                   .To(() => m => m.GridViewModel.ItemsSource);
+                   .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(dataGridView1, AttachedMembers.DataGridView.SelectedItem)
-                   .To(() => m => m.GridViewModel.SelectedItem)
+                   .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                    .TwoWay();
                 set.Bind(filterTextBox)
-                   .To(() => m => m.FilterText)
+                   .To(() => (vm, ctx) => vm.FilterText)
                    .TwoWay();
 
                 set.Bind(nameTextBox)
-                   .To(() => m => m.Name)
+                   .To(() => (vm, ctx) => vm.Name)
                    .TwoWay()
                    .Validate();
                 set.Bind(numberTextBox)
-                   .To(() => m => m.Number)
+                   .To(() => (vm, ctx) => vm.Number)
                    .TwoWay()
                    .Validate();
                 set.Bind(dateTimePicker1)
-                   .To(() => m => m.CreationDate)
+                   .To(() => (vm, ctx) => vm.CreationDate)
                    .TwoWay()
                    .Validate();
             }

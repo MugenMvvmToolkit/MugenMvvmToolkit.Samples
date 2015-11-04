@@ -14,23 +14,24 @@ namespace OrderManager.WinForms.Views.Orders
             using (var set = new BindingSet<OrderWorkspaceView, OrderWorkspaceViewModel>(this))
             {
                 set.Bind(dataGridView1, AttachedMembers.Object.ItemsSource)
-                   .To(() => m => m.GridViewModel.ItemsSource);
+                   .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(dataGridView1, AttachedMembers.DataGridView.SelectedItem)
-                   .To(() => m => m.GridViewModel.SelectedItem);
+                   .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
+                   .TwoWay();
                 set.Bind(toolStripTextBox1)
-                   .To(() => m => m.FilterText)
+                   .To(() => (vm, ctx) => vm.FilterText)
                    .TwoWay();
 
                 set.Bind(saveToolStripButton)
-                   .To(() => m => m.SaveChangesCommand);
+                   .To(() => (vm, ctx) => vm.SaveChangesCommand);
                 set.Bind(addToolStripButton)
-                   .To(() => m => m.AddOrderCommand);
+                   .To(() => (vm, ctx) => vm.AddOrderCommand);
                 set.Bind(editToolStripButton)
-                   .To(() => m => m.EditOrderCommand);
+                   .To(() => (vm, ctx) => vm.EditOrderCommand);
                 set.Bind(deleteToolStripButton)
-                   .To(() => m => m.RemoveOrderCommand);
+                   .To(() => (vm, ctx) => vm.RemoveOrderCommand);
                 set.Bind(closeToolStripButton)
-                   .To(() => m => m.CloseCommand);
+                   .To(() => (vm, ctx) => vm.CloseCommand);
             }
             dataGridView1.AutoGenerateColumns = false;
         }

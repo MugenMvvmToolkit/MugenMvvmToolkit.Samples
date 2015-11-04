@@ -10,7 +10,7 @@ namespace OrderManager.WinPhone
             InitializeComponent();
 
             Forms.Init();
-            LoadApplication(new OrderManager.App());
+            LoadApplication(new OrderManager.XamForms.App());
         }
     }
 }

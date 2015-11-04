@@ -17,18 +17,18 @@ namespace OrderManager.WinForms.Views
             {
                 this.SetBindingMemberValue(AttachedMembers.Control.ContentViewManager, WrapperContentManager.Instance);
                 set.Bind(() => v => v.Text)
-                   .To(() => m => m.DisplayName);
+                   .To(() => (vm, ctx) => vm.DisplayName);
                 set.Bind(AttachedMembersEx.Control.IsBusy)
-                   .To(() => m => m.IsBusy);
+                   .To(() => (vm, ctx) => vm.IsBusy);
                 set.Bind(AttachedMembersEx.Control.BusyMessage)
-                   .To(() => m => m.BusyMessage);
+                   .To(() => (vm, ctx) => vm.BusyMessage);
                 set.Bind(AttachedMembers.Control.Content)
-                   .To(() => m => m.ViewModel);
+                   .To(() => (vm, ctx) => vm.ViewModel);
 
                 set.Bind(saveButton)
-                   .To(() => m => m.ApplyCommand);
+                   .To(() => (vm, ctx) => vm.ApplyCommand);
                 set.Bind(closeButton)
-                   .To(() => m => m.CloseCommand);
+                   .To(() => (vm, ctx) => vm.CloseCommand);
             }
         }
 

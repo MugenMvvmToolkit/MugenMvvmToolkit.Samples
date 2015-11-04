@@ -40,8 +40,8 @@ namespace Navigation.Touch.Views
             using (var bindingSet = new BindingSet<MainViewModel>())
             {
                 //TabBar
-                bindingSet.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
-                bindingSet.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
+                bindingSet.Bind(this, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
+                bindingSet.Bind(this, AttachedMemberConstants.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
             }
         }
 

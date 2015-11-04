@@ -31,13 +31,13 @@ namespace Binding.Touch.Views
                 var section = new Section();
                 var element = new MultilineElement(string.Empty);
                 bindingSet.Bind(element, () => e => e.Caption)
-                    .To(() => model => model.ResourceUsageInfo);
+                    .To(() => (vm, ctx) => vm.ResourceUsageInfo);
                 section.Add(element);
                 root.Add(section);
 
                 section = new Section("Samples");
                 root.Add(section);
-                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => model => model.Items);
+                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.Items);
                 section.SetBindingMemberValue(AttachedMembers.Element.ItemTemplateSelector, ButtonItemTemplate.Instance);
                 return root;
             }

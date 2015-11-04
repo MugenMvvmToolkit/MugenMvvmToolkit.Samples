@@ -8,7 +8,7 @@
 
     <TabbedPage.ItemTemplate>
         <DataTemplate>
-            <ContentPage Title="{Binding DisplayName}" Content="{mugen:DataBinding $ViewModelToView($context)}" />
+            <ContentPage Title="{Binding DisplayName}" Content="{mugen:DataBinding '$ViewModelToView($context)'}" />
         </DataTemplate>
     </TabbedPage.ItemTemplate>
 </TabbedPage>

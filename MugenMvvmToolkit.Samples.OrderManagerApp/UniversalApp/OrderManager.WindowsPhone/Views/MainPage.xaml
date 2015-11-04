@@ -42,8 +42,7 @@
             </Grid.RowDefinitions>
 
             <Button Content="Products" Command="{Binding Path=OpenProductsCommand}" />
-            <Button Grid.Row="0" Grid.Column="1" Content="Orders" Command="{Binding Path=OpenOrdersCommand}" />
-            <Button Grid.Row="1" Grid.Column="0" Content="Exit" Click="Exit_OnClick" />
+            <Button Grid.Row="0" Grid.Column="1" Content="Orders" Command="{Binding Path=OpenOrdersCommand}" />            
         </Grid>
     </Grid>
 </Page>

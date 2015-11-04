@@ -31,7 +31,7 @@ namespace Binding.WinForms.Templates
 
         protected override void Initialize(ListViewItem template, BindingSet<ListViewItem, CollectionItemModel> set)
         {
-            set.Bind(() => item => item.Text).To(() => model => model.Name + " " + model.Id);
+            set.Bind(() => item => item.Text).To(() => (model, ctx) => model.Name + " " + model.Id);
         }
 
         #endregion

@@ -17,9 +17,9 @@ namespace ApiExamples.Views
 
             using (var set = new BindingSet<TabViewModel>())
             {
-                set.Bind(addToolStripButton).To(() => model => model.AddCommand);
-                set.Bind(removeToolStripButton).To(() => model => model.RemoveCommand);
-                set.Bind(tableLayoutPanel, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
+                set.Bind(addToolStripButton).To(() => (model, ctx) => model.AddCommand);
+                set.Bind(removeToolStripButton).To(() => (model, ctx) => model.RemoveCommand);
+                set.Bind(tableLayoutPanel, AttachedMemberConstants.ItemsSource).To(() => (model, ctx) => model.ItemsSource);
                 tableLayoutPanel.SetBindingMemberValue(AttachedMembers.Object.CollectionViewManager, TableLayoutCollectionViewManager.Instance);
             }
         }

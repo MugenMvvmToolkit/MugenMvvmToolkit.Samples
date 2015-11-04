@@ -46,7 +46,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 
@@ -66,7 +66,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label)
-                    .To(() => model => model.Text.OfType<char>().Count(x => x == 'a'));
+                    .To(() => (vm, ctx) => vm.Text.OfType<char>().Count(x => x == 'a'));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 105, View.Frame.Width - 40, 25))
@@ -84,7 +84,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label)
-                   .To(() => model => model.Text.ExtensionMethod(model.Text.Length));
+                   .To(() => (vm, ctx) => vm.Text.ExtensionMethod(vm.Text.Length));
                 scrollView.AddSubview(label);
 
 
@@ -103,7 +103,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label)
-                    .To(() => model => model.Text.OfType<char>().Skip(1).FirstOrDefault());
+                    .To(() => (vm, ctx) => vm.Text.OfType<char>().Skip(1).FirstOrDefault());
                 scrollView.AddSubview(label);
 
 
@@ -123,7 +123,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label)
-                    .To(() => model => string.IsNullOrEmpty(model.Text) ? "String is empty" : "String is not empty");
+                    .To(() => (vm, ctx) => string.IsNullOrEmpty(vm.Text) ? "String is empty" : "String is not empty");
                 scrollView.AddSubview(label);
 
 
@@ -142,7 +142,7 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.Bind(label)
-                   .To(() => model => model.Text.Length + 100 + model.Text.GetHashCode());
+                   .To(() => (vm, ctx) => vm.Text.Length + 100 + vm.Text.GetHashCode());
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 300, View.Frame.Width - 40, 25))
@@ -160,6 +160,26 @@ namespace Binding.Touch.Views
                     Font = font
                 };
                 set.BindFromExpression(label, "Text NullableText?.Trim()?.Length ?? -1");
+                scrollView.AddSubview(label);
+
+
+                label = new UILabel(new CGRect(20, 350, View.Frame.Width - 40, 25))
+                {
+                    Text = "Interpolated string expression ($'{Text} length {Text.Length}')",
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    Font = font
+                };
+                scrollView.AddSubview(label);
+
+                label = new UILabel(new CGRect(20, 375, View.Frame.Width - 40, 25))
+                {
+                    AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                    TextColor = UIColor.Green,
+                    Font = font
+                };
+                set.BindFromExpression(label, "Text $'{Text} length {Text.Length}'");
+                /*set.Bind(label)
+                    .To(() => (vm, ctx) => $"{vm.Text} length {vm.Text.Length}");*/ //<-- Visual studio >= 2015
                 scrollView.AddSubview(label);
             }
         }

@@ -15,12 +15,12 @@ namespace Binding.WinForms.Views
             using (var set = new BindingSet<BindingResourcesViewModel>())
             {
                 set.Bind(objLabel)
-                    .To(() => model => BindingSyntaxEx.Resource<object>("obj"));
+                    .To(() => (vm, ctx) => ctx.Resource<object>("obj"));
                 set.Bind(methodLabel)
-                    .To(() => model => BindingSyntaxEx.ResourceMethod<object>("Method"));
+                    .To(() => (vm, ctx) => ctx.ResourceMethod<object>("Method"));
                 set.BindFromExpression(typeLabel, "Text $CustomType.StaticMethod()");
                 set.Bind(updateResBtn)
-                    .To(() => vm => vm.UpdateResourceCommand);
+                    .To(() => (vm, ctx) => vm.UpdateResourceCommand);
             }
         }
     }

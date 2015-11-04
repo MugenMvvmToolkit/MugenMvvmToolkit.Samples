@@ -5,7 +5,7 @@
             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
             x:Class="OrderManager.Views.Orders.OrderEditorView"
             Padding="4" Title="{Binding DisplayName}"
-            IsBusy="{Binding IsBusy}" IsEnabled="{mugen:DataBinding !IsBusy}">
+            IsBusy="{Binding IsBusy}" IsEnabled="{mugen:DataBinding '!IsBusy'}">
     <ContentPage Title="Main info" BindingContext="{Binding ViewModel}">
         <StackLayout>
             <Label Text="Name" />

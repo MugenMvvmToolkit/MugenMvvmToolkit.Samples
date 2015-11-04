@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:pkg="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-
-  <ScrollView android:layout_width="fill_parent"
-              android:layout_height="wrap_content">
-    <LinearLayout android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical">
-      <TextView android:layout_width="fill_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:pkg="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+  <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                pkg:Bind="Text $i18n.AddText" />
+                android:orientation="vertical">
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              pkg:Bind="Text $i18n.AddText" />
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                pkg:Bind="Text $i18n.EditText" />
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              pkg:Bind="Text $i18n.EditText" />
 
-      <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                pkg:Bind="Text $i18n.DeleteText" />
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              pkg:Bind="Text $i18n.DeleteText" />
 
-      <Spinner android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               pkg:Bind="ItemsSource Cultures; SelectedItem SelectedCulture, Mode=TwoWay" />
-    </LinearLayout>
-  </ScrollView>
-</LinearLayout>
+    <Spinner android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             pkg:Bind="ItemsSource Cultures; SelectedItem SelectedCulture, Mode=TwoWay"
+             pkg:ItemTemplate="@layout/_localizationtemplate"
+             pkg:DropDownItemTemplate="@layout/_localizationtemplate" />
+  </LinearLayout>
+</ScrollView>

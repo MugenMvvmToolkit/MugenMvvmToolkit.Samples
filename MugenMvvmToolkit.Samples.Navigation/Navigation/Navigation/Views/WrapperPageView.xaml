@@ -10,7 +10,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ContentView Content="{mugen:DataBinding $ViewModelToView(ViewModel)}" Padding="4"
+        <ContentView Content="{mugen:DataBinding '$ViewModelToView(ViewModel)'}" Padding="4"
                      HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <Button Grid.Row="1" HorizontalOptions="FillAndExpand" Text="Close from wrapper"
                 Command="{Binding Path=CloseCommand}" />

@@ -57,7 +57,7 @@ namespace Binding.Android.Views
             var target = new TestModel(this);
             var model = new BindingPerformanceModel(target);
             target.Bind(() => t => t.Value)
-                .To(model, () => m => m.Property)
+                .To(model, () => (m, ctx) => m.Property)
                 .TwoWay()
                 .Build();
 
@@ -76,7 +76,7 @@ namespace Binding.Android.Views
             var target = new TestModel(this);
             var model = new BindingPerformanceModel(target);
             target.Bind(() => m => m.Value)
-                .To(model, () => pm => (pm.Property ?? string.Empty).Length + pm.Property)
+                .To(model, () => (pm, ctx) => (pm.Property ?? string.Empty).Length + pm.Property)
                 .Build();
 
             Stopwatch startNew = Stopwatch.StartNew();

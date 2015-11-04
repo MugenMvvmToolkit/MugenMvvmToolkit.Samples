@@ -18,9 +18,9 @@ namespace Binding.WinForms.Views
                 tableLayoutPanel1.SetBindingMemberValue(AttachedMembers.Object.ItemTemplateSelector,
                     ButtonItemTemplate.Instance);
                 set.Bind(tableLayoutPanel1, AttachedMemberConstants.ItemsSource)
-                   .To(() => vm => vm.Items);
+                   .To(() => (vm, ctx) => vm.Items);
                 set.Bind(toolStripStatusLabel, () => t => t.Text)
-                   .To(() => vm => vm.ResourceUsageInfo);
+                   .To(() => (vm, ctx) => vm.ResourceUsageInfo);
             }
         }
     }

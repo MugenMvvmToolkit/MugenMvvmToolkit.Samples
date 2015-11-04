@@ -69,28 +69,28 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="MugenMvvmToolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.AppCompat, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.AppCompat.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.AppCompat.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Android.Design, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Android.Design.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.Design.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Android.Design, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Android.Design.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.Design.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=4.3.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.4.3.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.5.0.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -101,15 +101,15 @@
     <Reference Include="System.Runtime" />
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.Design.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -180,6 +180,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\_ListViewTemplate.xml" />
     <AndroidResource Include="Resources\menu\addlistitemmenu.xml" />
+    <AndroidResource Include="Resources\layout\_LocalizationTemplate.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Binding.Portable\Binding.Portable.csproj">

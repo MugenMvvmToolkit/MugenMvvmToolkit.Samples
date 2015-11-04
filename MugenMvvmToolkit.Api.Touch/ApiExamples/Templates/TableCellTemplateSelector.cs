@@ -54,24 +54,24 @@ namespace ApiExamples.Templates
             template.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
 
             bindingSet.Bind(AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
-                .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
+                .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
                 .OneTime()
-                .WithCommandParameter(() => model => model)
+                .WithCommandParameter(() => (m, ctx) => m)
                 .ToggleEnabledState(false);
             bindingSet.Bind(AttachedMembers.UITableViewCell.DeleteClickEvent)
-                .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
+                .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
                 .OneTime()
-                .WithCommandParameter(() => model => model)
+                .WithCommandParameter(() => (m, ctx) => m)
                 .ToggleEnabledState(false);
 
-            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
-            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).OneWayToSource();
-            bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
+            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
+            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
+            bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => (m, ctx) => m.Editing).OneWayToSource();
             bindingSet.Bind(AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                      .To(() => m => "Delete " + m.Name);
-            bindingSet.Bind(template.TextLabel).To(() => model => model.Name);
+                      .To(() => (m, ctx) => "Delete " + m.Name);
+            bindingSet.Bind(template.TextLabel).To(() => (m, ctx) => m.Name);
             bindingSet.Bind(template.DetailTextLabel)
-                .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
+                .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
         }
 
         #endregion

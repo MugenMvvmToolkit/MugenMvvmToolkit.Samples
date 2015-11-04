@@ -9,7 +9,7 @@ namespace Navigation.WinForms.Views
         public SecondView()
         {
             InitializeComponent();
-            button1.Bind().To<SecondViewModel>(() => m => m.CloseCommand).Build();
+            button1.Bind().To<SecondViewModel>(() => (vm, ctx) => vm.CloseCommand).Build();
         }
     }
 }

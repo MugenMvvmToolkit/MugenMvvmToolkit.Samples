@@ -62,6 +62,10 @@
                 <TextBlock Text="Null conditional expression (Text?.Trim()?.Length ?? -1)" Margin="1" 
                            TextWrapping="Wrap"/>
                 <TextBlock markupExtensions:View.Bind="Text NullableText?.Trim()?.Length ?? -1" Margin="1 1 1 10" Foreground="Green" />
+
+                <TextBlock Text="Interpolated string expression ($'{Text} length {Text.Length}')" Margin="1" 
+                           TextWrapping="Wrap"/>
+                <TextBlock markupExtensions:View.Bind="Text $'{Text} length {Text.Length}'" Margin="1 1 1 10" Foreground="Green" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

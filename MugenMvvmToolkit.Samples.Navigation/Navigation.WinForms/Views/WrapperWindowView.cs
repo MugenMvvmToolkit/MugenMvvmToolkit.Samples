@@ -10,7 +10,7 @@ namespace Navigation.WinForms.Views
         public WrapperWindowView()
         {
             InitializeComponent();
-            this.Bind(AttachedMembers.Control.Content).To<IWrapperViewModel>(() => m => m.ViewModel).Build();
+            this.Bind(AttachedMembers.Control.Content).To<IWrapperViewModel>(() => (vm, ctx) => vm.ViewModel).Build();
         }
     }
 }

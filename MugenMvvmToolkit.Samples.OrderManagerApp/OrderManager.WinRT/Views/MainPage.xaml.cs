@@ -1,5 +1,4 @@
-﻿using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 namespace OrderManager.WinRT.Views
@@ -32,15 +31,6 @@ namespace OrderManager.WinRT.Views
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             _navigationHelper.OnNavigatedFrom(e);
-        }
-
-        #endregion
-
-        #region Methods
-
-        private void Exit_OnClick(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Exit();
         }
 
         #endregion

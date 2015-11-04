@@ -15,23 +15,23 @@ namespace Binding.WinForms.Views
             using (var set = new BindingSet<CommandBindingViewModel>())
             {
                 set.Bind(canExecuteCheckBox)
-                    .To(() => vm => vm.CanExecuteCommand)
+                    .To(() => (vm, ctx) => vm.CanExecuteCommand)
                     .TwoWay();
                 set.Bind(button1)
-                    .To(() => vm => vm.Command)
+                    .To(() => (vm, ctx) => vm.Command)
                     .WithCommandParameter("1");
                 set.Bind(button2)
-                    .To(() => vm => vm.Command)
+                    .To(() => (vm, ctx) => vm.Command)
                     .ToggleEnabledState(false)
                     .WithCommandParameter("2");
                 set.Bind(event1Tb, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(null));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(null));
                 set.Bind(event2Tb, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.Self<TextBox>().Text));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(ctx.Self().Text));
                 set.Bind(event3Tb, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethod(BindingSyntaxEx.EventArgs<object>()));
+                    .ToAction(() => (vm, ctx) => vm.EventMethod(ctx.EventArgs<object>()));
                 set.Bind(event4Tb, "TextChanged")
-                    .ToAction(() => vm => vm.EventMethodMultiParams(BindingSyntaxEx.Self<TextBox>().Text, BindingSyntaxEx.EventArgs<object>()));
+                    .ToAction(() => (vm, ctx) => vm.EventMethodMultiParams(ctx.Self().Text, ctx.EventArgs<object>()));
             }
         }
     }

@@ -33,12 +33,12 @@ namespace Navigation.Portable.ViewModels
 
         void INavigableViewModel.OnNavigatedTo(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
             return _messagePresenter
                 .ShowAsync("Close SecondViewModel?", string.Empty, MessageButton.YesNo,
                     MessageImage.Question)
@@ -47,7 +47,7 @@ namespace Navigation.Portable.ViewModels
 
         void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         #endregion

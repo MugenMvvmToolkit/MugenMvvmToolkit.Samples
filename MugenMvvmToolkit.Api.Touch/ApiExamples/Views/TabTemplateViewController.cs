@@ -26,19 +26,19 @@ namespace ApiExamples.Views
                 NavigationItem.RightBarButtonItems = new[]
                 {
                     new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.AddCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.AddCommand)),
                     new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.InsertCommand)),
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.InsertCommand)),
                     new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => model => model.RemoveCommand))
+                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.RemoveCommand))
                 };
 
                 this.SetBindingMemberValue(AttachedMembers.UITabBarController.ItemTemplateSelector,
                     TabTemplateSelector.Instance);
-                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => model => model.ItemsSource);
-                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => model => model.SelectedItem).TwoWay();
+                set.Bind(this, AttachedMemberConstants.ItemsSource).To(() => (m, ctx) => m.ItemsSource);
+                set.Bind(this, AttachedMemberConstants.SelectedItem).To(() => (m, ctx) => m.SelectedItem).TwoWay();
                 set.Bind(this, () => c => c.Title)
-                    .To(() => m => ((ItemViewModel) m.SelectedItem).Name + " " + ((ItemViewModel) m.SelectedItem).Id)
+                    .To(() => (m, ctx) => ((ItemViewModel) m.SelectedItem).Name + " " + ((ItemViewModel) m.SelectedItem).Id)
                     .WithFallback("Nothing selected");
             }
         }

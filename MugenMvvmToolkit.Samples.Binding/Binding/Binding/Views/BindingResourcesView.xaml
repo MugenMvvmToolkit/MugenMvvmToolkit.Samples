@@ -13,16 +13,16 @@
         </StackLayout.Resources>
 
         <Label Text="Object from resources($obj)" />
-        <Label Text="{mugen:DataBinding $obj}" TextColor="Green" />
+        <Label Text="{mugen:DataBinding '$obj'}" TextColor="Green" />
 
         <Label Text="Method from resources($Method())" />
-        <Label Text="{mugen:DataBinding $Method()}" TextColor="Green" />
+        <Label Text="{mugen:DataBinding '$Method()'}" TextColor="Green" />
 
         <Label Text="Type from resources($CustomType.StaticMethod())" />
-        <Label Text="{mugen:DataBinding $CustomType.StaticMethod()}" TextColor="Green" />
+        <Label Text="{mugen:DataBinding '$CustomType.StaticMethod()'}" TextColor="Green" />
 
         <Label Text="Xaml resource:" />
-        <Label Text="{mugen:DataBinding $ResourceValue}" TextColor="Green" />
+        <Label Text="{mugen:DataBinding '$ResourceValue'}" TextColor="Green" />
 
         <Button Text="Update resource"
                 Command="{mugen:DataBinding Path=UpdateResourceCommand}" />

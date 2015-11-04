@@ -34,9 +34,9 @@ namespace ApiExamples.Templates
 
         protected override void Initialize(TreeNode template, BindingSet<TreeNode, TreeNodeModel> bindingSet)
         {
-            bindingSet.Bind(() => node => node.Text).To(() => model => model.Name);
-            bindingSet.Bind(AttachedMemberConstants.ItemsSource).To(() => model => model.Nodes);
-            bindingSet.Bind(() => node => node.ForeColor).To(() => model => model.IsValid ? Color.Green : Color.Red);
+            bindingSet.Bind(() => node => node.Text).To(() => (model, ctx) => model.Name);
+            bindingSet.Bind(AttachedMemberConstants.ItemsSource).To(() => (model, ctx) => model.Nodes);
+            bindingSet.Bind(() => node => node.ForeColor).To(() => (model, ctx) => model.IsValid ? Color.Green : Color.Red);
             template.SetBindingMemberValue(AttachedMembers.Object.ItemTemplateSelector, this);
             template.SetBindingMemberValue(AttachedMembers.Object.CollectionViewManager, TreeNodeCollectionViewManager.Instance);
         }

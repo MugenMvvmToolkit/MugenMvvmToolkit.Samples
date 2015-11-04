@@ -27,7 +27,7 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.NameInVm)
+                    .To(() => (vm, ctx) => vm.NameInVm)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -45,7 +45,7 @@ namespace Validation.Touch.Views
                     AutoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
                 };
                 set.Bind(uiSwitch)
-                    .To(() => model => model.DisableDescriptionValidation)
+                    .To(() => (vm, ctx) => vm.DisableDescriptionValidation)
                     .TwoWay();
                 View.AddSubview(uiSwitch);
 
@@ -57,7 +57,7 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Description)
+                    .To(() => (vm, ctx) => vm.Description)
                     .TwoWay()
                     .ValidatesOnExceptions()
                     .ValidatesOnNotifyDataErrors();
@@ -70,7 +70,7 @@ namespace Validation.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.CustomError)
+                    .To(() => (vm, ctx) => vm.CustomError)
                     .TwoWay();
                 View.AddSubview(textField);
 

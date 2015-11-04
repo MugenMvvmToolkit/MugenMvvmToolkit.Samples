@@ -75,9 +75,9 @@ namespace Validation.Portable.ViewModels
             message.Task.TryExecuteSynchronously(task =>
             {
                 Interlocked.Decrement(ref _validationLoginCount);
-                OnPropertyChanged(() => IsLoginValidating);
+                this.OnPropertyChanged(() => m => m.IsLoginValidating);
             });
-            OnPropertyChanged(() => IsLoginValidating);
+            this.OnPropertyChanged(() => m => m.IsLoginValidating);
         }
 
         #endregion

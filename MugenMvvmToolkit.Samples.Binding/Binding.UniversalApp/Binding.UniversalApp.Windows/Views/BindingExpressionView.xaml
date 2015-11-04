@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     xmlns:viewModels="using:Binding.Portable.ViewModels"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:BindingExpressionViewModel, IsDesignTimeCreatable=True}">
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance viewModels:BindingExpressionViewModel, IsDesignTimeCreatable=True}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
@@ -65,10 +66,17 @@
                 <TextBlock markupExtensions:View.Bind="Text Text.Count() + 100 + Text.GetHashCode()" Margin="1 1 1 10"
                            Foreground="Green" TextWrapping="Wrap" Style="{StaticResource BaseTextBlockStyle}" />
 
-                <TextBlock Text="Null conditional expression (Text?.Trim()?.Length ?? -1)" Margin="1" 
-                           TextWrapping="Wrap" Style="{StaticResource BaseTextBlockStyle}"/>
-                <TextBlock markupExtensions:View.Bind="Text NullableText?.Trim()?.Length ?? -1" Margin="1 1 1 10" Foreground="Green"
-                           Style="{StaticResource BaseTextBlockStyle}"/>
+                <TextBlock Text="Null conditional expression (Text?.Trim()?.Length ?? -1)" Margin="1"
+                           TextWrapping="Wrap" Style="{StaticResource BaseTextBlockStyle}" />
+                <TextBlock markupExtensions:View.Bind="Text NullableText?.Trim()?.Length ?? -1" Margin="1 1 1 10"
+                           Foreground="Green"
+                           Style="{StaticResource BaseTextBlockStyle}" />
+
+                <TextBlock Text="Interpolated string expression ($'{Text} length {Text.Length}')" Margin="1"
+                           TextWrapping="Wrap" Style="{StaticResource BaseTextBlockStyle}" />
+                <TextBlock markupExtensions:View.Bind="Text $'{Text} length {Text.Length}'" Margin="1 1 1 10"
+                           Foreground="Green"
+                           Style="{StaticResource BaseTextBlockStyle}" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

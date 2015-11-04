@@ -44,7 +44,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .OneTime();
 
                 scrollView.AddSubview(textField);
@@ -64,7 +64,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .OneWay();
                 scrollView.AddSubview(textField);
 
@@ -82,7 +82,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .OneWay()
                     .WithDelay(1000, true);
                 scrollView.AddSubview(textField);
@@ -101,7 +101,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .OneWayToSource();
                 scrollView.AddSubview(textField);
 
@@ -120,7 +120,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 
@@ -139,7 +139,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .TwoWay()
                     .WithDelay(1000);
                 scrollView.AddSubview(textField);

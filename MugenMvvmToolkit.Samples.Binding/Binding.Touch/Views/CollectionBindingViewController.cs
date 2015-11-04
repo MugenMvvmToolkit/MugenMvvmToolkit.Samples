@@ -34,20 +34,20 @@ namespace Binding.Touch.Views
                     NavigationItem.RightBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
                 };
                 var addItem = new UIBarButtonItem { Title = "Add" };
-                set.Bind(addItem).To(() => model => model.AddCommand);
+                set.Bind(addItem).To(() => (vm, ctx) => vm.AddCommand);
                 NavigationItem.RightBarButtonItems = new[] { editItem, addItem };
 
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => (vm, ctx) => vm.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
-                    .To(() => model => model.GridViewModel.ItemsSource);
+                    .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.GridViewModel.SelectedItem)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
                 set.Bind(this, () => controller => controller.Title)
-                    .To(() => model => model.GridViewModel.SelectedItem.Name)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem.Name)
                     .WithFallback("Nothing selected");
             }
 
@@ -60,14 +60,14 @@ namespace Binding.Touch.Views
                 using (var set = new BindingSet<CollectionItemModel>())
                 {
                     set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
-                        .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<CollectionBindingViewModel>().RemoveCommand)
-                        .WithCommandParameter(() => model => BindingSyntaxEx.Self<object>().DataContext<object>())
+                        .To(() => (vm, ctx) => ctx.Relative<UIViewController>().DataContext<CollectionBindingViewModel>().RemoveCommand)
+                        .WithCommandParameter(() => (m, ctx) => ctx.Self().DataContext())
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                        .To(() => model => string.Format("Delete {0} {1}", model.Name, model.Id));
-                    set.Bind(cell.TextLabel).To(() => model => model.Name);
+                        .To(() => (m, ctx) => string.Format("Delete {0} {1}", m.Name, m.Id));
+                    set.Bind(cell.TextLabel).To(() => (m, ctx) => m.Name);
                     set.Bind(cell.DetailTextLabel)
-                        .To(() => model => "Id " + model.Id);
+                        .To(() => (m, ctx) => "Id " + m.Id);
                 }
             });
         }

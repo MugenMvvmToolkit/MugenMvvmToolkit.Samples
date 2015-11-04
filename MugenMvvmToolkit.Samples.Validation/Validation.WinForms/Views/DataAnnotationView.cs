@@ -16,31 +16,31 @@ namespace Validation.WinForms.Views
             using (var set = new BindingSet<DataAnnotationViewModel>())
             {
                 set.Bind(nameTextBox)
-                   .To(() => m => m.NameInVm)
+                   .To(() => (vm, ctx) => vm.NameInVm)
                    .TwoWay()
                    .Validate();
                 set.Bind(nameErrorLabel)
-                   .To(() => m => BindingSyntaxEx.GetErrors(m.NameInVm).FirstOrDefault());
+                   .To(() => (vm, ctx) => ctx.GetErrors(vm.NameInVm).FirstOrDefault());
 
                 set.Bind(descriptionTextBox)
-                   .To(() => m => m.Description)
+                   .To(() => (vm, ctx) => vm.Description)
                    .TwoWay()
                    .Validate();
                 set.Bind(descErrorLabel)
-                   .To(() => m => BindingSyntaxEx.GetErrors(m.Description).FirstOrDefault());
+                   .To(() => (vm, ctx) => ctx.GetErrors(vm.Description).FirstOrDefault());
 
                 set.Bind(customErrorTextBox)
-                   .To(() => m => m.CustomError)
+                   .To(() => (vm, ctx) => vm.CustomError)
                    .TwoWay();
                 set.Bind(checkBox1)
-                   .To(() => m => m.DisableDescriptionValidation)
+                   .To(() => (vm, ctx) => vm.DisableDescriptionValidation)
                    .TwoWay();
                 set.Bind(notValidLabel, () => t => t.Visible)
-                   .To(() => m => !m.IsValid);
+                   .To(() => (vm, ctx) => !vm.IsValid);
                 set.Bind(validLabel, () => t => t.Visible)
-                   .To(() => m => m.IsValid);
+                   .To(() => (vm, ctx) => vm.IsValid);
                 set.Bind(summaryLabel)
-                   .To(() => m => string.Join(Environment.NewLine, BindingSyntaxEx.GetErrors()));
+                   .To(() => (vm, ctx) => string.Join(Environment.NewLine, ctx.GetErrors()));
             }
         }
     }

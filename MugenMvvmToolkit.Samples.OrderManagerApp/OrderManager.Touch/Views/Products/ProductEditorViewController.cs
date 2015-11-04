@@ -44,7 +44,7 @@ namespace OrderManager.Touch.Views.Products
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Name)
+                    .To(() => (vm, ctx) => vm.Name)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -64,7 +64,7 @@ namespace OrderManager.Touch.Views.Products
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Price)
+                    .To(() => (vm, ctx) => vm.Price)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);
@@ -83,7 +83,7 @@ namespace OrderManager.Touch.Views.Products
                     BorderStyle = UITextBorderStyle.RoundedRect
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Description)
+                    .To(() => (vm, ctx) => vm.Description)
                     .TwoWay()
                     .Validate();
                 scrollView.AddSubview(textField);

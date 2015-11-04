@@ -46,9 +46,9 @@ namespace ApiExamples.Templates
             BindingSet<CollectionViewCell, TableItemModel> bindingSet)
         {
             bindingSet.Bind(cell.Label)
-                .To(() => m => string.Format("Name {0}, Selected: {1}, Highlighted: {2}", m.Name, m.IsSelected, m.IsHighlighted));
-            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
-            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).TwoWay();
+                .To(() => (m, ctx) => string.Format("Name {0}, Selected: {1}, Highlighted: {2}", m.Name, m.IsSelected, m.IsHighlighted));
+            bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
+            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).TwoWay();
         }
 
         #endregion

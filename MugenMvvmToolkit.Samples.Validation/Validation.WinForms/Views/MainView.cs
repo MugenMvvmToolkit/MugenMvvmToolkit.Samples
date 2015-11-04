@@ -13,9 +13,9 @@ namespace Validation.WinForms.Views
             using (var set = new BindingSet<MainViewModel>())
             {
                 set.Bind(dataAnnotButton)
-                   .To(() => m => m.ShowAnnotationCommand);
+                   .To(() => (vm, ctx) => vm.ShowAnnotationCommand);
                 set.Bind(validatorButton)
-                   .To(() => m => m.ShowUserEditorCommand);
+                   .To(() => (vm, ctx) => vm.ShowUserEditorCommand);
             }
         }
     }

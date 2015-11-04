@@ -36,7 +36,6 @@
                     Margin="2" />
             <Button Content="Orders" Command="{Binding Path=OpenOrdersCommand}"
                     HorizontalAlignment="Stretch" Margin="2" />
-            <Button Content="Exit" Click="Exit_OnClick" HorizontalAlignment="Stretch" Margin="2" />
         </StackPanel>
     </Grid>
 </Page>

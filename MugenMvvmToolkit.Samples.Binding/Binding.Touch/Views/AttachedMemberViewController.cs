@@ -44,7 +44,7 @@ namespace Binding.Touch.Views
                     BorderStyle = UITextBorderStyle.RoundedRect,
                 };
                 set.Bind(textField)
-                    .To(() => model => model.Text)
+                    .To(() => (vm, ctx) => vm.Text)
                     .TwoWay();
                 scrollView.AddSubview(textField);
 

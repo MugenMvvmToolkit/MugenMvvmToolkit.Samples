@@ -23,72 +23,75 @@
       </TextInputLayout>
 
 
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="LINQ-count of 'a' symbols (Text.Count(x => x == 'a'))" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text Text.Count(x => x == 'a')" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text Text.ExtensionMethod(Text.Count())" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text Text.Skip(1).FirstOrDefault()" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text Text.Count() + 100 + Text.GetHashCode()" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Null conditional expression (Text?.Trim()?.Length ?? -1)" />
-      <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:layout_marginBottom="15dp"
-        android:textColor="#00ff00"
-        pkg:Bind="Text NullableText?.Trim()?.Length ?? -1" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="LINQ count of 'a' symbols (Text.Count(x => x == 'a'))" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text Text.Count(x => x == 'a')" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom extension method with args (Text.ExtensionMethod(Text.Count()))" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text Text.ExtensionMethod(Text.Count())" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="LINQ-show second symbol or default (Text.Skip(1).FirstOrDefault())" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text Text.Skip(1).FirstOrDefault()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Condition expression ($string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty')" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $string.IsNullOrEmpty(Text) ? 'String is empty' : 'String is not empty'" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Arithmetic expression (Text.Count() + 100 + Text.GetHashCode())" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text Text.Count() + 100 + Text.GetHashCode()" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Null conditional expression (Text?.Trim()?.Length ?? -1)" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text NullableText?.Trim()?.Length ?? -1" />
+
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Interpolated string expression ($'{Text} length {Text.Length}')" />
+      <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:layout_marginBottom="15dp"
+                android:textColor="#00ff00"
+                pkg:Bind="Text $'{Text} length {Text.Length}'" />
     </LinearLayout>
   </ScrollView>
 </LinearLayout>

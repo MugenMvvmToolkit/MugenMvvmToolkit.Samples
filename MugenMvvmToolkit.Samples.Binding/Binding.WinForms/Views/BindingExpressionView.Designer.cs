@@ -42,6 +42,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.nullConditionalLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.interpolatedLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textTb
@@ -177,11 +179,32 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Null conditional operator expression (Text?.Trim()?.Length ?? -1)";
             // 
+            // interpolatedLabel
+            // 
+            this.interpolatedLabel.AutoSize = true;
+            this.interpolatedLabel.ForeColor = System.Drawing.Color.Green;
+            this.interpolatedLabel.Location = new System.Drawing.Point(12, 394);
+            this.interpolatedLabel.Name = "interpolatedLabel";
+            this.interpolatedLabel.Size = new System.Drawing.Size(41, 13);
+            this.interpolatedLabel.TabIndex = 19;
+            this.interpolatedLabel.Text = "label10";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 372);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(286, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Interpolated string expression (\'{Text} length {Text.Length}\')";
+            // 
             // BindingExpressionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 393);
+            this.ClientSize = new System.Drawing.Size(456, 442);
+            this.Controls.Add(this.interpolatedLabel);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.nullConditionalLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.arithmeticLabel);
@@ -223,5 +246,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label nullConditionalLabel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label interpolatedLabel;
+        private System.Windows.Forms.Label label6;
     }
 }

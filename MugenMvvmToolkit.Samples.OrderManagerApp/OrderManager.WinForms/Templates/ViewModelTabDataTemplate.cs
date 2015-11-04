@@ -34,13 +34,13 @@ namespace OrderManager.WinForms.Templates
         protected override void Initialize(TabPage template, BindingSet<TabPage, IViewModel> bindingSet)
         {
             bindingSet.Bind(AttachedMembers.Control.Content)
-                      .To(() => m => m);
+                      .To(() => (vm, ctx) => vm);
             bindingSet.Bind(() => v => v.Text)
-                      .To(() => m => ((IHasDisplayName)m).DisplayName);
+                      .To(() => (vm, ctx) => ((IHasDisplayName)vm).DisplayName);
             bindingSet.Bind(AttachedMembersEx.Control.IsBusy)
-                      .To(() => m => m.IsBusy);
+                      .To(() => (vm, ctx) => vm.IsBusy);
             bindingSet.Bind(AttachedMembersEx.Control.BusyMessage)
-                      .To(() => m => m.BusyMessage);
+                      .To(() => (vm, ctx) => vm.BusyMessage);
         }
 
         #endregion

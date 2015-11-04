@@ -2,10 +2,13 @@
 using System.Diagnostics;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation.Metadata;
+using Windows.Phone.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using MugenMvvmToolkit;
+using MugenMvvmToolkit.WinRT;
 using MugenMvvmToolkit.WinRT.Infrastructure;
 
 namespace Validation.WinRT
@@ -16,6 +19,25 @@ namespace Validation.WinRT
     sealed partial class App : Application
     {
         #region Constructors
+
+        static App()
+        {
+            //Reflection does not work at runtime using this code to handle back event.
+            if (ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
+            {
+                PlatformExtensions.SubscribeBackPressedEventDelegate = (o, action) =>
+                {
+                    var handler = ReflectionExtensions.CreateWeakEventHandler<object, BackPressedEventArgs>(o, action, (sender, h) => HardwareButtons.BackPressed -= h.Handle);
+                    HardwareButtons.BackPressed += handler.Handle;
+                };
+                PlatformExtensions.SetBackPressedHandledDelegate = (o, b) => ((BackPressedEventArgs)o).Handled = b;
+            }
+            else
+            {
+                PlatformExtensions.SubscribeBackPressedEventDelegate = null;
+                PlatformExtensions.SetBackPressedHandledDelegate = null;
+            }
+        }
 
         /// <summary>
         ///     Initializes the singleton application object.  This is the first line of authored code

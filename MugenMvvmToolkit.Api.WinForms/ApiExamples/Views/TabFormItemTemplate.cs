@@ -17,11 +17,11 @@ namespace ApiExamples.Views
 
             using (var set = new BindingSet<TabViewModel>())
             {
-                set.Bind(addToolStripButton).To(() => vm => vm.AddCommand);
-                set.Bind(insertToolStripButton).To(() => vm => vm.InsertCommand);
-                set.Bind(removeToolStripButton).To(() => vm => vm.RemoveCommand);
-                set.Bind(tabControl, AttachedMemberConstants.ItemsSource).To(() => vm => vm.ItemsSource);
-                set.Bind(tabControl, AttachedMemberConstants.SelectedItem).To(() => vm => vm.SelectedItem).TwoWay();
+                set.Bind(addToolStripButton).To(() => (vm, ctx) => vm.AddCommand);
+                set.Bind(insertToolStripButton).To(() => (vm, ctx) => vm.InsertCommand);
+                set.Bind(removeToolStripButton).To(() => (vm, ctx) => vm.RemoveCommand);
+                set.Bind(tabControl, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
+                set.Bind(tabControl, AttachedMemberConstants.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
                 tabControl.SetBindingMemberValue(AttachedMembers.Object.ItemTemplateSelector, TabItemTemplate.Instance);
             }
         }

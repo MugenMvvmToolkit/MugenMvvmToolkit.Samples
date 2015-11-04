@@ -9,7 +9,7 @@ using MugenMvvmToolkit.ViewModels;
 
 namespace Navigation.Portable.ViewModels
 {
-    public class FirstViewModel : CloseableViewModel, IHasDisplayName, INavigableViewModel, IHasState
+    public class FirstViewModel : CloseableViewModel, IHasDisplayName, INavigableViewModel
     {
         #region Fields
 
@@ -60,30 +60,20 @@ namespace Navigation.Portable.ViewModels
 
         void INavigableViewModel.OnNavigatedTo(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         Task<bool> INavigableViewModel.OnNavigatingFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
             return Empty.TrueTask;
         }
 
         void INavigableViewModel.OnNavigatedFrom(INavigationContext context)
         {
-            this.TraceNavigation();
+            this.TraceNavigation(context);
         }
 
         #endregion
-
-        public void LoadState(IDataContext state)
-        {
-            
-        }
-
-        public void SaveState(IDataContext state)
-        {
-
-        }
     }
 }

@@ -16,7 +16,7 @@
         <DataTemplate>
           <ViewCell>
             <ViewCell.View>
-              <Button Command="{mugen:DataBinding $Relative(ListView).DataContext.ShowCommand, Mode=OneTime}"
+              <Button Command="{mugen:DataBinding '$Rel(ListView).DataContext.ShowCommand', Mode=OneTime}"
                       Text="{mugen:DataBinding Item1, Mode=OneTime}" CommandParameter="{mugen:DataBinding Item2, Mode=OneTime}" />
             </ViewCell.View>
           </ViewCell>

@@ -22,7 +22,7 @@ namespace ApiExamples.Views
 
             using (var set = new BindingSet<ContentViewModel>())
             {
-                set.Bind(View, AttachedMemberConstants.Content).To(() => model => model.ViewModel);
+                set.Bind(View, AttachedMemberConstants.Content).To(() => (m, ctx) => m.ViewModel);
                 View.SetBindingMemberValue(AttachedMembers.UIView.ContentTemplateSelector, LabelItemTemplateSelector.Instance);
                 View.SetBindingMemberValue(AttachedMembers.UIView.ContentViewManager, ContentViewManager.Instance);
             }

@@ -20,6 +20,8 @@ namespace OrderManager.Portable.ViewModels.Orders
         [DataContract]
         public class ViewModelState
         {
+            #region Properties
+
             [DataMember]
             public OrderModel Order { get; set; }
 
@@ -31,6 +33,24 @@ namespace OrderManager.Portable.ViewModels.Orders
 
             [DataMember]
             public List<Guid> SelectedProducts { get; set; }
+
+            #endregion
+
+            #region Methods
+
+            public Dictionary<Guid, OrderProductModel> GetLinks()
+            {
+                if (Links == null)
+                    return null;
+                return Links.ToDictionary(model => model.IdProduct);
+            }
+
+            public void SetLinks(Dictionary<Guid, OrderProductModel> links)
+            {
+                Links = links == null ? null : links.Values.ToArray();
+            }
+
+            #endregion
         }
 
         #endregion
@@ -45,7 +65,7 @@ namespace OrderManager.Portable.ViewModels.Orders
         private Task _initializedTask;
         private string _displayName;
         private string _filterText;
-        private OrderProductModel[] _oldLinks;
+        private Dictionary<Guid, OrderProductModel> _oldLinks;
 
         #endregion
 
@@ -67,9 +87,14 @@ namespace OrderManager.Portable.ViewModels.Orders
 
         #region Properties
 
-        public IList<OrderProductModel> OldLinks
+        public ICollection<OrderProductModel> OldLinks
         {
-            get { return _oldLinks; }
+            get
+            {
+                if (_oldLinks == null)
+                    return null;
+                return _oldLinks.Values;
+            }
         }
 
         public GridViewModel<SelectableWrapper<ProductModel>> GridViewModel { get; private set; }
@@ -130,7 +155,7 @@ namespace OrderManager.Portable.ViewModels.Orders
         public void InitializeEntity(OrderModel entity, IEnumerable<OrderProductModel> links)
         {
             Should.NotBeNull(links, "links");
-            _oldLinks = links.ToArray();
+            _oldLinks = links.ToDictionary(model => model.IdProduct);
             InitializeEntity(entity, false);
         }
 
@@ -179,7 +204,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             InitializeEntity(viewModelState.Order, viewModelState.IsNewRecord);
             await _initializedTask;
 
-            _oldLinks = viewModelState.Links;
+            _oldLinks = viewModelState.GetLinks();
             RestoreSelection(viewModelState.SelectedProducts);
             HasChanges = true;
         }
@@ -189,8 +214,7 @@ namespace OrderManager.Portable.ViewModels.Orders
             if (!IsEntityInitialized)
                 return;
             var viewModelState = new ViewModelState { Order = Entity, IsNewRecord = IsNewRecord };
-            if (_oldLinks != null)
-                viewModelState.Links = _oldLinks;
+            viewModelState.SetLinks(_oldLinks);
             var selectedProducts = GridViewModel.OriginalItemsSource
                 .Where(wrapper => wrapper.IsSelected)
                 .Select(wrapper => wrapper.Model.Id)
@@ -213,11 +237,11 @@ namespace OrderManager.Portable.ViewModels.Orders
                     foreach (ProductModel productModel in task.Result)
                     {
                         var item = new SelectableWrapper<ProductModel>(false, productModel);
+                        if (_oldLinks != null)
+                            item.IsSelected = _oldLinks.ContainsKey(productModel.Id);
                         item.PropertyChanged += _propertyChangedEventHandler;
                         GridViewModel.OriginalItemsSource.Add(item);
                     }
-                    if (_oldLinks != null)
-                        RestoreSelection(_oldLinks.Select(model => model.IdProduct).ToList());
                 })
                 .WithBusyIndicator(this);
         }
@@ -230,12 +254,13 @@ namespace OrderManager.Portable.ViewModels.Orders
                 .Where(wrapper => wrapper.IsSelected)
                 .Select(wrapper => wrapper.Model)
                 .ToList();
-            var oldLinks = new List<OrderProductModel>(_oldLinks ?? Empty.Array<OrderProductModel>());
 
             //Adding new items that was selected.
             foreach (ProductModel selectedItem in selectedItems)
             {
-                OrderProductModel oldItem = oldLinks.SingleOrDefault(model => model.IdOrder == selectedItem.Id);
+                OrderProductModel oldItem = null;
+                if (_oldLinks != null)
+                    _oldLinks.TryGetValue(selectedItem.Id, out oldItem);
                 if (oldItem == null)
                 {
                     var productModel = new OrderProductModel
@@ -246,11 +271,15 @@ namespace OrderManager.Portable.ViewModels.Orders
                     changes.Add(new EntityStateEntry(EntityState.Added, productModel));
                 }
                 else
-                    oldLinks.Remove(oldItem);
+                {
+                    if (_oldLinks != null)
+                        _oldLinks.Remove(oldItem.IdProduct);
+                }
             }
 
             //Removing old items that was unselected.
-            changes.AddRange(oldLinks.Select(model => new EntityStateEntry(EntityState.Deleted, model)));
+            if (_oldLinks != null && _oldLinks.Count != 0)
+                changes.AddRange(_oldLinks.Values.Select(model => new EntityStateEntry(EntityState.Deleted, model)));
             return changes;
         }
 

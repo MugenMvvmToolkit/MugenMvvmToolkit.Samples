@@ -30,7 +30,7 @@ namespace ApiExamples.Views
                 var root = new RootElement("Main view");
                 var section = new Section("Examples");
                 root.Add(section);
-                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => model => model.Items);
+                bindingSet.Bind(section, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.Items);
                 section.SetBindingMemberValue(AttachedMembers.Element.ItemTemplateSelector, ButtonItemTemplateSelector.Instance);
                 return root;
             }

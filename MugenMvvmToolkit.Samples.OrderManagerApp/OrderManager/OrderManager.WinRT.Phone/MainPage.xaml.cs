@@ -12,7 +12,7 @@ namespace OrderManager.WinRT.Phone
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new OrderManager.App());            
+            LoadApplication(new OrderManager.XamForms.App());            
         }
     }
 }

@@ -41,10 +41,10 @@ namespace OrderManager.Touch.Views.Orders
             using (var set = new BindingSet<OrderEditorViewModel>())
             {
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => (vm, ctx) => vm.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
-                set.Bind(TableView, AttachedMembers.UIView.ItemsSource).To(() => model => model.GridViewModel.ItemsSource);
+                set.Bind(TableView, AttachedMembers.UIView.ItemsSource).To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
             }
 
             TableView.AllowsMultipleSelection = true;
@@ -56,14 +56,14 @@ namespace OrderManager.Touch.Views.Orders
                 using (var set = new BindingSet<SelectableWrapper<ProductModel>>())
                 {
                     set.Bind(cell, () => viewCell => viewCell.Selected)
-                       .To(() => wrapper => wrapper.IsSelected)
+                       .To(() => (vm, ctx) => vm.IsSelected)
                        .TwoWay();
                     set.Bind(cell.TextLabel)
-                       .To(() => model => model.Model.Name);
+                       .To(() => (vm, ctx) => vm.Model.Name);
                     set.Bind(cell.DetailTextLabel)
-                       .To(() => model => model.Model.Description);
+                       .To(() => (vm, ctx) => vm.Model.Description);
                     set.Bind(cell, () => v => v.Accessory)
-                        .ToSelf(() => m => m.Selected)
+                        .ToSelf(() => (vm, ctx) => vm.Selected)
                         .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
                 }
             });

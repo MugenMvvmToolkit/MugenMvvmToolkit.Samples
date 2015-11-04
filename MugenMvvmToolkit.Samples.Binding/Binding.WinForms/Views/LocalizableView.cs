@@ -17,16 +17,16 @@ namespace Binding.WinForms.Views
             using (var set = new BindingSet<LocalizableViewModel>())
             {
                 set.Bind(cultureComboBox, AttachedMemberConstants.ItemsSource)
-                   .To(() => vm => vm.Cultures);
+                   .To(() => (vm, ctx) => vm.Cultures);
                 set.Bind(cultureComboBox, AttachedMemberConstants.SelectedItem)
-                   .To(() => vm => vm.SelectedCulture)
+                   .To(() => (vm, ctx) => vm.SelectedCulture)
                    .TwoWay();
                 set.Bind(addLabel)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
                 set.Bind(editLabel)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
                 set.Bind(delLabel)
-                    .To(() => vm => BindingSyntaxEx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
             }
         }
     }

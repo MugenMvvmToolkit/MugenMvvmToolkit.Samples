@@ -9,6 +9,7 @@ namespace ApiExamples.ViewModels
         #region Fields
 
         private static int _counter;
+        private string _name;
 
         #endregion
 
@@ -24,7 +25,16 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (value == _name) return;
+                _name = value;
+                OnPropertyChanged();
+            }
+        }
 
         public int Id { get; private set; }
 

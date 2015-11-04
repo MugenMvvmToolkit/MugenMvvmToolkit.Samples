@@ -14,35 +14,35 @@ namespace Validation.WinForms.Views
             using (var set = new BindingSet<UserWorkspaceViewModel>())
             {
                 set.Bind(validatingLabel, () => l => l.Visible)
-                   .To(() => m => m.UserEditorViewModel.IsLoginValidating);
+                   .To(() => (vm, ctx) => vm.UserEditorViewModel.IsLoginValidating);
                 set.Bind(nameTextBox)
-                   .To(() => m => m.UserEditorViewModel.Name)
+                   .To(() => (vm, ctx) => vm.UserEditorViewModel.Name)
                    .TwoWay()
                    .Validate();
                 set.Bind(loginTextBox)
-                   .To(() => m => m.UserEditorViewModel.Login)
+                   .To(() => (vm, ctx) => vm.UserEditorViewModel.Login)
                    .TwoWay()
                    .Validate()
                    .WithDelay(400);
                 set.Bind(emailTextBox)
-                   .To(() => m => m.UserEditorViewModel.Email)
+                   .To(() => (vm, ctx) => vm.UserEditorViewModel.Email)
                    .TwoWay()
                    .Validate();
 
                 set.Bind(notValidLabel, () => t => t.Visible)
-                   .To(() => m => !m.UserEditorViewModel.IsValid);
+                   .To(() => (vm, ctx) => !vm.UserEditorViewModel.IsValid);
                 set.Bind(validLabel, () => t => t.Visible)
-                   .To(() => m => m.UserEditorViewModel.IsValid);
+                   .To(() => (vm, ctx) => vm.UserEditorViewModel.IsValid);
 
                 set.Bind(addButton)
-                   .To(() => m => m.AddUserCommand);
+                   .To(() => (vm, ctx) => vm.AddUserCommand);
                 set.Bind(removeButton)
-                   .To(() => m => m.RemoveUserCommand);
+                   .To(() => (vm, ctx) => vm.RemoveUserCommand);
 
                 set.Bind(userDataGridView, AttachedMembers.Object.ItemsSource)
-                   .To(() => m => m.UserGridViewModel.ItemsSource);
+                   .To(() => (vm, ctx) => vm.UserGridViewModel.ItemsSource);
                 set.Bind(userDataGridView, AttachedMembers.DataGridView.SelectedItem)
-                   .To(() => m => m.UserGridViewModel.SelectedItem)
+                   .To(() => (vm, ctx) => vm.UserGridViewModel.SelectedItem)
                    .TwoWay();
             }
             userDataGridView.AutoGenerateColumns = false;

@@ -34,20 +34,20 @@ namespace ApiExamples.Views
                     NavigationItem.RightBarButtonItem.Title = TableView.Editing ? "Done" : "Edit";
                 };
                 var addItem = new UIBarButtonItem { Title = "Add" };
-                set.Bind(addItem).To(() => model => model.AddCommand);
+                set.Bind(addItem).To(() => (vm, ctx) => vm.AddCommand);
                 NavigationItem.RightBarButtonItems = new[] { editItem, addItem };
 
                 var searchBar = new UISearchBar(new RectangleF(0, 0, 320, 44)) { Placeholder = "Filter..." };
-                set.Bind(searchBar).To(() => model => model.FilterText).TwoWay();
+                set.Bind(searchBar).To(() => (vm, ctx) => vm.FilterText).TwoWay();
                 TableView.TableHeaderView = searchBar;
 
                 set.Bind(AttachedMemberConstants.ItemsSource)
-                   .To(() => model => model.GridViewModel.ItemsSource);
+                   .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(AttachedMemberConstants.SelectedItem)
-                    .To(() => model => model.GridViewModel.SelectedItem)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
                 set.Bind(this, () => controller => controller.Title)
-                   .To(() => model => model.GridViewModel.SelectedItem.Name)
+                   .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem.Name)
                    .WithFallback("Nothing selected");
             }
 
@@ -60,25 +60,25 @@ namespace ApiExamples.Views
                 using (var set = new BindingSet<TableItemModel>())
                 {
                     set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
-                        .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
+                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
                         .OneTime()
-                        .WithCommandParameter(() => model => model)
+                        .WithCommandParameter(() => (m, ctx) => m)
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
-                        .To(() => m => BindingSyntaxEx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
+                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<TableViewModel>().RemoveCommand)
                         .OneTime()
-                        .WithCommandParameter(() => model => model)
+                        .WithCommandParameter(() => (m, ctx) => m)
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                      .To(() => m => "Delete " + m.Name);
+                      .To(() => (m, ctx) => "Delete " + m.Name);
 
-                    set.Bind(cell, () => viewCell => viewCell.Selected).To(() => model => model.IsSelected).TwoWay();
-                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => model => model.IsHighlighted).OneWayToSource();
-                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => model => model.Editing).OneWayToSource();
+                    set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
+                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
+                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => (m, ctx) => m.Editing).OneWayToSource();
 
-                    set.Bind(cell.TextLabel).To(() => model => model.Name);
+                    set.Bind(cell.TextLabel).To(() => (m, ctx) => m.Name);
                     set.Bind(cell.DetailTextLabel)
-                        .To(() => m => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
+                        .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
                 }
             });
         }

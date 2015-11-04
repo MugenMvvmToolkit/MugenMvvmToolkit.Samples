@@ -13,13 +13,13 @@ namespace Navigation.WinForms.Views
             InitializeComponent();
             using (var set = new BindingSet<MainViewModel>())
             {
-                set.Bind(firstViewModelWindowToolStripMenuItem).To(() => m => m.ShowFirstWindowCommand);
-                set.Bind(secondViewModelWindowToolStripMenuItem).To(() => m => m.ShowSecondWindowCommand);
-                set.Bind(firstViewModelTabToolStripMenuItem).To(() => m => m.ShowFirstTabCommand);
-                set.Bind(secondViewModelTabToolStripMenuItem).To(() => m => m.ShowSecondTabCommand);
+                set.Bind(firstViewModelWindowToolStripMenuItem).To(() => (vm, ctx) => vm.ShowFirstWindowCommand);
+                set.Bind(secondViewModelWindowToolStripMenuItem).To(() => (vm, ctx) => vm.ShowSecondWindowCommand);
+                set.Bind(firstViewModelTabToolStripMenuItem).To(() => (vm, ctx) => vm.ShowFirstTabCommand);
+                set.Bind(secondViewModelTabToolStripMenuItem).To(() => (vm, ctx) => vm.ShowSecondTabCommand);
 
-                set.Bind(tabControl1, AttachedMembers.Object.ItemsSource).To(() => m => m.ItemsSource);
-                set.Bind(tabControl1, AttachedMembers.TabControl.SelectedItem).To(() => m => m.SelectedItem).TwoWay();
+                set.Bind(tabControl1, AttachedMembers.Object.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
+                set.Bind(tabControl1, AttachedMembers.TabControl.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
             }
         }
     }

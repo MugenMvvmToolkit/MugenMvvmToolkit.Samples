@@ -19,17 +19,17 @@ namespace Binding.WinForms.Views
                 listView.SetBindingMemberValue(AttachedMembers.Object.ItemTemplateSelector, ListViewItemTemplate.Instance);
                 listView.SetBindingMemberValue(AttachedMembers.Object.CollectionViewManager, ListViewCollectionManager.Instance);
                 set.Bind(listView, AttachedMemberConstants.ItemsSource)
-                    .To(() => vm => vm.GridViewModel.ItemsSource);
+                    .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
                 set.Bind(listView, AttachedMemberConstants.SelectedItem)
-                    .To(() => vm => vm.GridViewModel.SelectedItem)
+                    .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
 
                 set.Bind(filterTb)
-                    .To(() => vm => vm.FilterText)
+                    .To(() => (vm, ctx) => vm.FilterText)
                     .TwoWay();
 
-                set.Bind(addButton).To(() => vm => vm.AddCommand);
-                set.Bind(removeButton).To(() => vm => vm.RemoveCommand);
+                set.Bind(addButton).To(() => (vm, ctx) => vm.AddCommand);
+                set.Bind(removeButton).To(() => (vm, ctx) => vm.RemoveCommand);
             }
         }
     }

@@ -35,10 +35,10 @@ namespace ApiExamples.Templates
         protected override void Initialize(Button template,
             BindingSet<Button, Tuple<string, ViewModelCommandParameter>> bindingSet)
         {
-            bindingSet.Bind(() => button => button.Text).To(() => tuple => tuple.Item1);
+            bindingSet.Bind(() => button => button.Text).To(() => (tuple, ctx) => tuple.Item1);
             bindingSet.Bind()
-                      .To(() => tuple => BindingSyntaxEx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)
-                      .WithCommandParameter(() => tuple => tuple.Item2);
+                      .To(() => (tuple, ctx) => ctx.Relative<Form>().DataContext<MainViewModel>().ShowCommand)
+                      .WithCommandParameter(() => (tuple, ctx) => tuple.Item2);
         }
 
         #endregion

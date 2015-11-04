@@ -10,7 +10,7 @@ namespace OrderManager.WinRT
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new OrderManager.App());
+            LoadApplication(new OrderManager.XamForms.App());
         }
     }
 }

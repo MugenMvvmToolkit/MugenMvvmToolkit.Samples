@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
       
-        <ContentView Content="{mugen:DataBinding $ViewModelToView(ViewModel)}" Padding="4"
+        <ContentView Content="{mugen:DataBinding '$ViewModelToView(ViewModel)'}" Padding="4"
                      HorizontalOptions="FillAndExpand"
                      VerticalOptions="FillAndExpand" />
 

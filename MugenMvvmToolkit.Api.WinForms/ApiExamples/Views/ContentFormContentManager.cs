@@ -16,7 +16,7 @@ namespace ApiExamples.Views
             InitializeComponent();
             using (var set = new BindingSet<ContentViewModel>())
             {
-                set.Bind(this, AttachedMemberConstants.Content).To(() => vm => vm.ViewModel);
+                set.Bind(this, AttachedMemberConstants.Content).To(() => (vm, ctx) => vm.ViewModel);
                 this.SetBindingMemberValue(AttachedMembers.Control.ContentViewManager, ContentViewManager.Instance);
             }
         }
