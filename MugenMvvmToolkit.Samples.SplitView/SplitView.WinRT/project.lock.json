@@ -209,7 +209,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -219,7 +219,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -1816,7 +1816,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -1826,7 +1826,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -3456,7 +3456,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -3466,7 +3466,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -5101,7 +5101,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -5111,7 +5111,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -6741,7 +6741,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -6751,7 +6751,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -8386,7 +8386,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -8396,7 +8396,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -10026,7 +10026,7 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "MugenMvvmToolkit/5.0.0": {
+      "MugenMvvmToolkit/5.1.0": {
         "compile": {
           "lib/win81/MugenMvvmToolkit.dll": {},
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
@@ -10036,7 +10036,7 @@
           "lib/win81/MugenMvvmToolkit.WinRT.dll": {}
         }
       },
-      "MugenMvvmToolkit.AutofacContainer/5.0.0": {
+      "MugenMvvmToolkit.AutofacContainer/5.1.0": {
         "dependencies": {
           "Autofac": "[3.5.2, 3.6.0)"
         },
@@ -12085,8 +12085,8 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "MugenMvvmToolkit/5.0.0": {
-      "sha512": "lPmp1Tf6kooAYMUHMRLzlELstQ9IEkLwJhpUnsVwWyqUsA5P0a/uggTj1Nf1iS9C3JHCEjTQqQSV6kP5uvkaqQ==",
+    "MugenMvvmToolkit/5.1.0": {
+      "sha512": "X8XE3ErfagL96dq7NVi9V3UXepM8/e9WhzTw9H58DQ7eHdLscG7P2BhT42qzrC4fAfG2aKFR03PDjbO5Ll9gWw==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12133,11 +12133,11 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.pdb",
         "MugenMvvmToolkit.nuspec",
-        "package/services/metadata/core-properties/0a889f47b0d840359d7b569393d55307.psmdcp"
+        "package/services/metadata/core-properties/7c519b7fa4914abda8203574134eba81.psmdcp"
       ]
     },
-    "MugenMvvmToolkit.AutofacContainer/5.0.0": {
-      "sha512": "I1CncTJeZs1gRJIoB4wR1GwY67Z37Zj6/YdCdpV/q4W5a5/Y3p/zYzajRtRs1VM0jRqLsUV2vPDK9wEUpojVSA==",
+    "MugenMvvmToolkit.AutofacContainer/5.1.0": {
+      "sha512": "UtdUx3lus2tv7QE1tiu3NGtLxGBvn0RPPWL+4jm3t6FcFx5mUdfm42v8QBX6QAGGAIK1Dut4CA3OIKTI93dXoQ==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12161,7 +12161,7 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.pdb",
         "MugenMvvmToolkit.AutofacContainer.nuspec",
-        "package/services/metadata/core-properties/f4b81e194d5240a8a778f2be1d052134.psmdcp"
+        "package/services/metadata/core-properties/8d1fece913c14fb08806d40bae4e52f5.psmdcp"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -14863,8 +14863,8 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "MugenMvvmToolkit >= 5.0.0",
-      "MugenMvvmToolkit.AutofacContainer >= 5.0.0"
+      "MugenMvvmToolkit >= 5.1.0",
+      "MugenMvvmToolkit.AutofacContainer >= 5.1.0"
     ],
     "UAP,Version=v10.0": []
   }

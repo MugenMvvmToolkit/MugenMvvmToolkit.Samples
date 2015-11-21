@@ -102,15 +102,12 @@ namespace Binding.WinForms.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
+            target.ValueChanged += (sender, args) => model.Property = ((TestModel)sender).Value;
             Controls.Add(target);
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
-            {
-                string text = i % 2 == 0 ? "0" : "1";
-                target.Value = text;
-                model.Property = text;
-            }
+                target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
             Controls.Remove(target);
 

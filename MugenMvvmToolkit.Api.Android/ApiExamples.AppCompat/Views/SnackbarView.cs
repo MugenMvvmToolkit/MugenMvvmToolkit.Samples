@@ -11,8 +11,26 @@ using Message = ApiExamples.Models.Message;
 namespace ApiExamples.Views
 {
     [Activity]
-    public class SnackbarView : MvvmAppCompatActivity, IDataTemplateSelector
+    public class SnackbarView : MvvmAppCompatActivity
     {
+        #region Nested types
+
+        private sealed class SnackbarDataTemplateSelector : IDataTemplateSelector
+        {
+            public object SelectTemplate(object item, object container)
+            {
+                var message = item as Message;
+                //Use default template.
+                if (message == null)
+                    return null;
+                return Snackbar
+                    .Make((View)container, message.Text, Snackbar.LengthIndefinite)
+                    .SetAction(message.ActionTitle, view => message.Command.Execute(null));
+            }
+        }
+
+        #endregion
+
         #region Constructors
 
         public SnackbarView() : base(Resource.Layout.SnackbarView)
@@ -30,24 +48,9 @@ namespace ApiExamples.Views
             var view = FindViewById(Resource.Id.coordinator_layout);
             this.SetBindingMemberValue(AttachedMembersDesign.Activity.SnackbarView, view);
             //Set template selector to handle the Message class.
-            this.SetBindingMemberValue(AttachedMembersDesign.Activity.SnackbarTemplateSelector, this);
+            this.SetBindingMemberValue(AttachedMembersDesign.Activity.SnackbarTemplateSelector, new SnackbarDataTemplateSelector());
         }
 
-        #endregion
-
-        #region Implementation of interfaces
-
-        public object SelectTemplate(object item, object container)
-        {
-            var message = item as Message;
-            //Use default template.
-            if (message == null)
-                return null;
-            return Snackbar
-                .Make((View)container, message.Text, Snackbar.LengthIndefinite)
-                .SetAction(message.ActionTitle, view => message.Command.Execute(null));
-        }
-
-        #endregion
+        #endregion        
     }
 }

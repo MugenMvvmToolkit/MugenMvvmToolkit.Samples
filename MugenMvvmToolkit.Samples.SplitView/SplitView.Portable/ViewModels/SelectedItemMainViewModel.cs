@@ -14,11 +14,10 @@ namespace SplitView.Portable.ViewModels
         #region Fields
 
         private const string StateKey = "SelectedItem";
-
-        private static readonly DataConstant<IOperationCallback> OperationCallbackConstant;
         private static readonly OperationType NavigationType;
 
         private readonly IViewModelPresenter _presenter;
+        private readonly IOperationCallbackManager _callbackManager;
         private IViewModel _selectedItem;
 
         #endregion
@@ -28,13 +27,14 @@ namespace SplitView.Portable.ViewModels
         static SelectedItemMainViewModel()
         {
             NavigationType = new OperationType(typeof(SelectedItemMainViewModel).Name);
-            OperationCallbackConstant = DataConstant.Create(() => OperationCallbackConstant, true);
         }
 
-        public SelectedItemMainViewModel(IViewModelPresenter presenter, IToastPresenter toastPresenter) : base(toastPresenter)
+        public SelectedItemMainViewModel(IViewModelPresenter presenter, IOperationCallbackManager callbackManager, IToastPresenter toastPresenter) : base(toastPresenter)
         {
             Should.NotBeNull(presenter, "presenter");
+            Should.NotBeNull(callbackManager, "callbackManager");
             _presenter = presenter;
+            _callbackManager = callbackManager;
             _presenter.DynamicPresenters.Add(this);
         }
 
@@ -68,19 +68,15 @@ namespace SplitView.Portable.ViewModels
             SelectedItem = viewModel;
         }
 
-        protected static void InvokeCloseCallback(IViewModel viewModel)
+        protected void InvokeCloseCallback(IViewModel viewModel)
         {
             if (viewModel == null)
                 return;
-            IOperationCallback data;
-            if (viewModel.Settings.State.TryGetData(OperationCallbackConstant, out data))
-            {
-                bool? result = null;
-                var hasOperationResult = viewModel as IHasOperationResult;
-                if (hasOperationResult != null)
-                    result = hasOperationResult.OperationResult;
-                data.Invoke(OperationResult.CreateResult(NavigationType, viewModel, result));
-            }
+            bool? result = null;
+            var hasOperationResult = viewModel as IHasOperationResult;
+            if (hasOperationResult != null)
+                result = hasOperationResult.OperationResult;
+            _callbackManager.SetResult(viewModel, OperationResult.CreateResult(NavigationType, viewModel, result));
         }
 
         protected override void OnDispose(bool disposing)
@@ -102,7 +98,7 @@ namespace SplitView.Portable.ViewModels
             var operation = new NavigationOperation();
             var callback = operation.ToOperationCallback();
             //Saving callback to view model state that will allow us to execute it even after app save\restore cycle.
-            viewModel.Settings.State.AddOrUpdate(OperationCallbackConstant, callback);
+            _callbackManager.Register(NavigationType, viewModel, callback, context);
             OnShowViewModel(viewModel);
             return operation;
         }

@@ -1,4 +1,4 @@
-﻿using MugenMvvmToolkit.Infrastructure;
+﻿using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.Modules;
 using OrderManager.Portable.Interfaces;
 using OrderManager.Portable.ViewModels;
@@ -9,9 +9,9 @@ namespace OrderManager.Portable
     {
         #region Overrides of WrapperRegistrationModuleBase
 
-        protected override void RegisterWrappers(WrapperManager wrapperManager)
+        protected override void RegisterWrappers(IConfigurableWrapperManager wrapperManager)
         {
-            wrapperManager.AddWrapper<IEditorWrapperViewModel>(typeof (EditorWrapperViewModel<>));
+            wrapperManager.AddWrapper<IEditorWrapperViewModel>(typeof(EditorWrapperViewModel<>));
         }
 
         #endregion

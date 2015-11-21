@@ -2,6 +2,7 @@
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using MugenMvvmToolkit;
+using MugenMvvmToolkit.Interfaces.Callbacks;
 using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Interfaces.ViewModels;
@@ -42,7 +43,8 @@ namespace SplitView.Portable.ViewModels
             ViewModelsState = DataConstant.Create(() => ViewModelsState, true);
         }
 
-        public BackStackMainViewModel(IViewModelPresenter presenter, IToastPresenter toastPresenter) : base(presenter, toastPresenter)
+        public BackStackMainViewModel(IViewModelPresenter presenter, IOperationCallbackManager callbackManager, IToastPresenter toastPresenter)
+            : base(presenter, callbackManager, toastPresenter)
         {
             _viewModels = new Stack<IViewModel>();
         }

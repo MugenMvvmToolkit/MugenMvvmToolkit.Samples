@@ -106,14 +106,15 @@ namespace Binding.Views
         {
             var target = new TestModel();
             var model = new BindingPerformanceModel(target);
+            target.PropertyChanged += (sender, args) =>
+            {
+                if (args.PropertyName == "Value")
+                    model.Property = ((TestModel)sender).Value;
+            };
 
             Stopwatch startNew = Stopwatch.StartNew();
             for (int i = 0; i < count; i++)
-            {
-                string text = i % 2 == 0 ? "0" : "1";
-                target.Value = text;
-                model.Property = text;
-            }
+                target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
             if (model.SetCount != count)
