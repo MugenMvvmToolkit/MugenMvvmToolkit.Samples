@@ -12086,7 +12086,7 @@
       ]
     },
     "MugenMvvmToolkit/5.1.0": {
-      "sha512": "E3jITjHtJfHoL4rv4pJP1hBa/XKm3aTiJII2jhcCfUO/vIzoZ39Nijq0UcITLqVniFxnnkEdQN2og8r2CyQiWw==",
+      "sha512": "Wixhwx+iRultVMBoRkBTWTfgbnm59Qtuz1IlXvsVslrUF178YIwf8FRkGscxf9kt3DSoNL6EkJ0xxxcwua3y7Q==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12133,11 +12133,11 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.iOS.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.pdb",
         "MugenMvvmToolkit.nuspec",
-        "package/services/metadata/core-properties/8eb25b325e67497c959f2896aecbb230.psmdcp"
+        "package/services/metadata/core-properties/64cfc88e33124a86a53439e838d1ddde.psmdcp"
       ]
     },
     "MugenMvvmToolkit.AutofacContainer/5.1.0": {
-      "sha512": "iFl87citfcu567YjWmZSFdAf2gWixPTOaVSIox1gVBQulPqhRvYccdNtjVgCiKfJ9kQ+yLlAHkfhfvWlO9JuLQ==",
+      "sha512": "1K2ZiMTmeueHd53fMiZ/LH7RkSfh0uBFyJymtbo2P+89UB1dhNMY6yzmZ4N6I/54YHGw/VNdFiO9n43QU5zv1g==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12161,7 +12161,7 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.AutofacContainer.pdb",
         "MugenMvvmToolkit.AutofacContainer.nuspec",
-        "package/services/metadata/core-properties/07bd50e5003d479d99a4d2a79019150d.psmdcp"
+        "package/services/metadata/core-properties/73d9ab286765494dab2ac004347775ee.psmdcp"
       ]
     },
     "System.AppContext/4.0.0": {

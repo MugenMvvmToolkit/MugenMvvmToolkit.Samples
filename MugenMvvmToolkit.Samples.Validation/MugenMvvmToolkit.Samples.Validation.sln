@@ -21,13 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.UniversalApp.Win
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.UniversalApp.WindowsPhone", "Validation.UniversalApp\Validation.UniversalApp.WindowsPhone\Validation.UniversalApp.WindowsPhone.csproj", "{EAFD4135-F717-4328-BBF3-A89F40A35EC9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{09197B2B-71E8-49CA-BF21-CF1C3D2BE889}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.Touch", "Validation.Touch\Validation.Touch.csproj", "{E069D7D9-6631-4460-BAF3-3F12CA873CCC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin.Forms", "Xamarin.Forms", "{CB4D0007-38DB-4ADD-9659-489EC628AD40}"

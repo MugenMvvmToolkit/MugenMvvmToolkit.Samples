@@ -12086,7 +12086,7 @@
       ]
     },
     "MugenMvvmToolkit.Xamarin.Forms/5.1.0": {
-      "sha512": "56f/lNV2sbSeobHpSEYK+OJsJcBz/zCR5NYezBIkRg6SnjHUj4dyKDWW6lC8tbCFjt1enRmbYvKom3DCQ2aQaQ==",
+      "sha512": "3f0m7TT123kX//p9TisiH3umdzpMSVQkK0oCZSXOO5tKO7XkzvTidR6DyenNVto/0JfOn1XegMJWl/lE0wxEEg==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12132,7 +12132,7 @@
         "lib/Xamarin.iOS10/MugenMvvmToolkit.Xamarin.Forms.iOS.dll",
         "lib/Xamarin.iOS10/MugenMvvmToolkit.Xamarin.Forms.pdb",
         "MugenMvvmToolkit.Xamarin.Forms.nuspec",
-        "package/services/metadata/core-properties/c23138d4f45e40edad7b073b4c13e9f6.psmdcp"
+        "package/services/metadata/core-properties/f2457bf712ba4f028d3a9662d6a0840a.psmdcp"
       ]
     },
     "System.AppContext/4.0.0": {
