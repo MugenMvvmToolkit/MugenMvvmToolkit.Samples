@@ -11,6 +11,11 @@
                 android:orientation="vertical">
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Show toast"
+            pkg:Bind="Click ShowToastCommand" />
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Show snackbar"
             pkg:Bind="Click ShowSnackbarCommand" />
 

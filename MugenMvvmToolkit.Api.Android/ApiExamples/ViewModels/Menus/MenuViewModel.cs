@@ -21,7 +21,7 @@ namespace ApiExamples.ViewModels.Menus
 
         public MenuViewModel(IToastPresenter toastPresenter)
         {
-            Should.NotBeNull(toastPresenter, "toastPresenter");
+            Should.NotBeNull(toastPresenter, nameof(toastPresenter));
             _toastPresenter = toastPresenter;
             ExecuteCommand = new RelayCommand<MenuItemModel>(Execute);
 

@@ -25,7 +25,7 @@ namespace ApiExamples.ViewModels
 
         public MainViewModel(IToastPresenter toastPresenter)
         {
-            Should.NotBeNull(toastPresenter, "toastPresenter");
+            Should.NotBeNull(toastPresenter, nameof(toastPresenter));
             _toastPresenter = toastPresenter;
             Items = new[]
             {

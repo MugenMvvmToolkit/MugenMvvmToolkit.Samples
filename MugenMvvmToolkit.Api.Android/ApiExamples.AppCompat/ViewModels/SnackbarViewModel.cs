@@ -20,10 +20,11 @@ namespace ApiExamples.ViewModels
 
         public SnackbarViewModel(IToastPresenter toastPresenter, IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(toastPresenter, "toastPresenter");
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(toastPresenter, nameof(toastPresenter));
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _toastPresenter = toastPresenter;
             _messagePresenter = messagePresenter;
+            ShowToastCommand = new RelayCommand(ShowToast);
             ShowSnackbarCommand = new RelayCommand(ShowSnackbar);
             ShowSnackbarActionCommand = new RelayCommand(ShowSnackbarAction);
         }
@@ -32,18 +33,25 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
+        public ICommand ShowToastCommand { get; private set; }
+
         public ICommand ShowSnackbarCommand { get; private set; }
 
         public ICommand ShowSnackbarActionCommand { get; private set; }
 
-        private void ShowSnackbar()
+        private void ShowToast()
         {
             _toastPresenter.ShowAsync("Simple message", ToastDuration.Long);
         }
 
-        public void ShowSnackbarAction()
+        private void ShowSnackbar()
         {
-            _toastPresenter.ShowAsync(new Message {ActionTitle = "Command action", Text = "Message with action", Command = new RelayCommand(Execute)},
+            _toastPresenter.ShowAsync(new Message { Text = "Simple message" }, ToastDuration.Long);
+        }
+
+        private void ShowSnackbarAction()
+        {
+            _toastPresenter.ShowAsync(new Message { ActionTitle = "Command action", Text = "Message with action", Command = new RelayCommand(Execute) },
                 ToastDuration.Long);
         }
 

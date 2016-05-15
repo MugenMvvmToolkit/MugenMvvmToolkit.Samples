@@ -33,7 +33,7 @@
                 android:layout_gravity="left"
                 android:orientation="vertical"
                 android:background="#d3d3d3"
-                pkg:Bind="Drawer.IsOpened IsLeftDrawerOpened, Mode=TwoWay">
+                pkg:Bind="DrawerIsOpened IsLeftDrawerOpened, Mode=TwoWay">
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:textSize="10pt"
@@ -52,7 +52,7 @@
                 android:layout_gravity="right"
                 android:orientation="vertical"
                 android:background="#d3d3d3"
-                pkg:Bind="Drawer.IsOpened IsRightDrawerOpened, Mode=TwoWay">
+                pkg:Bind="DrawerIsOpened IsRightDrawerOpened, Mode=TwoWay">
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:textSize="10pt"

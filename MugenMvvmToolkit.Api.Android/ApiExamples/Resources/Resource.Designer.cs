@@ -154,17 +154,17 @@ namespace ApiExamples
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int cardview_dark_background = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int cardview_dark_background = 2131230720;
 			
-			// aapt resource value: 0x7f070001
-			public const int cardview_light_background = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int cardview_light_background = 2131230721;
 			
-			// aapt resource value: 0x7f070002
-			public const int cardview_shadow_end_color = 2131165186;
+			// aapt resource value: 0x7f080002
+			public const int cardview_shadow_end_color = 2131230722;
 			
-			// aapt resource value: 0x7f070003
-			public const int cardview_shadow_start_color = 2131165187;
+			// aapt resource value: 0x7f080003
+			public const int cardview_shadow_start_color = 2131230723;
 			
 			static Color()
 			{
@@ -179,17 +179,23 @@ namespace ApiExamples
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int cardview_compat_inset_shadow = 2131034113;
-			
-			// aapt resource value: 0x7f050002
-			public const int cardview_default_elevation = 2131034114;
-			
 			// aapt resource value: 0x7f050003
-			public const int cardview_default_radius = 2131034115;
+			public const int cardview_compat_inset_shadow = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int cardview_default_elevation = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int cardview_default_radius = 2131034117;
 			
 			// aapt resource value: 0x7f050000
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int item_touch_helper_swipe_escape_velocity = 2131034114;
 			
 			static Dimension()
 			{
@@ -398,20 +404,23 @@ namespace ApiExamples
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f080000
-			public const int CardView = 2131230720;
+			// aapt resource value: 0x7f070001
+			public const int Base_CardView = 2131165185;
 			
-			// aapt resource value: 0x7f080001
-			public const int CardView_Dark = 2131230721;
+			// aapt resource value: 0x7f070000
+			public const int CardView = 2131165184;
 			
-			// aapt resource value: 0x7f080002
-			public const int CardView_Light = 2131230722;
+			// aapt resource value: 0x7f070002
+			public const int CardView_Dark = 2131165186;
 			
-			// aapt resource value: 0x7f080004
-			public const int Theme_AppCompat_NoActionBar_FullScreen = 2131230724;
+			// aapt resource value: 0x7f070003
+			public const int CardView_Light = 2131165187;
 			
-			// aapt resource value: 0x7f080003
-			public const int ToolbarTheme = 2131230723;
+			// aapt resource value: 0x7f070005
+			public const int Theme_AppCompat_NoActionBar_FullScreen = 2131165189;
+			
+			// aapt resource value: 0x7f070004
+			public const int ToolbarTheme = 2131165188;
 			
 			static Style()
 			{
@@ -466,6 +475,8 @@ namespace ApiExamples
 			public const int Binding_Bindings = 1;
 			
 			public static int[] CardView = new int[] {
+					16843071,
+					16843072,
 					2130771972,
 					2130771973,
 					2130771974,
@@ -478,38 +489,44 @@ namespace ApiExamples
 					2130771981,
 					2130771982};
 			
-			// aapt resource value: 0
-			public const int CardView_cardBackgroundColor = 0;
-			
 			// aapt resource value: 1
-			public const int CardView_cardCornerRadius = 1;
+			public const int CardView_android_minHeight = 1;
+			
+			// aapt resource value: 0
+			public const int CardView_android_minWidth = 0;
 			
 			// aapt resource value: 2
-			public const int CardView_cardElevation = 2;
+			public const int CardView_cardBackgroundColor = 2;
 			
 			// aapt resource value: 3
-			public const int CardView_cardMaxElevation = 3;
-			
-			// aapt resource value: 5
-			public const int CardView_cardPreventCornerOverlap = 5;
+			public const int CardView_cardCornerRadius = 3;
 			
 			// aapt resource value: 4
-			public const int CardView_cardUseCompatPadding = 4;
+			public const int CardView_cardElevation = 4;
 			
-			// aapt resource value: 6
-			public const int CardView_contentPadding = 6;
-			
-			// aapt resource value: 10
-			public const int CardView_contentPaddingBottom = 10;
+			// aapt resource value: 5
+			public const int CardView_cardMaxElevation = 5;
 			
 			// aapt resource value: 7
-			public const int CardView_contentPaddingLeft = 7;
+			public const int CardView_cardPreventCornerOverlap = 7;
+			
+			// aapt resource value: 6
+			public const int CardView_cardUseCompatPadding = 6;
 			
 			// aapt resource value: 8
-			public const int CardView_contentPaddingRight = 8;
+			public const int CardView_contentPadding = 8;
+			
+			// aapt resource value: 12
+			public const int CardView_contentPaddingBottom = 12;
 			
 			// aapt resource value: 9
-			public const int CardView_contentPaddingTop = 9;
+			public const int CardView_contentPaddingLeft = 9;
+			
+			// aapt resource value: 10
+			public const int CardView_contentPaddingRight = 10;
+			
+			// aapt resource value: 11
+			public const int CardView_contentPaddingTop = 11;
 			
 			public static int[] Control = new int[] {
 					2130771987};
