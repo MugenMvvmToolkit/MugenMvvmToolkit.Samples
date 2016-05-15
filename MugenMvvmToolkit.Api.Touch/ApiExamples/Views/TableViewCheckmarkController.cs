@@ -2,11 +2,13 @@ using System.Drawing;
 using ApiExamples.Models;
 using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS;
+using MugenMvvmToolkit.iOS.Binding;
 using MugenMvvmToolkit.iOS.Binding.Converters;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
@@ -25,7 +27,6 @@ namespace ApiExamples.Views
 
             TableView.AllowsSelection = true;
             TableView.AllowsMultipleSelection = true;
-            TableView.SetCellStyle(UITableViewCellStyle.Subtitle);
             using (var set = new BindingSet<UITableView, TableViewModel>(TableView))
             {
                 NavigationItem.RightBarButtonItem = new UIBarButtonItem("Invert selection", UIBarButtonItemStyle.Plain, null);
@@ -39,17 +40,17 @@ namespace ApiExamples.Views
                    .To(() => (vm, ctx) => vm.GridViewModel.ItemsSource);
             }
 
-            TableView.SetCellBind(cell =>
-            {
-                cell.SetEditingStyle(UITableViewCellEditingStyle.None);
-                cell.Accessory = UITableViewCellAccessory.None;
-                cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
 
-                using (var set = new BindingSet<TableItemModel>())
+            TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, new DefaultTableCellTemplateSelector<TableItemModel>(UITableViewCellStyle.Subtitle,
+                (cell, set) =>
                 {
+                    cell.SetEditingStyle(UITableViewCellEditingStyle.None);
+                    cell.Accessory = UITableViewCellAccessory.None;
+                    cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
+
                     set.Bind(cell, () => c => c.Accessory)
-                       .ToSelf(() => (c, ctx) => c.Selected)
-                       .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
+                        .ToSelf(() => (c, ctx) => c.Selected)
+                        .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
 
                     set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (model, ctx) => model.IsSelected).TwoWay();
                     set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (model, ctx) => model.IsHighlighted).OneWayToSource();
@@ -58,8 +59,7 @@ namespace ApiExamples.Views
                     set.Bind(cell.TextLabel).To(() => (model, ctx) => model.Name);
                     set.Bind(cell.DetailTextLabel)
                         .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
-                }
-            });
+                }, true));
         }
 
         #endregion

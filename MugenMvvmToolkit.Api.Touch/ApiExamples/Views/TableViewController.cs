@@ -7,6 +7,7 @@ using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
@@ -24,7 +25,7 @@ namespace ApiExamples.Views
 
             TableView.AllowsSelection = true;
             TableView.AllowsMultipleSelection = false;
-            TableView.SetCellStyle(UITableViewCellStyle.Subtitle);
+
             using (var set = new BindingSet<UITableView, TableViewModel>(TableView))
             {
                 var editItem = new UIBarButtonItem { Title = "Edit" };
@@ -51,14 +52,13 @@ namespace ApiExamples.Views
                    .WithFallback("Nothing selected");
             }
 
-            TableView.SetCellBind(cell =>
-            {
-                cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
-                cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
-                cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
-
-                using (var set = new BindingSet<TableItemModel>())
+            TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, new DefaultTableCellTemplateSelector<TableItemModel>(UITableViewCellStyle.Subtitle,
+                (cell, set) =>
                 {
+                    cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
+                    cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
+                    cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
+
                     set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
                         .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<TableViewModel>().ItemClickCommand)
                         .OneTime()
@@ -70,7 +70,7 @@ namespace ApiExamples.Views
                         .WithCommandParameter(() => (m, ctx) => m)
                         .ToggleEnabledState(false);
                     set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                      .To(() => (m, ctx) => "Delete " + m.Name);
+                        .To(() => (m, ctx) => "Delete " + m.Name);
 
                     set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
                     set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
@@ -79,8 +79,7 @@ namespace ApiExamples.Views
                     set.Bind(cell.TextLabel).To(() => (m, ctx) => m.Name);
                     set.Bind(cell.DetailTextLabel)
                         .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
-                }
-            });
+                }, true));
         }
 
         #endregion

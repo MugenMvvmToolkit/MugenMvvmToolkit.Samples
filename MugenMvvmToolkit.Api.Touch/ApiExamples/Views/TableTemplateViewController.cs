@@ -2,7 +2,6 @@ using System.Drawing;
 using ApiExamples.Templates;
 using ApiExamples.ViewModels;
 using Foundation;
-using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -22,9 +21,8 @@ namespace ApiExamples.Views
         {
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
-
             TableView.AllowsSelection = true;
-            TableView.SetCellStyle(UITableViewCellStyle.Subtitle);
+
             using (var set = new BindingSet<UITableView, TableViewModel>(TableView))
             {
                 var editItem = new UIBarButtonItem { Title = "Edit" };
