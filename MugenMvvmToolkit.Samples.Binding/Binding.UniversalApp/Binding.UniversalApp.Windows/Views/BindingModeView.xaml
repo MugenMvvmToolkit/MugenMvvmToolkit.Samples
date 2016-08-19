@@ -5,8 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
-    xmlns:viewModels="using:Binding.Portable.ViewModels"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:BindingModeViewModel, IsDesignTimeCreatable=True}">
+    mc:Ignorable="d"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingModeViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
@@ -39,7 +39,8 @@
                 <TextBox Header="One time binding" markupExtensions:View.Bind="Text Text, Mode=OneTime"
                          Margin="1 1 1 10" />
                 <TextBox Header="One way binding" markupExtensions:View.Bind="Text Text, Mode=OneWay" Margin="1 1 1 10" />
-                <TextBox Header="One way binding with target delay 1000" markupExtensions:View.Bind="Text Text, Mode=OneWay, TargetDelay=1000" Margin="1 1 1 10" />
+                <TextBox Header="One way binding with target delay 1000"
+                         markupExtensions:View.Bind="Text Text, Mode=OneWay, TargetDelay=1000" Margin="1 1 1 10" />
                 <TextBox Header="One way to source binding" markupExtensions:View.Bind="Text Text, Mode=OneWayToSource"
                          Margin="1 1 1 10" />
                 <TextBox Header="Two way binding" markupExtensions:View.Bind="Text Text, Mode=TwoWay" Margin="1 1 1 10" />

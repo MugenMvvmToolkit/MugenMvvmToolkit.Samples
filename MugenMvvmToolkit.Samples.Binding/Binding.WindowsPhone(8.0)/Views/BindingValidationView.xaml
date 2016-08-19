@@ -7,13 +7,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.WinPhone.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
-    xmlns:viewModels="clr-namespace:Binding.Portable.ViewModels;assembly=Binding.Portable"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    d:DataContext="{d:DesignInstance viewModels:BindingValidationViewModel, IsDesignTimeCreatable=True}"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingValidationViewModel}"
     shell:SystemTray.IsVisible="True">
 
     <!--    Method $GetErrors() or $GetErrors(Prop1, Prop2, ... PropN) returns the errors from a data context object-->

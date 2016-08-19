@@ -4,10 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
-    xmlns:viewModels="using:Binding.Portable.ViewModels"
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"   
     mc:Ignorable="d"
-    d:DataContext="{d:DesignInstance viewModels:BindingValidationViewModel, IsDesignTimeCreatable=True}">
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingValidationViewModel}">
 
     <!--    Method $GetErrors() or $GetErrors(Prop1, Prop2, ... PropN) returns the errors from a data context object-->
     <!--    Validate=True is equivalent to ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True-->

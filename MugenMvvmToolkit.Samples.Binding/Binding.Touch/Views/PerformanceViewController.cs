@@ -41,6 +41,22 @@ namespace Binding.Touch.Views
 
         #endregion
 
+        #region Constructors
+
+        //compiled reflection
+        /*static PerformanceViewController()
+                {
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledMemberGetter(typeof(Binding.Portable.Models.BindingPerformanceModel), "Property", true, item => (System.Object)((Binding.Portable.Models.BindingPerformanceModel)item).Property);
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledDelegateFactory(typeof(MugenMvvmToolkit.Binding.Infrastructure.EventListenerList), "Raise", typeof(System.ComponentModel.PropertyChangedEventHandler), item => new System.ComponentModel.PropertyChangedEventHandler(((MugenMvvmToolkit.Binding.Infrastructure.EventListenerList)item).Raise), typeof(System.Object), typeof(System.ComponentModel.PropertyChangedEventArgs));
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledMethodDelegate(typeof(Binding.Portable.Models.BindingPerformanceModel), "add_PropertyChanged", (item, args) => { ((Binding.Portable.Models.BindingPerformanceModel)item).PropertyChanged += (System.ComponentModel.PropertyChangedEventHandler)args[0]; return null; }, typeof(System.ComponentModel.PropertyChangedEventHandler));
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledMethodDelegate(typeof(Binding.Touch.Views.TestModel), "add_ValueChanged", (item, args) => { ((Binding.Touch.Views.TestModel)item).ValueChanged += (System.EventHandler)args[0]; return null; }, typeof(System.EventHandler));
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledMemberSetter<System.Object>(typeof(Binding.Portable.Models.BindingPerformanceModel), "Property", true, (item, value) => ((Binding.Portable.Models.BindingPerformanceModel)item).Property = (System.String)value);
+                    MugenMvvmToolkit.Infrastructure.ExpressionReflectionManager.AddCompiledMethodDelegate(typeof(System.Func<MugenMvvmToolkit.Interfaces.Models.IDataContext, System.String, System.String>), "Invoke", (item, args) => ((System.Func<MugenMvvmToolkit.Interfaces.Models.IDataContext, System.String, System.String>)item).Invoke((MugenMvvmToolkit.Interfaces.Models.IDataContext)args[0], (System.String)args[1]), typeof(MugenMvvmToolkit.Interfaces.Models.IDataContext), typeof(System.String));
+                }*/
+
+        #endregion
+
+
         #region Overrides of MvvmViewController
 
         public override void ViewDidLoad()

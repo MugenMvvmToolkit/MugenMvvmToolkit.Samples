@@ -1,5 +1,6 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 using Windows.UI.Xaml.Navigation;
+using MugenMvvmToolkit.Xamarin.Forms.WinRT;
 
 namespace Binding.WinRT.Phone
 {
@@ -12,7 +13,7 @@ namespace Binding.WinRT.Phone
         {
             InitializeComponent();
             // add this line
-            LoadApplication(new Binding.App());
+            LoadApplication(new Binding.App(new PlatformBootstrapperService()));
         }
 
         /// <summary>

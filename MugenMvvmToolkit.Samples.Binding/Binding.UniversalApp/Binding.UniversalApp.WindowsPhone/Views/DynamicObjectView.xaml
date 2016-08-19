@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     xmlns:viewModels="using:Binding.Portable.ViewModels"
-    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:DynamicObjectViewModel, IsDesignTimeCreatable=True}"
+    mc:Ignorable="d" 
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=DynamicObjectViewModel}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Transparent">

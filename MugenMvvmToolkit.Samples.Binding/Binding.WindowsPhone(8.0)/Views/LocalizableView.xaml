@@ -11,7 +11,8 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" markupExtensions:View.DesignDataContext="LocalizableViewModel"
+    mc:Ignorable="d" 
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingResourcesViewModel}"
     shell:SystemTray.IsVisible="True">
 
     <Grid Background="Transparent">

@@ -5,9 +5,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
-    xmlns:viewModels="using:Binding.Portable.ViewModels"
     mc:Ignorable="d"
-    d:DataContext="{d:DesignInstance viewModels:BindingExpressionViewModel, IsDesignTimeCreatable=True}">
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingExpressionViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>

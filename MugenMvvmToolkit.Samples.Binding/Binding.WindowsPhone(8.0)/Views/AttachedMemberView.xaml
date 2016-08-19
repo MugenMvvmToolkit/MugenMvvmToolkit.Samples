@@ -5,15 +5,14 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewModels="clr-namespace:Binding.Portable.ViewModels;assembly=Binding.Portable"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.WinPhone.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    d:DataContext="{d:DesignInstance viewModels:AttachedMemberViewModel, IsDesignTimeCreatable=True}"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=AttachedMemberViewModel}"
     shell:SystemTray.IsVisible="True">
 
     <Grid Background="Transparent">

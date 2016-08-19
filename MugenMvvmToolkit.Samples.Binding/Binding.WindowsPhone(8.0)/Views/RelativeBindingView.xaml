@@ -11,6 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=RelativeBindingViewModel}"
     mc:Ignorable="d" shell:SystemTray.IsVisible="True">
 
     <Grid Background="Transparent">

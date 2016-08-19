@@ -10,7 +10,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d"
+    mc:Ignorable="d"    
     shell:SystemTray.IsVisible="True">
 
     <Grid Background="Transparent">

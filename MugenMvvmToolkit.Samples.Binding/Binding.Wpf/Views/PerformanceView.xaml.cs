@@ -25,7 +25,7 @@ namespace Binding.Wpf.Views
 
         private void Click(object sender, RoutedEventArgs e)
         {
-            int count = GetIterationsCount();
+            var count = GetIterationsCount();
             Collect();
             NativeTb.Text = NativeBindingTest(count);
 
@@ -54,8 +54,8 @@ namespace Binding.Wpf.Views
             };
             BindingOperations.SetBinding(target, TestModel.ValueProperty, binding);
 
-            Stopwatch startNew = Stopwatch.StartNew();
-            for (int i = 0; i < count; i++)
+            var startNew = Stopwatch.StartNew();
+            for (var i = 0; i < count; i++)
                 target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
@@ -73,8 +73,8 @@ namespace Binding.Wpf.Views
                 .TwoWay()
                 .Build();
 
-            Stopwatch startNew = Stopwatch.StartNew();
-            for (int i = 0; i < count; i++)
+            var startNew = Stopwatch.StartNew();
+            for (var i = 0; i < count; i++)
                 target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
@@ -91,8 +91,8 @@ namespace Binding.Wpf.Views
                 .To(model, () => (vm, ctx) => (vm.Property ?? string.Empty).Length + vm.Property)
                 .Build();
 
-            Stopwatch startNew = Stopwatch.StartNew();
-            for (int i = 0; i < count; i++)
+            var startNew = Stopwatch.StartNew();
+            for (var i = 0; i < count; i++)
                 model.Property = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
@@ -107,8 +107,8 @@ namespace Binding.Wpf.Views
             var model = new BindingPerformanceModel(target);
             target.ValueChanged += (sender, args) => model.Property = ((TestModel)sender).Value;
 
-            Stopwatch startNew = Stopwatch.StartNew();
-            for (int i = 0; i < count; i++)
+            var startNew = Stopwatch.StartNew();
+            for (var i = 0; i < count; i++)
                 target.Value = i % 2 == 0 ? "0" : "1";
             startNew.Stop();
 
@@ -138,8 +138,14 @@ namespace Binding.Wpf.Views
 
     public class TestModel : DependencyObject
     {
+        #region Fields
+
         public static readonly DependencyProperty ValueProperty = DependencyProperty.Register(
             "Value", typeof(string), typeof(TestModel), new PropertyMetadata(OnValueChanged));
+
+        #endregion
+
+        #region Properties
 
         public string Value
         {
@@ -147,14 +153,20 @@ namespace Binding.Wpf.Views
             set { SetValue(ValueProperty, value); }
         }
 
+        #endregion
+
+        #region Methods
+
         //NOTE you can comment this event and binding will be used the dependency property to observe value.
         public event EventHandler ValueChanged;
 
         private static void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            EventHandler handler = ((TestModel)sender).ValueChanged;
+            var handler = ((TestModel)sender).ValueChanged;
             if (handler != null)
                 handler(sender, EventArgs.Empty);
         }
+
+        #endregion
     }
 }

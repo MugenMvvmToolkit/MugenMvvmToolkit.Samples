@@ -108,7 +108,7 @@ namespace Binding.Portable.Infrastructure
             };
             Tracer.TraceViewModelHandler += (auditAction, viewModel) =>
             {
-                if (auditAction != AuditAction.Created)
+                if (auditAction != ViewModelLifecycleType.Created)
                     return;
                 lock (_viewModels)
                     _viewModels.Add(new WeakReference(viewModel, true));

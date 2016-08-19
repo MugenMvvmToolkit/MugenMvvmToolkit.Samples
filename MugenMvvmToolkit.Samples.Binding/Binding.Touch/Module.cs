@@ -57,7 +57,7 @@ namespace Binding.Touch
         /// </summary>
         private static string TextExtGetDefaultValue(UILabel textBlock, IBindingMemberInfo bindingMemberInfo)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -70,7 +70,7 @@ namespace Binding.Touch
         /// </summary>
         private static void TextExtMemberAttached(UILabel textBlock, MemberAttachedEventArgs args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -82,7 +82,7 @@ namespace Binding.Touch
         /// </summary>
         private static void TextExtMemberChanged(UILabel textBlock, AttachedMemberChangedEventArgs<string> args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()

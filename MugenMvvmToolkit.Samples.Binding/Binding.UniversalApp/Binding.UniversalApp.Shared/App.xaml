@@ -1,8 +1,10 @@
 ﻿<Application
     x:Class="Binding.UniversalApp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:binding="using:Binding">
     <Application.Resources>
         <x:String x:Key="AppName">MUGEN MVVM APPLICATION</x:String>
+        <binding:DesignBootstrapper x:Key="DesignBootstrapper" />
     </Application.Resources>
 </Application>

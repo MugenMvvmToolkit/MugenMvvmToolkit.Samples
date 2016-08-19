@@ -8,11 +8,11 @@ namespace Binding
     {
         #region Constructors
 
-        public App()
+        public App(XamarinFormsBootstrapperBase.IPlatformService platformService)
         {
             var bootstrapper = XamarinFormsBootstrapperBase.Current ??
-                               new Bootstrapper<Portable.App>(new AutofacContainer());
-            MainPage = bootstrapper.Start();
+                               new Bootstrapper<Portable.App>(platformService, new AutofacContainer());
+            bootstrapper.Start();
         }
 
         #endregion

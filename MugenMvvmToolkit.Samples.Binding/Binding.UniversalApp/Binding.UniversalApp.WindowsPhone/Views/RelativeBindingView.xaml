@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     mc:Ignorable="d"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=RelativeBindingViewModel}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Transparent">

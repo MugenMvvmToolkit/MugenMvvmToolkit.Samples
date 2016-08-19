@@ -7,7 +7,7 @@
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    markupExtensions:View.DesignDataContext="MainViewModel">
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=MainViewModel}">
 
     <Grid Background="Transparent">
         <Grid.RowDefinitions>

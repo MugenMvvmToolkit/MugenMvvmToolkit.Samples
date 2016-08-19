@@ -22,7 +22,7 @@ namespace Binding.Wpf
 
         public Module()
             : base(true, LoadMode.All)
-        {            
+        {
         }
 
         #endregion
@@ -54,7 +54,7 @@ namespace Binding.Wpf
         /// </summary>
         private static string TextExtGetDefaultValue(TextBlock textBlock, IBindingMemberInfo bindingMemberInfo)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -67,7 +67,7 @@ namespace Binding.Wpf
         /// </summary>
         private static void TextExtMemberAttached(TextBlock textBlock, MemberAttachedEventArgs args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -79,7 +79,7 @@ namespace Binding.Wpf
         /// </summary>
         private static void TextExtMemberChanged(TextBlock textBlock, AttachedMemberChangedEventArgs<string> args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()

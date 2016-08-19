@@ -105,6 +105,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\Binding.Wpf\DesignBootstrapperCommon.cs">
+      <Link>DesignBootstrapperCommon.cs</Link>
+    </Compile>
     <Compile Include="..\..\Binding.Wpf\Module.cs">
       <Link>Module.cs</Link>
     </Compile>
@@ -220,24 +223,24 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.5.1.0\lib\win81\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.6.0.0\lib\win81\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.AutofacContainer.5.1.0\lib\portable-net45+sl50+win+wp80\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\portable-net45+sl50+win+wp80\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.5.1.0\lib\win81\MugenMvvmToolkit.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.6.0.0\lib\win81\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinRT, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.5.1.0\lib\win81\MugenMvvmToolkit.WinRT.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WinRT, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.6.0.0\lib\win81\MugenMvvmToolkit.WinRT.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WinRT.Binding, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.5.1.0\lib\win81\MugenMvvmToolkit.WinRT.Binding.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WinRT.Binding, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MugenMvvmToolkit.Binding.6.0.0\lib\win81\MugenMvvmToolkit.WinRT.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -246,7 +249,7 @@
   </PropertyGroup>
   <Import Project="..\Binding.UniversalApp.Shared\Binding.UniversalApp.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" /> 
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

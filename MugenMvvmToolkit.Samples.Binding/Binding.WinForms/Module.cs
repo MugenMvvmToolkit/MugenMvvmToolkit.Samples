@@ -90,7 +90,7 @@ namespace Binding.WinForms
         /// </summary>
         private static string TextExtGetDefaultValue(Label textBlock, IBindingMemberInfo bindingMemberInfo)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -103,7 +103,7 @@ namespace Binding.WinForms
         /// </summary>
         private static void TextExtMemberAttached(Label textBlock, MemberAttachedEventArgs args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
@@ -115,7 +115,7 @@ namespace Binding.WinForms
         /// </summary>
         private static void TextExtMemberChanged(Label textBlock, AttachedMemberChangedEventArgs<string> args)
         {
-            if (!ServiceProvider.DesignTimeManager.IsDesignMode)
+            if (!ServiceProvider.IsDesignMode)
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()

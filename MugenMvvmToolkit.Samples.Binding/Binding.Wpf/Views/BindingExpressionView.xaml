@@ -1,8 +1,12 @@
 ﻿<Window x:Class="Binding.Wpf.Views.BindingExpressionView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d" 
+        d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=BindingExpressionViewModel}"
         Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="700" Height="400"
-        WindowStyle="ToolWindow" View.DesignDataContext="BindingExpressionViewModel">
+        WindowStyle="ToolWindow">
     <StackPanel Margin="4">
         <TextBlock Text="Current text:" Margin="1" />
         <TextBox Text="{DataBinding Path=Text, Mode=TwoWay}" Margin="1" />

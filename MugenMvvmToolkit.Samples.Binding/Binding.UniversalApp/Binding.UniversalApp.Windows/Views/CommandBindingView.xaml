@@ -4,8 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"    
-    mc:Ignorable="d" markupExtensions:View.DesignDataContext="CommandBindingViewModel">
+    xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
+    mc:Ignorable="d"
+    d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=CommandBindingViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
