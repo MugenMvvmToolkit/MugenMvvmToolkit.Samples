@@ -37,16 +37,16 @@
     <Reference Include="MugenInjection.Core">
       <HintPath>..\packages\MugenInjection.3.5.1\lib\net45-full\MugenInjection.Core.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.5.1.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.6.0.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.MugenContainer, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.MugenInjectionContainer.5.1.0\lib\net40\MugenMvvmToolkit.MugenContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.MugenContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.MugenInjectionContainer.6.0.0\lib\net40\MugenMvvmToolkit.MugenContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WPF, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WPF.5.1.0\lib\net45\MugenMvvmToolkit.WPF.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WPF, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.WPF.6.0.0\lib\net45\MugenMvvmToolkit.WPF.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
