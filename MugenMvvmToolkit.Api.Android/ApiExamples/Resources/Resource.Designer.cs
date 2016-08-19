@@ -28,7 +28,6 @@ namespace ApiExamples
 		{
 			global::MugenMvvmToolkit.Android.Resource.Attribute.ActionBarTemplate = global::ApiExamples.Resource.Attribute.ActionBarTemplate;
 			global::MugenMvvmToolkit.Android.Resource.Attribute.Bind = global::ApiExamples.Resource.Attribute.Bind;
-			global::MugenMvvmToolkit.Android.Resource.Attribute.Bindings = global::ApiExamples.Resource.Attribute.Bindings;
 			global::MugenMvvmToolkit.Android.Resource.Attribute.ContentTemplate = global::ApiExamples.Resource.Attribute.ContentTemplate;
 			global::MugenMvvmToolkit.Android.Resource.Attribute.DropDownItemTemplate = global::ApiExamples.Resource.Attribute.DropDownItemTemplate;
 			global::MugenMvvmToolkit.Android.Resource.Attribute.ItemTemplate = global::ApiExamples.Resource.Attribute.ItemTemplate;
@@ -39,62 +38,53 @@ namespace ApiExamples
 			global::MugenMvvmToolkit.Android.Resource.Attribute.TabContentId = global::ApiExamples.Resource.Attribute.TabContentId;
 			global::MugenMvvmToolkit.Android.Resource.Id.AttachedProperties = global::ApiExamples.Resource.Id.AttachedProperties;
 			global::MugenMvvmToolkit.Android.Resource.Id.ListTemplateId = global::ApiExamples.Resource.Id.ListTemplateId;
-			global::MugenMvvmToolkit.Android.Resource.Id.ListenParentChange = global::ApiExamples.Resource.Id.ListenParentChange;
 			global::MugenMvvmToolkit.Android.Resource.Id.OptionsMenu = global::ApiExamples.Resource.Id.OptionsMenu;
 			global::MugenMvvmToolkit.Android.Resource.String.Empty = global::ApiExamples.Resource.String.Empty;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ActionBar = global::ApiExamples.Resource.Styleable.ActionBar;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ActionBar_ActionBarTemplate = global::ApiExamples.Resource.Styleable.ActionBar_ActionBarTemplate;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ActionBar_TabContentId = global::ApiExamples.Resource.Styleable.ActionBar_TabContentId;
 			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding = global::ApiExamples.Resource.Styleable.Binding;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_ActionBarTemplate = global::ApiExamples.Resource.Styleable.Binding_ActionBarTemplate;
 			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_Bind = global::ApiExamples.Resource.Styleable.Binding_Bind;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_Bindings = global::ApiExamples.Resource.Styleable.Binding_Bindings;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Control = global::ApiExamples.Resource.Styleable.Control;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Control_ContentTemplate = global::ApiExamples.Resource.Styleable.Control_ContentTemplate;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ItemsControl = global::ApiExamples.Resource.Styleable.ItemsControl;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ItemsControl_DropDownItemTemplate = global::ApiExamples.Resource.Styleable.ItemsControl_DropDownItemTemplate;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.ItemsControl_ItemTemplate = global::ApiExamples.Resource.Styleable.ItemsControl_ItemTemplate;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Menu = global::ApiExamples.Resource.Styleable.Menu;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Menu_MenuTemplate = global::ApiExamples.Resource.Styleable.Menu_MenuTemplate;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Menu_PlacementTargetPath = global::ApiExamples.Resource.Styleable.Menu_PlacementTargetPath;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Menu_PopupMenuEvent = global::ApiExamples.Resource.Styleable.Menu_PopupMenuEvent;
-			global::MugenMvvmToolkit.Android.Resource.Styleable.Menu_PopupMenuTemplate = global::ApiExamples.Resource.Styleable.Menu_PopupMenuTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_ContentTemplate = global::ApiExamples.Resource.Styleable.Binding_ContentTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_DropDownItemTemplate = global::ApiExamples.Resource.Styleable.Binding_DropDownItemTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_ItemTemplate = global::ApiExamples.Resource.Styleable.Binding_ItemTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_MenuTemplate = global::ApiExamples.Resource.Styleable.Binding_MenuTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_PlacementTargetPath = global::ApiExamples.Resource.Styleable.Binding_PlacementTargetPath;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_PopupMenuEvent = global::ApiExamples.Resource.Styleable.Binding_PopupMenuEvent;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_PopupMenuTemplate = global::ApiExamples.Resource.Styleable.Binding_PopupMenuTemplate;
+			global::MugenMvvmToolkit.Android.Resource.Styleable.Binding_TabContentId = global::ApiExamples.Resource.Styleable.Binding_TabContentId;
 		}
 		
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010018
-			public const int ActionBarTemplate = 2130771992;
+			// aapt resource value: 0x7f010017
+			public const int ActionBarTemplate = 2130771991;
 			
 			// aapt resource value: 0x7f01000f
 			public const int Bind = 2130771983;
 			
-			// aapt resource value: 0x7f010010
-			public const int Bindings = 2130771984;
-			
-			// aapt resource value: 0x7f010013
-			public const int ContentTemplate = 2130771987;
-			
 			// aapt resource value: 0x7f010012
-			public const int DropDownItemTemplate = 2130771986;
+			public const int ContentTemplate = 2130771986;
 			
 			// aapt resource value: 0x7f010011
-			public const int ItemTemplate = 2130771985;
+			public const int DropDownItemTemplate = 2130771985;
 			
-			// aapt resource value: 0x7f010014
-			public const int MenuTemplate = 2130771988;
+			// aapt resource value: 0x7f010010
+			public const int ItemTemplate = 2130771984;
 			
-			// aapt resource value: 0x7f010017
-			public const int PlacementTargetPath = 2130771991;
+			// aapt resource value: 0x7f010013
+			public const int MenuTemplate = 2130771987;
 			
 			// aapt resource value: 0x7f010016
-			public const int PopupMenuEvent = 2130771990;
+			public const int PlacementTargetPath = 2130771990;
 			
 			// aapt resource value: 0x7f010015
-			public const int PopupMenuTemplate = 2130771989;
+			public const int PopupMenuEvent = 2130771989;
 			
-			// aapt resource value: 0x7f010019
-			public const int TabContentId = 2130771993;
+			// aapt resource value: 0x7f010014
+			public const int PopupMenuTemplate = 2130771988;
+			
+			// aapt resource value: 0x7f010018
+			public const int TabContentId = 2130771992;
 			
 			// aapt resource value: 0x7f010004
 			public const int cardBackgroundColor = 2130771972;
@@ -226,41 +216,38 @@ namespace ApiExamples
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060004
-			public const int AttachedProperties = 2131099652;
-			
 			// aapt resource value: 0x7f060003
-			public const int ListTemplateId = 2131099651;
+			public const int AttachedProperties = 2131099651;
 			
 			// aapt resource value: 0x7f060002
-			public const int ListenParentChange = 2131099650;
+			public const int ListTemplateId = 2131099650;
 			
 			// aapt resource value: 0x7f060001
 			public const int OptionsMenu = 2131099649;
 			
-			// aapt resource value: 0x7f060007
-			public const int content = 2131099655;
+			// aapt resource value: 0x7f060006
+			public const int content = 2131099654;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f060008
-			public const int recyclerView = 2131099656;
+			// aapt resource value: 0x7f060007
+			public const int recyclerView = 2131099655;
+			
+			// aapt resource value: 0x7f060004
+			public const int tabContent = 2131099652;
 			
 			// aapt resource value: 0x7f060005
-			public const int tabContent = 2131099653;
+			public const int tabContentId = 2131099653;
 			
-			// aapt resource value: 0x7f060006
-			public const int tabContentId = 2131099654;
+			// aapt resource value: 0x7f060008
+			public const int textView = 2131099656;
 			
 			// aapt resource value: 0x7f060009
-			public const int textView = 2131099657;
+			public const int toolbar = 2131099657;
 			
 			// aapt resource value: 0x7f06000a
-			public const int toolbar = 2131099658;
-			
-			// aapt resource value: 0x7f06000b
-			public const int toolbarBottom = 2131099659;
+			public const int toolbarBottom = 2131099658;
 			
 			static Id()
 			{
@@ -454,25 +441,47 @@ namespace ApiExamples
 		public partial class Styleable
 		{
 			
-			public static int[] ActionBar = new int[] {
-					2130771992,
-					2130771993};
-			
-			// aapt resource value: 0
-			public const int ActionBar_ActionBarTemplate = 0;
-			
-			// aapt resource value: 1
-			public const int ActionBar_TabContentId = 1;
-			
 			public static int[] Binding = new int[] {
 					2130771983,
-					2130771984};
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987,
+					2130771988,
+					2130771989,
+					2130771990,
+					2130771991,
+					2130771992};
+			
+			// aapt resource value: 8
+			public const int Binding_ActionBarTemplate = 8;
 			
 			// aapt resource value: 0
 			public const int Binding_Bind = 0;
 			
+			// aapt resource value: 3
+			public const int Binding_ContentTemplate = 3;
+			
+			// aapt resource value: 2
+			public const int Binding_DropDownItemTemplate = 2;
+			
 			// aapt resource value: 1
-			public const int Binding_Bindings = 1;
+			public const int Binding_ItemTemplate = 1;
+			
+			// aapt resource value: 4
+			public const int Binding_MenuTemplate = 4;
+			
+			// aapt resource value: 7
+			public const int Binding_PlacementTargetPath = 7;
+			
+			// aapt resource value: 6
+			public const int Binding_PopupMenuEvent = 6;
+			
+			// aapt resource value: 5
+			public const int Binding_PopupMenuTemplate = 5;
+			
+			// aapt resource value: 9
+			public const int Binding_TabContentId = 9;
 			
 			public static int[] CardView = new int[] {
 					16843071,
@@ -527,40 +536,6 @@ namespace ApiExamples
 			
 			// aapt resource value: 11
 			public const int CardView_contentPaddingTop = 11;
-			
-			public static int[] Control = new int[] {
-					2130771987};
-			
-			// aapt resource value: 0
-			public const int Control_ContentTemplate = 0;
-			
-			public static int[] ItemsControl = new int[] {
-					2130771985,
-					2130771986};
-			
-			// aapt resource value: 1
-			public const int ItemsControl_DropDownItemTemplate = 1;
-			
-			// aapt resource value: 0
-			public const int ItemsControl_ItemTemplate = 0;
-			
-			public static int[] Menu = new int[] {
-					2130771988,
-					2130771989,
-					2130771990,
-					2130771991};
-			
-			// aapt resource value: 0
-			public const int Menu_MenuTemplate = 0;
-			
-			// aapt resource value: 3
-			public const int Menu_PlacementTargetPath = 3;
-			
-			// aapt resource value: 2
-			public const int Menu_PopupMenuEvent = 2;
-			
-			// aapt resource value: 1
-			public const int Menu_PopupMenuTemplate = 1;
 			
 			public static int[] RecyclerView = new int[] {
 					16842948,

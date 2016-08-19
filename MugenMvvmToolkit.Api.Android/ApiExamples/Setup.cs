@@ -2,6 +2,7 @@ using ApiExamples;
 using ApiExamples.ViewModels;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
+using MugenMvvmToolkit.Android.Binding.Modules;
 using MugenMvvmToolkit.Android.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
