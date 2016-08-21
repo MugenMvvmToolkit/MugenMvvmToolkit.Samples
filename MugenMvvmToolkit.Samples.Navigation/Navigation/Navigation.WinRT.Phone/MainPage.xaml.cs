@@ -1,5 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+using MugenMvvmToolkit.Xamarin.Forms.WinRT;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -13,7 +14,7 @@ namespace Navigation.WinRT.Phone
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new Navigation.App());
+            LoadApplication(new Navigation.App(new PlatformBootstrapperService()));
         }
     }
 }

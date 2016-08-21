@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MugenMvvmToolkit.Xamarin.Forms.iOS;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -21,7 +22,7 @@ namespace Navigation.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new PlatformBootstrapperService()));
             return base.FinishedLaunching(app, options);
         }
     }

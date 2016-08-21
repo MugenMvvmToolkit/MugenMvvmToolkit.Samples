@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MugenMvvmToolkit.Xamarin.Forms.WinPhone;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinPhone;
 
 namespace Navigation.WinPhone
@@ -10,7 +11,7 @@ namespace Navigation.WinPhone
             InitializeComponent();
 
             Forms.Init();
-            LoadApplication(new Navigation.App());
+            LoadApplication(new Navigation.App(new PlatformBootstrapperService()));
         }
     }
 }

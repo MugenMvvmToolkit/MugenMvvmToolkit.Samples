@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Portable", "Navigation.Portable\Navigation.Portable.csproj", "{F1F3017C-6CDA-48E2-8FF0-EC4276650AC8}"
 EndProject
@@ -20,13 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.UniversalApp.WindowsPhone", "Navigation.UniversalApp\Navigation.UniversalApp.WindowsPhone\Navigation.UniversalApp.WindowsPhone.csproj", "{726D9D8C-B19A-4472-B0C5-505B5FB4E7BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.WindowsPhone(8.0)", "Navigation.WindowsPhone(8.0)\Navigation.WindowsPhone(8.0).csproj", "{0B60AA2A-D805-4341-9A42-C15847BE2886}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{71157775-43BC-47BF-BC02-3267D2F16B6B}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.Touch", "Navigation.Touch\Navigation.Touch.csproj", "{4501A22D-672D-4E45-8488-53ED004E85F9}"
 EndProject
@@ -48,8 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation.WinRT", "Navigat
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Navigation.UniversalApp\Navigation.UniversalApp.Shared\Navigation.UniversalApp.Shared.projitems*{726d9d8c-b19a-4472-b0c5-505b5fb4e7bd}*SharedItemsImports = 4
 		Navigation.UniversalApp\Navigation.UniversalApp.Shared\Navigation.UniversalApp.Shared.projitems*{499359b5-8643-400c-99a8-395dd7612c37}*SharedItemsImports = 13
+		Navigation.UniversalApp\Navigation.UniversalApp.Shared\Navigation.UniversalApp.Shared.projitems*{726d9d8c-b19a-4472-b0c5-505b5fb4e7bd}*SharedItemsImports = 4
 		Navigation.UniversalApp\Navigation.UniversalApp.Shared\Navigation.UniversalApp.Shared.projitems*{caf4725e-9689-4f0a-ae72-648594ce0ccb}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

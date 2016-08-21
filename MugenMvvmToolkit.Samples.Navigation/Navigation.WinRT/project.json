@@ -1,8 +1,8 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "MugenMvvmToolkit": "5.1.0",
-    "MugenMvvmToolkit.AutofacContainer": "5.1.0"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "MugenMvvmToolkit": "6.0.0",
+    "MugenMvvmToolkit.AutofacContainer": "6.0.0"
   },
   "frameworks": {
     "uap10.0": {}

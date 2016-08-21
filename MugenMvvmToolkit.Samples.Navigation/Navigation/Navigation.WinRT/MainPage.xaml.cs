@@ -1,5 +1,7 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
+using MugenMvvmToolkit.Xamarin.Forms.WinRT;
+
 namespace Navigation.WinRT
 {
     /// <summary>
@@ -10,7 +12,7 @@ namespace Navigation.WinRT
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new Navigation.App());
+            LoadApplication(new Navigation.App(new PlatformBootstrapperService()));
         }
     }
 }

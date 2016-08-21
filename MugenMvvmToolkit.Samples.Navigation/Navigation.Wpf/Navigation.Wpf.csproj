@@ -39,16 +39,16 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.5.1.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.6.0.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.5.1.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WPF, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WPF.5.1.0\lib\net45\MugenMvvmToolkit.WPF.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WPF, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.WPF.6.0.0\lib\net45\MugenMvvmToolkit.WPF.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -145,7 +145,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" /> 
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
