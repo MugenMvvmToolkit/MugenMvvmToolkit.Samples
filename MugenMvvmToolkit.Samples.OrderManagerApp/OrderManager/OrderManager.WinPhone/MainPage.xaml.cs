@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MugenMvvmToolkit.Xamarin.Forms.WinPhone;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinPhone;
 
 namespace OrderManager.WinPhone
@@ -10,7 +11,7 @@ namespace OrderManager.WinPhone
             InitializeComponent();
 
             Forms.Init();
-            LoadApplication(new OrderManager.XamForms.App());
+            LoadApplication(new OrderManager.XamForms.App(new PlatformBootstrapperService()));
         }
     }
 }

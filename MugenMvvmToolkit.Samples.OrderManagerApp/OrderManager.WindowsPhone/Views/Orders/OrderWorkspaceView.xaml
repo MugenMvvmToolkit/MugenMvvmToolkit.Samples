@@ -7,13 +7,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="clr-namespace:MugenMvvmToolkit.WinPhone.AppBar;assembly=MugenMvvmToolkit.WinPhone"
-    xmlns:markupExtensions="clr-namespace:MugenMvvmToolkit.WinPhone.MarkupExtensions;assembly=MugenMvvmToolkit.WinPhone"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" IsEnabled="{Binding Path=IsBusy, Converter={StaticResource InverseBooleanConverter}}"
-    markupExtensions:View.DesignDataContext="OrderWorkspaceViewModel"
+    mc:Ignorable="d" IsEnabled="{Binding Path=IsBusy, Converter={StaticResource InverseBooleanConverter}}"    
     shell:SystemTray.IsVisible="True">
 
     <shell:SystemTray.ProgressIndicator>

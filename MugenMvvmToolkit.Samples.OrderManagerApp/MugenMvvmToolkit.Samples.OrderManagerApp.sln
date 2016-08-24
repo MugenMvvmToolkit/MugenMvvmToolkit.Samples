@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.Portable", "OrderManager.Portable\OrderManager.Portable.csproj", "{068EC021-96C0-40CB-860B-A46043C2D803}"
 EndProject
@@ -23,13 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.WindowsPhone",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.Tests", "OrderManager.Tests\OrderManager.Tests.csproj", "{B6569686-40DD-42CB-B9BB-E11AAB923634}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9C5B21EC-3131-433E-86C4-963E4332C6A2}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.Touch", "OrderManager.Touch\OrderManager.Touch.csproj", "{57C9A200-C145-43FF-BF2B-0F6525C41B72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin.Forms", "Xamarin.Forms", "{C539CDF6-6E17-444E-A494-6BC46B6DD907}"
@@ -50,9 +43,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManager.WinRT", "Order
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		UniversalApp\OrderManager.Shared\OrderManager.Shared.projitems*{c43a16a2-c01a-4de4-952d-999a9883271b}*SharedItemsImports = 4
 		UniversalApp\OrderManager.Shared\OrderManager.Shared.projitems*{3f87c7ee-5588-4a81-927f-b32febfdb700}*SharedItemsImports = 13
 		UniversalApp\OrderManager.Shared\OrderManager.Shared.projitems*{b5697ed4-00ef-4661-9d75-a4c4071ecea3}*SharedItemsImports = 4
+		UniversalApp\OrderManager.Shared\OrderManager.Shared.projitems*{c43a16a2-c01a-4de4-952d-999a9883271b}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

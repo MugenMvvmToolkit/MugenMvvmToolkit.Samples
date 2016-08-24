@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using MugenMvvmToolkit.Xamarin.Forms.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -16,7 +17,7 @@ namespace OrderManager.Droid
 
             Forms.Init(this, bundle);
 
-            LoadApplication(new OrderManager.XamForms.App());
+            LoadApplication(new OrderManager.XamForms.App(new PlatformBootstrapperService()));
         }
     }
 }

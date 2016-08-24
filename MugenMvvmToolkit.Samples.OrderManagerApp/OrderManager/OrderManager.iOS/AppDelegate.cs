@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MugenMvvmToolkit.Xamarin.Forms.iOS;
 using OrderManager.XamForms;
 using UIKit;
 using Xamarin.Forms;
@@ -22,7 +23,7 @@ namespace OrderManager.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new PlatformBootstrapperService()));
             return base.FinishedLaunching(app, options);
         }
     }

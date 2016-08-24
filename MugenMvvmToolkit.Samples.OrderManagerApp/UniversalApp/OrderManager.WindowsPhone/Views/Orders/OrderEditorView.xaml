@@ -6,8 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     mc:Ignorable="d"
-    d:DesignHeight="800"
-    markupExtensions:View.DesignDataContext="OrderEditorViewModel"
+    d:DesignHeight="800"    
     d:DesignWidth="400">
     <Pivot Title="{StaticResource AppName}">
         <PivotItem Header="main info">

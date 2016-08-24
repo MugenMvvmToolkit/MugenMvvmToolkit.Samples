@@ -6,6 +6,7 @@ using UIKit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.Models;
 using OrderManager.Portable.ViewModels.Orders;
@@ -21,6 +22,28 @@ namespace OrderManager.Touch.Views.Orders
         {
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
+
+            var cellTemplateSelector = new DefaultTableCellTemplateSelector<OrderModel>(UITableViewCellStyle.Default, (cell, set) =>
+            {
+                cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
+                cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
+
+                set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
+                    .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().EditOrderCommand)
+                    .OneTime()
+                    .WithCommandParameter(() => (m, ctx) => m)
+                    .ToggleEnabledState(false);
+                set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
+                    .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().RemoveOrderCommand)
+                    .OneTime()
+                    .WithCommandParameter(() => (m, ctx) => m)
+                    .ToggleEnabledState(false);
+                set.Bind(cell.TextLabel)
+                    .To(() => (m, ctx) => string.Format("{0} (№ {1})", m.Name, m.Number));
+                set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
+                    .To(() => (m, ctx) => string.Format("Delete {0}", m.Name));
+            });
+            TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, cellTemplateSelector);
 
             using (var set = new BindingSet<OrderWorkspaceViewModel>())
             {
@@ -45,30 +68,6 @@ namespace OrderManager.Touch.Views.Orders
                     .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
             }
-
-            TableView.SetCellStyle(UITableViewCellStyle.Default);
-            TableView.SetCellBind(cell =>
-            {
-                cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
-                cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
-                using (var set = new BindingSet<OrderModel>())
-                {
-                    set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
-                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().EditOrderCommand)
-                        .OneTime()
-                        .WithCommandParameter(() => (m, ctx) => m)
-                        .ToggleEnabledState(false);
-                    set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
-                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<OrderWorkspaceViewModel>().RemoveOrderCommand)
-                        .OneTime()
-                        .WithCommandParameter(() => (m, ctx) => m)
-                        .ToggleEnabledState(false);
-                    set.Bind(cell.TextLabel)
-                        .To(() => (m, ctx) => string.Format("{0} (№ {1})", m.Name, m.Number));
-                    set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                        .To(() => (m, ctx) => string.Format("Delete {0}", m.Name));
-                }
-            });
         }
 
         #endregion

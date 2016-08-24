@@ -7,8 +7,7 @@
     xmlns:markupExtensions="using:MugenMvvmToolkit.WinRT.MarkupExtensions"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:OrderManager.Behaviors"
-    mc:Ignorable="d" markupExtensions:View.Bind="IsEnabled !IsBusy"
-    markupExtensions:View.DesignDataContext="ProductWorkspaceViewModel"
+    mc:Ignorable="d" markupExtensions:View.Bind="IsEnabled !IsBusy"    
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <interactivity:Interaction.Behaviors>

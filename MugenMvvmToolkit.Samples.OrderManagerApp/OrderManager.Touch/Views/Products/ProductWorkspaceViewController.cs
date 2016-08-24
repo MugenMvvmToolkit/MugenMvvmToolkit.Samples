@@ -6,6 +6,7 @@ using UIKit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.Models;
 using OrderManager.Portable.ViewModels.Products;
@@ -21,6 +22,30 @@ namespace OrderManager.Touch.Views.Products
         {
             base.ViewDidLoad();
             View.BackgroundColor = UIColor.White;
+
+            var cellTemplateSelector = new DefaultTableCellTemplateSelector<ProductModel>(UITableViewCellStyle.Subtitle, (cell, set) =>
+            {
+                cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
+                cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
+                cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
+                set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
+                    .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<ProductWorkspaceViewModel>().EditProductCommand)
+                    .OneTime()
+                    .WithCommandParameter(() => (m, ctx) => m)
+                    .ToggleEnabledState(false);
+                set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
+                    .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<ProductWorkspaceViewModel>().RemoveProductCommand)
+                    .OneTime()
+                    .WithCommandParameter(() => (m, ctx) => m)
+                    .ToggleEnabledState(false);
+                set.Bind(cell.TextLabel)
+                    .To(() => (m, ctx) => m.Name);
+                set.Bind(cell.DetailTextLabel)
+                    .To(() => (m, ctx) => m.Description);
+                set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
+                    .To(() => (m, ctx) => string.Format("Delete {0}", m.Name));
+            });
+            TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, cellTemplateSelector);
 
             using (var set = new BindingSet<ProductWorkspaceViewModel>())
             {
@@ -45,33 +70,6 @@ namespace OrderManager.Touch.Views.Products
                     .To(() => (vm, ctx) => vm.GridViewModel.SelectedItem)
                     .TwoWay();
             }
-
-            TableView.SetCellStyle(UITableViewCellStyle.Subtitle);
-            TableView.SetCellBind(cell =>
-            {
-                cell.SetEditingStyle(UITableViewCellEditingStyle.Delete);
-                cell.Accessory = UITableViewCellAccessory.DetailDisclosureButton;
-                cell.DetailTextLabel.AdjustsFontSizeToFitWidth = true;
-                using (var set = new BindingSet<ProductModel>())
-                {
-                    set.Bind(cell, AttachedMembers.UITableViewCell.AccessoryButtonTappedEvent)
-                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<ProductWorkspaceViewModel>().EditProductCommand)
-                        .OneTime()
-                        .WithCommandParameter(() => (m, ctx) => m)
-                        .ToggleEnabledState(false);
-                    set.Bind(cell, AttachedMembers.UITableViewCell.DeleteClickEvent)
-                        .To(() => (m, ctx) => ctx.Relative<UIViewController>().DataContext<ProductWorkspaceViewModel>().RemoveProductCommand)
-                        .OneTime()
-                        .WithCommandParameter(() => (m, ctx) => m)
-                        .ToggleEnabledState(false);
-                    set.Bind(cell.TextLabel)
-                       .To(() => (m, ctx) => m.Name);
-                    set.Bind(cell.DetailTextLabel)
-                       .To(() => (m, ctx) => m.Description);
-                    set.Bind(cell, AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                        .To(() => (m, ctx) => string.Format("Delete {0}", m.Name));
-                }
-            });
         }
 
         #endregion

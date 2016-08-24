@@ -6,6 +6,7 @@ using UIKit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using OrderManager.Portable.Models;
 using OrderManager.Portable.ViewModels.Orders;
@@ -37,7 +38,22 @@ namespace OrderManager.Touch.Views.Orders
                         UIApplication.SharedApplication.StatusBarFrame.Height +
                         NavigationController.NavigationBar.Frame.Height, 0f, TabBarController.TabBar.Frame.Height, 0f);
             }
-
+            var cellTemplateSelector = new DefaultTableCellTemplateSelector<SelectableWrapper<ProductModel>>(UITableViewCellStyle.Subtitle, (cell, set) =>
+            {
+                cell.SetEditingStyle(UITableViewCellEditingStyle.None);
+                cell.Accessory = UITableViewCellAccessory.None;
+                set.Bind(cell, () => viewCell => viewCell.Selected)
+                    .To(() => (vm, ctx) => vm.IsSelected)
+                    .TwoWay();
+                set.Bind(cell.TextLabel)
+                    .To(() => (vm, ctx) => vm.Model.Name);
+                set.Bind(cell.DetailTextLabel)
+                    .To(() => (vm, ctx) => vm.Model.Description);
+                set.Bind(cell, () => v => v.Accessory)
+                    .ToSelf(() => (vm, ctx) => vm.Selected)
+                    .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
+            }, true);
+            TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, cellTemplateSelector);
             using (var set = new BindingSet<OrderEditorViewModel>())
             {
                 var searchBar = new UISearchBar(new CGRect(0, 0, 320, 44)) { Placeholder = "Filter..." };
@@ -48,25 +64,6 @@ namespace OrderManager.Touch.Views.Orders
             }
 
             TableView.AllowsMultipleSelection = true;
-            TableView.SetCellStyle(UITableViewCellStyle.Subtitle);
-            TableView.SetCellBind(cell =>
-            {
-                cell.SetEditingStyle(UITableViewCellEditingStyle.None);
-                cell.Accessory = UITableViewCellAccessory.None;
-                using (var set = new BindingSet<SelectableWrapper<ProductModel>>())
-                {
-                    set.Bind(cell, () => viewCell => viewCell.Selected)
-                       .To(() => (vm, ctx) => vm.IsSelected)
-                       .TwoWay();
-                    set.Bind(cell.TextLabel)
-                       .To(() => (vm, ctx) => vm.Model.Name);
-                    set.Bind(cell.DetailTextLabel)
-                       .To(() => (vm, ctx) => vm.Model.Description);
-                    set.Bind(cell, () => v => v.Accessory)
-                        .ToSelf(() => (vm, ctx) => vm.Selected)
-                        .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
-                }
-            });
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿ // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+﻿using MugenMvvmToolkit.Xamarin.Forms.WinRT;
 
 namespace OrderManager.WinRT
 {
@@ -10,7 +10,7 @@ namespace OrderManager.WinRT
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new OrderManager.XamForms.App());
+            LoadApplication(new OrderManager.XamForms.App(new PlatformBootstrapperService()));
         }
     }
 }
