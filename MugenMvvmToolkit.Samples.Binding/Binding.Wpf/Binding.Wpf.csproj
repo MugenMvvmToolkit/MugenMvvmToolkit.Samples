@@ -36,8 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.1.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -45,7 +45,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\net45\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\net40\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -184,6 +184,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

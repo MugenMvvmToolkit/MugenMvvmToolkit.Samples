@@ -244,7 +244,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\wp8\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\portable-net45+sl50+win+wp80\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
