@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using MugenMvvmToolkit.Xamarin.Forms.Android;
 
 namespace Validation.Droid
 {
@@ -16,7 +17,7 @@ namespace Validation.Droid
 
             Forms.Init(this, bundle);
 
-            LoadApplication(new App());
+            LoadApplication(new App(new PlatformBootstrapperService()));
         }
     }
 }

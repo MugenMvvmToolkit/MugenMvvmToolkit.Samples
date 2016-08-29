@@ -1,5 +1,7 @@
 ﻿ // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
+using MugenMvvmToolkit.Xamarin.Forms.WinRT;
+
 namespace Validation.WinRT
 {
     /// <summary>
@@ -10,7 +12,7 @@ namespace Validation.WinRT
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new Validation.App());
+            LoadApplication(new Validation.App(new PlatformBootstrapperService()));
         }
     }
 }

@@ -4,6 +4,8 @@ using UIKit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using Validation.Portable.Models;
 using Validation.Portable.ViewModels;
@@ -93,14 +95,14 @@ namespace Validation.Touch.Views
                 {
                     AutoresizingMask = UIViewAutoresizing.FlexibleDimensions,
                 };
-                tableView.SetCellStyle(UITableViewCellStyle.Default);
-                tableView.SetCellBind(cell =>
-                {
-                    cell.TextLabel.AdjustsFontSizeToFitWidth = true;
-                    cell.TextLabel.Bind()
-                        .To<UserModel>(() => (m, ctx) => string.Format("Name: {0} Login: {1} Email: {2}", m.Name, m.Login, m.Email))
-                        .Build();
-                });
+                tableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, new DefaultTableCellTemplateSelector<UserModel>(UITableViewCellStyle.Default,
+                    (cell, bindingSet) =>
+                    {
+                        cell.TextLabel.AdjustsFontSizeToFitWidth = true;
+                        cell.TextLabel.Bind()
+                            .To<UserModel>(() => (m, ctx) => string.Format("Name: {0} Login: {1} Email: {2}", m.Name, m.Login, m.Email))
+                            .Build();
+                    }));
                 set.Bind(tableView, AttachedMemberConstants.ItemsSource)
                     .To(() => (vm, ctx) => vm.UserGridViewModel.ItemsSource);
                 set.Bind(tableView, AttachedMemberConstants.SelectedItem)
