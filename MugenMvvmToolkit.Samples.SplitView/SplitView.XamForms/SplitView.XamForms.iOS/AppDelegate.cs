@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using MugenMvvmToolkit.Xamarin.Forms.iOS;
 using UIKit;
 
 namespace SplitView.XamForms.iOS
@@ -23,7 +24,7 @@ namespace SplitView.XamForms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new PlatformBootstrapperService()));
 
             return base.FinishedLaunching(app, options);
         }

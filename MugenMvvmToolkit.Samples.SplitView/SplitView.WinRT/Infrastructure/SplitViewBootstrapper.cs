@@ -25,10 +25,8 @@ namespace SplitView.WinRT.Infrastructure
 
         #region Constructors
 
-        public SplitViewBootstrapper(IEnumerable<Assembly> assemblies = null,
-            IViewModelSettings viewModelSettings = null,
-            PlatformInfo platform = null)
-            : base(new Frame(), new AutofacContainer(), assemblies, viewModelSettings, platform)
+        public SplitViewBootstrapper(IEnumerable<Assembly> assemblies = null, PlatformInfo platform = null)
+            : base(new Frame(), new AutofacContainer(), assemblies, platform)
         {
         }
 
@@ -44,10 +42,10 @@ namespace SplitView.WinRT.Infrastructure
             RootFrame.NavigationFailed += OnNavigationFailed;
         }
 
-        public override void Start()
+        public override void Start(IDataContext ctx = null)
         {
+            ctx = ctx.ToNonReadOnly();
             var current = MvvmApplication.Current;
-            var ctx = new DataContext(current.Context);
 
             object value;
             IViewModel viewModel;

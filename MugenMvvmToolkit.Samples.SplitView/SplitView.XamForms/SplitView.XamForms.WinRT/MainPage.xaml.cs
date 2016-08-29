@@ -1,4 +1,6 @@
-﻿ namespace SplitView.XamForms.WinRT
+﻿ using MugenMvvmToolkit.Xamarin.Forms.WinRT;
+
+namespace SplitView.XamForms.WinRT
 {
     public sealed partial class MainPage
     {
@@ -7,7 +9,7 @@
         public MainPage()
         {
             InitializeComponent();
-            LoadApplication(new XamForms.App());
+            LoadApplication(new XamForms.App(new PlatformBootstrapperService()));
         }
 
         #endregion

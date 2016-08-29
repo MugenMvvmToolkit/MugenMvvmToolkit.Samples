@@ -76,7 +76,7 @@ namespace SplitView.Portable.ViewModels
             var hasOperationResult = viewModel as IHasOperationResult;
             if (hasOperationResult != null)
                 result = hasOperationResult.OperationResult;
-            _callbackManager.SetResult(viewModel, OperationResult.CreateResult(NavigationType, viewModel, result));
+            _callbackManager.SetResult(OperationResult.CreateResult(NavigationType, viewModel, result));
         }
 
         protected override void OnDispose(bool disposing)

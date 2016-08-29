@@ -2,7 +2,6 @@
 using System.Reflection;
 using MugenMvvmToolkit.iOS.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
-using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Models;
 using SplitView.Portable;
 using UIKit;
@@ -14,8 +13,8 @@ namespace SplitView.iOS
         #region Constructors
 
         public SplitViewBootstrapper(UIWindow window, IIocContainer iocContainer,
-            IEnumerable<Assembly> assemblies = null, IViewModelSettings viewModelSettings = null,
-            PlatformInfo platform = null) : base(window, iocContainer, assemblies, viewModelSettings, platform)
+            IEnumerable<Assembly> assemblies = null,
+            PlatformInfo platform = null) : base(window, iocContainer, assemblies, platform)
         {
             WrapToNavigationController = UIDevice.CurrentDevice.UserInterfaceIdiom != UIUserInterfaceIdiom.Pad;
         }

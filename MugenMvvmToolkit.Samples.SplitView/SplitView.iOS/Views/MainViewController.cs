@@ -2,8 +2,8 @@
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.Binding.Extensions.Syntax;
-using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Binding;
+using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
 using SplitView.Portable.Models;
 using SplitView.Portable.ViewModels;
@@ -27,12 +27,14 @@ namespace SplitView.iOS.Views
                 bindingSet.Bind(TableView, AttachedMembers.UITableView.SelectedItemChangedEvent)
                     .To(() => (vm, ctx) => ctx.Relative<UIViewController>().DataContext<MainViewModel>().OpenItemCommand)
                     .WithCommandParameter(() => (item, ctx) => ctx.Self<UITableView>().Member(AttachedMembers.UITableView.SelectedItem));
-                TableView.SetCellBind(cell =>
-                {
-                    cell.TextLabel.Bind(() => l => l.Text)
-                        .To<MenuItemModel>(() => (vm, ctx) => vm.Name)
-                        .Build();
-                });
+
+                TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, new DefaultTableCellTemplateSelector<MenuItemModel>(UITableViewCellStyle.Default,
+                    (cell, set) =>
+                    {
+                        cell.TextLabel.Bind(() => l => l.Text)
+                            .To<MenuItemModel>(() => (vm, ctx) => vm.Name)
+                            .Build();
+                    }, false));
             }
         }
 

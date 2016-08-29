@@ -1,11 +1,13 @@
-﻿namespace SplitView.XamForms.UWP
+﻿using MugenMvvmToolkit.Xamarin.Forms.WinRT;
+
+namespace SplitView.XamForms.UWP
 {
     public sealed partial class MainPage
     {
         public MainPage()
         {
             this.InitializeComponent();
-            LoadApplication(new XamForms.App());
+            LoadApplication(new XamForms.App(new PlatformBootstrapperService()));
         }
     }
 }

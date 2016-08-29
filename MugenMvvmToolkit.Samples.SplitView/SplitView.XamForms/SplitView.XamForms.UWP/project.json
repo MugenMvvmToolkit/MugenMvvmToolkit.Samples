@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "MugenMvvmToolkit.Xamarin.Forms": "5.1.0"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "MugenMvvmToolkit.Xamarin.Forms": "6.0.0"
   },
   "frameworks": {
     "uap10.0": {}
