@@ -39,14 +39,16 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Back stack fragment", new ViewModelCommandParameter(typeof (BackStackFragmetViewModel), Constants.PopupMenuView)),
                 Tuple.Create("ItemsSource with DataTemplateSelector", new ViewModelCommandParameter(typeof (ListDataTemplateViewModel))),
                 Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CardRecyclerView)),
-                Tuple.Create("Preference", new ViewModelCommandParameter(typeof (PreferenceViewModel))),
-                Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof (PreferenceViewModel), Constants.PreferenceHeaderView)),
-#if APPCOMPAT                
+#if APPCOMPAT
                 Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),
                 Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel))),
                 Tuple.Create("Snackbar (Design)", new ViewModelCommandParameter(typeof (SnackbarViewModel))),
                 Tuple.Create("Tab layout (Design)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabLayoutView)),
-                Tuple.Create("Navigation view (Design)", new ViewModelCommandParameter(typeof (NavigationViewModel)))
+                Tuple.Create("Navigation view (Design)", new ViewModelCommandParameter(typeof (NavigationViewModel))),
+                Tuple.Create("Preference (Compat)", new ViewModelCommandParameter(typeof (CompatPreferenceViewModel))),
+#else
+                Tuple.Create("Preference", new ViewModelCommandParameter(typeof (PreferenceViewModel))),
+                Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof (PreferenceViewModel), Constants.PreferenceHeaderView)),
 #endif
             };
             ShowCommand = RelayCommandBase.FromAsyncHandler<ViewModelCommandParameter>(Show);

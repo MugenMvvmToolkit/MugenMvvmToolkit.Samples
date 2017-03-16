@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
 
   <OptionsMenu android:layout_height="wrap_content"
                android:layout_width="wrap_content"
-               pkg:MenuTemplate="@menu/addremovemenu" />
+               app:MenuTemplate="@menu/addremovemenu" />
 
-  <RecyclerView android:layout_width="match_parent"
+  <RecyclerView android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/recyclerView"
-                pkg:ItemTemplate="@layout/_carditemtemplate"
-                pkg:Bind="ItemsSource ItemsSource" />
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:ItemTemplate="@layout/_carditemtemplate"
+                app:Bind="ItemsSource ItemsSource" />
 </LinearLayout>

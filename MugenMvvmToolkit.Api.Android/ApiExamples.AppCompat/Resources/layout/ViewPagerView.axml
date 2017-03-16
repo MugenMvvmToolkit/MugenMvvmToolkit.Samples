@@ -2,17 +2,17 @@
 
 <DrawerLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:pkg="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/drawer_layout"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  pkg:Bind="ActionBarDrawerEnabled true">
+  app:Bind="ActionBarDrawerEnabled true">
   <!-- The main content view -->
   <ViewPager
     android:id="@+id/content_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    pkg:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay">
+    app:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay">
     <PagerTitleStrip
       android:id="@+id/pager_title_strip"
       android:layout_width="match_parent"
@@ -31,14 +31,14 @@
             android:dividerHeight="0dp"
             android:background="#111"
             android:tag="left_drawer"
-            pkg:ItemTemplate="@layout/_draweritemlistviewtemplate"
-            pkg:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay;" />
+            app:ItemTemplate="@layout/_draweritemlistviewtemplate"
+            app:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay;" />
 
   <ActionBar android:layout_height="wrap_content"
              android:layout_width="wrap_content"
-             pkg:Bind="Title 'Selected item: ' + SelectedItem.Name + SelectedItem.Id, Fallback='View pager'" />
+             app:Bind="Title 'Selected item: ' + SelectedItem.Name + SelectedItem.Id, Fallback='View pager'" />
   <OptionsMenu
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    pkg:MenuTemplate="@menu/addremovemenu" />
+    app:MenuTemplate="@menu/addremovemenu" />
 </DrawerLayout>

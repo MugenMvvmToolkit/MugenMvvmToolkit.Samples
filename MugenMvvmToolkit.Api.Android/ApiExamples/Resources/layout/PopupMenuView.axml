@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
@@ -9,17 +9,17 @@
             android:layout_height="wrap_content"
             android:text="Click to show popup menu"
             android:textSize="10pt"
-            pkg:PopupMenuEvent="Click"
-            pkg:PopupMenuTemplate="@menu/popupmenutemplate" />
+            app:PopupMenuEvent="Click"
+            app:PopupMenuTemplate="@menu/popupmenutemplate" />
 
   <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Long click on item to show popup menu"/>
   <ListView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            pkg:ItemTemplate="@layout/_itemlistviewtemplate"
-            pkg:PopupMenuEvent="ItemLongClick"
-            pkg:PopupMenuTemplate="@menu/popupmenutemplate"
-            pkg:PlacementTargetPath="View"
-            pkg:Bind="ItemsSource Items"/>
+            app:ItemTemplate="@layout/_itemlistviewtemplate"
+            app:PopupMenuEvent="ItemLongClick"
+            app:PopupMenuTemplate="@menu/popupmenutemplate"
+            app:PlacementTargetPath="View"
+            app:Bind="ItemsSource Items"/>
 </LinearLayout>

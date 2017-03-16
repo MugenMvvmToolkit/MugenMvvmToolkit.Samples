@@ -1,41 +1,50 @@
-using Android.Preferences;
 using ApiExamples.Models;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.Binding.Interfaces;
+#if APPCOMPAT
+using Android.Support.V7.Preferences;
+#else
+using Android.Preferences;
+
+#endif
 
 namespace ApiExamples.TemplateSelectors
 {
-    public class PreferenceTemplateSelector : DataTemplateSelectorBase<PreferenceModel, Preference>
+    public class PreferenceTemplateSelector : IDataTemplateSelector
     {
-        #region Methods
+        #region Implementation of interfaces
 
-        protected override void Initialize(Preference template, BindingSet<Preference, PreferenceModel> bindingSet)
+        public object SelectTemplate(object itemObj, object container)
         {
-            bindingSet.Bind(() => p => p.Title).To(() => (m, ctx) => m.Title);
-            var preference = template as EditTextPreference;
-            if (preference == null)
-            {
-                bindingSet.Bind((CheckBoxPreference) template, () => p => p.Checked)
-                    .To(() => (m, ctx) => m.Value)
-                    .TwoWay();
-            }
-            else
-            {
-                bindingSet.Bind(preference, () => p => p.Text)
-                    .To(() => (m, ctx) => m.Value)
-                    .TwoWay();
-                bindingSet.Bind(preference, () => p => p.Summary)
-                    .ToSelf(() => (m, ctx) => m.Text);
-            }
-        }
-
-        protected override Preference SelectTemplate(PreferenceModel item, object container)
-        {
+            var item = (PreferenceModel) itemObj;
+            if (item == null)
+                return null;
             var preference = (Preference) container;
-            if (item.IsCheckbox)
-                return new CheckBoxPreference(preference.Context) {Key = item.Key};
-            return new EditTextPreference(preference.Context) {Key = item.Key};
+            Preference result;
+            using (var set = new BindingSet<PreferenceModel>())
+            {
+                if (item.IsCheckbox)
+                {
+                    var checkBoxPref = new CheckBoxPreference(preference.Context) {Key = item.Key};
+                    result = checkBoxPref;
+                    set.Bind(checkBoxPref, () => p => p.Checked)
+                        .To(() => (m, ctx) => m.Value)
+                        .TwoWay();
+                }
+                else
+                {
+                    var editTextPref = new EditTextPreference(preference.Context) {Key = item.Key};
+                    result = editTextPref;
+                    set.Bind(editTextPref, () => p => p.Text)
+                        .To(() => (m, ctx) => m.Value)
+                        .TwoWay();
+                    set.Bind(editTextPref, () => p => p.Summary)
+                        .ToSelf(() => (m, ctx) => m.Text);
+                }
+                set.Bind(result, () => p => p.Title).To(() => (m, ctx) => m.Title);
+            }
+            return result;
         }
 
         #endregion

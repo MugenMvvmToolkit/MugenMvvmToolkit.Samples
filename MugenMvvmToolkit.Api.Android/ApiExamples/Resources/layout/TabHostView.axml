@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-         xmlns:pkg="http://schemas.android.com/apk/res-auto"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
          android:id="@android:id/tabhost"
          android:layout_width="fill_parent"
          android:layout_height="fill_parent"
-         pkg:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay">
+         app:Bind="ItemsSource ItemsSource; SelectedItem SelectedItem, Mode=TwoWay">
   <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -23,6 +23,6 @@
     <OptionsMenu
       android:layout_height="wrap_content"
       android:layout_width="wrap_content"
-      pkg:MenuTemplate="@menu/addremovemenu" />
+      app:MenuTemplate="@menu/addremovemenu" />
   </LinearLayout>
 </TabHost>

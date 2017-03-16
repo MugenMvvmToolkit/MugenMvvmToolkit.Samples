@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                   xmlns:pkg="http://schemas.android.com/apk/res-auto"
+                   xmlns:app="http://schemas.android.com/apk/res-auto"
                    android:id="@+id/coordinator_layout"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent">
@@ -12,16 +12,16 @@
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Show toast"
-            pkg:Bind="Click ShowToastCommand" />
+            app:Bind="Click ShowToastCommand" />
 
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Show snackbar"
-            pkg:Bind="Click ShowSnackbarCommand" />
+            app:Bind="Click ShowSnackbarCommand" />
 
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Show snackbar with action"
-            pkg:Bind="Click ShowSnackbarActionCommand" />
+            app:Bind="Click ShowSnackbarActionCommand" />
   </LinearLayout>
 </CoordinatorLayout>

@@ -1,6 +1,12 @@
+using System;
 using Android.OS;
 using Android.Runtime;
+#if APPCOMPAT
+using MvvmPreferenceFragment = MugenMvvmToolkit.Android.PreferenceCompat.Views.Fragments.MvvmPreferenceFragmentCompat;
+
+#else
 using MugenMvvmToolkit.Android.Views.Fragments;
+#endif
 
 namespace ApiExamples.Views.Fragments
 {
@@ -15,6 +21,11 @@ namespace ApiExamples.Views.Fragments
             AddPreferencesFromResource(Resource.Xml.pref);
         }
 
+#if APPCOMPAT
+        public override void OnCreatePreferences(Bundle savedInstanceState, string rootKey)
+        {
+        }
+#endif
         #endregion
     }
 }

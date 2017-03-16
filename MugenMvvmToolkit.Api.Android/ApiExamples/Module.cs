@@ -1,29 +1,22 @@
-using System;
 using ApiExamples.TemplateSelectors;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.Interfaces.Models;
-using MugenMvvmToolkit.Models;
-using MugenMvvmToolkit.Modules;
 
 namespace ApiExamples
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
+        #region Properties
 
-        public Module()
-            : base(true, LoadMode.All)
-        {
-        }
+        public int Priority => ApplicationSettings.ModulePriorityDefault;
 
         #endregion
 
-        #region Overrides of ModuleBase
+        #region Implementation of interfaces
 
-        /// <summary>
-        ///     Loads the current module.
-        /// </summary>
-        protected override bool LoadInternal()
+        public bool Load(IModuleContext context)
         {
             BindingServiceProvider
                 .ResourceResolver
@@ -34,15 +27,7 @@ namespace ApiExamples
             return true;
         }
 
-        private object Method(object o, IDataContext dataContext)
-        {
-            return o;
-        }
-
-        /// <summary>
-        ///     Unloads the current module.
-        /// </summary>
-        protected override void UnloadInternal()
+        public void Unload(IModuleContext context)
         {
         }
 

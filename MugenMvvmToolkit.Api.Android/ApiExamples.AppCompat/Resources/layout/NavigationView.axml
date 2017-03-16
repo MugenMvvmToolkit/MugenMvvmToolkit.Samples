@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:id="@+id/drawer_layout"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -14,5 +14,5 @@
                   android:layout_width="wrap_content"
                   android:layout_height="match_parent"
                   android:layout_gravity="start"
-                  pkg:MenuTemplate="@menu/drawer" />
+                  app:MenuTemplate="@menu/drawer" />
 </DrawerLayout>

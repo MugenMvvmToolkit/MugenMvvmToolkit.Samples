@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <CardView xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:pkg="http://schemas.android.com/apk/res-auto"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
           android:orientation="horizontal"
           android:layout_width="match_parent"
           android:layout_height="100dp"
           android:layout_margin="5dp"
-          pkg:cardCornerRadius="5dp">
+          app:cardCornerRadius="5dp">
   <TextView android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:textSize="24sp"
             android:layout_centerInParent="true"
             android:textColor="@android:color/black"
-            pkg:Bind="Text Name + Id" />
+            app:Bind="Text Name + Id" />
 </CardView>

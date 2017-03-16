@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+  <style name="AppTheme" parent="Theme.AppCompat">
+    <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>   
+  </style>
+  
   <style name="ToolbarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowActionBar">false</item>
@@ -14,5 +18,18 @@
     <item name="windowActionBar">false</item>
     <item name="android:windowFullscreen">true</item>
     <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <style name="PreferenceThemeOverlay">
+    <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen</item>
+    <item name="preferenceFragmentStyle">@style/PreferenceFragment</item>
+    <item name="preferenceCategoryStyle">@style/Preference.Category</item>
+    <item name="preferenceStyle">@style/Preference</item>
+    <item name="preferenceInformationStyle">@style/Preference.Information</item>
+    <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference</item>
+    <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
+    <item name="dialogPreferenceStyle">@style/Preference.DialogPreference</item>
+    <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.EditTextPreference</item>
+    <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList</item>
   </style>
 </resources>
