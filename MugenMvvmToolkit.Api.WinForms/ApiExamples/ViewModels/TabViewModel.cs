@@ -4,7 +4,7 @@ using MugenMvvmToolkit.ViewModels;
 
 namespace ApiExamples.ViewModels
 {
-    public class TabViewModel : MultiViewModel
+    public class TabViewModel : MultiViewModel<ItemViewModel>
     {
         #region Constructors
 

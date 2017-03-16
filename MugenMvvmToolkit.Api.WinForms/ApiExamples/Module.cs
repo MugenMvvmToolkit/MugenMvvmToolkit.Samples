@@ -1,43 +1,32 @@
 ﻿using System.Windows.Forms;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces.Models;
-using MugenMvvmToolkit.Models;
-using MugenMvvmToolkit.Modules;
+using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Interfaces.Models;
 
 namespace ApiExamples
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
-
-        public Module()
-            : base(false, LoadMode.All)
-        {
-        }
-
-        #endregion
-
         #region Overrides of ModuleBase
 
-        /// <summary>
-        ///     Loads the current module.
-        /// </summary>
-        protected override bool LoadInternal()
+        public bool Load(IModuleContext context)
         {
-            IBindingMemberInfo bindingMember = BindingServiceProvider.MemberProvider.GetBindingMember(
-                typeof (TreeView), "AfterSelect", false, false);
+            var bindingMember = BindingServiceProvider.MemberProvider.GetBindingMember(
+                typeof(TreeView), "AfterSelect", false, false);
             if (bindingMember != null)
-                BindingServiceProvider.MemberProvider.Register(typeof (TreeView), "SelectedNodeChanged", bindingMember,
+            {
+                BindingServiceProvider.MemberProvider.Register(typeof(TreeView), "SelectedNodeChanged", bindingMember,
                     true);
+            }
             return true;
         }
 
-        /// <summary>
-        ///     Unloads the current module.
-        /// </summary>
-        protected override void UnloadInternal()
+        public void Unload(IModuleContext context)
         {
         }
+
+        public int Priority => ApplicationSettings.ModulePriorityDefault;
 
         #endregion
     }

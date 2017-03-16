@@ -1,10 +1,12 @@
 ﻿using System.Windows.Forms;
 using ApiExamples.ViewModels;
+using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 
 namespace ApiExamples.Views
 {
+    [ViewModel(typeof(TabViewModel))]
     public partial class TabForm : Form
     {
         public TabForm()
