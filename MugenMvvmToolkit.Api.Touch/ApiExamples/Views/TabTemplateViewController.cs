@@ -25,13 +25,13 @@ namespace ApiExamples.Views
             {
                 NavigationItem.RightBarButtonItems = new[]
                 {
-                    new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.AddCommand)),
-                    new UIBarButtonItem {Title = "Insert"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.InsertCommand)),
-                    new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => (m, ctx) => m.RemoveCommand))
+                    new UIBarButtonItem {Title = "Add"},
+                    new UIBarButtonItem {Title = "Insert"},
+                    new UIBarButtonItem {Title = "Remove"}
                 };
+                set.Bind(NavigationItem.RightBarButtonItems[0]).To(() => (vm, ctx) => vm.AddCommand);
+                set.Bind(NavigationItem.RightBarButtonItems[1]).To(() => (vm, ctx) => vm.InsertCommand);
+                set.Bind(NavigationItem.RightBarButtonItems[2]).To(() => (vm, ctx) => vm.RemoveCommand);
 
                 this.SetBindingMemberValue(AttachedMembers.UITabBarController.ItemTemplateSelector,
                     TabTemplateSelector.Instance);

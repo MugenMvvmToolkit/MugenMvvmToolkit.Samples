@@ -1,10 +1,9 @@
 using Foundation;
-using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
 {
-    public class CustomViewCell : UITableViewCellBindable
+    public class CustomViewCell : UITableViewCell
     {
         #region Constructors
 

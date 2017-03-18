@@ -1,11 +1,10 @@
 using System.Drawing;
 using Foundation;
-using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Views
 {
-    public class CollectionViewCell : UICollectionViewCellBindable
+    public class CollectionViewCell : UICollectionViewCell
     {
         #region Constructors
 
@@ -26,7 +25,7 @@ namespace ApiExamples.Views
 
         #region Properties
 
-        public UILabel Label { get; private set; }
+        public UILabel Label { get; }
 
         #endregion
     }

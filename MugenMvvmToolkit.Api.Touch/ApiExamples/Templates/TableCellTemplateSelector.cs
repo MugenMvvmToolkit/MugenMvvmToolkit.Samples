@@ -2,13 +2,12 @@ using ApiExamples.Models;
 using ApiExamples.ViewModels;
 using ApiExamples.Views;
 using Foundation;
-using MugenMvvmToolkit.Binding.Extensions.Syntax;
-using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.Binding.Extensions.Syntax;
+using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Binding;
 using MugenMvvmToolkit.iOS.Binding.Infrastructure;
-using MugenMvvmToolkit.iOS.Views;
 using UIKit;
 
 namespace ApiExamples.Templates
@@ -43,7 +42,7 @@ namespace ApiExamples.Templates
         {
             if (identifier == EvenIdCellIdentifier)
                 return new CustomViewCell(identifier);
-            return new UITableViewCellBindable(UITableViewCellStyle.Subtitle, identifier);
+            return new UITableViewCell(UITableViewCellStyle.Subtitle, identifier);
         }
 
         protected override void Initialize(UITableViewCell template,
@@ -68,10 +67,10 @@ namespace ApiExamples.Templates
             bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
             bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => (m, ctx) => m.Editing).OneWayToSource();
             bindingSet.Bind(AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
-                      .To(() => (m, ctx) => "Delete " + m.Name);
+                .To(() => (m, ctx) => "Delete " + m.Name);
             bindingSet.Bind(template.TextLabel).To(() => (m, ctx) => m.Name);
             bindingSet.Bind(template.DetailTextLabel)
-                .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
+                .To(() => (m, ctx) => $"Selected: {m.IsSelected}, Highlighted: {m.IsHighlighted}, Editing: {m.Editing}");
         }
 
         #endregion

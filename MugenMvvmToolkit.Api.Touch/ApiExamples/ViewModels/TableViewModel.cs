@@ -24,7 +24,7 @@ namespace ApiExamples.ViewModels
 
         public TableViewModel(IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _messagePresenter = messagePresenter;
             AddCommand = new RelayCommand(Add);
             ItemClickCommand = new RelayCommand<TableItemModel>(ItemClick);

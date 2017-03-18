@@ -58,8 +58,8 @@ namespace ApiExamples.Views
 
                     set.Bind(cell.TextLabel).To(() => (model, ctx) => model.Name);
                     set.Bind(cell.DetailTextLabel)
-                        .To(() => (m, ctx) => string.Format("Selected: {0}, Highlighted: {1}, Editing: {2}", m.IsSelected, m.IsHighlighted, m.Editing));
-                }, true));
+                        .To(() => (m, ctx) => $"Selected: {m.IsSelected}, Highlighted: {m.IsHighlighted}, Editing: {m.Editing}");
+                }));
         }
 
         #endregion

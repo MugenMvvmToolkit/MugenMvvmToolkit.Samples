@@ -6,7 +6,7 @@ using MugenMvvmToolkit.ViewModels;
 
 namespace ApiExamples.ViewModels
 {
-    public class TabViewModel : MultiViewModel
+    public class TabViewModel : MultiViewModel<ItemViewModel>
     {
         #region Fields
 
@@ -18,7 +18,7 @@ namespace ApiExamples.ViewModels
 
         public TabViewModel(IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _messagePresenter = messagePresenter;
             AddCommand = new RelayCommand(Add);
             InsertCommand = new RelayCommand(Insert, CanInsert, this);
@@ -50,8 +50,8 @@ namespace ApiExamples.ViewModels
 
         private async void Remove(object o)
         {
-            var item = (ItemViewModel)SelectedItem;
-            if (await _messagePresenter.ShowAsync(string.Format("Are you sure, you want to delete the view model {0}?", item.DisplayName), "Delete", MessageButton.YesNo) == MessageResult.Yes)
+            var item = SelectedItem;
+            if (await _messagePresenter.ShowAsync($"Are you sure, you want to delete the view model {item.DisplayName}?", "Delete", MessageButton.YesNo) == MessageResult.Yes)
                 RemoveViewModelAsync(item);
         }
 

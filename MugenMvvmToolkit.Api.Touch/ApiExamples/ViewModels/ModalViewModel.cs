@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MugenMvvmToolkit;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
 using MugenMvvmToolkit.ViewModels;
@@ -19,7 +20,7 @@ namespace ApiExamples.ViewModels
 
         public ModalViewModel(IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _messagePresenter = messagePresenter;
             NavigateCommand = new RelayCommand(Navigate);
         }
@@ -43,7 +44,7 @@ namespace ApiExamples.ViewModels
 
         #region Overrides of CloseableViewModel
 
-        protected override Task<bool> OnClosing(object parameter)
+        protected override Task<bool> OnClosing(IDataContext context)
         {
             return _messagePresenter.ShowAsync("Close modal view model?", "Modal view model", MessageButton.YesNo)
                                     .ContinueWith(task => task.Result == MessageResult.Yes);

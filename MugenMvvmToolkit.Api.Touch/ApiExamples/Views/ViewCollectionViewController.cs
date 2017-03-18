@@ -26,11 +26,11 @@ namespace ApiExamples.Views
             {
                 NavigationItem.RightBarButtonItems = new[]
                 {
-                    new UIBarButtonItem {Title = "Add"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => (vm, ctx) => vm.AddCommand)),
-                    new UIBarButtonItem {Title = "Remove"}.SetBindings(set,
-                        (bindingSet, item) => bindingSet.Bind(item).To(() => (vm, ctx) => vm.RemoveCommand))
+                    new UIBarButtonItem {Title = "Add"},
+                    new UIBarButtonItem {Title = "Remove"}
                 };
+                set.Bind(NavigationItem.RightBarButtonItems[0]).To(() => (vm, ctx) => vm.AddCommand);
+                set.Bind(NavigationItem.RightBarButtonItems[1]).To(() => (vm, ctx) => vm.RemoveCommand);
 
                 set.Bind(View, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
                 View.SetBindingMemberValue(AttachedMembers.UIView.ItemTemplateSelector, LabelItemTemplateSelector.Instance);
