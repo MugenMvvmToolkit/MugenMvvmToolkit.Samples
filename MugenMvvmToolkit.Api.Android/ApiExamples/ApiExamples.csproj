@@ -59,11 +59,11 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="MugenMvvmToolkit, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.6.5.0\lib\MonoAndroid10\MugenMvvmToolkit.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.6.5.0\lib\netstandard1.0\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.6.5.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Android.6.5.0\lib\MonoAndroid10\MugenMvvmToolkit.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Android.RecyclerView, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
@@ -71,7 +71,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MugenMvvmToolkit.Binding, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.6.5.0\lib\MonoAndroid10\MugenMvvmToolkit.Binding.dll</HintPath>
+      <HintPath>..\packages\MugenMvvmToolkit.Binding.6.5.0\lib\netstandard1.0\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
