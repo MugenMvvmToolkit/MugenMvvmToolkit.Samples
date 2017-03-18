@@ -1,6 +1,5 @@
 ﻿using System.Windows.Forms;
 using Binding.Portable.Infrastructure;
-using Binding.Portable.Resources;
 using Binding.Portable.ViewModels;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
@@ -22,11 +21,11 @@ namespace Binding.WinForms.Views
                    .To(() => (vm, ctx) => vm.SelectedCulture)
                    .TwoWay();
                 set.Bind(addLabel)
-                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("AddText"));
                 set.Bind(editLabel)
-                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("EditText"));
                 set.Bind(delLabel)
-                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
+                    .To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("DeleteText"));
             }
         }
     }

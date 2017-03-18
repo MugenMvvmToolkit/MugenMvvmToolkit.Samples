@@ -1,5 +1,5 @@
 using System.Windows;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.WPF.Infrastructure;
 
 namespace Binding.Wpf
@@ -10,7 +10,7 @@ namespace Binding.Wpf
 
         public App()
         {
-            new Bootstrapper<Portable.App>(this, new AutofacContainer());
+            new Bootstrapper<Portable.App>(this, new MugenContainer());
         }
 
         #endregion

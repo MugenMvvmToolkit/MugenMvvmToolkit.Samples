@@ -1,8 +1,8 @@
 using Binding.Android;
 using Binding.Portable;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 
 [assembly: Bootstrapper(typeof(Setup))]
@@ -20,7 +20,7 @@ namespace Binding.Android
 
         protected override IIocContainer CreateIocContainer()
         {
-            return new AutofacContainer();
+            return new MugenContainer();
         }
 
         #endregion

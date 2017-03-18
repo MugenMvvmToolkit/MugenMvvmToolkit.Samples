@@ -4,7 +4,7 @@ using Binding.Portable.Interfaces;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Models;
 
@@ -92,7 +92,7 @@ namespace Binding.Portable.Infrastructure
 
         #region Constructors
 
-        public ResourceMonitor()
+        public ResourceMonitor(IViewManager viewManager)
         {
             _bindingManager = BindingServiceProvider.BindingManager;
             BindingServiceProvider.BindingManager = this;
@@ -100,10 +100,10 @@ namespace Binding.Portable.Infrastructure
             _bindings = new List<WeakReference>();
             _viewModels = new List<WeakReference>();
             _views = new List<WeakReference>();
-            ViewManager.ViewInitialized += (manager, model, arg3, arg4) =>
+            viewManager.ViewInitialized += (manager, args) =>
             {
                 lock (_views)
-                    _views.Add(new WeakReference(arg3, true));
+                    _views.Add(new WeakReference(args.View, true));
                 ++ViewCount;
             };
             Tracer.TraceViewModelHandler += (auditAction, viewModel) =>

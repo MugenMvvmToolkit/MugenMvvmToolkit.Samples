@@ -2,45 +2,21 @@
 using Android.Widget;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
+using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
-using MugenMvvmToolkit.Modules;
 
 namespace Binding.Android
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
+        #region Properties
 
-        public Module()
-            : base(false, LoadMode.All)
-        {
-        }
-
-        #endregion
-
-        #region Overrides of ModuleBase
-
-        protected override bool LoadInternal()
-        {
-            //Registering attached property
-            IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextView, string>("TextExt",
-                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateMember<TextView, string>("FormattedText",
-                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
-
-            return true;
-        }
-
-        protected override void UnloadInternal()
-        {
-        }
+        public int Priority => ApplicationSettings.ModulePriorityDefault;
 
         #endregion
 
@@ -78,7 +54,7 @@ namespace Binding.Android
                 .IocContainer
                 .Get<IToastPresenter>()
                 .ShowAsync(string.Format("Invoking TextExtMemberChanged on {2} old value {0} new value {1}", args.OldValue,
-                        args.NewValue, textBlock.Id), ToastDuration.Short);
+                    args.NewValue, textBlock.Id), ToastDuration.Short);
             textBlock.Text = string.Format("Old value \"{0}\" new value \"{1}\"", args.OldValue, args.NewValue);
         }
 
@@ -106,6 +82,27 @@ namespace Binding.Android
         private static string GetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, TextView textBlock)
         {
             return textBlock.Text;
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public bool Load(IModuleContext context)
+        {
+            //Registering attached property
+            var memberProvider = BindingServiceProvider.MemberProvider;
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextView, string>("TextExt",
+                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
+
+            memberProvider.Register(AttachedBindingMember.CreateMember<TextView, string>("FormattedText",
+                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
+
+            return true;
+        }
+
+        public void Unload(IModuleContext context)
+        {
         }
 
         #endregion

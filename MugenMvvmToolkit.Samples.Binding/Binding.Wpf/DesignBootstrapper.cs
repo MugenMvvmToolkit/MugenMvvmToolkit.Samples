@@ -1,4 +1,6 @@
 ﻿using MugenMvvmToolkit;
+using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.WPF.Infrastructure;
 
@@ -8,6 +10,11 @@ namespace Binding
     {
         #region Methods
 
+        public DesignBootstrapper()
+        {
+            BindingServiceProvider.InitializeFromDesignContext();
+        }
+
         protected override IMvvmApplication CreateApplication()
         {
             return new Portable.App();
@@ -15,7 +22,7 @@ namespace Binding
 
         protected override IIocContainer CreateIocContainer()
         {
-            return new AutofacContainer();
+            return new MugenContainer();
         }
 
         #endregion

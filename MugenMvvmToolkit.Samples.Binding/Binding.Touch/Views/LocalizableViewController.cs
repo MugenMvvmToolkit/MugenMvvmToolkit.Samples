@@ -1,5 +1,4 @@
 ﻿using Binding.Portable.Infrastructure;
-using Binding.Portable.Resources;
 using Binding.Portable.ViewModels;
 using CoreGraphics;
 using Foundation;
@@ -41,7 +40,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.AddText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("AddText"));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 25, View.Frame.Width - 40, 25))
@@ -50,7 +49,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.EditText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("EditText"));
                 scrollView.AddSubview(label);
 
                 label = new UILabel(new CGRect(20, 50, View.Frame.Width - 40, 25))
@@ -59,7 +58,7 @@ namespace Binding.Touch.Views
                     TextColor = UIColor.Green,
                     Font = font
                 };
-                set.Bind(label).To(() => (vm, ctx) => ctx.Resource(LocalizationManager.ResourceName, () => LocalizableResources.DeleteText));
+                set.Bind(label).To(() => (vm, ctx) => ctx.Resource<object>(LocalizationManager.ResourceName).Member("DeleteText"));
                 scrollView.AddSubview(label);
 
                 var textField = new UITextField(new CGRect(20, 75, View.Frame.Width - 40, 30))

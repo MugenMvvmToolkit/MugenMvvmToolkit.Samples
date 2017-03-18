@@ -1,49 +1,28 @@
 ﻿using System;
-using MugenMvvmToolkit.Modules;
+using MugenMvvmToolkit;
+using MugenMvvmToolkit.Binding;
+using MugenMvvmToolkit.Binding.Infrastructure;
+using MugenMvvmToolkit.Binding.Interfaces.Models;
+using MugenMvvmToolkit.Binding.Models;
+using MugenMvvmToolkit.Binding.Models.EventArg;
+using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.Presenters;
+using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.WPF.Binding.Infrastructure;
 #if NETFX_CORE
 using Windows.UI.Xaml.Controls;
 #else
 using System.Windows.Controls;
 #endif
-using MugenMvvmToolkit;
-using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces;
-using MugenMvvmToolkit.Binding.Interfaces.Models;
-using MugenMvvmToolkit.Binding.Models;
-using MugenMvvmToolkit.Binding.Models.EventArg;
-using MugenMvvmToolkit.Interfaces.Presenters;
-using MugenMvvmToolkit.Models;
 
 namespace Binding.Wpf
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
+        #region Properties
 
-        public Module()
-            : base(true, LoadMode.All)
-        {
-        }
-
-        #endregion
-
-        #region Overrides of ModuleBase
-
-        protected override bool LoadInternal()
-        {
-            //Registering attached property
-            IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextBlock, string>("TextExt",
-                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateMember<TextBlock, string>("FormattedText",
-                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
-            return true;
-        }
-
-        protected override void UnloadInternal()
-        {
-        }
+        public int Priority => ApplicationSettings.ModulePriorityDefault;
 
         #endregion
 
@@ -55,10 +34,12 @@ namespace Binding.Wpf
         private static string TextExtGetDefaultValue(TextBlock textBlock, IBindingMemberInfo bindingMemberInfo)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtGetDefaultValue on " + textBlock.Name, ToastDuration.Short);
+            }
             return "Default value";
         }
 
@@ -68,10 +49,12 @@ namespace Binding.Wpf
         private static void TextExtMemberAttached(TextBlock textBlock, MemberAttachedEventArgs args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtMemberAttached on " + textBlock.Name, ToastDuration.Short);
+            }
         }
 
         /// <summary>
@@ -80,11 +63,13 @@ namespace Binding.Wpf
         private static void TextExtMemberChanged(TextBlock textBlock, AttachedMemberChangedEventArgs<string> args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync(string.Format("Invoking TextExtMemberChanged on {2} old value {0} new value {1}", args.OldValue,
-                            args.NewValue, textBlock.Name), ToastDuration.Short);
+                        args.NewValue, textBlock.Name), ToastDuration.Short);
+            }
             textBlock.Text = string.Format("Old value \"{0}\" new value \"{1}\"", args.OldValue, args.NewValue);
         }
 
@@ -111,6 +96,26 @@ namespace Binding.Wpf
         private static string GetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, TextBlock textBlock)
         {
             return textBlock.Text;
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public bool Load(IModuleContext context)
+        {
+            //Registering attached property
+            var memberProvider = BindingServiceProvider.MemberProvider;
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextBlock, string>("TextExt",
+                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
+
+            memberProvider.Register(AttachedBindingMember.CreateMember<TextBlock, string>("FormattedText",
+                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
+            return true;
+        }
+
+        public void Unload(IModuleContext context)
+        {
         }
 
         #endregion

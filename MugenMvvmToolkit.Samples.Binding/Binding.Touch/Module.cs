@@ -1,52 +1,22 @@
 ﻿using System;
-using Binding.Touch.Templates;
-using UIKit;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
+using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
-using MugenMvvmToolkit.Modules;
+using UIKit;
 
 namespace Binding.Touch
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
+        #region Properties
 
-        public Module()
-            : base(true, LoadMode.All)
-        {
-        }
-
-        #endregion
-
-        #region Overrides of ModuleBase
-
-        /// <summary>
-        ///     Loads the current module.
-        /// </summary>
-        protected override bool LoadInternal()
-        {
-            //Registering attached property
-            IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UILabel, string>("TextExt",
-                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateMember<UILabel, string>("FormattedText",
-                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
-            return true;
-        }
-
-        /// <summary>
-        ///     Unloads the current module.
-        /// </summary>
-        protected override void UnloadInternal()
-        {
-        }
+        public int Priority => int.MinValue;
 
         #endregion
 
@@ -58,10 +28,12 @@ namespace Binding.Touch
         private static string TextExtGetDefaultValue(UILabel textBlock, IBindingMemberInfo bindingMemberInfo)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtGetDefaultValue on " + textBlock.AccessibilityLabel, ToastDuration.Short);
+            }
             return "Default value";
         }
 
@@ -71,10 +43,12 @@ namespace Binding.Touch
         private static void TextExtMemberAttached(UILabel textBlock, MemberAttachedEventArgs args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtMemberAttached on " + textBlock.AccessibilityLabel, ToastDuration.Short);
+            }
         }
 
         /// <summary>
@@ -83,11 +57,13 @@ namespace Binding.Touch
         private static void TextExtMemberChanged(UILabel textBlock, AttachedMemberChangedEventArgs<string> args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync(string.Format("Invoking TextExtMemberChanged on {2} old value {0} new value {1}", args.OldValue,
-                            args.NewValue, textBlock.AccessibilityLabel), ToastDuration.Short);
+                        args.NewValue, textBlock.AccessibilityLabel), ToastDuration.Short);
+            }
             textBlock.Text = string.Format("Old value \"{0}\" new value \"{1}\"", args.OldValue, args.NewValue);
         }
 
@@ -114,6 +90,26 @@ namespace Binding.Touch
         private static string GetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, UILabel textBlock)
         {
             return textBlock.Text;
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public bool Load(IModuleContext context)
+        {
+            //Registering attached property
+            var memberProvider = BindingServiceProvider.MemberProvider;
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<UILabel, string>("TextExt",
+                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
+
+            memberProvider.Register(AttachedBindingMember.CreateMember<UILabel, string>("FormattedText",
+                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
+            return true;
+        }
+
+        public void Unload(IModuleContext context)
+        {
         }
 
         #endregion

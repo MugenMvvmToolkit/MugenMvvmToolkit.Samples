@@ -3,8 +3,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
-             Title="Relative binding"
-             x:Class="Binding.Views.RelativeBindingView">
+             x:Class="Binding.Views.RelativeBindingView"
+             Title="XamForms.Binding">
     <StackLayout Padding="4">
         <Slider x:Name="NamedSlider" Minimum="0" Maximum="100" Value="10" />
         <Entry Text="{mugen:DataBinding '$El(NamedSlider).Value', Mode=TwoWay}" />

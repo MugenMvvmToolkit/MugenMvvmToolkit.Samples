@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
+using System.Resources;
 using Binding.Portable.Interfaces;
-using Binding.Portable.Resources;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
@@ -16,6 +17,8 @@ namespace Binding.Portable.Infrastructure
         #region Fields
 
         public const string ResourceName = "i18n";
+        private static readonly ResourceManager Resorces = new ResourceManager("Binding.Portable.Resources.LocalizableResources", typeof(LocalizationManager).GetTypeInfo().Assembly);
+        private CultureInfo _culture;
 
         #endregion
 
@@ -29,13 +32,17 @@ namespace Binding.Portable.Infrastructure
 
         #endregion
 
+        #region Implementation of interfaces
+
         #region Implementation of ILocalizationManager
 
         public virtual void ChangeCulture(string culture)
         {
-            LocalizableResources.Culture = new CultureInfo(culture);
+            _culture = new CultureInfo(culture);
             InvalidateProperties();
         }
+
+        #endregion
 
         #endregion
 
@@ -57,7 +64,7 @@ namespace Binding.Portable.Infrastructure
         /// </returns>
         public virtual object GetMember(string member, IList<object> args)
         {
-            return LocalizableResources.ResourceManager.GetString(member, LocalizableResources.Culture);
+            return Resorces.GetString(member, _culture);
         }
 
         /// <summary>

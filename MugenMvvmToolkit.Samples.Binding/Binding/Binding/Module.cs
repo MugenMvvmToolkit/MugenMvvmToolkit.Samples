@@ -1,46 +1,22 @@
 ﻿using System;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces;
 using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit.Interfaces;
+using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Models;
-using MugenMvvmToolkit.Modules;
 using Xamarin.Forms;
 
 namespace Binding
 {
-    public class Module : ModuleBase
+    public class Module : IModule
     {
-        #region Constructors
+        #region Properties
 
-        public Module()
-            : base(true, LoadMode.All)
-        {
-        }
-
-        #endregion
-
-        #region Overrides of ModuleBase
-
-        protected override bool LoadInternal()
-        {
-            //Registering attached property
-            IBindingMemberProvider memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Label, string>("TextExt",
-                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateMember<Label, string>("FormattedText",
-                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
-            return true;
-        }
-
-        protected override void UnloadInternal()
-        {
-        }
+        public int Priority => ApplicationSettings.ModulePriorityDefault;
 
         #endregion
 
@@ -52,10 +28,12 @@ namespace Binding
         private static string TextExtGetDefaultValue(Label textBlock, IBindingMemberInfo bindingMemberInfo)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtGetDefaultValue on " + textBlock.ClassId, ToastDuration.Short);
+            }
             return "Default value";
         }
 
@@ -65,10 +43,12 @@ namespace Binding
         private static void TextExtMemberAttached(Label textBlock, MemberAttachedEventArgs args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync("Invoking TextExtMemberAttached on " + textBlock.ClassId, ToastDuration.Short);
+            }
         }
 
         /// <summary>
@@ -77,11 +57,13 @@ namespace Binding
         private static void TextExtMemberChanged(Label textBlock, AttachedMemberChangedEventArgs<string> args)
         {
             if (!ServiceProvider.IsDesignMode)
+            {
                 ServiceProvider
                     .IocContainer
                     .Get<IToastPresenter>()
                     .ShowAsync(string.Format("Invoking TextExtMemberChanged on {2} old value {0} new value {1}", args.OldValue,
-                            args.NewValue, textBlock.ClassId), ToastDuration.Short);
+                        args.NewValue, textBlock.ClassId), ToastDuration.Short);
+            }
             textBlock.Text = string.Format("Old value \"{0}\" new value \"{1}\"", args.OldValue, args.NewValue);
         }
 
@@ -108,6 +90,26 @@ namespace Binding
         private static string GetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, Label textBlock)
         {
             return textBlock.Text;
+        }
+
+        #endregion
+
+        #region Implementation of interfaces
+
+        public bool Load(IModuleContext context)
+        {
+            //Registering attached property
+            var memberProvider = BindingServiceProvider.MemberProvider;
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Label, string>("TextExt",
+                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
+
+            memberProvider.Register(AttachedBindingMember.CreateMember<Label, string>("FormattedText",
+                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
+            return true;
+        }
+
+        public void Unload(IModuleContext context)
+        {
         }
 
         #endregion
