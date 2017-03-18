@@ -5,14 +5,7 @@
              xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
              x:Class="Binding.Views.AttachedMemberView"
              Title="XamForms.Binding">
-    <StackLayout Padding="4">
-        <Label Text="The current text:" />
-        <Entry Text="{mugen:DataBinding Path=Text, Mode=TwoWay}" />
-
-        <Label Text="Attached auto property" />
-        <Label mugen:View.Bind="TextExt Text" TextColor="Green" ClassId="AutoPropertyTb" />
-
-        <Label Text="Attached custom property" />
-        <Label mugen:View.Bind="FormattedText Text" TextColor="Green" />
+    <StackLayout Padding="4" VerticalOptions="Center" HorizontalOptions="Center">
+        <Image mugen:View.Bind="ImageUrl ImageUrl" />
     </StackLayout>
 </ContentPage>

@@ -1,5 +1,7 @@
-﻿using MugenMvvmToolkit;
-using MugenMvvmToolkit.Binding;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using Binding.Portable;
+using Binding.Portable.ViewModels;
 using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.WPF.Infrastructure;
@@ -10,19 +12,22 @@ namespace Binding
     {
         #region Methods
 
-        public DesignBootstrapper()
-        {
-            BindingServiceProvider.InitializeFromDesignContext();
-        }
-
         protected override IMvvmApplication CreateApplication()
         {
-            return new Portable.App();
+            return new App();
         }
 
         protected override IIocContainer CreateIocContainer()
         {
             return new MugenContainer();
+        }
+
+        protected override IList<Assembly> GetAssembliesInternal()
+        {
+            return new[]
+            {
+                typeof(MainViewModel).GetTypeInfo().Assembly
+            };
         }
 
         #endregion

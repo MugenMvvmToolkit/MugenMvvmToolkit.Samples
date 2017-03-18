@@ -4,25 +4,18 @@ namespace Binding.Portable.ViewModels
 {
     public class AttachedMemberViewModel : CloseableViewModel
     {
-        #region Fields
+        #region Constructors
 
-        private string _text = IsDesignMode ? "Design text" : null;
+        public AttachedMemberViewModel()
+        {
+            ImageUrl = "https://raw.githubusercontent.com/MugenMvvmToolkit/MugenMvvmToolkit/master/logo_horizontal.png";
+        }
 
         #endregion
 
         #region Properties
 
-        public string Text
-        {
-            get { return _text; }
-            set
-            {
-                if (Equals(_text, value))
-                    return;
-                _text = value;
-                OnPropertyChanged();
-            }
-        }
+        public string ImageUrl { get; }
 
         #endregion
     }

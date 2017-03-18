@@ -7,14 +7,5 @@
         d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=AttachedMemberViewModel}"
         Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen" Width="300" Height="300"
         WindowStyle="ToolWindow">
-    <StackPanel Margin="4">
-        <TextBlock Text="The current text:" Margin="1" />
-        <TextBox Text="{DataBinding Path=Text, Mode=TwoWay}" Margin="1 1 1 10" />
-
-        <TextBlock Text="Attached auto property" Margin="1" />
-        <TextBlock View.Bind="TextExt Text" Margin="1 1 1 10" Foreground="Green" x:Name="AutoPropertyTb" />
-
-        <TextBlock Text="Attached custom property" Margin="1" />
-        <TextBlock View.Bind="FormattedText Text" Margin="1 1 1 10" Foreground="Green" />
-    </StackPanel>
+    <Image View.Bind="ImageUrl ImageUrl"/>
 </Window>

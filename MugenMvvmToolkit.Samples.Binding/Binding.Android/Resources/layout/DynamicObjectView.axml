@@ -12,14 +12,10 @@
                   android:layout_height="wrap_content"
                   android:orientation="vertical"
                   pkg:Bind="DataContext DynamicModel">
-      <TextInputLayout android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_margin="2px">
-        <AppCompatEditText android:layout_height="wrap_content"
-                           android:layout_width="fill_parent"
-                           android:hint="Binding to dynamic property"
-                           pkg:Bind="Text DynamicProperty, Mode=TwoWay" />
-      </TextInputLayout>
+      <EditText android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:hint="Binding to dynamic property"
+                pkg:Bind="Text DynamicProperty, Mode=TwoWay" />
 
       <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

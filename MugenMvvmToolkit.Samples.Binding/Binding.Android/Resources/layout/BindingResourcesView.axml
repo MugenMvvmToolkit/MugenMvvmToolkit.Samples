@@ -38,6 +38,34 @@
                 android:textColor="#00ff00"
                 pkg:Bind="Text $CustomType.StaticMethod()" />
 
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Color from resources @color/colorResource: ' + $$color.colorResource;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Drawable from resources @drawable/icon: ' + $$drawable.icon;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Dimen from resources @dimen/dimenResource: ' + $$dimen.dimenResource;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Bool from resources @bool/boolResource: ' + $$bool.boolResource;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Id from resources @id/resourceId: ' + $$id.resourceId;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'Integer from resources @integer/intResource: ' + $$integer.intResource;" />
+
+      <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                pkg:Bind="Text 'String from resources @string/stringResource: ' + $$string.stringResource;" />
+
       <Button android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:text="Update resource"

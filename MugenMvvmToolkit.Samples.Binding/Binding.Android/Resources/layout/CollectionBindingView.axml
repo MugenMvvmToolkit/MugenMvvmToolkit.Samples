@@ -10,14 +10,10 @@
                android:layout_width="wrap_content"
                pkg:MenuTemplate="@menu/addlistitemmenu" />
 
-  <TextInputLayout android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2px">
-    <AppCompatEditText android:layout_height="wrap_content"
-                       android:layout_width="fill_parent"
-                       android:hint="Filter"
-                       pkg:Bind="Text FilterText, Mode=TwoWay" />
-  </TextInputLayout>
+  <EditText android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:hint="Filter"
+            pkg:Bind="Text FilterText, Mode=TwoWay" />
 
   <ListView android:layout_width="fill_parent"
             android:layout_height="wrap_content"

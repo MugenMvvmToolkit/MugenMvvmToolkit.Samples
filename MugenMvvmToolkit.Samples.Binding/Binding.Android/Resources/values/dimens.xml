@@ -1,0 +1,5 @@
+﻿<resources>
+  <dimen name="dimenResource">16dp</dimen>
+  <integer name="intResource">10</integer>
+  <bool name="boolResource">true</bool>
+</resources>

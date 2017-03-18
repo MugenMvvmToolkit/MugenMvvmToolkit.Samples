@@ -1,14 +1,13 @@
-﻿using System;
+﻿using System.Net;
+using System.Threading.Tasks;
+using Android.Graphics;
 using Android.Widget;
 using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Interfaces.Models;
 using MugenMvvmToolkit.Binding.Models;
 using MugenMvvmToolkit.Binding.Models.EventArg;
 using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.Interfaces.Models;
-using MugenMvvmToolkit.Interfaces.Presenters;
-using MugenMvvmToolkit.Models;
 
 namespace Binding.Android
 {
@@ -22,66 +21,32 @@ namespace Binding.Android
 
         #region Methods
 
-        /// <summary>
-        ///     Called once for each element in the time of accession to obtain default values.
-        /// </summary>
-        private static string TextExtGetDefaultValue(TextView textBlock, IBindingMemberInfo bindingMemberInfo)
+        private static Bitmap GetImageBitmapFromUrl(string url)
         {
-            ServiceProvider
-                .IocContainer
-                .Get<IToastPresenter>()
-                .ShowAsync("Invoking TextExtGetDefaultValue on " + textBlock.Id, ToastDuration.Short);
-            return "Default value";
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+            }
+
+            return imageBitmap;
         }
 
-        /// <summary>
-        ///     Called once for each element in the time of accession.
-        /// </summary>
-        private static void TextExtMemberAttached(TextView textBlock, MemberAttachedEventArgs args)
+        private static void OnImageUrlChanged(ImageView imageView, AttachedMemberChangedEventArgs<string> args)
         {
-            ServiceProvider
-                .IocContainer
-                .Get<IToastPresenter>()
-                .ShowAsync("Invoking TextExtMemberAttached on " + textBlock.Id, ToastDuration.Short);
-        }
-
-        /// <summary>
-        ///     Called every time when value changed.
-        /// </summary>
-        private static void TextExtMemberChanged(TextView textBlock, AttachedMemberChangedEventArgs<string> args)
-        {
-            ServiceProvider
-                .IocContainer
-                .Get<IToastPresenter>()
-                .ShowAsync(string.Format("Invoking TextExtMemberChanged on {2} old value {0} new value {1}", args.OldValue,
-                    args.NewValue, textBlock.Id), ToastDuration.Short);
-            textBlock.Text = string.Format("Old value \"{0}\" new value \"{1}\"", args.OldValue, args.NewValue);
-        }
-
-        /// <summary>
-        ///     Used to observe member.
-        /// </summary>
-        private static IDisposable ObserveFormattedTextValue(IBindingMemberInfo bindingMemberInfo, TextView textBlock,
-            IEventListener arg3)
-        {
-            return null;
-            //            return BindingServiceProvider.WeakEventManager.TrySubscribe(textBlock, "EventName", arg3);
-        }
-
-        /// <summary>
-        ///     Called every time when value updated.
-        /// </summary>
-        private static void SetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, TextView textBlock, string value)
-        {
-            textBlock.Text = "Formatted " + value;
-        }
-
-        /// <summary>
-        ///     Called every time when value changed.
-        /// </summary>
-        private static string GetFormattedTextValue(IBindingMemberInfo bindingMemberInfo, TextView textBlock)
-        {
-            return textBlock.Text;
+            if (string.IsNullOrEmpty(args.NewValue))
+                return;
+            //for example you can use any cache library to load image
+            var urlSt = args.NewValue;
+            var weakRef = ServiceProvider.WeakReferenceFactory(imageView);
+            Task.Run(() => GetImageBitmapFromUrl(urlSt)).ContinueWith(task =>
+            {
+                var view = (ImageView) weakRef.Target;
+                view?.SetImageBitmap(task.Result);
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         #endregion
@@ -92,11 +57,7 @@ namespace Binding.Android
         {
             //Registering attached property
             var memberProvider = BindingServiceProvider.MemberProvider;
-            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<TextView, string>("TextExt",
-                TextExtMemberChanged, TextExtMemberAttached, TextExtGetDefaultValue));
-
-            memberProvider.Register(AttachedBindingMember.CreateMember<TextView, string>("FormattedText",
-                GetFormattedTextValue, SetFormattedTextValue, ObserveFormattedTextValue));
+            memberProvider.Register(AttachedBindingMember.CreateAutoProperty<ImageView, string>("ImageUrl", OnImageUrlChanged));
 
             return true;
         }

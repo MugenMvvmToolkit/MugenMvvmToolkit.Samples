@@ -14,7 +14,7 @@ namespace Binding
 
         protected override IMvvmApplication CreateApplication()
         {
-            return new App();
+            return new App();            
         }
 
         protected override IIocContainer CreateIocContainer()
@@ -26,7 +26,6 @@ namespace Binding
         {
             return new[]
             {
-                typeof(DesignBootstrapper).GetTypeInfo().Assembly,
                 typeof(MainViewModel).GetTypeInfo().Assembly
             };
         }

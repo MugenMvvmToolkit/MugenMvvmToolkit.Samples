@@ -16372,7 +16372,7 @@
       ]
     },
     "MugenMvvmToolkit/6.5.0": {
-      "sha512": "FqDY2SLiiwE3+bafURh7Vuhb5/IgfIT7oBPQ0DZxVZm79iCOJL7KmotDKTfxdm/Nv3qiZtIP6BDqCIE+tEaiIg==",
+      "sha512": "vWsENGTO11OHNoOVuYnjpcyxeCq8+e4naVhgnDJzno3gUhHQbcDIar5bEW1DwyShyt8nOxle/GOAltY5H0jRMw==",
       "type": "package",
       "path": "MugenMvvmToolkit/6.5.0",
       "files": [
@@ -16387,7 +16387,7 @@
       ]
     },
     "MugenMvvmToolkit.Binding/6.5.0": {
-      "sha512": "ZUKmTNQ0pjLg3dXVDjHTsmNAHgqLjCO2IS3AIUscXVb1WIgEr7qSO7ECmQHrpILi/+6Me1wvaEOGGBkVP7cBkw==",
+      "sha512": "jV70bhK4pleTZNQurBdmzvDW1D+IlXcuZrmCZs6mUYkLbShu40shX5PNIwJWYbqcnxdLMLf9LjHkPUKNygEbPQ==",
       "type": "package",
       "path": "MugenMvvmToolkit.Binding/6.5.0",
       "files": [
@@ -16402,7 +16402,7 @@
       ]
     },
     "MugenMvvmToolkit.UWP/6.5.0": {
-      "sha512": "RIUrnyzxhWjITxsD73Zdllz7KVI61nCVkxvh3oHcQ56T+/I881KnXcEOWr79sf0EzWIkrfoSl5a5ISc15+Qz1Q==",
+      "sha512": "emBXFNdTgOAWduVyO+kiD6iPv0vI+M0vIKdrz3RxXmdCFfVNWj2bBuFhroWa4tpxR/6xPxd3GUYw4lso5Zb5/g==",
       "type": "package",
       "path": "MugenMvvmToolkit.UWP/6.5.0",
       "files": [
@@ -16413,7 +16413,7 @@
       ]
     },
     "MugenMvvmToolkit.UWP.Binding/6.5.0": {
-      "sha512": "NyW9SSY+GcKKbPY1rymd3zUA0/6vc+5YjXZI67b8L5osvh9MUV5fffMYjHeUiOcXP3Mog+xV4TGWgPnwx6s4aA==",
+      "sha512": "JPrl8lDiu+9cFOiWpQmF9JOts7X/DzvWA8TVOyGQaHbJZwnEw2cgRS/FvDLqXpSWuGVyewo6w6/MMPmevxzlzA==",
       "type": "package",
       "path": "MugenMvvmToolkit.UWP.Binding/6.5.0",
       "files": [

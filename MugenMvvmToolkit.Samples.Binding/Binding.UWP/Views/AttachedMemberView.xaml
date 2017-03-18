@@ -34,16 +34,6 @@
         </Grid>
 
 
-        <StackPanel Grid.Row="1" Margin="12,0,12,0">
-            <TextBox Header="The current text:" markupExtensions:View.Bind="Text Text, Mode=TwoWay" Margin="1 1 1 10" />
-
-            <TextBlock Text="Attached auto property" Margin="1" Style="{StaticResource BaseTextBlockStyle}" />
-            <TextBlock markupExtensions:View.Bind="TextExt Text" Margin="1 1 1 10" Foreground="Green"
-                       x:Name="AutoPropertyTb" Style="{StaticResource BaseTextBlockStyle}" />
-
-            <TextBlock Text="Attached custom property" Margin="1" Style="{StaticResource BaseTextBlockStyle}" />
-            <TextBlock markupExtensions:View.Bind="FormattedText Text" Margin="1 1 1 10" Foreground="Green"
-                       Style="{StaticResource BaseTextBlockStyle}" />
-        </StackPanel>
+        <Image markupExtensions:View.Bind="ImageUrl ImageUrl" Grid.Row="1" Margin="12,0,12,0"/>
     </Grid>
 </Page>
