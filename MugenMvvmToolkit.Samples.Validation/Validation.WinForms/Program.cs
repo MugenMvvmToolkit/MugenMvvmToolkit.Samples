@@ -1,6 +1,6 @@
 using System;
 using System.Windows.Forms;
-using MugenMvvmToolkit;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.WinForms.Infrastructure;
 using Validation.Portable;
 
@@ -15,7 +15,7 @@ namespace Validation.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var bootstrapper = new Bootstrapper<App>(new AutofacContainer());
+            var bootstrapper = new Bootstrapper<App>(new MugenContainer());
             bootstrapper.Start();
         }
 

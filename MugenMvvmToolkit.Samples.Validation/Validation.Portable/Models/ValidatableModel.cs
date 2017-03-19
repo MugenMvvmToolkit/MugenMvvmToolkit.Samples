@@ -1,4 +1,6 @@
-﻿using MugenMvvmToolkit.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using MugenMvvmToolkit.Models;
+using Validation.Portable.Attributes;
 
 namespace Validation.Portable.Models
 {
@@ -16,6 +18,7 @@ namespace Validation.Portable.Models
 
         #region Properties
 
+        [Required, StringLength(10, MinimumLength = 2)]
         public string Name
         {
             get { return _name; }
@@ -27,6 +30,7 @@ namespace Validation.Portable.Models
             }
         }
 
+        [Required, StringLength(500, MinimumLength = 2), OptionalValidation]
         public string Description
         {
             get { return _description; }

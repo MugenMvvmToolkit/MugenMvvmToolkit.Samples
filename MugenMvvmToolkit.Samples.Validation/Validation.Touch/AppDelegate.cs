@@ -1,9 +1,9 @@
 using Foundation;
-using UIKit;
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Infrastructure;
-using Validation.Portable.ViewModels;
+using MugenMvvmToolkit.Infrastructure;
+using UIKit;
+using Validation.Portable;
 
 namespace Validation.Touch
 {
@@ -11,65 +11,13 @@ namespace Validation.Touch
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public class AppDelegate : UIApplicationDelegate
+    public class AppDelegate : MvvmAppDelegateBase
     {
-        #region Fields
+        #region Methods
 
-        private const string RootViewControllerKey = "RootViewControllerKey";
-        private TouchBootstrapperBase _bootstrapper;
-        private UIWindow _window;
-
-        #endregion
-
-        #region Overrides of UIApplicationDelegate
-
-        public override void WillEncodeRestorableState(UIApplication application, NSCoder coder)
+        protected override TouchBootstrapperBase CreateBootstrapper(UIWindow window)
         {
-            if (_window.RootViewController != null)
-                coder.Encode(_window.RootViewController, RootViewControllerKey);
-        }
-
-        public override bool WillFinishLaunching(UIApplication application, NSDictionary launchOptions)
-        {
-            // create a new window instance based on the screen size
-            _window = new UIWindow(UIScreen.MainScreen.Bounds);
-            _bootstrapper = new Bootstrapper<Portable.App>(_window, new AutofacContainer());
-            _bootstrapper.Initialize();
-            return true;
-        }
-
-        public override void DidDecodeRestorableState(UIApplication application, NSCoder coder)
-        {
-            var controller = (UIViewController)coder.DecodeObject(RootViewControllerKey);
-            if (controller != null)
-                _window.RootViewController = controller;
-        }
-
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            if (_window.RootViewController == null)
-                _bootstrapper.Start();
-
-            // make the window visible
-            _window.MakeKeyAndVisible();
-
-            return true;
-        }
-
-        public override UIViewController GetViewController(UIApplication application,
-            string[] restorationIdentifierComponents, NSCoder coder)
-        {
-            return PlatformExtensions.ApplicationStateManager.GetViewController(restorationIdentifierComponents, coder);
-        }
-
-        public override bool ShouldRestoreApplicationState(UIApplication application, NSCoder coder)
-        {
-            return true;
-        }
-
-        public override bool ShouldSaveApplicationState(UIApplication application, NSCoder coder)
-        {
-            return true;
+            return new Bootstrapper<App>(window, new MugenContainer());
         }
 
         #endregion

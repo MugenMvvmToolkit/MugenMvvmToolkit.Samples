@@ -1,11 +1,11 @@
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
+using MugenMvvmToolkit.Infrastructure;
 using MugenMvvmToolkit.Interfaces;
 using Validation.Android;
 using Validation.Portable;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace Validation.Android
 {
@@ -20,7 +20,7 @@ namespace Validation.Android
 
         protected override IIocContainer CreateIocContainer()
         {
-            return new AutofacContainer();
+            return new MugenContainer();
         }
 
         #endregion

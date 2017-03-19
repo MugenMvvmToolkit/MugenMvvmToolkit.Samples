@@ -1,12 +1,9 @@
-﻿#if !PCL
-using MugenMvvmToolkit;
+﻿using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Validation.Portable.Attributes
 {
-    //NOTE: We can not use attributes for validation in the portable assembly because it does not support it. 
-    //NOTE: But we can add link to this file and use it on specified platform that supports the attributes.
     public class OptionalValidationAttribute : ValidationAttribute
     {
         #region Overrides of ValidationAttribute
@@ -23,4 +20,3 @@ namespace Validation.Portable.Attributes
         #endregion
     }
 }
-#endif
