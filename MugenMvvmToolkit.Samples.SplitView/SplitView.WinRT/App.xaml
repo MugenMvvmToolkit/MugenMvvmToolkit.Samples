@@ -1,10 +1,13 @@
-﻿<Application
+﻿<uwp:MvvmUwpApplicationBase
     x:Class="SplitView.WinRT.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SplitView.WinRT"
+    xmlns:uwp="using:MugenMvvmToolkit.UWP"
+    xmlns:converters="using:MugenMvvmToolkit.UWP.Binding.Converters"
     RequestedTheme="Light">
     <Application.Resources>
+        <converters:ViewModelToViewConverter x:Key="ViewModelToViewConverter"/>
         <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
         <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="White" Opacity="0.2" />
         <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="White" Opacity="0.1" />
@@ -87,4 +90,5 @@
             </Setter>
         </Style>
     </Application.Resources>
-</Application>
+</uwp:MvvmUwpApplicationBase>
+

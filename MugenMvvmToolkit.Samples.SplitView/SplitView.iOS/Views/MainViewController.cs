@@ -1,53 +1,63 @@
 ﻿using Foundation;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Binding;
-using MugenMvvmToolkit.Binding.Builders;
-using MugenMvvmToolkit.Binding.Extensions.Syntax;
 using MugenMvvmToolkit.iOS.Binding;
-using MugenMvvmToolkit.iOS.Binding.Infrastructure;
 using MugenMvvmToolkit.iOS.Views;
-using SplitView.Portable.Models;
+using MugenMvvmToolkit.Interfaces.ViewModels;
+using SidebarNavigation;
 using SplitView.Portable.ViewModels;
 using UIKit;
 
 namespace SplitView.iOS.Views
 {
     [Register("MainViewController")]
-    public class MainViewController : MvvmTableViewController
+    public class MainViewController : MvvmViewController
     {
+        #region Fields
+
+        private IViewModel _content;
+
+        #endregion
+
+        #region Properties
+
+        // the sidebar controller for the app
+        public SidebarController SidebarController { get; private set; }
+
+        public IViewModel Content
+        {
+            get { return _content; }
+            set
+            {
+                if (value == _content)
+                    return;
+                _content = value;
+                if (value == null)
+                    SidebarController.ChangeContentView(new ItemViewController(true));
+                else
+                    SidebarController.ChangeContentView((UIViewController) ServiceProvider.ViewManager.GetOrCreateView(value));
+            }
+        }
+
+        #endregion
+
         #region Methods
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            View.BackgroundColor = UIColor.White;
 
-            using (var bindingSet = new BindingSet<MainViewModel>())
+            var menuViewController = new MenuViewController();
+            menuViewController.SetBindingMemberValue(AttachedMembers.Object.Parent, this);
+            // create a slideout navigation controller with the top navigation controller and the menu view controller
+            SidebarController = new SidebarController(this, new ItemViewController(true), menuViewController)
             {
-                bindingSet.Bind(TableView, AttachedMembers.UIView.ItemsSource)
-                    .To(() => (vm, ctx) => vm.Items);
-                bindingSet.Bind(TableView, AttachedMembers.UITableView.SelectedItemChangedEvent)
-                    .To(() => (vm, ctx) => ctx.Relative<UIViewController>().DataContext<MainViewModel>().OpenItemCommand)
-                    .WithCommandParameter(() => (item, ctx) => ctx.Self<UITableView>().Member(AttachedMembers.UITableView.SelectedItem));
-
-                TableView.SetBindingMemberValue(AttachedMembers.UITableView.ItemTemplateSelector, new DefaultTableCellTemplateSelector<MenuItemModel>(UITableViewCellStyle.Default,
-                    (cell, set) =>
-                    {
-                        cell.TextLabel.Bind(() => l => l.Text)
-                            .To<MenuItemModel>(() => (vm, ctx) => vm.Name)
-                            .Build();
-                    }, false));
-            }
-        }
-
-        public override void ViewDidDisappear(bool animated)
-        {
-            base.ViewDidDisappear(animated);
-            //Clear selected item.
-            TableView.SetBindingMemberValue(AttachedMembers.UITableView.SelectedItem, value: null);
-        }
-
-        public override bool ShouldAutorotateToInterfaceOrientation(UIInterfaceOrientation toInterfaceOrientation)
-        {
-            return true;
+                HasShadowing = false,
+                MenuWidth = 220,
+                MenuLocation = MenuLocations.Left
+            };
+            this.Bind(nameof(Content)).To(nameof(MainViewModel.SelectedItem)).Build();
         }
 
         #endregion

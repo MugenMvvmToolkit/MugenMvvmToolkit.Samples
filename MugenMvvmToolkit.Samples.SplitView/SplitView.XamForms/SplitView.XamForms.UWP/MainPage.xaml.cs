@@ -1,4 +1,4 @@
-﻿using MugenMvvmToolkit.Xamarin.Forms.WinRT;
+﻿using MugenMvvmToolkit.Xamarin.Forms.UWP;
 
 namespace SplitView.XamForms.UWP
 {

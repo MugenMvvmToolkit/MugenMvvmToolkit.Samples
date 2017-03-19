@@ -10,7 +10,8 @@
         <SplitView x:Name="SplitView" IsPaneOpen="False"
                    DisplayMode="CompactInline"
                    OpenPaneLength="200"
-                   CompactPaneLength="50">
+                   CompactPaneLength="50"
+                   Content="{Binding Path=SelectedItem, Converter={StaticResource ViewModelToViewConverter}}">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup>
                     <VisualState x:Name="Expanded">
@@ -45,8 +46,6 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <RadioButton x:Name="BackRadioButton" Style="{StaticResource NavRadioButtonStyle}" Tag=""
-                                 Content="Back" GroupName="Back" Click="BackRadioButtonOnClick" />
                     <RadioButton x:Name="HamburgerRadioButton" Grid.Row="1" Click="HamburgerRadioButtonClick"
                                  Style="{StaticResource NavRadioButtonStyle}" Tag="" Content="Menu"
                                  GroupName="Hamburger" />
@@ -54,7 +53,7 @@
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <RadioButton Style="{StaticResource NavRadioButtonStyle}" Tag=""
-                                             Content="{Binding Path=Name}" GroupName="Navigation"
+                                             Content="{Binding Path=Name}" GroupName="Navigation"                                             
                                              Command="{Binding Path=DataContext.OpenItemCommand, ElementName=ItemsControl}"
                                              CommandParameter="{Binding}" />
                             </DataTemplate>

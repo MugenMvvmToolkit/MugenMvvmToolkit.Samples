@@ -1,8 +1,8 @@
-using MugenMvvmToolkit.Android.Views;
+using MugenMvvmToolkit.Android.AppCompat.Views.Fragments;
 
 namespace SplitView.Android.Views
 {
-    public class ItemView : UserControl
+    public class ItemView : MvvmFragment
     {
         #region Constructors
 

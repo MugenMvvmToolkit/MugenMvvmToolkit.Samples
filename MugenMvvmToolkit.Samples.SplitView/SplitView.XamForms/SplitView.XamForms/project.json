@@ -1,0 +1,12 @@
+{
+  "supports": {},
+  "dependencies": {
+    "MugenMvvmToolkit.Xamarin.Forms": "6.5.0",
+    "NETStandard.Library": "1.6.1"
+  },
+  "frameworks": {
+    "netstandard1.0": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
+  }
+}
