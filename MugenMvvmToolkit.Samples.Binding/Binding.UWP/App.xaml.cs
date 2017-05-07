@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Windows.UI.Xaml.Controls;
 using Binding.Portable.ViewModels;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.UWP.Infrastructure;
 
 namespace Binding.UWP

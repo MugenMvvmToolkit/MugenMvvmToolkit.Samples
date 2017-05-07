@@ -2,32 +2,32 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Binding.Views.CollectionBindingView"
              Title="XamForms.Binding">
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*" />
-    </Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
 
-    <Button Text="Add" Command="{mugen:DataBinding AddCommand}" />
-    <Button Grid.Column="1" Text="Remove" Command="{mugen:DataBinding RemoveCommand}" />
+        <Button Text="Add" Command="{mugen:DataBinding Path=AddCommand}" />
+        <Button Grid.Column="1" Text="Remove" Command="{mugen:DataBinding Path=RemoveCommand}" />
 
-    <SearchBar Grid.Row="1" Grid.ColumnSpan="2" Text="{mugen:DataBinding FilterText, Mode=TwoWay}" />
-    <ListView Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{mugen:DataBinding GridViewModel.ItemsSource}"
-              SelectedItem="{mugen:DataBinding GridViewModel.SelectedItem, Mode=TwoWay}">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <TextCell mugen:View.Bind="Text Name + ' ' + Id" />
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </Grid>
+        <SearchBar Grid.Row="1" Grid.ColumnSpan="2" Text="{mugen:DataBinding Path=FilterText, Mode=TwoWay}" />
+        <ListView Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{mugen:DataBinding Path=GridViewModel.ItemsSource}"
+              SelectedItem="{mugen:DataBinding Path=GridViewModel.SelectedItem, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell mugen:View.Bind="Text Name + ' ' + Id" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

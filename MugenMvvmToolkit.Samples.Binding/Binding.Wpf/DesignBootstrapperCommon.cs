@@ -7,27 +7,27 @@ namespace Binding
     {
         #region Properties
 
-        public BindingModeViewModel BindingModeViewModel => GetOrAddViewModel(provider => provider.GetViewModel<BindingModeViewModel>());
+        public BindingModeViewModel BindingModeViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingModeViewModel>());
 
-        public BindingExpressionViewModel BindingExpressionViewModel => GetOrAddViewModel(provider => provider.GetViewModel<BindingExpressionViewModel>());
+        public BindingExpressionViewModel BindingExpressionViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingExpressionViewModel>());
 
-        public AttachedMemberViewModel AttachedMemberViewModel => GetOrAddViewModel(provider => provider.GetViewModel<AttachedMemberViewModel>());
+        public AttachedMemberViewModel AttachedMemberViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<AttachedMemberViewModel>());
 
-        public BindingResourcesViewModel BindingResourcesViewModel => GetOrAddViewModel(provider => provider.GetViewModel<BindingResourcesViewModel>());
+        public BindingResourcesViewModel BindingResourcesViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingResourcesViewModel>());
 
-        public BindingValidationViewModel BindingValidationViewModel => GetOrAddViewModel(provider => provider.GetViewModel<BindingValidationViewModel>());
+        public BindingValidationViewModel BindingValidationViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingValidationViewModel>());
 
-        public CollectionBindingViewModel CollectionBindingViewModel => GetOrAddViewModel(provider => provider.GetViewModel<CollectionBindingViewModel>());
+        public CollectionBindingViewModel CollectionBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<CollectionBindingViewModel>());
 
-        public CommandBindingViewModel CommandBindingViewModel => GetOrAddViewModel(provider => provider.GetViewModel<CommandBindingViewModel>());
+        public CommandBindingViewModel CommandBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<CommandBindingViewModel>());
 
-        public DynamicObjectViewModel DynamicObjectViewModel => GetOrAddViewModel(provider => provider.GetViewModel<DynamicObjectViewModel>());
+        public DynamicObjectViewModel DynamicObjectViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<DynamicObjectViewModel>());
 
-        public LocalizableViewModel LocalizableViewModel => GetOrAddViewModel(provider => provider.GetViewModel<LocalizableViewModel>());
+        public LocalizableViewModel LocalizableViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<LocalizableViewModel>());
 
-        public MainViewModel MainViewModel => GetOrAddViewModel(provider => provider.GetViewModel<MainViewModel>());
+        public MainViewModel MainViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<MainViewModel>());
 
-        public RelativeBindingViewModel RelativeBindingViewModel => GetOrAddViewModel(provider => provider.GetViewModel<RelativeBindingViewModel>());
+        public RelativeBindingViewModel RelativeBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<RelativeBindingViewModel>());
 
         #endregion
     }

@@ -2,20 +2,20 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Binding.Views.DynamicObjectView"
              Title="XamForms.Binding">
-  <StackLayout Padding="4" BindingContext="{mugen:DataBinding DynamicModel}">
-    <Label Text="Binding to dynamic property: " />
-    <Entry Text="{mugen:DataBinding DynamicProperty, Mode=TwoWay}" />
+    <StackLayout Padding="4" BindingContext="{mugen:DataBinding Path=DynamicModel}">
+        <Label Text="Binding to dynamic property: " />
+        <Entry Text="{mugen:DataBinding Path=DynamicProperty, Mode=TwoWay}" />
 
-    <Label Text="Dynamic value:" />
-    <Label Text="{mugen:DataBinding DynamicProperty}" TextColor="Green" />
+        <Label Text="Dynamic value:" />
+        <Label Text="{mugen:DataBinding Path=DynamicProperty}" TextColor="Green" />
 
-    <Label Text="Dynamic method call:" />
-    <Label Text="{mugen:DataBinding '$context.DynamicMethod(DynamicProperty)'}" TextColor="Green" />
+        <Label Text="Dynamic method call:" />
+        <Label Text="{mugen:DataBinding '$context.DynamicMethod(DynamicProperty)'}" TextColor="Green" />
 
-    <Label Text="Dynamic index call:" />
-    <Label Text="{mugen:DataBinding '$context[DynamicProperty]'}" TextColor="Green" />
-  </StackLayout>
+        <Label Text="Dynamic index call:" />
+        <Label Text="{mugen:DataBinding '$context[DynamicProperty]'}" TextColor="Green" />
+    </StackLayout>
 </ContentPage>

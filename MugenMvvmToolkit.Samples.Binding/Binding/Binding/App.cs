@@ -1,4 +1,4 @@
-﻿using MugenMvvmToolkit.Infrastructure;
+﻿using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Xamarin.Forms;
 using MugenMvvmToolkit.Xamarin.Forms.Infrastructure;

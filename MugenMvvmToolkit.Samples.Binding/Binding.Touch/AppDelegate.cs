@@ -2,7 +2,7 @@ using Binding.Portable;
 using Foundation;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Infrastructure;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using UIKit;
 
 namespace Binding.Touch

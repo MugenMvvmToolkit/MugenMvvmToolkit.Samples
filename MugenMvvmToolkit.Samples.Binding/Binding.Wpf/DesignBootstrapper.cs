@@ -2,7 +2,7 @@
 using System.Reflection;
 using Binding.Portable;
 using Binding.Portable.ViewModels;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces;
 using MugenMvvmToolkit.WPF.Infrastructure;
 
@@ -22,12 +22,10 @@ namespace Binding
             return new MugenContainer();
         }
 
-        protected override IList<Assembly> GetAssembliesInternal()
+        protected override void UpdateAssemblies(HashSet<Assembly> assemblies)
         {
-            return new[]
-            {
-                typeof(MainViewModel).GetTypeInfo().Assembly
-            };
+            base.UpdateAssemblies(assemblies);
+            assemblies.Add(typeof(MainViewModel).GetTypeInfo().Assembly);
         }
 
         #endregion

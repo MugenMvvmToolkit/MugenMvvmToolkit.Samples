@@ -17,7 +17,7 @@ namespace Binding.Droid
 
             Forms.Init(this, bundle);
 
-            LoadApplication(new App(new PlatformBootstrapperService()));
+            LoadApplication(new App(new PlatformBootstrapperService(() => Forms.Context)));
         }
     }
 }

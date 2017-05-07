@@ -2,28 +2,28 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Binding.Views.BindingModeView"
              Title="XamForms.Binding">
-  <ScrollView>
-    <StackLayout Padding="4">
-      <Label Text="One time binding: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=OneTime}" />
+    <ScrollView>
+        <StackLayout Padding="4">
+            <Label Text="One time binding: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=OneTime}" />
 
-      <Label Text="One way binding: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=OneWay}" />
+            <Label Text="One way binding: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=OneWay}" />
 
-      <Label Text="One way binding with target delay 1000: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=OneWay, TargetDelay=1000}" />
+            <Label Text="One way binding with target delay 1000: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=OneWay, TargetDelay=1000}" />
 
-      <Label Text="One way to source binding: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=OneWayToSource}" />
+            <Label Text="One way to source binding: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=OneWayToSource}" />
 
-      <Label Text="Two way binding: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=TwoWay}" />
+            <Label Text="Two way binding: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=TwoWay}" />
 
-      <Label Text="Two way binding with source delay 1000: " />
-      <Entry Text="{mugen:DataBinding Text, Mode=TwoWay, Delay=1000}" />
-    </StackLayout>
-  </ScrollView>
+            <Label Text="Two way binding with source delay 1000: " />
+            <Entry Text="{mugen:DataBinding Path=Text, Mode=TwoWay, Delay=1000}" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

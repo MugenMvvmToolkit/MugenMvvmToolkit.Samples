@@ -46,10 +46,6 @@
       <HintPath>..\packages\MugenMvvmToolkit.WinForms.6.5.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.WPF.Binding, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.Binding.6.5.0\lib\net45\MugenMvvmToolkit.WPF.Binding.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />

@@ -2,27 +2,27 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Binding.Views.MainView"
              Title="XamForms.Binding">
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-    <Label Grid.Row="0" Text="{mugen:DataBinding ResourceUsageInfo}" />
-    <ListView ItemsSource="{mugen:DataBinding Items}" Grid.Row="1">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <ViewCell.View>
-              <Button Command="{mugen:DataBinding '$Rel(ListView).DataContext.ShowCommand', Mode=OneTime}"
-                      Text="{mugen:DataBinding Item1, Mode=OneTime}" CommandParameter="{mugen:DataBinding Item2, Mode=OneTime}" />
-            </ViewCell.View>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </Grid>
+        <Label Grid.Row="0" Text="{mugen:DataBinding Path=ResourceUsageInfo}" />
+        <ListView ItemsSource="{mugen:DataBinding Path=Items}" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Button Command="{mugen:DataBinding '$Rel(ListView).DataContext.ShowCommand', Mode=OneTime}"
+                      Text="{mugen:DataBinding Path=Item1, Mode=OneTime}" CommandParameter="{mugen:DataBinding Path=Item2, Mode=OneTime}" />
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

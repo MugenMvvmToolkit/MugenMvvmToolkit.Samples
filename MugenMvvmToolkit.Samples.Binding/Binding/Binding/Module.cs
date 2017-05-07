@@ -33,6 +33,8 @@ namespace Binding
 
         public bool Load(IModuleContext context)
         {
+            //force load assembly
+            var type = typeof(MugenMvvmToolkit.Xamarin.Forms.Binding.AttachedMembers);
             //Registering attached property
             var memberProvider = BindingServiceProvider.MemberProvider;
             memberProvider.Register(AttachedBindingMember.CreateAutoProperty<Image, string>("ImageUrl", OnImageUrlChanged));

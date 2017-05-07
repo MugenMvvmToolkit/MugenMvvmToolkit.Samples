@@ -2,38 +2,38 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Binding.Views.BindingValidationView"
              Title="XamForms.Binding">
-  <ScrollView Padding="4">
-    <StackLayout>
-      <StackLayout mugen:View.Bind="Visible $GetErrors().Any()">
-        <Label Text="Validation summary:" />
-        <Label Text="{mugen:DataBinding '$string.Join($Environment.NewLine, $GetErrors())'}"
+    <ScrollView Padding="4">
+        <StackLayout>
+            <StackLayout mugen:View.Bind="Visible $GetErrors().Any()">
+                <Label Text="Validation summary:" />
+                <Label Text="{mugen:DataBinding '$string.Join($Environment.NewLine, $GetErrors())'}"
                TextColor="Red" />
-      </StackLayout>
+            </StackLayout>
 
-      <Label Text="Binding to 'Property' with 'ValidatesOnNotifyDataErrors=True'" />
-      <Entry Text="{mugen:DataBinding Property, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}" />
-      <Label Text="{mugen:DataBinding '$GetErrors(Property).FirstOrDefault()'}" TextColor="Red"/>
+            <Label Text="Binding to 'Property' with 'ValidatesOnNotifyDataErrors=True'" />
+            <Entry Text="{mugen:DataBinding Path=Property, Mode=TwoWay, ValidatesOnNotifyDataErrors=True}" />
+            <Label Text="{mugen:DataBinding '$GetErrors(Property).FirstOrDefault()'}" TextColor="Red"/>
 
 
-      <Label Text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False'" />
-      <Entry x:Name="Tb1" Text="{mugen:DataBinding PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False}" />
-      <Label Text="{mugen:DataBinding '$El(Tb1).Errors.FirstOrDefault()'}" TextColor="Red"/>
+            <Label Text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False'" />
+            <Entry x:Name="Tb1" Text="{mugen:DataBinding Path=PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=False}" />
+            <Label Text="{mugen:DataBinding '$El(Tb1).Errors.FirstOrDefault()'}" TextColor="Red"/>
 
-      <Label Text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True'" />
-      <Entry x:Name="Tb2" Text="{mugen:DataBinding PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True}" />
-      <Label Text="{mugen:DataBinding '$El(Tb2).Errors.FirstOrDefault()'}" TextColor="Red"/>
+            <Label Text="Binding to 'PropertyWithException' with 'ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True'" />
+            <Entry x:Name="Tb2" Text="{mugen:DataBinding Path=PropertyWithException, Mode=TwoWay, ValidatesOnNotifyDataErrors=False, ValidatesOnExceptions=True}" />
+            <Label Text="{mugen:DataBinding '$El(Tb2).Errors.FirstOrDefault()'}" TextColor="Red"/>
 
-      <Label Text="Binding to 'PropertyWithException' with 'Validate=True'" />
-      <Entry x:Name="Tb3" Text="{mugen:DataBinding PropertyWithException, Mode=TwoWay, Validate=True}" />
-      <Label Text="{mugen:DataBinding '$El(Tb3).Errors.FirstOrDefault()'}" TextColor="Red"/>
-      
-      <Button Text="Set error(PropertyWithException)"
-              Command="{mugen:DataBinding AddErrorCommand}" />
-      <Button Text="Clear error(PropertyWithException)"
-              Command="{mugen:DataBinding RemoveErrorCommand}" />
-    </StackLayout>
-  </ScrollView>
+            <Label Text="Binding to 'PropertyWithException' with 'Validate=True'" />
+            <Entry x:Name="Tb3" Text="{mugen:DataBinding Path=PropertyWithException, Mode=TwoWay, Validate=True}" />
+            <Label Text="{mugen:DataBinding '$El(Tb3).Errors.FirstOrDefault()'}" TextColor="Red"/>
+
+            <Button Text="Set error(PropertyWithException)"
+              Command="{mugen:DataBinding Path=AddErrorCommand}" />
+            <Button Text="Clear error(PropertyWithException)"
+              Command="{mugen:DataBinding Path=RemoveErrorCommand}" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

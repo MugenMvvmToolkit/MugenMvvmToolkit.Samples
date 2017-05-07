@@ -20,7 +20,7 @@
 
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{DataBinding Path=Item1, Mode=OneTime}"
+                    <Button Content="{DataBinding Path=Item1, Mode=OneTime, DebugTag=OneTime}"
                             CommandParameter="{DataBinding Path=Item2, Mode=OneTime}"
                             Command="{DataBinding '$Relative(Window).DataContext.ShowCommand', Mode=OneTime}"
                             Margin="1" />
