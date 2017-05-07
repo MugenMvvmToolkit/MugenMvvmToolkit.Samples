@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Result View"
+             x:Class="Navigation.Views.ResultView">
+    <StackLayout Padding="4">
+        <Entry Text="{Binding Path=Result, Mode=TwoWay}" />
+        <Button Command="{Binding Path=CloseCommand}" Text="Close" />
+    </StackLayout>
+</ContentPage>

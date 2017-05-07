@@ -13,13 +13,9 @@ namespace Navigation.WinForms.Views
             InitializeComponent();
             using (var set = new BindingSet<MainViewModel>())
             {
-                set.Bind(firstViewModelWindowToolStripMenuItem).To(() => (vm, ctx) => vm.ShowFirstWindowCommand);
-                set.Bind(secondViewModelWindowToolStripMenuItem).To(() => (vm, ctx) => vm.ShowSecondWindowCommand);
-                set.Bind(firstViewModelTabToolStripMenuItem).To(() => (vm, ctx) => vm.ShowFirstTabCommand);
-                set.Bind(secondViewModelTabToolStripMenuItem).To(() => (vm, ctx) => vm.ShowSecondTabCommand);
-
-                set.Bind(tabControl1, AttachedMembers.Object.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
-                set.Bind(tabControl1, AttachedMembers.TabControl.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
+                set.Bind(dialogBtn).To(() => (vm, ctx) => vm.ShowDialogCommand);
+                set.Bind(resultBtn).To(() => (vm, ctx) => vm.ShowResultCommand);
+                set.Bind(tabsBtn).To(() => (vm, ctx) => vm.ShowTabsCommand);                
             }
         }
     }

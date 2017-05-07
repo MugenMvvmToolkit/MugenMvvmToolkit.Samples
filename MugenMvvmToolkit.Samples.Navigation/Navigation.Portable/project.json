@@ -1,0 +1,15 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "MugenMvvmToolkit": "6.5.0",
+    "NETStandard.Library": "1.6.0"
+    //,"Fody": "1.29.4",
+    //"MugenMvvmToolkit.Fody": "4.2.1"
+  },
+  "frameworks": {
+    "netstandard1.0": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
+  }
+}

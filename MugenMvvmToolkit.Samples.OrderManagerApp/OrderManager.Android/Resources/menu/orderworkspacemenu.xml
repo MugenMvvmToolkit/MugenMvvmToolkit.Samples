@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<Menu>
-  <MenuItem ActionView="SearchView" ActionViewBind="Text FilterText, Mode=TwoWay" ShowAsAction="always" />
-  <MenuItem Title="Add" Click="{AddOrderCommand}" Icon="/@drawable/ic_action_new" ShowAsAction="always" />
-  <MenuItem Title="Save" Click="{SaveChangesCommand}" Icon="/@drawable/ic_action_save" ShowAsAction="ifroom" />
-</Menu>

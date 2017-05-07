@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<ActionBar NavigationMode="Tabs">
-  <Tab Text="Main Info" Content="/@layout/OrderTab1EditorView" />
-  <Tab Text="Products" Content="/@layout/OrderTab2EditorView" />
-</ActionBar>

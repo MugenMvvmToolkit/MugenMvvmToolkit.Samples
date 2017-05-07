@@ -1,11 +1,11 @@
-using MugenMvvmToolkit;
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces;
 using Navigation.Android;
 using Navigation.Portable;
 
-[assembly: Bootstrapper(typeof (Setup))]
+[assembly: Bootstrapper(typeof(Setup))]
 
 namespace Navigation.Android
 {
@@ -20,7 +20,7 @@ namespace Navigation.Android
 
         protected override IIocContainer CreateIocContainer()
         {
-            return new AutofacContainer();
+            return new MugenContainer();
         }
 
         #endregion

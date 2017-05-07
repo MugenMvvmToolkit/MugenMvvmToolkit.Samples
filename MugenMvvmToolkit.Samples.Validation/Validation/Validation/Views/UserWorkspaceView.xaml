@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              x:Class="Validation.Views.UserWorkspaceView"
              Title="Validators">
     <Grid>
@@ -10,8 +10,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-      
-        <Grid BindingContext="{mugen:DataBinding UserEditorViewModel}">
+
+        <Grid BindingContext="{mugen:DataBinding Path=UserEditorViewModel}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -23,19 +23,28 @@
             </Grid.RowDefinitions>
 
             <Label Text="Name" />
-            <Entry Grid.Row="1" Text="{mugen:DataBinding Name, Mode=TwoWay, Validate=True}" />
+            <StackLayout Grid.Row="1">
+                <Entry Text="{mugen:DataBinding Path=Name, Mode=TwoWay}" />
+                <Label Text="{mugen:DataBinding Path='$string.Join($Environment.NewLine, $GetErrors(Name))'}" TextColor="Red"/>
+            </StackLayout>
 
             <Label Text="Login" Grid.Row="2" />
             <Label Text="Validating..." TextColor="Green"
-                   IsVisible="{mugen:DataBinding IsLoginValidating}"
+                   IsVisible="{mugen:DataBinding Path=IsLoginValidating}"
                    Grid.Row="2" HorizontalOptions="EndAndExpand" />
-            <Entry Grid.Row="3" Text="{mugen:DataBinding Login, Mode=TwoWay, Validate=True, Delay=400}" />
+            <StackLayout Grid.Row="3">
+                <Entry Text="{mugen:DataBinding Path=Login, Mode=TwoWay, Delay=400}" />
+                <Label Text="{mugen:DataBinding Path='$string.Join($Environment.NewLine, $GetErrors(Login))'}" TextColor="Red"/>
+            </StackLayout>
 
             <Label Text="Email" Grid.Row="4" />
-            <Entry Grid.Row="5" Text="{mugen:DataBinding Email, Mode=TwoWay, Validate=True}" />
+            <StackLayout Grid.Row="5">
+                <Entry Text="{mugen:DataBinding Path=Email, Mode=TwoWay}" />
+                <Label Text="{mugen:DataBinding Path='$string.Join($Environment.NewLine, $GetErrors(Email))'}" TextColor="Red"/>
+            </StackLayout>
 
             <Label Text="View model is valid" Grid.Row="6" TextColor="Green"
-                   IsVisible="{mugen:DataBinding IsValid}" />
+                   IsVisible="{mugen:DataBinding Path=IsValid}" />
             <Label Text="View model is not valid" Grid.Row="6" TextColor="Red"
                    IsVisible="{mugen:DataBinding '!IsValid'}" />
         </Grid>
@@ -49,28 +58,28 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Command="{mugen:DataBinding AddUserCommand}" Text="Add" />
+            <Button Command="{mugen:DataBinding Path=AddUserCommand}" Text="Add" />
 
             <Button Grid.Column="1" Grid.Row="0"
-                    Command="{mugen:DataBinding RemoveUserCommand}" Text="Remove" />
+                    Command="{mugen:DataBinding Path=RemoveUserCommand}" Text="Remove" />
 
             <ListView Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0"
-                      BindingContext="{mugen:DataBinding UserGridViewModel}"
-                      ItemsSource="{mugen:DataBinding ItemsSource}"
-                      SelectedItem="{mugen:DataBinding SelectedItem, Mode=TwoWay}">
+                      BindingContext="{mugen:DataBinding Path=UserGridViewModel}"
+                      ItemsSource="{mugen:DataBinding Path=ItemsSource}"
+                      SelectedItem="{mugen:DataBinding Path=SelectedItem, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="Name: " />
-                                    <Label Text="{mugen:DataBinding Name}" />
+                                    <Label Text="{mugen:DataBinding Path=Name}" />
 
                                     <Label Text=" Login: " />
-                                    <Label Text="{mugen:DataBinding Login}" />
+                                    <Label Text="{mugen:DataBinding Path=Login}" />
 
                                     <Label Text=" Email: " />
-                                    <Label Text="{mugen:DataBinding Email}" />
+                                    <Label Text="{mugen:DataBinding Path=Email}" />
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

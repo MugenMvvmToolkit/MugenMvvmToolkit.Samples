@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"            
+             xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"            
              x:Class="Validation.Views.DataAnnotationView"
              Title="Annotations">
     <Grid Padding="2">
@@ -17,23 +17,28 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Text="Name" />
-        <Entry Grid.Row="1" Text="{mugen:DataBinding NameInVm, Mode=TwoWay, Validate=True}" />
+        <StackLayout Grid.Row="1">
+            <Entry Text="{mugen:DataBinding Path=NameInVm, Mode=TwoWay}" />
+            <Label Text="{mugen:DataBinding Path='$string.Join($Environment.NewLine, $GetErrors(NameInVm))'}" TextColor="Red"/>
+        </StackLayout>
 
         <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="EndAndExpand"
                      VerticalOptions="Center">
             <Label Text="Disable description validation" />
-            <Switch IsToggled="{mugen:DataBinding DisableDescriptionValidation, Mode=TwoWay}" />
+            <Switch IsToggled="{mugen:DataBinding Path=DisableDescriptionValidation, Mode=TwoWay}" />
         </StackLayout>
 
         <Label Text="Description" Grid.Row="3" />
-        <Entry Grid.Row="4"
-               Text="{mugen:DataBinding Description, Mode=TwoWay, Validate=True}" />
+        <StackLayout Grid.Row="4">
+            <Entry Text="{mugen:DataBinding Path=Description, Mode=TwoWay}" />
+            <Label Text="{mugen:DataBinding Path='$string.Join($Environment.NewLine, $GetErrors(Description))'}" TextColor="Red"/>
+        </StackLayout>
 
         <Label Text="Enter a custom error for the Description property" Grid.Row="5" />
-        <Entry Grid.Row="6" Text="{mugen:DataBinding CustomError, Mode=TwoWay}" />
+        <Entry Grid.Row="6" Text="{mugen:DataBinding Path=CustomError, Mode=TwoWay}" />
 
 
-        <Label Text="View model is valid" Grid.Row="7" TextColor="Green" IsVisible="{mugen:DataBinding IsValid}" />
-        <Label Text="View model is not valid" Grid.Row="7" TextColor="Red" IsVisible="{mugen:DataBinding '!IsValid'}" />
+        <Label Text="View model is valid" Grid.Row="7" TextColor="Green" IsVisible="{mugen:DataBinding Path=IsValid}" />
+        <Label Text="View model is not valid" Grid.Row="7" TextColor="Red" IsVisible="{mugen:DataBinding Path='!IsValid'}" />
     </Grid>
 </ContentPage>

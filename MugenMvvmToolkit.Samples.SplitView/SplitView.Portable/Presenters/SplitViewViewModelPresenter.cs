@@ -10,6 +10,7 @@ using MugenMvvmToolkit.Interfaces.Navigation;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Models.EventArg;
 using MugenMvvmToolkit.ViewModels;
 using SplitView.Portable.ViewModels;
 
@@ -18,6 +19,8 @@ namespace SplitView.Portable.Presenters
     public class SplitViewViewModelPresenter : IDynamicViewModelPresenter
     {
         #region Fields
+
+        private static readonly DataConstant<IDataContext> SelectedItemState = DataConstant.Create(() => SelectedItemState, true);
 
         private readonly IOperationCallbackManager _callbackManager;
         private readonly INavigationDispatcher _navigationDispatcher;
@@ -33,6 +36,8 @@ namespace SplitView.Portable.Presenters
             _viewModelProvider = viewModelProvider;
             _navigationDispatcher = navigationDispatcher;
             _callbackManager = callbackManager;
+            viewModelProvider.Preserved += OnViewModelPreserved;
+            viewModelProvider.Restored += OnViewModelRestored;
         }
 
         #endregion
@@ -44,6 +49,24 @@ namespace SplitView.Portable.Presenters
         #endregion
 
         #region Methods
+
+        private static void OnViewModelPreserved(IViewModelProvider sender, ViewModelPreservedEventArgs args)
+        {
+            var mainViewModel = args.ViewModel as MainViewModel;
+            if (mainViewModel?.SelectedItem != null)
+                args.State.AddOrUpdate(SelectedItemState, sender.PreserveViewModel(mainViewModel.SelectedItem, DataContext.Empty));
+        }
+
+        private static void OnViewModelRestored(IViewModelProvider sender, ViewModelRestoredEventArgs args)
+        {
+            var mainViewModel = args.ViewModel as MainViewModel;
+            if (mainViewModel != null)
+            {
+                var context = args.State.GetData(SelectedItemState);
+                if (context != null)
+                    mainViewModel.SelectedItem = sender.RestoreViewModel(context, DataContext.Empty, false);
+            }
+        }
 
         private void OnCurrentNavigationsCompleted(IViewModel viewModel)
         {

@@ -28,99 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.navigationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firstViewModelWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firstViewModelTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.secondViewModelWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.secondViewModelTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.dialogBtn = new System.Windows.Forms.Button();
+            this.resultBtn = new System.Windows.Forms.Button();
+            this.tabsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // dialogBtn
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dialogBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(584, 284);
-            this.tabControl1.TabIndex = 4;
+            this.dialogBtn.Location = new System.Drawing.Point(12, 12);
+            this.dialogBtn.Name = "dialogBtn";
+            this.dialogBtn.Size = new System.Drawing.Size(560, 23);
+            this.dialogBtn.TabIndex = 0;
+            this.dialogBtn.Text = "Dialog Navigation";
+            this.dialogBtn.UseVisualStyleBackColor = true;
             // 
-            // menuStrip1
+            // resultBtn
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.navigationToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.resultBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultBtn.Location = new System.Drawing.Point(12, 41);
+            this.resultBtn.Name = "resultBtn";
+            this.resultBtn.Size = new System.Drawing.Size(560, 23);
+            this.resultBtn.TabIndex = 1;
+            this.resultBtn.Text = "View Model With Result";
+            this.resultBtn.UseVisualStyleBackColor = true;
             // 
-            // navigationToolStripMenuItem
+            // tabsBtn
             // 
-            this.navigationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.firstViewModelWindowToolStripMenuItem,
-            this.firstViewModelTabToolStripMenuItem,
-            this.secondViewModelWindowToolStripMenuItem,
-            this.secondViewModelTabToolStripMenuItem});
-            this.navigationToolStripMenuItem.Name = "navigationToolStripMenuItem";
-            this.navigationToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.navigationToolStripMenuItem.Text = "Navigation";
-            // 
-            // firstViewModelWindowToolStripMenuItem
-            // 
-            this.firstViewModelWindowToolStripMenuItem.Name = "firstViewModelWindowToolStripMenuItem";
-            this.firstViewModelWindowToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.firstViewModelWindowToolStripMenuItem.Text = "First view model (Window)";
-            // 
-            // firstViewModelTabToolStripMenuItem
-            // 
-            this.firstViewModelTabToolStripMenuItem.Name = "firstViewModelTabToolStripMenuItem";
-            this.firstViewModelTabToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.firstViewModelTabToolStripMenuItem.Text = "First view model (Tab)";
-            // 
-            // secondViewModelWindowToolStripMenuItem
-            // 
-            this.secondViewModelWindowToolStripMenuItem.Name = "secondViewModelWindowToolStripMenuItem";
-            this.secondViewModelWindowToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.secondViewModelWindowToolStripMenuItem.Text = "Second view model (Window)";
-            // 
-            // secondViewModelTabToolStripMenuItem
-            // 
-            this.secondViewModelTabToolStripMenuItem.Name = "secondViewModelTabToolStripMenuItem";
-            this.secondViewModelTabToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.secondViewModelTabToolStripMenuItem.Text = "Second view model (Tab)";
+            this.tabsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabsBtn.Location = new System.Drawing.Point(12, 70);
+            this.tabsBtn.Name = "tabsBtn";
+            this.tabsBtn.Size = new System.Drawing.Size(560, 23);
+            this.tabsBtn.TabIndex = 2;
+            this.tabsBtn.Text = "Tabs Navigation";
+            this.tabsBtn.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 313);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.tabsBtn);
+            this.Controls.Add(this.resultBtn);
+            this.Controls.Add(this.dialogBtn);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mugen MVVM Application";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem navigationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem firstViewModelWindowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem firstViewModelTabToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem secondViewModelWindowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem secondViewModelTabToolStripMenuItem;
+        private System.Windows.Forms.Button dialogBtn;
+        private System.Windows.Forms.Button resultBtn;
+        private System.Windows.Forms.Button tabsBtn;
     }
 }
 

@@ -1,0 +1,15 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "MugenMvvmToolkit.Xamarin.Forms": "6.5.0",
+    "NETStandard.Library": "1.6.0",
+    "System.ComponentModel": "4.3.0",
+    "Xamarin.Forms": "2.3.4.231"
+  },
+  "frameworks": {
+    "netstandard1.0": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
+  }
+}

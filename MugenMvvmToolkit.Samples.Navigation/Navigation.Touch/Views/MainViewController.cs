@@ -1,5 +1,5 @@
+using CoreGraphics;
 using UIKit;
-using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.iOS.Views;
@@ -7,7 +7,7 @@ using Navigation.Portable.ViewModels;
 
 namespace Navigation.Touch.Views
 {
-    public class MainViewController : MvvmTabBarController
+    public class MainViewController : MvvmViewController
     {
         #region Overrides of UIViewController
 
@@ -17,31 +17,42 @@ namespace Navigation.Touch.Views
             Title = "Main view";
             View.BackgroundColor = UIColor.White;
 
-            NavigationItem.RightBarButtonItem = new UIBarButtonItem("Navigation", UIBarButtonItemStyle.Plain,
-                (sender, args) =>
-                {
-                    var actionSheet = new UIActionSheet("Navigation");
-
-                    actionSheet.AddButtonWithBinding("First view model modal", "Click ShowFirstWindowCommand");
-                    actionSheet.AddButtonWithBinding("First view model page", "Click ShowFirstPageCommand");
-                    actionSheet.AddButtonWithBinding("First view model tab", "Click ShowFirstTabCommand");
-
-                    actionSheet.AddButtonWithBinding("Second view model modal", "Click ShowSecondWindowCommand");
-                    actionSheet.AddButtonWithBinding("Second view model page", "Click ShowSecondPageCommand");
-                    actionSheet.AddButtonWithBinding("Second view model tab", "Click ShowSecondTabCommand");
-
-                    actionSheet.AddButtonWithBinding("Navigation (Clear back stack)", "Click ShowBackStackPageCommand");
-
-                    actionSheet.CancelButtonIndex = actionSheet.AddButton("Cancel");
-                    actionSheet.ShowEx(sender, (sheet, o) => sheet.ShowFrom((UIBarButtonItem)o, true));
-                });
-
-
-            using (var bindingSet = new BindingSet<MainViewModel>())
+            using (var set = new BindingSet<MainViewModel>())
             {
-                //TabBar
-                bindingSet.Bind(this, AttachedMemberConstants.ItemsSource).To(() => (vm, ctx) => vm.ItemsSource);
-                bindingSet.Bind(this, AttachedMemberConstants.SelectedItem).To(() => (vm, ctx) => vm.SelectedItem).TwoWay();
+                UIButton button = UIButton.FromType(UIButtonType.System);
+                button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                button.Frame = new CGRect(20, 70, View.Frame.Width - 20, 30);
+                button.SetTitle("Page Navigation", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowPageCommand);
+                View.AddSubview(button);
+
+                button = UIButton.FromType(UIButtonType.System);
+                button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                button.Frame = new CGRect(20, 100, View.Frame.Width - 20, 30);
+                button.SetTitle("Dialog Navigation", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowDialogCommand);
+                View.AddSubview(button);
+
+                button = UIButton.FromType(UIButtonType.System);
+                button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                button.Frame = new CGRect(20, 130, View.Frame.Width - 20, 30);
+                button.SetTitle("View Model With Result", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowResultCommand);
+                View.AddSubview(button);
+
+                button = UIButton.FromType(UIButtonType.System);
+                button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                button.Frame = new CGRect(20, 160, View.Frame.Width - 20, 30);
+                button.SetTitle("Tabs Navigation", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowTabsCommand);
+                View.AddSubview(button);
+
+                button = UIButton.FromType(UIButtonType.System);
+                button.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
+                button.Frame = new CGRect(20, 190, View.Frame.Width - 20, 30);
+                button.SetTitle(@"App Background\Foreground Navigation", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowBackgroundCommand);
+                View.AddSubview(button);
             }
         }
 

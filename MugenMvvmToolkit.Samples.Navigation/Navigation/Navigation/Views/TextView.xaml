@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Navigation.Views.TextView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="127*" />
+        </Grid.RowDefinitions>
+        <Button Text="Close" Command="{Binding Path=CloseCommand}" HorizontalOptions="FillAndExpand" />
+        <Button Text="Show Opened View Models" Command="{Binding Path=ShowOpenedViewModelsCommand}" HorizontalOptions="FillAndExpand"
+                Grid.Row="1" />
+        <Label Text="{Binding Path=Text}" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center"
+               Grid.Row="2" />
+    </Grid>
+</ContentView>

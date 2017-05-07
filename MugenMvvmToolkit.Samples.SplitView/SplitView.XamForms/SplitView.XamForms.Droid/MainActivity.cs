@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using MugenMvvmToolkit.Xamarin.Forms.Android;
+using Xamarin.Forms;
 
 namespace SplitView.XamForms.Droid
 {
@@ -18,7 +19,7 @@ namespace SplitView.XamForms.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new PlatformBootstrapperService()));
+            LoadApplication(new App(new PlatformBootstrapperService(() => Forms.Context)));
         }
     }
 }

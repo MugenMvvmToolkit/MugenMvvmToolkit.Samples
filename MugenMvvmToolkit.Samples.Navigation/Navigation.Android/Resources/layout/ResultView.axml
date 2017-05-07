@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:pkg="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_margin="16dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+  <EditText android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            pkg:Bind="Text Result, Mode=TwoWay" />
+
+  <Button android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Close"
+          pkg:Bind="Click CloseCommand" />
+
+</LinearLayout>

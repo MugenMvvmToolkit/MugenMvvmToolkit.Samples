@@ -1,7 +1,7 @@
 using Foundation;
 using MugenMvvmToolkit.iOS;
 using MugenMvvmToolkit.iOS.Infrastructure;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using UIKit;
 using Validation.Portable;
 

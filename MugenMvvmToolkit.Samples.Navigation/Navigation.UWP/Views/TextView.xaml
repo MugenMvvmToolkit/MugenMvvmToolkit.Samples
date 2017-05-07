@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="Navigation.UWP.Views.TextView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="127*" />
+        </Grid.RowDefinitions>
+        <Button Content="Close" Margin="4" Command="{Binding Path=CloseCommand}" HorizontalAlignment="Stretch" />
+        <Button Grid.Row="1" Content="Show Opened View Models" Margin="4"
+                Command="{Binding Path=ShowOpenedViewModelsCommand}" HorizontalAlignment="Stretch" />
+        <Viewbox Grid.Row="2">
+            <TextBlock Text="{Binding Path=Text}" />
+        </Viewbox>
+    </Grid>
+</UserControl>

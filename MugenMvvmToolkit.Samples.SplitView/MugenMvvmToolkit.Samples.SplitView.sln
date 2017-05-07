@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.Portable", "SplitView.Portable\SplitView.Portable.csproj", "{926BD63B-89F3-4484-978A-7167613DEE02}"
 EndProject
@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.XamForms.WinRT", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.XamForms.WinRT.Phone", "SplitView.XamForms\SplitView.XamForms.WinRT.Phone\SplitView.XamForms.WinRT.Phone.csproj", "{2BF9C6AA-BD8B-4BAB-BDAA-CD2172BD3211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.WinRT", "SplitView.WinRT\SplitView.WinRT.csproj", "{5944862C-B745-4B16-AA6C-FC70734CE994}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.UWP", "SplitView.UWP\SplitView.UWP.csproj", "{5944862C-B745-4B16-AA6C-FC70734CE994}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitView.XamForms.UWP", "SplitView.XamForms\SplitView.XamForms.UWP\SplitView.XamForms.UWP.csproj", "{EE04C2F7-99D2-4F49-87C6-2AC5D7D1935B}"
 EndProject

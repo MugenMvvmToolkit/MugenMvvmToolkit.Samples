@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu ItemsSource="{$Rel(RecyclerView).DataContext.GetMenuItems($context)}">
+  <ItemTemplate Title="{Name}" Click="{Command}"
+                CommandParameter="{CommandParameter}" />
+</Menu>

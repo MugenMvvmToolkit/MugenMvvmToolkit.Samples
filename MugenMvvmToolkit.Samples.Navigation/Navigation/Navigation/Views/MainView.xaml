@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms"
-            x:Class="Navigation.Views.MainView" Title="Main page"
-            ItemsSource="{Binding ItemsSource}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-
-    <TabbedPage.ItemTemplate>
-        <DataTemplate>
-            <ContentPage Title="{Binding DisplayName}" Content="{mugen:DataBinding '$ViewModelToView($context)'}" />
-        </DataTemplate>
-    </TabbedPage.ItemTemplate>
-</TabbedPage>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="MUGEN MVVM APP"
+             x:Class="Navigation.Views.MainView">
+    <StackLayout Padding="4">
+        <Button Command="{Binding Path=ShowPageCommand}" Text="Page Navigation" />
+        <Button Command="{Binding Path=ShowDialogCommand}" Text="Dialog Navigation" />
+        <Button Command="{Binding Path=ShowResultCommand}" Text="View Model With Result" />
+        <Button Command="{Binding Path=ShowTabsCommand}" Text="Tabs Navigation" />
+        <Button Command="{Binding Path=ShowBackgroundCommand}" Text="App Background\Foreground Navigation" />
+    </StackLayout>
+</ContentPage>

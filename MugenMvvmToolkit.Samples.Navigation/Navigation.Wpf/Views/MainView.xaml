@@ -1,0 +1,10 @@
+﻿<Window x:Class="Navigation.Wpf.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mugen MVVM Application" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Button Command="{Binding Path=ShowDialogCommand}" Content="Dialog Navigation" Margin="4" />
+        <Button Command="{Binding Path=ShowResultCommand}" Content="View Model With Result" Margin="4" />
+        <Button Command="{Binding Path=ShowTabsCommand}" Content="Tabs Navigation" Margin="4" />
+    </StackPanel>
+</Window>

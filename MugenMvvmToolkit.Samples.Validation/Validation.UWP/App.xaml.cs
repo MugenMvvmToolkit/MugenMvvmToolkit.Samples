@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using Windows.UI.Xaml.Controls;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.UWP.Infrastructure;
 using Validation.Portable.ViewModels;
 

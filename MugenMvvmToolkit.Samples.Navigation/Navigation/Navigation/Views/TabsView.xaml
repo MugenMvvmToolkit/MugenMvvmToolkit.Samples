@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:converters="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.Binding.Converters;assembly=MugenMvvmToolkit.Xamarin.Forms"
+            x:Class="Navigation.Views.TabsView"
+            Title="Tabs View"
+            ItemsSource="{Binding Path=ItemsSource}" SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}">
+
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Path=DisplayName}" Content="{Binding Converter={x:Static converters:ViewModelToViewConverter.Instance}}" />
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

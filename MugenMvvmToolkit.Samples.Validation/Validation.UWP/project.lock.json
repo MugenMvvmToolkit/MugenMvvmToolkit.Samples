@@ -16275,7 +16275,7 @@
       ]
     },
     "MugenMvvmToolkit/6.5.0": {
-      "sha512": "vWsENGTO11OHNoOVuYnjpcyxeCq8+e4naVhgnDJzno3gUhHQbcDIar5bEW1DwyShyt8nOxle/GOAltY5H0jRMw==",
+      "sha512": "enTc1fDqtIuaYEVfqcdtQdVNS0aUhUtohIywei9rPrwe8Z30NHt5PPiXu+MxwOjLsRlHIx+PMtbOuxHaH0ZvjQ==",
       "type": "package",
       "path": "MugenMvvmToolkit/6.5.0",
       "files": [
@@ -16303,7 +16303,7 @@
       ]
     },
     "MugenMvvmToolkit.UWP/6.5.0": {
-      "sha512": "emBXFNdTgOAWduVyO+kiD6iPv0vI+M0vIKdrz3RxXmdCFfVNWj2bBuFhroWa4tpxR/6xPxd3GUYw4lso5Zb5/g==",
+      "sha512": "l18XijhIcboNsv4FYXzC8I8qAK/wLTvDqXeEU3ahzNH7WJmG9X9H7sF4bU/n7tI7KT/ERZB+kxq+73zk/l2kOg==",
       "type": "package",
       "path": "MugenMvvmToolkit.UWP/6.5.0",
       "files": [

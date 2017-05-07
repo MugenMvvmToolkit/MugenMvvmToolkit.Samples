@@ -1,0 +1,12 @@
+﻿<uwp:MvvmUwpApplicationBase
+    x:Class="Navigation.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:MugenMvvmToolkit.UWP.Binding.Converters"
+    xmlns:uwp="using:MugenMvvmToolkit.UWP"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <x:String x:Key="AppName">MUGEN MVVM APPLICATION</x:String>
+        <converters:ViewModelToViewConverter x:Key="ViewModelToViewConverter" />
+    </Application.Resources>
+</uwp:MvvmUwpApplicationBase>

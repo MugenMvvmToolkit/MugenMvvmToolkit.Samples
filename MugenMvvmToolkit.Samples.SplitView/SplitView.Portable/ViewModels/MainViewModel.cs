@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
 using MugenMvvmToolkit;
-using MugenMvvmToolkit.Interfaces.Models;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
@@ -10,14 +9,12 @@ using SplitView.Portable.Models;
 
 namespace SplitView.Portable.ViewModels
 {
-    public class MainViewModel : CloseableViewModel, IHasState
+    public class MainViewModel : CloseableViewModel
     {
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
         private IViewModel _selectedItem;
-
-        private static readonly DataConstant<IDataContext> SelectedItemState = DataConstant.Create(() => SelectedItemState, true);
 
         #endregion
 
@@ -56,13 +53,13 @@ namespace SplitView.Portable.ViewModels
             }
         }
 
-        public IList<MenuItemModel> Items { get; private set; }
+        public IList<MenuItemModel> Items { get; }
 
         #endregion
 
         #region Commands
 
-        public ICommand OpenItemCommand { get; private set; }
+        public ICommand OpenItemCommand { get; }
 
         private async void OpenItem(MenuItemModel item)
         {
@@ -75,20 +72,6 @@ namespace SplitView.Portable.ViewModels
                 await vm.ShowAsync();
                 _toastPresenter.ShowAsync(vm.DisplayName + " was closed", ToastDuration.Short);
             }
-        }
-
-        public void LoadState(IDataContext state)
-        {
-            var context = state.GetData(SelectedItemState);
-            if (context != null)
-                SelectedItem = ViewModelProvider.RestoreViewModel(context, null, true);
-        }
-
-        public void SaveState(IDataContext state)
-        {
-            var selectedItem = SelectedItem;
-            if (selectedItem != null)
-                state.AddOrUpdate(SelectedItemState, ViewModelProvider.PreserveViewModel(selectedItem, null));
         }
 
         #endregion

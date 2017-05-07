@@ -69,20 +69,9 @@
           "lib/netstandard1.0/MugenMvvmToolkit.dll": {}
         }
       },
-      "MugenMvvmToolkit.Binding/6.5.0": {
-        "dependencies": {
-          "MugenMvvmToolkit": "[6.5.0, 6.6.0)"
-        },
-        "compile": {
-          "lib/netstandard1.0/MugenMvvmToolkit.Binding.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/MugenMvvmToolkit.Binding.dll": {}
-        }
-      },
       "MugenMvvmToolkit.Xamarin.Forms/6.5.0": {
         "dependencies": {
-          "MugenMvvmToolkit.Binding": "[6.5.0, 6.6.0)",
+          "MugenMvvmToolkit": "[6.5.0, 6.6.0)",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -577,7 +566,7 @@
       ]
     },
     "MugenMvvmToolkit/6.5.0": {
-      "sha512": "X3FnCCyTn4SCbDBLTn8TpgYaSNC/ZT12k7o1LCujbE0mBSb8L53KczCgoUbBmDz1KdN39OIeS30mamYHy/tt3Q==",
+      "sha512": "enTc1fDqtIuaYEVfqcdtQdVNS0aUhUtohIywei9rPrwe8Z30NHt5PPiXu+MxwOjLsRlHIx+PMtbOuxHaH0ZvjQ==",
       "type": "package",
       "path": "MugenMvvmToolkit/6.5.0",
       "files": [
@@ -591,30 +580,14 @@
         "lib/netstandard1.0/MugenMvvmToolkit.pdb"
       ]
     },
-    "MugenMvvmToolkit.Binding/6.5.0": {
-      "sha512": "xbqM1Pn9WrJdkQ5jEuVBaHAUUECYmtf3wg8hS2MLjrhIxvsX54moZVO/zmIwxpO0A9y4VX0I+jH9475EYtLt6w==",
-      "type": "package",
-      "path": "MugenMvvmToolkit.Binding/6.5.0",
-      "files": [
-        "MugenMvvmToolkit.Binding.6.5.0.nupkg.sha512",
-        "MugenMvvmToolkit.Binding.nuspec",
-        "lib/net40-client/MugenMvvmToolkit.Binding.dll",
-        "lib/net40-client/MugenMvvmToolkit.Binding.pdb",
-        "lib/net45/MugenMvvmToolkit.Binding.dll",
-        "lib/net45/MugenMvvmToolkit.Binding.pdb",
-        "lib/netstandard1.0/MugenMvvmToolkit.Binding.dll",
-        "lib/netstandard1.0/MugenMvvmToolkit.Binding.pdb"
-      ]
-    },
     "MugenMvvmToolkit.Xamarin.Forms/6.5.0": {
-      "sha512": "3DZeQ3ikxy/H140g7ijd+JOeY9wY6SCQQ9jr4gL50tXb9HVqd6NfK+rJP96JMX1unezoIU3Esjl45zYGKUvDRA==",
+      "sha512": "pWUnNn0d6jjDKvPIdfepzNMfkCsuc04TWzLsmqBQADo4RWO7GW/g7+anf9pGRPMF/eAsNN88SwlUsgiL0ufI7Q==",
       "type": "package",
       "path": "MugenMvvmToolkit.Xamarin.Forms/6.5.0",
       "files": [
         "MugenMvvmToolkit.Xamarin.Forms.6.5.0.nupkg.sha512",
         "MugenMvvmToolkit.Xamarin.Forms.nuspec",
         "content/Xamarin.iOS10/Resources/error.png",
-        "content/Xamarin.iOS10/RuntimeLoadAssembly.cs.pp",
         "lib/MonoAndroid10/MugenMvvmToolkit.Xamarin.Forms.Android.dll",
         "lib/MonoAndroid10/MugenMvvmToolkit.Xamarin.Forms.Android.pdb",
         "lib/MonoAndroid10/MugenMvvmToolkit.Xamarin.Forms.dll",

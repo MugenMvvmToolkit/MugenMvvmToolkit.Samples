@@ -16491,7 +16491,7 @@
       ]
     },
     "MugenMvvmToolkit/6.5.0": {
-      "sha512": "Xl+5bHolUjFR0kNJYlh7vEKFIt8KxBshuJ9Mm4wF4TcGzr9aviZrYqqXlGggJ1pPCOipL74rAL5rAdtNPwJIpA==",
+      "sha512": "tmFzwVftKovs6M2wn9/+kGl5D9tHj+yz/aTs4gI1u9tffRt7l8+kUe/ZK8gaOjw6LSx9iqWJxoPvIMhU2YrSrA==",
       "type": "package",
       "path": "MugenMvvmToolkit/6.5.0",
       "files": [
@@ -16506,7 +16506,7 @@
       ]
     },
     "MugenMvvmToolkit.Binding/6.5.0": {
-      "sha512": "xnr4XULfcSoA1fec8zir3J6QCXZtq40fjP4n+BMsu7uyB7mUYH1gS5iABds+ApiXbQSMvQM1BKCfHipwqZeC+w==",
+      "sha512": "iVl+be5/CrkVzkkxQ7S3zVD5TRneouurTTqFQNIoQNPlOVWkZ7nzR+1AgDamHLpsczLPrxsn/PVobNHrsEmlfQ==",
       "type": "package",
       "path": "MugenMvvmToolkit.Binding/6.5.0",
       "files": [
@@ -16521,7 +16521,7 @@
       ]
     },
     "MugenMvvmToolkit.Xamarin.Forms/6.5.0": {
-      "sha512": "NpP5y6gEsfi96ACh2MfmHe4/GJ8sxsmWcrO1xmBExbCTCgW4vx1CxHtqNYBQdJXGh/bmcSLFvZc4lqiN33f9eg==",
+      "sha512": "M0lpo/ZIdSPZtovvTDoJpgvIVzCX8y3MP1mphC8jS/+EDU91jPn5DG+OuzagHiioIlwpIzk/5VxrNtLWuolmvw==",
       "type": "package",
       "path": "MugenMvvmToolkit.Xamarin.Forms/6.5.0",
       "files": [
@@ -16556,7 +16556,7 @@
       ]
     },
     "MugenMvvmToolkit.Xamarin.Forms.Binding/6.5.0": {
-      "sha512": "/BdOu3tHqUKgeWccT4bH306lG+Y2TiqjsCpVddbqnfww91OEtQ2zusWXjuMshe1frO+5VcXCxUDBBxzNaZNN4g==",
+      "sha512": "G89wmis+7djVCwiVxnpiRegl8PNEfR/h8o+2x0n9bJa/Ql+QP+6AScOZHKL5PMhaRd/L15i3WmbSQyELZDGtaw==",
       "type": "package",
       "path": "MugenMvvmToolkit.Xamarin.Forms.Binding/6.5.0",
       "files": [

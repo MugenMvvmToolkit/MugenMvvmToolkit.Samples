@@ -1,6 +1,6 @@
 using MugenMvvmToolkit.Android.Attributes;
 using MugenMvvmToolkit.Android.Infrastructure;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.Interfaces;
 using Validation.Android;
 using Validation.Portable;

@@ -1,5 +1,5 @@
 using System.Windows;
-using MugenMvvmToolkit.Infrastructure;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.WPF.Infrastructure;
 
 namespace Validation.Wpf

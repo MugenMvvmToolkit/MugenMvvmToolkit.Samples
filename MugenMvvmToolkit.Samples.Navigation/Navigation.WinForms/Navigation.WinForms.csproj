@@ -34,47 +34,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.1.0\lib\net45\Autofac.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.6.5.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.6.0.0\lib\net45\MugenMvvmToolkit.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.Binding, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.Binding.6.5.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MugenMvvmToolkit.AutofacContainer, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.AutofacContainer.6.0.0\lib\net40\MugenMvvmToolkit.AutofacContainer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MugenMvvmToolkit.Binding, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.6.0.0\lib\net45\MugenMvvmToolkit.Binding.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MugenMvvmToolkit.WinForms, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MugenMvvmToolkit.WinForms.6.0.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
+    <Reference Include="MugenMvvmToolkit.WinForms, Version=6.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\MugenMvvmToolkit.WinForms.6.5.0\lib\net45\MugenMvvmToolkit.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="ViewBinder.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Views\SecondView.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Views\OpenedViewModelsView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\SecondView.Designer.cs">
-      <DependentUpon>SecondView.cs</DependentUpon>
+    <Compile Include="Views\OpenedViewModelsView.Designer.cs">
+      <DependentUpon>OpenedViewModelsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FirstView.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Views\ResultView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FirstView.Designer.cs">
-      <DependentUpon>FirstView.cs</DependentUpon>
+    <Compile Include="Views\ResultView.Designer.cs">
+      <DependentUpon>ResultView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
@@ -82,12 +76,24 @@
     <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\WrapperWindowView.cs">
+    <Compile Include="Views\TextView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TextView.Designer.cs">
+      <DependentUpon>TextView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\WrapperWindowView.Designer.cs">
-      <DependentUpon>WrapperWindowView.cs</DependentUpon>
+    <Compile Include="Views\TabsView.Designer.cs">
+      <DependentUpon>TabsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\DialogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DialogView.Designer.cs">
+      <DependentUpon>DialogView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,17 +104,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\SecondView.resx">
-      <DependentUpon>SecondView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\OpenedViewModelsView.resx">
+      <DependentUpon>OpenedViewModelsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstView.resx">
-      <DependentUpon>FirstView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ResultView.resx">
+      <DependentUpon>ResultView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\WrapperWindowView.resx">
-      <DependentUpon>WrapperWindowView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TextView.resx">
+      <DependentUpon>TextView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TabsView.resx">
+      <DependentUpon>TabsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DialogView.resx">
+      <DependentUpon>DialogView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />

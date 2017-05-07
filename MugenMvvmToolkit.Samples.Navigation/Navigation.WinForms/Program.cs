@@ -12,7 +12,7 @@ namespace Navigation.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var bootstrapper = new Bootstrapper<Portable.App>(new AutofacContainer());
+            var bootstrapper = new Bootstrapper<Portable.App>(new MugenContainer());
             bootstrapper.Start();
         }
     }

@@ -10,7 +10,7 @@ namespace Navigation.Wpf
 
         public App()
         {
-            new Bootstrapper<Portable.App>(this, new AutofacContainer());
+            new Bootstrapper<Portable.App>(this, new MugenContainer());
         }
 
         #endregion
