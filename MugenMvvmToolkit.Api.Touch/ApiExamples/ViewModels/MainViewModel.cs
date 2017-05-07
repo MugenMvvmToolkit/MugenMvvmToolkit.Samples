@@ -44,13 +44,13 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; private set; }
+        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; }
 
         #endregion
 
         #region Commands
 
-        public ICommand ShowCommand { get; private set; }
+        public ICommand ShowCommand { get; }
 
         private async void Show(ViewModelCommandParameter parameter)
         {

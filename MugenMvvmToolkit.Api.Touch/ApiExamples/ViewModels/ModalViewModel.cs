@@ -29,7 +29,7 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
-        public ICommand NavigateCommand { get; private set; }
+        public ICommand NavigateCommand { get; }
 
         private async void Navigate(object o)
         {

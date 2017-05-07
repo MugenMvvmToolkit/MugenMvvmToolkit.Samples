@@ -53,12 +53,8 @@ namespace ApiExamples.Views
                         .WithConverter(BooleanToCheckmarkAccessoryConverter.Instance);
 
                     set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (model, ctx) => model.IsSelected).TwoWay();
-                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (model, ctx) => model.IsHighlighted).OneWayToSource();
-                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => (model, ctx) => model.Editing).OneWayToSource();
-
                     set.Bind(cell.TextLabel).To(() => (model, ctx) => model.Name);
-                    set.Bind(cell.DetailTextLabel)
-                        .To(() => (m, ctx) => $"Selected: {m.IsSelected}, Highlighted: {m.IsHighlighted}, Editing: {m.Editing}");
+                    set.Bind(cell.DetailTextLabel).To(() => (m, ctx) => $"Selected: {m.IsSelected}");
                 }));
         }
 

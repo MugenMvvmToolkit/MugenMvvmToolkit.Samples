@@ -38,7 +38,7 @@ namespace ApiExamples.Models
         public Type ViewModelType { get; private set; }
 
         [IgnoreDataMember]
-        public IDataContext Context { get; private set; }
+        public IDataContext Context { get; }
 
         #endregion
     }

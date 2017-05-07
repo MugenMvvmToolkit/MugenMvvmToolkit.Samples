@@ -73,12 +73,9 @@ namespace ApiExamples.Views
                         .To(() => (m, ctx) => "Delete " + m.Name);
 
                     set.Bind(cell, () => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
-                    set.Bind(cell, () => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
-                    set.Bind(cell, () => viewCell => viewCell.Editing).To(() => (m, ctx) => m.Editing).OneWayToSource();
 
                     set.Bind(cell.TextLabel).To(() => (m, ctx) => m.Name);
-                    set.Bind(cell.DetailTextLabel)
-                        .To(() => (m, ctx) => $"Selected: {m.IsSelected}, Highlighted: {m.IsHighlighted}, Editing: {m.Editing}");
+                    set.Bind(cell.DetailTextLabel).To(() => (m, ctx) => $"Selected: {m.IsSelected}");
                 }));
         }
 

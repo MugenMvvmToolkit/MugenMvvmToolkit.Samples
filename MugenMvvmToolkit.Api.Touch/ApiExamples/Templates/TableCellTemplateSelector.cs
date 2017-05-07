@@ -64,13 +64,11 @@ namespace ApiExamples.Templates
                 .ToggleEnabledState(false);
 
             bindingSet.Bind(() => viewCell => viewCell.Selected).To(() => (m, ctx) => m.IsSelected).TwoWay();
-            bindingSet.Bind(() => viewCell => viewCell.Highlighted).To(() => (m, ctx) => m.IsHighlighted).OneWayToSource();
-            bindingSet.Bind(() => viewCell => viewCell.Editing).To(() => (m, ctx) => m.Editing).OneWayToSource();
             bindingSet.Bind(AttachedMembers.UITableViewCell.TitleForDeleteConfirmation)
                 .To(() => (m, ctx) => "Delete " + m.Name);
             bindingSet.Bind(template.TextLabel).To(() => (m, ctx) => m.Name);
             bindingSet.Bind(template.DetailTextLabel)
-                .To(() => (m, ctx) => $"Selected: {m.IsSelected}, Highlighted: {m.IsHighlighted}, Editing: {m.Editing}");
+                .To(() => (m, ctx) => $"Selected: {m.IsSelected}");
         }
 
         #endregion

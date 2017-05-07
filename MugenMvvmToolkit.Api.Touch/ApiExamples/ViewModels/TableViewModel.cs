@@ -36,13 +36,13 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
-        public ICommand ItemClickCommand { get; private set; }
+        public ICommand ItemClickCommand { get; }
 
-        public ICommand AddCommand { get; private set; }
+        public ICommand AddCommand { get; }
 
-        public ICommand RemoveCommand { get; private set; }
+        public ICommand RemoveCommand { get; }
 
-        public ICommand InvertSelectionCommand { get; private set; }
+        public ICommand InvertSelectionCommand { get; }
 
         private void Add(object o)
         {

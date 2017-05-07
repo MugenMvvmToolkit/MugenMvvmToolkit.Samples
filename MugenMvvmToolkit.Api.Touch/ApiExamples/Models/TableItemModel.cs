@@ -6,11 +6,9 @@ namespace ApiExamples.Models
     {
         #region Fields
 
-        private bool _isHighlighted;
         private bool _isSelected;
         private string _name;
-        private bool _editing;
-
+        
         #endregion
 
         #region Properties
@@ -37,30 +35,6 @@ namespace ApiExamples.Models
                 if (_isSelected == value)
                     return;
                 _isSelected = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public bool IsHighlighted
-        {
-            get { return _isHighlighted; }
-            set
-            {
-                if (_isHighlighted == value)
-                    return;
-                _isHighlighted = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public bool Editing
-        {
-            get { return _editing; }
-            set
-            {
-                if (_editing == value)
-                    return;
-                _editing = value; 
                 OnPropertyChanged();
             }
         }
