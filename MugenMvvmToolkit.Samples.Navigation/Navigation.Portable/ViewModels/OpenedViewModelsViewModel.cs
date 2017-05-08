@@ -155,12 +155,9 @@ namespace Navigation.Portable.ViewModels
                 items.Add(new MenuItem("Try Close", TryCloseCommand, info));
                 items.Add(new MenuItem("Try Immediate Close", TryImmediateCloseCommand, info));
             }
-            if (info.ViewModel != this)
-            {
-                items.Add(new MenuItem("Try Reopen", TryOpenCommand, info));
-                if (info.NavigationType == NavigationType.Page)
-                    items.Add(new MenuItem("Try Reopen Clear Back Stack", TryOpenClearBackStackCommand, info));
-            }
+            items.Add(new MenuItem("Try Reopen", TryOpenCommand, info));
+            if (info.NavigationType == NavigationType.Page)
+                items.Add(new MenuItem("Try Reopen Clear Back Stack", TryOpenClearBackStackCommand, info));
             return items;
         }
 

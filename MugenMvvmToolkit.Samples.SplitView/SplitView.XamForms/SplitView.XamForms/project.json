@@ -1,8 +1,9 @@
-{
+﻿{
   "supports": {},
   "dependencies": {
     "MugenMvvmToolkit.Xamarin.Forms": "6.5.0",
-    "NETStandard.Library": "1.6.1"
+    "NETStandard.Library": "1.6.1",
+    "Xamarin.Forms": "2.3.4.231"
   },
   "frameworks": {
     "netstandard1.0": {
