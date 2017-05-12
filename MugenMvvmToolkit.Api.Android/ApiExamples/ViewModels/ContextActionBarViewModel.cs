@@ -11,8 +11,8 @@ namespace ApiExamples.ViewModels
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
-        private string _contextText;
         private bool _contextActionBarVisible;
+        private string _contextText;
 
         #endregion
 
@@ -22,17 +22,6 @@ namespace ApiExamples.ViewModels
         {
             _toastPresenter = toastPresenter;
             ExecuteCommand = new RelayCommand(Execute);
-        }
-
-        #endregion
-
-        #region Commands
-
-        public ICommand ExecuteCommand { get; private set; }
-
-        private void Execute()
-        {
-            _toastPresenter.ShowAsync("Command was invoked", ToastDuration.Short);
         }
 
         #endregion
@@ -62,6 +51,17 @@ namespace ApiExamples.ViewModels
                 OnPropertyChanged();
                 _toastPresenter.ShowAsync(value, ToastDuration.Short);
             }
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand ExecuteCommand { get; }
+
+        private void Execute()
+        {
+            _toastPresenter.ShowAsync("Command was invoked", ToastDuration.Short);
         }
 
         #endregion

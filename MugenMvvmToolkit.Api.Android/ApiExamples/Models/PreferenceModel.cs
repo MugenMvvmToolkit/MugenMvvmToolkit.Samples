@@ -27,11 +27,11 @@ namespace ApiExamples.Models
 
         #region Properties
 
-        public string Key { get; private set; }
+        public string Key { get; }
 
-        public string Title { get; private set; }
+        public string Title { get; }
 
-        public bool IsCheckbox { get; private set; }
+        public bool IsCheckbox { get; }
 
         public object Value
         {

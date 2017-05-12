@@ -8,10 +8,7 @@ namespace ApiExamples.Models
 
         public string Name { get; set; }
 
-        public bool HasSubMenu
-        {
-            get { return Items != null && Items.Count != 0; }
-        }
+        public bool HasSubMenu => Items != null && Items.Count != 0;
 
         public IList<MenuItemModel> Items { get; set; }
 

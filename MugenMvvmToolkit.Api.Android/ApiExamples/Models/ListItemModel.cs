@@ -4,10 +4,7 @@ namespace ApiExamples.Models
     {
         #region Properties
 
-        public string Value
-        {
-            get { return IsValid ? "Valid value" : "Invalid value"; }
-        }
+        public string Value => IsValid ? "Valid value" : "Invalid value";
 
         public bool IsValid { get; set; }
 

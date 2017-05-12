@@ -8,8 +8,9 @@ namespace ApiExamples.ViewModels
     {
         #region Fields
 
-        private static int _counter;
         private string _name;
+
+        private static int _counter;
 
         #endregion
 
@@ -38,11 +39,11 @@ namespace ApiExamples.ViewModels
 
         public int Id { get; private set; }
 
+        public string DisplayName { get; set; }
+
         #endregion
 
         #region Implementation of interfaces
-
-        public string DisplayName { get; set; }
 
         public void LoadState(IDataContext state)
         {

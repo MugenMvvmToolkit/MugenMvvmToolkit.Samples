@@ -14,8 +14,8 @@ namespace ApiExamples.ViewModels
 
         private readonly IToastPresenter _toastPresenter;
         private bool _checked;
-        private string _text;
         private string _listValue;
+        private string _text;
 
         #endregion
 
@@ -41,9 +41,9 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public IList<PreferenceModel> Preferences { get; private set; }
+        public IList<PreferenceModel> Preferences { get; }
 
-        public IList<string> Values { get; private set; }
+        public IList<string> Values { get; }
 
         public bool Checked
         {
@@ -91,7 +91,7 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
-        public ICommand Command { get; private set; }
+        public ICommand Command { get; }
 
         private void Execute()
         {

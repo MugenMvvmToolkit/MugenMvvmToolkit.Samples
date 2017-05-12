@@ -33,11 +33,11 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
-        public ICommand ShowToastCommand { get; private set; }
+        public ICommand ShowToastCommand { get; }
 
-        public ICommand ShowSnackbarCommand { get; private set; }
+        public ICommand ShowSnackbarCommand { get; }
 
-        public ICommand ShowSnackbarActionCommand { get; private set; }
+        public ICommand ShowSnackbarActionCommand { get; }
 
         private void ShowToast()
         {
@@ -46,12 +46,12 @@ namespace ApiExamples.ViewModels
 
         private void ShowSnackbar()
         {
-            _toastPresenter.ShowAsync(new Message { Text = "Simple message" }, ToastDuration.Long);
+            _toastPresenter.ShowAsync(new Message {Text = "Simple message"}, ToastDuration.Long);
         }
 
         private void ShowSnackbarAction()
         {
-            _toastPresenter.ShowAsync(new Message { ActionTitle = "Command action", Text = "Message with action", Command = new RelayCommand(Execute) },
+            _toastPresenter.ShowAsync(new Message {ActionTitle = "Command action", Text = "Message with action", Command = new RelayCommand(Execute)},
                 ToastDuration.Long);
         }
 

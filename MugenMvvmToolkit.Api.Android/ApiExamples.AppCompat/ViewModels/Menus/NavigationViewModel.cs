@@ -27,7 +27,7 @@ namespace ApiExamples.ViewModels.Menus
 
         #region Commands
 
-        public ICommand ExecuteCommand { get; private set; }
+        public ICommand ExecuteCommand { get; }
 
         private void Execute(string menuItem)
         {

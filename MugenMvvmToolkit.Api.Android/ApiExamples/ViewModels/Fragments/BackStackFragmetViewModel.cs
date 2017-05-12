@@ -23,11 +23,27 @@ namespace ApiExamples.ViewModels.Fragments
 
         #endregion
 
+        #region Properties
+
+        public IViewModel ViewModel
+        {
+            get { return _viewModel; }
+            set
+            {
+                if (Equals(_viewModel, value))
+                    return;
+                _viewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
         #region Commands
 
-        public ICommand AddCommand { get; private set; }
+        public ICommand AddCommand { get; }
 
-        public ICommand RemoveCommand { get; private set; }
+        public ICommand RemoveCommand { get; }
 
         private void Add()
         {
@@ -44,22 +60,6 @@ namespace ApiExamples.ViewModels.Fragments
         private void Remove(object o)
         {
             CloseCommand.Execute(o);
-        }
-
-        #endregion
-
-        #region Properties
-
-        public IViewModel ViewModel
-        {
-            get { return _viewModel; }
-            set
-            {
-                if (Equals(_viewModel, value))
-                    return;
-                _viewModel = value;
-                OnPropertyChanged();
-            }
         }
 
         #endregion

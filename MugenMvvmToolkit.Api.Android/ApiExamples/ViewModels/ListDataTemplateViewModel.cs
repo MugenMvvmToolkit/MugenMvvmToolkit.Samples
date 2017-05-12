@@ -22,19 +22,6 @@ namespace ApiExamples.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand AddCommand { get; private set; }
-
-        private void Add(bool param)
-        {
-            var model = new ListItemModel { IsValid = param };
-            GridViewModel.ItemsSource.Add(model);
-            GridViewModel.SelectedItem = model;
-        }
-
-        #endregion
-
         #region Properties
 
         public GridViewModel<ListItemModel> GridViewModel
@@ -49,16 +36,33 @@ namespace ApiExamples.ViewModels
 
         #endregion
 
+        #region Methods
+
         #region Overrides of ViewModelBase
 
         protected override void OnInitialized()
         {
             GridViewModel = GetViewModel<GridViewModel<ListItemModel>>();
-            for (int i = 0; i < 20; i++)
+            for (var i = 0; i < 20; i++)
             {
-                GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = true });
-                GridViewModel.ItemsSource.Add(new ListItemModel { IsValid = false });
+                GridViewModel.ItemsSource.Add(new ListItemModel {IsValid = true});
+                GridViewModel.ItemsSource.Add(new ListItemModel {IsValid = false});
             }
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Commands
+
+        public ICommand AddCommand { get; }
+
+        private void Add(bool param)
+        {
+            var model = new ListItemModel {IsValid = param};
+            GridViewModel.ItemsSource.Add(model);
+            GridViewModel.SelectedItem = model;
         }
 
         #endregion

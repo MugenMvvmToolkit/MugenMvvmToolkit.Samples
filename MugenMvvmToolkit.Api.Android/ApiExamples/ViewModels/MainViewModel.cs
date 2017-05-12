@@ -29,16 +29,16 @@ namespace ApiExamples.ViewModels
             _toastPresenter = toastPresenter;
             Items = new[]
             {
-                Tuple.Create("Action bar (Dynamic tabs)", new ViewModelCommandParameter(typeof (TabViewModel))),
-                Tuple.Create("Action bar (Static tabs)", new ViewModelCommandParameter(typeof (StaticTabViewModel))),
-                Tuple.Create("Context action bar", new ViewModelCommandParameter(typeof (ContextActionBarViewModel))),
-                Tuple.Create("Tab host (Dynamic tabs)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.TabHostView)),
-                Tuple.Create("Action bar (Dynamic menu)", new ViewModelCommandParameter(typeof (MenuViewModel))),
-                Tuple.Create("Toolbar view", new ViewModelCommandParameter(typeof (ToolbarViewModel))),
-                Tuple.Create("Popup menu", new ViewModelCommandParameter(typeof (MenuViewModel), Constants.PopupMenuView)),
-                Tuple.Create("Back stack fragment", new ViewModelCommandParameter(typeof (BackStackFragmetViewModel), Constants.PopupMenuView)),
-                Tuple.Create("ItemsSource with DataTemplateSelector", new ViewModelCommandParameter(typeof (ListDataTemplateViewModel))),
-                Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof (TabViewModel), Constants.CardRecyclerView)),
+                Tuple.Create("Action bar (Dynamic tabs)", new ViewModelCommandParameter(typeof(TabViewModel))),
+                Tuple.Create("Action bar (Static tabs)", new ViewModelCommandParameter(typeof(StaticTabViewModel))),
+                Tuple.Create("Context action bar", new ViewModelCommandParameter(typeof(ContextActionBarViewModel))),
+                Tuple.Create("Tab host (Dynamic tabs)", new ViewModelCommandParameter(typeof(TabViewModel), Constants.TabHostView)),
+                Tuple.Create("Action bar (Dynamic menu)", new ViewModelCommandParameter(typeof(MenuViewModel))),
+                Tuple.Create("Toolbar view", new ViewModelCommandParameter(typeof(ToolbarViewModel))),
+                Tuple.Create("Popup menu", new ViewModelCommandParameter(typeof(MenuViewModel), Constants.PopupMenuView)),
+                Tuple.Create("Back stack fragment", new ViewModelCommandParameter(typeof(BackStackFragmetViewModel), Constants.PopupMenuView)),
+                Tuple.Create("ItemsSource with DataTemplateSelector", new ViewModelCommandParameter(typeof(ListDataTemplateViewModel))),
+                Tuple.Create("RecyclerView + CardView", new ViewModelCommandParameter(typeof(TabViewModel), Constants.CardRecyclerView)),
 #if APPCOMPAT
                 Tuple.Create("View pager (AppCompat)", new ViewModelCommandParameter(typeof (TabViewModel), Constants.ViewPagerView)),
                 Tuple.Create("Drawer layout (AppCompat)", new ViewModelCommandParameter(typeof (DrawerViewModel))),
@@ -47,8 +47,8 @@ namespace ApiExamples.ViewModels
                 Tuple.Create("Navigation view (Design)", new ViewModelCommandParameter(typeof (NavigationViewModel))),
                 Tuple.Create("Preference (Compat)", new ViewModelCommandParameter(typeof (CompatPreferenceViewModel))),
 #else
-                Tuple.Create("Preference", new ViewModelCommandParameter(typeof (PreferenceViewModel))),
-                Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof (PreferenceViewModel), Constants.PreferenceHeaderView)),
+                Tuple.Create("Preference", new ViewModelCommandParameter(typeof(PreferenceViewModel))),
+                Tuple.Create("Preference headers", new ViewModelCommandParameter(typeof(PreferenceViewModel), Constants.PreferenceHeaderView)),
 #endif
             };
             ShowCommand = RelayCommandBase.FromAsyncHandler<ViewModelCommandParameter>(Show);
@@ -58,13 +58,13 @@ namespace ApiExamples.ViewModels
 
         #region Properties
 
-        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; private set; }
+        public IList<Tuple<string, ViewModelCommandParameter>> Items { get; }
 
         #endregion
 
         #region Commands
 
-        public ICommand ShowCommand { get; private set; }
+        public ICommand ShowCommand { get; }
 
         private async Task Show(ViewModelCommandParameter parameter)
         {

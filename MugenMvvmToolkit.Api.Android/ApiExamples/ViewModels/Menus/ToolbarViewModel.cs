@@ -15,15 +15,9 @@ namespace ApiExamples.ViewModels.Menus
 
         #region Properties
 
-        public string TopToolbarTitle
-        {
-            get { return "Top Toolbar"; }
-        }
+        public string TopToolbarTitle => "Top Toolbar";
 
-        public string BottomToolbarTitle
-        {
-            get { return "Bottom Toolbar"; }
-        }
+        public string BottomToolbarTitle => "Bottom Toolbar";
 
         #endregion
     }

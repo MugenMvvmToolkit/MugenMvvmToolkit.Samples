@@ -13,7 +13,6 @@ namespace ApiExamples.ViewModels.Menus
         #region Fields
 
         private readonly IToastPresenter _toastPresenter;
-        private readonly IList<MenuItemModel> _items;
 
         #endregion
 
@@ -70,41 +69,38 @@ namespace ApiExamples.ViewModels.Menus
                     }
                 }
             };
-            _items = new[]
+            Items = new[]
             {
                 root,
                 new MenuItemModel
                 {
                     Name = "level 2",
                     Items = new[]
+                    {
+                        new MenuItemModel
                         {
-                            new MenuItemModel
-                            {
-                                Name = "level 2.1"
-                            }
+                            Name = "level 2.1"
                         }
+                    }
                 }
             };
         }
 
         #endregion
 
+        #region Properties
+
+        public IList<MenuItemModel> Items { get; }
+
+        #endregion
+
         #region Commands
 
-        public ICommand ExecuteCommand { get; private set; }
+        public ICommand ExecuteCommand { get; }
 
         private void Execute(MenuItemModel menuItem)
         {
             _toastPresenter.ShowAsync(menuItem.Name, ToastDuration.Short);
-        }
-
-        #endregion
-
-        #region Properties
-
-        public IList<MenuItemModel> Items
-        {
-            get { return _items; }
         }
 
         #endregion
