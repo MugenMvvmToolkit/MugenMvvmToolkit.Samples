@@ -58,10 +58,7 @@ namespace Validation.Portable.ViewModels
             }
         }
 
-        public bool IsLoginValidating
-        {
-            get { return _validationLoginCount != 0; }
-        }
+        public bool IsLoginValidating => _validationLoginCount != 0;
 
         #endregion
 

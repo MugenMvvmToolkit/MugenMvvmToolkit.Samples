@@ -21,9 +21,9 @@ namespace Validation.Portable.ViewModels
 
         #region Properties
 
-        public ICommand ShowAnnotationCommand { get; private set; }
+        public ICommand ShowAnnotationCommand { get; }
 
-        public ICommand ShowUserEditorCommand { get; private set; }
+        public ICommand ShowUserEditorCommand { get; }
 
         #endregion
 
@@ -43,7 +43,9 @@ namespace Validation.Portable.ViewModels
         private async Task ShowUserEditor()
         {
             using (var viewModel = GetViewModel<UserWorkspaceViewModel>())
+            {
                 await viewModel.ShowAsync();
+            }
         }
 
         #endregion

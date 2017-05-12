@@ -25,22 +25,14 @@ namespace Validation.Portable.ViewModels
 
         public UserWorkspaceViewModel(IUserRepository userRepository, IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(userRepository, "userRepository");
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(userRepository, nameof(userRepository));
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _userRepository = userRepository;
             _messagePresenter = messagePresenter;
 
             AddUserCommand = new RelayCommand(AddUser, CanAddUser, this);
             RemoveUserCommand = RelayCommandBase.FromAsyncHandler(RemoveUser, CanRemoveUser, this);
         }
-
-        #endregion
-
-        #region Commands
-
-        public ICommand AddUserCommand { get; private set; }
-
-        public ICommand RemoveUserCommand { get; private set; }
 
         #endregion
 
@@ -75,7 +67,7 @@ namespace Validation.Portable.ViewModels
         private void AddUser()
         {
             UserEditorViewModel.ApplyChanges();
-            UserModel entity = UserEditorViewModel.Entity;
+            var entity = UserEditorViewModel.Entity;
             UserGridViewModel.ItemsSource.Add(entity);
             UserGridViewModel.SelectedItem = entity;
             _userRepository.Add(entity);
@@ -89,9 +81,9 @@ namespace Validation.Portable.ViewModels
 
         private async Task RemoveUser()
         {
-            UserModel selectedItem = UserGridViewModel.SelectedItem;
+            var selectedItem = UserGridViewModel.SelectedItem;
             if (await _messagePresenter.ShowAsync("Are you sure you want to remove the selected user?", string.Empty,
-                        MessageButton.YesNo) != MessageResult.Yes)
+                    MessageButton.YesNo) != MessageResult.Yes)
                 return;
             _userRepository.Remove(selectedItem);
             UserGridViewModel.ItemsSource.Remove(selectedItem);
@@ -112,10 +104,6 @@ namespace Validation.Portable.ViewModels
             UserEditorViewModel.AddValidator<UserEmailValidator>(userModel);
         }
 
-        #endregion
-
-        #region Overrides of ViewModelBase
-
         protected override void OnInitialized()
         {
             UserGridViewModel = GetViewModel<GridViewModel<UserModel>>();
@@ -124,6 +112,14 @@ namespace Validation.Portable.ViewModels
             UserGridViewModel.UpdateItemsSource(_userRepository.GetUsers());
             InitializeNewUser();
         }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand AddUserCommand { get; }
+
+        public ICommand RemoveUserCommand { get; }
 
         #endregion
     }

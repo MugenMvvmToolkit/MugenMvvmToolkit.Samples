@@ -16,13 +16,10 @@ namespace Validation.Portable.Modules
         public bool Load(IModuleContext context)
         {
             var container = context.IocContainer;
-            if (container != null)
-            {
-                var validatorProvider = container.Get<IValidatorProvider>();
-                //NOTE: Registering validator.
-                validatorProvider.Register<UserLoginValidator>();
-                container.Bind<IUserRepository, CollectionUserRepository>(DependencyLifecycle.SingleInstance);
-            }
+            var validatorProvider = container.Get<IValidatorProvider>();
+            //NOTE: Registering validator.
+            validatorProvider.Register<UserLoginValidator>();
+            container.Bind<IUserRepository, CollectionUserRepository>(DependencyLifecycle.SingleInstance);
             return true;
         }
 

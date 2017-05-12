@@ -42,7 +42,7 @@ namespace Validation.Portable.Validators
                     {
                         {
                             propertyName,
-                            string.Format("The user with login {0}, already exists.", Instance.Login)
+                            $"The user with login {Instance.Login}, already exists."
                         }
                     };
                 return null;

@@ -4,7 +4,7 @@
     "Fody": "1.29.4",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "MugenMvvmToolkit": "6.5.0",
-    "MugenMvvmToolkit.Fody": "4.2.1",
+    "MugenMvvmToolkit.Fody": "6.5.1",
     "NETStandard.Library": "1.6.1",
     "System.ComponentModel": "4.3.0",
     "System.ComponentModel.Annotations": "4.3.0"

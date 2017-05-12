@@ -17,13 +17,13 @@ namespace Validation.Portable.Infrastructure
 
         public void Add(UserModel user)
         {
-            Should.NotBeNull(user, "user");
+            Should.NotBeNull(user, nameof(user));
             _users.Add(user);
         }
 
         public void Remove(UserModel user)
         {
-            Should.NotBeNull(user, "user");
+            Should.NotBeNull(user, nameof(user));
             _users.Remove(user);
         }
 
