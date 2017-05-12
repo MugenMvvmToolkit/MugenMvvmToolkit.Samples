@@ -1,19 +1,21 @@
 using CoreGraphics;
 using Foundation;
 using MugenMvvmToolkit.Attributes;
-using UIKit;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
 using MugenMvvmToolkit.iOS.Views;
 using MugenMvvmToolkit.Interfaces.Models;
+using MugenMvvmToolkit.Interfaces.ViewModels;
+using MugenMvvmToolkit.Interfaces.Views;
 using Navigation.Portable.ViewModels;
+using UIKit;
 
 namespace Navigation.Touch.Views
 {
     [Register("TextViewController")]
     [ViewModel(typeof(PageViewModel))]
     [ViewModel(typeof(BackgroundViewModel))]
-    public class TextViewController : MvvmViewController
+    public class TextViewController : MvvmViewController, IViewModelAwareView<IViewModel>
     {
         #region Constructors
 
@@ -25,7 +27,13 @@ namespace Navigation.Touch.Views
 
         #endregion
 
-        #region Overrides of MvvmViewController
+        #region Properties
+
+        public IViewModel ViewModel { get; set; }
+
+        #endregion
+
+        #region Methods
 
         public override void ViewDidLoad()
         {
@@ -38,17 +46,26 @@ namespace Navigation.Touch.Views
                 set.Bind(textLb).To("Text");
                 View.AddSubview(textLb);
 
-                UIButton button = UIButton.FromType(UIButtonType.System);
+                var button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 100, View.Frame.Width, 30);
-                button.SetTitle("Show Opened View Models", UIControlState.Normal);
-                set.Bind(button).To(() => (vm, ctx) => vm.ShowOpenedViewModelsCommand);
+                button.SetTitle("Close", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.CloseCommand);
                 View.AddSubview(button);
 
                 button = UIButton.FromType(UIButtonType.System);
                 button.Frame = new CGRect(0, 130, View.Frame.Width, 30);
-                button.SetTitle("Close", UIControlState.Normal);
-                set.Bind(button).To(() => (vm, ctx) => vm.CloseCommand);
+                button.SetTitle("Show Opened View Models", UIControlState.Normal);
+                set.Bind(button).To(() => (vm, ctx) => vm.ShowOpenedViewModelsCommand);
                 View.AddSubview(button);
+
+                if (ViewModel is PageViewModel)
+                {
+                    button = UIButton.FromType(UIButtonType.System);
+                    button.Frame = new CGRect(0, 160, View.Frame.Width, 30);
+                    button.SetTitle("Next Page", UIControlState.Normal);
+                    set.Bind(button).To<PageViewModel>(() => (vm, ctx) => vm.ToNextPageCommand);
+                    View.AddSubview(button);
+                }
             }
         }
 

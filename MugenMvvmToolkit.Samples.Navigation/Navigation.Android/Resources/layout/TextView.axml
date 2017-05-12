@@ -17,14 +17,21 @@
 
   <Button android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:text="Show Opened View Models"
           android:layout_marginTop="16dp"
-          pkg:Bind="Click ShowOpenedViewModelsCommand" />
+          android:text="Next Page"
+          android:visibility="gone"
+          pkg:Bind="Click ToNextPageCommand, Optional=true; Visible ToNextPageCommand != null, Optional=true" />
 
   <Button android:layout_width="fill_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="16dp"
           android:text="Close"
           pkg:Bind="Click CloseCommand" />
+
+  <Button android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:text="Show Opened View Models"
+          android:layout_marginTop="16dp"
+          pkg:Bind="Click ShowOpenedViewModelsCommand" />
 
 </LinearLayout>

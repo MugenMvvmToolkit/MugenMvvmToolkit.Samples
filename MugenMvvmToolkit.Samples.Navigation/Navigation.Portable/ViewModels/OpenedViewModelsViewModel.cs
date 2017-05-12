@@ -9,6 +9,7 @@ using MugenMvvmToolkit.Interfaces.Navigation;
 using MugenMvvmToolkit.Interfaces.Presenters;
 using MugenMvvmToolkit.Interfaces.ViewModels;
 using MugenMvvmToolkit.Models;
+using MugenMvvmToolkit.Models.EventArg;
 using MugenMvvmToolkit.ViewModels;
 
 namespace Navigation.Portable.ViewModels
@@ -85,36 +86,7 @@ namespace Navigation.Portable.ViewModels
             TryImmediateCloseCommand = new AsyncRelayCommand<OpenedViewModelInfo>(TryImmediateCloseAsync);
             TryOpenCommand = new AsyncRelayCommand<OpenedViewModelInfo>(TryOpenAsync);
             TryOpenClearBackStackCommand = new AsyncRelayCommand<OpenedViewModelInfo>(TryOpenClearBackStackAsync);
-        }
-
-        private async Task TryCloseAsync(OpenedViewModelInfo openedViewModelInfo)
-        {
-            if (!await openedViewModelInfo.ViewModel.CloseAsync())
-                _toastPresenter.ShowAsync($"Cannot close {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
-            RefreshOpenedViewModels();
-        }
-
-        private async Task TryImmediateCloseAsync(OpenedViewModelInfo openedViewModelInfo)
-        {
-            if (!await openedViewModelInfo.ViewModel.CloseAsync(new DataContext { { NavigationConstants.ImmediateClose, true } }))
-                _toastPresenter.ShowAsync($"Cannot close {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
-            RefreshOpenedViewModels();
-        }
-
-        private async Task TryOpenAsync(OpenedViewModelInfo openedViewModelInfo)
-        {
-            var navigationCompletedTask = openedViewModelInfo.ViewModel.ShowAsync().GetNavigationCompletedTask();
-            if (!await navigationCompletedTask)
-                _toastPresenter.ShowAsync($"Cannot reopen {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
-            RefreshOpenedViewModels();
-        }
-
-        private async Task TryOpenClearBackStackAsync(OpenedViewModelInfo openedViewModelInfo)
-        {
-            var navigationCompletedTask = openedViewModelInfo.ViewModel.ShowAsync(NavigationConstants.ClearBackStack.ToValue(true)).GetNavigationCompletedTask();
-            if (!await navigationCompletedTask)
-                _toastPresenter.ShowAsync($"Cannot reopen clear back stack {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
-            RefreshOpenedViewModels();
+            _navigationDispatcher.Navigated += NavigationDispatcherOnNavigated;
         }
 
         #endregion
@@ -143,6 +115,32 @@ namespace Navigation.Portable.ViewModels
         #endregion
 
         #region Methods
+
+        private async Task TryCloseAsync(OpenedViewModelInfo openedViewModelInfo)
+        {
+            if (!await openedViewModelInfo.ViewModel.CloseAsync())
+                _toastPresenter.ShowAsync($"Cannot close {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
+        }
+
+        private async Task TryImmediateCloseAsync(OpenedViewModelInfo openedViewModelInfo)
+        {
+            if (!await openedViewModelInfo.ViewModel.CloseAsync(new DataContext { { NavigationConstants.ImmediateClose, true } }))
+                _toastPresenter.ShowAsync($"Cannot close {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
+        }
+
+        private async Task TryOpenAsync(OpenedViewModelInfo openedViewModelInfo)
+        {
+            var navigationCompletedTask = openedViewModelInfo.ViewModel.ShowAsync().GetNavigationCompletedTask();
+            if (!await navigationCompletedTask)
+                _toastPresenter.ShowAsync($"Cannot reopen {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
+        }
+
+        private async Task TryOpenClearBackStackAsync(OpenedViewModelInfo openedViewModelInfo)
+        {
+            var navigationCompletedTask = openedViewModelInfo.ViewModel.ShowAsync(NavigationConstants.ClearBackStack.ToValue(true)).GetNavigationCompletedTask();
+            if (!await navigationCompletedTask)
+                _toastPresenter.ShowAsync($"Cannot reopen clear back stack {openedViewModelInfo.ViewModel.GetType().Name}", ToastDuration.Short);
+        }
 
         public IList<MenuItem> GetMenuItems(OpenedViewModelInfo info)
         {
@@ -185,6 +183,18 @@ namespace Navigation.Portable.ViewModels
                 }
             }
             OpenedViewModels = result;
+        }
+
+        protected override void OnDispose(bool disposing)
+        {
+            if (disposing)
+                _navigationDispatcher.Navigated -= NavigationDispatcherOnNavigated;
+            base.OnDispose(disposing);
+        }
+
+        private void NavigationDispatcherOnNavigated(INavigationDispatcher sender, NavigatedEventArgs args)
+        {
+            RefreshOpenedViewModels();
         }
 
         #endregion

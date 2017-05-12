@@ -5,5 +5,8 @@
              xmlns:views="clr-namespace:Navigation.Views;assembly=Navigation"
              Title="Page View"
              x:Class="Navigation.Views.PageView">
-    <views:TextView />
+    <StackLayout>
+        <Button Text="Next Page" Command="{Binding Path=ToNextPageCommand}" HorizontalOptions="FillAndExpand" />
+        <views:TextView />
+    </StackLayout>
 </ContentPage>
