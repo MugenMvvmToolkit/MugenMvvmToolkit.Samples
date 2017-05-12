@@ -31,7 +31,7 @@ namespace Binding.Portable.ViewModels
 
         #endregion
 
-        #region Methods
+        #region Methodsд
 
         private object Method(IList<Type> types, object[] arg3, IDataContext dataContext)
         {
@@ -58,7 +58,7 @@ namespace Binding.Portable.ViewModels
 
         #region Commands
 
-        public ICommand UpdateResourceCommand { get; private set; }
+        public ICommand UpdateResourceCommand { get; }
 
         private void UpdateResource()
         {

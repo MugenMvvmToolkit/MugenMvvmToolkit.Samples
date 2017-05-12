@@ -1,8 +1,4 @@
 ﻿<Application x:Class="Binding.Wpf.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:bind="clr-namespace:Binding">
-    <Application.Resources>
-        <bind:DesignBootstrapper x:Key="DesignBootstrapper" />
-    </Application.Resources>
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 </Application>

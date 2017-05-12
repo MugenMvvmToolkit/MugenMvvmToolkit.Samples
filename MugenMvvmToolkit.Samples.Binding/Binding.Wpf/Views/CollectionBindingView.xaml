@@ -4,7 +4,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
-        d:DataContext="{Binding Source={StaticResource DesignBootstrapper}, Path=CollectionBindingViewModel}"
+        xmlns:local="clr-namespace:Binding"
+        d:DataContext="{x:Static local:DesignBootstrapper.CollectionBindingViewModel}"
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
         Title="Mugen MVVM Application" Height="400" Width="600">

@@ -20,20 +20,17 @@ namespace Binding.Portable
                 .ResourceResolver
                 .AddType(typeof(CustomExtensionMethods).Name, typeof(CustomExtensionMethods));
 
-            if (context.IocContainer != null)
+            if (context.Mode == LoadMode.Design)
             {
-                if (context.Mode == LoadMode.Design)
-                {
-                    var localizationManager = new LocalizationManager();
-                    context.IocContainer.BindToConstant<ILocalizationManager>(localizationManager);
-                }
-                else
-                {
-                    if (!context.IocContainer.CanResolve<ILocalizationManager>())
-                        context.IocContainer.Bind<ILocalizationManager, LocalizationManager>(DependencyLifecycle.SingleInstance);
-                }
-                context.IocContainer.Bind<IResourceMonitor, ResourceMonitor>(DependencyLifecycle.SingleInstance);
+                var localizationManager = new LocalizationManager();
+                context.IocContainer.BindToConstant<ILocalizationManager>(localizationManager);
             }
+            else
+            {
+                if (!context.IocContainer.CanResolve<ILocalizationManager>())
+                    context.IocContainer.Bind<ILocalizationManager, LocalizationManager>(DependencyLifecycle.SingleInstance);
+            }
+            context.IocContainer.Bind<IResourceMonitor, ResourceMonitor>(DependencyLifecycle.SingleInstance);
 
             return true;
         }

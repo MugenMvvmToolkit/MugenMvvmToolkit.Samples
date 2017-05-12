@@ -3,7 +3,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
+             xmlns:binding="clr-namespace:Binding;assembly=Binding"
              x:Class="Binding.Views.AttachedMemberView"
+             BindingContext="{x:Static binding:DesignBootstrapper.AttachedMemberViewModel}"
              Title="XamForms.Binding">
     <StackLayout Padding="4" VerticalOptions="Center" HorizontalOptions="Center">
         <Image mugen:View.Bind="ImageUrl ImageUrl" />

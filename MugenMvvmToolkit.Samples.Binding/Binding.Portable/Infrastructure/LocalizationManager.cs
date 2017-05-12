@@ -48,52 +48,31 @@ namespace Binding.Portable.Infrastructure
 
         #region Implementation of IDynamicObject
 
-        /// <summary>
-        ///     Attempts to track the value change.
-        /// </summary>
         public IDisposable TryObserve(string member, IEventListener listener)
         {
             return null;
         }
 
-        /// <summary>
-        ///     Provides the implementation of getting a member.
-        /// </summary>
-        /// <returns>
-        ///     The result of the get operation.
-        /// </returns>
         public virtual object GetMember(string member, IList<object> args)
         {
             return Resorces.GetString(member, _culture);
         }
 
-        /// <summary>
-        ///     Provides the implementation of setting a member.
-        /// </summary>
         public void SetMember(string member, IList<object> args)
         {
             throw new NotSupportedException();
         }
 
-        /// <summary>
-        ///     Provides the implementation of calling a member.
-        /// </summary>
         public object InvokeMember(string member, IList<object> args, IList<Type> typeArgs, IDataContext context)
         {
             throw new NotSupportedException();
         }
-
-        /// <summary>
-        ///     Provides the implementation of performing a get index operation.
-        /// </summary>
+        
         public object GetIndex(IList<object> indexes, IDataContext context)
         {
             throw new NotSupportedException();
         }
 
-        /// <summary>
-        ///     Provides the implementation of performing a set index operation.
-        /// </summary>
         public void SetIndex(IList<object> indexes, IDataContext context)
         {
             throw new NotSupportedException();

@@ -23,42 +23,10 @@ namespace Binding.Portable.ViewModels
 
         public CollectionBindingViewModel(IMessagePresenter messagePresenter)
         {
-            Should.NotBeNull(messagePresenter, "messagePresenter");
+            Should.NotBeNull(messagePresenter, nameof(messagePresenter));
             _messagePresenter = messagePresenter;
             AddCommand = new RelayCommand(Add);
             RemoveCommand = RelayCommandBase.FromAsyncHandler<CollectionItemModel>(Remove, CanRemove, this);
-        }
-
-        #endregion
-
-        #region Commands
-
-        public ICommand AddCommand { get; private set; }
-
-        public ICommand RemoveCommand { get; private set; }
-
-        private void Add(object o)
-        {
-            int id = GridViewModel.OriginalItemsSource.Max(model => model.Id) + 1;
-            var newItem = new CollectionItemModel { Id = id, Name = "Added item" };
-            GridViewModel.ItemsSource.Add(newItem);
-            GridViewModel.SelectedItem = newItem;
-        }
-
-        private async Task Remove(CollectionItemModel item)
-        {
-            if (item == null)
-                item = GridViewModel.SelectedItem;
-            if (await _messagePresenter.ShowAsync(string.Format("Delete {0} {1}?", item.Name, item.Id), "Delete", MessageButton.YesNo) == MessageResult.Yes)
-            {
-                GridViewModel.ItemsSource.Remove(item);
-                GridViewModel.SelectedItem = null;
-            }
-        }
-
-        private bool CanRemove(CollectionItemModel item)
-        {
-            return item != null || (GridViewModel != null && GridViewModel.SelectedItem != null);
         }
 
         #endregion
@@ -82,19 +50,19 @@ namespace Binding.Portable.ViewModels
 
         #endregion
 
+        #region Methods
+
         #region Overrides of ViewModelBase
 
         protected override void OnInitialized()
         {
             GridViewModel = GetViewModel<GridViewModel<CollectionItemModel>>();
-            for (int i = 0; i < 200; i++)
-                GridViewModel.ItemsSource.Add(new CollectionItemModel { Name = "Item", Id = i });
+            for (var i = 0; i < 200; i++)
+                GridViewModel.ItemsSource.Add(new CollectionItemModel {Name = "Item", Id = i});
             GridViewModel.Filter = Filter;
         }
 
         #endregion
-
-        #region Methods
 
         private bool Filter(CollectionItemModel item)
         {
@@ -103,6 +71,38 @@ namespace Binding.Portable.ViewModels
             return item != null &&
                    (item.Name.SafeContains(FilterText) ||
                     item.Id.ToString(CultureInfo.InvariantCulture).SafeContains(FilterText));
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand AddCommand { get; }
+
+        public ICommand RemoveCommand { get; }
+
+        private void Add(object o)
+        {
+            var id = GridViewModel.OriginalItemsSource.Max(model => model.Id) + 1;
+            var newItem = new CollectionItemModel {Id = id, Name = "Added item"};
+            GridViewModel.ItemsSource.Add(newItem);
+            GridViewModel.SelectedItem = newItem;
+        }
+
+        private async Task Remove(CollectionItemModel item)
+        {
+            if (item == null)
+                item = GridViewModel.SelectedItem;
+            if (await _messagePresenter.ShowAsync($"Delete {item.Name} {item.Id}?", "Delete", MessageButton.YesNo) == MessageResult.Yes)
+            {
+                GridViewModel.ItemsSource.Remove(item);
+                GridViewModel.SelectedItem = null;
+            }
+        }
+
+        private bool CanRemove(CollectionItemModel item)
+        {
+            return item != null || GridViewModel != null && GridViewModel.SelectedItem != null;
         }
 
         #endregion

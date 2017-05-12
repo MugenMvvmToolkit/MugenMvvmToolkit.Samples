@@ -19,20 +19,20 @@ namespace Binding.Portable.ViewModels
 
         public CommandBindingViewModel(IToastPresenter toastPresenter)
         {
-            Should.NotBeNull(toastPresenter, "toastPresenter");
+            Should.NotBeNull(toastPresenter, nameof(toastPresenter));
             _toastPresenter = toastPresenter;
             Command = new RelayCommand(Execute, CanExecute, this);
         }
 
         #endregion
 
+        #region Properties
+
         #region Commands
 
-        public ICommand Command { get; private set; }
+        public ICommand Command { get; }
 
         #endregion
-
-        #region Properties
 
         public bool CanExecuteCommand
         {
@@ -53,7 +53,7 @@ namespace Binding.Portable.ViewModels
         private void Execute(object cmdParameter)
         {
             _toastPresenter.ShowAsync(
-                string.Format("The Command is invoked with cmdParameter: {0}", cmdParameter ?? "null"),
+                $"The Command is invoked with cmdParameter: {cmdParameter ?? "null"}",
                 ToastDuration.Long);
         }
 
@@ -65,15 +65,14 @@ namespace Binding.Portable.ViewModels
         public void EventMethod(object eventParameter)
         {
             _toastPresenter.ShowAsync(
-                string.Format("The EventMethod is invoked with eventParameter: {0}", eventParameter ?? "null"),
+                $"The EventMethod is invoked with eventParameter: {eventParameter ?? "null"}",
                 ToastDuration.Long);
         }
 
         public void EventMethodMultiParams(object param1, object param2)
         {
             _toastPresenter.ShowAsync(
-                string.Format("The EventMethodMultiParams is invoked with param1: {0}, param2: {1}", param1 ?? "null",
-                    param2 ?? "null"), ToastDuration.Long);
+                $"The EventMethodMultiParams is invoked with param1: {param1 ?? "null"}, param2: {param2 ?? "null"}", ToastDuration.Long);
         }
 
         #endregion

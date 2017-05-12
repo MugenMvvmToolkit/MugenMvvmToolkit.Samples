@@ -92,9 +92,6 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Binding.Wpf\DesignBootstrapperCommon.cs">
-      <Link>DesignBootstrapperCommon.cs</Link>
-    </Compile>
     <Compile Include="..\Binding.Wpf\Module.cs">
       <Link>Module.cs</Link>
     </Compile>

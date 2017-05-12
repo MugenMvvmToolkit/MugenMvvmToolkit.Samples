@@ -4,7 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              xmlns:mugen="clr-namespace:MugenMvvmToolkit.Xamarin.Forms.MarkupExtensions;assembly=MugenMvvmToolkit.Xamarin.Forms.Binding"
              xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             xmlns:binding="clr-namespace:Binding;assembly=Binding"
              x:Class="Binding.Views.BindingResourcesView"
+             BindingContext="{x:Static binding:DesignBootstrapper.BindingResourcesViewModel}"
              Title="XamForms.Binding">
     <StackLayout Padding="4">
         <StackLayout.Resources>

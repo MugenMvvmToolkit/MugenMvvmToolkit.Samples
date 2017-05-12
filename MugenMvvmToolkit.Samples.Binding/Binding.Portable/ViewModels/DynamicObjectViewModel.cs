@@ -18,7 +18,7 @@ namespace Binding.Portable.ViewModels
 
         #region Properties
 
-        public DynamicModel DynamicModel { get; private set; }
+        public DynamicModel DynamicModel { get; }
 
         #endregion
     }

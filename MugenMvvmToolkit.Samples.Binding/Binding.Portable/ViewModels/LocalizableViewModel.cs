@@ -18,9 +18,9 @@ namespace Binding.Portable.ViewModels
 
         public LocalizableViewModel(ILocalizationManager localizationManager)
         {
-            Should.NotBeNull(localizationManager, "localizationManager");
+            Should.NotBeNull(localizationManager, nameof(localizationManager));
             _localizationManager = localizationManager;
-            Cultures = new[] { "en-US", "ru-RU" };
+            Cultures = new[] {"en-US", "ru-RU"};
             SelectedCulture = Cultures[0];
         }
 
@@ -28,7 +28,7 @@ namespace Binding.Portable.ViewModels
 
         #region Properties
 
-        public IList<string> Cultures { get; private set; }
+        public IList<string> Cultures { get; }
 
         public string SelectedCulture
         {
@@ -36,11 +36,11 @@ namespace Binding.Portable.ViewModels
             set
             {
                 if (Equals(value, _selectedCulture))
-                    return; 
+                    return;
                 _selectedCulture = value;
                 if (_selectedCulture != null)
                     _localizationManager.ChangeCulture(_selectedCulture);
-                OnPropertyChanged();                
+                OnPropertyChanged();
             }
         }
 

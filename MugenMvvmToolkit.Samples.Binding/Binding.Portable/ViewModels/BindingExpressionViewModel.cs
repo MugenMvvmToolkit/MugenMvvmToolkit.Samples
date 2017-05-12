@@ -26,10 +26,7 @@ namespace Binding.Portable.ViewModels
             }
         }
 
-        public string NullableText
-        {
-            get { return string.IsNullOrEmpty(Text) ? null : Text; }
-        }
+        public string NullableText => string.IsNullOrEmpty(Text) ? null : Text;
 
         #endregion
     }

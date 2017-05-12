@@ -1,4 +1,5 @@
 ﻿using Binding.Portable.ViewModels;
+using MugenMvvmToolkit;
 using MugenMvvmToolkit.ViewModels;
 
 namespace Binding
@@ -7,27 +8,39 @@ namespace Binding
     {
         #region Properties
 
-        public BindingModeViewModel BindingModeViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingModeViewModel>());
+        private static DesignBootstrapper Instance
+        {
+            get
+            {
+                if (!ServiceProvider.IsDesignMode)
+                    return null;
+                var designBootstrapper = new DesignBootstrapper();
+                designBootstrapper.Initialize();
+                return designBootstrapper;
+            }
+        }
 
-        public BindingExpressionViewModel BindingExpressionViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingExpressionViewModel>());
+        public static BindingModeViewModel BindingModeViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<BindingModeViewModel>());
 
-        public AttachedMemberViewModel AttachedMemberViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<AttachedMemberViewModel>());
+        public static BindingExpressionViewModel BindingExpressionViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<BindingExpressionViewModel>());
 
-        public BindingResourcesViewModel BindingResourcesViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingResourcesViewModel>());
+        public static AttachedMemberViewModel AttachedMemberViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<AttachedMemberViewModel>());
 
-        public BindingValidationViewModel BindingValidationViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<BindingValidationViewModel>());
+        public static BindingResourcesViewModel BindingResourcesViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<BindingResourcesViewModel>());
 
-        public CollectionBindingViewModel CollectionBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<CollectionBindingViewModel>());
+        public static BindingValidationViewModel BindingValidationViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<BindingValidationViewModel>());
 
-        public CommandBindingViewModel CommandBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<CommandBindingViewModel>());
+        public static CollectionBindingViewModel CollectionBindingViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<CollectionBindingViewModel>());
 
-        public DynamicObjectViewModel DynamicObjectViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<DynamicObjectViewModel>());
+        public static CommandBindingViewModel CommandBindingViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<CommandBindingViewModel>());
 
-        public LocalizableViewModel LocalizableViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<LocalizableViewModel>());
+        public static DynamicObjectViewModel DynamicObjectViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<DynamicObjectViewModel>());
 
-        public MainViewModel MainViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<MainViewModel>());
+        public static LocalizableViewModel LocalizableViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<LocalizableViewModel>());
 
-        public RelativeBindingViewModel RelativeBindingViewModel => GetOrAddDesignViewModel(provider => provider.GetViewModel<RelativeBindingViewModel>());
+        public static MainViewModel MainViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<MainViewModel>());
+
+        public static RelativeBindingViewModel RelativeBindingViewModel => Instance.GetDesignViewModel(provider => provider.GetViewModel<RelativeBindingViewModel>());
 
         #endregion
     }

@@ -27,34 +27,6 @@ namespace Binding.Portable.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand AddErrorCommand { get; private set; }
-
-        public ICommand RemoveErrorCommand { get; private set; }
-
-        private void AddError(object o)
-        {
-            Validator.SetErrors("PropertyWithException", "Custom error");
-        }
-
-        private bool CanAddError(object o)
-        {
-            return !CanRemoveError(o);
-        }
-
-        private void RemoveError(object o)
-        {
-            Validator.ClearErrors("PropertyWithException");
-        }
-
-        private bool CanRemoveError(object o)
-        {
-            return Validator.GetErrors("PropertyWithException").Count != 0;
-        }
-
-        #endregion
-
         #region Properties
 
         public string Property
@@ -66,9 +38,9 @@ namespace Binding.Portable.ViewModels
                     return;
                 _property = value;
                 if (string.IsNullOrEmpty(value))
-                    Validator.SetErrors("Property", "Validation error");
+                    Validator.SetErrors(nameof(Property), "Validation error");
                 else
-                    Validator.ClearErrors("Property");
+                    Validator.ClearErrors(nameof(Property));
                 OnPropertyChanged();
             }
         }
@@ -86,6 +58,34 @@ namespace Binding.Portable.ViewModels
                 if (_throw)
                     throw new Exception("Property exception");
             }
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand AddErrorCommand { get; }
+
+        public ICommand RemoveErrorCommand { get; }
+
+        private void AddError(object o)
+        {
+            Validator.SetErrors(nameof(PropertyWithException), "Custom error");
+        }
+
+        private bool CanAddError(object o)
+        {
+            return !CanRemoveError(o);
+        }
+
+        private void RemoveError(object o)
+        {
+            Validator.ClearErrors(nameof(PropertyWithException));
+        }
+
+        private bool CanRemoveError(object o)
+        {
+            return Validator.GetErrors(nameof(PropertyWithException)).Count != 0;
         }
 
         #endregion

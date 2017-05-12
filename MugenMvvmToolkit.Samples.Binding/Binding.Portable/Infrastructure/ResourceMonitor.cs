@@ -148,10 +148,7 @@ namespace Binding.Portable.Infrastructure
             }
         }
 
-        public int LiveBindingCount
-        {
-            get { return BindingCount - CollectedBindingCount; }
-        }
+        public int LiveBindingCount => BindingCount - CollectedBindingCount;
 
         public int ViewCount
         {
@@ -179,10 +176,7 @@ namespace Binding.Portable.Infrastructure
             }
         }
 
-        public int LiveViewCount
-        {
-            get { return ViewCount - CollectedViewCount; }
-        }
+        public int LiveViewCount => ViewCount - CollectedViewCount;
 
         public int ViewModelCount
         {
@@ -210,10 +204,7 @@ namespace Binding.Portable.Infrastructure
             }
         }
 
-        public int LiveViewModelCount
-        {
-            get { return ViewModelCount - CollectedViewModelCount; }
-        }
+        public int LiveViewModelCount => ViewModelCount - CollectedViewModelCount;
 
         #endregion
 
