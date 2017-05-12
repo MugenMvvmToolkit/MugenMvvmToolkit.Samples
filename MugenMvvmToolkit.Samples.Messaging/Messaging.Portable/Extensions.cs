@@ -9,12 +9,11 @@ namespace Messaging.Portable
 
         public static void TraceMessage(object recipient, object sender, object message)
         {
-            ServiceProvider.IocContainer.Get<IMessagePresenter>()
-                .ShowAsync(string.Format("The '{0}' from '{1}' is handled by '{2}'", message.GetType().Name,
-                    sender.GetType().Name, recipient.GetType().Name));
+            ServiceProvider.IocContainer
+                .Get<IMessagePresenter>()
+                .ShowAsync($"The '{message.GetType().Name}' from '{sender.GetType().Name}' is handled by '{recipient.GetType().Name}'");
         }
 
         #endregion
-
     }
 }

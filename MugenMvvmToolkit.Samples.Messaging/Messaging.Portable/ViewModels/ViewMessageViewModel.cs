@@ -17,22 +17,22 @@ namespace Messaging.Portable.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand SendMessageCommand { get; private set; }
-
-        private void SendMessage()
-        {
-            Publish(new ViewModelMessage());
-        }
-
-        #endregion
-
-        #region Implementation of IHandler<in ViewMessage>
+        #region Implementation of interfaces
 
         public void Handle(object sender, ViewMessage message)
         {
             Extensions.TraceMessage(this, sender, message);
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand SendMessageCommand { get; }
+
+        private void SendMessage()
+        {
+            Publish(new ViewModelMessage());
         }
 
         #endregion

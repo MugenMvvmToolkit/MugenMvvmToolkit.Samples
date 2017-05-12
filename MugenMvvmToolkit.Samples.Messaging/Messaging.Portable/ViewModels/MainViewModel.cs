@@ -30,25 +30,6 @@ namespace Messaging.Portable.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand OpenViewMessagingCommand { get; private set; }
-
-        public ICommand SendGlobalMessageCommand { get; private set; }
-
-        private void SendGlobalMessage()
-        {
-            _eventAggregator.Publish(this, new GlobalMessage());
-        }
-
-        private async void OpenViewMessaging()
-        {
-            using (var vm = GetViewModel<ViewMessageViewModel>(ObservationMode.None))
-                await vm.ShowAsync();
-        }
-
-        #endregion
-
         #region Properties
 
         public LeftViewModel LeftViewModel { get; private set; }
@@ -57,7 +38,7 @@ namespace Messaging.Portable.ViewModels
 
         #endregion
 
-        #region Overrides of ViewModelBase
+        #region Methods
 
         protected override void OnInitialized()
         {
@@ -69,10 +50,6 @@ namespace Messaging.Portable.ViewModels
             LeftViewModel = GetViewModel<LeftViewModel>();
         }
 
-        #endregion
-
-        #region Methods
-
         private void AppGlobalMessageHandler(object sender, AppGlobalMessage appGlobalMessage)
         {
             Extensions.TraceMessage(this, sender, appGlobalMessage);
@@ -80,7 +57,7 @@ namespace Messaging.Portable.ViewModels
 
         #endregion
 
-        #region Implementation of IHandler<in ViewModelMessage>
+        #region Implementation of interfaces
 
         public void Handle(object sender, ViewModelMessage message)
         {
@@ -88,6 +65,27 @@ namespace Messaging.Portable.ViewModels
 
             if (!message.IsLeftViewModel)
                 Publish(message);
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand OpenViewMessagingCommand { get; }
+
+        public ICommand SendGlobalMessageCommand { get; }
+
+        private void SendGlobalMessage()
+        {
+            _eventAggregator.Publish(this, new GlobalMessage());
+        }
+
+        private async void OpenViewMessaging()
+        {
+            using (var vm = GetViewModel<ViewMessageViewModel>(ObservationMode.None))
+            {
+                await vm.ShowAsync();
+            }
         }
 
         #endregion

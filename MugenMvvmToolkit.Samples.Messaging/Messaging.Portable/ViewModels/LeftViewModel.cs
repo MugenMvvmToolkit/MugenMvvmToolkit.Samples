@@ -18,23 +18,23 @@ namespace Messaging.Portable.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ICommand SendMessageCommand { get; private set; }
-
-        private void SendMessage()
-        {
-            Publish(new ViewModelMessage { IsLeftViewModel = true });
-        }
-
-        #endregion
-
-        #region Implementation of IHandler<in ViewModelMessage>
+        #region Implementation of interfaces
 
         public void Handle(object sender, ViewModelMessage message)
         {
             // This handler will never invoked, because LeftViewModel does not listen the MainViewModel
             throw new NotSupportedException();
+        }
+
+        #endregion
+
+        #region Commands
+
+        public ICommand SendMessageCommand { get; }
+
+        private void SendMessage()
+        {
+            Publish(new ViewModelMessage {IsLeftViewModel = true});
         }
 
         #endregion
