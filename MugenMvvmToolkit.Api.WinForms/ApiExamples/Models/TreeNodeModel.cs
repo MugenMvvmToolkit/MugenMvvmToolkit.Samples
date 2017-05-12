@@ -51,7 +51,7 @@ namespace ApiExamples.Models
 
         public TreeNodeModel Parent { get; set; }
 
-        public IList<TreeNodeModel> Nodes { get; private set; }
+        public IList<TreeNodeModel> Nodes { get; }
 
         #endregion
     }

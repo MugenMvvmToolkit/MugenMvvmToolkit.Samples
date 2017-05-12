@@ -19,11 +19,11 @@ namespace ApiExamples.ViewModels
 
         #region Commands
 
-        public ICommand AddCommand { get; private set; }
+        public ICommand AddCommand { get; }
 
-        public ICommand InsertCommand { get; private set; }
+        public ICommand InsertCommand { get; }
 
-        public ICommand RemoveCommand { get; private set; }
+        public ICommand RemoveCommand { get; }
 
         private void Add(object o)
         {
@@ -52,7 +52,7 @@ namespace ApiExamples.ViewModels
         {
             var itemViewModel = GetViewModel<ItemViewModel>();
             itemViewModel.Name = "Dynamic tab";
-            int selectedIndex = ItemsSource.IndexOf(SelectedItem);
+            var selectedIndex = ItemsSource.IndexOf(SelectedItem);
             ItemsSource.Insert(selectedIndex, itemViewModel);
             SelectedItem = itemViewModel;
         }

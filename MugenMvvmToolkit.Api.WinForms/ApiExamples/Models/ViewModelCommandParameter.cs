@@ -25,9 +25,9 @@ namespace ApiExamples.Models
 
         #region Properties
 
-        public Type ViewModelType { get; private set; }
+        public Type ViewModelType { get; }
 
-        public IDataContext Context { get; private set; }
+        public IDataContext Context { get; }
 
         #endregion
     }

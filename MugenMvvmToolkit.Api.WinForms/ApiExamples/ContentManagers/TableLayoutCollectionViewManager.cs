@@ -21,9 +21,6 @@ namespace ApiExamples.ContentManagers
 
         #region Overrides of CollectionViewManagerBase<TableLayoutPanel,Control>
 
-        /// <summary>
-        ///     Inserts an item to the specified index.
-        /// </summary>
         protected override void Insert(TableLayoutPanel view, int index, Control item)
         {
             view.ColumnCount++;
@@ -32,17 +29,11 @@ namespace ApiExamples.ContentManagers
             view.SetRow(item, 0);
         }
 
-        /// <summary>
-        ///     Removes an item.
-        /// </summary>
         protected override void RemoveAt(TableLayoutPanel view, int index)
         {
             view.Controls.RemoveAt(index);
         }
 
-        /// <summary>
-        ///     Removes all items.
-        /// </summary>
         protected override void Clear(TableLayoutPanel view)
         {
             view.RowStyles.Clear();

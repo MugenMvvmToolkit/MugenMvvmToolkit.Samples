@@ -26,16 +26,9 @@ namespace ApiExamples.ViewModels
 
         public string Name { get; set; }
 
-        public int Id { get; private set; }
+        public int Id { get; }
 
-        #endregion
-
-        #region Implementation of IHasDisplayName
-
-        /// <summary>
-        /// Gets or sets the display name for the current model.
-        /// </summary>
-        public string DisplayName { get; set; }
+        public string DisplayName { get; }
 
         #endregion
     }
