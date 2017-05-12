@@ -26,6 +26,7 @@ namespace SplitView.XamForms.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::SplitView.XamForms.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

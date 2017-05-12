@@ -4,9 +4,12 @@
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "MugenMvvmToolkit": "6.5.0",
     "NETStandard.Library": "1.6.1",
-    "System.ComponentModel": "4.3.0"
+    "System.ComponentModel": "4.3.0",
+    "MugenMvvmToolkit.Fody": "6.5.1"
   },
   "frameworks": {
-    "netstandard1.0": {}
+    "netstandard1.0": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
   }
 }
