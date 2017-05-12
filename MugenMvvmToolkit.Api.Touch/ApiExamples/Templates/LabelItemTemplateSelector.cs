@@ -28,7 +28,7 @@ namespace ApiExamples.Templates
         {
             if (item == null)
                 return null;
-            return new UILabel { TextAlignment = UITextAlignment.Center };
+            return new UILabel {TextAlignment = UITextAlignment.Center};
         }
 
         protected override void Initialize(UILabel template, BindingSet<UILabel, ItemViewModel> bindingSet)

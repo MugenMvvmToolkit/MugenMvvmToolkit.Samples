@@ -8,7 +8,7 @@ namespace ApiExamples.Models
 
         private bool _isSelected;
         private string _name;
-        
+
         #endregion
 
         #region Properties

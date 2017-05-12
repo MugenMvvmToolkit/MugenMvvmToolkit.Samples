@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
@@ -34,6 +33,33 @@ namespace ApiExamples.ViewModels
 
         #endregion
 
+        #region Properties
+
+        public string FilterText
+        {
+            get { return _filterText; }
+            set
+            {
+                if (Equals(value, _filterText))
+                    return;
+                _filterText = value;
+                OnPropertyChanged();
+                GridViewModel?.UpdateFilter();
+            }
+        }
+
+        public GridViewModel<TableItemModel> GridViewModel
+        {
+            get { return _gridViewModel; }
+            private set
+            {
+                _gridViewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
         #region Commands
 
         public ICommand ItemClickCommand { get; }
@@ -46,8 +72,8 @@ namespace ApiExamples.ViewModels
 
         private void Add(object o)
         {
-            int id = GridViewModel.OriginalItemsSource.Max(model => model.Id) + 1;
-            var newItem = new TableItemModel { Id = id, Name = "Added item " + id };
+            var id = GridViewModel.OriginalItemsSource.Max(model => model.Id) + 1;
+            var newItem = new TableItemModel {Id = id, Name = "Added item " + id};
             GridViewModel.ItemsSource.Add(newItem);
             GridViewModel.SelectedItem = newItem;
         }
@@ -74,38 +100,8 @@ namespace ApiExamples.ViewModels
 
         private void InvertSelection(object o)
         {
-            foreach (TableItemModel model in GridViewModel.OriginalItemsSource)
-            {
+            foreach (var model in GridViewModel.OriginalItemsSource)
                 model.IsSelected = !model.IsSelected;
-            }
-        }
-
-        #endregion
-
-        #region Properties
-
-        public string FilterText
-        {
-            get { return _filterText; }
-            set
-            {
-                if (Equals(value, _filterText))
-                    return;
-                _filterText = value;
-                OnPropertyChanged();
-                if (GridViewModel != null)
-                    GridViewModel.UpdateFilter();
-            }
-        }
-
-        public GridViewModel<TableItemModel> GridViewModel
-        {
-            get { return _gridViewModel; }
-            private set
-            {
-                _gridViewModel = value;
-                OnPropertyChanged();
-            }
         }
 
         #endregion
@@ -116,7 +112,7 @@ namespace ApiExamples.ViewModels
         {
             GridViewModel = GetViewModel<GridViewModel<TableItemModel>>();
             GridViewModel.Filter = Filter;
-            for (int i = 0; i < 100; i++)
+            for (var i = 0; i < 100; i++)
             {
                 GridViewModel.ItemsSource.Add(new TableItemModel
                 {
@@ -130,7 +126,7 @@ namespace ApiExamples.ViewModels
         {
             if (string.IsNullOrEmpty(FilterText))
                 return true;
-            return item.Name.SafeContains(FilterText, StringComparison.CurrentCultureIgnoreCase);
+            return item.Name.SafeContains(FilterText);
         }
 
         #endregion

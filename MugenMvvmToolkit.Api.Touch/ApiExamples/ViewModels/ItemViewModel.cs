@@ -28,11 +28,11 @@ namespace ApiExamples.ViewModels
 
         public int Id { get; private set; }
 
+        public string DisplayName { get; }
+
         #endregion
 
         #region Implementation of interfaces
-
-        public string DisplayName { get; set; }
 
         public void LoadState(IDataContext state)
         {
