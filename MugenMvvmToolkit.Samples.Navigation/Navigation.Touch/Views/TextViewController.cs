@@ -3,10 +3,9 @@ using Foundation;
 using MugenMvvmToolkit.Attributes;
 using MugenMvvmToolkit.Binding;
 using MugenMvvmToolkit.Binding.Builders;
+using MugenMvvmToolkit.iOS.Binding;
 using MugenMvvmToolkit.iOS.Views;
 using MugenMvvmToolkit.Interfaces.Models;
-using MugenMvvmToolkit.Interfaces.ViewModels;
-using MugenMvvmToolkit.Interfaces.Views;
 using Navigation.Portable.ViewModels;
 using UIKit;
 
@@ -15,7 +14,7 @@ namespace Navigation.Touch.Views
     [Register("TextViewController")]
     [ViewModel(typeof(PageViewModel))]
     [ViewModel(typeof(BackgroundViewModel))]
-    public class TextViewController : MvvmViewController, IViewModelAwareView<IViewModel>
+    public class TextViewController : MvvmViewController
     {
         #region Constructors
 
@@ -24,12 +23,6 @@ namespace Navigation.Touch.Views
             //to bind title before load view.
             this.Bind(nameof(Title)).To(nameof(IHasDisplayName.DisplayName)).Build();
         }
-
-        #endregion
-
-        #region Properties
-
-        public IViewModel ViewModel { get; set; }
 
         #endregion
 
@@ -58,14 +51,12 @@ namespace Navigation.Touch.Views
                 set.Bind(button).To(() => (vm, ctx) => vm.ShowOpenedViewModelsCommand);
                 View.AddSubview(button);
 
-                if (ViewModel is PageViewModel)
-                {
-                    button = UIButton.FromType(UIButtonType.System);
-                    button.Frame = new CGRect(0, 160, View.Frame.Width, 30);
-                    button.SetTitle("Next Page", UIControlState.Normal);
-                    set.Bind(button).To<PageViewModel>(() => (vm, ctx) => vm.ToNextPageCommand);
-                    View.AddSubview(button);
-                }
+                button = UIButton.FromType(UIButtonType.System);
+                button.Frame = new CGRect(0, 160, View.Frame.Width, 30);
+                button.SetTitle("Next Page", UIControlState.Normal);
+                set.Bind(button).To<PageViewModel>(() => (vm, ctx) => vm.ToNextPageCommand);
+                set.Bind(button, AttachedMembers.UIView.Visible).To(() => (vm, ctx) => vm is PageViewModel);
+                View.AddSubview(button);
             }
         }
 
